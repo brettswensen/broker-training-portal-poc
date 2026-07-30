@@ -1,10 +1,10 @@
 const trainings = [
-  {title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", summary:"How agents should collaborate with transaction coordination from contract to close.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
-  {title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", summary:"Specialized training for development, builders, land, and new construction opportunities.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
-  {title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
-  {title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
-  {title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
-  {title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
+  {title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", summary:"How agents should collaborate with transaction coordination from contract to close.", excerpt:"Marty and Marc walk through when to bring the TC in, how deadlines are tracked, and what the agent still owns with the client.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
+  {title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", summary:"Specialized training for development, builders, land, and new construction opportunities.", excerpt:"Craig explains how builder/developer conversations differ from regular resale and what agents need to know before advising clients.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
+  {title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", excerpt:"Craig breaks down how to think about comp selection and adjustments when the property does not fit a clean single-family template.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
+  {title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", excerpt:"The training focuses on separating safety and lending issues from wishlist repairs, then turning the inspection report into a calm negotiation strategy.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
+  {title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", excerpt:"Darrin covers the high-level exchange concept, timing pressure, and why agents should bring in a qualified intermediary/tax advisor early.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
+  {title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", excerpt:"Craig compares flip potential and land value scenarios, showing how investor intent changes the pricing conversation.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
 ];
 
 const playbooks = [
@@ -18,14 +18,95 @@ const playbooks = [
 
 const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination","1031 Exchange","New Construction","Investor Clients","Inspection Objections","Contract-to-Close","Land Valuation","Flip Properties","Nightly Rentals","New Agent Onboarding"];
 
+const demoAnswers = {
+  repair: {
+    title:"Repair negotiation guidance",
+    confidence:"High match",
+    intent:"The agent needs a practical inspection-objection process and client script.",
+    queryTerms:["repair negotiations","inspection objection","seller response"],
+    sources:[
+      {name:"Repair Negotiations w Craig", cite:"Video training · Inspection/Negotiation", match:"94%", quote:"Separate safety or financing issues from cosmetic requests, then frame the ask around keeping the deal together."},
+      {name:"Inspection Objection Playbook", cite:"Generated playbook · 1 source", match:"87%", quote:"Use repair, credit, price adjustment, or seller concession as possible solution paths."}
+    ],
+    steps:["Start by separating health/safety issues from wish-list repairs.","Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.","Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.","Keep emotion out of it and document every agreement clearly."],
+    script:"Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or the buyer’s confidence from the cosmetic items. Then we can decide whether the cleanest path is a repair, a credit, a concession, or a price adjustment.",
+    followups:["Build repair request checklist","Show related scripts","Open inspection objection playbook"]
+  },
+  tc: {
+    title:"Working with your transaction coordinator",
+    confidence:"High match",
+    intent:"The agent needs to know how to partner with TC without dropping client ownership.",
+    queryTerms:["transaction coordinator","contract to close","deadlines"],
+    sources:[
+      {name:"Work With Your TC w Marty & Marc", cite:"Video training · Operations", match:"92%", quote:"Loop in the TC right after contract acceptance so deadlines, documents, and contacts are organized early."},
+      {name:"Contract-to-Close Checklist", cite:"Generated checklist · 2 sources", match:"84%", quote:"Agent owns the relationship; TC helps keep the process and paperwork moving."}
+    ],
+    steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
+    script:"I’m bringing in our transaction coordinator now so we can keep deadlines, paperwork, title, lender details, and next steps organized. I’ll still be your main point of contact, and the TC helps make sure every detail is tracked through closing.",
+    followups:["Open contract-to-close checklist","Create new-agent task list","Find deadline reminders"]
+  },
+  "1031": {
+    title:"1031 exchange basics for agents",
+    confidence:"Strong match",
+    intent:"The agent needs a safe, compliant high-level answer for investor clients.",
+    queryTerms:["1031 exchange","investor clients","tax deferral"],
+    sources:[
+      {name:"1031 Exchange Basics w Darrin", cite:"Video training · Investors/Tax Strategy", match:"90%", quote:"A 1031 can defer taxes on investment property, but the timelines and intermediary rules matter."},
+      {name:"Investor Client Playbook", cite:"Generated playbook · 3 sources", match:"78%", quote:"Agents should identify the situation early and connect the client with a qualified intermediary or tax professional."}
+    ],
+    steps:["Identify whether the client may be selling investment property, not a primary residence.","Explain that strict timelines apply and a qualified intermediary is required.","Avoid giving tax or legal advice; position it as a planning conversation.","Connect the client with a qualified intermediary/tax advisor before deadlines become urgent."],
+    script:"This may be a 1031 exchange situation, which can help defer taxes on investment property, but the rules and timelines are strict. I’m not a tax advisor, so the right move is to loop in a qualified intermediary or CPA early while we structure the sale and next purchase correctly.",
+    followups:["Open investor playbook","Show 1031 timeline","Create referral checklist"]
+  },
+  cma: {
+    title:"CMA and pricing guidance",
+    confidence:"Good match",
+    intent:"The agent needs valuation guidance for unusual property types.",
+    queryTerms:["CMA","pricing","land valuation","flip property"],
+    sources:[
+      {name:"CMA's - Triplex, Addition, Nightly Rental w Craig", cite:"Video training · CMA/Pricing", match:"89%", quote:"Unusual properties require careful comp selection and explanation of adjustments."},
+      {name:"CMA - Flip Property and Land w Craig", cite:"Video training · CMA/Pricing", match:"85%", quote:"Investor intent, land value, and renovation upside change how the pricing story is told."}
+    ],
+    steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
+    script:"This one is not a standard apples-to-apples CMA, so I’m going to separate the value drivers: location, property condition, income potential, land value, and buyer/investor use case. Then we’ll use the comps as evidence instead of pretending there is one perfect number.",
+    followups:["Open CMA playbook","Show pricing objection script","Find land valuation examples"]
+  },
+  general: {
+    title:"Broker Brain answer",
+    confidence:"Exploratory match",
+    intent:"The question is broad, so the system is surfacing likely sources first.",
+    queryTerms:["training library","broker playbooks","agent coaching"],
+    sources:[
+      {name:"Training library", cite:"All indexed trainings", match:"72%", quote:"Searches source titles, categories, topics, summaries, and transcript-style excerpts."},
+      {name:"Broker playbooks", cite:"Generated operating system", match:"69%", quote:"Turns recurring training themes into practical workflows for agents."}
+    ],
+    steps:["Search the training library for matching topics.","Summarize the relevant process in practical agent language.","Link back to the source training and related playbook.","When transcripts are added, replace demo excerpts with real transcript chunks."],
+    script:"I found a few likely sources in the brokerage training library. Review the source excerpts below first, then use the related playbook to turn the guidance into next steps for the agent/client conversation.",
+    followups:["Search all trainings","Browse playbooks","Add transcripts"]
+  }
+};
+
+function escapeHtml(value){
+  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+}
+
+function detectFocus(q){
+  q=(q||'').toLowerCase();
+  if(q.includes('repair')||q.includes('inspection')) return 'repair';
+  if(q.includes('tc')||q.includes('transaction')||q.includes('coordinator')) return 'tc';
+  if(q.includes('1031')||q.includes('exchange')||q.includes('tax')) return '1031';
+  if(q.includes('cma')||q.includes('price')||q.includes('pricing')||q.includes('land')||q.includes('flip')) return 'cma';
+  return 'general';
+}
+
 function card(t){
-  return `<article class="card"><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card"><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
-  const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
-  document.getElementById('resultCount').textContent=`${results.length} match${results.length===1?'':'es'}`;
+  const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
+  document.getElementById('resultCount').textContent=q ? `${results.length} match${results.length===1?'':'es'} for “${query}”` : `Showing all`;
   document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact demo matches yet. Add transcripts to improve search depth.</p>`;
 }
 
@@ -42,21 +123,55 @@ function renderTrainings(){
   document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p></div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
 }
 
-function answerFor(q){
-  q=q.toLowerCase();
-  const focus=q.includes('repair')||q.includes('inspection')?'repair':q.includes('tc')||q.includes('transaction')?'tc':q.includes('1031')?'1031':q.includes('cma')||q.includes('price')||q.includes('land')?'cma':'general';
-  const map={
-    repair:{title:'Repair negotiation guidance',steps:['Start by separating health/safety issues from wish-list repairs.','Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.','Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.','Keep emotion out of it and document every agreement clearly.'],sources:['Repair Negotiations w Craig','Inspection Objection Playbook']},
-    tc:{title:'Working with your TC',steps:['Loop in the transaction coordinator immediately after going under contract.','Make sure deadlines, documents, contacts, and lender/title details are complete.','The agent still owns client communication; the TC helps keep the process organized.'],sources:['Work With Your TC w Marty & Marc','Contract-to-Close Checklist']},
-    '1031':{title:'1031 exchange basics',steps:['Identify whether the client may be selling investment property, not a primary residence.','Explain that strict timelines apply and a qualified intermediary is required.','Do not give tax/legal advice; connect the client with the right professional.'],sources:['1031 Exchange Basics w Darrin','Investor Client Playbook']},
-    cma:{title:'CMA and pricing guidance',steps:['Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.','Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.','Use the CMA as a pricing conversation tool, not just a number.'],sources:["CMA's - Triplex, Addition, Nightly Rental w Craig",'CMA - Flip Property and Land w Craig','CMA/Pricing Playbook']},
-    general:{title:'Broker Brain answer',steps:['Search the training library for matching topics.','Summarize the relevant process in practical agent language.','Link back to the source training and related playbook.'],sources:['Training library','Broker playbooks']}
-  }[focus];
-  return `<h3>${map.title}</h3><ul>${map.steps.map(s=>`<li>${s}</li>`).join('')}</ul><p><strong>Related sources:</strong></p>${map.sources.map(s=>`<span class="source">${s}</span>`).join('')}`;
+function answerMarkup(answer){
+  return `
+    <div class="ai-answer ready">
+      <div class="answer-topline">
+        <span class="spark">✦</span>
+        <div><h3>${answer.title}</h3><p>${answer.intent}</p></div>
+        <span class="confidence">${answer.confidence}</span>
+      </div>
+      <div class="source-stack">
+        ${answer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
+      </div>
+      <h4>Recommended answer</h4>
+      <ol>${answer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      <h4>Suggested script</h4>
+      <p class="script-box">“${answer.script}”</p>
+      <h4>Next actions</h4>
+      <div class="tag-row">${answer.followups.map(f=>`<span class="tag">${f}</span>`).join('')}</div>
+    </div>`;
+}
+
+function loadingMarkup(query, answer){
+  const terms = answer.queryTerms.map(t=>`<span class="tag">${t}</span>`).join('');
+  return `
+    <div class="ai-answer thinking">
+      <div class="answer-topline">
+        <span class="spark pulse">✦</span>
+        <div><h3>Generating broker answer...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
+        <span class="confidence">Live demo</span>
+      </div>
+      <div class="ai-steps">
+        <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
+        <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
+        <div class="step active"><i></i><span>Reading source excerpts</span><em>${answer.sources.length} citations selected</em></div>
+        <div class="step active"><i></i><span>Generating practical agent answer</span><em>script + steps + playbook links</em></div>
+      </div>
+      <div class="skeleton"></div><div class="skeleton short"></div>
+    </div>`;
+}
+
+function runAsk(query){
+  const focus = detectFocus(query);
+  const answer = demoAnswers[focus];
+  const answerEl = document.getElementById('answer');
+  answerEl.innerHTML = loadingMarkup(query, answer);
+  setTimeout(()=>{ answerEl.innerHTML = answerMarkup(answer); }, 1400);
 }
 
 document.getElementById('globalSearch').addEventListener('input',e=>renderResults(e.target.value));
 document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('results').scrollIntoView({behavior:'smooth'});}));
-document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;document.getElementById('answer').innerHTML=answerFor(b.dataset.ask);}));
-document.getElementById('askButton').addEventListener('click',()=>{document.getElementById('answer').innerHTML=answerFor(document.getElementById('askInput').value||'general')});
+document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
+document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
 renderResults();renderPlaybooks();renderTopics();renderTrainings();
