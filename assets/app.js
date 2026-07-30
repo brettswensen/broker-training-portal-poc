@@ -192,11 +192,11 @@ function showPlaybook(index, shouldScroll=true){
     <div class="playbook-workflow">
       ${(p.steps || []).map((step,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><strong>${escapeHtml(step)}</strong></article>`).join('')}
     </div>
-    <div class="script-panel">
-      <div><h4>Broker-approved script</h4><p class="script-box">“${escapeHtml(p.script || '')}”</p></div>
-      <button class="primary small" onclick="copyText(${JSON.stringify(p.script || '')})">Copy script</button>
+    <div class="script-panel playbook-note-panel">
+      <div><h4>What this playbook contains</h4><p class="script-box">Step-by-step team guidance assembled from the matching trainings. Agent-ready scripts are generated after an Ask the Broker search, so the language matches the specific client situation.</p></div>
+      <button class="primary small" onclick="askAbout(${JSON.stringify(p.name)})">Ask about this</button>
     </div>
-    ${(p.sourcesUsed || []).length ? `<div class="source-stack compact"><h4>Source trail</h4>${p.sourcesUsed.map(src=>`<article><span>Training source</span><strong>${escapeHtml(src)}</strong><small>Click-through source clip placeholder</small></article>`).join('')}</div>` : ''}
+    ${(p.sourcesUsed || []).length ? `<div class="source-stack compact"><h4>Source trail</h4>${p.sourcesUsed.map(src=>`<article><span>Training source</span><strong>${escapeHtml(src)}</strong><small>Used to build this workflow</small></article>`).join('')}</div>` : ''}
   `;
   if(shouldScroll) detail.scrollIntoView({behavior:'smooth', block:'center'});
 }
