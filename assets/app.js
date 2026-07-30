@@ -376,8 +376,9 @@ function handleFollowup(label){
   if(match >= 0){ showPlaybook(match); return; }
   document.getElementById('globalSearch').value = label;
   renderResults(label);
-  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+  document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }
+
 
 function openTraining(title){
   document.getElementById('globalSearch').value = title;
@@ -393,7 +394,7 @@ function askAbout(topic){
 }
 
 document.getElementById('globalSearch').addEventListener('input',e=>renderResults(e.target.value));
-document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('results').scrollIntoView({behavior:'smooth'});}));
+document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});}));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
 renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
@@ -458,7 +459,93 @@ function transcriptCard(ch, query){
   return `<article class="card"><span class="type">${pct}% MATCH · ${ch.category} · ${ch.timestamp}</span><h3>${ch.title}</h3><p class="muted">Real transcript match from indexed PDF source.</p><blockquote>${escapeHtml(snippetFor(ch.text, query))}</blockquote><div class="tag-row">${(ch.topics || []).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
+
+function clearAllContentSearch(){
+  const input = document.getElementById('globalSearch');
+  if(input) input.value = '';
+  const allContent = document.getElementById('all-content');
+  if(allContent) allContent.hidden = true;
+  renderResults('');
+  document.getElementById('top')?.scrollIntoView({behavior:'smooth'});
+}
+
+function matchingTrainings(query){
+  const q = String(query || '').toLowerCase().trim();
+  if(!q) return trainings;
+  return trainings.filter(t => [t.title,t.category,t.summary,t.excerpt,...(t.topics||[]),...(t.playbooks||[])].join(' ').toLowerCase().includes(q));
+}
+
+function allContentCard(item, query, index){
+  const isTranscript = !!item.text;
+  const title = isTranscript ? item.title : item.title;
+  const category = item.category || 'Broker training';
+  const snippet = isTranscript ? snippetFor(item.text, query) : item.summary;
+  const pct = isTranscript ? Math.min(98, 62 + Math.round(item.score * 2)) : 88 - index * 4;
+  const tags = (item.topics || []).slice(0,3).map(x=>`<span>${escapeHtml(x)}</span>`).join('');
+  return `<article class="content-result-card">
+    <div class="thumb-tile"><span>▶</span><strong>${escapeHtml(category)}</strong><em>${isTranscript ? item.timestamp : item.size}</em></div>
+    <div class="content-result-body">
+      <small>${pct}% match · ${escapeHtml(category)}</small>
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(snippet)}</p>
+      <div class="mini-tags">${tags}</div>
+    </div>
+  </article>`;
+}
+
+function allResultRow(t, query, index){
+  const isTranscript = !!t.text;
+  const title = isTranscript ? t.title : t.title;
+  const category = t.category || 'Training';
+  const meta = isTranscript ? `${t.timestamp} · Transcript` : `${t.size} · Video training`;
+  const text = isTranscript ? snippetFor(t.text, query).slice(0, 170) : t.summary;
+  return `<article class="content-row" onclick="openTraining('${escapeHtml(title).replace(/'/g,'&#39;')}')">
+    <div class="row-thumb"><span>${isTranscript ? 'TXT' : 'VID'}</span></div>
+    <div><small>${escapeHtml(category)}</small><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p></div>
+    <span class="row-meta">${escapeHtml(meta)}</span>
+    <button class="star-button" aria-label="Save result">☆</button>
+  </article>`;
+}
+
+function playbookRow(p, index){
+  return `<article class="content-row playbook-row" onclick="showPlaybook(${index});document.getElementById('playbooks')?.scrollIntoView({behavior:'smooth'});">
+    <div class="row-thumb playbook-icon"><span>PB</span></div>
+    <div><small>Playbook · ${p.tags.slice(0,2).join(' / ')}</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div>
+    <span class="row-meta">${p.sources} sources</span>
+  </article>`;
+}
+
+function videoTile(t, index){
+  return `<article class="network-video-card">
+    <button class="network-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
+    <small>${index === 0 ? 'New this week' : index < 3 ? 'Indexed training' : 'Library video'}</small>
+    <h3>${escapeHtml(t.title)}</h3>
+  </article>`;
+}
+
+function renderAllContent(query=''){
+  const allContent = document.getElementById('all-content');
+  if(!allContent) return;
+  const q = String(query || '').trim();
+  if(!q){ allContent.hidden = true; return; }
+  allContent.hidden = false;
+  const transcriptMatches = transcriptSearch(q, 6);
+  const trainingMatches = matchingTrainings(q);
+  const top = transcriptMatches.length ? transcriptMatches.slice(0,3) : trainingMatches.slice(0,3);
+  const rows = [...transcriptMatches.slice(0,6), ...trainingMatches.slice(0,6)].slice(0,10);
+  const related = relatedPlaybooksFor(q + ' ' + rows.map(r=>[r.title,r.category,...(r.topics||[])].join(' ')).join(' '));
+  document.getElementById('allContentTitle').textContent = `Results for “${q}”`;
+  document.getElementById('allContentSubtitle').textContent = `${rows.length || top.length} matched content items across trainings, transcript sections, and playbooks.`;
+  document.getElementById('topResultsMeta').textContent = transcriptMatches.length ? `${transcriptMatches.length} transcript matches` : `${trainingMatches.length} training matches`;
+  document.getElementById('topContentResults').innerHTML = top.map((item,i)=>allContentCard(item,q,i)).join('') || `<p class="muted">No top results yet. Try repair, 1031, land, CMA, TC, or inspection.</p>`;
+  document.getElementById('allResultRows').innerHTML = rows.map((item,i)=>allResultRow(item,q,i)).join('') || `<p class="muted">No indexed content matches yet.</p>`;
+  document.getElementById('allPlaybookRows').innerHTML = related.map(p=>playbookRow(p, p.index ?? playbooks.findIndex(x=>x.name===p.name))).join('');
+  const videoPool = [...trainingMatches, ...trainings.filter(t => !trainingMatches.some(m => m.title === t.title))].slice(0,4);
+  document.getElementById('allVideoTiles').innerHTML = videoPool.map(videoTile).join('');
+}
+
 function renderResults(query=''){
+  renderAllContent(query);
   const q = query.trim();
   if (transcriptReady && q) {
     const results = transcriptSearch(q, 9);

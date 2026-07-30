@@ -15,6 +15,7 @@
     <nav>
       <a class="active" href="#top">Dashboard</a>
       <a href="#search">Search</a>
+      <a href="#all-content">All Content</a>
       <a href="#ask">Ask the Broker</a>
       <a href="#latest">Latest Training</a>
       <a href="#pipeline">Training Pipeline</a>
@@ -57,6 +58,47 @@
         <button data-query="1031 exchange">1031 exchange</button>
         <button data-query="work with TC">work with TC</button>
         <button data-query="new construction">new construction</button>
+      </div>
+    </section>
+
+    <section id="all-content" class="all-content-view" hidden>
+      <div class="all-content-shell">
+        <div class="all-content-head">
+          <div>
+            <p class="eyebrow">ALL CONTENT</p>
+            <h2 id="allContentTitle">Results for your search</h2>
+            <p id="allContentSubtitle" class="muted">Search across trainings, transcript matches, playbooks, scripts, and newsletters.</p>
+          </div>
+          <button class="ghost-button" type="button" onclick="clearAllContentSearch()">Back to dashboard</button>
+        </div>
+
+        <div class="content-tabs" aria-label="Content filters">
+          <button class="active">All Types</button>
+          <button>Video Trainings</button>
+          <button>Transcript Matches</button>
+          <button>Playbooks</button>
+          <button>Scripts</button>
+        </div>
+
+        <section class="content-block">
+          <div class="block-head"><span>Top Results</span><small id="topResultsMeta"></small></div>
+          <div id="topContentResults" class="top-content-grid"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>All Results</span><small>training library matches</small></div>
+          <div id="allResultRows" class="all-result-list"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>Related Playbooks</span><small>operating guidance</small></div>
+          <div id="allPlaybookRows" class="all-result-list compact-list"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>Latest Video Content</span><small>browseable source material</small></div>
+          <div id="allVideoTiles" class="network-video-grid"></div>
+        </section>
       </div>
     </section>
 
@@ -202,6 +244,6 @@
       </div>
     </section>
   </main>
-  <script src="assets/app.js?v=platform-demo-next-20260730"></script>
+  <script src="assets/app.js?v=all-content-search-20260730"></script>
 </body>
 </html>
