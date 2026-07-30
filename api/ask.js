@@ -322,6 +322,7 @@ module.exports = async function handler(req, res) {
       answer = await callKimi(question, sources);
     } catch (error) {
       live = false;
+      console.warn('Ask live generation fallback:', error?.message || String(error));
       answer = cleanBrokerAnswer(fallbackAnswer(question, sources));
     }
 
