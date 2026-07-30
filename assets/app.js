@@ -264,11 +264,31 @@ function transcriptSourcesFor(query, fallbackAnswer){
   }));
 }
 
-function runAsk(query){
+const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+
+async function runAsk(query){
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
-  const answer = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
+  const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
   const answerEl = document.getElementById('answer');
-  answerEl.innerHTML = loadingMarkup(query, answer);
-  setTimeout(()=>{ answerEl.innerHTML = answerMarkup(answer); }, 1400);
+  answerEl.innerHTML = loadingMarkup(query, fallback);
+
+  try {
+    const response = await fetch(ASK_API_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: query || 'general broker guidance'})
+    });
+    if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
+    const liveAnswer = await response.json();
+    answerEl.innerHTML = answerMarkup({
+      ...fallback,
+      ...liveAnswer,
+      confidence: liveAnswer.live ? 'Live Kimi answer · transcript grounded' : (liveAnswer.confidence || fallback.confidence),
+      sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
+    });
+  } catch (error) {
+    console.warn('Live Ask backend unavailable; using demo fallback', error);
+    setTimeout(()=>{ answerEl.innerHTML = answerMarkup(fallback); }, 600);
+  }
 }
