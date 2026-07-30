@@ -54,9 +54,9 @@ const demoAnswers = {
       {name:"1031 Exchange Basics w Darrin", cite:"Video training · Investors/Tax Strategy", match:"90%", quote:"A 1031 can defer taxes on investment property, but the timelines and intermediary rules matter."},
       {name:"Investor Client Playbook", cite:"Generated playbook · 3 sources", match:"78%", quote:"Agents should identify the situation early and connect the client with a qualified intermediary or tax professional."}
     ],
-    steps:["Identify whether the client may be selling investment property, not a primary residence.","Explain that strict timelines apply and a qualified intermediary is required.","Avoid giving tax or legal advice; position it as a planning conversation.","Connect the client with a qualified intermediary/tax advisor before deadlines become urgent."],
-    script:"This may be a 1031 exchange situation, which can help defer taxes on investment property, but the rules and timelines are strict. I’m not a tax advisor, so the right move is to loop in a qualified intermediary or CPA early while we structure the sale and next purchase correctly.",
-    followups:["Open investor playbook","Show 1031 timeline","Create referral checklist"]
+    steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited — tell them to contact a QI/CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
+    script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, we need to get a qualified intermediary involved immediately before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. I can help coordinate that connection, but they need to give the tax guidance.",
+    followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
   },
   cma: {
     title:"CMA and pricing guidance",
@@ -126,20 +126,24 @@ function renderTrainings(){
 function answerMarkup(answer){
   return `
     <div class="ai-answer ready">
-      <div class="answer-topline">
+      <div class="answer-topline answer-first">
         <span class="spark">✦</span>
         <div><h3>${answer.title}</h3><p>${answer.intent}</p></div>
         <span class="confidence">${answer.confidence}</span>
       </div>
-      <div class="source-stack">
-        ${answer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
-      </div>
-      <h4>Recommended answer</h4>
-      <ol>${answer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
-      <h4>Suggested script</h4>
+      <h4>Answer first</h4>
+      <ol class="primary-answer">${answer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      <h4>Suggested client script</h4>
       <p class="script-box">“${answer.script}”</p>
       <h4>Next actions</h4>
       <div class="tag-row">${answer.followups.map(f=>`<span class="tag">${f}</span>`).join('')}</div>
+      <div class="sources-used">
+        <h4>Sources used</h4>
+        <p class="muted">These follow the answer so the agent can verify where the guidance came from.</p>
+        <div class="source-stack compact">
+          ${answer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
+        </div>
+      </div>
     </div>`;
 }
 
