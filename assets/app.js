@@ -174,4 +174,97 @@ document.getElementById('globalSearch').addEventListener('input',e=>renderResult
 document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('results').scrollIntoView({behavior:'smooth'});}));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
-renderResults();renderPlaybooks();renderTopics();renderTrainings();
+renderPlaybooks();renderTopics();renderTrainings();
+
+// Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
+let transcriptIndex = { records: [], chunks: [] };
+let transcriptReady = false;
+
+fetch('data/search-index.json')
+  .then(r => r.ok ? r.json() : Promise.reject(new Error('index not found')))
+  .then(idx => {
+    transcriptIndex = idx;
+    transcriptReady = true;
+    const status = document.querySelector('.sidebar-card');
+    if (status) {
+      status.innerHTML = `<p class="eyebrow">POC STATUS</p><strong>${idx.records.length} real transcripts indexed</strong><span>${idx.chunks.length} searchable transcript sections loaded from Google Drive PDFs.</span>`;
+    }
+    renderResults(document.getElementById('globalSearch').value || '');
+  })
+  .catch(() => { transcriptReady = false; renderResults(''); });
+
+function tokenize(q){
+  return (q || '').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w => w.length > 2);
+}
+
+function scoreChunk(query, chunk){
+  const words = tokenize(query);
+  const blob = [chunk.title, chunk.category, ...(chunk.topics || []), chunk.text].join(' ').toLowerCase();
+  let score = 0;
+  for (const w of words) {
+    const hits = blob.split(w).length - 1;
+    score += hits ? 2 + Math.min(hits, 5) : 0;
+  }
+  if (blob.includes((query || '').toLowerCase())) score += 12;
+  return score;
+}
+
+function snippetFor(text, query){
+  const words = tokenize(query);
+  const lower = text.toLowerCase();
+  let pos = 0;
+  for (const w of words) {
+    const found = lower.indexOf(w);
+    if (found >= 0) { pos = found; break; }
+  }
+  const start = Math.max(0, pos - 180);
+  const end = Math.min(text.length, pos + 360);
+  return `${start ? '…' : ''}${text.slice(start, end).replace(/\s+/g,' ').trim()}${end < text.length ? '…' : ''}`;
+}
+
+function transcriptSearch(query, limit=9){
+  if (!transcriptReady || !query.trim()) return [];
+  return transcriptIndex.chunks
+    .map(ch => ({...ch, score: scoreChunk(query, ch)}))
+    .filter(ch => ch.score > 0)
+    .sort((a,b) => b.score - a.score)
+    .slice(0, limit);
+}
+
+function transcriptCard(ch, query){
+  const pct = Math.min(98, 62 + Math.round(ch.score * 2));
+  return `<article class="card"><span class="type">${pct}% MATCH · ${ch.category} · ${ch.timestamp}</span><h3>${ch.title}</h3><p class="muted">Real transcript match from indexed PDF source.</p><blockquote>${escapeHtml(snippetFor(ch.text, query))}</blockquote><div class="tag-row">${(ch.topics || []).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+}
+
+function renderResults(query=''){
+  const q = query.trim();
+  if (transcriptReady && q) {
+    const results = transcriptSearch(q, 9);
+    document.getElementById('resultCount').textContent = `${results.length} transcript match${results.length===1?'':'es'} for “${query}”`;
+    document.getElementById('resultsGrid').innerHTML = results.map(ch => transcriptCard(ch, q)).join('') || `<p class="muted">No transcript matches yet. Try repair, 1031, land, flip, CMA, nightly rental, or inspection.</p>`;
+    return;
+  }
+  const results = trainings;
+  document.getElementById('resultCount').textContent = transcriptReady ? `Showing ${transcriptIndex.records.length} indexed transcripts` : `Showing all`;
+  document.getElementById('resultsGrid').innerHTML = results.map(card).join('');
+}
+
+function transcriptSourcesFor(query, fallbackAnswer){
+  const matches = transcriptSearch(query, 3);
+  if (!matches.length) return fallbackAnswer.sources;
+  return matches.map((ch, i) => ({
+    name: ch.title,
+    cite: `Real transcript · ${ch.timestamp}`,
+    match: `${Math.min(98, 90 - i*5)}%`,
+    quote: snippetFor(ch.text, query).slice(0, 280)
+  }));
+}
+
+function runAsk(query){
+  const focus = detectFocus(query);
+  const base = demoAnswers[focus];
+  const answer = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
+  const answerEl = document.getElementById('answer');
+  answerEl.innerHTML = loadingMarkup(query, answer);
+  setTimeout(()=>{ answerEl.innerHTML = answerMarkup(answer); }, 1400);
+}
