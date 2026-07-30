@@ -8,12 +8,12 @@ const trainings = [
 ];
 
 const playbooks = [
-  {name:"New Agent 30-Day Onboarding", question:"What should a new agent learn first?", sources:4, time:"24 min", tags:["onboarding","daily routine","scripts"]},
-  {name:"Repair Negotiation Playbook", question:"How do we handle inspection and repair asks?", sources:1, time:"8 min", tags:["inspection","negotiation","transaction"]},
-  {name:"CMA / Pricing Playbook", question:"How do agents price unusual properties?", sources:2, time:"14 min", tags:["CMA","pricing","valuation"]},
-  {name:"Contract-to-Close Checklist", question:"What happens after going under contract?", sources:2, time:"10 min", tags:["TC","deadlines","operations"]},
-  {name:"Investor Client Playbook", question:"How should agents support investor clients?", sources:3, time:"12 min", tags:["1031","flip","land"]},
-  {name:"New Construction Deal Playbook", question:"What should agents know about builder/development deals?", sources:1, time:"9 min", tags:["development","builders","land"]}
+  {name:"New Agent 30-Day Onboarding", question:"What should a new agent learn first?", sources:4, time:"24 min", tags:["onboarding","daily routine","scripts"], steps:["Start with team expectations, tools, and who to contact.","Practice the core buyer and seller conversations before taking live appointments.","Use the first transaction checklist once an offer is accepted.","Graduate into investor, CMA, and new construction topics as questions come up."], script:"Start with the basics first. Learn how the team operates, where the trainings live, who handles each part of the transaction, and what to say in the first client conversations."},
+  {name:"Repair Negotiation Playbook", question:"How do we handle inspection and repair asks?", sources:1, time:"8 min", tags:["inspection","negotiation","transaction"], steps:["Read the inspection report and separate safety, lending, and material defects from cosmetic asks.","Coach the client on the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around keeping the transaction together, not punishing the other side.","Document the agreement clearly and keep the TC aligned on deadlines."], script:"Let’s focus the repair request on the items that affect safety, financing, or the buyer’s confidence. Then we can decide whether a repair, credit, concession, or price adjustment gives us the cleanest path forward.", sourcesUsed:["Repair Negotiations w Craig","Inspection Objection Playbook"]},
+  {name:"CMA / Pricing Playbook", question:"How do agents price unusual properties?", sources:2, time:"14 min", tags:["CMA","pricing","valuation"], steps:["Identify whether the property is standard resale, flip, land-heavy, income-producing, or otherwise unusual.","Pull the closest comparables first, then explain where the comp set breaks down.","Separate value drivers like condition, land, addition quality, rental use, and investor upside.","Present the CMA as a pricing story with a range, not a pretend-perfect number."], script:"This is not a perfect apples-to-apples property, so I’m going to show you the closest evidence, call out the adjustments, and explain the pricing range instead of pretending there is one exact number.", sourcesUsed:["CMA's - Triplex, Addition, Nightly Rental w Craig","CMA - Flip Property and Land w Craig"]},
+  {name:"Contract-to-Close Checklist", question:"What happens after going under contract?", sources:2, time:"10 min", tags:["TC","deadlines","operations"], steps:["Loop in the transaction coordinator immediately after contract acceptance.","Confirm deadlines, title, lender, client contacts, and required documents.","Keep the agent responsible for the relationship while the TC tracks process details.","Use the checklist until closing so nothing falls between people."], script:"I’m bringing in our transaction coordinator now so we can keep the details and deadlines organized. I’ll stay your main point of contact, and the TC helps us keep the process moving cleanly."},
+  {name:"Investor Client Playbook", question:"How should agents support investor clients?", sources:3, time:"12 min", tags:["1031","flip","land"], steps:["Clarify the investor’s goal: tax deferral, flip margin, cash flow, land hold, or development.","Flag timing and expert handoff issues early, especially for 1031 exchanges.","Use training examples to explain risk and uncertainty in plain language.","Connect the client to the right professional instead of giving tax or legal advice."], script:"Before we go too far, I want to understand the investment goal and timing. If this involves taxes, exchange rules, or development assumptions, we need the right professional involved early."},
+  {name:"New Construction Deal Playbook", question:"What should agents know about builder/development deals?", sources:1, time:"9 min", tags:["development","builders","land"], steps:["Clarify whether the client is buying new construction, working with a builder, or evaluating land/development.","Understand the builder relationship and registration requirements before touring.","Separate resale assumptions from development and construction realities.","Document representation and client expectations early."], script:"New construction works differently than a normal resale. Before we tour or talk numbers, let’s make sure we understand the builder process, representation, timelines, and what is already included."}
 ];
 
 const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination","1031 Exchange","New Construction","Investor Clients","Inspection Objections","Contract-to-Close","Land Valuation","Flip Properties","Nightly Rentals","New Agent Onboarding"];
@@ -147,8 +147,58 @@ function renderResults(query=''){
   document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact demo matches yet. Add transcripts to improve search depth.</p>`;
 }
 
-function renderPlaybooks(){
-  document.getElementById('playbookGrid').innerHTML=playbooks.map((p,i)=>`<article class="card"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${p.name}</h3><p class="muted">${p.question}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></article>`).join('');
+function renderLatestTraining(){
+  const latest = trainings.slice(0,6).map((t,i)=>({
+    ...t,
+    status: i === 0 ? 'Processed 42 min ago' : i < 3 ? 'Indexed this week' : 'Available in library',
+    deliverables: i === 0 ? ['Transcript','Summary','Script pack','Playbook update','Infographic'] : ['Transcript','Ask ready','Sources','Related playbook']
+  }));
+  const rail = document.getElementById('latestTrainingRail');
+  if(!rail) return;
+  rail.innerHTML = latest.map((t,i)=>`
+    <article class="video-card">
+      <button class="video-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+        <span class="play">▶</span>
+        <strong>${escapeHtml(t.category)}</strong>
+      </button>
+      <div class="video-body">
+        <span class="type">${escapeHtml(t.status)}</span>
+        <h3>${escapeHtml(t.title)}</h3>
+        <p>${escapeHtml(t.summary)}</p>
+        <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
+        <div class="video-actions">
+          <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
+          <button data-topic="${escapeHtml(t.topics[0] || t.category)}" onclick="askAbout(this.dataset.topic)">Ask about this</button>
+        </div>
+      </div>
+    </article>`).join('');
+}
+
+function renderPlaybooks(activeIndex=1){
+  document.getElementById('playbookGrid').innerHTML=playbooks.map((p,i)=>`<article class="card playbook-card ${i===activeIndex?'selected':''}" onclick="showPlaybook(${i})"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${p.name}</h3><p class="muted">${p.question}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div><button class="ghost-button">Open playbook</button></article>`).join('');
+  showPlaybook(activeIndex, false);
+}
+
+function showPlaybook(index, shouldScroll=true){
+  const p = playbooks[index] || playbooks[0];
+  const detail = document.getElementById('playbookDetail');
+  if(!detail) return;
+  document.querySelectorAll('.playbook-card').forEach((el,i)=>el.classList.toggle('selected', i===index));
+  detail.innerHTML = `
+    <div class="playbook-open-head">
+      <div><p class="eyebrow">EXPANDED PLAYBOOK EXAMPLE</p><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p></div>
+      <span class="status-pill">${p.sources} source${p.sources===1?'':'s'} · ${p.time}</span>
+    </div>
+    <div class="playbook-workflow">
+      ${(p.steps || []).map((step,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><strong>${escapeHtml(step)}</strong></article>`).join('')}
+    </div>
+    <div class="script-panel">
+      <div><h4>Broker-approved script</h4><p class="script-box">“${escapeHtml(p.script || '')}”</p></div>
+      <button class="primary small" onclick="copyText(${JSON.stringify(p.script || '')})">Copy script</button>
+    </div>
+    ${(p.sourcesUsed || []).length ? `<div class="source-stack compact"><h4>Source trail</h4>${p.sourcesUsed.map(src=>`<article><span>Training source</span><strong>${escapeHtml(src)}</strong><small>Click-through source clip placeholder</small></article>`).join('')}</div>` : ''}
+  `;
+  if(shouldScroll) detail.scrollIntoView({behavior:'smooth', block:'center'});
 }
 
 function renderTopics(){
@@ -164,7 +214,11 @@ function answerMarkup(answer){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const publicConfidence = cleanAnswer.confidence || 'Based on team training';
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^['"“”]+|['"“”]+$/g, '');
-  const nextActions = (cleanAnswer.followups || []).filter(Boolean);
+  let nextActions = (cleanAnswer.followups || []).filter(Boolean);
+  if(!nextActions.length){
+    const titleText = [cleanAnswer.title, ...(cleanAnswer.steps || []), ...(cleanAnswer.sources || []).map(s=>s.name)].join(' ').toLowerCase();
+    nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
+  }
   return `
     <div class="ai-answer ready">
       <div class="answer-topline answer-first">
@@ -175,7 +229,12 @@ function answerMarkup(answer){
       <ol class="primary-answer">${cleanAnswer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
       <h4>Suggested client script</h4>
       <p class="script-box">“${scriptText}”</p>
-      ${nextActions.length ? `<h4>Recommended next steps</h4><div class="tag-row">${nextActions.map(f=>`<span class="tag">${f}</span>`).join('')}</div>` : ''}
+      <div class="answer-actions">
+        <button onclick="copyCurrentScript(this)">Copy script</button>
+        <button onclick="rewriteScript('text')">Text message version</button>
+        <button onclick="rewriteScript('email')">Email version</button>
+      </div>
+      ${nextActions.length ? `<h4>Recommended next steps</h4><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div>` : ''}
       <div class="sources-used">
         <h4>Sources used</h4>
         <p class="muted">Review the training quotes behind this guidance.</p>
@@ -184,6 +243,16 @@ function answerMarkup(answer){
         </div>
       </div>
     </div>`;
+}
+
+function relatedPlaybooksFor(text){
+  const source = String(text || '').toLowerCase();
+  const scored = playbooks.map((p, index) => {
+    const haystack = [p.name, p.question, ...(p.tags || [])].join(' ').toLowerCase();
+    const score = haystack.split(/\W+/).filter(word => word && source.includes(word)).length;
+    return {p, index, score};
+  }).filter(item => item.score > 0).sort((a,b)=>b.score-a.score);
+  return (scored.length ? scored : [{p:playbooks[1], index:1},{p:playbooks[2], index:2},{p:playbooks[4], index:4}]).slice(0,3).map(item => ({...item.p, index:item.index}));
 }
 
 function loadingMarkup(query, answer){
@@ -213,11 +282,59 @@ function runAsk(query){
   setTimeout(()=>{ answerEl.innerHTML = answerMarkup(answer); }, 1400);
 }
 
+
+function copyText(text){
+  navigator.clipboard?.writeText(text).catch(()=>{});
+}
+
+function copyCurrentScript(button){
+  const box = button.closest('.ai-answer, .playbook-detail')?.querySelector('.script-box');
+  if(!box) return;
+  const text = box.textContent.replace(/[“”]/g,'').trim();
+  copyText(text);
+  const old = button.textContent;
+  button.textContent = 'Copied';
+  setTimeout(()=>button.textContent = old, 1200);
+}
+
+function rewriteScript(format){
+  const current = document.querySelector('#answer .script-box')?.textContent.replace(/[“”]/g,'').trim();
+  if(!current) return;
+  const prefix = format === 'text' ? 'Text message version: ' : 'Email version: ';
+  const rewritten = format === 'text'
+    ? current.split('. ').slice(0,2).join('. ') + '.'
+    : 'Hi, I wanted to give you the clean version of the guidance: ' + current;
+  copyText(rewritten);
+  alert(prefix + rewritten);
+}
+
+function handleFollowup(label){
+  const lower = label.toLowerCase();
+  const match = playbooks.findIndex(p => lower.includes(p.name.toLowerCase().split(' ')[0]) || p.name.toLowerCase().includes(lower.split(' ')[0]));
+  if(match >= 0){ showPlaybook(match); return; }
+  document.getElementById('globalSearch').value = label;
+  renderResults(label);
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+
+function openTraining(title){
+  document.getElementById('globalSearch').value = title;
+  renderResults(title);
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+
+function askAbout(topic){
+  const question = `What should I know about ${topic}?`;
+  document.getElementById('askInput').value = question;
+  document.getElementById('ask').scrollIntoView({behavior:'smooth'});
+  runAsk(question);
+}
+
 document.getElementById('globalSearch').addEventListener('input',e=>renderResults(e.target.value));
 document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('results').scrollIntoView({behavior:'smooth'});}));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
-renderPlaybooks();renderTopics();renderTrainings();
+renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
