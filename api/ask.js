@@ -120,6 +120,47 @@ function safeJsonParse(text) {
   return null;
 }
 
+function normalizeKimiAnswer(parsed) {
+  if (!parsed || typeof parsed !== 'object') return null;
+  const steps = Array.isArray(parsed.steps) ? parsed.steps.map(s => String(s || '').trim()).filter(Boolean) : [];
+  if (!steps.length) return null;
+  return {
+    title: String(parsed.title || 'Live broker guidance').trim(),
+    intent: String(parsed.intent || 'Live Kimi answer from transcript excerpts').trim(),
+    confidence: String(parsed.confidence || 'Live Kimi answer · transcript grounded').trim(),
+    steps: steps.slice(0, 5),
+    script: String(parsed.script || steps.join(' ')).trim(),
+    followups: Array.isArray(parsed.followups) ? parsed.followups.map(s => String(s || '').trim()).filter(Boolean).slice(0, 4) : []
+  };
+}
+
+function salvageJsonLikeAnswer(text) {
+  const cleaned = String(text || '').replace(/```json/gi, '').replace(/```/g, '').trim();
+  if (!cleaned.includes('"steps"') && !cleaned.includes('steps')) return null;
+
+  const titleMatch = cleaned.match(/"title"\s*:\s*"([\s\S]*?)"\s*,/);
+  const scriptMatch = cleaned.match(/"script"\s*:\s*"([\s\S]*?)"\s*(?:,\s*"followups"|\})/);
+  const followupsMatch = cleaned.match(/"followups"\s*:\s*\[([\s\S]*?)\]/);
+  const stepsStart = cleaned.search(/"steps"\s*:\s*\[/);
+  const stepsEnd = cleaned.search(/,\s*"script"\s*:/);
+  const stepsBlock = stepsStart >= 0 ? cleaned.slice(stepsStart, stepsEnd > stepsStart ? stepsEnd : cleaned.length) : '';
+  const unquoteList = value => (value || '').match(/"(?:\\.|[^"\\])*"/g)?.map(s => {
+    try { return JSON.parse(s); } catch (_) { return s.slice(1, -1).replace(/\\"/g, '"'); }
+  }).map(s => String(s || '').trim()).filter(Boolean) || [];
+  let steps = unquoteList(stepsBlock).filter(s => !['steps'].includes(s));
+  steps = steps.filter(s => !s.includes('"title"') && !s.includes('"intent"') && !s.includes('"confidence"'));
+  if (!steps.length) return null;
+
+  return {
+    title: titleMatch?.[1] || 'Live broker guidance',
+    intent: 'Live Kimi answer from transcript excerpts',
+    confidence: 'Live Kimi answer · transcript grounded',
+    steps: steps.slice(0, 5),
+    script: scriptMatch?.[1] ? scriptMatch[1].replace(/\\"/g, '"') : steps.join(' '),
+    followups: unquoteList(followupsMatch?.[1]).slice(0, 4)
+  };
+}
+
 async function callKimi(question, sources) {
   const apiKey = process.env.KIMI_API_KEY;
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
@@ -141,6 +182,7 @@ async function callKimi(question, sources) {
       model: process.env.KIMI_MODEL || 'kimi-k2.7-code',
       temperature: 1,
       max_tokens: 1200,
+      response_format: { type: 'json_object' },
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user }
@@ -156,11 +198,14 @@ async function callKimi(question, sources) {
   const data = await response.json();
   const message = data.choices?.[0]?.message || {};
   const content = message.content || message.reasoning_content || '';
-  const parsed = safeJsonParse(content);
-  if (parsed && Array.isArray(parsed.steps)) return parsed;
+  const parsed = normalizeKimiAnswer(safeJsonParse(content));
+  if (parsed) return parsed;
+
+  const salvaged = salvageJsonLikeAnswer(content);
+  if (salvaged) return salvaged;
 
   const cleaned = String(content || '').replace(/```json/gi, '').replace(/```/g, '').trim();
-  if (cleaned) {
+  if (cleaned && !cleaned.trim().startsWith('{')) {
     const titleMatch = cleaned.match(/"title"\s*:\s*"([\s\S]*?)"\s*,/);
     const stepsMatch = cleaned.match(/"steps"\s*:\s*\[([\s\S]*?)\]\s*,/);
     const scriptMatch = cleaned.match(/"script"\s*:\s*"([\s\S]*?)"\s*,\s*"followups"/);
