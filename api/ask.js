@@ -57,6 +57,60 @@ function loadIndex() {
   return JSON.parse(fs.readFileSync(indexPath, 'utf8'));
 }
 
+function cleanBrokerText(value) {
+  return String(value || '')
+    .replace(/[—–]/g, ', ')
+    .replace(/\s+/g, ' ')
+    .replace(/\bsource-backed\b/gi, 'based on the training')
+    .replace(/\btranscript grounded\b/gi, 'based on the training')
+    .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
+    .replace(/\bactionable\b/gi, 'clear')
+    .replace(/\bleverage\b/gi, 'use')
+    .replace(/\butilize\b/gi, 'use')
+    .replace(/\bIt is important to note that\b/gi, '')
+    .replace(/\bHere's what you need to know:?\s*/gi, '')
+    .replace(/\bLet's break this down:?\s*/gi, '')
+    .replace(/\bGreat question[.!]?\s*/gi, '')
+    .replace(/\bGood news[,!]?\s*/gi, '')
+    .replace(/\bsuper helpful\b/gi, 'useful')
+    .replace(/\bawesome\b/gi, 'strong')
+    .replace(/\bdead\b/gi, 'no longer viable')
+    .replace(/\bblown\b/gi, 'at serious risk')
+    .replace(/\s+,/g, ',')
+    .replace(/,\s*,/g, ',')
+    .trim();
+}
+
+function cleanBrokerAnswer(answer) {
+  return {
+    ...answer,
+    title: cleanBrokerText(answer.title || 'Broker guidance'),
+    intent: 'Broker guidance based on team training.',
+    confidence: cleanBrokerText(answer.confidence || 'Based on team training').replace(/^Source-backed$/i, 'Based on team training'),
+    steps: (answer.steps || []).map(cleanBrokerText).filter(Boolean),
+    script: cleanBrokerText(answer.script || ''),
+    followups: (answer.followups || []).map(cleanBrokerText).filter(Boolean)
+  };
+}
+
+function hasModelMeta(answer) {
+  const text = [
+    answer.title,
+    answer.intent,
+    answer.confidence,
+    ...(answer.steps || []),
+    answer.script,
+    ...(answer.followups || [])
+  ].join('\n');
+  return /\b(the user wants|i need to|json response|the prompt|system prompt|return only json|let me analyze)\b/i.test(text);
+}
+
+function cleanAndValidateModelAnswer(answer) {
+  const cleaned = cleanBrokerAnswer(answer);
+  if (hasModelMeta(cleaned)) throw new Error('Model returned meta commentary');
+  return cleaned;
+}
+
 function searchTranscripts(question, limit = 6) {
   const index = loadIndex();
   return index.chunks
@@ -79,12 +133,12 @@ function fallbackAnswer(question, sources) {
   if (is1031) {
     return {
       title: '1031 exchange guidance',
-      intent: 'Live backend fallback answer from transcript retrieval.',
-      confidence: sources.length ? 'Source-backed' : 'General',
+      intent: 'Training-backed guidance from matching source excerpts.',
+      confidence: sources.length ? 'Based on team training' : 'General',
       steps: [
         'First clarify the timing: accepted offer is not the same as closed.',
         'If the client has not closed yet, get a qualified intermediary involved immediately before funds are received.',
-        'If the client already closed and received the money, the exchange may be blown or severely limited — tell them to contact a QI/CPA right away.',
+        'If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.',
         'Do not give tax or legal advice; explain the risk and make the expert handoff urgent.'
       ],
       script: 'Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, we need to get a qualified intermediary involved immediately before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA.',
@@ -93,8 +147,8 @@ function fallbackAnswer(question, sources) {
   }
   return {
     title: 'Broker guidance',
-    intent: 'Live backend fallback answer from transcript retrieval.',
-    confidence: sources.length ? 'Source-backed' : 'Exploratory',
+    intent: 'Training-backed guidance from matching source excerpts.',
+    confidence: sources.length ? 'Based on team training' : 'Exploratory',
     steps: [
       'Start with the most relevant training source and identify the client decision point.',
       'Give the agent a practical next step rather than a generic summary.',
@@ -126,8 +180,8 @@ function normalizeKimiAnswer(parsed) {
   if (!steps.length) return null;
   return {
     title: String(parsed.title || 'Live broker guidance').trim(),
-    intent: String(parsed.intent || 'Live Kimi answer from transcript excerpts').trim(),
-    confidence: String(parsed.confidence || 'Live Kimi answer · transcript grounded').trim(),
+    intent: String(parsed.intent || 'Training-backed guidance from matching source excerpts').trim(),
+    confidence: String(parsed.confidence || 'Based on team training').trim(),
     steps: steps.slice(0, 5),
     script: String(parsed.script || steps.join(' ')).trim(),
     followups: Array.isArray(parsed.followups) ? parsed.followups.map(s => String(s || '').trim()).filter(Boolean).slice(0, 4) : []
@@ -153,8 +207,8 @@ function salvageJsonLikeAnswer(text) {
 
   return {
     title: titleMatch?.[1] || 'Live broker guidance',
-    intent: 'Live Kimi answer from transcript excerpts',
-    confidence: 'Live Kimi answer · transcript grounded',
+    intent: 'Training-backed guidance from matching source excerpts',
+    confidence: 'Based on team training',
     steps: steps.slice(0, 5),
     script: scriptMatch?.[1] ? scriptMatch[1].replace(/\\"/g, '"') : steps.join(' '),
     followups: unquoteList(followupsMatch?.[1]).slice(0, 4)
@@ -165,44 +219,61 @@ async function callKimi(question, sources) {
   const apiKey = process.env.KIMI_API_KEY;
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
 
-  const sourceContext = sources.map((s, i) => `SOURCE ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
-  const system = `You are Ask the Broker for a real estate brokerage training portal. Use the transcript excerpts. Be direct, broker-specific, and concise. Answer first; citations are shown separately. Do not give tax/legal advice; tell agents when to involve CPA/QI/attorney/broker. Return only JSON: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
-  const user = `Question: ${question}\n\nTranscript excerpts:\n${sourceContext || 'No direct transcript matches were found.'}`;
+  const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
+  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, transcript excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as source-backed, transcript-grounded, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
+  const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct transcript matches were found.'}`;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 55000);
-  const response = await fetch('https://api.moonshot.ai/v1/chat/completions', {
-    method: 'POST',
-    signal: controller.signal,
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      model: process.env.KIMI_MODEL || 'kimi-k2.7-code',
-      temperature: 1,
-      max_tokens: 1200,
-      response_format: { type: 'json_object' },
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user }
-      ]
-    })
-  }).finally(() => clearTimeout(timeout));
+  const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.7-code', 'kimi-k2.6'].filter(Boolean);
+  const models = [...new Set(modelCandidates)];
+  let data;
+  let lastError;
 
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`Kimi error ${response.status}: ${err.slice(0, 300)}`);
+  for (const model of models) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 55000);
+    try {
+      const response = await fetch('https://api.moonshot.ai/v1/chat/completions', {
+        method: 'POST',
+        signal: controller.signal,
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model,
+          temperature: 1,
+          max_tokens: 1200,
+          response_format: { type: 'json_object' },
+          messages: [
+            { role: 'system', content: system },
+            { role: 'user', content: user }
+          ]
+        })
+      });
+
+      if (!response.ok) {
+        const err = await response.text();
+        lastError = new Error(`Kimi error ${response.status} for ${model}: ${err.slice(0, 300)}`);
+        continue;
+      }
+
+      data = await response.json();
+      break;
+    } catch (error) {
+      lastError = error;
+    } finally {
+      clearTimeout(timeout);
+    }
   }
 
-  const data = await response.json();
+  if (!data) throw lastError || new Error('Kimi request failed');
   const message = data.choices?.[0]?.message || {};
   const content = message.content || message.reasoning_content || '';
   const parsed = normalizeKimiAnswer(safeJsonParse(content));
-  if (parsed) return parsed;
+  if (parsed) return cleanAndValidateModelAnswer(parsed);
 
   const salvaged = salvageJsonLikeAnswer(content);
-  if (salvaged) return salvaged;
+  if (salvaged) return cleanAndValidateModelAnswer(salvaged);
 
   const cleaned = String(content || '').replace(/```json/gi, '').replace(/```/g, '').trim();
   if (cleaned && !cleaned.trim().startsWith('{')) {
@@ -213,24 +284,24 @@ async function callKimi(question, sources) {
     const unquoteList = value => (value || '').match(/"([\s\S]*?)"/g)?.map(s => s.slice(1, -1).replace(/\\"/g, '"').trim()).filter(Boolean) || [];
     const extractedSteps = unquoteList(stepsMatch?.[1]).slice(0, 5);
     if (extractedSteps.length) {
-      return {
-        title: titleMatch?.[1] || 'Live broker guidance',
-        intent: 'Live Kimi answer from transcript excerpts',
-        confidence: 'Live Kimi answer · transcript grounded',
+      return cleanAndValidateModelAnswer({
+        title: titleMatch?.[1] || 'Broker guidance',
+        intent: 'Training-backed guidance from matching source excerpts',
+        confidence: 'Based on team training',
         steps: extractedSteps,
         script: (scriptMatch?.[1] || extractedSteps.join(' ')).replace(/\\"/g, '"').slice(0, 900),
-        followups: unquoteList(followupsMatch?.[1]).slice(0, 4).length ? unquoteList(followupsMatch?.[1]).slice(0, 4) : ['Review the source excerpts', 'Confirm the timing/facts', 'Escalate to the right specialist if needed']
-      };
+        followups: unquoteList(followupsMatch?.[1]).slice(0, 4).length ? unquoteList(followupsMatch?.[1]).slice(0, 4) : ['Review the training notes', 'Confirm the timing and facts', 'Bring in the right specialist if needed']
+      });
     }
     const sentences = cleaned.split(/(?<=[.!?])\s+/).filter(Boolean).slice(0, 4);
-    return {
-      title: 'Live broker guidance',
-      intent: 'Live Kimi answer from transcript excerpts',
-      confidence: 'Live Kimi answer · transcript grounded',
+    return cleanAndValidateModelAnswer({
+      title: 'Broker guidance',
+      intent: 'Training-backed guidance from matching source excerpts',
+      confidence: 'Based on team training',
       steps: sentences.length ? sentences : [cleaned.slice(0, 240)],
       script: cleaned.slice(0, 900),
-      followups: ['Review the source excerpts', 'Confirm the timing/facts', 'Escalate to the right specialist if needed']
-    };
+      followups: ['Review the training notes', 'Confirm the timing and facts', 'Bring in the right specialist if needed']
+    });
   }
   throw new Error('Model returned an empty answer');
 }
@@ -251,8 +322,7 @@ module.exports = async function handler(req, res) {
       answer = await callKimi(question, sources);
     } catch (error) {
       live = false;
-      answer = fallbackAnswer(question, sources);
-      answer.intent = `${answer.intent} Live model unavailable: ${error.message}`;
+      answer = cleanBrokerAnswer(fallbackAnswer(question, sources));
     }
 
     return res.status(200).json({
@@ -266,6 +336,6 @@ module.exports = async function handler(req, res) {
       }))
     });
   } catch (error) {
-    return res.status(500).json({ error: 'Ask backend failed', detail: error.message });
+    return res.status(500).json({ error: 'Ask service failed' });
   }
 };

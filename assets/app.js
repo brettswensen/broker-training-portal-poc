@@ -54,7 +54,7 @@ const demoAnswers = {
       {name:"1031 Exchange Basics w Darrin", cite:"Video training · Investors/Tax Strategy", match:"90%", quote:"A 1031 can defer taxes on investment property, but the timelines and intermediary rules matter."},
       {name:"Investor Client Playbook", cite:"Generated playbook · 3 sources", match:"78%", quote:"Agents should identify the situation early and connect the client with a qualified intermediary or tax professional."}
     ],
-    steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited — tell them to contact a QI/CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
+    steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
     script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, we need to get a qualified intermediary involved immediately before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. I can help coordinate that connection, but they need to give the tax guidance.",
     followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
   },
@@ -88,6 +88,43 @@ const demoAnswers = {
 
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+}
+
+function cleanDisplayText(value){
+  return String(value || '')
+    .replace(/[—–]/g, ', ')
+    .replace(/\bLive Kimi answer · transcript grounded\b/gi, 'Based on team training')
+    .replace(/\bLive Kimi answer from transcript excerpts\b/gi, 'Broker guidance based on team training')
+    .replace(/\bsource-backed\b/gi, 'based on the training')
+    .replace(/\btranscript grounded\b/gi, 'based on the training')
+    .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
+    .replace(/\bbackend\b/gi, 'service')
+    .replace(/\bmodel unavailable:?[^.]*\.?/gi, '')
+    .replace(/\bModel returned[^.]*\.?/g, '')
+    .replace(/\bactionable\b/gi, 'clear')
+    .replace(/\bleverage\b/gi, 'use')
+    .replace(/\butilize\b/gi, 'use')
+    .replace(/\bGood news[,!]?\s*/gi, '')
+    .replace(/\bsuper helpful\b/gi, 'useful')
+    .replace(/\bawesome\b/gi, 'strong')
+    .replace(/\bdead\b/gi, 'no longer viable')
+    .replace(/\bblown\b/gi, 'at serious risk')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+,/g, ',')
+    .replace(/,\s*,/g, ',')
+    .trim();
+}
+
+function cleanAnswerForDisplay(answer){
+  return {
+    ...answer,
+    title: cleanDisplayText(answer.title),
+    confidence: cleanDisplayText(answer.confidence || 'Based on team training'),
+    steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
+    script: cleanDisplayText(answer.script),
+    followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
+    sources: (answer.sources || []).map(s => ({...s, quote: cleanDisplayText(s.quote)}))
+  };
 }
 
 function detectFocus(q){
@@ -124,24 +161,26 @@ function renderTrainings(){
 }
 
 function answerMarkup(answer){
+  const cleanAnswer = cleanAnswerForDisplay(answer);
+  const publicConfidence = cleanAnswer.confidence || 'Based on team training';
+  const scriptText = String(cleanAnswer.script || '').trim().replace(/^['"“”]+|['"“”]+$/g, '');
+  const nextActions = (cleanAnswer.followups || []).filter(Boolean);
   return `
     <div class="ai-answer ready">
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${answer.title}</h3><p>${answer.intent}</p></div>
-        <span class="confidence">${answer.confidence}</span>
+        <div><h3>${cleanAnswer.title}</h3><p>Broker guidance based on team training.</p></div>
+        <span class="confidence">${publicConfidence}</span>
       </div>
-      <h4>Answer first</h4>
-      <ol class="primary-answer">${answer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      <ol class="primary-answer">${cleanAnswer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
       <h4>Suggested client script</h4>
-      <p class="script-box">“${answer.script}”</p>
-      <h4>Next actions</h4>
-      <div class="tag-row">${answer.followups.map(f=>`<span class="tag">${f}</span>`).join('')}</div>
+      <p class="script-box">“${scriptText}”</p>
+      ${nextActions.length ? `<h4>Recommended next steps</h4><div class="tag-row">${nextActions.map(f=>`<span class="tag">${f}</span>`).join('')}</div>` : ''}
       <div class="sources-used">
         <h4>Sources used</h4>
-        <p class="muted">These follow the answer so the agent can verify where the guidance came from.</p>
+        <p class="muted">Review the training quotes behind this guidance.</p>
         <div class="source-stack compact">
-          ${answer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
+          ${cleanAnswer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
         </div>
       </div>
     </div>`;
@@ -153,14 +192,14 @@ function loadingMarkup(query, answer){
     <div class="ai-answer thinking">
       <div class="answer-topline">
         <span class="spark pulse">✦</span>
-        <div><h3>Generating broker answer...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
-        <span class="confidence">Live demo</span>
+        <div><h3>Writing broker guidance...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
+        <span class="confidence">Checking training</span>
       </div>
       <div class="ai-steps">
         <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
         <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
-        <div class="step active"><i></i><span>Reading source excerpts</span><em>${answer.sources.length} citations selected</em></div>
-        <div class="step active"><i></i><span>Generating practical agent answer</span><em>script + steps + playbook links</em></div>
+        <div class="step active"><i></i><span>Checking the training notes</span><em>${answer.sources.length} matches found</em></div>
+        <div class="step active"><i></i><span>Writing it like a broker would say it</span><em>guidance + script + next steps</em></div>
       </div>
       <div class="skeleton"></div><div class="skeleton short"></div>
     </div>`;
@@ -191,7 +230,7 @@ fetch('data/search-index.json')
     transcriptReady = true;
     const status = document.querySelector('.sidebar-card');
     if (status) {
-      status.innerHTML = `<p class="eyebrow">POC STATUS</p><strong>${idx.records.length} real transcripts indexed</strong><span>${idx.chunks.length} searchable transcript sections loaded from Google Drive PDFs.</span>`;
+      status.innerHTML = `<p class="eyebrow">LIBRARY STATUS</p><strong>${idx.records.length} trainings indexed</strong><span>${idx.chunks.length} searchable training sections loaded.</span>`;
     }
     renderResults(document.getElementById('globalSearch').value || '');
   })
@@ -284,11 +323,11 @@ async function runAsk(query){
     answerEl.innerHTML = answerMarkup({
       ...fallback,
       ...liveAnswer,
-      confidence: liveAnswer.live ? 'Live Kimi answer · transcript grounded' : (liveAnswer.confidence || fallback.confidence),
+      confidence: liveAnswer.live ? 'Based on team training' : (liveAnswer.confidence || fallback.confidence),
       sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
     });
   } catch (error) {
-    console.warn('Live Ask backend unavailable; using demo fallback', error);
+    console.warn('Ask service unavailable; using saved training answer', error);
     setTimeout(()=>{ answerEl.innerHTML = answerMarkup(fallback); }, 600);
   }
 }
