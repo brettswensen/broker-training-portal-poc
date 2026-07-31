@@ -477,8 +477,8 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
   }
   document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
-document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
-document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
+document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
+document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
 renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
