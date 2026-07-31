@@ -16,15 +16,10 @@
     <nav>
       <a class="active" href="#top">Dashboard</a>
       <a href="#search">Search</a>
-      <a href="#all-content">All Content</a>
+      <a href="/library/">Library</a>
       <a href="#ask">Ask the Broker</a>
-      <a href="#latest">Latest Training</a>
-      <a href="#pipeline">Training Pipeline</a>
-      <a href="#onboarding">Onboarding</a>
-      <a href="#playbooks">Playbooks</a>
-      <a href="#topics">Topics</a>
-      <a href="#trainings">Trainings</a>
-      <a href="#objections">Objection Library</a>
+      <a href="/playbooks/">Playbooks</a>
+      <a href="/topics/">Topics</a>
     </nav>
     <div class="sidebar-card">
       <p class="eyebrow">LIBRARY STATUS</p>
@@ -37,8 +32,8 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
-        <h1>Searchable broker training that turns into agent answers.</h1>
-        <p class="lead">A premium knowledge-base experience for recruiting, onboarding, training, and helping agents answer real client situations using your team’s own guidance.</p>
+        <h1>Find the training, scripts, and guidance you need for your next client conversation.</h1>
+        <p class="lead">Search team trainings, open playbooks, review examples, and ask for guidance when you need help applying what you’ve learned.</p>
       </div>
       <div class="hero-stats">
         <div><strong>6</strong><span>sample trainings</span></div>
@@ -48,10 +43,10 @@
     </section>
 
     <section id="search" class="search-panel">
-      <label for="globalSearch">Search trainings, scripts, playbooks, objections, contracts...</label>
+      <label for="globalSearch">What do you need help with today?</label>
       <div class="search-row">
         <span>⌕</span>
-        <input id="globalSearch" type="search" placeholder="Try: repair negotiations, CMA land, 1031 exchange, transaction coordinator..." autocomplete="off" />
+        <input id="globalSearch" type="search" placeholder="Try: 1031 exchange, repair negotiations, pricing a unique property..." autocomplete="off" />
       </div>
       <div class="chips" id="searchChips">
         <button data-query="repair negotiations">repair negotiations</button>
@@ -59,6 +54,20 @@
         <button data-query="1031 exchange">1031 exchange</button>
         <button data-query="work with TC">work with TC</button>
         <button data-query="new construction">new construction</button>
+      </div>
+    </section>
+
+    <section class="panel route-teasers">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">EXPLORE THE PORTAL</p>
+          <h2>Start here, then dig deeper in each section.</h2>
+        </div>
+      </div>
+      <div class="route-teaser-grid">
+        <a href="/library/" class="route-teaser"><span>Library</span><strong>Search all trainings and source notes</strong><p>Use this when you need filtered results for a client situation or topic.</p></a>
+        <a href="/playbooks/" class="route-teaser"><span>Playbooks</span><strong>Open field guides and checklists</strong><p>Use this when you need the team process for a transaction situation.</p></a>
+        <a href="/topics/" class="route-teaser"><span>Topics</span><strong>Browse by real estate topic</strong><p>Use this when you want to explore related videos, examples, and guidance.</p></a>
       </div>
     </section>
 
@@ -106,12 +115,12 @@
     <section id="latest" class="panel latest-panel">
       <div class="section-head">
         <div>
-          <p class="eyebrow">LATEST FROM TRAINING</p>
-          <h2>New broker trainings, already processed.</h2>
+          <p class="eyebrow">LATEST TRAINING</p>
+          <h2>Continue learning from recent team trainings.</h2>
         </div>
-        <span class="status-pill green">Video + transcript + scripts</span>
+        <span class="status-pill green">Watch, search, or ask</span>
       </div>
-      <p class="section-intro">Agents can browse recent sessions like a video library, then open the transcript-backed guidance, source clips, scripts, and related playbooks from the same place.</p>
+      <p class="section-intro">Browse recent trainings, revisit key topics, and get guidance you can use with buyers, sellers, and investors.</p>
       <div id="latestTrainingRail" class="video-rail" aria-label="Latest training videos"></div>
     </section>
 
@@ -157,10 +166,10 @@
       <div id="onboarding" class="panel onboarding-card">
         <div class="section-head">
           <div>
-            <p class="eyebrow">RECRUITING VALUE</p>
-            <h2>New Agent Onboarding</h2>
+            <p class="eyebrow">NEWER TO THE TEAM</p>
+            <h2>Start with the new agent path</h2>
           </div>
-          <span class="status-pill green">Onboarding path</span>
+          <span class="status-pill green">Start here</span>
         </div>
         <ol class="timeline">
           <li><span></span><div><strong>Day 1: Team operating system</strong><p>Brokerage expectations, tech stack, who to contact, how trainings work.</p></div></li>

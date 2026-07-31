@@ -1,34 +1,38 @@
 
 (function(){
+  function isCompare(){ return new URLSearchParams(location.search).has('compare'); }
+  function libraryUrl(q){ var value = String(q || '').trim(); return '/library/' + (value ? '?q=' + encodeURIComponent(value) : ''); }
+  function routeSearch(q){ if(isCompare()) return false; window.location.href = libraryUrl(q); return true; }
   function syncSearchMode(q){
     var value = String(q || (document.getElementById('globalSearch') && document.getElementById('globalSearch').value) || '').trim();
-    document.body.classList.toggle('search-mode', !!value);
-    var note = document.querySelector('.designer-search-note');
-    if(!note){
-      note = document.createElement('section');
-      note.className = 'designer-search-note';
-      note.innerHTML = '<strong>Designer-pass behavior:</strong> search now becomes a focused <span>All Content mode</span>, so duplicate dashboard sections collapse while the broker can compare top results, transcript rows, playbooks, and training videos without scrolling through the whole homepage.';
-      var all = document.getElementById('all-content');
-      if(all && all.parentNode) all.parentNode.insertBefore(note, all.nextSibling);
-    }
+    document.body.classList.toggle('search-mode', !!value && isCompare());
   }
   var originalRender = window.renderResults;
   if(typeof originalRender === 'function'){
     window.renderResults = function(query){
+      if(!isCompare() && String(query || '').trim()) return;
       originalRender(query);
       syncSearchMode(query);
     };
   }
-  document.addEventListener('input', function(e){ if(e.target && e.target.id === 'globalSearch') syncSearchMode(e.target.value); });
-  document.addEventListener('click', function(){ setTimeout(syncSearchMode, 30); });
+  document.addEventListener('keydown', function(e){
+    if(e.target && e.target.id === 'globalSearch' && e.key === 'Enter'){
+      e.preventDefault(); routeSearch(e.target.value);
+    }
+  }, true);
+  document.addEventListener('click', function(e){
+    var chip = e.target && e.target.closest && e.target.closest('[data-query]');
+    if(chip && !isCompare()){
+      e.preventDefault(); e.stopPropagation(); routeSearch(chip.dataset.query); return;
+    }
+    setTimeout(syncSearchMode, 30);
+  }, true);
   var params = new URLSearchParams(location.search);
   var q = params.get('q');
-  if(q){
+  if(q && !isCompare()) routeSearch(q);
+  else if(q){
     var input = document.getElementById('globalSearch');
     if(input) input.value = q;
     if(typeof window.renderResults === 'function') window.renderResults(q);
-    setTimeout(function(){ document.getElementById('all-content')?.scrollIntoView({behavior:'instant', block:'start'}); }, 50);
-  } else {
-    syncSearchMode('');
-  }
+  } else syncSearchMode('');
 })();
