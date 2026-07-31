@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Broker Brain Design Comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#06070a;--panel:#0d1016;--line:rgba(255,255,255,.1);--muted:#9aa3ad;--text:#f7fafc;--cyan:#78dce8;--purple:#7170ff;--green:#10b981}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 72% -8%,rgba(120,220,232,.18),transparent 26rem),#06070a;color:var(--text);font-family:Inter,system-ui,sans-serif;overflow:hidden}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(8,10,15,.88);backdrop-filter:blur(18px)}.brand{display:flex;align-items:center;gap:12px;min-width:260px}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--purple),var(--cyan));box-shadow:0 0 34px rgba(120,220,232,.25)}h1{font-size:18px;margin:0;letter-spacing:-.03em}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}.controls{display:flex;align-items:center;justify-content:center;gap:10px;flex:1}.controls input{width:min(520px,45vw);height:42px;border-radius:999px;border:1px solid rgba(120,220,232,.22);background:rgba(255,255,255,.06);color:var(--text);padding:0 16px;outline:0}.controls button,.links a{height:42px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--text);padding:0 14px;font:inherit;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}.controls button.primary{border-color:rgba(120,220,232,.32);background:rgba(120,220,232,.12)}.links{display:flex;gap:8px;min-width:270px;justify-content:flex-end}.framegrid{height:calc(100vh - 76px);display:grid;grid-template-columns:1fr 1fr}.pane{min-width:0;border-right:1px solid var(--line);display:grid;grid-template-rows:44px 1fr;background:#050608}.pane:last-child{border-right:0}.pane-head{display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.035)}.pane-head strong{font-size:13px}.pane-head span{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.pane-head .pro{color:var(--cyan)}iframe{width:100%;height:100%;border:0;background:#07080a}.note{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);border:1px solid rgba(120,220,232,.2);background:rgba(8,10,15,.86);backdrop-filter:blur(18px);color:#cbd5df;border-radius:999px;padding:9px 14px;font-size:12px;box-shadow:0 12px 44px rgba(0,0,0,.35)}@media(max-width:900px){body{overflow:auto}.topbar{height:auto;display:grid}.brand,.links{min-width:0}.controls{justify-content:start;flex-wrap:wrap}.controls input{width:100%}.framegrid{height:auto;grid-template-columns:1fr}.pane{height:78vh;border-right:0;border-bottom:1px solid var(--line)}.note{display:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">◆</span><div><h1>Broker Brain Design Compare</h1><p>Current vs proposed designer-pass copy</p></div></div>
+    <div class="controls">
+      <input id="query" value="1031 exchange" aria-label="Comparison search query" />
+      <button class="primary" onclick="runCompare()">Compare Search Mode</button>
+      <button onclick="resetCompare()">Dashboard Mode</button>
+    </div>
+    <div class="links">
+      <a href="/" target="_blank">Open Current</a>
+      <a href="/design-pass/" target="_blank">Open Proposed</a>
+    </div>
+  </header>
+  <main class="framegrid">
+    <section class="pane"><div class="pane-head"><strong>Current version</strong><span>baseline</span></div><iframe id="currentFrame" src="/?compare=current"></iframe></section>
+    <section class="pane"><div class="pane-head"><strong>Proposed designer pass</strong><span class="pro">polished copy</span></div><iframe id="proposedFrame" src="/design-pass/?compare=proposed"></iframe></section>
+  </main>
+  <div class="note">Tip: use “Compare Search Mode” to see how the proposed page collapses duplicate dashboard content.</div>
+  <script>
+    function setFrameSearch(frame, query){
+      try{
+        const w = frame.contentWindow;
+        const input = w.document.getElementById('globalSearch');
+        if(input) input.value = query;
+        if(typeof w.renderResults === 'function') w.renderResults(query);
+        setTimeout(()=>w.document.getElementById('all-content')?.scrollIntoView({behavior:'smooth',block:'start'}),80);
+      }catch(e){ console.warn(e); }
+    }
+    function clearFrame(frame){
+      try{
+        const w = frame.contentWindow;
+        const input = w.document.getElementById('globalSearch');
+        if(input) input.value = '';
+        if(typeof w.renderResults === 'function') w.renderResults('');
+        w.document.getElementById('top')?.scrollIntoView({behavior:'smooth',block:'start'});
+      }catch(e){ console.warn(e); }
+    }
+    function runCompare(){
+      const q = document.getElementById('query').value || '1031 exchange';
+      setFrameSearch(document.getElementById('currentFrame'), q);
+      setFrameSearch(document.getElementById('proposedFrame'), q);
+    }
+    function resetCompare(){ clearFrame(document.getElementById('currentFrame')); clearFrame(document.getElementById('proposedFrame')); }
+    window.addEventListener('load',()=>setTimeout(runCompare,900));
+  </script>
+</body>
+</html>
