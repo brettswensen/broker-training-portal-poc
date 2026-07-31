@@ -27,3 +27,7 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
 .designer-pass #pipeline,.designer-pass #positioning,.designer-pass #results{display:none!important}
 .designer-pass .route-teasers{margin-top:34px}.designer-pass .route-teaser-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.designer-pass .route-teaser{color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:20px;background:rgba(255,255,255,.04);transition:.2s ease}.designer-pass .route-teaser:hover{transform:translateY(-3px);border-color:rgba(120,220,232,.25);box-shadow:0 20px 60px rgba(0,0,0,.28)}.designer-pass .route-teaser span{display:block;color:var(--accent2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.designer-pass .route-teaser strong{display:block;margin:10px 0 8px;font-size:20px;letter-spacing:-.035em}.designer-pass .route-teaser p{margin:0;color:#aeb8c4;line-height:1.55}
 @media(max-width:900px){.designer-pass .route-teaser-grid{grid-template-columns:1fr}}
+
+.designer-pass .dashboard-search-form{display:block}
+.designer-pass .chips a,.designer-pass .chips button{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.055);color:#dbe4ed;border-radius:999px;padding:9px 12px;font-weight:700;text-decoration:none;display:inline-flex}
+.designer-pass .sr-search-submit{border:0;border-radius:999px;background:linear-gradient(135deg,var(--violet),var(--accent));color:#fff;font-weight:800;padding:0 16px;min-height:42px}

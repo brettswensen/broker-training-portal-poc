@@ -43,17 +43,20 @@
     </section>
 
     <section id="search" class="search-panel">
-      <label for="globalSearch">What do you need help with today?</label>
-      <div class="search-row">
-        <span>⌕</span>
-        <input id="globalSearch" type="search" placeholder="Try: 1031 exchange, repair negotiations, pricing a unique property..." autocomplete="off" />
-      </div>
+      <form action="/library/" method="get" class="dashboard-search-form">
+        <label for="globalSearch">What do you need help with today?</label>
+        <div class="search-row">
+          <span>⌕</span>
+          <input id="globalSearch" name="q" type="search" placeholder="Try: 1031 exchange, repair negotiations, pricing a unique property..." autocomplete="off" />
+          <button class="sr-search-submit" type="submit">Search Library</button>
+        </div>
+      </form>
       <div class="chips" id="searchChips">
-        <button data-query="repair negotiations">repair negotiations</button>
-        <button data-query="CMA land">CMA land</button>
-        <button data-query="1031 exchange">1031 exchange</button>
-        <button data-query="work with TC">work with TC</button>
-        <button data-query="new construction">new construction</button>
+        <a href="/library/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
+        <a href="/library/?q=CMA%20land" data-query="CMA land">CMA land</a>
+        <a href="/library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
+        <a href="/library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
+        <a href="/library/?q=new%20construction" data-query="new construction">new construction</a>
       </div>
     </section>
 
@@ -254,7 +257,26 @@
       </div>
     </section>
   </main>
-  <script src="../assets/app.js?v=all-content-search-20260730"></script>
-  <script src="designer-pass.js"></script>
+  <script>
+    window.__designerRouteToLibrary = function(query) {
+      var value = String(query || '').trim();
+      window.location.href = '/library/' + (value ? '?q=' + encodeURIComponent(value) : '');
+    };
+    document.addEventListener('click', function(event) {
+      var chip = event.target && event.target.closest && event.target.closest('#searchChips [data-query]');
+      if (!chip || new URLSearchParams(location.search).has('compare')) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.__designerRouteToLibrary(chip.getAttribute('data-query'));
+    }, true);
+    document.addEventListener('keydown', function(event) {
+      if (!event.target || event.target.id !== 'globalSearch' || event.key !== 'Enter' || new URLSearchParams(location.search).has('compare')) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.__designerRouteToLibrary(event.target.value);
+    }, true);
+  </script>
+  <script src="../assets/app.js?v=routed-agent-pages-20260730b"></script>
+  <script src="designer-pass.js?v=routed-agent-pages-20260730b"></script>
 </body>
 </html>

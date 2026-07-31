@@ -393,8 +393,27 @@ function askAbout(topic){
   runAsk(question);
 }
 
-document.getElementById('globalSearch').addEventListener('input',e=>renderResults(e.target.value));
-document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});}));
+const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
+const librarySearchUrl = query => `/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`;
+const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
+
+document.getElementById('globalSearch').addEventListener('input', e => {
+  if (!isDesignerRouteDashboard) renderResults(e.target.value);
+});
+document.getElementById('globalSearch').addEventListener('keydown', e => {
+  if (isDesignerRouteDashboard && e.key === 'Enter') {
+    e.preventDefault();
+    routeToLibrarySearch(e.target.value);
+  }
+});
+document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click', e=>{
+  if (isDesignerRouteDashboard) {
+    e.preventDefault();
+    routeToLibrarySearch(b.dataset.query);
+    return;
+  }
+  document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
+}));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',()=>runAsk(document.getElementById('askInput').value||'general'));
 renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
