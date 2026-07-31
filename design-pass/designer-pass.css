@@ -39,3 +39,11 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
 .designer-pass .route-teasers .section-head h2{font-size:clamp(28px,3vw,40px)}.designer-pass .dashboard-support-grid{grid-template-columns:minmax(0,1fr)}
 @media(max-width:1100px){.designer-pass .hero{grid-template-columns:1fr;min-height:0}.designer-pass .hero-copy{align-self:auto}.designer-pass .ask-feature-panel{grid-template-columns:1fr}.designer-pass .ask-feature-copy{position:static}}
 @media(max-width:640px){.designer-pass .hero{padding:22px}.designer-pass .hero h1{font-size:clamp(42px,14vw,58px)}.designer-pass .ask-feature-panel{padding:20px}.designer-pass .ask-feature-card{padding:18px}.designer-pass .answer-actions{display:grid}.designer-pass .answer-route-links{display:grid}.designer-pass .answer-route-links a{text-align:center}}
+
+
+/* Ask section library search alternative */
+.designer-pass .ask-library-search{margin-top:18px;padding:18px;border:1px solid rgba(120,220,232,.18);border-radius:24px;background:rgba(120,220,232,.055);display:grid;gap:14px}
+.designer-pass .ask-library-search h3{margin:4px 0 6px;font-size:22px;letter-spacing:-.035em}
+.designer-pass .ask-library-search p{margin:0;color:#aeb8c4;line-height:1.55}
+.designer-pass .ask-library-search .search-row{background:rgba(255,255,255,.07)}
+.designer-pass .playbook-card{color:inherit;text-decoration:none}.designer-pass .playbook-card .ghost-button{display:inline-flex;margin-top:12px}

@@ -18,6 +18,16 @@ const playbooks = [
 
 const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination","1031 Exchange","New Construction","Investor Clients","Inspection Objections","Contract-to-Close","Land Valuation","Flip Properties","Nightly Rentals","New Agent Onboarding"];
 
+function slugifyPlaybook(name){
+  return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+function playbookUrl(name){ return `/playbooks/${slugifyPlaybook(name)}/`; }
+function playbookFromPath(){
+  const parts = location.pathname.split('/').filter(Boolean);
+  const slug = parts[1] || '';
+  return playbooks.find(p => slugifyPlaybook(p.name) === slug) || playbooks[0];
+}
+
 function escapeHtml(value){
   return String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 }
@@ -112,15 +122,51 @@ function renderLibrary(){
     }).join('');
   }
   const pb = document.getElementById('libraryPlaybooks');
-  if(pb) pb.innerHTML = related.map(p=>`<a class="route-row compact" href="/playbooks/?id=${encodeURIComponent(p.name)}"><b>PB</b><div><small>${p.sources} sources</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div><span>Open</span></a>`).join('');
+  if(pb) pb.innerHTML = related.map(p=>`<a class="route-row compact" href="${playbookUrl(p.name)}"><b>PB</b><div><small>${p.sources} sources</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div><span>Open</span></a>`).join('');
+}
+function expertNamesFor(p){
+  const map = {
+    'Repair Negotiation Playbook':['Craig'],
+    'CMA / Pricing Playbook':['Craig'],
+    'Contract-to-Close Checklist':['Marty','Marc'],
+    'Investor Client Playbook':['Darrin','Craig'],
+    'New Construction Deal Playbook':['Craig'],
+    'New Agent 30-Day Onboarding':['Marty','Marc','Craig']
+  };
+  return map[p.name] || ['Team training'];
+}
+function sourcesForPlaybook(p){
+  return (p.sourcesUsed && p.sourcesUsed.length) ? p.sourcesUsed : trainings.filter(t => (t.playbooks || []).includes(p.name)).map(t => t.title).slice(0, Math.max(1,p.sources));
 }
 function renderPlaybooksPage(){
-  const selected = new URLSearchParams(location.search).get('id') || playbooks[0].name;
   const grid = document.getElementById('playbookCards');
-  if(grid) grid.innerHTML = playbooks.map(p=>`<a class="route-card ${p.name===selected?'selected':''}" href="/playbooks/?id=${encodeURIComponent(p.name)}"><span>${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p><div class="mini-tags">${p.tags.map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div></a>`).join('');
-  const p = playbooks.find(x=>x.name===selected) || playbooks[0];
-  const detail = document.getElementById('playbookDetailPage');
-  if(detail) detail.innerHTML = `<article class="route-doc"><p class="eyebrow">PLAYBOOK</p><h2>${escapeHtml(p.name)}</h2><p class="leadline">${escapeHtml(p.question)}</p><div class="doc-meta-row"><span>${p.sources} training sources</span><span>${p.time} read</span><span>Agent field guide</span></div><h3>How to use this</h3><ol>${p.steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ol><h3>Related topics</h3><div class="mini-tags large">${p.tags.map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div><a class="route-button" href="/library/?q=${encodeURIComponent(p.tags[0] || p.name)}">Find related training</a></article>`;
+  if(grid) grid.innerHTML = playbooks.map((p,i)=>`<a class="route-card playbook-index-card" href="${playbookUrl(p.name)}"><span>Playbook ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p><div class="mini-tags">${p.tags.map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div><strong class="open-cue">Open full playbook</strong></a>`).join('');
+}
+function renderPlaybookDetailPage(){
+  const p = playbookFromPath();
+  const sources = sourcesForPlaybook(p);
+  const experts = expertNamesFor(p);
+  const shell = document.getElementById('playbookDetailShell');
+  if(!shell) return;
+  document.title = `${p.name} - Broker Brain`;
+  shell.innerHTML = `
+    <section class="playbook-page-hero">
+      <a class="back-link" href="/playbooks/">← All playbooks</a>
+      <p class="eyebrow">Playbooks · Field guide</p>
+      <h1>${escapeHtml(p.name)}</h1>
+      <p class="leadline">${escapeHtml(p.question)}</p>
+      <div class="doc-meta-row"><span>${escapeHtml(p.time)} read</span><span>${p.steps.length} steps</span><span>${sources.length || p.sources} sources</span><span>${experts.length} ${experts.length===1?'person':'people'}</span></div>
+    </section>
+    <nav class="playbook-jump-nav" aria-label="Playbook sections">
+      <a href="#short-version">01 Short Version</a><a href="#how-to">02 How to Use It</a><a href="#expert-notes">03 Expert Notes</a><a href="#watchouts">04 Watchouts</a><a href="#experts">05 People</a><a href="#sources">06 Source Trail</a><a href="#related">07 Related Concepts</a>
+    </nav>
+    <section id="short-version" class="route-doc playbook-doc-section"><p class="eyebrow">01</p><h2>The Short Version</h2><p>${escapeHtml(p.script || p.question)}</p><p>Use this page as the operating guide. If an agent needs exact client wording, start with Ask the Broker from this playbook context and keep expert-sensitive guidance separated from tax, legal, lending, or inspection advice.</p></section>
+    <section id="how-to" class="route-doc playbook-doc-section"><p class="eyebrow">02</p><h2>How to Use It</h2><ol>${p.steps.map((s,i)=>`<li><span>${i+1}</span><p>${escapeHtml(s)}</p></li>`).join('')}</ol></section>
+    <section id="expert-notes" class="route-doc playbook-doc-section"><p class="eyebrow">03</p><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
+    <section id="watchouts" class="route-doc playbook-doc-section amber"><p class="eyebrow">04</p><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
+    <section id="experts" class="route-doc playbook-doc-section"><p class="eyebrow">05</p><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
+    <section id="sources" class="route-doc playbook-doc-section"><p class="eyebrow">06</p><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="/library/?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
+    <section id="related" class="route-doc playbook-doc-section"><p class="eyebrow">07</p><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="/library/?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
 }
 function renderTopicsPage(){
   const grid = document.getElementById('topicCards');
@@ -136,6 +182,7 @@ async function initRoutePage(){
   await loadIndex();
   if(document.body.dataset.page === 'library') renderLibrary();
   if(document.body.dataset.page === 'playbooks') renderPlaybooksPage();
+  if(document.body.dataset.page === 'playbook-detail') renderPlaybookDetailPage();
   if(document.body.dataset.page === 'topics') renderTopicsPage();
 }
 initRoutePage();

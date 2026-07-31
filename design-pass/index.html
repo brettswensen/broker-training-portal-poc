@@ -29,24 +29,6 @@
   </aside>
 
   <main id="top" class="app-shell">
-    <section id="search" class="search-panel top-search-panel">
-      <form action="/library/" method="get" class="dashboard-search-form">
-        <label for="globalSearch">What do you need help with today?</label>
-        <div class="search-row">
-          <span>⌕</span>
-          <input id="globalSearch" name="q" type="search" placeholder="Try: 1031 exchange, repair negotiations, pricing a unique property..." autocomplete="off" />
-          <button class="sr-search-submit" type="submit">Search Library</button>
-        </div>
-      </form>
-      <div class="chips" id="searchChips">
-        <a href="/library/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
-        <a href="/library/?q=CMA%20land" data-query="CMA land">CMA land</a>
-        <a href="/library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
-        <a href="/library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
-        <a href="/library/?q=new%20construction" data-query="new construction">new construction</a>
-      </div>
-    </section>
-
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
@@ -75,8 +57,30 @@
         </div>
         <button type="button" id="askButton" class="primary">Ask the Broker</button>
         <article id="answer" class="answer">
-          <p class="muted">Ask a question to see practical broker guidance, source-backed reasoning, and recommended next steps.</p>
+          <p class="muted">Ask a question to see practical broker guidance, training references, and recommended next steps.</p>
         </article>
+        <div id="search" class="ask-library-search" aria-label="Search the training library instead">
+          <div>
+            <p class="eyebrow">PREFER TO SEARCH?</p>
+            <h3>Search the training library instead.</h3>
+            <p>If you do not need a broker-style answer, use this to jump straight into matching trainings, playbooks, topic notes, and source material.</p>
+          </div>
+          <form action="/library/" method="get" class="dashboard-search-form">
+            <label class="sr-only" for="globalSearch">Search the training library</label>
+            <div class="search-row">
+              <span>⌕</span>
+              <input id="globalSearch" name="q" type="search" placeholder="Try: 1031 exchange, repair negotiations, pricing a unique property..." autocomplete="off" />
+              <button class="sr-search-submit" type="submit">Search Library</button>
+            </div>
+          </form>
+          <div class="chips" id="searchChips">
+            <a href="/library/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
+            <a href="/library/?q=CMA%20land" data-query="CMA land">CMA land</a>
+            <a href="/library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
+            <a href="/library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
+            <a href="/library/?q=new%20construction" data-query="new construction">new construction</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -202,9 +206,8 @@
         </div>
         <span class="muted">Built from trainings + transcripts</span>
       </div>
-      <p class="section-intro">Click a playbook to expand it into the kind of operator-style workflow agents can actually follow.</p>
+      <p class="section-intro">Click a playbook to open the full field guide on its own page.</p>
       <div id="playbookGrid" class="playbook-grid"></div>
-      <article id="playbookDetail" class="playbook-detail"></article>
     </section>
 
     <section id="topics" class="panel">

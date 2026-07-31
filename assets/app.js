@@ -86,6 +86,11 @@ const demoAnswers = {
   }
 };
 
+function slugifyPlaybook(name){
+  return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+function playbookUrl(name){ return `/playbooks/${slugifyPlaybook(name)}/`; }
+
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 }
@@ -181,92 +186,9 @@ function renderLatestTraining(){
 }
 
 function renderPlaybooks(activeIndex=1){
-  document.getElementById('playbookGrid').innerHTML=playbooks.map((p,i)=>`<article class="card playbook-card ${i===activeIndex?'selected':''}" onclick="showPlaybook(${i})"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${p.name}</h3><p class="muted">${p.question}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div><button class="ghost-button">Open playbook</button></article>`).join('');
-  showPlaybook(activeIndex, false);
-}
-
-function showPlaybook(index, shouldScroll=true){
-  const p = playbooks[index] || playbooks[0];
-  const detail = document.getElementById('playbookDetail');
-  if(!detail) return;
-  const safeName = JSON.stringify(p.name);
-  const sourceList = (p.sourcesUsed && p.sourcesUsed.length) ? p.sourcesUsed : trainings.filter(t => (t.playbooks || []).includes(p.name)).map(t => t.title).slice(0,3);
-  const materials = [
-    'Client-facing explanation',
-    'Agent checklist',
-    'Training source clips',
-    'Broker coaching notes'
-  ];
-  document.querySelectorAll('.playbook-card').forEach((el,i)=>el.classList.toggle('selected', i===index));
-  detail.innerHTML = `
-    <article class="playbook-document">
-      <div class="playbook-doc-hero">
-        <div>
-          <p class="eyebrow">EXPANDED PLAYBOOK EXAMPLE</p>
-          <h3>${escapeHtml(p.name)}</h3>
-          <p>${escapeHtml(p.question)}</p>
-          <div class="doc-meta-row">
-            <span>${p.sources} training source${p.sources===1?'':'s'}</span>
-            <span>${p.time} read</span>
-            <span>Agent-ready SOP</span>
-          </div>
-        </div>
-        <button class="primary small" onclick="askAbout(${safeName})">Ask about this playbook</button>
-      </div>
-
-      <section class="doc-callout">
-        <span>01</span>
-        <div>
-          <h4>Operating objective</h4>
-          <p>This playbook turns the matching broker trainings into a repeatable field process. Use it when an agent needs the standard team approach, source-backed reasoning, and next steps before they draft client language in Ask the Broker.</p>
-        </div>
-      </section>
-
-      <section class="doc-section">
-        <div class="doc-section-title"><span>02</span><h4>Execution flow</h4></div>
-        <div class="doc-timeline">
-          ${(p.steps || []).map((step,i)=>`<article><i>${String(i+1).padStart(2,'0')}</i><div><strong>${escapeHtml(step)}</strong><p>${i===0?'Start by framing the situation clearly before jumping to language or tactics.':i===1?'Use the team-approved decision path so the agent knows which direction to take.':i===2?'Keep the client conversation practical, calm, and tied to the transaction goal.':'Close the loop with documentation, follow-up ownership, and the next responsible party.'}</p></div></article>`).join('')}
-        </div>
-      </section>
-
-      <section class="doc-grid-two">
-        <div class="doc-panel">
-          <div class="doc-section-title"><span>03</span><h4>Operator notes</h4></div>
-          <ul class="doc-bullets">
-            <li>Use this as the internal process view, not the final client script.</li>
-            <li>Generate client wording from Ask the Broker so the script matches the exact situation.</li>
-            <li>Keep broker guidance separated from tax, legal, lending, or inspection advice where applicable.</li>
-            <li>When the source library grows, this section can show transcript clips and timestamps.</li>
-          </ul>
-        </div>
-        <div class="doc-panel amber">
-          <div class="doc-section-title"><span>04</span><h4>Watchouts</h4></div>
-          <ul class="doc-bullets">
-            <li>Do not over-script the playbook page itself.</li>
-            <li>Do not let agents skip the source trail when the topic is sensitive.</li>
-            <li>Escalate expert topics early instead of making the agent sound like the professional advisor.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="doc-grid-two">
-        <div class="doc-panel">
-          <div class="doc-section-title"><span>05</span><h4>Materials</h4></div>
-          <div class="asset-row stacked-assets">${materials.map(m=>`<span>${escapeHtml(m)}</span>`).join('')}</div>
-        </div>
-        <div class="doc-panel">
-          <div class="doc-section-title"><span>06</span><h4>Related concepts</h4></div>
-          <div class="tag-row">${(p.tags || []).map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-        </div>
-      </section>
-
-      <section class="source-stack compact doc-sources">
-        <h4>07 Source trail</h4>
-        ${(sourceList || []).map(src=>`<article><span>Training source</span><strong>${escapeHtml(src)}</strong><small>Used to build this workflow</small></article>`).join('') || '<p class="muted">Source clips will appear here as trainings are connected.</p>'}
-      </section>
-    </article>
-  `;
-  if(shouldScroll) detail.scrollIntoView({behavior:'smooth', block:'center'});
+  const grid = document.getElementById('playbookGrid');
+  if(!grid) return;
+  grid.innerHTML = playbooks.map((p,i)=>`<a class="card playbook-card" href="${playbookUrl(p.name)}"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p class="muted">${escapeHtml(p.question)}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><span class="ghost-button">Open playbook</span></a>`).join('');
 }
 
 function renderTopics(){
