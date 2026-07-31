@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 46 488 122" role="img" aria-label="Makrly horizontal lockup dark background version">
+  <g transform="translate(8,10)">
+    <g transform="scale(0.14)">
+      <path d="M754.7 286.6 L310.4 707.1 L120.0 913.4 L286.6 913.4 L754.7 453.2 Z" fill="#19DEC1"/>
+      <path d="M1072.1 366.0 L818.2 611.9 L818.2 786.4 L1072.1 540.5 Z" fill="#EAF2FF"/>
+      <path d="M754.7 651.6 L683.3 707.1 L500.8 913.4 L699.2 913.4 L754.7 857.9 Z" fill="#EAF2FF"/>
+      <path d="M1072.1 699.2 L849.9 913.4 L1032.4 913.4 L1072.1 873.7 Z" fill="#EAF2FF"/>
+    </g>
+    <text x="158" y="128" fill="#EAF2FF" font-family="Sora, Arial, Helvetica, sans-serif" font-size="118" font-weight="500" letter-spacing="-1.6">Makrly</text>
+  </g>
+</svg>
