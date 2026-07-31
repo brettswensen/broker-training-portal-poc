@@ -18,13 +18,23 @@ const playbooks = [
 
 const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination","1031 Exchange","New Construction","Investor Clients","Inspection Objections","Contract-to-Close","Land Valuation","Flip Properties","Nightly Rentals","New Agent Onboarding"];
 
+function appBasePath(){
+  const parts = location.pathname.split('/').filter(Boolean);
+  const appMarkers = ['design-pass','library','playbooks','topics'];
+  const markerIndex = parts.findIndex(part => appMarkers.includes(part));
+  return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
+}
+function appPath(path){
+  return `${appBasePath()}${path}`;
+}
 function slugifyPlaybook(name){
   return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
-function playbookUrl(name){ return `/playbooks/${slugifyPlaybook(name)}/`; }
+function playbookUrl(name){ return appPath(`/playbooks/${slugifyPlaybook(name)}/`); }
 function playbookFromPath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const slug = parts[1] || '';
+  const playbooksIndex = parts.lastIndexOf('playbooks');
+  const slug = playbooksIndex >= 0 ? (parts[playbooksIndex + 1] || '') : '';
   return playbooks.find(p => slugifyPlaybook(p.name) === slug) || playbooks[0];
 }
 
@@ -151,7 +161,7 @@ function renderPlaybookDetailPage(){
   document.title = `${p.name} - Broker Brain`;
   shell.innerHTML = `
     <section class="playbook-page-hero">
-      <a class="back-link" href="/playbooks/">← All playbooks</a>
+      <a class="back-link" href="${appPath('/playbooks/')}">← All playbooks</a>
       <p class="eyebrow">Playbooks · Field guide</p>
       <h1>${escapeHtml(p.name)}</h1>
       <p class="leadline">${escapeHtml(p.question)}</p>
@@ -165,14 +175,14 @@ function renderPlaybookDetailPage(){
     <section id="expert-notes" class="route-doc playbook-doc-section"><p class="eyebrow">03</p><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
     <section id="watchouts" class="route-doc playbook-doc-section amber"><p class="eyebrow">04</p><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
     <section id="experts" class="route-doc playbook-doc-section"><p class="eyebrow">05</p><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
-    <section id="sources" class="route-doc playbook-doc-section"><p class="eyebrow">06</p><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="/library/?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
-    <section id="related" class="route-doc playbook-doc-section"><p class="eyebrow">07</p><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="/library/?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
+    <section id="sources" class="route-doc playbook-doc-section"><p class="eyebrow">06</p><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
+    <section id="related" class="route-doc playbook-doc-section"><p class="eyebrow">07</p><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
 }
 function renderTopicsPage(){
   const grid = document.getElementById('topicCards');
   if(grid) grid.innerHTML = topics.map(t=>{
     const count = trainings.filter(v=>[v.category,...v.topics].join(' ').toLowerCase().includes(t.split(' ')[0].toLowerCase())).length || 1;
-    return `<a class="route-card topic-card" href="/library/?q=${encodeURIComponent(t)}"><span>${count} related source${count===1?'':'s'}</span><h3>${escapeHtml(t)}</h3><p>Open the library filtered to trainings, transcript notes, and playbooks for this topic.</p></a>`;
+    return `<a class="route-card topic-card" href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><span>${count} related source${count===1?'':'s'}</span><h3>${escapeHtml(t)}</h3><p>Open the library filtered to trainings, transcript notes, and playbooks for this topic.</p></a>`;
   }).join('');
 }
 async function initRoutePage(){

@@ -86,10 +86,19 @@ const demoAnswers = {
   }
 };
 
+function appBasePath(){
+  const parts = location.pathname.split('/').filter(Boolean);
+  const appMarkers = ['design-pass','library','playbooks','topics'];
+  const markerIndex = parts.findIndex(part => appMarkers.includes(part));
+  return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
+}
+function appPath(path){
+  return `${appBasePath()}${path}`;
+}
 function slugifyPlaybook(name){
   return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
-function playbookUrl(name){ return `/playbooks/${slugifyPlaybook(name)}/`; }
+function playbookUrl(name){ return appPath(`/playbooks/${slugifyPlaybook(name)}/`); }
 
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
