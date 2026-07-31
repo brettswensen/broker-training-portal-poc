@@ -123,7 +123,13 @@ function cleanAnswerForDisplay(answer){
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
-    sources: (answer.sources || []).map(s => ({...s, quote: cleanDisplayText(s.quote)}))
+    sources: (answer.sources || []).map(s => ({
+      ...s,
+      name: cleanDisplayText(s.name),
+      cite: cleanDisplayText(s.cite),
+      match: cleanDisplayText(s.match),
+      quote: cleanDisplayText(s.quote)
+    }))
   };
 }
 
@@ -272,41 +278,81 @@ function renderTrainings(){
   document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p></div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
 }
 
+function sourcePill(source, index){
+  if(!source) return '';
+  const label = source.name || 'Broker training source';
+  const detail = [source.cite, source.quote].filter(Boolean).join(' · ');
+  return `<a class="source-pill" href="${librarySearchUrl(label)}" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
+}
+
+function sourceCard(source, index){
+  const label = source.name || 'Broker training source';
+  return `<article>
+    <span>${escapeHtml(source.match || 'Source')} match</span>
+    <strong>${escapeHtml(label)}</strong>
+    <small>${escapeHtml(source.cite || 'Broker training library')}</small>
+    <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
+    <div class="source-card-actions">
+      <a href="${librarySearchUrl(label)}">Read/search</a>
+      <a href="${librarySearchUrl(label)}&type=video">Watch</a>
+      <a href="${librarySearchUrl(label)}&type=audio">Listen</a>
+    </div>
+  </article>`;
+}
+
 function answerMarkup(answer){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const publicConfidence = cleanAnswer.confidence || 'Based on team training';
-  const scriptText = String(cleanAnswer.script || '').trim().replace(/^['"“”]+|['"“”]+$/g, '');
+  const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
+  const sources = cleanAnswer.sources || [];
   let nextActions = (cleanAnswer.followups || []).filter(Boolean);
   if(!nextActions.length){
-    const titleText = [cleanAnswer.title, ...(cleanAnswer.steps || []), ...(cleanAnswer.sources || []).map(s=>s.name)].join(' ').toLowerCase();
+    const titleText = [cleanAnswer.title, ...(cleanAnswer.steps || []), ...sources.map(s=>s.name)].join(' ').toLowerCase();
     nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
   }
   return `
-    <div class="ai-answer ready">
+    <div class="ai-answer ready sourced-answer">
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${cleanAnswer.title}</h3><p>Broker guidance based on team training.</p></div>
-        <span class="confidence">${publicConfidence}</span>
+        <div><h3>${escapeHtml(cleanAnswer.title)}</h3><p>Clearly separated training-backed guidance and suggested application.</p></div>
+        <span class="confidence">${escapeHtml(publicConfidence)}</span>
       </div>
-      <ol class="primary-answer">${cleanAnswer.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
-      <h4>Suggested client script</h4>
-      <p class="script-box">“${scriptText}”</p>
-      <div class="answer-actions">
-        <button onclick="copyCurrentScript(this)">Copy script</button>
-        <button onclick="rewriteScript('text')">Text message version</button>
-        <button onclick="rewriteScript('email')">Email version</button>
-      </div>
-      ${nextActions.length ? `<h4>Recommended next steps</h4><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div>` : ''}
+
+      <section class="answer-section training-backed">
+        <div class="answer-section-head">
+          <div><p class="eyebrow">FROM BROKER TRAINING</p><h4>What the training supports</h4></div>
+          <span class="section-badge">Source-backed</span>
+        </div>
+        <ol class="primary-answer source-claim-list">
+          ${cleanAnswer.steps.map((s,i)=>`<li><span>${escapeHtml(s)}</span>${sourcePill(sources[i % Math.max(sources.length,1)], i % Math.max(sources.length,1))}</li>`).join('')}
+        </ol>
+      </section>
+
+      <section class="answer-section suggested-application">
+        <div class="answer-section-head">
+          <div><p class="eyebrow">SUGGESTED APPLICATION</p><h4>Generated wording to use with a client</h4></div>
+          <span class="section-badge amber">Not a direct quote</span>
+        </div>
+        <p class="script-box">“${escapeHtml(scriptText)}”</p>
+        <div class="answer-actions">
+          <button onclick="copyCurrentScript(this)">Copy script</button>
+          <button onclick="rewriteScript('text')">Text message version</button>
+          <button onclick="rewriteScript('email')">Email version</button>
+        </div>
+      </section>
+
+      ${nextActions.length ? `<section class="answer-section suggested-application compact-section"><div class="answer-section-head"><div><p class="eyebrow">SUGGESTED NEXT STEPS</p><h4>Where to go from here</h4></div><span class="section-badge amber">Recommended</span></div><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div></section>` : ''}
+
       <div class="answer-route-links" aria-label="Go deeper in Broker Brain">
         <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Search the Library</a>
         <a href="/playbooks/">Open Playbooks</a>
         <a href="/topics/">Browse Topics</a>
       </div>
-      <div class="sources-used">
-        <h4>Sources used</h4>
-        <p class="muted">Review the training quotes behind this guidance.</p>
+      <div class="sources-used source-evidence-panel">
+        <h4>Broker training sources</h4>
+        <p class="muted">Green source chips above link back here. Use these cards to watch, read/search, or listen before relying on the suggested application.</p>
         <div class="source-stack compact">
-          ${cleanAnswer.sources.map(s=>`<article><span>${s.match} match</span><strong>${s.name}</strong><small>${s.cite}</small><blockquote>“${s.quote}”</blockquote></article>`).join('')}
+          ${sources.map(sourceCard).join('') || '<p class="muted">Training sources will appear here as matching transcripts are connected.</p>'}
         </div>
       </div>
     </div>`;
