@@ -160,6 +160,7 @@ function card(t){
   return `<article class="card"><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
+
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
   const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
@@ -185,6 +186,7 @@ function renderLatestTraining(){
         <span class="type">${escapeHtml(t.status)}</span>
         <h3>${escapeHtml(t.title)}</h3>
         <p>${escapeHtml(t.summary)}</p>
+        ${sourceProofMarkup('Indexed training source', 1)}
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
           <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
@@ -197,7 +199,7 @@ function renderLatestTraining(){
 function renderPlaybooks(activeIndex=1){
   const grid = document.getElementById('playbookGrid');
   if(!grid) return;
-  grid.innerHTML = playbooks.map((p,i)=>`<a class="card playbook-card" href="${playbookUrl(p.name)}"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p class="muted">${escapeHtml(p.question)}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><span class="ghost-button">Open playbook</span></a>`).join('');
+  grid.innerHTML = playbooks.map((p,i)=>`<a class="card playbook-card" href="${playbookUrl(p.name)}"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p class="muted">${escapeHtml(p.question)}</p>${sourceProofMarkup('Playbook synthesized from training', p.sources)}<div class="tag-row">${p.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><span class="ghost-button">Open playbook</span></a>`).join('');
 }
 
 function renderTopics(){
@@ -206,7 +208,7 @@ function renderTopics(){
 }
 
 function renderTrainings(){
-  document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p></div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
+  document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p>${sourceProofMarkup('Original training record', 1)}</div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
 }
 
 function sourcePill(source, index){
@@ -469,7 +471,7 @@ function transcriptSearch(query, limit=9){
 
 function transcriptCard(ch, query){
   const pct = Math.min(98, 62 + Math.round(ch.score * 2));
-  return `<article class="card"><span class="type">${pct}% MATCH · ${ch.category} · ${ch.timestamp}</span><h3>${ch.title}</h3><p class="muted">Real transcript match from indexed PDF source.</p><blockquote>${escapeHtml(snippetFor(ch.text, query))}</blockquote><div class="tag-row">${(ch.topics || []).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card"><span class="type">${pct}% MATCH · ${ch.category} · ${ch.timestamp}</span><h3>${ch.title}</h3><p class="muted">Real transcript match from indexed PDF source.</p>${sourceProofMarkup('Transcript excerpt', 1)}<blockquote>${escapeHtml(snippetFor(ch.text, query))}</blockquote><div class="tag-row">${(ch.topics || []).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -501,6 +503,7 @@ function allContentCard(item, query, index){
       <small>${pct}% match · ${escapeHtml(category)}</small>
       <h3>${escapeHtml(title)}</h3>
       <p>${escapeHtml(snippet)}</p>
+      ${sourceProofMarkup(isTranscript ? 'Transcript proof' : 'Training source', 1)}
       <div class="mini-tags">${tags}</div>
     </div>
   </article>`;
@@ -514,7 +517,7 @@ function allResultRow(t, query, index){
   const text = isTranscript ? snippetFor(t.text, query).slice(0, 170) : t.summary;
   return `<article class="content-row" onclick="openTraining('${escapeHtml(title).replace(/'/g,'&#39;')}')">
     <div class="row-thumb"><span>${isTranscript ? 'TXT' : 'VID'}</span></div>
-    <div><small>${escapeHtml(category)}</small><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p></div>
+    <div><small>${escapeHtml(category)}</small><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p>${sourceProofMarkup(isTranscript ? 'Transcript proof' : 'Training source', 1)}</div>
     <span class="row-meta">${escapeHtml(meta)}</span>
     <button class="star-button" aria-label="Save result">☆</button>
   </article>`;
@@ -523,7 +526,7 @@ function allResultRow(t, query, index){
 function playbookRow(p, index){
   return `<article class="content-row playbook-row" onclick="showPlaybook(${index});document.getElementById('playbooks')?.scrollIntoView({behavior:'smooth'});">
     <div class="row-thumb playbook-icon"><span>PB</span></div>
-    <div><small>Playbook · ${p.tags.slice(0,2).join(' / ')}</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div>
+    <div><small>Playbook · ${p.tags.slice(0,2).join(' / ')}</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p>${sourceProofMarkup('Validated by source trail', p.sources)}</div>
     <span class="row-meta">${p.sources} sources</span>
   </article>`;
 }
@@ -533,6 +536,7 @@ function videoTile(t, index){
     <button class="network-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
     <small>${index === 0 ? 'New this week' : index < 3 ? 'Indexed training' : 'Library video'}</small>
     <h3>${escapeHtml(t.title)}</h3>
+    ${sourceProofMarkup('Original training source', 1)}
   </article>`;
 }
 
@@ -555,6 +559,12 @@ function renderAllContent(query=''){
   document.getElementById('allPlaybookRows').innerHTML = related.map(p=>playbookRow(p, p.index ?? playbooks.findIndex(x=>x.name===p.name))).join('');
   const videoPool = [...trainingMatches, ...trainings.filter(t => !trainingMatches.some(m => m.title === t.title))].slice(0,4);
   document.getElementById('allVideoTiles').innerHTML = videoPool.map(videoTile).join('');
+}
+
+
+function sourceProofMarkup(label='Source-backed', count=1){
+  const n = Math.max(1, Number(count) || 1);
+  return `<div class="source-proof-strip" aria-label="Source validation"><span>✓</span><strong>${escapeHtml(label)}</strong><small>${n} training source${n===1?'':'s'} supporting this</small></div>`;
 }
 
 function renderResults(query=''){
