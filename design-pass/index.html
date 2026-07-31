@@ -29,35 +29,7 @@
   </aside>
 
   <main id="top" class="app-shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
-        <h1>Start with a question. Get broker guidance first.</h1>
-        <p class="lead">Ask Broker Brain what to do in a real client or transaction situation. From there, agents can jump into the right training, playbook, topic, or source material when they need to go deeper.</p>
-      </div>
-      <div id="ask" class="ask-card hero-ask-card panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">MAIN FEATURE</p>
-            <h2>Ask the Broker</h2>
-          </div>
-          <span class="status-pill">Training-backed</span>
-        </div>
-        <p class="ask-intro">Start with a real client or transaction question. Broker Brain answers first, then points the agent into the right training, playbook, or topic page if they need more.</p>
-        <textarea id="askInput" rows="4" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
-        <div class="chips compact">
-          <button data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
-          <button data-ask="How do I work with my transaction coordinator?">Work with TC</button>
-          <button data-ask="What should I know about a 1031 exchange?">1031 basics</button>
-        </div>
-        <button id="askButton" class="primary">Ask the Broker</button>
-        <article id="answer" class="answer">
-          <p class="muted">Ask a question to see practical broker guidance, source-backed reasoning, and recommended next steps.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="search" class="search-panel secondary-search-panel">
+    <section id="search" class="search-panel top-search-panel">
       <form action="/library/" method="get" class="dashboard-search-form">
         <label for="globalSearch">What do you need help with today?</label>
         <div class="search-row">
@@ -72,6 +44,39 @@
         <a href="/library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
         <a href="/library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
         <a href="/library/?q=new%20construction" data-query="new construction">new construction</a>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
+        <h1>Find the training, scripts, and guidance you need for your next client conversation.</h1>
+        <p class="lead">Search team trainings, open playbooks, review examples, and ask for guidance when you need help applying what you’ve learned.</p>
+      </div>
+      <div class="hero-stats">
+        <div><strong>6</strong><span>sample trainings</span></div>
+        <div><strong>8</strong><span>broker playbooks</span></div>
+        <div><strong>37</strong><span>topic tags</span></div>
+      </div>
+    </section>
+
+    <section id="ask" class="ask-feature-panel panel">
+      <div class="ask-feature-copy">
+        <p class="eyebrow">MAIN FEATURE</p>
+        <h2>Ask the Broker</h2>
+        <p class="ask-intro">When an agent has a real client or transaction question, this is the guided starting point. Broker Brain answers first, then points them into the right training, playbook, or topic page if they need more.</p>
+      </div>
+      <div class="ask-card ask-feature-card">
+        <textarea id="askInput" rows="4" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
+        <div class="chips compact">
+          <button data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
+          <button data-ask="How do I work with my transaction coordinator?">Work with TC</button>
+          <button data-ask="What should I know about a 1031 exchange?">1031 basics</button>
+        </div>
+        <button id="askButton" class="primary">Ask the Broker</button>
+        <article id="answer" class="answer">
+          <p class="muted">Ask a question to see practical broker guidance, source-backed reasoning, and recommended next steps.</p>
+        </article>
       </div>
     </section>
 
