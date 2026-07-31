@@ -159,24 +159,37 @@ function renderPlaybookDetailPage(){
   const shell = document.getElementById('playbookDetailShell');
   if(!shell) return;
   document.title = `${p.name} - Broker Brain`;
+  const sections = [
+    ['short-version','The Short Version','Use this first'],
+    ['how-to','How to Use It','Operating steps'],
+    ['expert-notes','Notes from the Expert','Training voice'],
+    ['watchouts','Watchouts','Avoid mistakes'],
+    ['experts','People','Who appears'],
+    ['sources','Source Trail','Evidence links'],
+    ['related','Related Concepts','Keep exploring']
+  ];
   shell.innerHTML = `
-    <section class="playbook-page-hero">
+    <section class="playbook-page-hero compact-playbook-hero">
       <a class="back-link" href="${appPath('/playbooks/')}">← All playbooks</a>
       <p class="eyebrow">Playbooks · Field guide</p>
       <h1>${escapeHtml(p.name)}</h1>
       <p class="leadline">${escapeHtml(p.question)}</p>
-      <div class="doc-meta-row"><span>${escapeHtml(p.time)} read</span><span>${p.steps.length} steps</span><span>${sources.length || p.sources} sources</span><span>${experts.length} ${experts.length===1?'person':'people'}</span></div>
+      <div class="doc-meta-row"><span>${escapeHtml(p.time)} read</span><span>${p.steps.length} steps</span><span>${sources.length || p.sources} sources</span><span>${experts.join(', ')}</span></div>
     </section>
-    <nav class="playbook-jump-nav" aria-label="Playbook sections">
-      <a href="#short-version">01 Short Version</a><a href="#how-to">02 How to Use It</a><a href="#expert-notes">03 Expert Notes</a><a href="#watchouts">04 Watchouts</a><a href="#experts">05 People</a><a href="#sources">06 Source Trail</a><a href="#related">07 Related Concepts</a>
+    <section class="broker-summary-card" aria-label="Broker summary">
+      <p class="eyebrow">Broker Summary</p>
+      <p>${escapeHtml(p.script || p.question)}</p>
+    </section>
+    <nav class="playbook-chapter-index" aria-label="Jump to playbook sections">
+      ${sections.map((section,index)=>`<a href="#${section[0]}"><span>${String(index+1).padStart(2,'0')}</span><strong>${section[1]}</strong><small>${section[2]}</small><i>Jump →</i></a>`).join('')}
     </nav>
-    <section id="short-version" class="route-doc playbook-doc-section"><p class="eyebrow">01</p><h2>The Short Version</h2><p>${escapeHtml(p.script || p.question)}</p><p>Use this page as the operating guide. If an agent needs exact client wording, start with Ask the Broker from this playbook context and keep expert-sensitive guidance separated from tax, legal, lending, or inspection advice.</p></section>
-    <section id="how-to" class="route-doc playbook-doc-section"><p class="eyebrow">02</p><h2>How to Use It</h2><ol>${p.steps.map((s,i)=>`<li><span>${i+1}</span><p>${escapeHtml(s)}</p></li>`).join('')}</ol></section>
-    <section id="expert-notes" class="route-doc playbook-doc-section"><p class="eyebrow">03</p><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
-    <section id="watchouts" class="route-doc playbook-doc-section amber"><p class="eyebrow">04</p><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
-    <section id="experts" class="route-doc playbook-doc-section"><p class="eyebrow">05</p><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
-    <section id="sources" class="route-doc playbook-doc-section"><p class="eyebrow">06</p><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
-    <section id="related" class="route-doc playbook-doc-section"><p class="eyebrow">07</p><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
+    <section id="short-version" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>01</span><p>The Short Version</p></div><h2>The Short Version</h2><p>${escapeHtml(p.script || p.question)}</p><p>Use this page as the operating guide. If an agent needs exact client wording, start with Ask the Broker from this playbook context and keep expert-sensitive guidance separated from tax, legal, lending, or inspection advice.</p></section>
+    <section id="how-to" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>02</span><p>How to Use It</p></div><h2>How to Use It</h2><ol>${p.steps.map((s,i)=>`<li><span>${i+1}</span><p>${escapeHtml(s)}</p></li>`).join('')}</ol></section>
+    <section id="expert-notes" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>03</span><p>Notes from the Expert</p></div><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
+    <section id="watchouts" class="route-doc playbook-doc-section operator-section amber"><div class="section-kicker"><span>04</span><p>Watchouts</p></div><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
+    <section id="experts" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>05</span><p>People in the Trainings</p></div><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
+    <section id="sources" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>06</span><p>Source Trail</p></div><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong><em>Read/search →</em></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
+    <section id="related" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>07</span><p>Related Concepts</p></div><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
 }
 function renderTopicsPage(){
   const grid = document.getElementById('topicCards');

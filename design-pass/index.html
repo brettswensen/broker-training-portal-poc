@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="stylesheet" href="designer-pass.css" />
+  <link rel="stylesheet" href="designer-pass.css?v=option-c-dashboard-playbook" />
 </head>
 <body class="designer-pass">
   <aside class="sidebar">
@@ -16,9 +16,9 @@
     <nav>
       <a class="active" href="#top">Dashboard</a>
       <a href="#ask">Ask the Broker</a>
-      <a href="/library/">Library</a>
-      <a href="/playbooks/">Playbooks</a>
-      <a href="/topics/">Topics</a>
+      <a href="../library/">Library</a>
+      <a href="../playbooks/">Playbooks</a>
+      <a href="../topics/">Topics</a>
       <a href="#search">Search</a>
     </nav>
     <div class="sidebar-card">
@@ -65,7 +65,7 @@
             <h3>Search the training library instead.</h3>
             <p>If you do not need a broker-style answer, use this to jump straight into matching trainings, playbooks, topic notes, and source material.</p>
           </div>
-          <form action="/library/" method="get" class="dashboard-search-form">
+          <form action="../library/" method="get" class="dashboard-search-form">
             <label class="sr-only" for="globalSearch">Search the training library</label>
             <div class="search-row">
               <span>⌕</span>
@@ -74,11 +74,11 @@
             </div>
           </form>
           <div class="chips" id="searchChips">
-            <a href="/library/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
-            <a href="/library/?q=CMA%20land" data-query="CMA land">CMA land</a>
-            <a href="/library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
-            <a href="/library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
-            <a href="/library/?q=new%20construction" data-query="new construction">new construction</a>
+            <a href="../library/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
+            <a href="../library/?q=CMA%20land" data-query="CMA land">CMA land</a>
+            <a href="../library/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
+            <a href="../library/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
+            <a href="../library/?q=new%20construction" data-query="new construction">new construction</a>
           </div>
         </div>
       </div>
@@ -92,9 +92,9 @@
         </div>
       </div>
       <div class="route-teaser-grid">
-        <a href="/library/" class="route-teaser"><span>Library</span><strong>Search all trainings and source notes</strong><p>Use this when you need filtered results for a client situation or topic.</p></a>
-        <a href="/playbooks/" class="route-teaser"><span>Playbooks</span><strong>Open field guides and checklists</strong><p>Use this when you need the team process for a transaction situation.</p></a>
-        <a href="/topics/" class="route-teaser"><span>Topics</span><strong>Browse by real estate topic</strong><p>Use this when you want to explore related videos, examples, and guidance.</p></a>
+        <a href="../library/" class="route-teaser"><span>Library</span><strong>Search all trainings and source notes</strong><p>Use this when you need filtered results for a client situation or topic.</p></a>
+        <a href="../playbooks/" class="route-teaser"><span>Playbooks</span><strong>Open field guides and checklists</strong><p>Use this when you need the team process for a transaction situation.</p></a>
+        <a href="../topics/" class="route-teaser"><span>Topics</span><strong>Browse by real estate topic</strong><p>Use this when you want to explore related videos, examples, and guidance.</p></a>
       </div>
     </section>
 
@@ -269,7 +269,7 @@
   <script>
     window.__designerRouteToLibrary = function(query) {
       var value = String(query || '').trim();
-      window.location.href = '/library/' + (value ? '?q=' + encodeURIComponent(value) : '');
+      window.location.href = '../library/' + (value ? '?q=' + encodeURIComponent(value) : '');
     };
     document.addEventListener('click', function(event) {
       var chip = event.target && event.target.closest && event.target.closest('#searchChips [data-query]');
@@ -285,7 +285,7 @@
       window.__designerRouteToLibrary(event.target.value);
     }, true);
   </script>
-  <script src="../assets/app.js?v=routed-agent-pages-20260730b"></script>
-  <script src="designer-pass.js?v=routed-agent-pages-20260730b"></script>
+  <script src="../assets/app.js?v=option-c-dashboard-playbook"></script>
+  <script src="designer-pass.js?v=option-c-dashboard-playbook"></script>
 </body>
 </html>
