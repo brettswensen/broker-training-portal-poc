@@ -297,6 +297,11 @@ function answerMarkup(answer){
         <button onclick="rewriteScript('email')">Email version</button>
       </div>
       ${nextActions.length ? `<h4>Recommended next steps</h4><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div>` : ''}
+      <div class="answer-route-links" aria-label="Go deeper in Broker Brain">
+        <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Search the Library</a>
+        <a href="/playbooks/">Open Playbooks</a>
+        <a href="/topics/">Browse Topics</a>
+      </div>
       <div class="sources-used">
         <h4>Sources used</h4>
         <p class="muted">Review the training quotes behind this guidance.</p>
@@ -372,6 +377,18 @@ function rewriteScript(format){
 
 function handleFollowup(label){
   const lower = label.toLowerCase();
+  if (typeof isDesignerRouteDashboard !== 'undefined' && isDesignerRouteDashboard) {
+    if (lower.includes('playbook')) {
+      window.location.href = `/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`;
+      return;
+    }
+    if (lower.includes('topic') || lower.includes('browse')) {
+      window.location.href = '/topics/';
+      return;
+    }
+    window.location.href = librarySearchUrl(label);
+    return;
+  }
   const match = playbooks.findIndex(p => lower.includes(p.name.toLowerCase().split(' ')[0]) || p.name.toLowerCase().includes(lower.split(' ')[0]));
   if(match >= 0){ showPlaybook(match); return; }
   document.getElementById('globalSearch').value = label;

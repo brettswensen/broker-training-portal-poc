@@ -15,11 +15,11 @@
     <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span><small>Designer pass</small></a>
     <nav>
       <a class="active" href="#top">Dashboard</a>
-      <a href="#search">Search</a>
-      <a href="/library/">Library</a>
       <a href="#ask">Ask the Broker</a>
+      <a href="/library/">Library</a>
       <a href="/playbooks/">Playbooks</a>
       <a href="/topics/">Topics</a>
+      <a href="#search">Search</a>
     </nav>
     <div class="sidebar-card">
       <p class="eyebrow">LIBRARY STATUS</p>
@@ -32,17 +32,32 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
-        <h1>Find the training, scripts, and guidance you need for your next client conversation.</h1>
-        <p class="lead">Search team trainings, open playbooks, review examples, and ask for guidance when you need help applying what you’ve learned.</p>
+        <h1>Start with a question. Get broker guidance first.</h1>
+        <p class="lead">Ask Broker Brain what to do in a real client or transaction situation. From there, agents can jump into the right training, playbook, topic, or source material when they need to go deeper.</p>
       </div>
-      <div class="hero-stats">
-        <div><strong>6</strong><span>sample trainings</span></div>
-        <div><strong>8</strong><span>broker playbooks</span></div>
-        <div><strong>37</strong><span>topic tags</span></div>
+      <div id="ask" class="ask-card hero-ask-card panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">MAIN FEATURE</p>
+            <h2>Ask the Broker</h2>
+          </div>
+          <span class="status-pill">Training-backed</span>
+        </div>
+        <p class="ask-intro">Start with a real client or transaction question. Broker Brain answers first, then points the agent into the right training, playbook, or topic page if they need more.</p>
+        <textarea id="askInput" rows="4" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
+        <div class="chips compact">
+          <button data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
+          <button data-ask="How do I work with my transaction coordinator?">Work with TC</button>
+          <button data-ask="What should I know about a 1031 exchange?">1031 basics</button>
+        </div>
+        <button id="askButton" class="primary">Ask the Broker</button>
+        <article id="answer" class="answer">
+          <p class="muted">Ask a question to see practical broker guidance, source-backed reasoning, and recommended next steps.</p>
+        </article>
       </div>
     </section>
 
-    <section id="search" class="search-panel">
+    <section id="search" class="search-panel secondary-search-panel">
       <form action="/library/" method="get" class="dashboard-search-form">
         <label for="globalSearch">What do you need help with today?</label>
         <div class="search-row">
@@ -145,27 +160,7 @@
       </div>
     </section>
 
-    <section class="grid-two">
-      <div id="ask" class="ask-card panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">AGENT COACH</p>
-            <h2>Ask the Broker</h2>
-          </div>
-          <span class="status-pill">Training-backed</span>
-        </div>
-        <textarea id="askInput" rows="3" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
-        <div class="chips compact">
-          <button data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
-          <button data-ask="How do I work with my transaction coordinator?">Work with TC</button>
-          <button data-ask="What should I know about a 1031 exchange?">1031 basics</button>
-        </div>
-        <button id="askButton" class="primary">Ask</button>
-        <article id="answer" class="answer">
-          <p class="muted">Ask a question to see how agents get a practical answer with related trainings and playbooks.</p>
-        </article>
-      </div>
-
+    <section class="grid-two dashboard-support-grid">
       <div id="onboarding" class="panel onboarding-card">
         <div class="section-head">
           <div>
