@@ -309,7 +309,7 @@ function loadingMarkup(query, answer){
         <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
         <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
         <div class="step active"><i></i><span>Checking the training notes</span><em>${answer.sources.length} matches found</em></div>
-        <div class="step active"><i></i><span>Writing it like a broker would say it</span><em>guidance + script + next steps</em></div>
+        <div class="step active"><i></i><span>Preparing the recommended next step</span><em>summary + client wording + follow-up actions</em></div>
       </div>
       <div class="skeleton"></div><div class="skeleton short"></div>
     </div>`;
