@@ -61,8 +61,6 @@ function cleanBrokerText(value) {
   return String(value || '')
     .replace(/[—–]/g, ', ')
     .replace(/\s+/g, ' ')
-    .replace(/\bsource-backed\b/gi, 'based on the training')
-    .replace(/\btranscript grounded\b/gi, 'based on the training')
     .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
     .replace(/\bactionable\b/gi, 'clear')
     .replace(/\bleverage\b/gi, 'use')
@@ -85,8 +83,8 @@ function cleanBrokerAnswer(answer) {
   return {
     ...answer,
     title: cleanBrokerText(answer.title || 'Broker guidance'),
-    intent: 'Broker guidance based on team training.',
-    confidence: cleanBrokerText(answer.confidence || 'Based on team training').replace(/^Source-backed$/i, 'Based on team training'),
+    intent: 'Broker guidance.',
+    confidence: cleanBrokerText(answer.confidence || 'Broker guidance'),
     steps: (answer.steps || []).map(cleanBrokerText).filter(Boolean),
     script: cleanBrokerText(answer.script || ''),
     followups: (answer.followups || []).map(cleanBrokerText).filter(Boolean)
@@ -133,8 +131,8 @@ function fallbackAnswer(question, sources) {
   if (is1031) {
     return {
       title: '1031 exchange guidance',
-      intent: 'Training-backed guidance from matching source excerpts.',
-      confidence: sources.length ? 'Based on team training' : 'General',
+      intent: 'Broker guidance.',
+      confidence: sources.length ? 'Broker guidance' : 'General',
       steps: [
         'First clarify the timing: accepted offer is not the same as closed.',
         'If the client has not closed yet, get a qualified intermediary involved immediately before funds are received.',
@@ -147,16 +145,16 @@ function fallbackAnswer(question, sources) {
   }
   return {
     title: 'Broker guidance',
-    intent: 'Training-backed guidance from matching source excerpts.',
-    confidence: sources.length ? 'Based on team training' : 'Exploratory',
+    intent: 'Broker guidance.',
+    confidence: sources.length ? 'Broker guidance' : 'Exploratory',
     steps: [
       'Start with the most relevant training source and identify the client decision point.',
       'Give the agent a practical next step rather than a generic summary.',
-      'Use the source excerpts below to verify the recommendation.',
+      'Review the related material if the agent wants more context before advising the client.',
       'Escalate to the broker, CPA, attorney, lender, or TC when the issue crosses into licensed/specialist advice.'
     ],
-    script: 'Based on our training library, here is the practical next step I would take. Let’s focus on the client’s immediate decision, document the recommendation, and bring in the right specialist if this goes beyond agent guidance.',
-    followups: ['Review source excerpts', 'Open related playbook', 'Escalate if specialist advice is needed']
+    script: 'Here is the practical next step I would take. Focus on the client’s immediate decision, document the recommendation, and bring in the right specialist if this goes beyond agent guidance.',
+    followups: ['Review related training', 'Open related playbook', 'Escalate if specialist advice is needed']
   };
 }
 
@@ -180,8 +178,8 @@ function normalizeKimiAnswer(parsed) {
   if (!steps.length) return null;
   return {
     title: String(parsed.title || 'Live broker guidance').trim(),
-    intent: String(parsed.intent || 'Training-backed guidance from matching source excerpts').trim(),
-    confidence: String(parsed.confidence || 'Based on team training').trim(),
+    intent: String(parsed.intent || 'Broker guidance').trim(),
+    confidence: String(parsed.confidence || 'Broker guidance').trim(),
     steps: steps.slice(0, 5),
     script: String(parsed.script || steps.join(' ')).trim(),
     followups: Array.isArray(parsed.followups) ? parsed.followups.map(s => String(s || '').trim()).filter(Boolean).slice(0, 4) : []
@@ -207,8 +205,8 @@ function salvageJsonLikeAnswer(text) {
 
   return {
     title: titleMatch?.[1] || 'Live broker guidance',
-    intent: 'Training-backed guidance from matching source excerpts',
-    confidence: 'Based on team training',
+    intent: 'Broker guidance',
+    confidence: 'Broker guidance',
     steps: steps.slice(0, 5),
     script: scriptMatch?.[1] ? scriptMatch[1].replace(/\\"/g, '"') : steps.join(' '),
     followups: unquoteList(followupsMatch?.[1]).slice(0, 4)
@@ -220,8 +218,8 @@ async function callKimi(question, sources) {
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
 
   const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
-  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, transcript excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as source-backed, transcript-grounded, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
-  const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct transcript matches were found.'}`;
+  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
+  const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
   const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.7-code', 'kimi-k2.6'].filter(Boolean);
   const models = [...new Set(modelCandidates)];
@@ -286,8 +284,8 @@ async function callKimi(question, sources) {
     if (extractedSteps.length) {
       return cleanAndValidateModelAnswer({
         title: titleMatch?.[1] || 'Broker guidance',
-        intent: 'Training-backed guidance from matching source excerpts',
-        confidence: 'Based on team training',
+        intent: 'Broker guidance',
+        confidence: 'Broker guidance',
         steps: extractedSteps,
         script: (scriptMatch?.[1] || extractedSteps.join(' ')).replace(/\\"/g, '"').slice(0, 900),
         followups: unquoteList(followupsMatch?.[1]).slice(0, 4).length ? unquoteList(followupsMatch?.[1]).slice(0, 4) : ['Review the training notes', 'Confirm the timing and facts', 'Bring in the right specialist if needed']
@@ -296,8 +294,8 @@ async function callKimi(question, sources) {
     const sentences = cleaned.split(/(?<=[.!?])\s+/).filter(Boolean).slice(0, 4);
     return cleanAndValidateModelAnswer({
       title: 'Broker guidance',
-      intent: 'Training-backed guidance from matching source excerpts',
-      confidence: 'Based on team training',
+      intent: 'Broker guidance',
+      confidence: 'Broker guidance',
       steps: sentences.length ? sentences : [cleaned.slice(0, 240)],
       script: cleaned.slice(0, 900),
       followups: ['Review the training notes', 'Confirm the timing and facts', 'Bring in the right specialist if needed']

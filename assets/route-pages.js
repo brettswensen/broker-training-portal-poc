@@ -102,7 +102,7 @@ function relatedPlaybooksFor(text){
   return (scored.length ? scored : playbooks.map((p,index)=>({p,index,score:1}))).slice(0,5).map(item => ({...item.p, index:item.index}));
 }
 
-function sourceProofMarkup(label='Source-backed', count=1){
+function sourceProofMarkup(label='Related material', count=1){
   const n = Math.max(1, Number(count) || 1);
   return `<div class="source-proof-strip" aria-label="Source validation"><span>✓</span><strong>${escapeHtml(label)}</strong><small>${n} training source${n===1?'':'s'} supporting this</small></div>`;
 }
@@ -185,28 +185,24 @@ function renderPlaybookDetailPage(){
     <section class="broker-summary-card source-validated-summary" aria-label="Broker summary">
       <p class="eyebrow">Broker Summary</p>
       <p>${escapeHtml(p.script || p.question)}</p>
-      <div class="summary-source-proof">
-        <span>Validated by source trail</span>
-        <strong>${sources.length || p.sources} supporting source${(sources.length || p.sources)===1?'':'s'}</strong>
-        <small>${sources.slice(0,2).map(escapeHtml).join(' · ')}</small>
-      </div>
+
     </section>
     <nav class="playbook-chapter-index" aria-label="Jump to playbook sections">
       ${sections.map((section,index)=>`<a href="#${section[0]}"><span>${String(index+1).padStart(2,'0')}</span><strong>${section[1]}</strong><small>${section[2]}</small><i>Jump →</i></a>`).join('')}
     </nav>
-    <section id="short-version" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>01</span><p>The Short Version</p></div><h2>The Short Version</h2><p>${escapeHtml(p.script || p.question)}</p><p>Use this page as the operating guide. If an agent needs exact client wording, start with Ask the Broker from this playbook context and keep expert-sensitive guidance separated from tax, legal, lending, or inspection advice.</p></section>
-    <section id="how-to" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>02</span><p>How to Use It</p></div><h2>How to Use It</h2><p class="step-source-intro">Each operating step is grounded in the source trail below, so agents can open the original training before applying the advice.</p><ol>${p.steps.map((s,i)=>`<li><span>${i+1}</span><p>${escapeHtml(s)}<br><small class="step-source-note">Source cue: ${escapeHtml(sources[i % Math.max(sources.length,1)] || 'Broker training source')}</small></p></li>`).join('')}</ol></section>
-    <section id="expert-notes" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>03</span><p>Notes from the Expert</p></div><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
-    <section id="watchouts" class="route-doc playbook-doc-section operator-section amber"><div class="section-kicker"><span>04</span><p>Watchouts</p></div><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
-    <section id="experts" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>05</span><p>People in the Trainings</p></div><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
-    <section id="sources" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>06</span><p>Source Trail</p></div><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong><em>Read/search →</em></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
-    <section id="related" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>07</span><p>Related Concepts</p></div><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
+    <section id="short-version" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>01</span></div><h2>The Short Version</h2><p>${escapeHtml(p.script || p.question)}</p><p>Use this page as the operating guide. If an agent needs exact client wording, start with Ask the Broker from this playbook context and keep expert-sensitive guidance separated from tax, legal, lending, or inspection advice.</p></section>
+    <section id="how-to" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>02</span></div><h2>How to Use It</h2><ol>${p.steps.map((s,i)=>`<li><span>${i+1}</span><p>${escapeHtml(s)}</p></li>`).join('')}</ol></section>
+    <section id="expert-notes" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>03</span></div><h2>Notes from the Expert</h2><div class="expert-note-grid">${experts.map((name,i)=>`<article><strong>${escapeHtml(name)}</strong><p>${i===0 ? 'Primary training voice for this workflow. Use these notes to understand the team standard before applying it to a live client situation.' : 'Supporting training voice connected to the process, timing, or handoff in this playbook.'}</p></article>`).join('')}</div></section>
+    <section id="watchouts" class="route-doc playbook-doc-section operator-section amber"><div class="section-kicker"><span>04</span></div><h2>Watchouts</h2><ul><li>Do not turn the playbook itself into a one-size-fits-all client script.</li><li>Confirm the facts of the transaction before recommending the next step.</li><li>Escalate expert topics early and avoid giving tax, legal, lending, or inspection advice.</li><li>Use the source trail when the topic is sensitive or the agent needs more confidence.</li></ul></section>
+    <section id="experts" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>05</span></div><h2>People in the Trainings</h2><div class="people-list">${experts.map(name=>`<span>${escapeHtml(name)}</span>`).join('')}</div></section>
+    <section id="sources" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>06</span></div><h2>Source Trail</h2><div class="source-trail-list">${sources.map((src,i)=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(src)}"><span>[${String(i+1).padStart(2,'0')}]</span><small>Training source</small><strong>${escapeHtml(src)}</strong><em>Read/search →</em></a>`).join('') || '<p>Sources will appear as training material is connected.</p>'}</div></section>
+    <section id="related" class="route-doc playbook-doc-section operator-section"><div class="section-kicker"><span>07</span></div><h2>Related Concepts</h2><div class="mini-tags large">${p.tags.map(t=>`<a href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><em>${escapeHtml(t)}</em></a>`).join('')}</div></section>`;
 }
 function renderTopicsPage(){
   const grid = document.getElementById('topicCards');
   if(grid) grid.innerHTML = topics.map(t=>{
     const count = trainings.filter(v=>[v.category,...v.topics].join(' ').toLowerCase().includes(t.split(' ')[0].toLowerCase())).length || 1;
-    return `<a class="route-card topic-card" href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><span>${count} related source${count===1?'':'s'}</span><h3>${escapeHtml(t)}</h3><p>Open the library filtered to trainings, transcript notes, and playbooks for this topic.</p>${sourceProofMarkup('Topic grounded in library', count)}</a>`;
+    return `<a class="route-card topic-card" href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><span>${count} related source${count===1?'':'s'}</span><h3>${escapeHtml(t)}</h3><p>Open related trainings, playbooks, examples, and client conversation guidance.</p></a>`;
   }).join('');
 }
 async function initRoutePage(){

@@ -77,12 +77,12 @@ const demoAnswers = {
     intent:"The question is broad, so the system is surfacing likely sources first.",
     queryTerms:["training library","broker playbooks","agent coaching"],
     sources:[
-      {name:"Training library", cite:"All indexed trainings", match:"72%", quote:"Searches source titles, categories, topics, summaries, and transcript-style excerpts."},
-      {name:"Broker playbooks", cite:"Generated operating system", match:"69%", quote:"Turns recurring training themes into practical workflows for agents."}
+      {name:"Repair Negotiations w Craig", cite:"Inspection and repair workflow", match:"72%", quote:"Keep the request focused on material defects, clean remedies, and keeping the transaction together."},
+      {name:"Work With Your TC w Marty & Marc", cite:"Contract-to-close coordination", match:"69%", quote:"Keep deadlines, documentation, and handoffs clear so the client is protected and the file stays moving."}
     ],
-    steps:["Search the training library for matching topics.","Summarize the relevant process in practical agent language.","Link back to the source training and related playbook.","When transcripts are added, replace demo excerpts with real transcript chunks."],
-    script:"I found a few likely sources in the brokerage training library. Review the source excerpts below first, then use the related playbook to turn the guidance into next steps for the agent/client conversation.",
-    followups:["Search all trainings","Browse playbooks","Add transcripts"]
+    steps:["Start by separating safety, lending, and material defects from cosmetic asks.","Coach the client toward the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around solving the problem and keeping the transaction together.","Document the agreement clearly and keep the TC aligned on deadlines."],
+    script:"Focus the client on what actually matters from the inspection: safety issues, lending concerns, and material defects. Then recommend the cleanest remedy for the situation instead of treating the inspection response like a wish list. The goal is to protect the client, keep the deal together where appropriate, and document the agreement clearly.",
+    followups:["Open repair playbook","Draft client text","Review deadline checklist"]
   }
 };
 
@@ -107,10 +107,10 @@ function escapeHtml(value){
 function cleanDisplayText(value){
   return String(value || '')
     .replace(/[—–]/g, ', ')
-    .replace(/\bLive Kimi answer · transcript grounded\b/gi, 'Based on team training')
-    .replace(/\bLive Kimi answer from transcript excerpts\b/gi, 'Broker guidance based on team training')
-    .replace(/\bsource-backed\b/gi, 'based on the training')
-    .replace(/\btranscript grounded\b/gi, 'based on the training')
+    .replace(/\bLive answer · training matched\b/gi, 'Broker guidance')
+    .replace(/\bLive answer from training notes\b/gi, 'Broker guidance')
+    .replace(/\btraining matched\b/gi, 'related training')
+    .replace(/\btraining notes matched\b/gi, 'related training')
     .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
     .replace(/\bbackend\b/gi, 'service')
     .replace(/\bmodel unavailable:?[^.]*\.?/gi, '')
@@ -133,7 +133,7 @@ function cleanAnswerForDisplay(answer){
   return {
     ...answer,
     title: cleanDisplayText(answer.title),
-    confidence: cleanDisplayText(answer.confidence || 'Based on team training'),
+    confidence: cleanDisplayText(answer.confidence || 'Broker guidance'),
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
@@ -165,14 +165,14 @@ function renderResults(query=''){
   const q=query.toLowerCase().trim();
   const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
   document.getElementById('resultCount').textContent=q ? `${results.length} match${results.length===1?'':'es'} for “${query}”` : `Showing all`;
-  document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact demo matches yet. Add transcripts to improve search depth.</p>`;
+  document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact matches yet. Try a broader topic or open the playbooks page.</p>`;
 }
 
 function renderLatestTraining(){
   const latest = trainings.slice(0,6).map((t,i)=>({
     ...t,
     status: i === 0 ? 'Processed 42 min ago' : i < 3 ? 'Indexed this week' : 'Available in library',
-    deliverables: i === 0 ? ['Transcript','Summary','Script pack','Playbook update','Infographic'] : ['Transcript','Ask ready','Sources','Related playbook']
+    deliverables: i === 0 ? ['Transcript','Summary','Client scripts','Checklist','Infographic'] : ['Transcript','Ask about it','Key takeaways','Related playbook']
   }));
   const rail = document.getElementById('latestTrainingRail');
   if(!rail) return;
@@ -186,7 +186,6 @@ function renderLatestTraining(){
         <span class="type">${escapeHtml(t.status)}</span>
         <h3>${escapeHtml(t.title)}</h3>
         <p>${escapeHtml(t.summary)}</p>
-        ${sourceProofMarkup('Indexed training source', 1)}
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
           <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
@@ -208,7 +207,7 @@ function renderTopics(){
 }
 
 function renderTrainings(){
-  document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p>${sourceProofMarkup('Original training record', 1)}</div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
+  document.getElementById('trainingList').innerHTML=trainings.map(t=>`<article class="training"><div><strong>${t.title}</strong><p>${t.summary}</p></div><span class="training-meta">${t.category}</span><span class="muted">${t.size}</span></article>`).join('');
 }
 
 function sourcePill(source, index){
@@ -235,62 +234,58 @@ function sourceCard(source, index){
 
 function answerMarkup(answer){
   const cleanAnswer = cleanAnswerForDisplay(answer);
-  const publicConfidence = cleanAnswer.confidence || 'Based on team training';
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
+  const steps = cleanAnswer.steps || [];
   let nextActions = (cleanAnswer.followups || []).filter(Boolean);
   if(!nextActions.length){
-    const titleText = [cleanAnswer.title, ...(cleanAnswer.steps || []), ...sources.map(s=>s.name)].join(' ').toLowerCase();
+    const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
     nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
   }
+  const brokerTake = steps.length
+    ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
+    : '';
   return `
-    <div class="ai-answer ready sourced-answer">
+    <div class="ai-answer ready sourced-answer practical-answer">
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${escapeHtml(cleanAnswer.title)}</h3><p>Clearly separated training-backed guidance and suggested application.</p></div>
-        <span class="confidence">${escapeHtml(publicConfidence)}</span>
+        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Here’s how I’d think about it.</p></div>
       </div>
 
-      <section class="answer-section training-backed">
-        <div class="answer-section-head">
-          <div><p class="eyebrow">FROM BROKER TRAINING</p><h4>What the training supports</h4></div>
-          <span class="section-badge">Source-backed</span>
-        </div>
-        <ol class="primary-answer source-claim-list">
-          ${cleanAnswer.steps.map((s,i)=>`<li><span>${escapeHtml(s)}</span>${sourcePill(sources[i % Math.max(sources.length,1)], i % Math.max(sources.length,1))}</li>`).join('')}
-        </ol>
+      <section class="answer-section broker-take-section">
+        <p class="eyebrow">BROKER TAKE</p>
+        <p class="answer-summary">${escapeHtml(scriptText)}</p>
+        ${brokerTake}
       </section>
 
-      <section class="answer-section suggested-application">
-        <div class="answer-section-head">
-          <div><p class="eyebrow">SUGGESTED APPLICATION</p><h4>Generated wording to use with a client</h4></div>
-          <span class="section-badge amber">Not a direct quote</span>
+      ${nextActions.length ? `<section class="answer-section compact-section"><p class="eyebrow">NEXT BEST MOVES</p><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div></section>` : ''}
+
+      <section class="answer-section client-wording-section">
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">CLIENT WORDING</p><h4>If you need to say it plainly</h4></div>
         </div>
         <p class="script-box">“${escapeHtml(scriptText)}”</p>
         <div class="answer-actions">
-          <button onclick="copyCurrentScript(this)">Copy script</button>
-          <button onclick="rewriteScript('text')">Text message version</button>
+          <button onclick="copyCurrentScript(this)">Copy</button>
+          <button onclick="rewriteScript('text')">Text version</button>
           <button onclick="rewriteScript('email')">Email version</button>
         </div>
       </section>
 
-      ${nextActions.length ? `<section class="answer-section suggested-application compact-section"><div class="answer-section-head"><div><p class="eyebrow">SUGGESTED NEXT STEPS</p><h4>Where to go from here</h4></div><span class="section-badge amber">Recommended</span></div><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div></section>` : ''}
-
       <div class="answer-route-links" aria-label="Go deeper in Broker Brain">
-        <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Search the Library</a>
-        <a href="/playbooks/">Open Playbooks</a>
-        <a href="/topics/">Browse Topics</a>
+        <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Find related training</a>
+        <a href="${appPath('/playbooks/')}">Open playbooks</a>
+        <a href="${appPath('/topics/')}">Browse topics</a>
       </div>
       <div class="sources-used source-evidence-panel">
-        <h4>Broker training sources</h4>
-        <p class="muted">Green source chips above link back here. Use these cards to watch, read/search, or listen before relying on the suggested application.</p>
+        <h4>Sources to check</h4>
+        <p class="muted">Use these if you want to review the original training or dig deeper before advising the client.</p>
         <div class="source-stack compact">
-          ${sources.map(sourceCard).join('') || '<p class="muted">Training sources will appear here as matching transcripts are connected.</p>'}
+          ${sources.map(sourceCard).join('') || '<p class="muted">Related training will appear here as more transcripts are connected.</p>'}
         </div>
       </div>
     </div>`;
 }
-
 function relatedPlaybooksFor(text){
   const source = String(text || '').toLowerCase();
   const scored = playbooks.map((p, index) => {
@@ -562,7 +557,7 @@ function renderAllContent(query=''){
 }
 
 
-function sourceProofMarkup(label='Source-backed', count=1){
+function sourceProofMarkup(label='Related material', count=1){
   const n = Math.max(1, Number(count) || 1);
   return `<div class="source-proof-strip" aria-label="Source validation"><span>✓</span><strong>${escapeHtml(label)}</strong><small>${n} training source${n===1?'':'s'} supporting this</small></div>`;
 }
@@ -612,7 +607,7 @@ async function runAsk(query){
     answerEl.innerHTML = answerMarkup({
       ...fallback,
       ...liveAnswer,
-      confidence: liveAnswer.live ? 'Based on team training' : (liveAnswer.confidence || fallback.confidence),
+      confidence: liveAnswer.live ? 'Broker guidance' : (liveAnswer.confidence || fallback.confidence),
       sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
     });
   } catch (error) {
