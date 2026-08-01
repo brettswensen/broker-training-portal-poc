@@ -74,6 +74,7 @@ function cleanBrokerText(value) {
     .replace(/\bI can help\b/gi, 'We can help')
     .replace(/\bI would\b/gi, 'The recommended move is to')
     .replace(/\bI’d\b/gi, 'The recommended move is to')
+    .replace(/\bI'd\b/gi, 'The recommended move is to')
     .replace(/\bsuper helpful\b/gi, 'useful')
     .replace(/\bawesome\b/gi, 'strong')
     .replace(/\bdead\b/gi, 'no longer viable')

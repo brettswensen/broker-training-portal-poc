@@ -123,6 +123,7 @@ function cleanDisplayText(value){
     .replace(/\bI can help\b/gi, 'We can help')
     .replace(/\bI would\b/gi, 'The recommended move is to')
     .replace(/\bI’d\b/gi, 'The recommended move is to')
+    .replace(/\bI'd\b/gi, 'The recommended move is to')
     .replace(/\bsuper helpful\b/gi, 'useful')
     .replace(/\bawesome\b/gi, 'strong')
     .replace(/\bdead\b/gi, 'no longer viable')
@@ -247,7 +248,10 @@ function answerMarkup(answer){
     const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
     nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
   }
-  const guidanceText = cleanAnswer.intent && !/^broker guidance\.?$/i.test(cleanAnswer.intent) ? cleanAnswer.intent : scriptText;
+  const genericGuidance = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(cleanAnswer.intent || '');
+  const guidanceText = cleanAnswer.intent && !genericGuidance
+    ? cleanAnswer.intent
+    : 'Start with the client decision in front of the agent, then use the closest team guidance to choose the safest next step.';
   const whyList = steps.length
     ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
