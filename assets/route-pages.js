@@ -138,7 +138,7 @@ function renderLibrary(){
     }).join('');
   }
   const pb = document.getElementById('libraryPlaybooks');
-  if(pb) pb.innerHTML = related.map(p=>`<a class="route-row compact" href="${playbookUrl(p.name)}"><b>PB</b><div><small>${p.sources} sources</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p>${sourceProofMarkup('Playbook source trail', p.sources)}</div><span>Open</span></a>`).join('');
+  if(pb) pb.innerHTML = related.map(p=>`<a class="route-row compact" href="${playbookUrl(p.name)}"><b>PB</b><div><small>${p.sources} sources</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div><span>Open</span></a>`).join('');
 }
 function expertNamesFor(p){
   const map = {
@@ -156,7 +156,7 @@ function sourcesForPlaybook(p){
 }
 function renderPlaybooksPage(){
   const grid = document.getElementById('playbookCards');
-  if(grid) grid.innerHTML = playbooks.map((p,i)=>`<a class="route-card playbook-index-card" href="${playbookUrl(p.name)}"><span>Playbook ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p>${sourceProofMarkup('Synthesized from training sources', p.sources)}<div class="mini-tags">${p.tags.map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div><strong class="open-cue">Open full playbook</strong></a>`).join('');
+  if(grid) grid.innerHTML = playbooks.map((p,i)=>`<a class="route-card playbook-index-card" href="${playbookUrl(p.name)}"><span>Playbook ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p><div class="mini-tags">${p.tags.map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div><strong class="open-cue">Open full playbook</strong></a>`).join('');
 }
 function renderPlaybookDetailPage(){
   const p = playbookFromPath();

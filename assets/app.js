@@ -199,7 +199,7 @@ function renderLatestTraining(){
 function renderPlaybooks(activeIndex=1){
   const grid = document.getElementById('playbookGrid');
   if(!grid) return;
-  grid.innerHTML = playbooks.map((p,i)=>`<a class="card playbook-card" href="${playbookUrl(p.name)}"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p class="muted">${escapeHtml(p.question)}</p>${sourceProofMarkup('Playbook synthesized from training', p.sources)}<div class="tag-row">${p.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><span class="ghost-button">Open playbook</span></a>`).join('');
+  grid.innerHTML = playbooks.map((p,i)=>`<a class="card playbook-card" href="${playbookUrl(p.name)}"><span class="type">PART ${String(i+1).padStart(2,'0')} · ${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p class="muted">${escapeHtml(p.question)}</p><div class="tag-row">${p.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><span class="ghost-button">Open playbook</span></a>`).join('');
 }
 
 function renderTopics(){
@@ -526,7 +526,7 @@ function allResultRow(t, query, index){
 function playbookRow(p, index){
   return `<article class="content-row playbook-row" onclick="showPlaybook(${index});document.getElementById('playbooks')?.scrollIntoView({behavior:'smooth'});">
     <div class="row-thumb playbook-icon"><span>PB</span></div>
-    <div><small>Playbook · ${p.tags.slice(0,2).join(' / ')}</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p>${sourceProofMarkup('Validated by source trail', p.sources)}</div>
+    <div><small>Playbook · ${p.tags.slice(0,2).join(' / ')}</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div>
     <span class="row-meta">${p.sources} sources</span>
   </article>`;
 }
