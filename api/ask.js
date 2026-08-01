@@ -70,6 +70,10 @@ function cleanBrokerText(value) {
     .replace(/\bLet's break this down:?\s*/gi, '')
     .replace(/\bGreat question[.!]?\s*/gi, '')
     .replace(/\bGood news[,!]?\s*/gi, '')
+    .replace(/\bI am here\b/gi, 'We can help')
+    .replace(/\bI can help\b/gi, 'We can help')
+    .replace(/\bI would\b/gi, 'The recommended move is to')
+    .replace(/\bI’d\b/gi, 'The recommended move is to')
     .replace(/\bsuper helpful\b/gi, 'useful')
     .replace(/\bawesome\b/gi, 'strong')
     .replace(/\bdead\b/gi, 'no longer viable')
@@ -80,10 +84,14 @@ function cleanBrokerText(value) {
 }
 
 function cleanBrokerAnswer(answer) {
+  const rawIntent = cleanBrokerText(answer.intent || answer.guidance || '');
+  const intent = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(rawIntent)
+    ? 'Start with the client decision in front of the agent, then use the closest team guidance to choose the safest next step.'
+    : rawIntent;
   return {
     ...answer,
     title: cleanBrokerText(answer.title || 'Broker guidance'),
-    intent: cleanBrokerText(answer.intent || answer.guidance || ''),
+    intent,
     confidence: cleanBrokerText(answer.confidence || 'Broker guidance'),
     steps: (answer.steps || []).map(cleanBrokerText).filter(Boolean),
     script: cleanBrokerText(answer.script || ''),
@@ -218,7 +226,7 @@ async function callKimi(question, sources) {
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
 
   const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
-  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = What to Say, client-facing wording the agent can adapt; followups = optional related actions. Do not write as Marty, Craig, Darrin, or the AI. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
+  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = What to Say, client-facing wording the agent can adapt; followups = optional related actions. Do not write as Marty, Craig, Darrin, or the AI. Avoid first-person identity language such as I am here, I can help, I would, or I think. Use direct guidance or team language instead. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
   const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
   const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.7-code', 'kimi-k2.6'].filter(Boolean);
