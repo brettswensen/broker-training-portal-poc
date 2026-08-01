@@ -22,7 +22,7 @@ const demoAnswers = {
   repair: {
     title:"Repair negotiation guidance",
     confidence:"High match",
-    intent:"The agent needs a practical inspection-objection process and client script.",
+    intent:"Keep the inspection response focused on safety, financing, material defects, and the cleanest remedy. Avoid turning the repair request into a wish list.",
     queryTerms:["repair negotiations","inspection objection","seller response"],
     sources:[
       {name:"Repair Negotiations w Craig", cite:"Video training · Inspection/Negotiation", match:"94%", quote:"Separate safety or financing issues from cosmetic requests, then frame the ask around keeping the deal together."},
@@ -35,46 +35,46 @@ const demoAnswers = {
   tc: {
     title:"Working with your transaction coordinator",
     confidence:"High match",
-    intent:"The agent needs to know how to partner with TC without dropping client ownership.",
+    intent:"Bring the transaction coordinator in early, while keeping the agent clearly responsible for the client relationship and key communication.",
     queryTerms:["transaction coordinator","contract to close","deadlines"],
     sources:[
       {name:"Work With Your TC w Marty & Marc", cite:"Video training · Operations", match:"92%", quote:"Loop in the TC right after contract acceptance so deadlines, documents, and contacts are organized early."},
       {name:"Contract-to-Close Checklist", cite:"Generated checklist · 2 sources", match:"84%", quote:"Agent owns the relationship; TC helps keep the process and paperwork moving."}
     ],
     steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
-    script:"I’m bringing in our transaction coordinator now so we can keep deadlines, paperwork, title, lender details, and next steps organized. I’ll still be your main point of contact, and the TC helps make sure every detail is tracked through closing.",
+    script:"We are bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. You will still have a clear main point of contact, and the TC helps make sure every detail is tracked through closing.",
     followups:["Open contract-to-close checklist","Create new-agent task list","Find deadline reminders"]
   },
   "1031": {
     title:"1031 exchange basics for agents",
     confidence:"Strong match",
-    intent:"The agent needs a safe, compliant high-level answer for investor clients.",
+    intent:"Treat 1031 questions as timing-sensitive and specialist-sensitive. Confirm where the client is in the transaction, then involve a qualified intermediary or CPA before giving specific tax direction.",
     queryTerms:["1031 exchange","investor clients","tax deferral"],
     sources:[
       {name:"1031 Exchange Basics w Darrin", cite:"Video training · Investors/Tax Strategy", match:"90%", quote:"A 1031 can defer taxes on investment property, but the timelines and intermediary rules matter."},
       {name:"Investor Client Playbook", cite:"Generated playbook · 3 sources", match:"78%", quote:"Agents should identify the situation early and connect the client with a qualified intermediary or tax professional."}
     ],
     steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
-    script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, we need to get a qualified intermediary involved immediately before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. I can help coordinate that connection, but they need to give the tax guidance.",
+    script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, a qualified intermediary should be involved before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. They need to give the tax guidance.",
     followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
   },
   cma: {
     title:"CMA and pricing guidance",
     confidence:"Good match",
-    intent:"The agent needs valuation guidance for unusual property types.",
+    intent:"Price unusual properties by separating the major value drivers first, then use the comps as evidence instead of forcing one clean number.",
     queryTerms:["CMA","pricing","land valuation","flip property"],
     sources:[
       {name:"CMA's - Triplex, Addition, Nightly Rental w Craig", cite:"Video training · CMA/Pricing", match:"89%", quote:"Unusual properties require careful comp selection and explanation of adjustments."},
       {name:"CMA - Flip Property and Land w Craig", cite:"Video training · CMA/Pricing", match:"85%", quote:"Investor intent, land value, and renovation upside change how the pricing story is told."}
     ],
     steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
-    script:"This one is not a standard apples-to-apples CMA, so I’m going to separate the value drivers: location, property condition, income potential, land value, and buyer/investor use case. Then we’ll use the comps as evidence instead of pretending there is one perfect number.",
+    script:"This is not a standard apples-to-apples CMA, so we should separate the value drivers: location, property condition, income potential, land value, and buyer or investor use case. Then we can use the comps as evidence instead of pretending there is one perfect number.",
     followups:["Open CMA playbook","Show pricing objection script","Find land valuation examples"]
   },
   general: {
     title:"Broker Brain answer",
     confidence:"Exploratory match",
-    intent:"The question is broad, so the system is surfacing likely sources first.",
+    intent:"Start with the client decision in front of the agent, then use the closest team guidance to choose the safest next step.",
     queryTerms:["training library","broker playbooks","agent coaching"],
     sources:[
       {name:"Repair Negotiations w Craig", cite:"Inspection and repair workflow", match:"72%", quote:"Keep the request focused on material defects, clean remedies, and keeping the transaction together."},
@@ -134,6 +134,7 @@ function cleanAnswerForDisplay(answer){
     ...answer,
     title: cleanDisplayText(answer.title),
     confidence: cleanDisplayText(answer.confidence || 'Broker guidance'),
+    intent: cleanDisplayText(answer.intent || ''),
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
@@ -242,27 +243,30 @@ function answerMarkup(answer){
     const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
     nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
   }
-  const brokerTake = steps.length
+  const guidanceText = cleanAnswer.intent && !/^broker guidance\.?$/i.test(cleanAnswer.intent) ? cleanAnswer.intent : scriptText;
+  const whyList = steps.length
     ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
-    : '';
+    : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Here’s how I’d think about it.</p></div>
+        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Recommended guidance for the agent to use or adapt.</p></div>
       </div>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">BROKER TAKE</p>
-        <p class="answer-summary">${escapeHtml(scriptText)}</p>
-        ${brokerTake}
+        <p class="eyebrow">BROKER GUIDANCE</p>
+        <p class="answer-summary">${escapeHtml(guidanceText)}</p>
       </section>
 
-      ${nextActions.length ? `<section class="answer-section compact-section"><p class="eyebrow">NEXT BEST MOVES</p><div class="tag-row action-tags">${nextActions.map(f=>`<button data-label="${escapeHtml(f)}" onclick="handleFollowup(this.dataset.label)">${escapeHtml(f)}</button>`).join('')}</div></section>` : ''}
+      <section class="answer-section broker-take-section">
+        <p class="eyebrow">WHY THIS WORKS</p>
+        ${whyList}
+      </section>
 
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
-          <div><p class="eyebrow">CLIENT WORDING</p><h4>If you need to say it plainly</h4></div>
+          <div><p class="eyebrow">WHAT TO SAY</p><h4>If you need to say it plainly</h4></div>
         </div>
         <p class="script-box">“${escapeHtml(scriptText)}”</p>
         <div class="answer-actions">
@@ -309,7 +313,7 @@ function loadingMarkup(query, answer){
         <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
         <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
         <div class="step active"><i></i><span>Checking the training notes</span><em>${answer.sources.length} matches found</em></div>
-        <div class="step active"><i></i><span>Preparing the recommended next step</span><em>summary + client wording + follow-up actions</em></div>
+        <div class="step active"><i></i><span>Preparing the recommended next step</span><em>guidance + reasoning + client wording</em></div>
       </div>
       <div class="skeleton"></div><div class="skeleton short"></div>
     </div>`;

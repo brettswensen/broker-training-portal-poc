@@ -83,7 +83,7 @@ function cleanBrokerAnswer(answer) {
   return {
     ...answer,
     title: cleanBrokerText(answer.title || 'Broker guidance'),
-    intent: 'Broker guidance.',
+    intent: cleanBrokerText(answer.intent || answer.guidance || ''),
     confidence: cleanBrokerText(answer.confidence || 'Broker guidance'),
     steps: (answer.steps || []).map(cleanBrokerText).filter(Boolean),
     script: cleanBrokerText(answer.script || ''),
@@ -131,7 +131,7 @@ function fallbackAnswer(question, sources) {
   if (is1031) {
     return {
       title: '1031 exchange guidance',
-      intent: 'Broker guidance.',
+      intent: 'Confirm the client’s exchange timing first, then bring in a qualified intermediary or CPA before giving tax-specific direction.',
       confidence: sources.length ? 'Broker guidance' : 'General',
       steps: [
         'First clarify the timing: accepted offer is not the same as closed.',
@@ -153,7 +153,7 @@ function fallbackAnswer(question, sources) {
       'Review the related material if the agent wants more context before advising the client.',
       'Escalate to the broker, CPA, attorney, lender, or TC when the issue crosses into licensed/specialist advice.'
     ],
-    script: 'Here is the practical next step I would take. Focus on the client’s immediate decision, document the recommendation, and bring in the right specialist if this goes beyond agent guidance.',
+    script: 'Focus on the client’s immediate decision, document the recommendation, and bring in the right specialist if this goes beyond agent guidance.',
     followups: ['Review related training', 'Open related playbook', 'Escalate if specialist advice is needed']
   };
 }
@@ -178,7 +178,7 @@ function normalizeKimiAnswer(parsed) {
   if (!steps.length) return null;
   return {
     title: String(parsed.title || 'Live broker guidance').trim(),
-    intent: String(parsed.intent || 'Broker guidance').trim(),
+    intent: String(parsed.intent || '').trim(),
     confidence: String(parsed.confidence || 'Broker guidance').trim(),
     steps: steps.slice(0, 5),
     script: String(parsed.script || steps.join(' ')).trim(),
@@ -205,7 +205,7 @@ function salvageJsonLikeAnswer(text) {
 
   return {
     title: titleMatch?.[1] || 'Live broker guidance',
-    intent: 'Broker guidance',
+    intent: 'Start with the client decision in front of the agent, then choose the safest next step from the closest team guidance.',
     confidence: 'Broker guidance',
     steps: steps.slice(0, 5),
     script: scriptMatch?.[1] ? scriptMatch[1].replace(/\\"/g, '"') : steps.join(' '),
@@ -218,7 +218,7 @@ async function callKimi(question, sources) {
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
 
   const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
-  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
+  const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = What to Say, client-facing wording the agent can adapt; followups = optional related actions. Do not write as Marty, Craig, Darrin, or the AI. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
   const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
   const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.7-code', 'kimi-k2.6'].filter(Boolean);
@@ -294,7 +294,7 @@ async function callKimi(question, sources) {
     const sentences = cleaned.split(/(?<=[.!?])\s+/).filter(Boolean).slice(0, 4);
     return cleanAndValidateModelAnswer({
       title: 'Broker guidance',
-      intent: 'Broker guidance',
+      intent: 'Start with the practical recommendation first, then explain why it fits this client situation.',
       confidence: 'Broker guidance',
       steps: sentences.length ? sentences : [cleaned.slice(0, 240)],
       script: cleaned.slice(0, 900),
