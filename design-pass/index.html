@@ -8,12 +8,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="stylesheet" href="designer-pass.css?v=mobile-shell-hero" />
+  <link rel="stylesheet" href="designer-pass.css?v=mobile-hamburger-fit" />
 </head>
 <body class="designer-pass">
   <aside class="sidebar">
-    <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span><small>Designer pass</small></a>
-    <nav>
+    <div class="mobile-nav-head">
+      <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span><small>Designer pass</small></a>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="dashboardNav">
+        <span></span><span></span><span></span>
+        Menu
+      </button>
+    </div>
+    <nav id="dashboardNav">
       <a class="active" href="#top">Dashboard</a>
       <a href="#ask">Ask the Broker</a>
       <a href="../library/">Library</a>
@@ -284,6 +290,24 @@
       event.stopImmediatePropagation();
       window.__designerRouteToLibrary(event.target.value);
     }, true);
+    (function() {
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var nav = document.getElementById('dashboardNav');
+      if (!toggle || !nav) return;
+      function setOpen(open) {
+        document.body.classList.toggle('mobile-menu-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      toggle.addEventListener('click', function() {
+        setOpen(!document.body.classList.contains('mobile-menu-open'));
+      });
+      nav.addEventListener('click', function(event) {
+        if (event.target && event.target.closest('a')) setOpen(false);
+      });
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') setOpen(false);
+      });
+    })();
   </script>
   <script src="../assets/app.js?v=bc68fa9"></script>
   <script src="designer-pass.js?v=option-c-dashboard-playbook"></script>
