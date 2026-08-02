@@ -292,13 +292,13 @@ function answerMarkup(answer){
         <a href="${appPath('/playbooks/')}">Open playbooks</a>
         <a href="${appPath('/topics/')}">Browse topics</a>
       </div>
-      <div class="sources-used source-evidence-panel">
-        <h4>Sources to check</h4>
+      <details class="sources-used source-evidence-panel">
+        <summary>Sources to check</summary>
         <p class="muted">Use these if you want to review the original training or dig deeper before advising the client.</p>
         <div class="source-stack compact">
           ${sources.map(sourceCard).join('') || '<p class="muted">Related training will appear here as more transcripts are connected.</p>'}
         </div>
-      </div>
+      </details>
     </div>`;
 }
 function relatedPlaybooksFor(text){
@@ -611,10 +611,14 @@ async function runAsk(query){
   const answerEl = document.getElementById('answer');
   answerEl.innerHTML = loadingMarkup(query, fallback);
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 2200);
+
   try {
     const response = await fetch(ASK_API_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
+      signal: controller.signal,
       body: JSON.stringify({question: query || 'general broker guidance'})
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
@@ -627,6 +631,8 @@ async function runAsk(query){
     });
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
-    setTimeout(()=>{ answerEl.innerHTML = answerMarkup(fallback); }, 600);
+    answerEl.innerHTML = answerMarkup(fallback);
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
