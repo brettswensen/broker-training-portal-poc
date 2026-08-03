@@ -311,20 +311,27 @@ function relatedPlaybooksFor(text){
   return (scored.length ? scored : [{p:playbooks[1], index:1},{p:playbooks[2], index:2},{p:playbooks[4], index:4}]).slice(0,3).map(item => ({...item.p, index:item.index}));
 }
 
-function loadingMarkup(query, answer){
-  const terms = answer.queryTerms.map(t=>`<span class="tag">${t}</span>`).join('');
+function askProgressSteps(answer){
+  const terms = (answer.queryTerms || []).map(t=>`<span class="tag">${t}</span>`).join('');
+  return [
+    {label:'Searching the training library', meta:'Scanning saved brokerage training'},
+    {label:'Finding matching transcript sections', meta:terms || 'Looking for the closest examples'},
+    {label:'Checking the broker notes', meta:`${(answer.sources || []).length} likely matches found`},
+    {label:'Preparing the recommended next step', meta:'guidance + reasoning + client wording'}
+  ];
+}
+
+function loadingMarkup(query, answer, visibleStep=0){
+  const steps = askProgressSteps(answer).slice(0, Math.max(1, visibleStep + 1));
   return `
-    <div class="ai-answer thinking">
+    <div class="ai-answer thinking" aria-live="polite">
       <div class="answer-topline">
         <span class="spark pulse">✦</span>
-        <div><h3>Writing broker guidance...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
-        <span class="confidence">Checking training</span>
+        <div><h3>Working on your broker answer...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
+        <span class="confidence">In progress</span>
       </div>
-      <div class="ai-steps">
-        <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
-        <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
-        <div class="step active"><i></i><span>Checking the training notes</span><em>${answer.sources.length} matches found</em></div>
-        <div class="step active"><i></i><span>Preparing the recommended next step</span><em>guidance + reasoning + client wording</em></div>
+      <div class="ai-steps live-steps">
+        ${steps.map(step => `<div class="step active"><i></i><span>${escapeHtml(step.label)}</span><em>${step.meta}</em></div>`).join('')}
       </div>
       <div class="skeleton"></div><div class="skeleton short"></div>
     </div>`;
@@ -392,11 +399,20 @@ function openTraining(title){
   document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
 
+function prefillAskQuestion(question){
+  const askInput = document.getElementById('askInput');
+  const answerEl = document.getElementById('answer');
+  if(!askInput) return;
+  askInput.value = question;
+  askInput.focus({preventScroll:true});
+  document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(answerEl){
+    answerEl.innerHTML = '<p class="muted">Question loaded. Hit Ask the Broker when you’re ready for Broker Brain to search the training and write the answer.</p>';
+  }
+}
+
 function askAbout(topic){
-  const question = `What should I know about ${topic}?`;
-  document.getElementById('askInput').value = question;
-  document.getElementById('ask').scrollIntoView({behavior:'smooth'});
-  runAsk(question);
+  prefillAskQuestion(`What should I know about ${topic}?`);
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
@@ -420,7 +436,7 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
   }
   document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
-document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
+document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
 renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
 
@@ -603,13 +619,34 @@ function transcriptSourcesFor(query, fallbackAnswer){
 }
 
 const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+let askProgressTimers = [];
+let askRequestId = 0;
+
+function clearAskProgressTimers(){
+  askProgressTimers.forEach(timer => clearTimeout(timer));
+  askProgressTimers = [];
+}
+
+function scheduleAskProgress(answerEl, query, fallback, requestId){
+  clearAskProgressTimers();
+  [1, 2, 3].forEach((step, index) => {
+    askProgressTimers.push(setTimeout(() => {
+      if(requestId !== askRequestId) return;
+      answerEl.innerHTML = loadingMarkup(query, fallback, step);
+    }, 450 * (index + 1)));
+  });
+}
 
 async function runAsk(query){
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
   const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
   const answerEl = document.getElementById('answer');
-  answerEl.innerHTML = loadingMarkup(query, fallback);
+  if(!answerEl) return;
+  const requestId = ++askRequestId;
+  const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
+  answerEl.innerHTML = loadingMarkup(query, fallback, 0);
+  scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 2200);
@@ -623,6 +660,8 @@ async function runAsk(query){
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
     const liveAnswer = await response.json();
+    await minimumProgress;
+    if(requestId !== askRequestId) return;
     answerEl.innerHTML = answerMarkup({
       ...fallback,
       ...liveAnswer,
@@ -631,8 +670,11 @@ async function runAsk(query){
     });
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
+    await minimumProgress;
+    if(requestId !== askRequestId) return;
     answerEl.innerHTML = answerMarkup(fallback);
   } finally {
+    if(requestId === askRequestId) clearAskProgressTimers();
     clearTimeout(timeoutId);
   }
 }

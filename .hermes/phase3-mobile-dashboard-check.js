@@ -32,8 +32,25 @@ async function json(url){ const r = await fetch(url); if(!r.ok) throw new Error(
     await send('Emulation.setDeviceMetricsOverride', {width:390,height:844,deviceScaleFactor:2,mobile:true}, sessionId);
     await send('Page.navigate', {url}, sessionId);
     await sleep(1700);
-    await send('Runtime.evaluate', {expression:`document.querySelector('[data-ask="How should I handle repair negotiations after inspection?"]')?.click()`, awaitPromise:true}, sessionId);
-    await sleep(3300);
+    await send('Runtime.evaluate', {expression:`performance.clearResourceTimings();document.querySelector('[data-ask="How should I handle repair negotiations after inspection?"]')?.click()`, awaitPromise:true}, sessionId);
+    await sleep(350);
+    const chipResult = await send('Runtime.evaluate', {returnByValue:true, expression:`({input:document.getElementById('askInput')?.value, thinking:!!document.querySelector('#answer .thinking'), ready:!!document.querySelector('#answer .ready'), fetches:performance.getEntriesByType('resource').filter(e=>e.name.includes('/api/ask')).length})`}, sessionId);
+    console.log(JSON.stringify({chipPrefill: chipResult.result.value}, null, 2));
+    if(chipResult.result.value.input !== 'How should I handle repair negotiations after inspection?') throw new Error('Ask chip did not prefill the question');
+    if(chipResult.result.value.thinking || chipResult.result.value.ready || chipResult.result.value.fetches) throw new Error('Ask chip should not start answer generation');
+    await send('Runtime.evaluate', {expression:`document.getElementById('askButton')?.click()`, awaitPromise:true}, sessionId);
+    const progressResult = await send('Runtime.evaluate', {returnByValue:true, awaitPromise:true, expression:`new Promise(resolve => {
+      const sample = label => ({label, thinking:!!document.querySelector('#answer .thinking'), ready:!!document.querySelector('#answer .ready'), stepCount:document.querySelectorAll('#answer .ai-steps .step').length});
+      const out = [sample('immediate')];
+      setTimeout(()=>out.push(sample('520ms')), 520);
+      setTimeout(()=>out.push(sample('980ms')), 980);
+      setTimeout(()=>out.push(sample('1450ms')), 1450);
+      setTimeout(()=>resolve(out), 1500);
+    })`}, sessionId);
+    console.log(JSON.stringify({progressSequence: progressResult.result.value}, null, 2));
+    const sequence = progressResult.result.value.map(item => item.stepCount);
+    if(sequence[0] !== 1 || sequence[1] < 2 || sequence[2] < 3 || sequence[3] < 4) throw new Error(`Ask progress did not reveal one step at a time: ${sequence.join(',')}`);
+    await sleep(1900);
     await send('Runtime.evaluate', {expression:`document.getElementById('globalSearch').value='repair'`, awaitPromise:true}, sessionId);
     await sleep(300);
     const result = await send('Runtime.evaluate', {returnByValue:true, awaitPromise:true, expression:`(() => {
