@@ -25,6 +25,8 @@
       <a href="../library/">Library</a>
       <a href="../playbooks/">Playbooks</a>
       <a href="../topics/">Topics</a>
+      <a href="#scripts">Scripts</a>
+      <a href="#pipeline">Admin preview</a>
       <a href="#search">Search</a>
     </nav>
     <div class="sidebar-card">
@@ -44,7 +46,7 @@
       <div class="hero-stats">
         <div><strong>6</strong><span>sample trainings</span></div>
         <div><strong>8</strong><span>broker playbooks</span></div>
-        <div><strong>37</strong><span>topic tags</span></div>
+        <div><strong>4</strong><span>starter scripts</span></div>
       </div>
     </section>
 
@@ -60,6 +62,7 @@
           <button type="button" data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
           <button type="button" data-ask="How do I work with my transaction coordinator?">Work with TC</button>
           <button type="button" data-ask="What should I know about a 1031 exchange?">1031 basics</button>
+          <button type="button" data-ask="How should I explain pricing when the seller wants more than the comps support?">Seller pricing</button>
         </div>
         <button type="button" id="askButton" class="primary">Ask the Broker</button>
         <article id="answer" class="answer">
@@ -157,13 +160,36 @@
       <div id="latestTrainingRail" class="video-rail" aria-label="Latest training videos"></div>
     </section>
 
+
+    <section id="scripts" class="panel scripts-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BROKER-APPROVED WORDING</p>
+          <h2>Scripts agents can copy, adapt, and use.</h2>
+        </div>
+        <a class="ghost-button" href="../scripts/">Open scripts library</a>
+      </div>
+      <p class="section-intro">Give agents the words for common client conversations, then connect each script back to the relevant playbook.</p>
+      <div id="scriptPreviewGrid" class="script-grid"></div>
+    </section>
+
+    <section id="saved" class="panel saved-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AGENT WORKSPACE</p>
+          <h2>Saved answers and scripts.</h2>
+        </div>
+        <span id="savedWorkspaceCount" class="status-pill green">0 saved</span>
+      </div>
+      <div id="savedWorkspaceList" class="saved-list"></div>
+    </section>
     <section id="pipeline" class="panel pipeline-panel">
       <div class="section-head">
         <div>
-          <p class="eyebrow">AFTER EVERY LIVE TRAINING</p>
-          <h2>From recording to usable agent knowledge.</h2>
+          <p class="eyebrow">ADMIN PREVIEW</p>
+          <h2>From training upload to usable agent knowledge.</h2>
         </div>
-        <span class="muted">Designed around the Thursday training workflow</span>
+        <a class="ghost-button" href="../pipeline/">Open pipeline view</a>
       </div>
       <div class="pipeline-flow">
         <article><span>01</span><strong>Training recorded</strong><p>Drop in the Zoom, Drive, YouTube, or uploaded video.</p></article>
@@ -238,17 +264,19 @@
       <div id="trainingList" class="training-list"></div>
     </section>
 
-    <section id="positioning" class="panel proof-panel">
+    <section id="positioning" class="panel proof-panel broker-impact-panel">
       <div class="section-head">
         <div>
-          <p class="eyebrow">WHY THIS IS DIFFERENT</p>
-          <h2>Not generic answers. Your brokerage knowledge.</h2>
+          <p class="eyebrow">BROKER IMPACT</p>
+          <h2>Training that compounds instead of disappearing after the meeting.</h2>
         </div>
-        <span class="muted">Secondary proof point for the buyer conversation</span>
+        <span class="muted">Lower-page proof for broker conversations</span>
       </div>
-      <div class="compare-grid">
-        <article><h3>Generic ChatGPT</h3><ul><li>Broad internet-style answers</li><li>No memory of your trainings</li><li>No link back to Craig, Marty, or Darrin’s actual guidance</li><li>No private brokerage access layer</li></ul></article>
-        <article class="featured"><h3>Broker Brain</h3><ul><li>Answers from your indexed training library</li><li>Shows which video/source the answer came from</li><li>Turns guidance into scripts, checklists, and playbooks</li><li>Protects the knowledge as an agent/member benefit</li></ul></article>
+      <div class="impact-grid">
+        <article><span>01</span><h3>Faster onboarding</h3><p>Newer agents get first-pass guidance without waiting for the broker to answer the same question again.</p></article>
+        <article><span>02</span><h3>More consistent scripts</h3><p>Agents can start from language already aligned with the team’s standards and trainings.</p></article>
+        <article><span>03</span><h3>Fewer repeat questions</h3><p>Broker coaching turns into searchable answers, playbooks, and source trails.</p></article>
+        <article><span>04</span><h3>Reusable training assets</h3><p>Every recording can become transcripts, summaries, scripts, checklists, and Ask guidance.</p></article>
       </div>
     </section>
 
@@ -309,7 +337,7 @@
       });
     })();
   </script>
-  <script src="../assets/app.js?v=bc68fa9"></script>
+  <script src="../assets/app.js?v=agent-value-batch"></script>
   <script src="designer-pass.js?v=option-c-dashboard-playbook"></script>
 </body>
 </html>

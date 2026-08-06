@@ -24,7 +24,7 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
 .designer-pass .search-panel{margin-inline:0;margin-top:-24px}.designer-pass .top-content-grid{grid-template-columns:1fr}.designer-pass .designer-search-note{margin-inline:0}.designer-pass.search-mode #latest{display:none!important}}
 @media(prefers-reduced-motion:reduce){.designer-pass *{animation:none!important;transition:none!important}}
 
-.designer-pass #pipeline,.designer-pass #positioning,.designer-pass #results{display:none!important}
+.designer-pass #results{display:none!important}
 .designer-pass .route-teasers{margin-top:34px}.designer-pass .route-teaser-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.designer-pass .route-teaser{color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:20px;background:rgba(255,255,255,.04);transition:.2s ease}.designer-pass .route-teaser:hover{transform:translateY(-3px);border-color:rgba(120,220,232,.25);box-shadow:0 20px 60px rgba(0,0,0,.28)}.designer-pass .route-teaser span{display:block;color:var(--accent2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.designer-pass .route-teaser strong{display:block;margin:10px 0 8px;font-size:20px;letter-spacing:-.035em}.designer-pass .route-teaser p{margin:0;color:#aeb8c4;line-height:1.55}
 @media(max-width:900px){.designer-pass .route-teaser-grid{grid-template-columns:1fr}}
 
@@ -710,3 +710,15 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
   .designer-pass .card,
   .designer-pass .objection-grid article{padding:12px!important}
 }
+
+
+/* Agent value batch: Ask, scripts, saved workspace, admin preview, broker impact */
+.designer-pass .answer-route-links button,
+.designer-pass .script-actions button,
+.designer-pass .script-actions a{border:1px solid rgba(120,220,232,.22);background:rgba(120,220,232,.07);color:#dffbff;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800;text-decoration:none;cursor:pointer}
+.designer-pass .escalation-section{border-color:rgba(245,158,11,.26);background:linear-gradient(135deg,rgba(245,158,11,.09),rgba(255,255,255,.018))}
+.designer-pass .source-why{margin:9px 0;color:#d9e7ef;line-height:1.45;font-size:13px}.designer-pass .source-why b{color:#fff}
+.designer-pass .scripts-panel,.designer-pass .saved-panel,.designer-pass .broker-impact-panel{background:linear-gradient(180deg,rgba(120,220,232,.045),rgba(255,255,255,.018))}
+.designer-pass .script-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.designer-pass .script-card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(0,0,0,.17);padding:18px;display:grid;gap:10px}.designer-pass .script-card span,.designer-pass .impact-grid article span,.designer-pass .saved-list article span{font-family:"JetBrains Mono",monospace;color:#78dce8;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}.designer-pass .script-card h3{margin:0;font-size:20px;letter-spacing:-.035em}.designer-pass .script-card p{margin:0;color:#aeb8c4;line-height:1.5}.designer-pass .script-card blockquote{margin:0;border-left:3px solid rgba(120,220,232,.45);padding:10px 0 10px 13px;color:#eef7fb;line-height:1.55}.designer-pass .script-actions{display:flex;flex-wrap:wrap;gap:8px}.designer-pass .saved-list{display:grid;gap:10px}.designer-pass .saved-list article{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.035);padding:14px}.designer-pass .saved-list article strong{display:block;margin:5px 0;color:#fff}.designer-pass .saved-list article p{margin:0;color:#aeb8c4;line-height:1.45}.designer-pass .impact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.designer-pass .impact-grid article{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(255,255,255,.035);padding:18px}.designer-pass .impact-grid h3{margin:10px 0 8px;letter-spacing:-.035em}.designer-pass .impact-grid p{margin:0;color:#aeb8c4;line-height:1.55}
+@media(max-width:1000px){.designer-pass .script-grid,.designer-pass .impact-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.designer-pass .script-grid,.designer-pass .impact-grid{grid-template-columns:1fr}.designer-pass .source-stack.compact article{padding:13px}}

@@ -20,7 +20,7 @@ const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination"
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const appMarkers = ['design-pass','library','playbooks','topics'];
+  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -67,7 +67,7 @@ function snippetFor(text, query){
   return `${start ? '…' : ''}${raw}${end < source.length ? '…' : ''}`;
 }
 function getQuery(){ return new URLSearchParams(location.search).get('q') || ''; }
-function goLibrary(q){ const value = String(q || document.getElementById('routeSearch')?.value || '').trim(); location.href = `/library/${value ? `?q=${encodeURIComponent(value)}` : ''}`; }
+function goLibrary(q){ const value = String(q || document.getElementById('routeSearch')?.value || '').trim(); location.href = appPath(`/library/${value ? `?q=${encodeURIComponent(value)}` : ''}`); }
 function handleSearchSubmit(e){ e?.preventDefault?.(); goLibrary(); }
 function setActiveNav(){
   const path = location.pathname.replace(/\/$/, '') || '/';
@@ -104,7 +104,7 @@ function relatedPlaybooksFor(text){
 
 function sourceProofMarkup(label='Related material', count=1){
   const n = Math.max(1, Number(count) || 1);
-  return `<div class="source-proof-strip" aria-label="Source validation"><span>✓</span><strong>${escapeHtml(label)}</strong><small>${n} training source${n===1?'':'s'} supporting this</small></div>`;
+  return `<div class="source-proof-strip" aria-label="Source validation"><span>✓</span><strong>${escapeHtml(label)}</strong><small>${n} training source${n===1?'':'s'} to review</small></div>`;
 }
 
 function renderLibrary(){
@@ -205,6 +205,32 @@ function renderTopicsPage(){
     return `<a class="route-card topic-card" href="${appPath('/library/')}?q=${encodeURIComponent(t)}"><span>${count} related source${count===1?'':'s'}</span><h3>${escapeHtml(t)}</h3><p>Open related trainings, playbooks, examples, and client conversation guidance.</p></a>`;
   }).join('');
 }
+
+const routeScripts = [
+  {category:'Repair Negotiations', title:'Inspection repair request', situation:'Buyer wants to respond after inspection.', script:'Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or confidence from the cosmetic items, then choose the cleanest path: repair, credit, concession, or price adjustment.', playbook:'Repair Negotiation Playbook'},
+  {category:'Transaction Coordination', title:'TC introduction', situation:'Client is under contract and needs to know who handles what.', script:'I’m bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. I’ll stay your main point of contact while the TC helps keep the process moving cleanly.', playbook:'Contract-to-Close Checklist'},
+  {category:'Pricing', title:'Unusual property CMA', situation:'Seller has a property that does not fit easy comps.', script:'This is not a perfect apples-to-apples CMA, so I’m going to show you the closest evidence, call out where the comp set breaks down, and explain the pricing range instead of pretending there is one exact number.', playbook:'CMA / Pricing Playbook'},
+  {category:'Investor Clients', title:'1031 timing handoff', situation:'Client asks about selling and avoiding taxes.', script:'Because this may involve a 1031 exchange, timing matters. Before funds are received, a qualified intermediary should be involved. Let’s get the QI or CPA into the conversation before giving tax-specific direction.', playbook:'Investor Client Playbook'}
+];
+function renderScriptsPage(){
+  const grid = document.getElementById('scriptsGrid');
+  if(!grid) return;
+  grid.innerHTML = routeScripts.map(item => `<article class="route-card script-route-card"><span>${escapeHtml(item.category)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.situation)}</p><blockquote>${escapeHtml(item.script)}</blockquote><a class="route-button" href="${playbookUrl(item.playbook)}">Open related playbook</a></article>`).join('');
+}
+function renderPipelinePage(){
+  const flow = document.getElementById('pipelineAdminFlow');
+  if(!flow) return;
+  const steps = [
+    ['Uploaded','Drop in Zoom, Drive, YouTube, or video file.'],
+    ['Transcribed','Create searchable transcript and sections.'],
+    ['Indexed','Tag topics, speakers, timestamps, and training categories.'],
+    ['Scripts extracted','Pull client wording and agent talk tracks.'],
+    ['Playbooks updated','Add the strongest guidance to operating playbooks.'],
+    ['Ready in Ask','Agents can ask questions from the new material.']
+  ];
+  flow.innerHTML = steps.map((step,i)=>`<article class="route-card"><span>${String(i+1).padStart(2,'0')}</span><h3>${step[0]}</h3><p>${step[1]}</p></article>`).join('');
+}
+
 async function initRoutePage(){
   setActiveNav();
   document.querySelectorAll('[data-route-query]').forEach(b=>b.addEventListener('click',()=>goLibrary(b.dataset.routeQuery)));
@@ -214,5 +240,7 @@ async function initRoutePage(){
   if(document.body.dataset.page === 'playbooks') renderPlaybooksPage();
   if(document.body.dataset.page === 'playbook-detail') renderPlaybookDetailPage();
   if(document.body.dataset.page === 'topics') renderTopicsPage();
+  if(document.body.dataset.page === 'scripts') renderScriptsPage();
+  if(document.body.dataset.page === 'pipeline') renderPipelinePage();
 }
 initRoutePage();
