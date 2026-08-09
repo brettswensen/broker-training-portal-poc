@@ -1,0 +1,277 @@
+{
+  "source_id": "nerdy-nuances-negotiation-2025-02",
+  "title": "Nerdy Nuances and Negotiation Nuggets",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1IsAlskWc92uzKsCIVewXrzgNoH1k6GBf/view",
+  "date": "2025-02-12",
+  "speaker_or_author": "Marty",
+  "audience": [
+    "buyer agents",
+    "listing agents",
+    "new agents"
+  ],
+  "summary": "Training session covering 10-12 contract maneuvers and 4-5 negotiation tactics for real estate agents. Topics include earnest money leverage, delayed possession vs leaseback, assessment sections, hidden second due diligence deadline, new construction completion notices, deadline reminder strategy, response deadline clarification, contingent cancellation addendum, escalation clauses, backup offers, and the power of goodwill in negotiations.",
+  "topics": [
+    "earnest money",
+    "contract maneuvers",
+    "negotiation tactics",
+    "delayed possession",
+    "leaseback",
+    "special assessments",
+    "HOA assessments",
+    "due diligence deadline",
+    "financing and appraisal deadline",
+    "new construction",
+    "certificate of occupancy",
+    "contingent cancellation",
+    "escalation clauses",
+    "backup offers",
+    "goodwill negotiation"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Buyer wants to strengthen offer in multiple offer situation",
+      "guidance": "Increase earnest money beyond standard 1%. On a $500K purchase with FHA loan ($17.5K down payment), suggest $10-15K earnest money instead of $5K. This makes offer more attractive to seller AND protects buyer if seller breaches for higher offer\u2014seller would owe buyer the earnest money amount.",
+      "client_language": "We're going to put down $15,000 in earnest money to show the seller we're serious. This actually protects you too\u2014if the seller tried to cancel our contract for a better offer, they'd owe us that $15,000.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Seller receives offer with low earnest money from investor buyer",
+      "guidance": "If buyer fails to deposit earnest money by deadline, that's a breach of contract. As listing agent, you can cancel FIRST (before buyer cancels) and claim the deposit. Heather's case: investors planned inspection renegotiation ($350K to $280K); missed earnest money deadline; seller canceled first and kept $5K.",
+      "client_language": "Their earnest money was late\u2014that's a breach. We're canceling first so their deposit comes to you.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Buyer offering delayed possession to seller as competitive advantage",
+      "guidance": "For BUYERS: Use delayed possession (not leaseback). Seller remains contractually obligated to turn over property in same condition. If damage occurs after closing, seller must repair. For SELLERS: Use leaseback instead\u2014transfers responsibility to buyer/landlord. Case study: Carter's seller had $1,500 water damage after closing; delayed possession made seller pay.",
+      "client_language": "We'll let you stay 7 days after closing with delayed possession\u2014that means you're still responsible for the property until you hand it over to us.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Filling out Section 4.2 and 4.3 on assessments",
+      "guidance": "Always mark 'seller' for special assessments (Section 4.2) and HOA assessments/transfer fees (Section 4.3C). Never mark 'NA'\u2014NA is not defined in the contract and means nothing. In current market, no seller will reject this unless hiding an assessment.",
+      "client_language": "Section 4.2 and 4.3 say seller pays any assessments. This is standard\u2014if the seller pushes back, that's a red flag.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Buyer needs exit strategy after due diligence deadline",
+      "guidance": "Section 8.3B(I) contains a hidden second due diligence deadline. Buyer can cancel 'in buyer's sole discretion' if not satisfied with loan terms, with $0 earnest money forfeited. This is 'buyer's sole discretion'\u2014no documentation required. As buyer's agent, don't teach buyers about this; let them decide by due diligence deadline. But use as safety net if needed. As seller's agent, warn seller this exists and consider countering for half earnest money if buyer cancels post-DD.",
+      "client_language": null,
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "New construction builder charging per-day late closing fees",
+      "guidance": "Builder must provide written notice of substantial completion signed by builder (not just email C of O). Section 12.2 + Section 19. If builder hasn't provided proper signed notice, closing clock hasn't started\u2014buyer isn't late. Don't point this out proactively; wait until builder tries to charge fees, then respond that proper notice was never received.",
+      "client_language": "We haven't received the formal notice of substantial completion yet, so the closing timeline hasn't started.",
+      "citation_refs": [
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Agent considering reminding other side of upcoming deadlines",
+      "guidance": "STOP reminding the other side of deadlines. Your duty of loyalty is to YOUR client, not the other agent. Heather's case: if they had reminded buyer about earnest money deadline, they couldn't have canceled first and claimed the $5K. Not reminding = leverage. It may not feel good, but it's your fiduciary duty.",
+      "client_language": null,
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Agent confused about response deadline vs acceptance deadline",
+      "guidance": "There is NO response deadline in the REPC. Section 25 is 'Offer and Time for Acceptance'\u2014it's an acceptance deadline only. Counteroffers don't need to meet this deadline. Changes must be accepted by both in writing. Don't write 'response deadline' language into counteroffers\u2014it's unnecessary and confusing. If other agent insists, it doesn't ruin the contract but it's wrong.",
+      "client_language": null,
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Other side dragging feet on deadline extensions or repairs",
+      "guidance": "Use Contingent Cancellation Addendum (aka 'ultimatum addendum'). States: 'We're canceling unless you agree to extend due diligence deadline to [date].' If seller doesn't accept by deadline, contract auto-cancels. Protects earnest money. WARNING: language is cold/ultimatum-like. Always accompany with phone call/email explaining you don't want to cancel, you're just protecting your client's position.",
+      "client_language": "I know this addendum sounds harsh, but we really don't want to cancel. We just need more time/protection for our client.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Buyer wants to use escalation clause in multiple offers",
+      "guidance": "No UAR-approved escalation addendum\u2014use attorney-drafted template. Structure: offer price + 'beat any competing offer by $X' with CAP. Recommend $2500 over (not $1000) for more attention. RISK: Seller can ignore escalation and counter straight to cap. Explain this to buyer upfront. As listing agent receiving escalation clause: counter straight to the cap\u2014they already said they're comfortable there.",
+      "client_language": "We'll offer $525K but beat any competing offer by $2,500, up to a maximum of $575K. Just so you know, the seller could technically counter us at $575K without showing us the other offers.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "Negotiations getting tense or adversarial",
+      "guidance": "Use goodwill as primary negotiation tactic. Assume other side wants to win too\u2014they're your counterpart, not adversary. Most successful negotiation: both parties satisfied, both left something on the table. Exercise goodwill from pre-negotiation through closing. When hiccups arise (repairs, extensions, delays), goodwill gives your client advantage, not shrewd tactics alone.",
+      "client_language": "Let's approach this as partners trying to get both our clients what they need. I know we both want a successful closing.",
+      "citation_refs": [
+        "chunk-012"
+      ]
+    }
+  ],
+  "steps": [
+    "Increase earnest money to 2-3% in competitive situations (buyer side)",
+    "Watch for missed earnest money deadlines\u2014if buyer is late, seller can cancel first and claim deposit",
+    "Use delayed possession for buyers (seller stays responsible); use leaseback for sellers (transfers responsibility)",
+    "Always mark 'seller' for assessments in Sections 4.2 and 4.3C\u2014never 'NA'",
+    "Know Section 8.3B(I) is a hidden second due diligence deadline for buyers",
+    "For new construction: builder must provide signed written notice of substantial completion per Sections 12.2 + 19",
+    "Do not remind other side of their deadlines\u2014duty of loyalty is to your client",
+    "Section 25 is acceptance deadline only\u2014there is no response deadline in REPC",
+    "Use Contingent Cancellation Addendum with warm phone call/email explanation",
+    "Escalation clause: beat by $2500 with cap; warn buyer seller may counter to cap",
+    "Exercise goodwill throughout transaction\u2014most effective long-term negotiation tactic"
+  ],
+  "objections": [
+    {
+      "objection": "Won't increasing earnest money put my buyer at risk if deal falls through?",
+      "response": "If agent and TC are on top of deadlines, earnest money stays protected through closing. The contract is very buyer-friendly. The bigger risk is losing the house to another offer.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "objection": "Isn't it mean to not remind the other agent about deadlines?",
+      "response": "Your state license and agency agreement require loyalty to YOUR client above the other party. Not reminding protects your client's position. Heather's example: not reminding earned seller $5K when buyer missed earnest money deadline.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "Won't the contingent cancellation addendum kill the deal?",
+      "response": "The language is cold, which is why you must accompany it with a call/email explaining you want to keep the deal alive. It protects your client's earnest money while keeping conversation open.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "objection": "Why shouldn't I mark NA for assessments if I'm sure there aren't any?",
+      "response": "NA is not defined in the contract and means nothing. You cannot be certain there are no assessments\u2014even seller may not know. In this market, no seller will reject 'seller pays' unless hiding something.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "No problem, no problem. Uh, thank you for the feedback. So, um, uh let\u2019s see. One example could be, let\u2019s say you\u2019re doing an FHA loan, okay, on a 5000 purchase that\u2019s going to be three and a half percent will be your down payment, right? So on a 5000 purchase, you know, on a normal day, I can do that in my head, but today I\u2019m not smart enough to do that. Uh. So that\u2019s going to be here\u2019s my calculator. Five hundred thousand times point oh three five seventeen thousand five hundred, right? Okay, So your down payment on an FHA purchase at three and a half percent is going to be seventeen thousand five hundred. Well, Your earnest money\u2019s five thousand ;. You are going to have to bring in another twelve thousand five hundred at closing, plus your closing costs. So chances are You\u2019ve got more than five",
+      "timestamp_start": "00:07:14",
+      "timestamp_end": "00:08:40",
+      "source_line_start": 100,
+      "source_line_end": 113,
+      "section": "Leveraging Earnest Money - Increasing Amount"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "usually more potential for your client to at least have paid recompense for their time, basically. That\u2019s exactly right. So if the buyer defaults, the buyer fails to perform on that contract, the seller stands to gain more. With when there\u2019s more earnest money, what the seller rarely considers is what I want to teach you now. The second reason to increase your earnest money as a buyer. Let\u2019s say it\u2019s a five hundred thousand dollar purchase. There is multiple offers, And you are upping your earnest money to gain the seller\u2019s favor and win the offer, right? Just like Mindy, just described. It\u2019s perfect tactic for that. But let\u2019s say right after you go under contract with the seller, the seller gets an offer that is. 20,000 above yours. That\u2019s happened to me and my buyers multiple times. Right after we go under contract, the seller will get a much more attractive offer than mine. Maybe it\u2019s all cash, who knows? Or maybe they can close in three days. Well, The seller can - it\u2019s a breach of contract -, but the seller can cancel your contract in order to go with the other offer. The higher offer, the seller will net more on that. But like I said, that\u2019s a breach of contract; they are usually aware of that. What they don\u2019t usually consider is the fact that if they do that, not only will you get your fifteen grand in earnest money back, but the seller now owes you another fifteen grand. Okay, So um upping your earnest money is not just more likely to to win you the offer and make it easier to negotiate in other ways, but it\u2019s also.",
+      "timestamp_start": "00:09:34",
+      "timestamp_end": "00:11:09",
+      "source_line_start": 136,
+      "source_line_end": 159,
+      "section": "Leveraging Earnest Money - Breach Protection"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "canceled that they\u2019re going to have to pay that to the buyer, And they, for them, it was worth it to cancel the contract and pay that earnest money. So, so that\u2019s a handy trick to use. Okay, I mentioned that also having to do with earnest money is using the earnest money due dates. So this is an interesting thing that came up. Heather had a listing has a listing, and she went under contract with an unrepresented buyer. These were investors who buy and sell a lot of homes, and so they thought it\u2019d be a great idea to. To save some money on commissions or whatever, and purchase the home without the aid of a buyer\u2019s agent. So Heather did the appropriate forms because there is an unrepresented buyer disclosure form and all that. That all went great because she had a great TC working for her. And um uh, The buyer failed to deposit the earnest money on time, but canceled the next day due to due diligence reasons. And what they did, this investor offered full price on the home. I think the price of the home was 350. They did their inspection and right after the inspection, They offered to keep the contract if the seller was willing to lower the price to 280,000. So it\u2019s legal for them to do that? But it is not honest. These investors were did not drop it from three fifty to two eighty because of the inspection. These investors were always planning to go under contract and then threaten to drop it or cancel the contract, drop the price rather or cancel the contract. So uh, but they didn\u2019t. They didn\u2019t do that. Uh they didn\u2019t cancel the contract until um after the earnest money was due. Their logic was they didn\u2019t have to deposit the earnest money yet Because the due diligence deadline was not for another day or two, well, their logic was incorrect. So we sent as soon as that earnest money deadline had passed, we double checked and had not received their earnest money. It was supposed to be deposited with us. And, we found out what they were planning to do the two hundred eighty thousand dollars maneuver. And so we advised our clients to cancel the contract. Instead of the buyers canceling, we canceled first. And because we canceled first, Then now that five thousand dollars earnest money deposit from those investors is due to the sellers. So now the seller, the buyers have to pay the five grand to the",
+      "timestamp_start": "00:11:09",
+      "timestamp_end": "00:14:22",
+      "source_line_start": 166,
+      "source_line_end": 201,
+      "section": "Earnest Money Due Date Leverage - Case Study"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "And in order to make our offer more attractive to the seller, We\u2019re going to offer to let the seller remain in the property for a week or a month after closing. Okay, and this like I said, this is something that\u2019s done quite a bit. It makes our offer more competitive. Um it makes it so that the seller is paying the utilities, usually you know until we take possession. And th- the question comes up If you\u2019re not going to charge the seller for that for staying the week, so so let\u2019s just talk about it in terms of one week, a shorter time period because that\u2019s more likely to be real. If you\u2019re not charging the seller, so if you\u2019re not going to charge the seller, you can on the contracts just do delayed possession. Um or you can do a leaseback with a leaseback. You as the buyer take on the role of a landlord. Okay. Meaning that if there are problems with the property, things like that, they are your responsibility. Just like with any landlord or lease situation. In the case of delayed possession, uh you\u2019re taking on no such responsibility. Okay? It simply means that the contractual obligation of the seller to turn over possession to the buyer is delayed. Instead of being upon recording, It\u2019s going to be 48 hours after recording or seven days after recording or whatever the threshold. Is that you guys agree on. In that scenario, The seller is still contractually obligated to turn over possession to the buyer in the same condition. It was in when it went under contract. Meaning, if there\u2019s a if there\u2019s damage to the property, it\u2019s now the seller\u2019s responsibility to repair that even if it happened after closing. So case case study for you very short case study, Carter and I were working on a deal with a. A seller. I usually learn this stuff by something going badly, and that was the case here too. Carter\u2019s seller agreed to delayed possession with the buyer. In other words, Carter\u2019s seller was allowed to stay an extra week or ten days or something like that by the buyer. The buyer is an investor from out of state, and we closed the deal and like a couple days after closing, The upstairs neighbor, this is a condo. The upstairs neighbor\u2019s water heater blew and leaked all the way down through the walls into our unit and ruined some flooring and wrecked some drywall. Well, because it was delayed possession, Our seller was obligated to make those repairs before turning possession over to the buyer. If we had done a leaseback, which that buyer probably would have accepted. Then the responsibility for the repairs would have fallen on the buyer. So, in that scenario, we could have saved our client. I think it ended up being about fifteen hundred bucks and a lot of headache. So we learned from that one, right? So, that\u2019s you can. So. So to recap that one real quick for buyers delayed possession is better. If you are representing the seller. Le aseback is better because it transfers thoseresponsibilities to the other party. Okay, any questions on that one, Depending on loan type, is there different amounts of time or different variables that would allow, which would they would be able to do? Um that\u2019s a great question. And I haven\u2019t run into that as an issue because either way, most. What we call Guppy loans, the FHAs and the VAs and stuff. Most of those loans are going to require that the buyer occupy the property within 60 days of closing. And in most scenarios, we\u2019re not talking about delayed possession of that",
+      "timestamp_start": "00:15:53",
+      "timestamp_end": "00:19:16",
+      "source_line_start": 228,
+      "source_line_end": 281,
+      "section": "Delayed Possession vs Leaseback"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "about this. Hi Mark. Okay, special assessments can be levied by HOAs, but they can also be levied by municipal utility districts and other authorities. Even school districts can levy special assessments. Um, If they\u2019re putting in putting in a new school or planning to put in a new school, um, And you as the buyer\u2019s agent or the buyer are not necessarily going to be aware of these special assessments. The seller may not even be aware of them. Okay. And this says that this section four point two says that if any special assessments come up before closing, they would be the responsibility of the buyer or seller or both. Okay. And in this market there is no reason To mark anything other than seller. Don\u2019t mark N A because you\u2019re certain there are no assessments coming, because I\u2019m telling you, you are not certain that there are no assessments coming. You cannot be. Even the seller cannot be certain that there are no assessments coming. And, there is no seller in this market that will reject this section being marked as seller paid unless they know there\u2019s an assessment coming, okay? And that should be your clue that there\u2019s a problem is they reject four point two being marked seller. You follow me on that? Section four point three C is the same idea. This mostly addresses HOA stuff, okay? Section four point three C. But, unless you\u2019ve already done a title search and already received disclosures from the seller, Which when you\u2019re filling this out, ninety nine percent of the time you have not. You can\u2019t be sure that what\u2019s on the MLS listing is correct as far as there being no HOA, no special assessments coming, no transfer fees that are going to hit you. So don\u2019t mark this NA. NA is not a term that\u2019s defined by the contract. You can\u2019t put any weight on it. It doesn\u2019t mean anything in this contract. Mark seller, okay? If there are truly no HOAs and truly no assessments and truly no transfer fees, your seller will not object to this. Not in this market. If we go back to a twenty twenty twenty twenty one market,",
+      "timestamp_start": "00:21:54",
+      "timestamp_end": "00:23:50",
+      "source_line_start": 304,
+      "source_line_end": 337,
+      "section": "Section 4.2 and 4.3 - Assessments"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "after your first due diligence deadline. You want to see it? Mark\u2019s nodding his head. Okay, let\u2019s go there. So I\u2019m going to go back to our repsie. What section do I have there? Section 8. 3 B I You guys think that this is a financing condition, and it is. But it is also a second due diligence deadline. I\u2019ll show you why. Eight point three B, financing is required. Section I, eight point three B I, buyer\u2019s right to cancel before the financing and appraisal deadline. If the buyer, and here\u2019s the next four words are the kicker in buyer\u2019s sole discretion. Okay. I\u2019m going to read that again, if buyer in. Buyer\u2019s sole discretion is not satisfied with the terms and conditions of the loan. Buyer may, after the due diligence deadline, Cancel the REPC by providing written notice to seller no later than a financing appraisal deadline. Whereupon, and most of the time this is marked zero, zero dollars of buyer\u2019s earnest money deposit shall be released to seller. Now okay it says. In buyer\u2019s sole discretion, the buyer is not satisfied with the terms and conditions of the loan. Then the buyer can cancel and leave zero dollars of earnest money behind. This is a second due diligence deadline, ladies and gentlemen. Because if it\u2019s in the buyer\u2019s sole discretion, what influence can the seller have on the buyer\u2019s sole discretion? How do we know if the, If the terms of the financing are or should be acceptable to the buyer, if it\u2019s in the buyer\u2019s sole discretion. Okay, What if the price of gasoline went up two cents this month? And for that reason, it no longer, Though the terms of the loan no longer fit with what the buyer is comfortable with? Okay, What if the wrong candidate got elected to president last month? And they did not consider all the financial ramifications of that? And that no longer fits with what the financial picture of the buyer is because they\u2019re nervous about what might happen in the future. Buyer\u2019s sole discretion, folks. There\u2019s no additional documentation required. Okay, now that\u2019s the reality of the contract. The um. Now I\u2019m going to give you a couple of quick tips on how to leverage it. Okay, I don\u2019t generally let my buyers know about this I let my sellers know about this, But I don\u2019t generally teach my buyers about this because I want them to make up their minds. Uh by the due diligence deadline about whether",
+      "timestamp_start": "00:24:13",
+      "timestamp_end": "00:26:42",
+      "source_line_start": 346,
+      "source_line_end": 381,
+      "section": "Hidden Second Due Diligence Deadline - Section 8.3B(I)"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "Penalty that the buyer has to pay. Thank you. Um if you\u2019re closing late and um that can rack up really fast, if you\u2019re on a five day delay at 300 a day, that\u2019s you know, fifteen hundred dollars that, that short delay can cost your buyers. Here\u2019s the trick. Most builders do not follow the protocol required in the repsie. Uh. In order to collect that money, what I am talking about is this. So, In the standard new construction rep, see section where t here is a twelve point two substantial completion. Okay, This, so the closing deadline is almost always based on substantial completion when the home is complete. When the home is complete, You have seven days to close or three days to close or ten days to close, whatever their requirement is okay. Um. This little section, this paragraph twelve point two describes exactly what counts as substantial completion. The residence shall be considered substantially complete when occupancy is allowed under the rules of the appropriate jurisdiction where the residence is located. And when there are no rules, then it\u2019s complete when only minor work needs to be done. But, there\u2019s always rules like we always close in a jurisdiction that requires a certificate of occupancy, okay? So Subject to the exceptions referenced in section thirteen, which we\u2019re not going to go into, the substantial completion deadline shall be as referenced in section twenty four e. That\u2019s the deadline. That\u2019s where it\u2019s like three days after substantial completion or ten days after or whatever. Seller shall provide buyer written notice of substantial completion of the residence. Okay, so two things have to happen. One is that the builder has to receive this certificate of occupancy. That is the trigger that says that. The uh the residence is substantially complete. They receive the C of O. Okay, The second thing that has to happen is this one I just read : Seller shall provide buyer written notice of substantial completion. That\u2019s what triggers that um closing deadline. If the seller does not properly if the builder does not properly provide written notice of substantial completion to the buyer, that clock That stop watch is not triggered. The time doesn\u2019t start. Okay, We\u2019re going to skip ahead to section 19 because this describes in more detail exactly how the notices have to be sent. Okay, except as in section 25, All notices required under the REPSCI, including the one we were just talking about, must be in writing and signed by the buyer or seller, giving notice and received by the buyer or seller or their agent. Or by the brokerage, okay. No later than the deadline date. This is the part that the builders usually fail at. Their practice, Most builders\u2019 practice is to simply email a copy of the C of O, and they call that notice of substantial completion. It ain\u2019t, okay? It\u2019s not signed, okay? So it has to be signed by the builder. So they can\u2019t just email you something. They have to email you a notice signed by them that says That the residence is substantially complete, they do not have to provide you a copy of the C O. That\u2019s a matter of public record; you can get your own. They usually do send it to you though, okay? So, when that? Now how do you? How do you leverage that against the builder who wants to charge your client three hundred dollars a day for a late closing? Well. The way you do that is you do not point out, well, Mr. Builder, you didn\u2019t provide me written notice as per section 19 and section 12.2 of the Rep C, therefore we\u2019re not late in closing. Because what do you think they\u2019re going to do if you say that? They\u2019re going to immediately provide you written notice with a signed thing, okay? Thus blowing your advantage. What, you\u2019re going to do is you\u2019re going to say, oh, man, okay, gee, golly, Mr. Builder, You\u2019re right we\u2019re late, Gosh darn it, we\u2019re going to do our our darnedest to get that done right away. Okay, and most of the time they\u2019re actually going to waive that. But I have had uh I can\u2019t judge them by saying jerk builders because maybe they were in a financial bind that our delay exacerbated. So so I\u2019m going to say, I have had builders that were sticklers on that delay fee uh and wanted to charge hundreds and hundreds of dollars to my seller or to my buyer, rather. And, you do you just do that? Gee golly I\u2019ll I\u2019ll we\u2019ll do our darnest I promise. We\u2019ll get this done in the next couple days. Okay, then they they try to stick that charge to you, and that\u2019s where you say. Well, we\u2019ve never received notice of substantial completion, then they can\u2019t charge the fee. So that\u2019s how we do that. And yes, I know this is on the standard new construction rep. See, usually, we do not have the standard new construction rep. See because we work with a larger builder, but uh, most. Builder contracts, most custom builder contracts that I have worked with have very similar provisions written into them. And the builders have no idea that that\u2019s what they\u2019ve put in their own contracts. So um uh, so be just this where the phrase know thy contract comes from. Okay. This part of why we want to review the contract before your client signs it and hands it over to the builder. If you don\u2019t have time or patience to review it, call me. I can usually work something",
+      "timestamp_start": "00:30:05",
+      "timestamp_end": "00:35:39",
+      "source_line_start": 430,
+      "source_line_end": 509,
+      "section": "New Construction - Substantial Completion Notice"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "or from the appraisal. Just want to see where you guys are. So I am telling you stop doing that, Okay, I\u2019m not telling you to stop being a good person or stop wanting things to go as predicted. No, no, not at all. But, you have a license issued by the state of Utah to perform this service for your clients. And that license has a duty associated with it. And more specifically, The agency agreement you signed actually spells out a duty that you have of loyalty to your client. Above loyalty to your counterpart on the other side of the transaction. What I mean by that, I don\u2019t mean stop doing favors for the other side, But what I mean by that is stop doing things that will potentially cost your client an advantage. Here\u2019s an example. Actually, the example I gave of Heather\u2019s transaction is perfect for that. We could have reminded the buyer, Hey, earnest. Money is due today at five, and we haven\u2019t seen it yet. And. Then we would have had zero advantage with them. When in fact, because we didn\u2019t remind them, They were at a disadvantage, and we were able to take advantage of their default. Okay? And, it doesn\u2019t feel good all the time to pull those levers and to leverage somebody else\u2019s mistake or lack of understanding of the contract. It doesn\u2019t always feel good. But I\u2019m telling you, I. Just want to remind you one more time that the agency agreement that the state requires us to sign with our clients requires you to exercise loyalty for your client, uh, over loyalty to your counterpart on the other side of the transaction. Okay? Any questions about that? So stop reminding the other side to meet their deadlines, okay? Okay. Um okay. Let\u2019s talk about section 25 of the RepC. Section 25, right there at the top. Okay, are we still doing a screen share? Yes we are, cool. All right, section 25: Offer and Time for Acceptance. This the response deadline, right? That was a trick question because it\u2019s not. This what kind of deadline is this? Is it a response deadline? What is it? It\u2019s a deadline for what? Acceptance. Acceptance. Yeah, Mindy, I think you said that, but I didn\u2019t hear you. Sorry. You\u2019re right. This is a deadline for acceptance. So what if you\u2019re going to counteroffer? Yeah, this deadline does not apply to counteroffers. So, If you\u2019re the seller and you receive an offer and the acceptance deadline is tomorrow at 10 a m. I don\u2019t care if the buyer\u2019s agent told you it was a response deadline. Hey, our response deadline is tomorrow at 10 a m. There is no response deadline in the Repsy. There is no response deadline in the Repsy. There is only an acceptance deadline. The reason for that is because any changes to the contract have to be accepted by buyer and seller. Okay, if you make an a counteroffer, that constitutes a change to the to the rep see. That change must be approved by buyer and seller. And it will be, because if your counteroffer is accepted by the other party, now it\u2019s been accepted by both. Okay, So the contract is not a contract until every change is accepted by both in writing with signatures. That\u2019s why you do not need a",
+      "timestamp_start": "00:37:01",
+      "timestamp_end": "00:39:40",
+      "source_line_start": 532,
+      "source_line_end": 579,
+      "section": "Stop Reminding Other Side of Deadlines"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "change is accepted by both in writing with signatures. That\u2019s why you do not need a counteroffer deadline. And that\u2019s why it is only an acceptance deadline. Okay, so it\u2019s not necessary to write into a counteroffer, you know, by the way, the response deadline for the offer was yesterday at 10:00 p.m. because they didn\u2019t counter us until 9:00 p.m. That\u2019s not necessary. In fact, it\u2019s kind of confusing and it doesn\u2019t help the contract. And I know you might have to teach this to the agent On the other side of the transaction because a lot of agents don\u2019t understand that. So I apologize that you may have to be the teacher there um if they still don\u2019t get it, and they insist on putting that phrase in the contract. It doesn\u2019t ruin everything we can live with that, but it\u2019s not necessary. And like I said, you do not have to counter offer by the response deadline because there\u2019s no response deadline. Okay, hope I\u2019ve driven that home any questions on that one. Okay, let\u2019s do contingent cancellation. And, Darren and I have a training at the end of the month that will go a little more in depth on some of these less often understood addenda. But, this is a really useful tool when you have somebody on the other side of the transaction dragging their feet. Okay, contingent cancellation sometimes I refer to this as the ultimatum addendum. What it says it\u2019s used It\u2019s pre- written to handle due diligence and financing and appraisal deadlines. But, you can use that language in there for settlement deadline or or anything else. What it says is, we\u2019re canceling this contract unless you agree to the following terms. And it\u2019s usually an extension, okay? We\u2019re going to cancel this contract unless you agree to extend the due diligence deadline by fill in the blank days, okay? Or until fill in the blank date. Here. Here, let me just pull it up real quick. Forms contingent cancellation. Okay, here it is. Contingent cancellation extension of deadlines. Seller and buyer hereby agree to the following : due diligence deadline is extended to, you know, whatever date. Okay, as easy as that. And if you don\u2019t, Then here it is right here :. If for any reason, seller does not accept the. Terms of this addendum in its entirety by the deadline provided below. And we\u2019re going to say like, you know, By today, at five, because today, at five is the due diligence deadline, and we still can\u2019t get you to agree to our repair requests. Okay. But we think we might still be able to convince you, you know. Anyway, so so we do that that today at five they\u2019re still not responding. We\u2019re going to say, okay, if you don\u2019t accept this by the due diligence deadline, then this becomes our cancellation. That makes sense. So this is a contingent cancellation or it\u2019s an ultimatum. You must",
+      "timestamp_start": "00:39:40",
+      "timestamp_end": "00:43:14",
+      "source_line_start": 579,
+      "source_line_end": 622,
+      "section": "Section 25 - Acceptance Deadline Not Response Deadline"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "That makes sense. So this is a contingent cancellation or it\u2019s an ultimatum. You must agree to extend our deadline, but if you don\u2019t agree to extend it by the due diligence deadline, which is today or whatever day it is, then this contract is automatically canceled. That\u2019s a way to protect your client\u2019s earnest money. But use this with caution. And I say that because if you read the language of this, it\u2019s very cold, It is very ultimatumy. That\u2019s why I call it the ultimatum addendum. It\u2019s not a warm fuzzy type of language of necessity. So, if you send this to the, uh, usually you\u2019d be sending this as a buyer agent to the listing agent, if you send this to the listing agent, Highly recommend, you accompany that with a phone call. And if you can\u2019t do it with a phone call, because they\u2019re still not responding, Do it with a text or an email, maybe the email that you send this addendum with. Introduce it like saying, \u201cLook, I know the language of this addendum is is very cold and abrupt. But we really have no desire to cancel this contract. We\u2019re only doing this because we can\u2019t get a response or because we can\u2019t haven\u2019t come to terms yet or because we need more time. Say whatever you\u2019re going to say, but we really don\u2019t desire to cancel the contract. And in fact, If uh if the deadline for this repsie comes and goes and then the seller\u2019s not able to respond in time.\u201d We still want to continue the contract, and we intend to reinstate the contract after the deadline. I would go to that extent in your conversation or at least your introduction via email with the listing agent, so they don\u2019t think you\u2019re just throwing the whole thing away. Okay, it keeps the conversation alive but it very strongly protects your client\u2019s position. Okay, hopefully this is a helpful one to know about. And like I said, Darren and I in a couple of weeks are going to go more in depth on this one. And a whole bunch of other addenda with which most agents are not familiar. I bet you guys weren\u2019t aware of that one. Okay, we only have ten minutes left. We can talk. I need your input on this one, Jenna and Minnie. We can talk and Mark, okay? We can talk about escalation clauses. How to deal with escalation clauses, whether you should use a counteroffer with an escalation clause. We can talk about whether to accept a formal backup addendum or whether to write one as a buyer. And, then we still haven\u2019t talked about some of the negotiation stuff like the power of goodwill, Getting the listing agent to understand that they\u2019re overpriced without telling them that they\u2019re overpriced. Pre-negotiating repairs or. Leveraging an inspection report to get your sellers to accept more repair requests. Okay, there\u2019s not enough time to cover all those things. Is there anything on that list that you guys want to hit first? I know Mark\u2019s more interested in the contract stuff. I don\u2019t have a preference, I\u2019m happy with any. Okay, let\u2019s keep going down the contract stuff. And, then we\u2019ll see if we have time to hit a couple of the negotiation ones. Okay, we talked about contingent cancellation. Let\u2019s look at escalation clauses and counteroffers. Mindy, Do you have you used an escalation clause before? Or are you familiar with what that is? So, we came across them a few times when we were like with some clients and I were putting offers in on homes and everything. So a little bit, but it\u2019s just been a minute so okay.",
+      "timestamp_start": "00:43:14",
+      "timestamp_end": "00:47:02",
+      "source_line_start": 622,
+      "source_line_end": 679,
+      "section": "Contingent Cancellation Addendum"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "In fact, I think that\u2019s why that number 525 is in my head. Yes, we did. Okayum so is it okay, if I I share a little information on that one, Of course, Okay. So we just wrote an offer with an escalation clause for 525 and the buyer decided that they, and that was the if I remember, right? That\u2019s the list price on the house. And the buyer was is actually okay going up to five seventy five. Okay, Uh um but they don\u2019t want to overpay if they don\u2019t need to. So we suggested that they do five, twenty five, but beat any other offer by twenty five hundred with a cap of five seventy five. There\u2019s a risk in expressing a cap that high, the benefit of expressing a cap that high is. That, you\u2019re uh, you are putting your buyer in a strong position to outbid other buyers up to a level that the that your buyer is still comfortable. That\u2019s a win, if your buyer can outbid the other buyers by just a little twenty five hundred bucks without over um without you know, having to do it by very much up to a level that they\u2019re still comfortable. And that\u2019s a win for the for your buyer. It\u2019s also win for the seller. Okay. Here\u2019s the risk as the buyer. If you have a cap that\u2019s up to 575, Then it\u2019s possible that the seller can simply send you a counteroffer, ignoring the escalation clause right at 575. Is that not possible? Of course it\u2019s possible. Yes, and we\u2019re getting a counteroffer today, but I don\u2019t know the amount. And yeah, I\u2019m I am very interested in seeing that amount too. Um. You should know as buyer\u2019s agents, Most sellers will be so enwrapped in the escalation clause that they will not think of doing that. In fact, I don\u2019t think I have ever had a seller do that to me as a buyer\u2019s agent. So it\u2019s still usually worth submitting expressing that high cap as long as they\u2019re comfortable with that number. But I usually explain, To my buyer, exactly what I\u2019m telling you guys. It\u2019s possible that they could send you a counteroffer all the way up to your cap, and you\u2019ll have to deal with that. You can accept it or reject it, But you may not ever get to know how much the other offers were for. But I\u2019ve never had a seller do that, and I don\u2019t know why they do that. I just think they\u2019re totally distracted by the escalation clauses and their listing agents are too. And it can get really confusing, we think, When there are multiple escalation clauses and a lot of paperwork. Very true. They are trying to simplify everything. Even more, yeah, even more distracting. And perhaps in that scenario, They would just ignore all the escalation clauses and just do a straight up counter. And so Jenna, I\u2019m half expecting that to be the case when when that one comes in. But I really don\u2019t know, we\u2019ll just have to seeum I have never had that tactic fail. Sorry, go ahead. Yeah, no. Never mind. Okay, fair enough. Let me know when that comes in. I am super interested, of course, like we\u2019ve talked about. Okay, so that\u2019s escalation clauses. So, you can use that to your advantage on the seller side. If you get an escalation clause people, why would you not counter straight up to their cap? Do it because they they\u2019re already telling you that they\u2019re comfortable with that much higher amount as a listing agent. You should counter up to the cap. Okay, let\u2019s see. What else have we got? Any other questions? I hope Asha\u2019s not listening. No, she\u2019s not. I made sure of",
+      "timestamp_start": "00:48:40",
+      "timestamp_end": "00:54:20",
+      "source_line_start": 712,
+      "source_line_end": 781,
+      "section": "Escalation Clauses"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "us have been involved in some kind of negotiation, real estate or otherwise, Where our negotiating counterpart is a jerk or acting like a jerk or hard nosed or bullying or something during the, you know, either from start to finish or when the finer points start to matter or whatever it is. It doesn\u2019t apart from not feeling good, it\u2019s also not as effective as using goodwill. Okay, What I\u2019m talking about is assuming that the other side wants to win, and uh assuming that your negotiating partner is just that your partner, not your adversary. They\u2019re your counterpart in the discussion. They are not your opponent. Okay? Um, we recognize they\u2019re trying to do the best thing for their client, which may come at the expense of ours. And we\u2019re trying to do the best thing at. For our client, which may come at the expense of theirs. The most successful negotiation ends when both parties are satisfied. Okay? You\u2019ll also know it was a successful negotiation by the way, when both parties left something on the table that they didn\u2019t want to. When that happens, it\u2019s usually because you succeeded in negotiating. Both sides succeeded overall. Okay? Goodwill can come into play at many points in the transaction. I\u2019m not just talking about when getting somebody to accept your offer or you counter offering or something like that. I\u2019m not just talking about the beginning of the contract. If you exercise goodwill at the front, You\u2019re much more likely to have successful negotiations in your client\u2019s favor when it comes to repairs, extensions, delays. Your client turns in their earnest money late. You know all this kind of stuff that you may still need to negotiate. You may still be negotiating after. At the closing table. In fact, that\u2019s quite common. So using goodwill throughout the transaction is going to give your client an advantage, not if, but when a hiccup comes along in the transaction, that could cost your client, thousands and thousands of dollars, if you had not maintained goodwill with your negotiating partner throughout the transaction. You follow me on that? It is one of the least used negotiation tactics And one of the most powerful ones that I can teach you. It has served me and my clients tens of thousands of dollars and and eighteen years now, and it\u2019s my favorite one. But there are lots there are like I said, I also use more shrewd ones. So we\u2019ll talk more about those at a future training. Okay, anything else we should be talking about before we wrap up? Okay, thank you for the feedback and the interaction. Jenna, let me know if you hear something before I do. And otherwise, let\u2019s go do some real estate, you guys. Thanks so much, Marty.",
+      "timestamp_start": "00:55:24",
+      "timestamp_end": "00:58:59",
+      "source_line_start": 799,
+      "source_line_end": 842,
+      "section": "Power of Goodwill in Negotiation"
+    }
+  ],
+  "operator_interpretation": "The transcript emphasizes Marty is a Utah-based broker using Utah Association of Realtors (UAR) forms. The REPC references are specific to Utah. Agents in other states should verify their local contract equivalents. The escalation clause template mentioned is not UAR-approved and was attorney-drafted\u2014this is a custom firm resource, not a standard form. Agents should verify template availability with their broker or legal counsel before using. The builder contract review service Marty offers appears to be an informal value-add, not a formal service. For new construction, the advice about not proactively pointing out the notice deficiency is strategically sound but requires careful timing\u2014agents should document all communications. This is internal broker expertise and training guidance, not legal advice.",
+  "confidence_notes": "Source is a training session led by Marty (appears to be a broker/team lead) to agents in his office. Speaker references specific internal team members (Heather, Carter, Mark, Jenna, Mindy, Darren) and internal practices. The 18 years of experience claim is from the speaker. All contract section references (4.2, 4.3C, 8.3B(I), 12.2, 19, 25) should be verified against current UAR REPC versions as forms may have been updated since February 2025. The statement about escalation clauses distracting sellers is observational/anecdotal, not data-driven. Escalation clause legality varies by jurisdiction\u2014Utah allows them but some states restrict or prohibit them. All guidance in this source is internal broker training expertise, not legal, tax, or financial advice. Agents should consult appropriate professionals for specific situations."
+}

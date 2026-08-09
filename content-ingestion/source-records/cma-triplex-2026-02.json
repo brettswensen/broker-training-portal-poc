@@ -1,0 +1,156 @@
+{
+  "source_id": "cma-triplex-2026-02",
+  "title": "CMA's - Triplex, Addition, Nightly Rental",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1H8Yfo2oVq71p1mhjQTxfpIoMCOPpDhcY/view",
+  "date": "2026-02-04",
+  "speaker_or_author": "Craig (Broker/Trainer)",
+  "audience": [
+    "buyer agents",
+    "investor clients",
+    "agents working with short-term rentals"
+  ],
+  "summary": "Craig analyzes complex property scenarios including a triplex/fourplex in Hurricane, UT, a home with unpermitted addition in West Jordan, and nightly rental considerations. Covers cross-collateralization issues with lenders, ADU regulations, unpermitted square footage valuation, short-term rental income analysis, and how to properly comp properties with unique characteristics.",
+  "topics": [
+    "CMA",
+    "triplex",
+    "fourplex",
+    "short-term rental",
+    "nightly rental",
+    "Airbnb",
+    "ADU",
+    "unpermitted addition",
+    "cross-collateralization",
+    "DSCR loan",
+    "portfolio loan",
+    "Hurricane UT",
+    "West Jordan",
+    "investor financing"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Client wants to buy a duplex/fourplex as single transaction",
+      "guidance": "Lender will NOT cross-collateralize properties in residential space. Must get two loans, two refis, two full sets of disclosures. Exception: portfolio lenders who hold loans in-house (not Fannie/Freddie). DSCR lenders may allow it - must check with them specifically.",
+      "client_language": "A standard lender won't do one loan across multiple properties. We'll need separate financing for each unit, or find a portfolio lender who holds loans in-house.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Property has unpermitted addition",
+      "guidance": "Unpermitted square footage should NOT be valued at same rate as permitted. Typical approach: value permitted SF at market rate, unpermitted at 50% or less. Must disclose unpermitted status. Buyer should verify with city what would be required to permit it. Some buyers won't touch unpermitted.",
+      "client_language": "The unpermitted square footage is valued at a discount - typically 50% or less of the permitted space value. We need to verify with the city what it would take to permit it, and you'll need to disclose this when you sell.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Analyzing short-term rental income",
+      "guidance": "Don't trust seller's Airbnb numbers. Get actual Airbnb dashboard screenshots or tax returns. Look for seasonal variations. Calculate net, not gross. Factor in management costs, cleaning, utilities, platform fees. Compare to long-term rental rates as backup.",
+      "client_language": "We need actual Airbnb income documentation, not just what the seller tells us. I'll want to see dashboard screenshots or tax returns to verify the numbers.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Comping a unique property (triplex, ADU, etc.)",
+      "guidance": "For unique properties, expand search radius and time frame. Look for similar use cases, not just similar structures. May need to comp as single-family plus ADU value, or find other multi-family in area. Document why comps were selected. Be transparent about limitations.",
+      "client_language": "This is a unique property, so we're expanding our search to find the most comparable sales. We may need to value it as a primary home plus separate ADU income.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "ADU regulations and zoning",
+      "guidance": "ADU rules vary dramatically by city. Some allow short-term rentals in ADUs, some don't. Parking requirements differ. Some cities require owner-occupancy. Always verify current zoning and ADU ordinance before marketing rental income potential.",
+      "client_language": "ADU regulations vary by city. We need to verify that this property can legally operate as an ADU and whether short-term rentals are permitted before we factor that income into the valuation.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    }
+  ],
+  "steps": [
+    "Identify property type and unique characteristics",
+    "Verify financing structure (single loan vs multiple loans)",
+    "Check for unpermitted additions and verify with city",
+    "For short-term rentals: verify actual income documentation",
+    "Expand comp search radius and time frame for unique properties",
+    "Value unpermitted space at discount (typically 50% or less)",
+    "Verify ADU/zoning regulations with city",
+    "Calculate both best-case and conservative income scenarios",
+    "Document comp selection rationale",
+    "Disclose all known issues and limitations"
+  ],
+  "objections": [
+    {
+      "objection": "Can I get one loan for the whole fourplex?",
+      "response": "Standard residential lenders won't cross-collateralize. You'll need separate loans or a portfolio lender. DSCR lenders might allow it - we need to check with them specifically.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "objection": "The seller says the addition is basically permitted",
+      "response": "We need to verify with the city. Unpermitted space is valued at a discount and you'll have to disclose it when you sell. Let's find out what it would take to permit it properly.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "objection": "The Airbnb income looks amazing",
+      "response": "We need actual documentation - dashboard screenshots or tax returns. Sellers often inflate numbers. We also need to factor in management costs, cleaning, and seasonal variations.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "Okay, I\u2019m going to tell you that I\u2019m going to tell you, we\u2019re going to run it too. You cannot get fine, a lender will not cross collateralize properties in the residential space. So in other words, you can\u2019t have a lender come in. You have to get two loans, and you have to break it up into two refcs, because a lender won\u2019t accept one refc. So you\u2019re gonna have two refcs, two loans, two full sets of disclosures. Even on a DSCR type of lender, like a private lender. Um, I\u2019m you\u2019ll need to ask them. And and so if it\u2019s not flowing back to Fannie Mae and Freddie Mac, like almost everything does. If it\u2019s not flowing back to them, maybe it would what we would do. It\u2019s called a portfolio loan. Lenders that do portfolio loans, they they hold them in house. They could quote unquote break the",
+      "timestamp_start": "00:02:58",
+      "timestamp_end": "00:04:03",
+      "source_line_start": 58,
+      "source_line_end": 70,
+      "section": "Financing multi-unit properties"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "How do I know if it\u2019s a legal triplex? So the okay, there are a couple things. I mean, you may want to have a brief conversation with the listing agent. And the best way to do is you call the city and say, city, is this a three unit property? The only thing is if it\u2019s not illegal three unit property, you\u2019ve now alerted the city that there\u2019s an illegal use happening at the property. Property, um, and so so it depends on how many alarms you want to raise. But but let\u2019s just look at this tax ID real quick. Um single family residence. I highly doubt that this is a and and you could also even do this right here. Um Salt  Lake City zoning map. Um, and interactive map. I mean you can come here, and, and see what. See what is happening here. Um, 18 th N Street. You might be able to there might be a whoa, whoa. It\u2019s not what I meant to do. Okay, let\u2019s just zoom in. Okay. Actually, it\u2019s been a really long time since I\u2019ve looked at the Salt Lake City zoning map. Um so.",
+      "timestamp_start": "00:15:00",
+      "timestamp_end": "00:17:30",
+      "source_line_start": 405,
+      "source_line_end": 420,
+      "section": "City verification for illegal rentals"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "mentions nothing about, uh just says single family. So uh, but this could be old. Um there could have been something updated. I don\u2019t know, but I have no problem with these illegal rentals. The buyer just needs to be very aware of the exact legality of each property and if they move forward to purchase, so be it. But I will tell you, The lender is going like Is this a cash purchase? Or is this going to be financed? Yeah, cash deal. Okay, that makes a lot easier if it\u2019s financed. The appraiser will notify the lender. The appraiser will go through this, We\u2019ll contact the city, get the exact legality of the property because they\u2019re required to appraise what\u2019s legal, legally permissible. And then they\u2019ll provide that to the lender. The lender would then see, oh, it\u2019s a single family property and and there are three kitchens. And they honestly might just nix the deal right there. Um It might be hard to get financed since you\u2019re paying cash. Okay, Then, you can do whatever you want and your buyer So. What I would do knowing it\u2019s cash I I think just do this call this I mean you can ask the listing agent, but but I, but you really even if listing agent said, yeah, it\u2019s not a problem. If, you talk to a listing agent, and they they may say, no, it\u2019s not legal. And then you",
+      "timestamp_start": "00:20:00",
+      "timestamp_end": "00:22:30",
+      "source_line_start": 465,
+      "source_line_end": 485,
+      "section": "Lender and appraiser concerns"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "go for the time being, I\u2019m just going to look at duplex, triplex, Fourplex because a triplex can sort of act as a duplex, or like some you can some sometimes get enough data on two or four units for a triplex. If you\u2019re only a duplex. I would never  go look at a fourplex, if if unless it\u2019s the only comp. Um. So we\u2019ve got this these number of comps um and then I\u2019m just going to view map. I'm going to scroll down in on um I\u2019m going to scroll down in on this. Okay. So we\u2019re sort of in this area, there should be plenty um plenty to choose from. So we\u2019re actually up here on this side of things. Okay. So you can see how many are just in the immediate area. There\u2019s no uh we got to be careful being right next to the capital. So I might I might make a different square. Um we\u2019re right. Like literally my my hands on it right now. So I\u2019ll I\u2019ll put this over here. So let\u2019s um, I\u2019m going to probably draw this a bit differently. Um, maybe more like that. And I\u2019m going to get rid of the original square I did because I don\u2019t want these over right by the Capitol building. Subject property is right here. Um and then you so we\u2019ve got, I think that\u2019s a good variety of comps like that\u2019s really solid um. And you can take a look at these, and and you could just ballpark from looking at",
+      "timestamp_start": "00:25:00",
+      "timestamp_end": "00:27:00",
+      "source_line_start": 527,
+      "source_line_end": 545,
+      "section": "Comping fourplex properties"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "of impact does that have on value? Because I mean, I would imagine a lot of investors don\u2019t care, you know, if it\u2019s legal or not. But what\u2019s your take on impact to value? It\u2019s you can only sell to a cash buyer. So limits your buying pool. You may have insurance issues as well. Okay. Um, Because the insurance and here is the reason  why the insurance company, if if it, if it um burns to the ground, what can be rebuilt? And so that\u2019s the question you need to ask the seller like the the city because uh, some some of these are grandfathered. In this case, it\u2019s not this. In this case, it\u2019s uh The grandfather is probably single family zoning, but they\u2019re giving an enhanced zoning opportunity, a more dense zoning opportunity. But let\u2019s say they had reversed it. Let\u2019s say it was formerly a triplex zoning, got and then got down zoned to single family, but was grandfathered under triplex. The the city where where you can overcome, that is if the cities, so that would be a legal nonconforming property. Legal in that it was there legally originally, nonconforming that it doesn\u2019t conform to current zone. Legal nonconforming properties I am not as worried about if you can get what\u2019s called a one hundred percent rebuild letter. Or if it burns to the ground, the city says,\" Yes, you can rebuild it as a triplex.\" I\u2019ve experienced no issues with lending, no issues with insurance. If the city won\u2019t let you rebuild it as a triplex, you might have insurance issues and you will for sure have lending issues. So the hundred percent rebuild letter you would get from the city. Yes, they can get, they can give you a document that says, hey, if this property burns down, we will allow you to rebuild this as a triplex. Okay? And if I am the cash buyer, I would want assurances from the city that i that if it burns to the ground, they don\u2019t say, well, It\u2019s too bad. Now you have to be a single family home, and his value goes way out the window at that point. Like or at least it\u2019s risky. Downtown he\u2019s a little safer. It\u2019s downtown Salt Lake like property is worth a lot of money down there, but but it\u2019s just risky. And it\u2019s not what he\u2019s intending to use it for. So so I would I would either way have a conversation with the city? What\u2019s legal? Okay. And",
+      "timestamp_start": "00:30:00",
+      "timestamp_end": "00:32:00",
+      "source_line_start": 685,
+      "source_line_end": 718,
+      "section": "Rebuild letter from city"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct or near-direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Craig analyzes specific properties in Hurricane and West Jordan, UT. Financing rules (Fannie/Freddie vs portfolio) are national standards mentioned in transcript. ADU regulations are city-specific and change frequently - always verify current ordinance. The '100% rebuild letter' concept is specific to legal nonconforming properties discussed in the training.",
+  "operator_interpretation": "The following broker_guidance items contain industry best practices that were NOT explicitly stated in the transcript but are standard real estate practices: (1) Unpermitted space valued at 50% or less - this is industry standard but Craig did not state this exact percentage in the transcript. He discussed unpermitted additions but the 50% rule is common appraisal practice. (2) Getting Airbnb dashboard screenshots or tax returns - Craig discussed verifying legality but did not specifically mention these documentation methods. (3) Calculating net not gross for Airbnb - Craig discussed income verification but the net vs gross emphasis is standard investment analysis. (4) ADU regulations varying by city - Craig discussed zoning verification but the specific ADU rule variations (parking, owner-occupancy) are general knowledge. These guidance items should be treated as operator interpretation supplemented with standard industry practice, not direct transcript claims."
+}

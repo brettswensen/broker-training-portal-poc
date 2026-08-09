@@ -1,0 +1,632 @@
+2026 May 4 1031 Exchange Basics w
+Darrin
+2026-07-29 21:42:57
+00:00:05 Speaker 1
+All right, well, we’ll see who joins us. Of course, as we get going today’s topic is ten
+thirty one exchange basics. And then t here is a lot. Obviously I am glad Craig’s here
+because he’ll help fill in as well. T here is a lot that goes into a ten thirty one
+exchange, But we want to go through the basics and understand that this is
+something that you may start. I mean, you are going to run into the market at some
+point. To this point in my career, my experience has been Oftentimes, where the
+property that’s being sold, My buyer that’s buying it to buy it as a you know, to live
+in, has to be disclosed as being part of a ten thirty one exchange. Utah has a
+specific form we use for that. I’ve got my first actual ten thirty one exchange coming
+up. We’re in the beginning process. She’s got a listing out of state that they’re
+getting ready to go live with, And then she’s already started looking for replacement
+properties here in Utah, because she’s moved here from.
+00:01:05 Speaker 1
+Friend of mine who’s moved all over the world and has finally settled back here
+where she grew up. And wants still wants to be in the, you know in that market and
+have rental properties. But the property is in Asheville, North Carolina, and it’s not
+cash flowing and it’s a major hassle for her. So as you work with with investors,
+You’ll you’ll run into this where they are. They’ve got a property that’s run its
+lifespan. They’ve they’ve managed to get everything they can out of it. For whatever
+reasons they have, they want to relinquish the property and then move to another
+property or properties. And so there’s some rules we have to follow. So I’m going to
+I’m going to switch over to here. Now these are just going they’re going to be
+basics.
+00:02:03 Speaker 1
+Understand that if you are working in the with someone who’s doing a ten thirty
+one exchange, then at the very beginning of the process you need to reach out to,
+the title company, Because as we go through this, there are going to be some
+requirements that title needs pretty quick. And, they need to be aware of. They also
+need to be working with their accountant. For tax reasons, but also there are some
+benefits to them financially depending on how what kind of. How long they’ve
+owned a property and how well they’ve maintained the records on their expenses
+on the property because it’s going to affect how much money they’re going to, How
+
+much potential income they’re going to have on the property that would be
+counted as capital gains if they don’t make the exchange. So first got Zane with us.
+Zane, how familiar are you with 1031 exchange as a new licensee?
+00:02:57 Speaker 2
+I've heard the word multiple times so okay.
+00:03:02 Speaker 1
+How much time on your on your pre license class, did they spend on it?
+00:03:05 Speaker 2
+Not much that I remember.
+00:03:07 Speaker 1
+That’s when you heard the word twice, right? Yeah. Okay. My experience has has
+been I’ve taken a number of courses on it, Um but as I’ve worked with like Joel and
+Justin and a lot of our agents do investing, they deal they work with this. Um and
+I’ve had people come into the agency who watched a video on YouTube, and they
+want to try this. And we’ve had, unfortunately, we’ve had some people who got
+some pretty bad advice from YouTube. Imagine that. And, we had an individual
+come into what was McKay Realty before the merger and said, “Hey, I just sold this
+property in Texas. I want to 1031 exchange it to here. Can you help me with that?”
+And our agent looked at him and said, “So you’ve already sold the property in
+Texas? Correct.”
+00:03:58 Speaker 1
+He says," Yeah, I’ve already sold it. I’ve already got the check in hand. I can’t 1031
+exchange that." They’ve already violated one of the very fundamental principles.
+00:04:08 Speaker 3
+So they had closed without setting up the 1031 exchange?
+00:04:10 Speaker 1
+They had closed. They did not have a qualified intermediary. They had a check in
+hand that had been sent to them. So we’re going to talk about why. I use that one
+as an example of what not to do because there are some specific steps that have to
+be met. Oh man, I called that one two minutes in Mark called me. Um, That have to
+be met with a ten thirty one exchange that they had violated pretty much all of
+them. Okay. Um, so vocabulary as we go through this, we’re going to hear me
+talking about capital gains tax. Okay. Just real briefly, ten thirty one exchange gets
+its common name from section ten thirty one of the I R S code.
+00:04:55 Speaker 1
+That’s the section that governs capital gains taxes. Capital gains, as you know, Are
+the gain on the difference between a purchase price of a property and what they
+sell, you sell it for. Whatever you earn on the process. And, there’s formulas into
+
+how much you can deduct from the value of the property and things that go on that
+way. The accountant is for. But there are two rates or two ways that capital gains are
+taxed : short term and long term. Short term is any property that’s been held less
+than a year. Ordinary income rates apply, which means you’re going to be paying a
+higher rate, and the federal rate depending on how much income you earn, what
+bracket you landed in, is anywhere from ten to thirty percent of the income earned.
+So when you talk when you look at people who flip homes.
+00:05:48 Speaker 1
+They have to build into that flip cost. They could be paying as much as thirty seven
+percent capital gains on that property. That’s just baked into their, into their math.
+Long term is anything that’s been held longer than a year, because it’s been held
+longer than a year, it’s now long term and they get different rates, and those rates
+depending how much you earn, it could be anywhere from zero to fifteen or twenty
+percent. And, again, the accountant is going to do all the math to figure that out.
+The idea behind a ten thirty one exchange.
+00:06:18 Speaker 1
+Is to defer paying that tax. So it is a no, they got it in the wrong order. It is a deferral
+process, and that’s what people need to understand. It’s not that they’re not paying
+the tax ;. It will get paid at some time in the future. What they’re doing now is just
+kicking that tax bill down the road. Because and the I R S set this up because they
+were losing investors. Investors would have a property, they’ve got everything they
+can out of it, They’d sell it and then get hit with such a hugeum tax bill that they
+didn’t feel like they had enough money to go back into the market again. So it was
+to encourage investors to stay in the market. And.
+00:07:11 Speaker 3
+This is how when when like uh he has something, says he doesn’t pay taxes. One of
+the big benefits is, Let’s say, he’s got some real estate properties. He wants to sell
+and buy something else. He just does a 1031 exchange, transfers the equity from
+one to the next. No taxation. It defers it. But here’s what’s crazy: defer, defer, defer.
+As soon as he dies, The basis resets to the new value. So the heirs get it at its at the
+now value. And they don’t and they can sell it and pay no taxes.
+00:07:45 Speaker 3
+So that’s how it grows. That’s how a lot of these families will build this gigantic
+portfolio that passes on to the kids, and Uncle Sam never gets a bite of it ever. It just
+grows in value, grows in value, passes. They defer taxation to whatever other real
+estate properties they want. Like what Darren said, if they get out of the market of
+real estate, that’s when Uncle Sam takes a bite. And you can and they’ll recapture,
+By the recaptured depreciation, anything you’ve done so like for instance, I’ve been
+depreciating this building.
+
+00:08:18 Speaker 3
+If I sell this, I am going to have a chunk that I am going to pay it out to Sam.
+00:08:24 Speaker 1
+Or go buy another replacement property.
+00:08:27 Speaker 3
+Yeah, so once I am in it, I am just like well, I’ve got X amount in. You just have to
+keep it in real estate which is fine. i i want yeah This in real estate but Yep.
+00:08:40 Speaker 1
+And on the income tax side, and I learned this recently from my brother, the
+accountant and attorney, and the executor of my mother’s estate. You’ve got to
+have an estate of eleven million dollars in liquid assets or more before estate taxes
+kick in. But, if you are talking like a multi generational property portfolio portfolio,
+you can blow past eleven million pretty quickly. If you are talking your average
+American family. Not likely to happen. So it can eventually get taxed. It depends on
+when the property tax or the property owners get out of the market and what they
+do with it when they get out of it. If, the heirs decide, they don’t want it and they sell
+it before grandpa dies, they’re going to get hit with a huge bill. If it’s after grandpa
+dies under the heirs, then they go to the accountant and say, okay, we’ve inherited
+it. You set the basis, but it’s kept them in the market.
+00:09:38 Speaker 1
+Is the goal. Okay? The IRS requires that you replace the property you had with a like
+property. They use the phrase like for like. Now, the IRS has never strictly defined
+what like for like means. You can sell a car wash and buy a McDonald’s.
+00:10:06 Speaker 1
+You could sell an Airbnb and buy a storage unit.
+00:10:14 Speaker 3
+Yeah, or you buy land.
+00:10:16 Speaker 1
+You can buy land as long as it’s on speculation for future construction. Yeah, but it
+has to be real property; it cannot be stuff. I can’t sell my business or sell the building
+where I rented out. Four wheelers and go buy more four wheelers. Yeah, it has to
+be real property. That’s why it says it has to be an investment property, and it
+cannot be for personal property.
+00:10:46 Speaker 3
+Yeah, and I’ll clarify like the land might be a tricky one. You are right, I would put an
+asterisk, uh, be careful because if you are gonna might not work in some
+circumstances. If yep, but you can yeah. But like for instance, if I were to sell this
+building. If I wanted to go transfer it to nightly rentals or storage units or
+
+something else, commercial residential residential investments, that’s that’s totally
+fine.
+00:11:16 Speaker 1
+What Craig can’t do is sell this and go buy his own personal vacation property at
+Bear Lake. Now it can go buy a cabin at Bear Lake as long as he limits. How often he
+uses it personally, then he can still qualify as an investment property.
+00:11:40 Speaker 3
+And a CPA, But I always tell people this because I’ll have a CPA like consult your CPA
+to try to figure that out. Because I had a seller sell two investment condos at BYU
+and then bought a nightly rental cabin at Sundance. So we ten thirty one the two
+condo sales up to that. Yep. But the issue, like, cause my buyer uses it. And he uses
+it too much. You can potentially have the IRS come back and be upset at it. So
+anyway, it’s a balance that you got to be careful.
+00:12:16 Speaker 1
+It’s a technicality that they want to talk with their accountant about. And, that’s why
+I say you need to check with the accountant about if you’re going to do it this way,
+use it this way, Then what percentage of time can you use it before? It’s not
+considered personal property? And not investment. Now, as we talk, The other
+thing you need to say understand when we talk about property or properties is you
+can sell two or three properties and buy one. You can sell one and buy two or three.
+There are just some qualifications they have to meet. The purchase price of the
+replacement property or properties has to equal or exceed.
+00:12:58 Speaker 1
+The net sales price of what you sold. So, if you sold five hundred thousand dollars,
+And that net price is, by the way, closing costs is cut that contract price subtract,
+closing costs commissions. So, You sell it for five hundred thousand ;. By the time
+you pay off closing costs and commissions, you are at four eighty five. What you
+buy has to be at four eighty five or more. Does that make sense? Yeah. What
+happens if it’s less than four eighty five?
+00:13:30 Speaker 3
+You get taxed on that small part that’s not. That’s sort of left over in your proceeds.
+00:13:36 Speaker 1
+You get taxed on whatever that leftover is. I think they call it boot. It’s called boot.
+It’s actually the legal term for it is booty, and it goes clear back to the old English for
+what booty meant, not what rappers turned it into, or the legal term is boot so,
+That’s the other thing. One of the other things that can count as boot is the
+mortgage value. So, if you sold it for five hundred thousand and had a two hundred
+and fifty thousand dollar mortgage, Whatever you buy has to have a two hundred
+and fifty thousand dollar mortgage on it. Because, if the mortgage gets paid off and
+
+you buy the next one free and clear, that mortgage qualify you paid off counts as
+earned income. So that’s where you get the accountant in there crunching the
+numbers.
+00:14:22 Speaker 1
+And say, well, if you are selling this one for five hundred, let’s go look at something
+at five o’five. You know, give yourself a wiggle room so that as you work through the
+process, You don’t end up at the end of it all going. Oh, I do have to pay taxes
+anyway because of this mortgage rule, or you know boot. There are some specific
+deadlines that have to be met, and these are set by statute. So they’re not flexible.
+The IRS doesn’t bend at all. First is the forty five day rule. Once the property that’s
+being relinquished or sold or is closed, they have forty five days to identify at least
+three replacement properties. Now, What a lot of sellers are going to do is while
+they’ve got theirs listed, they’re already looking for their replacement properties.
+They don’t want to get to this and say okay.
+00:15:20 Speaker 1
+Now we got to go find something and everything’s gone. It has to be identified in
+writing and title has to see it. Utah has a specific form for identifying the potential
+replacement properties. Now, these are potential replacement properties. Things
+happen in the market. One of them could get sold, you may have to identify
+another one. You start looking into one, not the right one, not going to work. All
+right?
+00:15:50 Speaker 1
+But identify in writing the title so they know what’s going on. The other reason, and
+that’s part of why they want you to identify at least three, is because you know you
+don’t want to drop one out. The other thing is just going to have to do the math. If
+they go pick three properties, Those three properties combined can’t add up to
+more than 200 % of what they sold. So again, you sell for 500, if you go find three
+properties, You got to make sure that whatever it adds up to doesn’t add up to
+more than twice the 200. Of what they sold, okay. That’s a again, that’s a that’s a
+federal rule we we don’t get around that one. It’s not our choice. Oop, the other one
+oh that’s why things are all out of whack.
+00:16:38 Speaker 3
+I'll tell you one reason it’s great dealing with the ten thirty one, though, because of
+this identification rule once they identify in that time frame passes. They’ve got to
+buy one of those they identified. Yeah, they have no other choices. And. So when
+when you are working with a when you are representing a seller and you know the
+buyer’s on a ten thirty one, and they said, “Yeah, we identified your your property is
+one of the properties.” If you know that they’re forty five days past, You are sitting in
+the negotiating seat with power because they don’t have any other choices, but
+whatever else they identified. Typically if they offer on yours.
+
+00:17:15 Speaker 3
+The close rate on 1031s is astronomically high. The buyers don’t back out. Very
+rarely do they back out because they don’t have any other choice. So it’s great
+working, if you’re a seller, it’s great working with a 1031 buyer. Similarly, if you’re
+working with the buyer, the buyer is massively motivated to buy something because
+if they don’t buy something, they’re going to get taxed. So every time I’ve got a 1031
+involved, I’m like this is money in the bank. It’s so good. Like, they they close like Joel
+had a really picky buyer this last year and got into a ten thirty one. All of a sudden,
+it’s like you are backed into a corner. And even though he’s picky, he ended up
+having to move forward with one of the ones he identified. So, which ended up
+being the reason why Joel’s beating me in the standings right now in the rankings is
+because it was a five million dollar purchase that closed in January.
+00:18:14 Speaker 3
+Wow, and so bump bounced him five. You know, that’s a six digit check by the way.
+Yeah, andum so it’s pretty cool. A lot of money man. Pretty cool experience you
+know.
+00:18:25 Speaker 1
+But yeah, ten thirty one. They know. And if they’re experienced with ten thirty one,
+they know these deadlines. Yeah. So that’s why like a lot of them are experienced in
+it as you work with investors. If they’ve got one that they’ve listed, they know it’s
+going to take some time to sell. They’re already going to be in the market looking
+for something to replace it. They’d rather not end up with staring down this
+deadline afterward and realizing now I’m going to I may end up committing to a
+property that doesn’t really meet what I want long term. The other rule is, And
+these two deadlines start on the date that the property they sold or the IRS calls it
+relinquished, the date they close on that. And these are calendar days, not business
+days.
+00:19:12 Speaker 1
+They have one hundred and eighty calendar days to close on the purchase that
+finishes out the exchange. What they exchange for so they know, and that’s not
+flexible. If they if they go day one hundred and eighty one, they go into sign. They’re
+past the deadline, The IRS is going to look at it and say this exchange is null and
+void. You are now going to be you know facing all of tax implications, and, You
+probably don’t qualify now to buy this property. So, like Craig said, there’s a really
+high close rate with these investors, especially the ones that are experienced
+because they’re doing this to avoid getting taxes. So they’re paying attention to
+these deadlines. Now, how does this affect you? Like Craig said, if you have a listing
+and the offer comes in and it has.
+00:20:10 Speaker 1
+The ten thirty one exchange addendum attached to it, You know that this buyer is
+going to be fairly motivated to get this done because they’ve identified it as a
+
+replacement for another property. And they’re on these deadline dates. They’ve got
+to get these things done. So, you know, pay attention to the contract deadlines on it
+as well. If they’ve identified it early enough, They may ask for, they may be looking a
+little more time for due diligence because they’ve got to make sure those things are
+going to cash flow in the way they want to. And in the inspection, they’re going to
+want to make sure they can move right, They can take over and start using it now
+without having to put more money into it. But, there’s still also on that deadline of
+we also have to have this done by this. You know, big red X on the calendar.
+00:20:59 Speaker 3
+I was going say one one other strategy on this is, And I don’t know if this is in your
+presentation, so if you have a head, just say" go for it." Reverse ten thirty one is that
+on there? No, I didn’t do that one. Okay,
+00:21:09 Speaker 1
+So let me because it’s more it’s more technical.
+00:21:11 Speaker 3
+Yeah, One way to get around this a little bit is called the reverse ten thirty one,
+where you can go, buy the property first and then sell the replacement property or
+buy the replacement property and then sell the current one. Get ahead of yourself
+basically. Yeah now, Still, order to do that, you have to have funds. Yeah, And sitting
+where a buyer has the capability of just fronting and buying the other one first and
+then selling the existing one. Yeah. So the nice thing about that is you can then be
+very picky. Okay, this is specific, it’s a specific one I want. But then you’re up against
+the wall at that point because uh and I don’t remember the exact timeline. A
+timeline then gets as soon as you buy that replacement property, a timeline starts
+ticking It’s probably six months Your.
+00:21:56 Speaker 1
+180 day timeline starts Yeah,
+00:21:58 Speaker 3
+So it starts kicking. So, you have to sell the existing one, and if you don’t, you are
+screwed. And, you are going to be subject to the taxations;. You’ll be subject to not
+being able to defer that equity from that one that you can’t sell. So, So you have to
+be really aggressive on the list price if it’s not selling in order to make sure that
+existing one sells. So either way, t here is these deadlines and motivation that
+comes in.
+00:22:25 Speaker 1
+And the advantage of. And another advantage in terms of reverse ten thirty one
+exchange is if, If you are sitting on a million dollars cash that you want to invest
+now, and you’ve got a million dollar property, you go buy that million dollar
+replacement property. Well, And you know your your million dollar listing ends up
+
+only selling for nine hundred thousand. Well, you’ve already met the qualification
+that your replacement has to meet or exceed.
+00:22:56 Speaker 1
+What you sold that million dollar property for. Now, If you put a million dollars into
+the one you bought and your million dollar property, you’re selling gets into a
+bidding war and sells for one and a half million, You’ve got to hurry and take that
+other five hundred thousand and put it somewhere quick, or you get taxed on it. So
+that’s why they can’t, that’s why you always work with an account, know, And they
+want to work with an account that has that knows what they’re doing with ten thirty
+one. Okay.
+00:23:23 Speaker 2
+And with that like that example just had, Yeah, million dollars and the one and a
+half. You use that one towards the one million and then the five hundred thousand.
+You you got to go use it. The same deadline as the million dollar. So like as soon as
+you buy this, that’s then does it have the same deadline or another house?
+00:23:45 Speaker 1
+That’s where they’re going to want to have their accountant look into that because
+he’s going to they’re going to go look at the tax codes and say, okay, here is what
+what tax code says. Because, you may find yourself that it’s because if it’s one
+hundred and eighty days from closing the first one, and now you are four months
+into it, you could be cramming really quick to get that difference made up. So,
+they’re going to plan ahead. Most ten thirty one exchange people who are just
+getting started or it’s their first or second time doing it. Don’t have the cash on hand
+to do a reverse one ;. They’re just trying to sell this.
+00:24:22 Speaker 1
+And buy that. And one of the biggest reasons for selling this, the one they’ve got, is
+they’ve already got all the tax advantages out of it. They’ve done a cost segregation,
+they depreciated everything. You know, Craig, you know, they’ve got what they can
+out of it. They’re into it maybe seven years; depreciation’s up. Let’s go move
+something else newer or different. Now title on it is also done differently as well.
+And that’s because title has additional work they have to do. They’re going to be
+creating all of the regular closing documents, plus all the documents for the IRS,
+which is typical of title. But they also then serve as the intermediary. It’s called a
+qualified intermediary, it’s a technical term. When the first when the sale closes.
+00:25:19 Speaker 1
+The money goes to title and stays in escrow. The property owner, if they’re an
+individual, an LLC, however they own it, doesn’t get to see the check. Title holds it.
+Then when the purchase or purchases go through, title distributes the money to
+where it belongs to. So that in the eyes of the IRS, Zane property owner Never
+touched and had any control over the money. So, Going back to the guy we were
+
+talking about from Texas, who called and said, “Hey, I sold this property in Texas,
+moved to Utah. Want to buy a rental? Can I ten thirty one exchange it?” As soon as
+the title company handed him that check in Texas, he had control over it. What
+happened to it next? Even if he put it in a trust account, planned on using it this
+way.
+00:26:16 Speaker 1
+He had choice over where I went with the trust account. Anything like that. So, The
+qualified intermediary is the one who holds it, and then does makes the payments.
+You’re also going to be verifying with the accountant to make sure that all the
+numbers add up. So, if you sell one property and you’re buying two, you may end
+up with two different mortgages. Great, they’re going to be closing twice. How
+much is going toward each one? They got to sort that out. If you’re buying two or
+three, or selling two or three and buying one, all right now we’ve got to make sure
+all those multiple closings occur right. All the money goes in the right pot and goes
+out the right direction. So, you want a qualified intermediary that has experience
+with it, that makes sure then that all of those numbers and everything go the right
+direction for you. Okay I’m going to close that.
+00:27:16 Speaker 1
+Let’s see if anybody else joined this. Nope, just the three of us. So what questions
+do you have about 1031 exchange?
+00:27:27 Speaker 2
+Nothing comes to that. We had the uh the one where you know bidding more, and
+then you have the excess and you have to get rid of that. And thenum the reverse.
+00:27:44 Speaker 1
+That, that’s. So, there’s risks with each one. With a regular forward 1031 exchange,
+the risk is being able to come up with adequate replacement properties. The risk
+with the reverse, one is selling it in time and not ending up with leftover money if it
+ends up selling for more than had been anticipated.
+00:28:09 Speaker 3
+In which case, you would just pay tax on that little leftover.
+00:28:13 Speaker 1
+They may be willing. They may look at it and say," You know what? It’s just worth it
+to pay on what that small amount is."
+00:28:19 Speaker 3
+So every time I’ll tell you this, like every time I have an investor sell something, I
+always have the ten thirty one conversation. Every single time. And a lot of rookie
+agents won’t even think about this. The seller will say," Hey, I want to sell my
+investment townhome." I always say," What are you going to do with the money?"
+Like," Oh, I just want to pocket it for this or the other." Okay, I always say, okay,
+
+Have you talked to your CPA to see what kind of your taxation will be like? You
+might not have any taxation because if they don’t make a profit off it, there’s not
+going to be a taxation. You know. But if they do profit, there’s going to be tax. And
+so I always say okay, have you talked to CPA? And if I ever give 1031 advice, I always
+say I’m not qualified to give you 1031 advice. So, you do need to talk to a 10 31
+qualified 10 31 intermediary and or CPA.
+00:29:08 Speaker 3
+Because none of us should be giving ten thirty one advice. I have no problem with
+people sort of coaching a little bit on deadlines, but if the seller, If your client relies
+upon your advice and you give them bad advice for something, for which we’re not
+licensed, we’re going to get in trouble. So I always say, please talk to your CPA and
+and the ten thirty one people. They can figure out those details for you. I am just
+giving you like high level like because a lot of my ask, what are my deadlines? What
+are my you know what are the rules? And I’ll just give them some high level stuff
+and then I say Here’s a ten thirty one exchange guy to talk to, and then call your
+CPA every single time. So that that’s something that just you should check the box
+every time someone’s saying I want to sell an investment property. Now, if they’re
+wanting to say I want to sell, and then I am going to buy another one, great let’s do
+a ten thirty one exchange. And, you may not have to do a ten thirty one exchange if
+they’re selling it at a loss, then you don’t have worry about it. Ten thirty one
+exchanges are actually not very expensive.
+00:30:08 Speaker 3
+They only had like thousand to two thousand bucks on title.
+00:30:11 Speaker 1
+Yeah, T here is a little bit of additional closing costs because what title has to do, but
+not enough to make it onerous.
+00:30:17 Speaker 3
+I am surprised how inexpensive it is, And I can see those costs going up at some
+point because they’ve been like ten thousand bucks. It’s nothing or when you are
+exchanging an investment property this large. So,
+00:30:28 Speaker 1
+A lot of the people who get kind of get burned on this without realizing what’s
+going on is like there is a somewhat robust market in Utah County, where. Mom
+and dad have a kid going to BYU. Get a look at how much rent is, and you know
+we’ve got a condo listed in Utah County at two ten. Well, by the time you buy that,
+rent out one bedroom, You are paying as much as you were for paying for rent for
+the kid at BYU. Well, great kid graduates then what? Do you keep it as a rental or do
+you sell it? Because if if it takes four years to graduate, you are going to have some
+equity in it.
+
+00:31:06 Speaker 1
+Is it enough to take a hit? Call your CPA. Do you want to stay in the rental market
+closer to home? All right, well, let’s see what this one’s worth. Is it worth enough
+selling here to get into a market closer to home?
+00:31:24 Speaker 3
+Here is another couple of things, too. Where t here is some mistakes that have been
+made, like that’s where you need to have a ten thirty point guy involved. The name
+that you sell in and the name that you buy in. Typically, have to match. And so, let’s
+say, well, I sold it in the name of my LLC and I am going to go buy in the name of
+Craig. Well, that could produce an issue. But here is where you might like here is
+where you get doubly in trouble on this, because if you go to buy a, let’s say, a two
+to four unit property, and you are going to buy it as an investment, you can’t get
+financed in your LLC.
+00:32:00 Speaker 3
+There’s not Fannie Mae and Freddie Mac require you to finance in your own
+personal name. Well, If you are selling something in an LLC and then buying
+something in your personal name because the lender required it, You can see how
+you might get into these technical issues where you might unintentionally expose
+yourself to taxation. So I, whenever a ten thirty one is involved, I try to get the ten
+thirty one exchange intermediary guy involved right away and say, okay, title is
+being held like this. And They’re going to purchase. What does the title have to look
+like over on this other side? And if they’re saying, “Well, they’re selling it in the name
+of of Argonaut State Experts LLC,” there you got to buy under Argonaut State
+Experts LLC. You know, and he may he may not say that. He may say, "I don’t know
+you can buy. " Like, those are the nuances I don’t want to get hammered on when
+when we’re involved in something else. And so everybody is a big for them.
+00:32:57 Speaker 3
+It’s Han Solo saying," I know." So, on my way out the door this morning, my wife
+gave me a hug and a kiss, said" I love you," and I said," I know."
+00:33:05 Speaker 1
+The greatest ad lib line ever.
+00:33:06 Speaker 3
+And then I walked out. Now Leia returns favor in episode six. If you guys remember
+when they’re trying to break into that whole thing, and she has the gun and gets
+found in trouble.
+00:33:19 Speaker 1
+And, there are some technical things, even if you are an LLC or an S corp. Because if
+the LLC has multiple members. Every member has to purchase the new property in
+the same percentage of ownership as they had in the original LLC. So, that’s why
+
+you want an accountant that knows what they’re doing, helping them understand.
+So, you know, Say Zane is one third owner in the LLC and wants out and wants Craig
+and Darren to buy him out. Zane could end up facing a tax liability because he got
+bought out. Craig and Darren different liability because we’re buying you out.
+00:33:55 Speaker 3
+The same similar thing applies to estate situations. Not the same thing, but some of
+the similar principles. So, and I know this is a tangent, but still pretty on topic. Last
+year, maybe it was two years ago, one of my friends called me and said, “Hey, my
+parents passed away. I am a trustee. We need to sell home.” And so I am like okay
+great let’s go. I went to the home to go tour through it and in the process, I found
+out that the attorney, their attorney, the seller’s attorney had said, “Hey, Before
+mom dies because she’s sort of incapacitated in the hospital or it’s going to be hard
+to sell this. Like she was still alive and like she’s going to die at some point. Why,
+don’t you just transfer title from the mom to the daughter and then daughter, you
+can just sell it.”
+00:34:54 Speaker 3
+And not don’t have to worry about getting signatures from mom. Well, The problem
+is, you transfer title to the mom’s owned it for three or four decades. You transfer
+title to the daughter, and that creates a taxable event. And. So because we’re now
+going to sell this in the name of the daughter, There’s no estate benefit for where
+like where the parents pass away and the kids receive it. And and it increases what
+they call basis or the value of property that government says. And so I said," Your
+CPA, your.
+00:35:27 Speaker 1
+Attorney suggested.
+00:35:28 Speaker 3
+You do this?" Like," Yeah." And so we’re about to put it on the market. I said," We
+need to hop on the phone right now with the CPA." So got on the phone with CPA
+and CPA said, that’s the stupidest thing that an attorney could have ever told you
+when it comes to this. Put the name back into the name of the trust or whatever it
+was. Put it back into this other situation before you sell. And and he said, " I ’ ll be
+able to explain to the government sort of that, that was an unintentional mistake,
+so that when it sells, it’ll be fine." So they followed the advice, closed; they’re fine.
+But, but had they proceeded down the path, the attorney had given them versus
+what I had, you know, and I had caught it. I saved them tens of thousands, maybe a
+hundred thousand plus in taxation from what had happened, because if I give to
+you a property for six hundred grand.
+00:36:22 Speaker 3
+When you sell it, You are going to get tax on that thing at twenty five percent thirty
+whatever it is. You are going to get whatever your tax like. You are going to have
+
+one hundred fifty grand in tax. So so that’s what the I R S was viewing. Oh the mom
+just gave the home to the kid. It’s a gift, And now the kid’s going to sell for whatever
+and be exposed to full taxation. It was dumb. The attorney didn’t even know what
+he was doing when he when he recommended this plan. Yeah, it would have
+simplified some of those.
+00:36:51 Speaker 1
+Simplify the process, but not the money.
+00:36:53 Speaker 3
+Didn’t understand the taxation consequences. It’s like going to a doctor who
+specializes in your eye and will give you something that will fix your eye, Not
+realizing that the fix they give, you could hurt something else in your body. You
+know what I mean? Maybe that’s not a great example, but there are times where a
+doctor will come in and say," Well, this will help fix your gut." Well, You administer
+that. And then now it’s hurting your blood or something like vice versa. Like they
+have to have a. You know, some attorneys and CPAs don’t have a full picture. Yeah,
+and so we hopefully will. Hopefully, we’re like okay, We sort of understand enough
+the systems involved here that if we see something wrong, You know how to advise
+you kind of catch it before it gets out of hand or yeah. And that’s why.
+00:37:36 Speaker 1
+And, and we’re here to help them identify the property or properties that they’re
+getting in replacement make sense for them. Are they going to? Are they going to.
+Meet their needs in a cash flow. Are they going to be something reasonable? And
+that’s part of why like for like has never really been defined. They didn’t want to get
+people so locked into, oh, well you sold a single family home you were renting in
+West Valley, you got to go buy another single family home in West Valley. Well, Part
+of the reason I’m getting out of single family homes was valley is it’s probably not
+renting enough anymore or they’re not making money on it. They’d rather have a
+condo in Provo or something else or two condos in Provo.
+00:38:15 Speaker 1
+Where they could cash flow better, so it’s not really rigid. With what Craig was
+talking about, one other thing that I’ve learned through experience, I am going to
+go ahead and close this. So we’re going to close out on ten thirty one exchange. So
+we’re getting kind of on a couple other things, but one other thing real quick: if you
+are dealing with an estate, you need to pay attention to the death date of the last
+owner. If it’s in a trust, it works differently than if it was just. An individual owner.
+When my father passed and we bought my mother’s home from her, We had to
+close on the purchase of the home from my mother within one calendar year, Three
+hundred sixty five days of the day that my father passed for my mother to still be
+able to claim his two hundred fifty thousand dollar exemption as joint tenant. If we
+had so she could claim both hers, her exemption and his exemption for the total
+five hundred thousand.
+
+00:39:14 Speaker 1
+If we waited till after that year mark, we can only claim my mother’s exemption for
+two hundred and fifty thousand. And whatever the you know, And if that difference
+of losing two hundred fifty thousand in exemption may have added up to enough
+that she’d have had to pay taxes on the difference. And I learned that because I was
+you know on on the buying side, but also the.
+00:39:45 Speaker 1
+My brother, the executor, is an attorney and an accountant. And, so he dug through
+all the code to figure to find out what the deadline was. And, we realized we were
+getting really close to the deadline and hadn’t sold our house yet. So, we did a seller
+finance to buy my mother’s house, so it qualified as sold before my dad’s
+anniversary of his death date. Otherwise, my mom could have been exposed to tax
+liabilities. And so sometimes heirs don’t realize that they’re They’re taking months to
+decide what they want to do with the property, And they could actually be exposing
+themselves to tax liabilities on the other end based on the death date. Interesting.
+So, They always want to talk to their accountant about that as well about how is this
+going to affect us? Plus, They’re going to want to use, have the accountant do as
+much as they can to reduce their basis as low as possible. To get as much, you
+know, income out of the house as possible that’s protected. So.
+00:40:43 Speaker 1
+Ten thirty one exchange. It can be really good. But remember, our role is the
+realtor’s role. We are there to look for the properties. We will look for details like
+things like craig’s talked about. Yeah. But ultimately, when it comes to the numbers,
+talk to your accountant, when it comes to title, talk to your qualified intermediary.
+We’re going to go look at the properties, and we’re going to decide if this is the right
+property and then you talk to the accountant and the intermediary, make sure the
+math math passes, you know, the numbers work um and that we’re getting.
+00:41:13 Speaker 1
+And, but we also need to be aware of those deadlines they have so that we’re we’re
+not leaving them in a lurch on the other end of well now I got to hurry and cram
+something that might not be best for me. And it’s changed as the market has
+changed. You know um it’s taking a little longer to sell properties now get a little
+more time to look at something. But, that also means that they’re depending what
+they’re selling might take longer commercial right now is taking is is really
+struggling in some markets to sell. They’re trying to sell commercial property. There
+are markets nationwide where um buildings like this are being converted to
+apartments because there’s a housing shortage, but they’ve got empty business
+commercial space. So investors are converting them to apartments. Does that count
+as like for like? Yes, it does. You could buy you could buy an empty apartment or
+empty commercial convert it It counts.
+
+00:42:10 Speaker 1
+I have had people ask you about, well, can I buy something like a houseboat? This
+came up in a class. They’re like, “Are you going to use it as a rental?” Yeah. Is it real
+property? No. Trailer homes are kind of trailer. If you are going to try buy, if you buy
+a trailer park, great. If you buy a mobile home. It could be a problem in Utah
+because they’re not real estate.
+00:42:43 Speaker 3
+If the land’s not included, it can be problematic. The land’s I would say on the
+houseboat, sometimes there are other tax codes you can use besides the 1031.
+00:42:52 Speaker 1
+That’s when you start talking to your accountant about other ways to transfer
+assets.
+00:42:56 Speaker 3
+I struggle mightily. I know some people that write," Oh, I wrote off my boat." Why?
+Because they can use it for business. So, boats are like between two hundred fifty to
+five hundred thousand bucks. Oh yeah. And so I just I, I personally feel that’s
+fraudulent. That’s fraudulent in my opinion. Now, are you going to be able to get it
+past the gatekeeper the IRS? Maybe because they don’t audit everything. And that
+but that’s where I feel like, I feel like it’s dishonest my opinion on some of that stuff.
+But But the ten thirty one is honest.
+00:43:39 Speaker 1
+1031 Is an honest way to help, and it’s also designed to help grow multi-
+generational wealth. Because if grandma and grandpa sold the family farm or
+bought property, and that property grew, they sold that, and that property grew, or
+and then started diversifying into other properties. Now, the next generation is able
+to continue to grow wealth without having to risk losing. You know, look at it going
+at some point, we’re going to get. Eaten alive on the taxes, get all of our growth
+eaten up. So, all right.
+
