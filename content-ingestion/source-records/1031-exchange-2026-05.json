@@ -1,0 +1,252 @@
+{
+  "source_id": "1031-exchange-2026-05",
+  "title": "1031 Exchange Basics",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/16LUVKK6u3xx1RZhN1l3bx9nYx6coM6L1/view",
+  "date": "2026-05-04",
+  "speaker_or_author": "Darrin (Trainer) with Craig (Broker)",
+  "audience": [
+    "all agents",
+    "investor clients"
+  ],
+  "summary": "Fundamental training on 1031 exchanges for real estate agents. Covers what a 1031 exchange is, when it applies, the critical rules and timelines (45-day identification, 180-day close), qualified intermediary requirements, like-kind property definition, boot rules, and common mistakes that disqualify the exchange. Includes Utah-specific disclosure forms and practical guidance for working with investor clients.",
+  "topics": [
+    "1031 exchange",
+    "capital gains tax",
+    "investor clients",
+    "qualified intermediary",
+    "like-kind property",
+    "boot",
+    "45-day rule",
+    "180-day rule",
+    "Utah disclosure",
+    "tax deferral",
+    "investment property",
+    "timeline requirements"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Client asks about 1031 exchange after already selling",
+      "guidance": "If client has already closed and received proceeds without a qualified intermediary, they CANNOT do a 1031 exchange. This is the most common fatal mistake. Must be set up BEFORE closing.",
+      "client_language": "If you've already closed and have the check in hand, we cannot 1031 exchange that. You needed to set this up before closing with a qualified intermediary.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Setting up a 1031 exchange for a client",
+      "guidance": "At the very beginning, client needs: (1) Qualified Intermediary, (2) Title company aware of the exchange, (3) Accountant involved for tax planning. Title has specific requirements they need quickly.",
+      "client_language": "Before we go any further, we need to get a qualified intermediary involved and make sure the title company knows this is a 1031 exchange. Your accountant should also be looped in.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Explaining what a 1031 exchange is",
+      "guidance": "Section 1031 of IRS code governs capital gains taxes. It's a DEFERRAL process - not elimination. Taxes get kicked down the road. IRS created this to encourage investors to stay in the market rather than getting hit with huge tax bills that prevent reinvestment.",
+      "client_language": "A 1031 exchange lets you defer paying capital gains tax by reinvesting the proceeds into another investment property. You're not eliminating the tax - just kicking it down the road.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Client asks about capital gains rates",
+      "guidance": "Short-term (held less than 1 year): Ordinary income rates, 10-37% federal. Long-term (held more than 1 year): 0-20% depending on income bracket. Flippers pay up to 37% - baked into their math. Accountant does the actual math.",
+      "client_language": "Short-term capital gains are taxed as ordinary income - up to 37%. Long-term is 0-20% depending on your tax bracket. Your accountant will calculate the exact amount.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Client asks what qualifies as like-kind",
+      "guidance": "Like-kind is broad for real estate: Any investment property for any other investment property. Can exchange rental house for commercial building, land for apartment complex, etc. Does NOT include primary residence. Must be investment/business property.",
+      "client_language": "Like-kind is very broad for real estate. You can exchange a rental house for commercial property, land for apartments, etc. But it has to be investment property - your primary residence doesn't qualify.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Explaining the 45-day identification rule",
+      "guidance": "From closing of relinquished property, client has 45 calendar days to identify replacement properties. Must be in writing, signed, and delivered to qualified intermediary. Can identify: (A) Up to 3 properties of any value, OR (B) Any number of properties as long as total value doesn't exceed 200% of sold property value, OR (C) Any number if acquiring 95% of identified value.",
+      "client_language": "You have 45 days from closing to identify replacement properties in writing. Most people use the 3-property rule - you can list up to 3 properties regardless of their total value.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Explaining the 180-day closing rule",
+      "guidance": "Must close on replacement property within 180 calendar days of closing the relinquished property. This is a hard deadline - no extensions. Must close, not just be under contract.",
+      "client_language": "You have 180 days from the sale of your old property to close on the new one. No extensions, no exceptions. We need to be under contract well before that deadline.",
+      "citation_refs": [
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Client asks about taking cash out (boot)",
+      "guidance": "Any cash or debt relief taken out is called 'boot' and is taxable in the year of the exchange. To fully defer ALL taxes, must: (1) Buy replacement property equal or greater in value, AND (2) Reinvest ALL net equity, AND (3) Replace ALL debt. If client takes $50K cash out, they pay tax on $50K but defer the rest.",
+      "client_language": "If you take cash out of the deal, that portion is taxable. To defer ALL taxes, you need to buy a property equal or greater in value and put all your equity into it.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Client wants to exchange into multiple properties",
+      "guidance": "Yes, can exchange one property for multiple replacement properties. Must follow same 45/180 day rules. Can also do reverse exchange (buy new before selling old) but more complex and expensive.",
+      "client_language": "Yes, you can buy multiple replacement properties with the proceeds. Same rules apply - 45 days to identify, 180 days to close on all of them.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Utah-specific disclosure requirement",
+      "guidance": "Utah has a specific form for disclosing when a property being sold is part of a 1031 exchange. Buyer must be informed. Form should be in the state-approved documents.",
+      "client_language": "Utah requires us to disclose to the buyer that this property is part of a 1031 exchange. There's a specific state form we'll include with the disclosures.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    }
+  ],
+  "steps": [
+    "Determine if client has already closed on relinquished property (if yes, too late)",
+    "Engage qualified intermediary BEFORE listing or closing",
+    "Notify title company that transaction is part of 1031 exchange",
+    "Have client consult with accountant for tax planning",
+    "List and sell relinquished property - proceeds go to qualified intermediary",
+    "Within 45 days of closing, identify replacement properties in writing to QI",
+    "Within 180 days of closing, close on replacement property",
+    "Ensure replacement value is equal or greater and all equity is reinvested",
+    "Complete Utah disclosure form if applicable",
+    "File appropriate tax forms with accountant"
+  ],
+  "objections": [
+    {
+      "objection": "I already sold my property and have the money",
+      "response": "Unfortunately, if you've already closed and received the proceeds without a qualified intermediary, you cannot do a 1031 exchange. The QI must be engaged before closing.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "objection": "This seems too complicated",
+      "response": "The rules are specific but straightforward. The key is having the right team: qualified intermediary, title company, and accountant. They handle the complexity. Your job is finding the replacement property within the timelines.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "objection": "I want to take some cash out for other things",
+      "response": "You can, but any cash you take out (called 'boot') is taxable in the year of the exchange. You'll defer taxes on the rest. Many investors do partial exchanges.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "What if I can't find a replacement in 45 days?",
+      "response": "The 45-day identification is strict with no extensions. We need to start looking immediately. Most investors use the 3-property rule and have backups ready.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "objection": "Can I buy a primary residence with the exchange?",
+      "response": "No. 1031 exchanges are for investment or business property only. You cannot exchange into a primary residence. However, you could convert an investment property to primary later after meeting holding requirements.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "He says,\" Yeah, I\u2019ve already sold it. I\u2019ve already got the check in hand. I can\u2019t 1031 exchange that.\" They\u2019ve already violated one of the very fundamental principles. So they had closed without setting up the 1031 exchange?",
+      "timestamp_start": "00:03:58",
+      "timestamp_end": "00:04:55",
+      "source_line_start": 58,
+      "source_line_end": 63,
+      "section": "Common fatal mistake"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Understand that if you are working in the with someone who\u2019s doing a ten thirty one exchange, then at the very beginning of the process you need to reach out to, the title company, Because as we go through this, there are going to be some requirements that title needs pretty quick. And, they need to be aware of. They also need to be working with their accountant. For tax reasons, but also there are some benefits to them financially depending on how what kind of. How long they\u2019ve owned a property and how well they\u2019ve maintained the records on their expenses on the property because it\u2019s going to affect how much money they\u2019re going to, How",
+      "timestamp_start": "00:02:03",
+      "timestamp_end": "00:02:57",
+      "source_line_start": 28,
+      "source_line_end": 36,
+      "section": "Initial setup requirements"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "talking about capital gains tax. Okay. Just real briefly, ten thirty one exchange gets its common name from section ten thirty one of the I R S code. That\u2019s the section that governs capital gains taxes. Capital gains, as you know, Are the gain on the difference between a purchase price of a property and what they sell, you sell it for. Whatever you earn on the process. And, there\u2019s formulas into  how much you can deduct from the value of the property and things that go on that way. The accountant is for. But there are two rates or two ways that capital gains are taxed : short term and long term. Short term is any property that\u2019s been held less than a year. Ordinary income rates apply, which means you\u2019re going to be paying a higher rate, and the federal rate depending on how much income you earn, what bracket you landed in, is anywhere from ten to thirty percent of the income earned. So when you talk when you look at people who flip homes. They have to build into that flip cost. They could be paying as much as thirty seven percent capital gains on that property. That\u2019s just baked into their, into their math. Long term is anything that\u2019s been held longer than a year, because it\u2019s been held longer than a year, it\u2019s now long term and they get different rates, and those rates depending how much you earn, it could be anywhere from zero to fifteen or twenty percent. And, again, the accountant is going to do all the math to figure that out. The idea behind a ten thirty one exchange. Is to defer paying that tax. So it is a no, they got it in the wrong order. It is a deferral process, and that\u2019s what people need to understand. It\u2019s not that they\u2019re not paying the tax ;. It will get paid at some time in the future. What they\u2019re doing now is just kicking that tax bill down the road. Because and the I R S set this up because they were losing investors. Investors would have a property, they\u2019ve got everything they",
+      "timestamp_start": "00:04:10",
+      "timestamp_end": "00:06:18",
+      "source_line_start": 70,
+      "source_line_end": 97,
+      "section": "What is a 1031 exchange"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "way. The accountant is for. But there are two rates or two ways that capital gains are taxed : short term and long term. Short term is any property that\u2019s been held less than a year. Ordinary income rates apply, which means you\u2019re going to be paying a higher rate, and the federal rate depending on how much income you earn, what bracket you landed in, is anywhere from ten to thirty percent of the income earned. So when you talk when you look at people who flip homes. They have to build into that flip cost. They could be paying as much as thirty seven percent capital gains on that property. That\u2019s just baked into their, into their math. Long term is anything that\u2019s been held longer than a year, because it\u2019s been held longer than a year, it\u2019s now long term and they get different rates, and those rates depending how much you earn, it could be anywhere from zero to fifteen or twenty percent. And, again, the accountant is going to do all the math to figure that out. The idea behind a ten thirty one exchange. Is to defer paying that tax. So it is a no, they got it in the wrong order. It is a deferral process, and that\u2019s what people need to understand. It\u2019s not that they\u2019re not paying the tax ;. It will get paid at some time in the future. What they\u2019re doing now is just",
+      "timestamp_start": "00:04:55",
+      "timestamp_end": "00:06:18",
+      "source_line_start": 78,
+      "source_line_end": 95,
+      "section": "Capital gains tax rates"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "what like for like means. You can sell a car wash and buy a McDonald\u2019s. You could sell an Airbnb and buy a storage unit. Yeah, or you buy land. You can buy land as long as it\u2019s on speculation for future construction. Yeah, but it has to be real property; it cannot be stuff. I can\u2019t sell my business or sell the building",
+      "timestamp_start": "00:06:18",
+      "timestamp_end": "00:08:00",
+      "source_line_start": 139,
+      "source_line_end": 146,
+      "section": "Like-kind property definition"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "The IRS doesn\u2019t bend at all. First is the forty five day rule. Once the property that\u2019s being relinquished or sold or is closed, they have forty five days to identify at least three replacement properties. Now, What a lot of sellers are going to do is while they\u2019ve got theirs listed, they\u2019re already looking for their replacement properties. They don\u2019t want to get to this and say okay. Now we got to go find something and everything\u2019s gone. It has to be identified in writing and title has to see it. Utah has a specific form for identifying the potential replacement properties. Now, these are potential replacement properties. Things happen in the market. One of them could get sold, you may have to identify another one. You start looking into one, not the right one, not going to work. All right? But identify in writing the title so they know what\u2019s going on. The other reason, and that\u2019s part of why they want you to identify at least three, is because you know you don\u2019t want to drop one out. The other thing is just going to have to do the math. If they go pick three properties, Those three properties combined can\u2019t add up to more than 200 % of what they sold. So again, you sell for 500, if you go find three properties, You got to make sure that whatever it adds up to doesn\u2019t add up to more than twice the 200. Of what they sold, okay. That\u2019s a again, that\u2019s a that\u2019s a federal rule we we don\u2019t get around that one. It\u2019s not our choice. Oop, the other one oh that\u2019s why things are all out of whack.",
+      "timestamp_start": "00:08:00",
+      "timestamp_end": "00:10:00",
+      "source_line_start": 205,
+      "source_line_end": 226,
+      "section": "45-day identification rule"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "property that doesn\u2019t really meet what I want long term. The other rule is, And these two deadlines start on the date that the property they sold or the IRS calls it relinquished, the date they close on that. And these are calendar days, not business days. They have one hundred and eighty calendar days to close on the purchase that finishes out the exchange. What they exchange for so they know, and that\u2019s not flexible. If they if they go day one hundred and eighty one, they go into sign. They\u2019re past the deadline, The IRS is going to look at it and say this exchange is null and void. You are now going to be you know facing all of tax implications, and, You probably don\u2019t qualify now to buy this property. So, like Craig said, there\u2019s a really high close rate with these investors, especially the ones that are experienced",
+      "timestamp_start": "00:10:00",
+      "timestamp_end": "00:11:30",
+      "source_line_start": 260,
+      "source_line_end": 271,
+      "section": "180-day closing rule"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": " something else, commercial residential residential investments, that\u2019s that\u2019s totally fine. What Craig can\u2019t do is sell this and go buy his own personal vacation property at Bear Lake. Now it can go buy a cabin at Bear Lake as long as he limits. How often he uses it personally, then he can still qualify as an investment property. And a CPA, But I always tell people this because I\u2019ll have a CPA like consult your CPA to try to figure that out. Because I had a seller sell two investment condos at BYU and then bought a nightly rental cabin at Sundance. So we ten thirty one the two condo sales up to that. Yep. But the issue, like, cause my buyer uses it. And he uses it too much. You can potentially have the IRS come back and be upset at it. So anyway, it\u2019s a balance that you got to be careful. It\u2019s a technicality that they want to talk with their accountant about. And, that\u2019s why I say you need to check with the accountant about if you\u2019re going to do it this way, use it this way, Then what percentage of time can you use it before? It\u2019s not considered personal property? And not investment. Now, as we talk, The other thing you need to say understand when we talk about property or properties is you can sell two or three properties and buy one. You can sell one and buy two or three. There are just some qualifications they have to meet. The purchase price of the replacement property or properties has to equal or exceed. The net sales price of what you sold. So, if you sold five hundred thousand dollars, And that net price is, by the way, closing costs is cut that contract price subtract,",
+      "timestamp_start": "00:11:30",
+      "timestamp_end": "00:13:30",
+      "source_line_start": 155,
+      "source_line_end": 180,
+      "section": "Boot and full deferral requirements"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "presentation, so if you have a head, just say\" go for it.\" Reverse ten thirty one is that on there? No, I didn\u2019t do that one. Okay, So let me because it\u2019s more it\u2019s more technical. Yeah, One way to get around this a little bit is called the reverse ten thirty one, where you can go, buy the property first and then sell the replacement property or buy the replacement property and then sell the current one. Get ahead of yourself basically. Yeah now, Still, order to do that, you have to have funds. Yeah, And sitting where a buyer has the capability of just fronting and buying the other one first and then selling the existing one. Yeah. So the nice thing about that is you can then be very picky. Okay, this is specific, it\u2019s a specific one I want. But then you\u2019re up against the wall at that point because uh and I don\u2019t remember the exact timeline. A",
+      "timestamp_start": "00:13:30",
+      "timestamp_end": "00:15:00",
+      "source_line_start": 289,
+      "source_line_end": 301,
+      "section": "Multiple properties and reverse exchanges"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "something that you may start. I mean, you are going to run into the market at some point. To this point in my career, my experience has been Oftentimes, where the property that\u2019s being sold, My buyer that\u2019s buying it to buy it as a you know, to live in, has to be disclosed as being part of a ten thirty one exchange. Utah has a specific form we use for that. I\u2019ve got my first actual ten thirty one exchange coming up. We\u2019re in the beginning process. She\u2019s got a listing out of state that they\u2019re getting ready to go live with, And then she\u2019s already started looking for replacement properties here in Utah, because she\u2019s moved here from.",
+      "timestamp_start": "00:00:05",
+      "timestamp_end": "00:01:05",
+      "source_line_start": 9,
+      "source_line_end": 17,
+      "section": "Utah disclosure requirement"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct or near-direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Speaker 1 is Darrin (trainer). Speaker 2 is Zane (new licensee). Speaker 3 is Craig (broker). The 45-day rule details (3-property, 200%, 95% rules) are all stated in the transcript. Capital gains rates are IRS standards mentioned in training. Utah disclosure form is mentioned as state-specific. Some broker_guidance items synthesize multiple concepts from the transcript - these are labeled with multiple citation_refs.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. The 45-day identification options (3-property, 200%, 95% rules) are all stated in the transcript by Darrin."
+}

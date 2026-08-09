@@ -1,0 +1,307 @@
+{
+  "source_id": "repair-negotiations-2026-07",
+  "title": "Repair Negotiations Training",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1Lad-tIk3CEClyZEJPemopMPSGCrXoaW1/view",
+  "date": "2026-07-23",
+  "speaker_or_author": "Craig (Broker/Trainer)",
+  "audience": [
+    "buyer agents",
+    "listing agents"
+  ],
+  "summary": "Comprehensive training on repair negotiations from both buyer and listing agent perspectives. Covers the three buckets of negotiation items (safety/health, big ticket, cosmetic), scripting for aggressive but ethical negotiations, upfront disclosure strategies for listing agents, and handling common objections. Includes specific tactics for electrical, plumbing, HVAC, roofing, meth, radon, and structural issues.",
+  "topics": [
+    "repair negotiations",
+    "inspection objections",
+    "buyer representation",
+    "listing agent strategies",
+    "safety issues",
+    "health hazards",
+    "big ticket items",
+    "due diligence",
+    "concessions",
+    "home warranty",
+    "sewer scope",
+    "meth testing",
+    "radon",
+    "electrical panels",
+    "galvanized plumbing",
+    "roof negotiations",
+    "HVAC negotiations"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Buyer wants inspection items repaired",
+      "guidance": "Categorize requests into three buckets: (1) Safety/Health, (2) Big Ticket Items, (3) Cosmetic/Visible. Lead with safety/health items and use strong language: 'These are significant safety concerns that could cause the buyer to withdraw.'",
+      "client_language": "These are significant safety and health concerns to the degree that the buyer would back out if not addressed.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Negotiating electrical issues",
+      "guidance": "Electrical items are 'no brainers' for safety bucket. Includes double-tapped wires, ungrounded outlets, old panels with known failure rates, aluminum wiring. Get inspector to document known failure rates for older panels.",
+      "client_language": "This is a safety issue. We want this panel replaced.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Negotiating plumbing issues",
+      "guidance": "Actively leaking plumbing = safety/health (mold/structural). Galvanized water lines can be negotiated even if working - disclose to next buyer argument works. Sewer mainline issues are 'pretty easy negotiation' when scoped.",
+      "client_language": "These plumbing issues create mold problems and potential structural damage.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Negotiating old HVAC/furnace/water heater",
+      "guidance": "Best negotiated UPFRONT before inspection by asking ages during showing. If old, get price reduction or warranty at offer stage. If seller misrepresents age (says 5 years, turns out 15), you have clear runway to demand credit.",
+      "client_language": "We offered under the assumption the furnace was 5 years old. Turns out it's 15. We did not anticipate that.",
+      "citation_refs": [
+        "chunk-005",
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Meth test results below state limit",
+      "guidance": "State limit is 1.0 (divided number). If aggregate exceeds 1.0 but divided is below 1.0 = 'trace amount.' Focus on HVAC/furnace cleanse since that's where traces congregate. Below 0.5 = very difficult to get concessions. Buyers are less scared of low traces now.",
+      "client_language": "The aggregate score exceeds 1.0 which indicates contamination. The hot spots are in the HVAC system where traces have congregated.",
+      "citation_refs": [
+        "chunk-007",
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Listing agent preventing repair requests",
+      "guidance": "Disclose ages of roof, HVAC, furnace, water heater in AGENT REMARKS (not public). When buyer later requests repairs, point out it was disclosed upfront. Use: 'You're buying a 1950s home. Some stuff will be new, some won't. We didn't advertise this as brand new.' Offer 2-year home warranty as compromise.",
+      "client_language": "That was known upfront - it was right there in the listing details. We put the specific year so this would be avoided.",
+      "citation_refs": [
+        "chunk-009",
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Buyer agent worried about pushing too hard",
+      "guidance": "Act as if this is YOUR purchase or your sibling's. Don't hold back to avoid losing the deal. Buyers appreciate aggressive representation. Get buyer permission to be aggressive: 'Can I give the indication these are concerning enough that you may back out?'",
+      "client_language": "I'm going to fight for everything on this list. The next buyer is going to reasonably request these things too.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "Repair concessions vs price reduction",
+      "guidance": "Credits going directly to contractors do NOT count as seller contribution to buyer. Can have 20% of home value go to contractors without hitting contribution limits. Name contractor on settlement statement. Doesn't show on buyer's settlement statement, so doesn't influence underwriting.",
+      "client_language": "We'll have the seller credit $18,000 directly to the roofing contractor at closing. This won't affect your loan.",
+      "citation_refs": [
+        "chunk-012"
+      ]
+    },
+    {
+      "scenario": "What NOT to negotiate",
+      "guidance": "Never succeed: cracks in concrete (100% visible at walkthrough), carpet condition (visible), negative slope (common on older homes), trees unless power line safety issue. Tell buyers upfront these won't work.",
+      "client_language": "The driveway condition was visible when you walked through. It's not fair to come back now and ask for help with something you already saw.",
+      "citation_refs": [
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Handling inspection report with listing agent",
+      "guidance": "Listing agent is legally required to forward inspection report to seller (fiduciary duty). What agent knows, principal knows. If seller counters and removes some repairs, the lender may see unfixed items and stipulate they be fixed. Better to let addendum lapse and verbally agree, then resubmit only agreed items.",
+      "client_language": "You're required to provide this inspection report to your seller. It's your fiduciary responsibility under agency law.",
+      "citation_refs": [
+        "chunk-014",
+        "chunk-015"
+      ]
+    }
+  ],
+  "steps": [
+    "Categorize inspection findings into: Safety/Health, Big Ticket Items, Cosmetic",
+    "Lead with safety/health items using strong withdrawal language",
+    "Get buyer permission to be aggressive in negotiations",
+    "For old systems, try to negotiate upfront at offer stage by asking ages during showing",
+    "If seller misrepresents system ages, use that as leverage post-inspection",
+    "For contractor credits, name contractor on settlement statement (doesn't count as contribution)",
+    "Always recommend all inspections upfront (sewer scope, meth, radon) to limit liability",
+    "Set due diligence deadline with buffer time - don't negotiate same day as deadline",
+    "For listing agents: disclose system ages in agent remarks to preempt repair requests",
+    "If buyer submits too many repairs and seller will only do some, let addendum lapse and verbally negotiate"
+  ],
+  "objections": [
+    {
+      "objection": "Seller says they'll just buy a home warranty",
+      "response": "That's not enough for old systems. Push for 2-year warranty or credit. If they refuse, hammer price upfront knowing these items are old.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "objection": "Seller says buyer already saw the condition before offer",
+      "response": "For visible items (carpet, cracks), that's correct - don't negotiate. For hidden issues (electrical, plumbing), those weren't visible and are fair game.",
+      "citation_refs": [
+        "chunk-013"
+      ]
+    },
+    {
+      "objection": "Listing agent won't forward inspection report to seller",
+      "response": "They are legally required to. It's fiduciary duty. What the agent knows, the principal must know. Not forwarding opens them to liability.",
+      "citation_refs": [
+        "chunk-014"
+      ]
+    },
+    {
+      "objection": "Seller calls bluff on buyer backing out",
+      "response": "Keep pushing until due diligence deadline. Time is on your side. Many sellers fold rather than risk starting over.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    },
+    {
+      "objection": "Multiple offer situation - can't negotiate upfront",
+      "response": "Don't ask for ages upfront in multiple offer situations. Get under contract first, then address after inspection.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "Let me, let me first hit the buyer side, and then we\u2019ll get down to the seller side next after. So, from the buyer\u2019s side, I\u2019ll share with you. The things that I feel like are are the most successful to negotiate. Typically, um, I think they fall into a few buckets and bucket number one is safety. And when you focus the negotiations on these are safety items it becomes pretty It becomes easier to negotiate those things. So, hey, the buyer would really like this, that or the other. If you phrase it like that, I am going to as a seller immediately try to beat you up and say, well he\u2019d like this, like that, like this. Well that\u2019s sort of like preferential, but it sounds like the buyer is still going to go forward regardless. When I come in and say, these are significant safety concerns that could cause the buyer to withdraw. Or you can just say that will cause",
+      "timestamp_start": "00:00:59",
+      "timestamp_end": "00:01:57",
+      "source_line_start": 15,
+      "source_line_end": 25,
+      "section": "Safety bucket negotiation framing"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Will cause the buyer to withdraw if not satisfied. When you say something along those lines, it makes it sound like there\u2019s no room for negotiations. And that\u2019s what you want to do in the repair request because it\u2019s nothing, No skin off the buyer\u2019s back if they come in strongly, because the worst thing is a seller will say no and you\u2019re still under contract. And so I will often use the phrases, such as these concerns are significant enough that the buyer will withdraw, if not mitigated. Something just like that, you use that phrase You\u2019re going to scare the seller. Even if the buyer is like, I don\u2019t care if they fix them or not, I\u2019m still going to buy. You don\u2019t want to convey that feeling to the listing agent because then you\u2019re not going to get anywhere in the negotiation. So, you have to get permission from your buyer to  come across stronger in the negotiation and say, look, I\u2019m going to come across and tell them that if these aren\u2019t repaired, you\u2019re going to back out. That\u2019s super helpful",
+      "timestamp_start": "00:01:57",
+      "timestamp_end": "00:02:49",
+      "source_line_start": 28,
+      "source_line_end": 40,
+      "section": "Strong withdrawal language"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "those things are going to be pretty much any electrical item that you find all will fall into the safety bucket. Um, I I will even throw plumbing into that, That are leaky leaky plumbing issues because that, that creates mold problems. And um you know, potential structural issues to the home, but depending where the leaks are. So, Plumbing, leaks and electrical issues are like no brainers in my opinion on any of these. Now where it gets even, but where the request gets even dicier is on these older homes you could have electrical that\u2019s completely working. And you might not have any double tapped wires. You may not even have any ungrounded outlets. And all what you\u2019re dealing with is an older panel that may have known failure rates. And you can look up the failure rates of some of these panels. Some like my inspector I use is really good at identifying, saying, hey, this is a panel that\u2019s working but it\u2019s sort of it\u2019s known to fail. It\u2019s good enough in my brain to be able to say, \u201cHere is a safety issue. We want this panel replaced.\u201d And so plumbing that\u2019s actively leaking, like electrical that\u2019s deficient or even sometimes you can come in when it\u2019s old. Even like aluminum wiring, I\u2019ve had some success in negotiating some credits on that. There are ways to make the aluminum wiring safer. It\u2019s harder to get a whole house replacement for aluminum wiring.",
+      "timestamp_start": "00:02:49",
+      "timestamp_end": "00:04:43",
+      "source_line_start": 47,
+      "source_line_end": 64,
+      "section": "Electrical and plumbing safety items"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "after electrical or plumbing. And I guess this next one is a plumbing issue too, but this is one that\u2019s less commonly discussed, But I think it\u2019s significant enough that you at least need to bring it to your buyer\u2019s attention. And that is galvanized water lines. Those have potential for breakdown, corrosion, which can get into the drinking water. Sometimes even containing lead. So when I offer on an old home, the inspection shows hey this the main water line\u2019s galvanized. I will ask for its replacement citing safety concerns. So I\u2019ll drop that into the bucket. Well, this safety issues reminding, even like in your repair negotiation email stating like it just as you know. Sort of hinting at the fact that seller, if you don\u2019t take care of it for us and we back  out, you will need to disclose these items to the next buyer. So you could use that kind of verbiage in your repair negotiations as well. So I\u2019ve gone after galvanized water lines and had multiple successes this year, plumbing issues, electrical issues. And certainly I could throw potentially into that bucket sewer mainline. Now that I think that that one is a pretty easy negotiation. Like, I\u2019ve if you if you have it scoped and find that there\u2019s issues, bet sellers. I\u2019ve seen sellers always help with that, so that one\u2019s not hard to like get across the finish line. But but I always recommend getting sewer scopes. Some people scope even brand new, which to be safest you",
+      "timestamp_start": "00:04:43",
+      "timestamp_end": "00:06:37",
+      "source_line_start": 69,
+      "source_line_end": 88,
+      "section": "Galvanized plumbing and sewer scope"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "the furnace, the air conditioning and the water heater. Um typically, so you are dealing with those three items and then the age of the roof. As I as a buyer representative before every offer. I ask the listing agent, \"What are the ages of these items? \" Because I want to know before I go in and submit an offer what those look like. Because I am trying to  negotiate this in part upfront because sometimes it\u2019s difficult after the fact. Because the counter from any seller will be, \u201cWell, I gave you a home warranty.\u201d Or if you didn\u2019t give them a home warranty, they\u2019ll say, \u201cI\u2019ll just buy you a home warranty.\u201d Well, that\u2019s not going to be enough. Fine, I\u2019ll buy you a two - year warranty at some point because they\u2019re going to say that these items are working. So obviously, if they\u2019re deficient and not working, that\u2019s pretty easy to get the negotiations to, you know, hey look, the furnace didn\u2019t ignite. Of course they\u2019re going to help with that. But let\u2019s say the furnace is working, the AC is working, water heater is working but they\u2019re all old. As the listing agent, so I\u2019m sort of bouncing over to the seller side I\u2019m just going to say, look, I\u2019m buying The seller\u2019s buying you a warranty you\u2019re fine. Yeah, but that\u2019s not going to be enough They\u2019re gonna have to replace it soon. Extend the warranty, then have the seller buy two year warranty. Um, and then if and if those two years hasn\u2019t broken buyer, you can buy it pay for any extension of the warranty yourself. Which is, by the way, what I did when I bought my home and seller refused, refused, refused to help with these things. Um gave me bought me a warranty. I did hammer on my price. That\u2019s where I got it. So",
+      "timestamp_start": "00:06:37",
+      "timestamp_end": "00:15:55",
+      "source_line_start": 200,
+      "source_line_end": 223,
+      "section": "Upfront negotiation for old systems"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "and say, oh yeah, the furnace is, Five years old, and you find out after the inspection it\u2019s fifteen years old. Guess what? You have a clear runway to hit them with a bat. And so I\u2019ve done that many times too. Say hey, you know what? You know we thought that the root the furnace was five years old. Turns out it\u2019s fifteen. We did not anticipate that. Yes, it still has life yet left. Yes, it\u2019s still. You know, it\u2019s in working condition. But when we offered we offered under the assumption, it was five years old. Therefore, it will be replaced sooner than like. Sooner than later, like maybe within a ten four years or whatever, You might be able to come in and get a credit of some kind because of because of that. Um mis, you know, misrepresentation inadvertent misrepresentation up front. Um. So that\u2019s what I would highly recommend. You do is try to negotiate that at the beginning. Now sometimes sometimes uh you know, maybe you didn\u2019t get that negotiated at the beginning, that\u2019s fine or sometimes you sort of get into it and Let\u2019s say the seller is like, \u201cI am not giving you a reduction. I am not giving you a reduction because of these old things.\u201d You could say, \u201cOkay, Well, we will then during you know, during the negotiations, like let\u2019s go under contract. We\u2019ll send out an inspector and contractors will look at it then. \" And I have done that too as well and had the roofing contractors come back, saying, \" Y eah this roof is shot, or this roof is like has two or three years life left, or whatever it may be.\u201d I have successfully been able to negotiate, I think, three roofs this year. Three. Uh and and probably two in the last like couple months. Um so anyway, And by the way, Avery has got a great roofer, just uh. So you know, I came in with a really he set eighteen thousand dollars on a brand new roof, whereas everybody else was coming in twenty five to twenty seven. So, just FYI Avery\u2019s got a guy. He\u2019s got a guy. And so that helped with one of my negotiations. But on that one, I\u2019ll tell you what happened is I forgot. This is one where I just didn\u2019t ask that question up front. I don\u2019t know why. It might have been a busy weekend or whatever. I just didn\u2019t get that information we negotiated, went under contract, my inspector went out there, hey this roof\u2019s got some problems on the south facing shingles. The rest of it looks maybe okay. Roofer went out there and said south facing is pretty much immediate, the other stuff\u2019s maybe three or four years behind. Um, And this is where I felt bad, because now I am coming back to the seller, you know, saying hey look t here is a roof problem. But, we were able to work through that one get that one negotiated in part because it\u2019s a buyer\u2019s market right now. But  I recommend all those other things being addressed up front. I just do, And I found that to be much more successful if you are in a multiple bid situation. You you May not address that up front and intentionally just go under contract. If you\u2019re like, man, there are multiple offers coming in, don\u2019t address it up front. Get it under contract and then try to address it down the road. That\u2019s probably going to be safer because you\u2019re not going to win the bid otherwise. And so if you sense you\u2019re in a multiple offer situation, don\u2019t ask for the ages of the HVC and roof upfront. Just",
+      "timestamp_start": "00:15:55",
+      "timestamp_end": "00:21:27",
+      "source_line_start": 253,
+      "source_line_end": 297,
+      "section": "Misrepresented ages and multiple offers"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "radon, obviously. Is an issue too. And let me clarify on radon and meth real quick. There are certain levels where I\u2019ve found it to be successful to negotiate and certain levels where I have found. It\u2019s not successful to negotiate, just based on numerous of these negotiations. On radon, four point zero is where the magic number is. If it falls below that, it\u2019s difficult to get a seller to replace, you know, to help with radon. In a buyer\u2019s market, you might be able to get some radon help at a high three, but I\u2019ve. I haven\u2019t pressed that, but it\u2019s it\u2019s that one is in a in a seller\u2019s market. You\u2019re never going to get help above four points unless it\u2019s four point zero or above. Um, note if you have a crawl space, you could still do a radon test and if it is unfinished crawl  space, it\u2019s more expensive to actually put in a radon system like double just FYI. It\u2019s like three K or more. It\u2019s more expensive um, So radon and then meth, where I found the magic. Obviously, the state\u2019s number is one point zero, and that\u2019s on the divided out number. So you have your when you get your meth results, You\u2019ve got your aggregate number on the left side and then your divided out number in the middle. It\u2019s the middle number that the state is concerned about. So if you took, you know it comes in at a four and the inspector swabbed four areas, you\u2019re going to come in at a one point zero. If if it comes out a like two and he swabbed four areas, it\u2019s going to come out a point five. State\u2019s not going to be worried at point five. So, what what I\u2019ve found is this depending on sort of what we will call it a trace amount. If it comes in below the one point zero, it\u2019s now what is considered a trace amount, and I have at times been able to successfully get cleanses done. On trace amounts, but where I focus that",
+      "timestamp_start": "00:07:36",
+      "timestamp_end": "00:09:26",
+      "source_line_start": 111,
+      "source_line_end": 136,
+      "section": "Meth test interpretation"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "able to successfully get cleanses done. On trace amounts, but where I focus that conversation is the furnace HVAC system. That\u2019s typically where that trace will have congregated. And it\u2019s also possible, and I use this math with the sellers for justification. Let\u2019s say your aggregate amount comes in at a two, and you did four swabs, and so those four swabs now reduce it to a half. Well, It\u2019s possible that 100 % of the meth that was found came in on one swab. And, this why I don\u2019t like this, the way that the math state has come up with their math on this. But this the way they do it. So that means that if it came up, If you only had swabbed that one spot and it came in at a two, suddenly then home\u2019s contaminated and the state\u2019s going to require a clean. And so the hot spots are the cold air return, like the furnace area, the H VAC. So, typically speaking, when the aggregate score exceeds one, anytime the aggregate score exceeds one but is less than the state limit. But I go in there and I will often say, \u201cHey buyer, we may be able to get the seller to pay for a cleanse,\u201d but it\u2019ll probably be focused on the HVAC system. And it\u2019s possible one of those swabs. Came up as a two in a bedroom, but it\u2019s not typical. It\u2019s just based on historical, you know, evidence. So I can usually go back to seller and say, hey look, they want a meth cleanse on the H VAC system. It\u2019s possible that the entire score that came up on that two was in the furnace H VAC system, and that, that is indeed contaminated. Using that logic has helped me get that one across the finish line. It\u2019s not crazy expensive to get a cleanse on the furnace H VACs maybe, Seven hundred to fifteen hundred dollars, somewhere in that range. It\u2019s probably creeping toward the higher end of it now, but it\u2019s probably in that range. But that\u2019s different than like, say, four or five thousand bucks plus replacing carpets and things like that. So I\u2019ve been able to get that one across the finish line. Now where it\u2019s you are not going to have a prayer on anything like if you are if your aggregate numbers like below one, You are  not going to get help on anything because because what we we have now proven is. Despite the fact you swabbed several spots, you still couldn\u2019t get that up above to where the state\u2019s, you know, concerned. So, even if all of it came in on one swab, and it came in at a point eight, that that\u2019s still below the state\u2019s level of concern. So it\u2019s more difficult than that moment to get it across the finish line. You could still try and and I try if it\u2019s near one. I\u2019m still going to try if if it\u2019s near aggregate on the one is the aggregate. But I\u2019ve had a lot of them coming in lately at like point four and like point. Point four two like four four and then divided out amounts point one one, like it\u2019s that\u2019s traced so low that I that this is what I\u2019ve seen. Buyers are not back in the day. Buyers were getting scared of it. They\u2019re not getting scared of it now because in part, mostly because agents are more educated on this, and the industry as a whole. And um and I\u2019ve. So buyers aren\u2019t scared about it and I\u2019ve found it coming up without any issue on a resale. So I don\u2019t find it affecting resale. I don\u2019t find it affecting the purchase. So it\u2019s just not been an issue when it comes in that low. And I\u2019ve had probably two or three this year come in at really low traces. The other thing to note is point one zero is the limit of detection. And so sometimes like, I\u2019ve had some come in at like point one one. I mean, That\u2019s pretty much as low as you\u2019re going to get where the instrument can even detect the meth was there. So it\u2019s super, super tiny. Anyway, so that that\u2019s sort of where I handle the meth negotiations. But so that\u2019s sort of the safety and",
+      "timestamp_start": "00:09:26",
+      "timestamp_end": "00:13:03",
+      "source_line_start": 136,
+      "source_line_end": 187,
+      "section": "Meth negotiation strategy"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "is your roof? Furnace, water heater, and air conditioner. I ask every time. I then go  back and look at my listings. You\u2019re going to see in the agent remarks if it\u2019s newer stuff, I throw that in the public remarks like water heater, twenty six, furnace, twenty two, whatever That\u2019s super helpful for selling the home But. What I do is I will tuck ugly stuff into the agent remarks. And so like um. Can\u2019t remember if it was a listing, I just put up or a couple of listings. Anyway, you know, a lot of stuff was new. The water heater wasn\u2019t. So I made reference of that in the agent remarks. That way when they offer and they come try to come back later",
+      "timestamp_start": "00:23:13",
+      "timestamp_end": "00:25:09",
+      "source_line_start": 331,
+      "source_line_end": 340,
+      "section": "Listing agent upfront disclosure strategy"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "the agent remarks. That way when they offer and they come try to come back later and say, hey Craig, water heater\u2019s old we want whatever. I say uh agent that was known upfront. It was right there in the listing details. I put the specific year of that so that this would be avoided if you were to come back at this moment. I found that to be like a tail between the legs. You know, someone\u2019s listing by your age, I don\u2019t care because we\u2019re in a buyer\u2019s market. I don\u2019t care still going to be requested. But, what I\u2019ve found is a lot of more often than not that the it\u2019s a tail between the legs moment and they back away and remove their request. So it\u2019s easy and I let, you know, this part of this part of like winning these. These um like winning these listing agreements. I in part win these listing agreements because I will come in and say, look, we we have superior negotiating strategies. And let me give you just one. I don\u2019t want to bore you with all the strategies we use. Let me just give you one example of a strategy that saves you thousands of dollars. And these guys are listening and I say, here\u2019s exactly what I do with your, you know, You told me that your AC is new, your water heater is old and your furnace is old. Guess what? I\u2019m going to do on this? Here is how I handled this, and I just let them know. I let the ages of these things be known to the buyer upfront. And a lot of agents, they don\u2019t ever do this. I know because you all know this too. Go pull up listings; it\u2019s not in there. And so, And I let my clients know the reason why I let them know all this upfront is so that when they go under contract, they already know the ages of these items. And if they try to come back and take another bite of the apple. After the inspection, I remind them of this and it mitigates the repair requests. The sellers like fall into my hands like just they just love it. And so you say, And you can say that\u2019s just one example of negotiating that I do that gives you significant leverage to the tune of thousands of dollars. There are other techniques I also employ, But this is the difference between using a rookie agent and a very experienced agent. It just is. And so this one of those things, And this one technique I use to help with the repair requests that come in. Now, the second technique I use is obviously the home warranty. I use that obviously all the time. So, we do the home warranty\u2019s going to  cover that; these are in working condition. And I will often use this phrase: \"You\u2019re buying a nineteen fifties home. \" Some of the stuff will be new ;. Some of the stuff\u2019s not going to be new. We did not advertise this as a brand new home. ;. It\u2019s a nineteen fifties home. It should be expected that some things will not be new. You\u2019re going to get a mixture of stuff, and this is the mixture this home has. I\u2019ve used that phraseology and succeeded numerous times as well. But the home warranty, if they keep pushing, fine, we\u2019ll buy you a two year warranty. Like you sort of go to where they back off, and I found that two year warranty can be a successful thing as well. And that\u2019s been helpful. It\u2019s been super rare that my clients have ever had to give any kind of large concession on anything. I\u2019ll just let you know that. It\u2019s crazy rare because I\u2019ve been addressing these upfront at the time of offer, and it\u2019s great. So yes, sometimes at the offer stage they\u2019re going to come in and say, Hey, we saw that the furnace is",
+      "timestamp_start": "00:25:09",
+      "timestamp_end": "00:28:08",
+      "source_line_start": 340,
+      "source_line_end": 388,
+      "section": "Age-appropriate expectations language"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "buyer\u2019s going to back out. Here are some big ticket items that are massive expenses that likewise will cause the buyer to back out if these things are not addressed. And and then you just you just threaten that and um. Even if even if so you can\u2019t lie, but you sort of go to your buyer and get permission to say, Can I be aggressive and give the indication to the seller that these are concerning enough to you that you may that you may back out if you don\u2019t, these get don\u2019t get fixed or something like that. Get their permission to be honest in the communications, but but you\u2019ll want to come in strongly. Threaten this, that and the other, and then see what see what is going what\u2019s going to happen. Some people have a Some listing agents have effectively called my bluff sometimes, because I\u2019m asking for way too many things and I. And I\u2019m just following sellers buyers instructions, right. I\u2019m not like, I\u2019m not like coercing buyers into a particular strategy or request amount. And sometimes buyers ask for a lot and we just don\u2019t get it. Some some sellers call the bluff and some don\u2019t like this other one like I, just steamrolled, steamrolled the seller this week again. And I got the deck, and you if i was a seller i would have but. I already got big price reductions to begin with. Then I got the deck, And then I got one thousand nine hundred and fifty dollars of other stuff as well. If I were the seller, I would have kicked back hard at that moment because the buyer was still going to buy. They were so ecstatic about the deck that um you know, and they and then they and then they\u2019re like, I thought they were going to drop the other requests. They\u2019re like, Well, we\u2019re super happy with the deck. But Craig can you go back and just push them one more time and see if we can get these other things? And they were totally fine if the seller was going to say no, take a hike. I went back and got 1,950 more bucks from them. And again, it comes down to the phraseology. You\u2019re not going to go in there and say, you know, it would be really nice. You know we\u2019re really appreciative about the deck, but it would be really nice if we could take care of these other things, too. Like the buyer would like that if possible. I just opened the door in like three different places on that sentence. I just gave you where. The seller should walk through the door or just close the door and say, \u201cThis is not happening.\u201d But instead, I went back said, \"The deck was. \" The buyer expresses significant appreciation for the deck because of its massive safety problems. It needed to be new and we\u2019re grateful that the seller recognized that. The buyer still  has great concern about the fact that there\u2019s a broken window and that the jetted tub has a leak in it. And I can\u2019t remember something else. Um, which in my mind, yeah, I mean those were valid, but the seller could have come back and said, \u201cLook we we understand these things are still problematic. The home\u2019s not brand new. We just gave you a twelve thousand dollars deck in addition to significant price reductions.\u201d And the seller just is not interested in doing anything else. They feel that you are adequately adequately compensated by everything, we\u2019ve already negotiated so far. Buyers are going to walk away at that, like buyers are probably still going to move forward. But but you know, I came in strongly enough, the seller didn\u2019t push. Had the seller pushed, I probably would have pushed back still. Why? Because, we have time in the due diligence to keep pushing and pushing and pushing until the due diligence deadline comes up. And so, but this seller just folded again and said, \u201cFine, I\u2019ll give you nineteen fifty thousand nine hundred fifty bucks.\u201d And my buyer\u2019s like, \u201cDude Craig, you just you\u2019re putting money in my pocket man.\u201d And this is why you hire an experienced agent. So those are the main things. I\u2019ll note a couple other things here. One thing I will note is this, It is be the agent that acts as if this your purchase or that this a purchase of your sibling and treat the negotiations as such, because I\u2019ve seen agents where you\u2019re representing the buyer, inspection requests, their inspection\u2019s done. You\u2019re looking down the list, you\u2019re like, eh there\u2019s some issues with the home. There is, you know, And but you know it\u2019s like man, it\u2019s going to take a little bit of your time and mental capacity to fight with the listing agent about some repairs. And if you really bring up too many concerns to the buyer, what if they back out? Then I am going to have to they\u2019re going to, i am going to be back out on the street",
+      "timestamp_start": "00:33:04",
+      "timestamp_end": "00:34:02",
+      "source_line_start": 421,
+      "source_line_end": 485,
+      "section": "Aggressive representation mindset"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "concessions. I think like conventional, it\u2019s like three or six percent. But where do you typically, like your go to, Like do you ask for concessions or just reduce in price or have them just pay for it? So so if the if the repair money is going directly to the contractor, it does not count as a seller contribution to the buyer. So you you could have, Twenty percent of the home go directly toward a contractor. Oh, okay. Actually, I did not know that. Yeah, so that\u2019s yeah. So you\u2019re yeah, but that\u2019s a great question. I yeah. And on this one, I already had negotiated seller concessions toward repair, like not for repairs toward closing costs. And then in this one, the seller was actually a flip company and they had contractors. So they just they repaired it all prior to closing on this on",
+      "timestamp_start": "00:36:22",
+      "timestamp_end": "00:37:50",
+      "source_line_start": 520,
+      "source_line_end": 533,
+      "section": "Contractor credits and contribution limits"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "inspection reports that just never succeed, that I\u2019ve never seen succeed in the history of ever. And so when you get a buyer agent request on these things, you know they\u2019re a rookie.  I'll just say that. And so I\u2019m probably not going to be give you a comprehensive list, but let me give you some negative slope with the yard. That\u2019s common on older homes. It\u2019s not correct. Like, You don\u2019t want to have a negative slope where water could be like percolating back toward the foundation, but it\u2019s common. Um You\u2019re never going to get that on our negotiation repair trees that are sort of like I don\u2019t know trees that have. Well, I take that back. There can be some tree issues you might be able to negotiate where there are power lines and trees getting in the way because it\u2019s safety. Cracks in the concrete never succeed as in ever, because they are one hundred percent visible during the time of the walkthrough. So if you if you\u2019re if the driveway is pitted, spalling, if the if there\u2019s like. Like displacement in the sidewalk because of settling issues, you\u2019re never going to get any of that successfully negotiated ever. So I tell buyers, it\u2019s not going to ever work. Like it doesn\u2019t. And whenever requests come in on the seller side and I\u2019m representing a listing agent, I say, I tell them in kind words, go take a hike. You already saw that before you went under contract. It\u2019s not fair to come back now. Um carpet if you\u2019re representing the seller, you should never cave on carpet, After the fact, now at the time of negotiating the initial offer, yes. After the fact, it is a heck no. Like you already knew the carpet condition when we went under contract.",
+      "timestamp_start": "00:37:50",
+      "timestamp_end": "00:39:35",
+      "source_line_start": 538,
+      "source_line_end": 561,
+      "section": "Items that won't negotiate"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "verbally. And he\u2019s like, oh, I don\u2019t send inspection reports to my sellers unless they specifically ask it. So I\u2019m like, okay, well, if you don\u2019t do that, then I didn\u2019t tell him this. I was like, They\u2019re not going to have any context on why we\u2019re asking for what we are, unless you send it to them. So instead of having a verbal conversation, I\u2019m putting it all in the resolution of due diligence, so he has to present it to them with page references to all the reports. I see. Okay. So what? Okay. Okay. I\u2019ve got multiple comments on this. First of all, The listing agent is under fiduciary responsibility and state law to provide that to that document to their seller. Like they, and it comes it\u2019s under the principle of agency. What the what the agent knows, the principal knows. And if you\u2019ve provided them an inspection report, that\u2019s so much knowledge. There is absolutely no way it conveys to the seller without giving them that same document. So, there\u2019s no way for you to fulfill your agency responsibility. What you as an agent knows that the principal is now bound to also be uh to also know the same details. So they have to provide that document, and that would be under fiduciary responsibility. Like, that is a requirement; they have to send that every time. They have to. Now, What you are saying is also correct : that addenda like offers and including now you are under contract. But you are not presenting an offer have to be presented. So, you are correct; we\u2019ll get in front of the seller. Here is where you could run into a potential issue in underwriting. Is this a cash deal or is this is this financed? No, it\u2019s it\u2019s financed. And, that was in the back of my mind of we I\u2019m trying to force the seller\u2019s agent hand here, Even though I know he\u2019s supposed to by including a very detailed list versus the four like the four bullet points we want. So here here\u2019s here\u2019s where it may play to your advantage, but you may have a hoop you now have to jump through. But let\u2019s let\u2019s go through this so, When you reference the inspection report in the RePSI, the underwriter now has the ability to request the report. If it\u2019s not ever referenced, the underwriter can never say, \u201cCertainly, we want in our files.\u201d They can ask for it. But if it\u2019s referenced they can say, \u201cOh we see that an inspection report is referenced. We want in our files.\u201d Then",
+      "timestamp_start": "00:40:43",
+      "timestamp_end": "00:42:29",
+      "source_line_start": 585,
+      "source_line_end": 618,
+      "section": "Fiduciary duty for inspection reports"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "that the seller won\u2019t accept it as written, I let that addendum lapse. I and then I contact the other agent and say, \u201cLook, let\u2019s agree upon these verbally,\u201d and then have you resubmit what we\u2019ve verbally agreed upon. That way, what\u2019s submitted in writing does get signed, and the lenders are good with that. Like if you ask for five repairs, the seller does says, \u201cI\u2019ll do these five repairs.\u201d At most the underwriter will say, \u201cI want confirmation before closing that the repairs were completed to the buyer\u2019s satisfaction.\u201d So at most, that\u2019s what the buyer\u2019s underwriter is going to ask for. So you are opening yourself to a little bit of a potential. You might be walking into a hornet\u2019s nest, in other words, Because if the seller counters you and you go back and forth in writing and come to some agreement, and like some of the things you requested, don\u2019t get done, the underwriter may come back and now stipulate that they get done. And may also stipulate receiving a copy of the inspection report. Yeah, that was it\u2019s been in the back of my mind, But I am also just not confident the seller will be given everything they need to help us. And to be frank, Like my buyer can\u2019t afford to deal with a lot of these repairs after closing. So I would almost rather have the risk of them being like, hey, you have to fix this to qualify. That way, the seller is like, oh, well, if I want to do this deal like. I need to get these things fixed, which they really should, in my opinion. Perfect. Well then the strategy you\u2019re using will bring some additional firepower to it. When is your due diligence deadline?  July 31 st. Okay. And I love that too. I love that you\u2019re getting this process negotiated. I hate when it\u2019s just stressful when it\u2019s same day like, well my deadline\u2019s in five hours and nine minutes, It gets really hard at that point. And typically, what I do to sort of take the pressure off is I\u2019ll submit, you know, a due diligence deadline request, you know, extension from the seller. Like representing the seller and say, look, We need a couple days to have our, we need like a few days to have our own contractors. Look",
+      "timestamp_start": "00:42:29",
+      "timestamp_end": "00:45:12",
+      "source_line_start": 640,
+      "source_line_end": 673,
+      "section": "Written vs verbal repair negotiations"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct or near-direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). Speakers 2 and 3 are agent participants. Craig shares specific dollar amounts ($12K deck, $18K roof) as real examples. The 'three buckets' framework is Craig's own methodology. Meth test numbers are specific to Utah state standards. Some broker_guidance items synthesize multiple transcript passages - these are labeled with multiple citation_refs.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. The '20% of home value' contractor credit limit mentioned in broker_guidance was stated by Craig in the transcript."
+}
