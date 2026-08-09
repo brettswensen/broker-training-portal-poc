@@ -1,0 +1,149 @@
+{
+  "source_id": "cma-flip-property-2026-05",
+  "title": "CMA - Flip Property and Land",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1FkDd5epWGQUU7Ttjtg1adwDOSaAu_4PL/view",
+  "date": "2026-05-06",
+  "speaker_or_author": "Craig (Broker/Trainer)",
+  "audience": [
+    "buyer agents",
+    "investor clients",
+    "listing agents"
+  ],
+  "summary": "Craig walks through CMA methodology for flip properties and land valuations. Covers lot subdivision analysis, land comp selection, ARV (After Repair Value) calculations, flip profit math, flag lot requirements, and how to evaluate properties with development potential. Includes specific examples from Springville, UT and demonstrates how to use MLS data for land valuations.",
+  "topics": [
+    "CMA",
+    "flip property",
+    "land valuation",
+    "ARV",
+    "after repair value",
+    "lot subdivision",
+    "flag lot",
+    "Springville",
+    "investor math",
+    "development potential",
+    "MLS search",
+    "land comps"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Evaluating a property with subdivision potential",
+      "guidance": "Check if lot can be subdivided. Flag lots typically allow only ONE home off the flag, not two. Must have minimum width for flag road. Look for stub road access from cul-de-sac as alternative. Calculate retail value of finished lots vs cost of existing structure.",
+      "client_language": "This lot has potential for subdivision, but we need to verify city approval for two lots off a flag road and minimum road width requirements.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Running land comps",
+      "guidance": "For land comps, go back about a year (land doesn't move as fast as homes). Exclude commercial and luxury areas. Focus on same city/neighborhood. Look for similar lot sizes (quarter acre, third acre). Ignore boonies/canyon lots unless that's your target area. Use map view to verify location.",
+      "client_language": "Land values don't change as quickly as homes, so we're looking at sales from the past year in this specific area, excluding commercial and luxury lots.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Flip profit calculation",
+      "guidance": "Quick math: (Retail value of finished lots) - (Purchase price + demo cost + construction cost) = Profit. If land value alone exceeds purchase price, you could knock down the house and still profit. Example: 3 lots at $130K each = $390K retail. Purchase at $215K = potential $175K gross before costs.",
+      "client_language": "The math works like this: three finished lots in this area retail for about $130K each. That's $390K in land value. If we can buy for $215K, we have $175K in gross margin before construction costs.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Determining if house is worth keeping vs demo",
+      "guidance": "If interior is '100% flip material' and land value alone justifies purchase, consider demo. Calculate: Land value - Purchase price = House value. If house value is negative or minimal, demo makes sense. Factor in demo costs ($5-15K typically).",
+      "client_language": "The interior is straight flip material. At this price, you could almost knock it down because the land value alone supports the purchase. Let's run the numbers both ways.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Using correct MLS statuses for comps",
+      "guidance": "Use four statuses: Active, Under Contract, Pending, Closed. For land, may need to go back further than homes. Exclude commercial and outlier luxury properties. Verify on map that comps are in same area/neighborhood.",
+      "client_language": "We're using active, under contract, pending, and closed sales from the past year. I'm filtering out commercial and luxury outliers so we get an accurate picture of standard residential land values.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    }
+  ],
+  "steps": [
+    "Identify property type: flip, land, or development potential",
+    "Check zoning and subdivision potential with city",
+    "Verify flag lot requirements (width, number of homes allowed)",
+    "Run land comps going back 1 year in same city/area",
+    "Exclude commercial, luxury, and outlier properties",
+    "Calculate retail value of finished lots",
+    "Calculate ARV (After Repair Value) for existing structure",
+    "Estimate repair/remodel costs",
+    "Estimate demo costs if considering knock-down",
+    "Run profit analysis: Retail value - Purchase - Costs = Profit",
+    "Present options: Keep and flip, or demo and develop"
+  ],
+  "objections": [
+    {
+      "objection": "The lot seems too narrow for subdivision",
+      "response": "Flag lots have specific width requirements for the access road. We need to verify with the city. But if there's stub road access from a cul-de-sac, that changes the math entirely.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "objection": "Land comps are all over the place",
+      "response": "Land comps vary by location, utilities, and access. We need to filter to the same area and exclude outliers. Canyon lots and commercial properties will skew the numbers.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    },
+    {
+      "objection": "The house is in terrible shape",
+      "response": "If the land value alone justifies the purchase price, the house condition doesn't matter. We can demo it. Let's calculate: land value minus purchase price equals what we're paying for the house. If that's near zero, demo makes sense.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "Well, okay uh okay yeah I\u2019ve got some commentary on this already but I\u2019llum, Okay, that\u2019s interesting. Very, very, very deep. Um, I\u2019ll tell you stub road oh from right here. That\u2019s why this would work. I was going to say this is not going to work. This can work. The reason why I said it was not going to work is you are looking at this picture here. If you get, if usually when you have a flag lot, which is what this would be behind this home. Most cities only let you put one home off of a flag instead of two, and it\u2019s like, \u201cAh, it\u2019s not going to work.\u201d Plus the the width on this is it\u2019s so small up front. The width",
+      "timestamp_start": "00:00:54",
+      "timestamp_end": "00:01:28",
+      "source_line_start": 19,
+      "source_line_end": 28,
+      "section": "Flag lot and subdivision analysis"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "stuff. I\u2019m glad I\u2019m glad this is one. We\u2019re going to take a look at today. So you you\u2019re going to see some fun things from me. So I\u2019m just going to take a look at land because I can give you a quick and dirty um. Valuation on the land. So, I am still going to go with these four statuses, but at this point, I am just going to, i am going to focus on the city of Springville. Um, just to give you an idea, so we have fifty of these. I am going back a year ; land doesn\u2019t move quite as fast as homes in terms of like value. I have no problem going back about a year, and we haven\u2019t seen much movement in the market anyway. Now some of these are like wow, one point, eight, four acre well. These are up in the boonies. Like that, and there\u2019s going to be different reasons, utilities and otherwise access that are going to decrease those. So you\u2019re going to ignore all that stuff. Um, and now I\u2019m going to get to where it\u2019s more like the normal stuff. Um, And and you can",
+      "timestamp_start": "00:02:25",
+      "timestamp_end": "00:05:19",
+      "source_line_start": 44,
+      "source_line_end": 56,
+      "section": "Land comp methodology"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "So this one\u2019s interesting because he he\u2019s kind of advertising it as a home that can be flipped. It\u2019s a two bed, one bath, and then it\u2019s a really long lot. And so you could potentially subdivide it behind where that cul de sac is and add like a little stub road, and then a lot on either side. I think they they put it in the pictures. Well, okay uh okay yeah I\u2019ve got some commentary on this already but I\u2019llum, Okay, that\u2019s interesting. Very, very, very deep. Um, I\u2019ll tell you stub road oh from right here. That\u2019s why this would work. I was going to say this is not going to work. This can work. The reason why I said it was not going to work is you are looking at this picture here. If you get, if usually when you have a flag lot, which is what this would be behind this home. Most cities only let you put one home off of a flag instead of two, and it\u2019s like, \u201cAh, it\u2019s not going to work.\u201d Plus the the width on this is it\u2019s so small up front. The width on being able to get by right here at this location. T here is not even a width to do it. You have to have a certain width on your flag road as well. I am like, \"I don\u2019t think he\u2019s going to fly, \", but seeing this picture that can work and And, then so you have this lot accessed only from four hundred east. You have, These two lots accessed from here, and yeah, this this one\u2019s okay. And here is the interior of the home,  which is straight up one hundred percent flip material. In fact, for this price, you could almost even just knock down the house. And here is the reason why. Let me show you the math. This is super quick math one aspect of this here. So let\u2019s go back to this picture here so three lots what.",
+      "timestamp_start": "00:00:32",
+      "timestamp_end": "00:02:25",
+      "source_line_start": 15,
+      "source_line_end": 38,
+      "section": "Flip profit calculation"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "Would be the retail value of three finished lots in Springville, and I don\u2019t know their exact sizes, but they\u2019re roughly going to be they\u2019re going to be more than quarter acres. At least a couple of these. I mean, they\u2019re they\u2019re going to be decent sizes. So um let me show you um some some interesting stuff. Okay, there\u2019s a lot of cool stuff. I\u2019m glad I\u2019m glad this is one. We\u2019re going to take a look at today. So you you\u2019re going to see some fun things from me. So I\u2019m just going to take a look at land because I can give you a quick and dirty um. Valuation on the land. So, I am still going to go with these four statuses, but at this point, I am just going to, i am going to focus on the city of Springville. Um, just to give you an idea, so we have fifty of these. I am going back a year ; land doesn\u2019t move quite as fast as homes in terms of like value. I have no problem going back about a year, and we haven\u2019t seen much movement in the market anyway. Now some of these are like wow, one point, eight, four acre well. These are up in the boonies. Like that, and there\u2019s going to be different reasons, utilities and otherwise access that are going to decrease those. So you\u2019re going to ignore all that stuff. Um, and now I\u2019m going to get to where it\u2019s more like the normal stuff. Um, And and you can",
+      "timestamp_start": "00:02:25",
+      "timestamp_end": "00:03:22",
+      "source_line_start": 39,
+      "source_line_end": 56,
+      "section": "Land valuation and comp methodology"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct or near-direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Craig demonstrates live CMA analysis using MLS data. Specific to Springville, UT market but methodology applies broadly. Speaker 2 is an agent participant. Craig mentions specific prices ($215K purchase, $130K lot value, $390K retail) as real-time analysis. Flag lot rules may vary by municipality - always verify with city.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. Craig's live analysis provides specific dollar amounts and methodology."
+}

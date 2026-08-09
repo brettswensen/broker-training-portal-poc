@@ -88,7 +88,7 @@ const demoAnswers = {
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const appMarkers = ['design-pass','library','playbooks','topics'];
+  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -170,6 +170,26 @@ function card(t){
 }
 
 
+const scriptLibrary = [
+  {category:'Repair Negotiations', title:'Inspection repair request', situation:'Buyer wants to respond after inspection.', script:'Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or confidence from the cosmetic items, then choose the cleanest path: repair, credit, concession, or price adjustment.', playbook:'Repair Negotiation Playbook'},
+  {category:'Transaction Coordination', title:'TC introduction', situation:'Client is under contract and needs to know who handles what.', script:'I’m bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. I’ll stay your main point of contact while the TC helps keep the process moving cleanly.', playbook:'Contract-to-Close Checklist'},
+  {category:'Pricing', title:'Unusual property CMA', situation:'Seller has a property that does not fit easy comps.', script:'This is not a perfect apples-to-apples CMA, so I’m going to show you the closest evidence, call out where the comp set breaks down, and explain the pricing range instead of pretending there is one exact number.', playbook:'CMA / Pricing Playbook'},
+  {category:'Investor Clients', title:'1031 timing handoff', situation:'Client asks about selling and avoiding taxes.', script:'Because this may involve a 1031 exchange, timing matters. Before funds are received, a qualified intermediary should be involved. Let’s get the QI or CPA into the conversation before giving tax-specific direction.', playbook:'Investor Client Playbook'}
+];
+function renderScriptPreview(){
+  const grid = document.getElementById('scriptPreviewGrid');
+  if(!grid) return;
+  grid.innerHTML = scriptLibrary.map(item => `<article class="script-card"><span>${escapeHtml(item.category)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.situation)}</p><blockquote>${escapeHtml(item.script)}</blockquote><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(item.script).replace(/'/g,'&#39;')}')">Copy script</button><button type="button" onclick="saveScriptItem(this,'${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.script).replace(/'/g,'&#39;')}')">Save</button><a href="${playbookUrl(item.playbook)}">Open playbook</a></div></article>`).join('');
+}
+function renderSavedWorkspace(){
+  const list = document.getElementById('savedWorkspaceList');
+  const count = document.getElementById('savedWorkspaceCount');
+  if(!list) return;
+  const items = readSavedBrokerItems();
+  if(count) count.textContent = `${items.length} saved`;
+  list.innerHTML = items.length ? items.slice(0,5).map(item => `<article><span>${escapeHtml(item.type)}</span><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail || 'Saved for later review.')}</p></article>`).join('') : '<p class="muted">Saved answers and scripts will appear here during the demo. Use the Save buttons in Ask or Scripts to test it.</p>';
+}
+
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
   const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
@@ -228,10 +248,12 @@ function sourcePill(source, index){
 
 function sourceCard(source, index){
   const label = source.name || 'Broker training source';
+  const why = source.why || whySourceMatters(label, source);
   return `<article>
     <span>${escapeHtml(source.match || 'Source')} match</span>
     <strong>${escapeHtml(label)}</strong>
     <small>${escapeHtml(source.cite || 'Broker training library')}</small>
+    <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
     <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
     <div class="source-card-actions">
       <a href="${librarySearchUrl(label)}">Read/search</a>
@@ -239,6 +261,53 @@ function sourceCard(source, index){
       <a href="${librarySearchUrl(label)}&type=audio">Listen</a>
     </div>
   </article>`;
+}
+
+function whySourceMatters(label, source={}){
+  const text = [label, source.cite, source.quote].join(' ').toLowerCase();
+  if(text.includes('repair') || text.includes('inspection')) return 'Gives the agent a practical way to separate real repair issues from wish-list items.';
+  if(text.includes('1031') || text.includes('tax') || text.includes('exchange')) return 'Flags timing-sensitive guidance and reminds the agent when to involve the QI or CPA.';
+  if(text.includes('cma') || text.includes('pricing') || text.includes('land') || text.includes('flip')) return 'Helps the agent explain pricing with evidence instead of pretending there is one perfect number.';
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return 'Clarifies handoffs, deadlines, and who owns client communication after acceptance.';
+  if(text.includes('construction') || text.includes('builder')) return 'Shows how builder and development conversations differ from normal resale.';
+  return 'Connects the answer back to team training the agent can review before advising the client.';
+}
+
+const savedBrokerBrainKey = 'brokerBrainSavedItemsV1';
+function readSavedBrokerItems(){
+  try { return JSON.parse(localStorage.getItem(savedBrokerBrainKey) || '[]'); } catch (_) { return []; }
+}
+function writeSavedBrokerItems(items){
+  try { localStorage.setItem(savedBrokerBrainKey, JSON.stringify(items.slice(0,24))); } catch (_) {}
+}
+function saveBrokerItem(type, title, detail=''){
+  const items = readSavedBrokerItems();
+  const item = {type, title, detail, savedAt: new Date().toISOString()};
+  writeSavedBrokerItems([item, ...items.filter(x => x.title !== title || x.type !== type)]);
+  renderSavedWorkspace();
+}
+function saveAnswer(button){
+  const card = button.closest('.ai-answer');
+  const title = card?.querySelector('h3')?.textContent?.trim() || 'Saved broker answer';
+  const detail = card?.querySelector('.answer-summary')?.textContent?.trim() || '';
+  saveBrokerItem('Answer', title, detail);
+  const old = button.textContent;
+  button.textContent = 'Saved';
+  setTimeout(()=>button.textContent = old, 1200);
+}
+function saveScriptItem(button, title, script){
+  saveBrokerItem('Script', title, script);
+  const old = button.textContent;
+  button.textContent = 'Saved';
+  setTimeout(()=>button.textContent = old, 1200);
+}
+function escalationList(answer){
+  const text = [answer.title, answer.intent, ...(answer.queryTerms || []), ...(answer.steps || [])].join(' ').toLowerCase();
+  if(text.includes('1031') || text.includes('tax')) return ['Client is close to closing or already received funds.', 'The agent is being asked for tax advice.', 'A qualified intermediary or CPA has not been looped in yet.'];
+  if(text.includes('repair') || text.includes('inspection')) return ['The repair request involves safety, insurance, lending, or habitability.', 'The other side is emotional or threatening cancellation.', 'Deadlines are close and the TC or broker has not reviewed the response.'];
+  if(text.includes('cma') || text.includes('pricing') || text.includes('land') || text.includes('flip')) return ['The property does not fit normal comparable sales.', 'The client wants a number that the market evidence does not support.', 'The pricing discussion may create appraisal, lending, or disclosure risk.'];
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return ['A deadline is unclear or has changed.', 'The client is confused about who owns the next step.', 'Documents, lender details, title, or inspection timing are incomplete.'];
+  return ['The issue touches tax, legal, lending, inspection, or contract interpretation.', 'The agent is uncertain after reading the relevant training.', 'A client decision is urgent or could put the transaction at risk.'];
 }
 
 function answerMarkup(answer){
@@ -271,7 +340,7 @@ function answerMarkup(answer){
       </section>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">WHY THIS WORKS</p>
+        <p class="eyebrow">WHAT TO DO NEXT</p>
         ${whyList}
       </section>
 
@@ -287,10 +356,16 @@ function answerMarkup(answer){
         </div>
       </section>
 
+      <section class="answer-section escalation-section">
+        <p class="eyebrow">ESCALATE IF</p>
+        <ul class="broker-take-list">${escalationList(cleanAnswer).map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>
+      </section>
+
       <div class="answer-route-links" aria-label="Go deeper in Broker Brain">
         <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Find related training</a>
         <a href="${appPath('/playbooks/')}">Open playbooks</a>
         <a href="${appPath('/topics/')}">Browse topics</a>
+        <button type="button" onclick="saveAnswer(this)">Save answer</button>
       </div>
       <details class="sources-used source-evidence-panel">
         <summary>Sources to check</summary>
@@ -311,20 +386,27 @@ function relatedPlaybooksFor(text){
   return (scored.length ? scored : [{p:playbooks[1], index:1},{p:playbooks[2], index:2},{p:playbooks[4], index:4}]).slice(0,3).map(item => ({...item.p, index:item.index}));
 }
 
-function loadingMarkup(query, answer){
-  const terms = answer.queryTerms.map(t=>`<span class="tag">${t}</span>`).join('');
+function askProgressSteps(answer){
+  const terms = (answer.queryTerms || []).map(t=>`<span class="tag">${t}</span>`).join('');
+  return [
+    {label:'Searching the training library', meta:'Scanning saved brokerage training'},
+    {label:'Finding matching transcript sections', meta:terms || 'Looking for the closest examples'},
+    {label:'Checking the broker notes', meta:`${(answer.sources || []).length} likely matches found`},
+    {label:'Preparing the recommended next step', meta:'guidance + reasoning + client wording'}
+  ];
+}
+
+function loadingMarkup(query, answer, visibleStep=0){
+  const steps = askProgressSteps(answer).slice(0, Math.max(1, visibleStep + 1));
   return `
-    <div class="ai-answer thinking">
+    <div class="ai-answer thinking" aria-live="polite">
       <div class="answer-topline">
         <span class="spark pulse">✦</span>
-        <div><h3>Writing broker guidance...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
-        <span class="confidence">Checking training</span>
+        <div><h3>Working on your broker answer...</h3><p>Question: “${escapeHtml(query || 'How should I help this agent?')}”</p></div>
+        <span class="confidence">In progress</span>
       </div>
-      <div class="ai-steps">
-        <div class="step active"><i></i><span>Searching training library</span><em>6 sources scanned</em></div>
-        <div class="step active"><i></i><span>Finding matching transcript sections</span><em>${terms}</em></div>
-        <div class="step active"><i></i><span>Checking the training notes</span><em>${answer.sources.length} matches found</em></div>
-        <div class="step active"><i></i><span>Preparing the recommended next step</span><em>guidance + reasoning + client wording</em></div>
+      <div class="ai-steps live-steps">
+        ${steps.map(step => `<div class="step active"><i></i><span>${escapeHtml(step.label)}</span><em>${step.meta}</em></div>`).join('')}
       </div>
       <div class="skeleton"></div><div class="skeleton short"></div>
     </div>`;
@@ -392,11 +474,20 @@ function openTraining(title){
   document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
 
+function prefillAskQuestion(question){
+  const askInput = document.getElementById('askInput');
+  const answerEl = document.getElementById('answer');
+  if(!askInput) return;
+  askInput.value = question;
+  askInput.focus({preventScroll:true});
+  document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(answerEl){
+    answerEl.innerHTML = '<p class="muted">Question loaded. Hit Ask the Broker when you’re ready for Broker Brain to search the training and write the answer.</p>';
+  }
+}
+
 function askAbout(topic){
-  const question = `What should I know about ${topic}?`;
-  document.getElementById('askInput').value = question;
-  document.getElementById('ask').scrollIntoView({behavior:'smooth'});
-  runAsk(question);
+  prefillAskQuestion(`What should I know about ${topic}?`);
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
@@ -420,9 +511,9 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
   }
   document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
-document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('askInput').value=b.dataset.ask;runAsk(b.dataset.ask);}));
+document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
-renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
+renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();renderScriptPreview();renderSavedWorkspace();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
@@ -603,13 +694,34 @@ function transcriptSourcesFor(query, fallbackAnswer){
 }
 
 const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+let askProgressTimers = [];
+let askRequestId = 0;
+
+function clearAskProgressTimers(){
+  askProgressTimers.forEach(timer => clearTimeout(timer));
+  askProgressTimers = [];
+}
+
+function scheduleAskProgress(answerEl, query, fallback, requestId){
+  clearAskProgressTimers();
+  [1, 2, 3].forEach((step, index) => {
+    askProgressTimers.push(setTimeout(() => {
+      if(requestId !== askRequestId) return;
+      answerEl.innerHTML = loadingMarkup(query, fallback, step);
+    }, 450 * (index + 1)));
+  });
+}
 
 async function runAsk(query){
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
   const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
   const answerEl = document.getElementById('answer');
-  answerEl.innerHTML = loadingMarkup(query, fallback);
+  if(!answerEl) return;
+  const requestId = ++askRequestId;
+  const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
+  answerEl.innerHTML = loadingMarkup(query, fallback, 0);
+  scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 2200);
@@ -623,6 +735,8 @@ async function runAsk(query){
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
     const liveAnswer = await response.json();
+    await minimumProgress;
+    if(requestId !== askRequestId) return;
     answerEl.innerHTML = answerMarkup({
       ...fallback,
       ...liveAnswer,
@@ -631,8 +745,11 @@ async function runAsk(query){
     });
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
+    await minimumProgress;
+    if(requestId !== askRequestId) return;
     answerEl.innerHTML = answerMarkup(fallback);
   } finally {
+    if(requestId === askRequestId) clearAskProgressTimers();
     clearTimeout(timeoutId);
   }
 }
