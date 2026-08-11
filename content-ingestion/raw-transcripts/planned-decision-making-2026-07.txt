@@ -1,0 +1,683 @@
+2026 Jul 6 Planned Decision Making
+2026-08-11 14:32:51
+
+00:00:06 Speaker 1
+All right, we’ll get this thing going. We got the recording started again. I am going
+to make one quick tech change here and put this up. Do not disturb. All right.
+00:00:38 Speaker 1
+Now, as we go through this, i you have questions, eel ree to to uh just cut me o.
+It’s, it gets a little weird when we’re doing the training this way, because um like I
+said, the the Zoom link is one login. And what I’m going to show you is on a
+dierent login. So I kind o have to bounce back and orth to see what’s going on
+Zoom. So um right now, do you see a screen that says, Plan To Decision Making?
+Yep Okay, So, A lot o what we’re going to go through today is rom the book " T. He
+Art o Clear T hin king " by John Hazard Lee. Hazard is his light nickname. He was
+an F sixteen pilot who then switched ; was one o the irst pilots to change to the F
+thirty ive while it was in experimental stage, and then his experience led to him
+being.
+00:01:34 Speaker 1
+Assigned to design the light instruction process or the incoming F thirty ive pilots,
+And one o the irst things he realized was that the F sixteen, while it was pretty
+complex, Was still being. He was trained on it the same way that we were training
+pilots clear back in World War Two, where you just knew everything about the
+plane. And i you got in a sticky situation, You just knew what the plane could do
+and just did what you were told to do next. They weren’t really taught how to think
+through the process o what makes the most sense or my next action. You just
+knew what the plane could do and you just did it. Well, The problem with the F thirty
+ive is that the F thirty ive is extremely computer dependent. Like, The F sixteen
+computer has about as much memory in it as your cell phone.
+00:02:34 Speaker 1
+Where, an F thirty ive has over a billion lines o code that keeps the plane in the air,
+You couldn’t know everything there is to know about the airplane because t here is
+too much to know. And it updates too quickly. And so he said, Well, look what we
+need to do is teach pilots how to think. What makes the most sense to do here and
+make that decision? But they’ve got to be able to do it under stress. And he
+recounts in this book, how he’s trying to explain to the Air Force up. Upper brass,
+that beore they teach them how to ly the plane, They’ve got to teach them how to
+think and handle stress and decision making in stress. And the air orce, o course
+
+being the air orce said well prove it. Prove, we need to make. We need to change
+what we’ve been doing or ity years. So, they set up a double blind with a bunch o
+cadet with a bunch o trainees one group. They trained the traditional way.
+00:03:31 Speaker 1
+His group, they trained beore they ever even trained him anything about the
+airplane. They trained him on decision making and then trained him on the aircrat.
+Well, It should come as no surprise that those that were trained to think and igure
+out how to make decisions in stressul situations outscored those that were just
+trained how to mechanically, operate the plane. So, the air orce decided, yeah, this
+makes sense. We should do this with all the pilots. So they rewrote the entire
+instructional process or training, um, the pilots or the F thirty ive initially. That,
+they’re a whole signiicant portion o the irst part o their training is decision
+making. And, then they realized it works so well that they should be training all o
+their pilots on how to make decisions in stressul situations because they had kids
+that were scoring really, really well on the written test who would wash out and
+couldn’t igure out how to ly the plane, because in a stressul situation, they’d make
+mistakes.
+00:04:28 Speaker 1
+I am not going to recount all o his experiences he tells through the book, but he
+makes it very. I you ever want to read it as a quick read, took me about a day and a
+hal. The Art o Clear Thinking by Hazard Lee. He uses actual experiences as a pilot
+in very high stress combat situations to illustrate how we use these skills and some
+o the skills he was trained on, some o them he had to come up with his own. Some
+have been around or a while, but had never really been integrated. So, we’re going
+to look at two o the dierent decision - making processes that he now that we now
+trains other ighter pilots on. He’s now retired rom the Air Force, and he now goes
+around the world, training corporations and people and business people, how to
+make an intelligent decision. Now as we get into this.
+00:05:23 Speaker 1
+You are going to see me use a quote that he uses multiple times, and it pops up in
+there at least once. One o the irst things they teach the pilots in making decisions
+is, “There is no situation so bad you can’t make it worse.” He said, “I know that
+sounds negative, But there is no situation so bad that i you make a rushed or poor
+decision, you can’t make it worse.”
+00:05:52 Speaker 1
+And once the pilots understand that, that they can take a bad situation and make it
+worse, or they can take a bad situation and make it better. What, we’re emphasizing
+is you’re going to look at what decisions could make it worse and what could make
+it better, and which make the most sense to implement. Our goal here is not to
+make it worse but to make it better. Now, we’ve all been in situations where we’ve
+done what seemed like made the most sense. And, then the next step happens and
+
+it didn’t go the way we thought it would. And yeah, we may have made it worse.
+Well, that’s part o the decision-making process is how to take that eedback. So, the
+irst loop we’re going to look at is called the OODA loop. This was originally
+developed by Colonel Boyd, John Boyd in the US Air Force in the nineteen seventies
+to train very early jet ighter pilots, Very early like irst or second generation F
+sixteen pilots on ways to make decisions.
+00:06:49 Speaker 1
+And ways to make decisions that either keep you out o trouble or take a situation
+that is rapidly changing and make it better. And you’ll notice that throughout this
+process, it is a loop. Once you make it, you don’t just stop. You don’t make one
+decision. Lie is ull o continually making decisions based on what happened rom
+our prior decisions.
+00:07:17 Speaker 1
+So, the irst thing we do when we go into a situation is we need to observe what’s
+actually what’s going on. This tends to be a relaxed state o readiness. This is when
+otentimes, well, or another you know working with another light analogy, we’re
+on autopilot. All modern aircrat are designed that with an autopilot engaged, the
+plane can ly itsel. It can keep itsel in the air. Otentimes when we’re working with
+people and working with situations, we’re kind o in that autopilot mentality. Oh,
+I’ve done this enough times. I just know what to expect. I’m not going to, I’m just
+kind o going through the motions, and we’re not paying ull attention to what’s
+going on. And. Consequently, we’re in a low state o readiness, and we’re not really
+paying attention to what’s actually occurring around us.
+00:08:15 Speaker 1
+Until something happens, And then we have to move ourselves quickly into rom
+relaxed readiness, but up to a more alert readiness status. So we observe what’s
+going on around us. We then have to orient ourselves to the current reality, what’s
+actually reality, not what we think is reality. Once, we understand what’s going on
+around us and have oriented ourselves to the current reality. Now we’re in a high
+state o alert. Now we have to decide what to do. And otentimes we’re deciding
+between decisions that are, sometimes we have a good, better, best situation.
+Sometimes we have a bad, worse and absolutely worse situation. And, we’re trying
+to orient ourselves to get out o that bad situation into good situation.
+00:09:08 Speaker 1
+We have to make a decision, become engaged with it, and do what we decided to
+do. Go through the actions and then observe what the results are. Now I know that
+sounds airly basic, but in a high stress situation we can orget where we’re at. In
+the OODA loop as John Boyd described it: observing. We’re just gathering raw data.
+And real-time inormation rom your environment. Well, when we’re working with
+clients and people, What’s the most common way that we observe and see what’s
+going on with them? Ooh, you gonna make me answer that one? Asha, when you’re
+
+working with clients, How oten what’s the most common way o getting
+inormation rom them to observe what’s really going on?
+00:10:11 Speaker 2
+Asking open- ended questions, listening than talking.
+00:10:19 Speaker 1
+Okay. What is your most common orm o communication with your clients?
+00:10:25 Speaker 2
+Uh, or me.
+00:10:31 Speaker 1
+Oh, now I know why she’s not answering. She’s breaking up on us.
+00:10:35 Speaker 2
+Oh shoot, sorry. Um it’s usually verbal. I preer verbal over. Message and email
+whenever possible.
+00:10:43 Speaker 1
+Okay, so having a conversation with them, advantage to a verbal phone call
+conversation immediate eedback. Disadvantage we otentimes misremember what
+the conversation was right? Well I think I said or I think that’s what we talked about.
+Advantage to an email or a text. We have a written conversation. We’ve got proo o
+what was said disadvantage. Time lag. But we’ve now got in writing what was what
+was intended. We need to observe and get as much inormation as possible. Now,
+sometimes we have time to do that, sometimes we don’t, you know? How oten do
+things seem to come up at three o’clock on the aternoon o a deadline in the
+contract, and we got to have sorted out by ive o’clock?
+00:11:39 Speaker 1
+Or i we’re planning ahead and we’ve got a couple, you what all the time more than
+like.
+00:11:47 Speaker 2
+Yeah, even though we’re paying attention to those deadlines, we’re keeping track o
+them. We’re doing everything we can. Things happen once we observe. We have to
+orient ourselves to what isum the gathered inormation to build an accurate mental
+picture o reality, what really is happening.
+00:12:08 Speaker 1
+Again, going back to the statement, there’s no situation so bad you can’t make it
+worse. Most o the time we make a situation worse is because we’re making
+assumptions about what’s happening. And so our decisions are based on
+assumptions or incomplete or inaccurate data. And then once we make a decision
+
+based on incomplete or inaccurate data, we’re oriented to a reality that doesn’t exist
+or we’re not completely properly oriented.
+00:12:39 Speaker 1
+Now, in his book, Hazard Lee describes an experience. He had his irst time out,
+lying an F thirty ive ollowing. And as a trainee. And his trainer made a particular
+move with the aircrat that you have to be within very, very speciic parameters to
+work in terms o your airspeed, the actual physical position o the aircrat. Even the
+position o the pilot inside the aircrat, because the amount o orce that’s going to
+occur against your body. His trainer made that particular very sudden move. He
+knew his situation was about ninety ive percent o what he needed to be in in order
+to pull o the maneuver, igured that was close enough and tried the same move.
+00:13:33 Speaker 1
+And stalled the aircrat at ive miles in the air. At such a high rate o speed, he
+temporarily lost consciousness. And when he regained consciousness, it was with
+his aircrat pointed nose down, hurtling at ull speed toward the ground. And he
+suddenly had a very dynamic, Situation that he needed to observe and orient
+himsel to. And, the irst thing he did was igure out where the eject was he in a
+situation he could eject i he had to. And then realized he had time once you to
+igure out what was happening, Reoriented himsel to the reality o the situation
+and was able to recover the aircrat.
+00:14:30 Speaker 1
+Now, when he landed, which he did successully, ater he got chewed out pretty
+hard or making such an obvious mistake. And they went through the iterative
+process o tell me what happened. Tell me what decisions you made. Restate what
+the results were and realizing 95 % o reality wasn’t good enough in that situation.
+He needed to know 100% o what was going on. And i he was outside o that area
+o operation, he shouldn’t have made the decision he did. The learning experience
+came rom living through the experience, But then having someone aterwards sit
+down with him and go through the process o, let’s go back through your loop.
+What did you observe? How did you orient yoursel? What did you decide to do?
+What was your action? What was the result?
+00:15:28 Speaker 1
+That now puts you back into, “Now I need to see what’s happening. I need to get
+mysel oriented again. I need to make another decision quickly, and I need to act on
+that decision.” And it needs to be now. And, that’s the process. They started training
+these pilots on :. Observe what’s going on around you, gain as much inormation.
+Now reality : Are we ever going to know 100 % o what’s going on around us?
+00:15:57 Speaker 1
+Are we ever going to have a ull complete picture? Probably not. But, that’s where
+we have to orient ourselves to reality with as much inormation as possible. The
+
+more I know about what’s happening, the better decisions I can make. And that
+comes rom observing what is actually occurring around us. Now, the other loop
+that they train The pilot’s on is called the ACE helix. Now, The ACE helix again is built
+around the premise o “. There ’ s no situation so bad that you can’t make it worse.”
+And or those who are amiliar with what you know, the shape o a helix he hazardly
+describes it, but we all know that a helix is very much like a spiral. This is not a one
+and done situation.
+00:16:52 Speaker 1
+Every time we make a decision, it creates a new reality, And we then have to make
+our decisions based on the new reality that’s come about rom that decision. So it
+continues to occur over and over. And ACE stands or Assess, Choose, and Execute.
+So you notice it’s very amiliar to the OODA loop: Observe, Orient, Decide. And act
+where assess takes that role o observe and orient. And when we assess the
+situation, We have to ilter out all the variables because we need to look at high
+yield acts. There’s a lot o stu and lu that goes on. Sometimes when you’re
+trying to make a decision, extraneous noise that we need to ilter out. And, we need
+to look at i we’re in a situation where a decision needs to occur rapidly,
+00:17:51 Speaker 1
+What is going to create a high yield in a short amount o time? Is it better to make a
+phone call? Is it better to send a text message? I I, you know, what do I know?
+Deine the problem. Be very clear about what we are, what you are going to be
+addressing. What is the speciic problem we’re going to address with this decision?
+And, what can happen in raming those decisions sometimes is that we try to make
+too many decisions altogether as one decision. We may need to look at what is the
+most immediate problem that needs to be solved immediately in order to get
+oriented to make the next decision, to solve the next problem.
+00:18:46 Speaker 1
+And he says again, “don’t jump to conclusions.” Oh, and I just ound my typo. I hate
+that. And that we need to reconstruct a clear picture o the situation rather than
+relying on assumptions. Now, the F sixteen is a very unique aircrat. My daughter
+and I share memes about the F sixteen all the time. She’s a crew chie on the F
+sixteen or the U.S. Air Force; she’s active duty. And I shared one with her yesterday
+that she got the giggles. And, it’s an F sixteen pilot standing next to an F sixteen
+that has a number o the access hatches removed while the maintainers are
+working on the aircrat. And Hazard Lee says, “You know, you want to know how
+much trust we put in these maintainers? I’ve got an eighteen year old, I got a
+teenager out there keeping this.”
+00:19:43 Speaker 1
+Aircrat in the air, and I’ve got to make sure they’re making good decisions. And as
+crew chies, you have to make sure hers makes the right decisions. Well, In this
+particular video, there’s an F - 16 pilot standing next to his aircrat that’s having
+
+maintenance done on it. And he says, "Hmm, I wonder what this thing does? I have
+no idea. I should probably ind out. " But, the last thing I’d want to do is ask a
+maintainer what it does. And, she got the giggles because she’d shared an
+experience with us when she was on a it’s called a T D Y temporary tour o duty last
+summer in uh the Philippines, where they had an aircrat. One o their F sixteen s as
+it was preparing or takeo, was running up beore it let the ground on the run on
+takeo, sucked a very large bird into the engine.
+00:20:39 Speaker 1
+And, i you are amiliar with the shape o the F sixteen, it has a huge scoop
+underneath. And it sucked that bird all the way through the engine and spit what
+was let out o the back o the airplane. When that occurs. There are a number o
+sensors in the aircrat that automatically shut it down. But, you can’t just turn the
+engine o on that thing when it’s not on the ground, and t here is a whole process
+they go through. The pilot successully landed the aircrat, they were able to recover
+it, bring it back to th,e, Service bay, and she and her crew had to remove the engine
+rom this airplane, Send it back to their base in Japan or a complete rebuild on the
+engine. Every single part has to be pulled out and checked. And in the meantime,
+they have to clean out the whole insides, the whole uselage o this aircrat. And so
+or multiple days, the pilot assigned to the aircrat had nothing to do. His plane
+can’t ly; it’s got no engine in it.
+00:21:36 Speaker 1
+And she was working on it one day, Cleaning bird guts out o the insides o this F
+sixteen And. The pilot came over and started asking. He decided he’d help because
+he had nothing else to do and started asking questions about the insides o the
+airplane. She said, “Dad, I was surprised at how little he knows about what actually
+keeps this plane in the air.” And as they were going through and cleaning the
+aircrat. And while she’s doing that, She’s checking things that they usually can’t see
+because there is an engine in the way. And, there happens to be a switch back in
+the engine bay. That’s a nice big red switch. And the pilot said, “What does this one
+do?” And she looked at him and said, “Don’t touch that.” He said, “Well, what does it
+do?” She said, “You push that button. It turns o all o your avionics and shuts down
+your aircrat. It’s basically the kill switch.”
+00:22:35 Speaker 1
+You know all those movies, you watched as a kid where they had the sel destruct
+button that blinked bright red? It’s that. And the pilot looked at her and said, well,
+why is it clear backed here? She just looked at him deadpan. So you can’t reach it
+while in the cockpit. Again, there’s no situation so bad you can’t make it worse. You
+push that button, yeah, you just made it worse. How many times have we been in a
+situation where we wish there was like a sel destruct button. We could just push
+the button to make it go away?
+
+00:23:07 Speaker 1
+We could make it worse. Now, in the situation Hazard Lee shares the experience o,
+he was in a very high stress situation with his aircrat. And the F sixteen is i you are
+amiliar with, it is an extremely volatile aircrat. It was designed or maximum speed
+maximum maneuverability Least amount o armor, no protection or the pilot, And
+it moves at such a high rate o speed and has so many things occurring to it at
+once. I it weren’t or the onboard computer that runs it, pilots couldn’t keep it in
+the air. They can ’ t ; the human body can’t move ast enough to make all the
+decisions necessary to keep playing in the air. So, it’s got top-o-the-line avionics;
+computer keeps in the air, and yet. The bottom corner.
+00:24:05 Speaker 1
+O, the heads up display is an old ashioned analog clock let over rom when the
+irst series was released in nineteen seventy one. You have to wind this clock by
+hand to make it work. And in the high stress situations where they’re having to
+make decisions very rapidly, and they’re starting to eel overwhelmed, the phrase
+that the pilots use is Wind the clock. They physically reach down and wind, this ity year- old dash panel clock because sometimes just that step o touching the
+aircrat, doing something physical that breaks what their current sense o motion is,
+everything they’re doing with the plane, physically and biologically resets their
+brain.
+00:25:04 Speaker 1
+To this manual task that’s very old school, But it orces them to then reset what
+they’re looking at and iltering their variables. Oh yeah, 'cause while I’m winding this
+clock, I’m seeing other things occurring. I’m noticing things that I might’ve
+overlooked on the panel. New data’s coming in. Okay, Now I can make a decision
+without panicking and reaching back and hitting this button.
+00:25:34 Speaker 1
+That will knock me completely out o the sky. So as we ilter variables, sometimes
+it’s okay to slow down, step back, take a deep breath and wind the clock. I the
+decision ha– i we’ve got time to make the decision, Part o that iltering variables
+process can be stepping back and just letting silence kick in or a minute to think. As
+we deine the problem and and create this baseline, get as much inormation as
+you can rom as many sources. It’s okay to say to a client, you know what? Let me
+ind out more about that. Now, Simon Sinek, in many o his books has written that
+one o the biggest mistakes that big companies make is they make their employees
+araid to ask questions.
+00:26:32 Speaker 1
+They’re araid to ask, but i I do that, what will happen? So, they go o and make
+decisions based on what they think should be the right answer, and then problems
+occur. So it is perectly okay. Asha, how many times have you said to a client," You
+know what? Let me ind out more about that."
+
+00:26:56 Speaker 2
+A lot. Okay. I I am wishy washy on, Um, I’d rather tell them that I need to ind out
+more just to make sure. Um, rather than have to walk it back later.
+00:27:17 Speaker 1
+Yeah. So yeah, I don’t want to have to walk it back now. Part o the decision making
+process, The iterative process is sometimes I am going to have to walk back a
+decision. Nowum, Because I get more inormation that veriy that, you know. So
+assess, get as much inormation as you can. Now part o that assessment process.
+He points out is we have to choose what we’re going to do. We’re going to
+brainstorm multiple options but set a deadline or when the ideas or when we’re
+going to cut o getting new ideas.
+00:27:57 Speaker 1
+He said in the Air Force they use what’s called the two-thirds rule. I they have a
+deadline by, you know, a decision has to be made by this date. I, we are we’re going
+to take new ideas up to two - thirds the way up till that date. So that we have time to
+now review all o the options we’ve come up with and make a good decision. Now I
+said that doesn’t mean i somebody comes with an idea ater the two - thirds, we
+automatically reject it, but they better have a really good. I. Really good reason why
+they’re going to bring it in ater the two-thirds deadline. And, he shares an
+experience in the book where somebody came in with a potential solution or a
+high- risk problem at the beginning o the irst Gul War ater the two - thirds
+deadline, And it was so o- the- wall that they almost rejected it because it was past
+the two - thirds deadline.
+00:28:57 Speaker 1
+Until other until people started veriying that this guy’s not bragging, they really can
+do what they say they can do with this equipment. And it’s the equipment that’ll get
+the job done right. It was originally rejected by upper or the upper brass, simply
+because o who was who it wasn’t set at the irst time. So they had they said, yeah, I
+know we’re past the two thirds rule, but look at all these are things we can do. And
+so they restructured what the decisions were. But sometimes our two-thirds rule,
+we’ve only got a couple o hours to make a decision. I can’t still keep getting new
+ideas all the way up to the very end. Now, when we look at you know what comes
+up with our clients, What are the kinds o deadlines we have to ace that we have to
+make decisions beore deadlines? What deadlines do we ace all the time?
+00:30:02 Speaker 1
+We know in the repsie we have our deadlines written right into there. I think or
+me, Most oten the biggest deadline that requires the most creative thinking
+otentimes is that due diligence deadline. How, are we going to work out due
+diligence inspection or other concerns on due diligence in ways that we’ve got a
+deadline has to be decided by. Five o’clock on this day, or there are negative
+
+consequences or our buyer. Financing and appraisal. Asha, what were you going to
+say?
+00:30:41 Speaker 2
+I've had the most deaults on the SPC deadline. Not me deaulting on it, but sellers
+deaulting on that.
+00:30:51 Speaker 1
+Okay, so when a seller deaults on that, what decisions does your client have to
+make?
+00:31:01 Speaker 2
+Whether it’s material or not to the transaction, like depending on what inormation
+we’re still missing. Um, And then how they want to use that as leverage in the rest
+o the transaction.
+00:31:17 Speaker 1
+Okay. How does that aect now their orienting orienting themselves to what what
+the current reality is? Like you said, they’re going to have to decide well, how does
+this aect the transaction? Do we go orward? Leverage is great to have.
+00:31:33 Speaker 2
+Do we cancel? Yeah, Do you want to cancel and blow up the whole deal? Or do you
+want to use that as leverageum to get the amount o the earnest money back? Um
+yeah, that one’s come up a lot or me.
+00:31:50 Speaker 1
+Okay, as a seller when I represent with listings, man getting those I know those are
+tedious to get illed out. I’d rather have them illed out long beore a transaction, so
+it’s not during a stressul time when they’re trying to do it. Because I know, like Asha
+said, There’s a pretty good chance somebody’s going to be using this leverage i I
+don’t get it sent to them on time. Well, let’s orient ourselves to the reality o that’s a
+deadline we have to meet. How many are struggling right now with HOAs and
+trying to get HOA docs on time?
+00:32:25 Speaker 3
+You got to start that process early.
+00:32:28 Speaker 3
+Like really early, which our TCS are pretty good at that by the way. Mhm. They’re
+pretty good to start that process. But sometimes HOAs are still diicult.
+00:32:40 Speaker 1
+And i we don’t start that process until we’re under contract as a seller, we could be
+too late.
+
+00:32:48 Speaker 3
+Well, I’ll tell you the advantage, i you started beore you go under contract and you
+know that the HOA doesn’t have recent meeting minutes. You can counter out, you
+can counter that section o the rep sheet where you say, "We don’t have these, ".
+And so I’m countering out the meeting minutes because it has that listed in section
+seven o your disclosure requirements. And i you contact DHA early, you can tell
+them, “Oh, We don’t actually have this aspect or this aspect o what is in the rep
+sheet.” Because it’s not acceptable to just say, “Oh,” like and this happens so oten
+as a listing agent.
+00:33:24 Speaker 3
+Telling the buyer agent, “Oh, we they just don’t have that. We looked. You can try to
+contact HOA yoursel.” Well, your seller signed saying you are going to give it to me,
+So you are going to give it to me or you are going to deault. That’s really what it is.
+But, a lot o this is a really lazy thing in our culture right now because you can press
+them or deault or not giving you the eighty minutes. They say, “Well, I can’t give it
+to you.” Well, You already signed, saying you were going to give it to me when you
+accepted the receipt. You said you are going to give me the meeting minutes. Well,
+HRA doesn’t have it. Well, then why did you accept this? That’s why it’s better to get
+that inormation like right away as soon as you know that your that listing is going
+live. No contact the HRA and see what you really can do or they can’t do.
+00:34:11 Speaker 1
+And, that is a very important part o that assess step o assess, choose and execute:,
+assess what the reality is, what really is reality, what really is happening now. I will.
+00:34:25 Speaker 2
+Go live until I have. I won’t take the copy o the SP CDs and all the HOA documents.
+Because, um, SPC deadline is usually three or our days ater you go in contract.
+But, i it takes you a couple days and you have counter oers in there, you have to
+be so careul that.
+00:34:53 Speaker 2
+Once you are oicially under contract, now you have less than twenty hours to get
+all that ees over.
+00:35:00 Speaker 1
+Well, and this is a lesson I learned. And again, The reason these two models are
+both loops is that it’s iterative;. We have to keep making decisions. But the best way
+to make good decisions is to go back, Is to debrie and look at the decision was
+made: what led up to it, what inormation did we use? Why was this decision made?
+What was the result? What can be done dierent next time? I learned a lesson very
+early rom a gentleman who used to be a broker. He now does mortgage loans
+instead, Rob Aubrey. And I had sent an oer over and Rob was the broker, and we
+had put three days ater acceptance or the disclosures deadline.
+
+00:35:45 Speaker 1
+And he called me up and and I’ve got a lot o respect or Rob because he says, look,
+you know, probably looked it up. I was new. He said, Let me explain to you the the
+situation. This puts my seller in and why we’re going to counter this three days or
+that. This is a Friday. You’re sending this over to me, i you know, and I have to have
+an updated um title report. I can’t get that in three days on a weekend. It’s not a
+reasonable situation So, Understand the reason we’re countering this because we
+need to be able to ulill the contract, but I can’t do that the way it’s written. And I
+had a lot o respect or Rob because he didn’t talk down to me. He didn’t say, "What
+you know, what were you thinking? Three days? Come on, be real. " He was very
+proessional about it, but also explaining this why we’re going to do it this way. And
+it changed the way that I did oers ater that. Realizing that yeah, that’s probably
+too short o a deadline. Three days on a Wednesday might work.
+00:36:43 Speaker 1
+But three days on a Friday or that deadline might not work. Yeah, I hate I do not
+want to go live without HOA docs. Trust documents are an issue i you know it’s in a
+trust. Probate documents i it’s in probate, the more o those you have beore you
+go live, the better your reality is that you’re oriented toward with the listing. Now
+let’s switch back over to the other one here.
+00:37:12 Speaker 1
+We have to choose. One o those processes is calculating, evaluate the value o
+ideas, giving a risk score, probability versus loss or what’s the probability times the
+loss actor. What’s the probability o this working multiplied by how oten it’s worked
+in the past? Because sometimes people will make decisions based on, What it looks
+like on the ace without thinking long term. Hazor Lee uses an example that I use
+while teaching school. I can give you a million dollars today, Or I can give you a
+penny on the irst day o the month and double it each day o the month until the
+end o the month. You get to keep the penny you got, So each day you get to keep
+the stack o pennies I give you all the way till the end o the month.
+00:38:09 Speaker 1
+Now Craig, you know the answer. Which one makes more sense? Penny a day, you
+get more than twice o what you would. But otentimes buyers and sellers just see
+the penny as a low amount. It doesn’t make sense to them. That’s what is reerred
+to as a power law. Some types o decisions are going to have an outsized eect,
+Have a greater eect than others when negotiating or repairs. Sometimes it makes
+more sense to you’ve got three major repair, three repairs that absolutely need to
+be done. Hit them with all eighteen now ;. It’s easier to talk them down to three, i
+only i I only start with those three and the seller.
+00:39:10 Speaker 1
+Fights me with it. I’ve lost my leverage. The power is not there. Talking with you
+know, having talking with their lenders about what does make more sense, Putting
+
+money toward the down payment or putting money toward closing costs or putting
+money toward buying points. Is a three two one buy down really worth it long term?
+How long are you going to be in this house? I you’re not going to be here multiple
+years, a three two one buy down, Doesn’t make the money back. You can use it
+smarter other ways. So, those nonlinear solutions, decisions that can have an
+outsized eect. And then o course the last step execute. We make a choice we have
+to do it now in cognitive psychology.
+00:40:09 Speaker 1
+He doesn’t include this in his book, but in cognitive psychology there is a phrase
+known as amygdala hijacking. The amygdala is the part o the human brain that is
+responsible or controlling and maintaining the ight or light response, and that is
+the stress response. Stress and the ight or light response itsel is not a negative
+thing. The body evolved that way and has Was created and was created that way
+and has continued to evolve that way because it works. Here’s what happens with
+the amygdala hijacking. In high stress situations, the amygdala pumps adrenaline
+and cortisol into the system. Adrenaline increases your heart rate, increases your
+breath rate, tenses up your muscles, and you get ready.
+00:41:06 Speaker 1
+To ight. It also redirects the blood low in your brain, And it redirects it rom the
+neocortex. And the prerontal cortex is at the ront that’s responsible or the
+decision - making process and pushes it to the back o the brain that’s responsible
+or the ight or light response. And as long as you’re in that elevated emotional
+state, There is less and less blood lowing to the part o the brain that biologically is
+responsible or higher thinking. I would teach this to eleven-year-olds when they
+get in trouble, and the principal would say, “What were you thinking?” And the kid
+would say, “I don’t know.” They’re not mouthing o; they biologically don’t know
+what they were thinking. No memory was created ;. They weren’t thinking because
+there wasn’t any blood in that part o their brain.
+00:42:00 Speaker 1
+How, many people do we know that live and operate constantly in that high stress
+ight or light mentality or body mode? That when you ask them to make an
+intelligent decision, i you’re like, can you just not think biologically, they can’t. The
+blood’s not in the right part o the brain. That’s when you have to step back, take a
+deep breath and regain control o your body. You’ll notice when otentimes you get
+anxious, you make a ist. I you’ve got a client who you notice is nervous and is
+doing this, hand them a pen to hold on to. They can’t make a ist. There’s a whole
+row o neuroreceptors across the palm o your hand, that when you make a ist, tell
+the brain I’m getting ready to punch somebody and immediately puts the brain into
+that ight or light mode. When they open the hand, it turns all those receptors o.
+It turns o the I’m going to punch somebody mode. Hand them something.
+
+00:43:00 Speaker 1
+They have to open their hand. Now it turns those sensors o. Change your body
+position, so they have to move their body to match your body position. They’ll do it
+instinctually, But it will change them rom i they’re like this, and you put your hands
+down, just shake your hands, put your hands down, they’ll otentimes mimic you.
+They’ll get out o that ight or light mode, and it will get you out o that ight or
+light mode so that the brain can unction. It’s part o the wind. The clock do
+something physical to reset the brain so that it can make a decision that isn’t based
+on emotion. Hardest part about working with buyers and sellers is they’re making a
+very rational decision in a very irrational emotional environment. How many times
+have we had to work with a client that you just their decisions seem completely?
+00:43:57 Speaker 1
+Irrational and emotional, and emotion based. That then seem to get worse down
+the line. There’s no situation so bad you can’t make it worse. Get them out o the
+ight or light mode, manage the stress or cognitive clarity. Avoid complacency,
+okay? I’ll tell you, I’ll tell this story on mysel. Very early working with Marty, when
+Marty and I irst started working together, Marty did not have an operating system.
+He just did all o his transactions in his head and tried to keep track o all o it in his
+head. How, I don’t know. He did thirty transactions the year beore I met him, all in
+his head. And he realized he was dropping things. He couldn’t keep oriented and
+execute ast enough. Okay, And you guys get to watch me ix another typo because
+it’s going to bug me.
+00:44:56 Speaker 1
+So I had to go through the process o working with him, going, "Okay Marty, what
+comes next? What comes next? What comes next? " So start making me a list o
+things to do so that I can get things done in the right order. Filled out a Repsy or
+him. Did paragraph two, everybody’s avorite part, the math. Sent it over or him to
+review. He calls me up and says, “You need to check paragraph two.” I said, “Marty, I
+taught math or twenty years. I know how to do paragraph two shit.” And I had
+done the math wrong, But I was so complacent, and so arrogant about " I know
+how to do the math. " I did the math wrong and sent it o without even bothering
+to recheck it. When I get done writing an oer now, I start at the bottom o the
+contract and read it backward to check everything to make sure it’s done right.
+Because as soon as you’re clicking this reading it orward, your brain automatically
+ills in what it thinks should have been there.
+00:45:53 Speaker 1
+It creates a alse reality. I I read it backward, when you read it backwards, your
+brain can’t do that because it’s going in the wrong order. It has to pay attention to
+the details. Did I do this right? I I write an addendum, Go back and start at the
+bottom and read it rom the bottom up to make sure everything’s there to get out
+o that complacency. And then ater a decision is made and ater an event is over
+
+Debrie and iterate. Learn rom the experience. An F-16 is designed to be in the air
+or about an hour, or 90 minutes to two hours at a time. My daughter has pointed
+out that the current situation in the world, The pilots and the aircrat have been
+under extreme stress because they’ve been keeping them in the air or up to eight
+hours at a time. An aircrat and a pilot is designed to be up in the air or two hours.
+00:46:52 Speaker 1
+Um, they don’t have time. Otentimes, They don’t have the right amount o time to
+stand aterward and talk about it. Hazle talks about that ater a ninety minute
+training with pilots on the F thirty ive, they can spend two to three days reviewing
+everything that happened all the video, the video rom the pilot’s cabin, the video
+rom the trainer’s aircrat, the data that all the computer keeps, the notes that the
+pilot, As soon as the pilots on the ground write down everything they remember
+happened, because human memory is allible, And they’ll spend days and days and
+two or three days reviewing what happened in ninety minutes to two hours. He
+says, “Now does that sound excessive? Could be, but when your lie is on the line,
+maybe not.” Because you start to notice things. And in part o that iteration process
+is to look or patterns. What are common things you see happening?
+00:47:49 Speaker 1
+I you’ve got a client who’s look or patterns in your client’s behavior, And i they’re
+always behaving the same way and it’s making it diicult or them to make a
+decision, we need to help them learn another way to think, to unction. Look or
+patterns in the reps. Common mistakes that can be made. Look or patterns with
+your seller. What are they saying yes to? What are they saying no to? What do they
+keep repeating? Because that’s an iterative process or them, and they may need to
+Greg describes it as. Predict the uture or them.
+00:48:22 Speaker 3
+Yeah, it’s all about expectation management.
+00:48:26 Speaker 1
+Expectation management: i you do this, this is what my experience has shown us
+happen. Let me let me give you that iteration in advance, Greg. When, you’ve got a
+client that wants to list way at the top o the price range, what are the iterations
+that you’re going to be able to present to them?
+00:48:45 Speaker 3
+Yeah, well I let them know.
+00:48:48 Speaker 3
+I don’t want them ever to say, “Craig, you didn’t set my expectations correctly.” I
+don’t want to say that. So then when they say that, I say, “Expect that you will have
+no showings during the week. You may have a showing come to an open house and
+maybe two people, but you will have no one scheduling during the week. The
+
+people coming to the open house also won’t be interested at, especially at price.”
+That there are and I’ll give them hard data. I’ll say, “Look,” I’ll go back and get you
+the number o properties competing with you that are not going to that people
+would see and buy irst. But I try to I try to manage this during the market analysis
+process anyway because I’ll, I will I will try to give them properties. They can see are
+clearly better than theirs, that are that is clearly priced lower than theirs, So they
+can see that there’s just no way i that other property is not selling and it’s orty ive
+days on market, then even i you’re priced equivalent to it.
+00:49:45 Speaker 3
+They’re orty ive days out and still haven’t got an oer. Why wouldn’t you badge it
+to come in and grab one? So that idea, that that’s sort o the process I go through
+with that.
+00:49:55 Speaker 1
+But that’s an important part o that observe or assess, gain the knowledge, gain the
+most inormation you can so they’re oriented toward reality, not emotion based. It’s
+rational based. And then help them iterate ater the open house, ater the showing,
+ater the end o the irst week. Well, Here is what let’s observe and see what’s going
+on now so that we continue to work through that process. Now, like I said at the
+beginning, He hazardly makes a point out o pointing out that we just assume
+adults know how to do this ;. We just assume they’ve learned how to make wise or
+make intelligent decisions.
+00:50:43 Speaker 1
+Make inormed decisions. We assume that’s their background. They were bringing
+in pilots who these were in a room ull o thirty pilots, two would qualiy as ighter
+pilots, the remaining twenty eight would wash out and ly something else. But
+everybody walked in expecting to be a ighter pilot. These were already the top
+thirty in their class, And he said, the ones who washed out the astest are the ones
+who had never learned. How to go through a cognitive decision-making process.
+They could give you all the stats, all the data, Some o his top students in terms o
+what they could score on traditional measures on a written test. We all know the
+120 hours or the written test in real estate doesn’t teach you anything about how
+to actually do real estate. It’s a skill that we have to learn and practice.
+00:51:40 Speaker 1
+Sometimes we have time to make a decision. The planning and run-up to the irst
+Gul War took over six months. Planning and preparing or the irst orty-eight
+hours o that conlict. We don’t always have that much time. Yeah, sometimes we
+are lying along at a high rate o speed through a transaction, something comes up,
+we have to be responsible or our clients and or our connections That we’re going
+to make this decision rationally. And that can be hard when the other side’s
+responding emotionally. So that we can help our clients go through that process o
+observing the data, orienting toward the actual reality, making a decision and
+
+acting on it. And then accepting that what happens rom their choice, we’re going to
+make the choice that makes the most sense, but there’s always going to be a risk o
+ailure.
+00:52:37 Speaker 1
+One o the experiences Hazarded Lee shares in his book, one option had a 50%
+chance o ailure. One option had a 75% chance o ailure. He went with the 75 %
+chance o ailure because it was less chance o ailure, Knowing that he still had a
+one in our chance o the whole thing going wrong, but he had a three out o our
+chance or going right. Our clients always need to understand t here is always
+going to be some risk. We’ll control or all the actors we can and make lies
+decisions that way, and then we move orward. Okay, I haven’t done it yet. I am
+actually gonna i just inished this book. I am actually gonna make an OODA and ACE
+sign to put on my wall to remind mysel that I need to go through those decisions
+sometimes because yes, there have been times when there are times when yeah, I
+just want to just say you know.
+00:53:32 Speaker 1
+I want to go o an emotional choice and not a rational one, and that’s not in
+anybody’s best interest. So, I you haven’t had a chance ind ind the book " T, he Art
+o um The Art o Clear T hin king " on Amazon. It is a real quick read. Your heart will
+race through some o the stories he tells o that he uses as illustrations or me. It
+was kind o personal, like I guess my daughter ixes puts F sixteen s into the air. But
+his whole point is, we have to make good decisions or those we represent. And he
+says, you know, in our daily lives as well. And i you write, i we go through this loop
+and make planned decisions, we’ll be better o. Any questions?
+00:54:25 Speaker 3
+Thanks Aaron. Thanks or the ino. Okay.
+00:54:30 Speaker 1
+We will see you tomorrow same same time. Tomorrow, Craig, what are you doing?
+00:54:36 Speaker 3
+Eleven o’clock business building.
+00:54:38 Speaker 1
+Business building. Okay.
+

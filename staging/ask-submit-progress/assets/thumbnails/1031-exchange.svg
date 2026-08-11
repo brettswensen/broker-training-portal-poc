@@ -1,10 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#78dce8"/></linearGradient><radialGradient id="r" cx="72%" cy="18%" r="55%"><stop offset="0" stop-color="#ffffff" stop-opacity=".25"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient></defs>
-  <rect width="1280" height="720" fill="#08090a"/><rect width="1280" height="720" fill="url(#g)" opacity=".88"/><rect width="1280" height="720" fill="url(#r)"/>
-  <circle cx="1075" cy="165" r="98" fill="#ffffff" opacity=".12"/><circle cx="1068" cy="165" r="62" fill="#050608" opacity=".45"/><polygon points="1050,126 1050,204 1116,165" fill="#fff" opacity=".9"/>
-  <text x="52" y="74" font-size="28" font-weight="800" fill="#d9fff0" letter-spacing="4" font-family="Inter,Arial,sans-serif">BROKER BRAIN TRAINING</text>
-  <text x="52" y="140" font-size="52" font-weight="800" fill="#fff" font-family="Inter,Arial,sans-serif">1031
-Exchange</text>
-  <text x="54" y="310" font-size="30" font-weight="650" fill="#e6edf3" font-family="Inter,Arial,sans-serif">Investor Timing</text>
-  <rect x="52" y="600" rx="24" width="310" height="48" fill="#050608" opacity=".42"/><text x="78" y="632" font-size="21" font-weight="800" fill="#a7f3d0" font-family="Inter,Arial,sans-serif">AUTHORIZED PREVIEW</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="1031 Exchange training thumbnail">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+    <radialGradient id="glow" cx="84%" cy="12%" r="62%"><stop offset="0" stop-color="#ffffff" stop-opacity=".24"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <pattern id="dot" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2.2" fill="#fff" opacity=".22"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020617" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1280" height="720" rx="0" fill="#05070b"/>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#dot)" opacity=".9"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <path d="M0 548 C234 504 399 587 647 548 C861 514 1028 420 1280 475 V720 H0 Z" fill="#fff" opacity=".08"/>
+
+  <g opacity=".36" fill="#061017">
+    <rect x="672" y="196" width="326" height="390" rx="8"/>
+    <rect x="730" y="257" width="45" height="54"/><rect x="822" y="257" width="45" height="54"/><rect x="914" y="257" width="45" height="54"/>
+    <rect x="730" y="363" width="45" height="54"/><rect x="822" y="363" width="45" height="54"/><rect x="914" y="363" width="45" height="54"/>
+    <rect x="730" y="469" width="45" height="54"/><rect x="822" y="469" width="45" height="54"/><rect x="914" y="469" width="45" height="54"/>
+  </g>
+  <path d="M186 592 C309 474 416 505 533 388 C655 266 740 302 828 225" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".17"/>
+  <g filter="url(#shadow)">
+    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">INVESTORS & 1031</text>
+    <text x="62" y="616" font-size="52" font-weight="900" fill="#ffffff" font-family="Inter, Arial, sans-serif">1031 Exchange</text>
+    <text x="62" y="662" font-size="24" font-weight="800" fill="#d9fff0" letter-spacing="2" font-family="Inter, Arial, sans-serif">multi-unit block</text>
+  </g>
 </svg>

@@ -100,9 +100,45 @@
 - Storytelling: Donald Miller StoryBrand framework application; "1600%" email CTA stat is unverified
 - Star Wars film clips shown during training excluded from chunks (copyrighted content)
 
+## Batch 3 — August 11, 2026
+
+### New Sources Added
+| # | Source | Type | Size | Transcript? | Status |
+|---|--------|------|------|-------------|--------|
+| 10 | 2025 Apr 9 Short Sales - How to Buy & Sell w Marty | PDF transcript | 212 KB | ✅ Yes | **PROCESSED** |
+| 11 | 2025 Dec 10 Common REPC Errors to Avoid | PDF transcript | 114 KB | ✅ Yes | **PROCESSED** |
+| 12 | 2026 Jul 6 Planned Decision Making | PDF transcript | 153 KB | ✅ Yes | **PROCESSED** |
+| 13 | 2025 Jul 30 Work With Your TC w Marty & Marc | Video only | 665 MB | ❌ No | PENDING TRANSCRIPTION |
+| 14 | 2026 Apr 16 Development & New Construction Deals w Craig | Video only | 764 MB | ❌ No | PENDING TRANSCRIPTION |
+
+### Files Created (Batch 3)
+
+**Raw Transcripts**
+- raw-transcripts/short-sales-2025-04-transcript.txt (935 lines)
+- raw-transcripts/repc-errors-2025-12-transcript.txt (474 lines)
+- raw-transcripts/planned-decision-making-2026-07-transcript.txt (683 lines)
+
+**JSON Source Records**
+- source-records/short-sales-2025-04.json (13 broker guidance scenarios, 4 objections, 18 search chunks)
+- source-records/repc-errors-2025-12.json (13 broker guidance scenarios, 3 objections, 13 search chunks)
+- source-records/planned-decision-making-2026-07.json (8 broker guidance scenarios, 3 objections, 9 search chunks)
+
+**Markdown Digests**
+- source-digests/short-sales-2025-04.md
+- source-digests/repc-errors-2025-12.md
+- source-digests/planned-decision-making-2026-07.md
+
+### Batch 3 Notes
+- Short Sales: Marty-led comprehensive training; Utah-specific forms (Brokermint, MLS); conversation log technique emphasized as critical tool
+- REPC Errors: Darren-led practical contract administration; PID disclosure is newer requirement many agents miss; compensation structure litigation risk is significant
+- Planned Decision Making: Marty adapts military OODA loop and FACADE model from Hazard Lee's "The Art of Clear Thinking"; emphasizes slowing down under pressure
+- 2 videos still pending transcription (Work With Your TC, Development & New Construction)
+- **Validator bug fixed:** `first_phrase_in_span()` was returning `False` for all chunks with < 8 words even when the phrase was present in the span. Fixed to `return phrase in span_norm, phrase`
+- **pdftotext extraction artifacts:** Some PDF-to-text conversions produced garbled characters (e.g., "T. He Art o Clear T hin king" instead of "The Art of Clear Thinking"). These artifacts are preserved in raw transcripts as-is. Future batches should use a higher-quality PDF extraction tool or verify transcript accuracy before chunking.
+
 ## Next Steps
 
-1. Digest remaining 2 videos (need transcription via faster-whisper)
+1. Transcribe 2 remaining videos via faster-whisper
 2. Process screenshot image for any relevant content
 3. Create master index file for Hermes to consume
 4. Update handoff file with file locations and schema
