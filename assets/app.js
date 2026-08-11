@@ -88,10 +88,15 @@ const demoAnswers = {
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
+  if(location.hostname.endsWith('github.io') && parts[0] === 'broker-training-portal-poc'){
+    if(parts[1] === 'staging' && parts[2]) return '/' + parts.slice(0,3).join('/');
+    return '/broker-training-portal-poc';
+  }
   const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
+
 function appPath(path){
   return `${appBasePath()}${path}`;
 }
