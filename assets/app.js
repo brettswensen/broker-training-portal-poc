@@ -271,7 +271,6 @@ function renderLatestTraining(){
       <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
         <span class="play">▶</span>
         <strong>${escapeHtml(t.category)}</strong>
-        <em class="authorized-badge">${escapeHtml(t.access || 'Authorized members')}</em>
       </button>
       <div class="video-body">
         <span class="type">${escapeHtml(t.status)}</span>
