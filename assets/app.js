@@ -523,7 +523,7 @@ function askAbout(topic){
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
-const librarySearchUrl = query => `/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`;
+const librarySearchUrl = query => appPath(`/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
 const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
 
 document.getElementById('globalSearch').addEventListener('input', e => {
