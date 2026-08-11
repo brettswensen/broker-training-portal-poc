@@ -267,7 +267,7 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)" aria-label="Watch ${escapeHtml(t.title)}">
         <span class="play">▶</span>
         <strong>${escapeHtml(t.category)}</strong>
         <em class="authorized-badge">${escapeHtml(t.access || 'Authorized members')}</em>
@@ -278,7 +278,7 @@ function renderLatestTraining(){
         <p>${escapeHtml(t.summary)}</p>
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
-          <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
+          <button class="watch-video-action" data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)">Watch video</button>
           <button data-topic="${escapeHtml(t.topics[0] || t.category)}" onclick="askAbout(this.dataset.topic)">Ask about this</button>
         </div>
       </div>
@@ -537,6 +537,16 @@ function handleFollowup(label){
 }
 
 
+function watchTraining(title){
+  const training = trainings.find(t => t.title === title || t.id === title);
+  const url = trainingWatchUrl(training);
+  if(url){
+    window.open(url, '_blank', 'noopener');
+    return;
+  }
+  openTraining(title);
+}
+
 function openTraining(title){
   document.getElementById('globalSearch').value = title;
   renderResults(title);
@@ -754,12 +764,17 @@ function renderResults(query=''){
 function transcriptSourcesFor(query, fallbackAnswer){
   const matches = transcriptSearch(query, 3);
   if (!matches.length) return fallbackAnswer.sources;
-  return matches.map((ch, i) => ({
+  const transcriptSources = matches.map((ch, i) => ({
     name: ch.title,
     cite: `Real transcript · ${ch.timestamp}`,
     match: `${Math.min(98, 90 - i*5)}%`,
     quote: snippetFor(ch.text, query).slice(0, 280)
   }));
+  return transcriptSources.some(source => trainingForSource(source)?.videoUrl) ? transcriptSources : fallbackAnswer.sources;
+}
+
+function sourcesHavePlayableVideo(sources=[]){
+  return sources.some(source => Boolean(trainingForSource(source)?.videoUrl));
 }
 
 const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
@@ -810,7 +825,7 @@ async function runAsk(query){
       ...fallback,
       ...liveAnswer,
       confidence: liveAnswer.live ? 'Broker guidance' : (liveAnswer.confidence || fallback.confidence),
-      sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
+      sources: sourcesHavePlayableVideo(liveAnswer.sources || []) ? liveAnswer.sources : fallback.sources
     });
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);

@@ -710,3 +710,25 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
   .designer-pass .card,
   .designer-pass .objection-grid article{padding:12px!important}
 }
+
+/* QA fix: video playback cards + Social Studio polish */
+.designer-pass .video-card{grid-template-rows:170px auto!important;min-height:0!important;overflow:hidden!important}
+.designer-pass .video-thumb{min-height:170px!important;padding:0!important;position:relative!important;isolation:isolate!important;overflow:hidden!important}
+.designer-pass .video-thumb:after{content:"";position:absolute;inset:auto 0 0;height:54%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.58));pointer-events:none;z-index:1}
+.designer-pass .video-thumb .play{position:absolute!important;right:18px!important;top:18px!important;z-index:4!important;width:44px!important;height:44px!important}
+.designer-pass .video-thumb strong{position:absolute!important;left:18px!important;right:82px!important;bottom:58px!important;z-index:4!important;line-height:1.1!important;font-size:12px!important;text-align:left!important}
+.designer-pass .authorized-badge{position:absolute!important;left:18px!important;right:auto!important;bottom:17px!important;top:auto!important;z-index:4!important;max-width:calc(100% - 36px)!important;line-height:1.1!important}
+.designer-pass .video-body{display:flex!important;flex-direction:column!important;gap:10px!important}
+.designer-pass .video-body p{min-height:4.15em!important;margin-bottom:0!important}
+.designer-pass .video-actions{margin-top:auto!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+.designer-pass .video-actions button,.designer-pass .script-actions button{border:1px solid rgba(255,255,255,.14)!important;background:rgba(255,255,255,.07)!important;color:#fff!important;border-radius:999px!important;font-weight:800!important;cursor:pointer!important;box-shadow:none!important}
+.designer-pass .video-actions .watch-video-action,.designer-pass .script-actions button:first-child{border-color:rgba(120,220,232,.5)!important;background:linear-gradient(135deg,rgba(104,116,245,.24),rgba(45,212,191,.18))!important;color:#eaffff!important}
+.designer-pass .social-preview-toolbar{align-items:flex-start!important}
+.designer-pass .social-asset-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+.designer-pass .social-asset-grid article{min-height:116px!important;padding:12px!important;display:grid!important;align-content:start!important;gap:5px!important;word-break:normal!important;overflow-wrap:normal!important}
+.designer-pass .social-asset-grid article strong{font-size:13px!important;line-height:1.18!important}
+.designer-pass .social-asset-grid article small{font-size:12px!important;line-height:1.25!important;word-break:normal!important;overflow-wrap:normal!important}
+.designer-pass .script-actions{display:flex!important;flex-wrap:wrap!important;gap:8px!important}
+.designer-pass .script-actions button{padding:10px 13px!important;min-height:38px!important}
+@media(max-width:920px){.designer-pass .social-studio-shell{grid-template-columns:1fr!important}.designer-pass .social-asset-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.designer-pass .video-card{grid-template-rows:150px auto!important}.designer-pass .video-thumb{min-height:150px!important}}
+@media(max-width:680px){.designer-pass .social-asset-grid{grid-template-columns:1fr!important}.designer-pass .social-preview-toolbar{display:grid!important}.designer-pass .social-format-tabs{width:100%!important}.designer-pass .social-format-tabs button{flex:1 1 auto!important}.designer-pass .video-card{grid-template-rows:150px auto!important}.designer-pass .video-body p{min-height:0!important}.designer-pass .video-actions{grid-template-columns:1fr!important}}
