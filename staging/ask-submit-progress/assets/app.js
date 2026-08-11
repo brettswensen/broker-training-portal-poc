@@ -1,10 +1,10 @@
 const trainings = [
-  {title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", summary:"How agents should collaborate with transaction coordination from contract to close.", excerpt:"Marty and Marc walk through when to bring the TC in, how deadlines are tracked, and what the agent still owns with the client.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
-  {title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", summary:"Specialized training for development, builders, land, and new construction opportunities.", excerpt:"Craig explains how builder/developer conversations differ from regular resale and what agents need to know before advising clients.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
-  {title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", excerpt:"Craig breaks down how to think about comp selection and adjustments when the property does not fit a clean single-family template.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
-  {title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", excerpt:"The training focuses on separating safety and lending issues from wishlist repairs, then turning the inspection report into a calm negotiation strategy.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
-  {title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", excerpt:"Darrin covers the high-level exchange concept, timing pressure, and why agents should bring in a qualified intermediary/tax advisor early.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
-  {title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", excerpt:"Craig compares flip potential and land value scenarios, showing how investor intent changes the pricing conversation.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
+  {id:"tc-workflow-2025-07", title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", duration:"1:08:00", watchTime:"12:15", thumbnail:"assets/thumbnails/tc-workflow.svg", videoUrl:"#demo-video-upload-needed", access:"Authorized members", summary:"How agents should collaborate with transaction coordination from contract to close.", excerpt:"Marty and Marc walk through when to bring the TC in, how deadlines are tracked, and what the agent still owns with the client.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
+  {id:"new-construction-2026-04", title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", duration:"48:00", watchTime:"09:40", thumbnail:"assets/thumbnails/new-construction.svg", videoUrl:"#demo-video-upload-needed", access:"Authorized members", summary:"Specialized training for development, builders, land, and new construction opportunities.", excerpt:"Craig explains how builder/developer conversations differ from regular resale and what agents need to know before advising clients.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
+  {id:"cma-triplex-2026-02", title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", duration:"58:00", watchTime:"18:30", thumbnail:"assets/thumbnails/cma-triplex.svg", videoUrl:"https://drive.google.com/file/d/1H8Yfo2oVq71p1mhjQTxfpIoMCOPpDhcY/view", access:"Authorized preview", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", excerpt:"Craig breaks down how to think about comp selection and adjustments when the property does not fit a clean single-family template.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
+  {id:"repair-negotiations-2026-07", title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", duration:"42:00", watchTime:"14:20", thumbnail:"assets/thumbnails/repair-negotiations.svg", videoUrl:"https://drive.google.com/file/d/1RYFBNXK0ThpEV_tpaTO3faFbb7YkYl01/view", access:"Authorized preview", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", excerpt:"The training focuses on separating safety and lending issues from wishlist repairs, then turning the inspection report into a calm negotiation strategy.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
+  {id:"1031-exchange-2026-05", title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", duration:"52:00", watchTime:"07:50", thumbnail:"assets/thumbnails/1031-exchange.svg", videoUrl:"https://drive.google.com/file/d/16LUVKK6u3xx1RZhN1l3bx9nYx6coM6L1/view", access:"Authorized preview", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", excerpt:"Darrin covers the high-level exchange concept, timing pressure, and why agents should bring in a qualified intermediary/tax advisor early.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
+  {id:"cma-flip-land-2026-05", title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", duration:"46:00", watchTime:"21:10", thumbnail:"assets/thumbnails/cma-flip-land.svg", videoUrl:"https://drive.google.com/file/d/1FkDd5epWGQUU7Ttjtg1adwDOSaAu_4PL/view", access:"Authorized preview", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", excerpt:"Craig compares flip potential and land value scenarios, showing how investor intent changes the pricing conversation.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
 ];
 
 const playbooks = [
@@ -88,7 +88,7 @@ const demoAnswers = {
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const appMarkers = ['design-pass','library','playbooks','topics'];
+  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -99,6 +99,21 @@ function slugifyPlaybook(name){
   return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
 function playbookUrl(name){ return appPath(`/playbooks/${slugifyPlaybook(name)}/`); }
+function normalizeSourceTitle(value){
+  return String(value || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').replace(/(with|w)/g,' ').replace(/\s+/g,' ').trim();
+}
+function trainingForSource(sourceOrTitle){
+  const label = typeof sourceOrTitle === 'string' ? sourceOrTitle : (sourceOrTitle?.name || sourceOrTitle?.title || '');
+  const normalized = normalizeSourceTitle(label);
+  return trainings.find(t => normalizeSourceTitle(t.title) === normalized)
+    || trainings.find(t => normalized.includes(normalizeSourceTitle(t.title).slice(0,18)) || normalizeSourceTitle(t.title).includes(normalized.slice(0,18)))
+    || trainings.find(t => (t.topics || []).some(topic => normalized.includes(normalizeSourceTitle(topic))));
+}
+function trainingWatchUrl(training, timestamp=''){
+  if(!training || !training.videoUrl || training.videoUrl === '#demo-video-upload-needed') return appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
+  const time = String(timestamp || training.watchTime || '').trim();
+  return training.videoUrl + (time && training.videoUrl.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
+}
 
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -165,10 +180,33 @@ function detectFocus(q){
   return 'general';
 }
 
+function thumbnailStyle(t){
+  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
+}
 function card(t){
-  return `<article class="card"><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
+
+const scriptLibrary = [
+  {category:'Repair Negotiations', title:'Inspection repair request', situation:'Buyer wants to respond after inspection.', script:'Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or confidence from the cosmetic items, then choose the cleanest path: repair, credit, concession, or price adjustment.', playbook:'Repair Negotiation Playbook'},
+  {category:'Transaction Coordination', title:'TC introduction', situation:'Client is under contract and needs to know who handles what.', script:'I’m bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. I’ll stay your main point of contact while the TC helps keep the process moving cleanly.', playbook:'Contract-to-Close Checklist'},
+  {category:'Pricing', title:'Unusual property CMA', situation:'Seller has a property that does not fit easy comps.', script:'This is not a perfect apples-to-apples CMA, so I’m going to show you the closest evidence, call out where the comp set breaks down, and explain the pricing range instead of pretending there is one exact number.', playbook:'CMA / Pricing Playbook'},
+  {category:'Investor Clients', title:'1031 timing handoff', situation:'Client asks about selling and avoiding taxes.', script:'Because this may involve a 1031 exchange, timing matters. Before funds are received, a qualified intermediary should be involved. Let’s get the QI or CPA into the conversation before giving tax-specific direction.', playbook:'Investor Client Playbook'}
+];
+function renderScriptPreview(){
+  const grid = document.getElementById('scriptPreviewGrid');
+  if(!grid) return;
+  grid.innerHTML = scriptLibrary.map(item => `<article class="script-card"><span>${escapeHtml(item.category)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.situation)}</p><blockquote>${escapeHtml(item.script)}</blockquote><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(item.script).replace(/'/g,'&#39;')}')">Copy script</button><button type="button" onclick="saveScriptItem(this,'${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.script).replace(/'/g,'&#39;')}')">Save</button><a href="${playbookUrl(item.playbook)}">Open playbook</a></div></article>`).join('');
+}
+function renderSavedWorkspace(){
+  const list = document.getElementById('savedWorkspaceList');
+  const count = document.getElementById('savedWorkspaceCount');
+  if(!list) return;
+  const items = readSavedBrokerItems();
+  if(count) count.textContent = `${items.length} saved`;
+  list.innerHTML = items.length ? items.slice(0,5).map(item => `<article><span>${escapeHtml(item.type)}</span><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail || 'Saved for later review.')}</p></article>`).join('') : '<p class="muted">Saved answers and scripts will appear here during the demo. Use the Save buttons in Ask or Scripts to test it.</p>';
+}
 
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
@@ -187,9 +225,10 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
         <span class="play">▶</span>
         <strong>${escapeHtml(t.category)}</strong>
+        <em class="authorized-badge">${escapeHtml(t.access || 'Authorized members')}</em>
       </button>
       <div class="video-body">
         <span class="type">${escapeHtml(t.status)}</span>
@@ -222,23 +261,80 @@ function renderTrainings(){
 function sourcePill(source, index){
   if(!source) return '';
   const label = source.name || 'Broker training source';
+  const training = trainingForSource(source);
   const detail = [source.cite, source.quote].filter(Boolean).join(' · ');
-  return `<a class="source-pill" href="${librarySearchUrl(label)}" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
+  return `<a class="source-pill" href="${trainingWatchUrl(training, source.timestamp || source.cite)}" target="_blank" rel="noopener" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source video: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
 }
 
 function sourceCard(source, index){
   const label = source.name || 'Broker training source';
-  return `<article>
-    <span>${escapeHtml(source.match || 'Source')} match</span>
-    <strong>${escapeHtml(label)}</strong>
-    <small>${escapeHtml(source.cite || 'Broker training library')}</small>
-    <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
-    <div class="source-card-actions">
-      <a href="${librarySearchUrl(label)}">Read/search</a>
-      <a href="${librarySearchUrl(label)}&type=video">Watch</a>
-      <a href="${librarySearchUrl(label)}&type=audio">Listen</a>
+  const training = trainingForSource(source);
+  const why = source.why || whySourceMatters(label, source);
+  const watchUrl = trainingWatchUrl(training, source.timestamp || source.cite);
+  const thumb = training?.thumbnail ? thumbnailStyle(training) : '';
+  const time = source.timestamp || source.cite?.match(/\d{1,2}:\d{2}(?::\d{2})?/)?.[0] || training?.watchTime || 'source moment';
+  return `<article class="watchable-source-card">
+    <button class="source-video-thumb"${thumb} onclick="window.open('${escapeHtml(watchUrl)}','_blank','noopener')" aria-label="Watch source video: ${escapeHtml(label)}"><span class="play">▶</span><em>${escapeHtml(time)}</em></button>
+    <div class="source-video-body">
+      <span>${escapeHtml(source.match || 'Source')} match · ${escapeHtml(training?.access || 'Authorized members')}</span>
+      <strong>${escapeHtml(label)}</strong>
+      <small>${escapeHtml(source.cite || training?.category || 'Broker training library')}</small>
+      <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
+      <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
+      <div class="source-card-actions">
+        <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener">Watch source</a>
+        <a href="${librarySearchUrl(label)}">View transcript/search</a>
+        <a href="${appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md')}">Upload notes</a>
+      </div>
     </div>
   </article>`;
+}
+
+function whySourceMatters(label, source={}){
+  const text = [label, source.cite, source.quote].join(' ').toLowerCase();
+  if(text.includes('repair') || text.includes('inspection')) return 'Gives the agent a practical way to separate real repair issues from wish-list items.';
+  if(text.includes('1031') || text.includes('tax') || text.includes('exchange')) return 'Flags timing-sensitive guidance and reminds the agent when to involve the QI or CPA.';
+  if(text.includes('cma') || text.includes('pricing') || text.includes('land') || text.includes('flip')) return 'Helps the agent explain pricing with evidence instead of pretending there is one perfect number.';
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return 'Clarifies handoffs, deadlines, and who owns client communication after acceptance.';
+  if(text.includes('construction') || text.includes('builder')) return 'Shows how builder and development conversations differ from normal resale.';
+  return 'Connects the answer back to team training the agent can review before advising the client.';
+}
+
+const savedBrokerBrainKey = 'brokerBrainSavedItemsV1';
+function readSavedBrokerItems(){
+  try { return JSON.parse(localStorage.getItem(savedBrokerBrainKey) || '[]'); } catch (_) { return []; }
+}
+function writeSavedBrokerItems(items){
+  try { localStorage.setItem(savedBrokerBrainKey, JSON.stringify(items.slice(0,24))); } catch (_) {}
+}
+function saveBrokerItem(type, title, detail=''){
+  const items = readSavedBrokerItems();
+  const item = {type, title, detail, savedAt: new Date().toISOString()};
+  writeSavedBrokerItems([item, ...items.filter(x => x.title !== title || x.type !== type)]);
+  renderSavedWorkspace();
+}
+function saveAnswer(button){
+  const card = button.closest('.ai-answer');
+  const title = card?.querySelector('h3')?.textContent?.trim() || 'Saved broker answer';
+  const detail = card?.querySelector('.answer-summary')?.textContent?.trim() || '';
+  saveBrokerItem('Answer', title, detail);
+  const old = button.textContent;
+  button.textContent = 'Saved';
+  setTimeout(()=>button.textContent = old, 1200);
+}
+function saveScriptItem(button, title, script){
+  saveBrokerItem('Script', title, script);
+  const old = button.textContent;
+  button.textContent = 'Saved';
+  setTimeout(()=>button.textContent = old, 1200);
+}
+function escalationList(answer){
+  const text = [answer.title, answer.intent, ...(answer.queryTerms || []), ...(answer.steps || [])].join(' ').toLowerCase();
+  if(text.includes('1031') || text.includes('tax')) return ['Client is close to closing or already received funds.', 'The agent is being asked for tax advice.', 'A qualified intermediary or CPA has not been looped in yet.'];
+  if(text.includes('repair') || text.includes('inspection')) return ['The repair request involves safety, insurance, lending, or habitability.', 'The other side is emotional or threatening cancellation.', 'Deadlines are close and the TC or broker has not reviewed the response.'];
+  if(text.includes('cma') || text.includes('pricing') || text.includes('land') || text.includes('flip')) return ['The property does not fit normal comparable sales.', 'The client wants a number that the market evidence does not support.', 'The pricing discussion may create appraisal, lending, or disclosure risk.'];
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return ['A deadline is unclear or has changed.', 'The client is confused about who owns the next step.', 'Documents, lender details, title, or inspection timing are incomplete.'];
+  return ['The issue touches tax, legal, lending, inspection, or contract interpretation.', 'The agent is uncertain after reading the relevant training.', 'A client decision is urgent or could put the transaction at risk.'];
 }
 
 function answerMarkup(answer){
@@ -271,7 +367,7 @@ function answerMarkup(answer){
       </section>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">WHY THIS WORKS</p>
+        <p class="eyebrow">WHAT TO DO NEXT</p>
         ${whyList}
       </section>
 
@@ -287,10 +383,16 @@ function answerMarkup(answer){
         </div>
       </section>
 
+      <section class="answer-section escalation-section">
+        <p class="eyebrow">ESCALATE IF</p>
+        <ul class="broker-take-list">${escalationList(cleanAnswer).map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>
+      </section>
+
       <div class="answer-route-links" aria-label="Go deeper in Broker Brain">
         <a href="${librarySearchUrl(cleanAnswer.queryTerms?.[0] || cleanAnswer.title)}">Find related training</a>
         <a href="${appPath('/playbooks/')}">Open playbooks</a>
         <a href="${appPath('/topics/')}">Browse topics</a>
+        <button type="button" onclick="saveAnswer(this)">Save answer</button>
       </div>
       <details class="sources-used source-evidence-panel">
         <summary>Sources to check</summary>
@@ -438,7 +540,7 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
 }));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
-renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();
+renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();renderScriptPreview();renderSavedWorkspace();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
@@ -524,7 +626,7 @@ function allContentCard(item, query, index){
   const pct = isTranscript ? Math.min(98, 62 + Math.round(item.score * 2)) : 88 - index * 4;
   const tags = (item.topics || []).slice(0,3).map(x=>`<span>${escapeHtml(x)}</span>`).join('');
   return `<article class="content-result-card">
-    <div class="thumb-tile"><span>▶</span><strong>${escapeHtml(category)}</strong><em>${isTranscript ? item.timestamp : item.size}</em></div>
+    <div class="thumb-tile"${!isTranscript ? thumbnailStyle(item) : ''}><span>▶</span><strong>${escapeHtml(category)}</strong><em>${isTranscript ? item.timestamp : item.size}</em></div>
     <div class="content-result-body">
       <small>${pct}% match · ${escapeHtml(category)}</small>
       <h3>${escapeHtml(title)}</h3>
@@ -559,7 +661,7 @@ function playbookRow(p, index){
 
 function videoTile(t, index){
   return `<article class="network-video-card">
-    <button class="network-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
+    <button class="network-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
     <small>${index === 0 ? 'New this week' : index < 3 ? 'Indexed training' : 'Library video'}</small>
     <h3>${escapeHtml(t.title)}</h3>
     ${sourceProofMarkup('Original training source', 1)}

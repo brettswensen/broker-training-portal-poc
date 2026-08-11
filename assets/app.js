@@ -1,10 +1,10 @@
 const trainings = [
-  {title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", summary:"How agents should collaborate with transaction coordination from contract to close.", excerpt:"Marty and Marc walk through when to bring the TC in, how deadlines are tracked, and what the agent still owns with the client.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
-  {title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", summary:"Specialized training for development, builders, land, and new construction opportunities.", excerpt:"Craig explains how builder/developer conversations differ from regular resale and what agents need to know before advising clients.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
-  {title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", excerpt:"Craig breaks down how to think about comp selection and adjustments when the property does not fit a clean single-family template.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
-  {title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", excerpt:"The training focuses on separating safety and lending issues from wishlist repairs, then turning the inspection report into a calm negotiation strategy.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
-  {title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", excerpt:"Darrin covers the high-level exchange concept, timing pressure, and why agents should bring in a qualified intermediary/tax advisor early.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
-  {title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", excerpt:"Craig compares flip potential and land value scenarios, showing how investor intent changes the pricing conversation.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
+  {id:"tc-workflow-2025-07", title:"Work With Your TC w Marty & Marc", file:"2025 Jul 30 Work With Your TC w Marty & Marc.mp4", type:"Video Training", category:"Transaction Coordination", size:"634 MB", duration:"1:08:00", watchTime:"12:15", thumbnail:"assets/thumbnails/tc-workflow.svg", videoUrl:"#demo-video-upload-needed", access:"Authorized members", summary:"How agents should collaborate with transaction coordination from contract to close.", excerpt:"Marty and Marc walk through when to bring the TC in, how deadlines are tracked, and what the agent still owns with the client.", topics:["transaction coordinator","contract to close","operations","timelines","work with TC"], playbooks:["Contract-to-Close Checklist","New Agent Onboarding"]},
+  {id:"new-construction-2026-04", title:"Development & New Construction Deals w Craig", file:"2026 Apr 16 Development & New Construction Deals w Craig.mp4", type:"Video Training", category:"New Construction", size:"Pending", duration:"48:00", watchTime:"09:40", thumbnail:"assets/thumbnails/new-construction.svg", videoUrl:"#demo-video-upload-needed", access:"Authorized members", summary:"Specialized training for development, builders, land, and new construction opportunities.", excerpt:"Craig explains how builder/developer conversations differ from regular resale and what agents need to know before advising clients.", topics:["development deals","new construction","builders","land"], playbooks:["New Construction Deal Playbook"]},
+  {id:"cma-triplex-2026-02", title:"CMA's - Triplex, Addition, Nightly Rental w Craig", file:"2026 Feb 4 CMA's - Triplex, Addtition, Nightly Rental w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", duration:"58:00", watchTime:"18:30", thumbnail:"assets/thumbnails/cma-triplex.svg", videoUrl:"https://drive.google.com/file/d/1H8Yfo2oVq71p1mhjQTxfpIoMCOPpDhcY/view", access:"Authorized preview", summary:"Advanced valuation examples for unusual properties like triplexes, additions, and nightly rentals.", excerpt:"Craig breaks down how to think about comp selection and adjustments when the property does not fit a clean single-family template.", topics:["CMA","triplex","addition","nightly rental","pricing"], playbooks:["CMA/Pricing Playbook"]},
+  {id:"repair-negotiations-2026-07", title:"Repair Negotiations w Craig", file:"2026 Jul 23 Repair Negotiations w Craig.mp4", type:"Video Training", category:"Negotiation & Inspection", size:"157.9 MB", duration:"42:00", watchTime:"14:20", thumbnail:"assets/thumbnails/repair-negotiations.svg", videoUrl:"https://drive.google.com/file/d/1RYFBNXK0ThpEV_tpaTO3faFbb7YkYl01/view", access:"Authorized preview", summary:"How to guide buyers and sellers through inspection objections and repair negotiations.", excerpt:"The training focuses on separating safety and lending issues from wishlist repairs, then turning the inspection report into a calm negotiation strategy.", topics:["repair negotiations","inspection objection","buyer requests","seller response"], playbooks:["Repair Negotiation Playbook","Inspection Objection Playbook"]},
+  {id:"1031-exchange-2026-05", title:"1031 Exchange Basics w Darrin", file:"2026 May 4 1031 Exchange Basics w Darrin.mp4", type:"Video Training", category:"Investors & Tax Strategy", size:"Pending", duration:"52:00", watchTime:"07:50", thumbnail:"assets/thumbnails/1031-exchange.svg", videoUrl:"https://drive.google.com/file/d/16LUVKK6u3xx1RZhN1l3bx9nYx6coM6L1/view", access:"Authorized preview", summary:"The basics agents should understand when working with investor clients considering a 1031 exchange.", excerpt:"Darrin covers the high-level exchange concept, timing pressure, and why agents should bring in a qualified intermediary/tax advisor early.", topics:["1031 exchange","investor clients","tax deferral","timelines"], playbooks:["Investor Client Playbook"]},
+  {id:"cma-flip-land-2026-05", title:"CMA - Flip Property and Land w Craig", file:"2026 May 6 CMA - Flip Property and Land w Craig.mp4", type:"Video Training", category:"CMA & Pricing", size:"Pending", duration:"46:00", watchTime:"21:10", thumbnail:"assets/thumbnails/cma-flip-land.svg", videoUrl:"https://drive.google.com/file/d/1FkDd5epWGQUU7Ttjtg1adwDOSaAu_4PL/view", access:"Authorized preview", summary:"CMA approach for flip properties, land valuation, and investor-oriented pricing questions.", excerpt:"Craig compares flip potential and land value scenarios, showing how investor intent changes the pricing conversation.", topics:["CMA","flip property","land valuation","investor property"], playbooks:["CMA/Pricing Playbook","Investor Client Playbook"]}
 ];
 
 const playbooks = [
@@ -99,6 +99,21 @@ function slugifyPlaybook(name){
   return String(name || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
 function playbookUrl(name){ return appPath(`/playbooks/${slugifyPlaybook(name)}/`); }
+function normalizeSourceTitle(value){
+  return String(value || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').replace(/(with|w)/g,' ').replace(/\s+/g,' ').trim();
+}
+function trainingForSource(sourceOrTitle){
+  const label = typeof sourceOrTitle === 'string' ? sourceOrTitle : (sourceOrTitle?.name || sourceOrTitle?.title || '');
+  const normalized = normalizeSourceTitle(label);
+  return trainings.find(t => normalizeSourceTitle(t.title) === normalized)
+    || trainings.find(t => normalized.includes(normalizeSourceTitle(t.title).slice(0,18)) || normalizeSourceTitle(t.title).includes(normalized.slice(0,18)))
+    || trainings.find(t => (t.topics || []).some(topic => normalized.includes(normalizeSourceTitle(topic))));
+}
+function trainingWatchUrl(training, timestamp=''){
+  if(!training || !training.videoUrl || training.videoUrl === '#demo-video-upload-needed') return appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
+  const time = String(timestamp || training.watchTime || '').trim();
+  return training.videoUrl + (time && training.videoUrl.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
+}
 
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -165,8 +180,11 @@ function detectFocus(q){
   return 'general';
 }
 
+function thumbnailStyle(t){
+  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
+}
 function card(t){
-  return `<article class="card"><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -207,9 +225,10 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
         <span class="play">▶</span>
         <strong>${escapeHtml(t.category)}</strong>
+        <em class="authorized-badge">${escapeHtml(t.access || 'Authorized members')}</em>
       </button>
       <div class="video-body">
         <span class="type">${escapeHtml(t.status)}</span>
@@ -242,23 +261,31 @@ function renderTrainings(){
 function sourcePill(source, index){
   if(!source) return '';
   const label = source.name || 'Broker training source';
+  const training = trainingForSource(source);
   const detail = [source.cite, source.quote].filter(Boolean).join(' · ');
-  return `<a class="source-pill" href="${librarySearchUrl(label)}" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
+  return `<a class="source-pill" href="${trainingWatchUrl(training, source.timestamp || source.cite)}" target="_blank" rel="noopener" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source video: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
 }
 
 function sourceCard(source, index){
   const label = source.name || 'Broker training source';
+  const training = trainingForSource(source);
   const why = source.why || whySourceMatters(label, source);
-  return `<article>
-    <span>${escapeHtml(source.match || 'Source')} match</span>
-    <strong>${escapeHtml(label)}</strong>
-    <small>${escapeHtml(source.cite || 'Broker training library')}</small>
-    <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
-    <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
-    <div class="source-card-actions">
-      <a href="${librarySearchUrl(label)}">Read/search</a>
-      <a href="${librarySearchUrl(label)}&type=video">Watch</a>
-      <a href="${librarySearchUrl(label)}&type=audio">Listen</a>
+  const watchUrl = trainingWatchUrl(training, source.timestamp || source.cite);
+  const thumb = training?.thumbnail ? thumbnailStyle(training) : '';
+  const time = source.timestamp || source.cite?.match(/\d{1,2}:\d{2}(?::\d{2})?/)?.[0] || training?.watchTime || 'source moment';
+  return `<article class="watchable-source-card">
+    <button class="source-video-thumb"${thumb} onclick="window.open('${escapeHtml(watchUrl)}','_blank','noopener')" aria-label="Watch source video: ${escapeHtml(label)}"><span class="play">▶</span><em>${escapeHtml(time)}</em></button>
+    <div class="source-video-body">
+      <span>${escapeHtml(source.match || 'Source')} match · ${escapeHtml(training?.access || 'Authorized members')}</span>
+      <strong>${escapeHtml(label)}</strong>
+      <small>${escapeHtml(source.cite || training?.category || 'Broker training library')}</small>
+      <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
+      <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
+      <div class="source-card-actions">
+        <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener">Watch source</a>
+        <a href="${librarySearchUrl(label)}">View transcript/search</a>
+        <a href="${appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md')}">Upload notes</a>
+      </div>
     </div>
   </article>`;
 }
@@ -599,7 +626,7 @@ function allContentCard(item, query, index){
   const pct = isTranscript ? Math.min(98, 62 + Math.round(item.score * 2)) : 88 - index * 4;
   const tags = (item.topics || []).slice(0,3).map(x=>`<span>${escapeHtml(x)}</span>`).join('');
   return `<article class="content-result-card">
-    <div class="thumb-tile"><span>▶</span><strong>${escapeHtml(category)}</strong><em>${isTranscript ? item.timestamp : item.size}</em></div>
+    <div class="thumb-tile"${!isTranscript ? thumbnailStyle(item) : ''}><span>▶</span><strong>${escapeHtml(category)}</strong><em>${isTranscript ? item.timestamp : item.size}</em></div>
     <div class="content-result-body">
       <small>${pct}% match · ${escapeHtml(category)}</small>
       <h3>${escapeHtml(title)}</h3>
@@ -634,7 +661,7 @@ function playbookRow(p, index){
 
 function videoTile(t, index){
   return `<article class="network-video-card">
-    <button class="network-thumb" data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
+    <button class="network-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
     <small>${index === 0 ? 'New this week' : index < 3 ? 'Indexed training' : 'Library video'}</small>
     <h3>${escapeHtml(t.title)}</h3>
     ${sourceProofMarkup('Original training source', 1)}
