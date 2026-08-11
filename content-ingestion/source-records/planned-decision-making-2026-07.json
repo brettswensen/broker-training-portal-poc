@@ -1,0 +1,800 @@
+{
+  "source_id": "planned-decision-making-2026-07",
+  "title": "Planned Decision Making",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1AGkfljC3X75XQ326k7O5LUJmWhDr4iPk/view",
+  "date": "2026-07-06",
+  "speaker_or_author": "Marty (Primary Estate Experts)",
+  "audience": [
+    "agents",
+    "new agents",
+    "experienced agents"
+  ],
+  "summary": "Training on decision-making frameworks adapted from fighter pilot methodology. Marty introduces the OODA loop (Observe, Orient, Decide, Act) and the FACADE model (Focus, Assess, Consider, Act, Decide, Evaluate) as tools for making better decisions under stress in real estate transactions. Uses examples from Hazard Lee's 'The Art of Clear Thinking' and applies military decision-making concepts to client situations.",
+  "topics": [
+    "decision making",
+    "OODA loop",
+    "FACADE model",
+    "stress management",
+    "client communication",
+    "problem solving",
+    "critical thinking"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Making decisions under pressure with clients",
+      "guidance": "There is no situation so bad you can't make it worse. Rushed or poor decisions in stressful situations often compound problems. The goal is to identify decisions that could make things worse vs. better, then choose the best path. This requires slowing down enough to think clearly even when clients are demanding immediate answers.",
+      "client_language": "I know this feels urgent, but I want to make sure we think through all our options before deciding. The wrong move here could make things worse, so let's take a few minutes to get this right.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Using the OODA loop in real estate",
+      "guidance": "The OODA loop (Observe, Orient, Decide, Act) is a continuous cycle: 1) Observe - gather raw data and real-time information from the environment, 2) Orient - build an accurate mental picture of reality (not assumptions), 3) Decide - choose between good/better/best or bad/worse/awful options, 4) Act - execute the decision, then observe results and repeat. Most mistakes happen when orienting based on assumptions rather than reality.",
+      "client_language": "Let me gather all the facts about what's happening before we decide our next step. I want to make sure I'm seeing the full picture, not just what I think is going on.",
+      "citation_refs": [
+        "chunk-002",
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Gathering information from clients",
+      "guidance": "The most common way to observe what's happening with clients is through conversation. Phone calls give immediate feedback but can be misremembered. Email/text creates a written record but has time lag. Use open-ended questions and listen more than talk. Ask: What's actually happening? What do we know for sure? What are we assuming?",
+      "client_language": "Tell me exactly what's happening from your perspective. I want to understand the full situation before we figure out our next move.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Avoiding assumptions in transactions",
+      "guidance": "Most situations are made worse because decisions are based on assumptions or incomplete data. When oriented to a reality that doesn't exist, every subsequent decision is flawed. Verify facts before acting. If you only know 95% of what's happening, that may not be enough - especially in complex or high-stakes situations.",
+      "client_language": "Before we make any decisions, let me verify a few things. I don't want to act on assumptions and then find out we missed something important.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Dealing with last-minute contract deadlines",
+      "guidance": "Problems often surface at 3 PM on a deadline day with a 5 PM resolution required. When time is short, the temptation is to react immediately. Instead: quickly observe what's happening, orient to the actual reality (not panic), decide between available options, act decisively, then observe the result. The loop continues - one decision leads to the next situation.",
+      "client_language": "We've got a tight deadline, but I still need to think this through carefully. Let me quickly assess our options and then we'll move decisively.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Learning from decision outcomes",
+      "guidance": "After any significant decision, review what happened: What did you observe? How did you orient yourself? What did you decide? What was the action? What was the result? This iterative learning process improves future decision-making. Even bad outcomes become learning opportunities when analyzed properly.",
+      "client_language": "Let's look at how this played out so we can learn from it. What worked? What would we do differently next time?",
+      "citation_refs": [
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Using the FACADE model for complex decisions",
+      "guidance": "FACADE stands for: Focus - identify the specific problem (not everything at once), Assess - gather relevant information, Consider - evaluate options and consequences, Act - choose and execute, Decide - commit to the path, Evaluate - review the outcome. This provides structure when overwhelmed by multiple issues.",
+      "client_language": "Let's break this down into manageable pieces. First, what's the specific problem we need to solve right now? Then we'll gather information, look at our options, and make a clear decision.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Managing client stress and expectations",
+      "guidance": "Clients are often in a low state of readiness (autopilot mentality) until something goes wrong, then they panic. Help them move from relaxed readiness to alert readiness without panic. Acknowledge the stress, then systematically work through observation and orientation before deciding. Clients need to feel heard before they can think clearly.",
+      "client_language": "I can see this is stressful. Let's take a breath and look at what we actually know vs. what we're worried might happen. Then we can figure out the best path forward.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    }
+  ],
+  "steps": [
+    "Observe - gather raw data and real-time information",
+    "Orient - build accurate mental picture of reality (not assumptions)",
+    "Decide - evaluate options: good/better/best or bad/worse/awful",
+    "Act - execute the chosen decision",
+    "Observe results - what happened from the action?",
+    "Repeat the loop - continuous decision making",
+    "After significant decisions, review: observe, orient, decide, act, result",
+    "Use FACADE for complex multi-issue situations: Focus, Assess, Consider, Act, Decide, Evaluate"
+  ],
+  "objections": [
+    {
+      "objection": "We don't have time to think this through - we need to act now",
+      "response": "I understand the urgency, but there's no situation so bad we can't make it worse with a rushed decision. Even taking 5 minutes to observe and orient can prevent costly mistakes. Let's quickly assess what we know for sure, then move decisively.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-006"
+      ]
+    },
+    {
+      "objection": "I already know what to do - I've done this before",
+      "response": "Experience is valuable, but every situation has unique elements. Let's make sure we're seeing THIS situation clearly, not just relying on what worked last time. A quick orientation check can confirm we're on the right path.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "objection": "The other agent/seller/buyer is being unreasonable",
+      "response": "Let's separate what we know from what we're assuming about their motives. What have they actually said or done? Sometimes what looks like unreasonableness is actually a different perspective or missing information. Let's gather more data before we respond.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "All right, we\u2019ll get this thing going. We got the recording started again. I am going to make one quick tech change here and put this up. Do not disturb. All right.",
+      "source_line_start": 5,
+      "source_line_end": 6,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Now, as we go through this, i you have questions, eel ree to to uh just cut me o. It\u2019s, it gets a little weird when we\u2019re doing the training this way, because um like I said, the the Zoom link is one login. And what I\u2019m going to show you is on a dierent login. So I kind o have to bounce back and orth to see what\u2019s going on Zoom. So um right now, do you see a screen that says, Plan To Decision Making? Yep Okay, So, A lot o what we\u2019re going to go through today is rom the book \" T. He Art o Clear T hin king \" by John Hazard Lee. Hazard is his light nickname. He was an F sixteen pilot who then switched ; was one o the irst pilots to change to the F thirty ive while it was in experimental stage, and then his experience led to him being.",
+      "source_line_start": 8,
+      "source_line_end": 17,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "Assigned to design the light instruction process or the incoming F thirty ive pilots, And one o the irst things he realized was that the F sixteen, while it was pretty complex, Was still being. He was trained on it the same way that we were training pilots clear back in World War Two, where you just knew everything about the plane. And i you got in a sticky situation, You just knew what the plane could do and just did what you were told to do next. They weren\u2019t really taught how to think through the process o what makes the most sense or my next action. You just knew what the plane could do and you just did it. Well, The problem with the F thirty ive is that the F thirty ive is extremely computer dependent. Like, The F sixteen computer has about as much memory in it as your cell phone.",
+      "source_line_start": 19,
+      "source_line_end": 28,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "Where, an F thirty ive has over a billion lines o code that keeps the plane in the air, You couldn\u2019t know everything there is to know about the airplane because t here is too much to know. And it updates too quickly. And so he said, Well, look what we need to do is teach pilots how to think. What makes the most sense to do here and make that decision? But they\u2019ve got to be able to do it under stress. And he recounts in this book, how he\u2019s trying to explain to the Air Force up. Upper brass, that beore they teach them how to ly the plane, They\u2019ve got to teach them how to think and handle stress and decision making in stress. And the air orce, o course",
+      "source_line_start": 30,
+      "source_line_end": 37,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "being the air orce said well prove it. Prove, we need to make. We need to change what we\u2019ve been doing or ity years. So, they set up a double blind with a bunch o cadet with a bunch o trainees one group. They trained the traditional way.",
+      "source_line_start": 39,
+      "source_line_end": 41,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "His group, they trained beore they ever even trained him anything about the airplane. They trained him on decision making and then trained him on the aircrat. Well, It should come as no surprise that those that were trained to think and igure out how to make decisions in stressul situations outscored those that were just trained how to mechanically, operate the plane. So, the air orce decided, yeah, this makes sense. We should do this with all the pilots. So they rewrote the entire instructional process or training, um, the pilots or the F thirty ive initially. That, they\u2019re a whole signiicant portion o the irst part o their training is decision making. And, then they realized it works so well that they should be training all o their pilots on how to make decisions in stressul situations because they had kids that were scoring really, really well on the written test who would wash out and couldn\u2019t igure out how to ly the plane, because in a stressul situation, they\u2019d make mistakes.",
+      "source_line_start": 43,
+      "source_line_end": 55,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "I am not going to recount all o his experiences he tells through the book, but he makes it very. I you ever want to read it as a quick read, took me about a day and a hal. The Art o Clear Thinking by Hazard Lee. He uses actual experiences as a pilot in very high stress combat situations to illustrate how we use these skills and some o the skills he was trained on, some o them he had to come up with his own. Some have been around or a while, but had never really been integrated. So, we\u2019re going to look at two o the dierent decision - making processes that he now that we now trains other ighter pilots on. He\u2019s now retired rom the Air Force, and he now goes around the world, training corporations and people and business people, how to make an intelligent decision. Now as we get into this.",
+      "source_line_start": 57,
+      "source_line_end": 66,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "You are going to see me use a quote that he uses multiple times, and it pops up in there at least once. One o the irst things they teach the pilots in making decisions is, \u201cThere is no situation so bad you can\u2019t make it worse.\u201d He said, \u201cI know that sounds negative, But there is no situation so bad that i you make a rushed or poor decision, you can\u2019t make it worse.\u201d",
+      "source_line_start": 68,
+      "source_line_end": 72,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "And once the pilots understand that, that they can take a bad situation and make it worse, or they can take a bad situation and make it better. What, we\u2019re emphasizing is you\u2019re going to look at what decisions could make it worse and what could make it better, and which make the most sense to implement. Our goal here is not to make it worse but to make it better. Now, we\u2019ve all been in situations where we\u2019ve done what seemed like made the most sense. And, then the next step happens and",
+      "source_line_start": 74,
+      "source_line_end": 79,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "it didn\u2019t go the way we thought it would. And yeah, we may have made it worse. Well, that\u2019s part o the decision-making process is how to take that eedback. So, the irst loop we\u2019re going to look at is called the OODA loop. This was originally developed by Colonel Boyd, John Boyd in the US Air Force in the nineteen seventies to train very early jet ighter pilots, Very early like irst or second generation F sixteen pilots on ways to make decisions.",
+      "source_line_start": 81,
+      "source_line_end": 86,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "And ways to make decisions that either keep you out o trouble or take a situation that is rapidly changing and make it better. And you\u2019ll notice that throughout this process, it is a loop. Once you make it, you don\u2019t just stop. You don\u2019t make one decision. Lie is ull o continually making decisions based on what happened rom our prior decisions.",
+      "source_line_start": 88,
+      "source_line_end": 92,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "So, the irst thing we do when we go into a situation is we need to observe what\u2019s actually what\u2019s going on. This tends to be a relaxed state o readiness. This is when otentimes, well, or another you know working with another light analogy, we\u2019re on autopilot. All modern aircrat are designed that with an autopilot engaged, the plane can ly itsel. It can keep itsel in the air. Otentimes when we\u2019re working with people and working with situations, we\u2019re kind o in that autopilot mentality. Oh, I\u2019ve done this enough times. I just know what to expect. I\u2019m not going to, I\u2019m just kind o going through the motions, and we\u2019re not paying ull attention to what\u2019s going on. And. Consequently, we\u2019re in a low state o readiness, and we\u2019re not really paying attention to what\u2019s actually occurring around us.",
+      "source_line_start": 94,
+      "source_line_end": 103,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "Until something happens, And then we have to move ourselves quickly into rom relaxed readiness, but up to a more alert readiness status. So we observe what\u2019s going on around us. We then have to orient ourselves to the current reality, what\u2019s actually reality, not what we think is reality. Once, we understand what\u2019s going on around us and have oriented ourselves to the current reality. Now we\u2019re in a high state o alert. Now we have to decide what to do. And otentimes we\u2019re deciding between decisions that are, sometimes we have a good, better, best situation. Sometimes we have a bad, worse and absolutely worse situation. And, we\u2019re trying to orient ourselves to get out o that bad situation into good situation.",
+      "source_line_start": 105,
+      "source_line_end": 113,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "We have to make a decision, become engaged with it, and do what we decided to do. Go through the actions and then observe what the results are. Now I know that sounds airly basic, but in a high stress situation we can orget where we\u2019re at. In the OODA loop as John Boyd described it: observing. We\u2019re just gathering raw data. And real-time inormation rom your environment. Well, when we\u2019re working with clients and people, What\u2019s the most common way that we observe and see what\u2019s going on with them? Ooh, you gonna make me answer that one? Asha, when you\u2019re",
+      "source_line_start": 115,
+      "source_line_end": 121,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "working with clients, How oten what\u2019s the most common way o getting inormation rom them to observe what\u2019s really going on?",
+      "source_line_start": 123,
+      "source_line_end": 124,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-016",
+      "text": "Asking open- ended questions, listening than talking.",
+      "source_line_start": 126,
+      "source_line_end": 126,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-017",
+      "text": "Okay. What is your most common orm o communication with your clients?",
+      "source_line_start": 128,
+      "source_line_end": 128,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-018",
+      "text": "Oh, now I know why she\u2019s not answering. She\u2019s breaking up on us.",
+      "source_line_start": 132,
+      "source_line_end": 132,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-019",
+      "text": "Oh shoot, sorry. Um it\u2019s usually verbal. I preer verbal over. Message and email whenever possible.",
+      "source_line_start": 134,
+      "source_line_end": 135,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-020",
+      "text": "Okay, so having a conversation with them, advantage to a verbal phone call conversation immediate eedback. Disadvantage we otentimes misremember what the conversation was right? Well I think I said or I think that\u2019s what we talked about. Advantage to an email or a text. We have a written conversation. We\u2019ve got proo o what was said disadvantage. Time lag. But we\u2019ve now got in writing what was what was intended. We need to observe and get as much inormation as possible. Now, sometimes we have time to do that, sometimes we don\u2019t, you know? How oten do things seem to come up at three o\u2019clock on the aternoon o a deadline in the contract, and we got to have sorted out by ive o\u2019clock?",
+      "source_line_start": 137,
+      "source_line_end": 145,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-021",
+      "text": "Or i we\u2019re planning ahead and we\u2019ve got a couple, you what all the time more than like.",
+      "source_line_start": 147,
+      "source_line_end": 148,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-022",
+      "text": "Yeah, even though we\u2019re paying attention to those deadlines, we\u2019re keeping track o them. We\u2019re doing everything we can. Things happen once we observe. We have to orient ourselves to what isum the gathered inormation to build an accurate mental picture o reality, what really is happening.",
+      "source_line_start": 150,
+      "source_line_end": 153,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-023",
+      "text": "Again, going back to the statement, there\u2019s no situation so bad you can\u2019t make it worse. Most o the time we make a situation worse is because we\u2019re making assumptions about what\u2019s happening. And so our decisions are based on assumptions or incomplete or inaccurate data. And then once we make a decision",
+      "source_line_start": 155,
+      "source_line_end": 158,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-024",
+      "text": "based on incomplete or inaccurate data, we\u2019re oriented to a reality that doesn\u2019t exist or we\u2019re not completely properly oriented.",
+      "source_line_start": 160,
+      "source_line_end": 161,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-025",
+      "text": "Now, in his book, Hazard Lee describes an experience. He had his irst time out, lying an F thirty ive ollowing. And as a trainee. And his trainer made a particular move with the aircrat that you have to be within very, very speciic parameters to work in terms o your airspeed, the actual physical position o the aircrat. Even the position o the pilot inside the aircrat, because the amount o orce that\u2019s going to occur against your body. His trainer made that particular very sudden move. He knew his situation was about ninety ive percent o what he needed to be in in order to pull o the maneuver, igured that was close enough and tried the same move.",
+      "source_line_start": 163,
+      "source_line_end": 170,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-026",
+      "text": "And stalled the aircrat at ive miles in the air. At such a high rate o speed, he temporarily lost consciousness. And when he regained consciousness, it was with his aircrat pointed nose down, hurtling at ull speed toward the ground. And he suddenly had a very dynamic, Situation that he needed to observe and orient himsel to. And, the irst thing he did was igure out where the eject was he in a situation he could eject i he had to. And then realized he had time once you to igure out what was happening, Reoriented himsel to the reality o the situation and was able to recover the aircrat.",
+      "source_line_start": 172,
+      "source_line_end": 179,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-027",
+      "text": "Now, when he landed, which he did successully, ater he got chewed out pretty hard or making such an obvious mistake. And they went through the iterative process o tell me what happened. Tell me what decisions you made. Restate what the results were and realizing 95 % o reality wasn\u2019t good enough in that situation. He needed to know 100% o what was going on. And i he was outside o that area o operation, he shouldn\u2019t have made the decision he did. The learning experience came rom living through the experience, But then having someone aterwards sit down with him and go through the process o, let\u2019s go back through your loop. What did you observe? How did you orient yoursel? What did you decide to do? What was your action? What was the result?",
+      "source_line_start": 181,
+      "source_line_end": 190,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-028",
+      "text": "That now puts you back into, \u201cNow I need to see what\u2019s happening. I need to get mysel oriented again. I need to make another decision quickly, and I need to act on that decision.\u201d And it needs to be now. And, that\u2019s the process. They started training these pilots on :. Observe what\u2019s going on around you, gain as much inormation. Now reality : Are we ever going to know 100 % o what\u2019s going on around us?",
+      "source_line_start": 192,
+      "source_line_end": 196,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-029",
+      "text": "Are we ever going to have a ull complete picture? Probably not. But, that\u2019s where we have to orient ourselves to reality with as much inormation as possible. The",
+      "source_line_start": 198,
+      "source_line_end": 199,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-030",
+      "text": "more I know about what\u2019s happening, the better decisions I can make. And that comes rom observing what is actually occurring around us. Now, the other loop that they train The pilot\u2019s on is called the ACE helix. Now, The ACE helix again is built around the premise o \u201c. There \u2019 s no situation so bad that you can\u2019t make it worse.\u201d And or those who are amiliar with what you know, the shape o a helix he hazardly describes it, but we all know that a helix is very much like a spiral. This is not a one and done situation.",
+      "source_line_start": 201,
+      "source_line_end": 207,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-031",
+      "text": "Every time we make a decision, it creates a new reality, And we then have to make our decisions based on the new reality that\u2019s come about rom that decision. So it continues to occur over and over. And ACE stands or Assess, Choose, and Execute. So you notice it\u2019s very amiliar to the OODA loop: Observe, Orient, Decide. And act where assess takes that role o observe and orient. And when we assess the situation, We have to ilter out all the variables because we need to look at high yield acts. There\u2019s a lot o stu and lu that goes on. Sometimes when you\u2019re trying to make a decision, extraneous noise that we need to ilter out. And, we need to look at i we\u2019re in a situation where a decision needs to occur rapidly,",
+      "source_line_start": 209,
+      "source_line_end": 217,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-032",
+      "text": "What is going to create a high yield in a short amount o time? Is it better to make a phone call? Is it better to send a text message? I I, you know, what do I know? Deine the problem. Be very clear about what we are, what you are going to be addressing. What is the speciic problem we\u2019re going to address with this decision? And, what can happen in raming those decisions sometimes is that we try to make too many decisions altogether as one decision. We may need to look at what is the most immediate problem that needs to be solved immediately in order to get oriented to make the next decision, to solve the next problem.",
+      "source_line_start": 219,
+      "source_line_end": 226,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-033",
+      "text": "And he says again, \u201cdon\u2019t jump to conclusions.\u201d Oh, and I just ound my typo. I hate that. And that we need to reconstruct a clear picture o the situation rather than relying on assumptions. Now, the F sixteen is a very unique aircrat. My daughter and I share memes about the F sixteen all the time. She\u2019s a crew chie on the F sixteen or the U.S. Air Force; she\u2019s active duty. And I shared one with her yesterday that she got the giggles. And, it\u2019s an F sixteen pilot standing next to an F sixteen that has a number o the access hatches removed while the maintainers are working on the aircrat. And Hazard Lee says, \u201cYou know, you want to know how much trust we put in these maintainers? I\u2019ve got an eighteen year old, I got a teenager out there keeping this.\u201d",
+      "source_line_start": 228,
+      "source_line_end": 237,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-034",
+      "text": "Aircrat in the air, and I\u2019ve got to make sure they\u2019re making good decisions. And as crew chies, you have to make sure hers makes the right decisions. Well, In this particular video, there\u2019s an F - 16 pilot standing next to his aircrat that\u2019s having",
+      "source_line_start": 239,
+      "source_line_end": 241,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-035",
+      "text": "maintenance done on it. And he says, \"Hmm, I wonder what this thing does? I have no idea. I should probably ind out. \" But, the last thing I\u2019d want to do is ask a maintainer what it does. And, she got the giggles because she\u2019d shared an experience with us when she was on a it\u2019s called a T D Y temporary tour o duty last summer in uh the Philippines, where they had an aircrat. One o their F sixteen s as it was preparing or takeo, was running up beore it let the ground on the run on takeo, sucked a very large bird into the engine.",
+      "source_line_start": 243,
+      "source_line_end": 249,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-036",
+      "text": "And, i you are amiliar with the shape o the F sixteen, it has a huge scoop underneath. And it sucked that bird all the way through the engine and spit what was let out o the back o the airplane. When that occurs. There are a number o sensors in the aircrat that automatically shut it down. But, you can\u2019t just turn the engine o on that thing when it\u2019s not on the ground, and t here is a whole process they go through. The pilot successully landed the aircrat, they were able to recover it, bring it back to th,e, Service bay, and she and her crew had to remove the engine rom this airplane, Send it back to their base in Japan or a complete rebuild on the engine. Every single part has to be pulled out and checked. And in the meantime, they have to clean out the whole insides, the whole uselage o this aircrat. And so or multiple days, the pilot assigned to the aircrat had nothing to do. His plane can\u2019t ly; it\u2019s got no engine in it.",
+      "source_line_start": 251,
+      "source_line_end": 262,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-037",
+      "text": "And she was working on it one day, Cleaning bird guts out o the insides o this F sixteen And. The pilot came over and started asking. He decided he\u2019d help because he had nothing else to do and started asking questions about the insides o the airplane. She said, \u201cDad, I was surprised at how little he knows about what actually keeps this plane in the air.\u201d And as they were going through and cleaning the aircrat. And while she\u2019s doing that, She\u2019s checking things that they usually can\u2019t see because there is an engine in the way. And, there happens to be a switch back in the engine bay. That\u2019s a nice big red switch. And the pilot said, \u201cWhat does this one do?\u201d And she looked at him and said, \u201cDon\u2019t touch that.\u201d He said, \u201cWell, what does it do?\u201d She said, \u201cYou push that button. It turns o all o your avionics and shuts down your aircrat. It\u2019s basically the kill switch.\u201d",
+      "source_line_start": 264,
+      "source_line_end": 274,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-038",
+      "text": "You know all those movies, you watched as a kid where they had the sel destruct button that blinked bright red? It\u2019s that. And the pilot looked at her and said, well, why is it clear backed here? She just looked at him deadpan. So you can\u2019t reach it while in the cockpit. Again, there\u2019s no situation so bad you can\u2019t make it worse. You push that button, yeah, you just made it worse. How many times have we been in a situation where we wish there was like a sel destruct button. We could just push the button to make it go away?",
+      "source_line_start": 276,
+      "source_line_end": 282,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-039",
+      "text": "We could make it worse. Now, in the situation Hazard Lee shares the experience o, he was in a very high stress situation with his aircrat. And the F sixteen is i you are amiliar with, it is an extremely volatile aircrat. It was designed or maximum speed maximum maneuverability Least amount o armor, no protection or the pilot, And it moves at such a high rate o speed and has so many things occurring to it at once. I it weren\u2019t or the onboard computer that runs it, pilots couldn\u2019t keep it in the air. They can \u2019 t ; the human body can\u2019t move ast enough to make all the decisions necessary to keep playing in the air. So, it\u2019s got top-o-the-line avionics; computer keeps in the air, and yet. The bottom corner.",
+      "source_line_start": 285,
+      "source_line_end": 293,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-040",
+      "text": "O, the heads up display is an old ashioned analog clock let over rom when the irst series was released in nineteen seventy one. You have to wind this clock by hand to make it work. And in the high stress situations where they\u2019re having to make decisions very rapidly, and they\u2019re starting to eel overwhelmed, the phrase that the pilots use is Wind the clock. They physically reach down and wind, this ity year- old dash panel clock because sometimes just that step o touching the aircrat, doing something physical that breaks what their current sense o motion is, everything they\u2019re doing with the plane, physically and biologically resets their brain.",
+      "source_line_start": 295,
+      "source_line_end": 302,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-041",
+      "text": "To this manual task that\u2019s very old school, But it orces them to then reset what they\u2019re looking at and iltering their variables. Oh yeah, 'cause while I\u2019m winding this clock, I\u2019m seeing other things occurring. I\u2019m noticing things that I might\u2019ve overlooked on the panel. New data\u2019s coming in. Okay, Now I can make a decision without panicking and reaching back and hitting this button.",
+      "source_line_start": 304,
+      "source_line_end": 308,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-042",
+      "text": "That will knock me completely out o the sky. So as we ilter variables, sometimes it\u2019s okay to slow down, step back, take a deep breath and wind the clock. I the decision ha\u2013 i we\u2019ve got time to make the decision, Part o that iltering variables process can be stepping back and just letting silence kick in or a minute to think. As we deine the problem and and create this baseline, get as much inormation as you can rom as many sources. It\u2019s okay to say to a client, you know what? Let me ind out more about that. Now, Simon Sinek, in many o his books has written that one o the biggest mistakes that big companies make is they make their employees araid to ask questions.",
+      "source_line_start": 310,
+      "source_line_end": 318,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-043",
+      "text": "They\u2019re araid to ask, but i I do that, what will happen? So, they go o and make decisions based on what they think should be the right answer, and then problems occur. So it is perectly okay. Asha, how many times have you said to a client,\" You know what? Let me ind out more about that.\"",
+      "source_line_start": 320,
+      "source_line_end": 323,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-044",
+      "text": "A lot. Okay. I I am wishy washy on, Um, I\u2019d rather tell them that I need to ind out more just to make sure. Um, rather than have to walk it back later.",
+      "source_line_start": 326,
+      "source_line_end": 327,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-045",
+      "text": "Yeah. So yeah, I don\u2019t want to have to walk it back now. Part o the decision making process, The iterative process is sometimes I am going to have to walk back a decision. Nowum, Because I get more inormation that veriy that, you know. So assess, get as much inormation as you can. Now part o that assessment process. He points out is we have to choose what we\u2019re going to do. We\u2019re going to brainstorm multiple options but set a deadline or when the ideas or when we\u2019re going to cut o getting new ideas.",
+      "source_line_start": 329,
+      "source_line_end": 335,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-046",
+      "text": "He said in the Air Force they use what\u2019s called the two-thirds rule. I they have a deadline by, you know, a decision has to be made by this date. I, we are we\u2019re going to take new ideas up to two - thirds the way up till that date. So that we have time to now review all o the options we\u2019ve come up with and make a good decision. Now I said that doesn\u2019t mean i somebody comes with an idea ater the two - thirds, we automatically reject it, but they better have a really good. I. Really good reason why they\u2019re going to bring it in ater the two-thirds deadline. And, he shares an experience in the book where somebody came in with a potential solution or a high- risk problem at the beginning o the irst Gul War ater the two - thirds deadline, And it was so o- the- wall that they almost rejected it because it was past the two - thirds deadline.",
+      "source_line_start": 337,
+      "source_line_end": 347,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-047",
+      "text": "Until other until people started veriying that this guy\u2019s not bragging, they really can do what they say they can do with this equipment. And it\u2019s the equipment that\u2019ll get the job done right. It was originally rejected by upper or the upper brass, simply because o who was who it wasn\u2019t set at the irst time. So they had they said, yeah, I know we\u2019re past the two thirds rule, but look at all these are things we can do. And so they restructured what the decisions were. But sometimes our two-thirds rule, we\u2019ve only got a couple o hours to make a decision. I can\u2019t still keep getting new ideas all the way up to the very end. Now, when we look at you know what comes up with our clients, What are the kinds o deadlines we have to ace that we have to make decisions beore deadlines? What deadlines do we ace all the time?",
+      "source_line_start": 349,
+      "source_line_end": 358,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-048",
+      "text": "We know in the repsie we have our deadlines written right into there. I think or me, Most oten the biggest deadline that requires the most creative thinking otentimes is that due diligence deadline. How, are we going to work out due diligence inspection or other concerns on due diligence in ways that we\u2019ve got a deadline has to be decided by. Five o\u2019clock on this day, or there are negative",
+      "source_line_start": 360,
+      "source_line_end": 364,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-049",
+      "text": "consequences or our buyer. Financing and appraisal. Asha, what were you going to say?",
+      "source_line_start": 366,
+      "source_line_end": 367,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-050",
+      "text": "I've had the most deaults on the SPC deadline. Not me deaulting on it, but sellers deaulting on that.",
+      "source_line_start": 369,
+      "source_line_end": 370,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-051",
+      "text": "Okay, so when a seller deaults on that, what decisions does your client have to make?",
+      "source_line_start": 372,
+      "source_line_end": 373,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-052",
+      "text": "Whether it\u2019s material or not to the transaction, like depending on what inormation we\u2019re still missing. Um, And then how they want to use that as leverage in the rest o the transaction.",
+      "source_line_start": 375,
+      "source_line_end": 377,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-053",
+      "text": "Okay. How does that aect now their orienting orienting themselves to what what the current reality is? Like you said, they\u2019re going to have to decide well, how does this aect the transaction? Do we go orward? Leverage is great to have.",
+      "source_line_start": 379,
+      "source_line_end": 381,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-054",
+      "text": "Do we cancel? Yeah, Do you want to cancel and blow up the whole deal? Or do you want to use that as leverageum to get the amount o the earnest money back? Um yeah, that one\u2019s come up a lot or me.",
+      "source_line_start": 383,
+      "source_line_end": 385,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-055",
+      "text": "Okay, as a seller when I represent with listings, man getting those I know those are tedious to get illed out. I\u2019d rather have them illed out long beore a transaction, so it\u2019s not during a stressul time when they\u2019re trying to do it. Because I know, like Asha said, There\u2019s a pretty good chance somebody\u2019s going to be using this leverage i I don\u2019t get it sent to them on time. Well, let\u2019s orient ourselves to the reality o that\u2019s a deadline we have to meet. How many are struggling right now with HOAs and trying to get HOA docs on time?",
+      "source_line_start": 387,
+      "source_line_end": 393,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-056",
+      "text": "You got to start that process early.",
+      "source_line_start": 395,
+      "source_line_end": 395,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-057",
+      "text": "Like really early, which our TCS are pretty good at that by the way. Mhm. They\u2019re pretty good to start that process. But sometimes HOAs are still diicult.",
+      "source_line_start": 397,
+      "source_line_end": 398,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-058",
+      "text": "And i we don\u2019t start that process until we\u2019re under contract as a seller, we could be too late.",
+      "source_line_start": 400,
+      "source_line_end": 401,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-059",
+      "text": "Well, I\u2019ll tell you the advantage, i you started beore you go under contract and you know that the HOA doesn\u2019t have recent meeting minutes. You can counter out, you can counter that section o the rep sheet where you say, \"We don\u2019t have these, \". And so I\u2019m countering out the meeting minutes because it has that listed in section seven o your disclosure requirements. And i you contact DHA early, you can tell them, \u201cOh, We don\u2019t actually have this aspect or this aspect o what is in the rep sheet.\u201d Because it\u2019s not acceptable to just say, \u201cOh,\u201d like and this happens so oten as a listing agent.",
+      "source_line_start": 404,
+      "source_line_end": 411,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-060",
+      "text": "Telling the buyer agent, \u201cOh, we they just don\u2019t have that. We looked. You can try to contact HOA yoursel.\u201d Well, your seller signed saying you are going to give it to me, So you are going to give it to me or you are going to deault. That\u2019s really what it is. But, a lot o this is a really lazy thing in our culture right now because you can press them or deault or not giving you the eighty minutes. They say, \u201cWell, I can\u2019t give it to you.\u201d Well, You already signed, saying you were going to give it to me when you accepted the receipt. You said you are going to give me the meeting minutes. Well, HRA doesn\u2019t have it. Well, then why did you accept this? That\u2019s why it\u2019s better to get that inormation like right away as soon as you know that your that listing is going live. No contact the HRA and see what you really can do or they can\u2019t do.",
+      "source_line_start": 413,
+      "source_line_end": 422,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-061",
+      "text": "And, that is a very important part o that assess step o assess, choose and execute:, assess what the reality is, what really is reality, what really is happening now. I will.",
+      "source_line_start": 424,
+      "source_line_end": 425,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-062",
+      "text": "Go live until I have. I won\u2019t take the copy o the SP CDs and all the HOA documents. Because, um, SPC deadline is usually three or our days ater you go in contract. But, i it takes you a couple days and you have counter oers in there, you have to be so careul that.",
+      "source_line_start": 427,
+      "source_line_end": 430,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-063",
+      "text": "Once you are oicially under contract, now you have less than twenty hours to get all that ees over.",
+      "source_line_start": 432,
+      "source_line_end": 433,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-064",
+      "text": "Well, and this is a lesson I learned. And again, The reason these two models are both loops is that it\u2019s iterative;. We have to keep making decisions. But the best way to make good decisions is to go back, Is to debrie and look at the decision was made: what led up to it, what inormation did we use? Why was this decision made? What was the result? What can be done dierent next time? I learned a lesson very early rom a gentleman who used to be a broker. He now does mortgage loans instead, Rob Aubrey. And I had sent an oer over and Rob was the broker, and we had put three days ater acceptance or the disclosures deadline.",
+      "source_line_start": 435,
+      "source_line_end": 442,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-065",
+      "text": "And he called me up and and I\u2019ve got a lot o respect or Rob because he says, look, you know, probably looked it up. I was new. He said, Let me explain to you the the situation. This puts my seller in and why we\u2019re going to counter this three days or that. This is a Friday. You\u2019re sending this over to me, i you know, and I have to have an updated um title report. I can\u2019t get that in three days on a weekend. It\u2019s not a reasonable situation So, Understand the reason we\u2019re countering this because we need to be able to ulill the contract, but I can\u2019t do that the way it\u2019s written. And I had a lot o respect or Rob because he didn\u2019t talk down to me. He didn\u2019t say, \"What you know, what were you thinking? Three days? Come on, be real. \" He was very proessional about it, but also explaining this why we\u2019re going to do it this way. And it changed the way that I did oers ater that. Realizing that yeah, that\u2019s probably too short o a deadline. Three days on a Wednesday might work.",
+      "source_line_start": 445,
+      "source_line_end": 456,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-066",
+      "text": "But three days on a Friday or that deadline might not work. Yeah, I hate I do not want to go live without HOA docs. Trust documents are an issue i you know it\u2019s in a trust. Probate documents i it\u2019s in probate, the more o those you have beore you go live, the better your reality is that you\u2019re oriented toward with the listing. Now let\u2019s switch back over to the other one here.",
+      "source_line_start": 458,
+      "source_line_end": 462,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-067",
+      "text": "We have to choose. One o those processes is calculating, evaluate the value o ideas, giving a risk score, probability versus loss or what\u2019s the probability times the loss actor. What\u2019s the probability o this working multiplied by how oten it\u2019s worked in the past? Because sometimes people will make decisions based on, What it looks like on the ace without thinking long term. Hazor Lee uses an example that I use while teaching school. I can give you a million dollars today, Or I can give you a penny on the irst day o the month and double it each day o the month until the end o the month. You get to keep the penny you got, So each day you get to keep the stack o pennies I give you all the way till the end o the month.",
+      "source_line_start": 464,
+      "source_line_end": 472,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-068",
+      "text": "Now Craig, you know the answer. Which one makes more sense? Penny a day, you get more than twice o what you would. But otentimes buyers and sellers just see the penny as a low amount. It doesn\u2019t make sense to them. That\u2019s what is reerred to as a power law. Some types o decisions are going to have an outsized eect, Have a greater eect than others when negotiating or repairs. Sometimes it makes more sense to you\u2019ve got three major repair, three repairs that absolutely need to be done. Hit them with all eighteen now ;. It\u2019s easier to talk them down to three, i only i I only start with those three and the seller.",
+      "source_line_start": 474,
+      "source_line_end": 481,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-069",
+      "text": "Fights me with it. I\u2019ve lost my leverage. The power is not there. Talking with you know, having talking with their lenders about what does make more sense, Putting",
+      "source_line_start": 483,
+      "source_line_end": 484,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-070",
+      "text": "money toward the down payment or putting money toward closing costs or putting money toward buying points. Is a three two one buy down really worth it long term? How long are you going to be in this house? I you\u2019re not going to be here multiple years, a three two one buy down, Doesn\u2019t make the money back. You can use it smarter other ways. So, those nonlinear solutions, decisions that can have an outsized eect. And then o course the last step execute. We make a choice we have to do it now in cognitive psychology.",
+      "source_line_start": 486,
+      "source_line_end": 492,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-071",
+      "text": "He doesn\u2019t include this in his book, but in cognitive psychology there is a phrase known as amygdala hijacking. The amygdala is the part o the human brain that is responsible or controlling and maintaining the ight or light response, and that is the stress response. Stress and the ight or light response itsel is not a negative thing. The body evolved that way and has Was created and was created that way and has continued to evolve that way because it works. Here\u2019s what happens with the amygdala hijacking. In high stress situations, the amygdala pumps adrenaline and cortisol into the system. Adrenaline increases your heart rate, increases your breath rate, tenses up your muscles, and you get ready.",
+      "source_line_start": 494,
+      "source_line_end": 502,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-072",
+      "text": "To ight. It also redirects the blood low in your brain, And it redirects it rom the neocortex. And the prerontal cortex is at the ront that\u2019s responsible or the decision - making process and pushes it to the back o the brain that\u2019s responsible or the ight or light response. And as long as you\u2019re in that elevated emotional state, There is less and less blood lowing to the part o the brain that biologically is responsible or higher thinking. I would teach this to eleven-year-olds when they get in trouble, and the principal would say, \u201cWhat were you thinking?\u201d And the kid would say, \u201cI don\u2019t know.\u201d They\u2019re not mouthing o; they biologically don\u2019t know what they were thinking. No memory was created ;. They weren\u2019t thinking because there wasn\u2019t any blood in that part o their brain.",
+      "source_line_start": 504,
+      "source_line_end": 513,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-073",
+      "text": "How, many people do we know that live and operate constantly in that high stress ight or light mentality or body mode? That when you ask them to make an intelligent decision, i you\u2019re like, can you just not think biologically, they can\u2019t. The blood\u2019s not in the right part o the brain. That\u2019s when you have to step back, take a deep breath and regain control o your body. You\u2019ll notice when otentimes you get anxious, you make a ist. I you\u2019ve got a client who you notice is nervous and is doing this, hand them a pen to hold on to. They can\u2019t make a ist. There\u2019s a whole row o neuroreceptors across the palm o your hand, that when you make a ist, tell the brain I\u2019m getting ready to punch somebody and immediately puts the brain into that ight or light mode. When they open the hand, it turns all those receptors o. It turns o the I\u2019m going to punch somebody mode. Hand them something.",
+      "source_line_start": 515,
+      "source_line_end": 525,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-074",
+      "text": "They have to open their hand. Now it turns those sensors o. Change your body position, so they have to move their body to match your body position. They\u2019ll do it instinctually, But it will change them rom i they\u2019re like this, and you put your hands down, just shake your hands, put your hands down, they\u2019ll otentimes mimic you. They\u2019ll get out o that ight or light mode, and it will get you out o that ight or light mode so that the brain can unction. It\u2019s part o the wind. The clock do something physical to reset the brain so that it can make a decision that isn\u2019t based on emotion. Hardest part about working with buyers and sellers is they\u2019re making a very rational decision in a very irrational emotional environment. How many times have we had to work with a client that you just their decisions seem completely?",
+      "source_line_start": 528,
+      "source_line_end": 537,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-075",
+      "text": "Irrational and emotional, and emotion based. That then seem to get worse down the line. There\u2019s no situation so bad you can\u2019t make it worse. Get them out o the ight or light mode, manage the stress or cognitive clarity. Avoid complacency, okay? I\u2019ll tell you, I\u2019ll tell this story on mysel. Very early working with Marty, when Marty and I irst started working together, Marty did not have an operating system. He just did all o his transactions in his head and tried to keep track o all o it in his head. How, I don\u2019t know. He did thirty transactions the year beore I met him, all in his head. And he realized he was dropping things. He couldn\u2019t keep oriented and execute ast enough. Okay, And you guys get to watch me ix another typo because it\u2019s going to bug me.",
+      "source_line_start": 539,
+      "source_line_end": 548,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-076",
+      "text": "So I had to go through the process o working with him, going, \"Okay Marty, what comes next? What comes next? What comes next? \" So start making me a list o things to do so that I can get things done in the right order. Filled out a Repsy or him. Did paragraph two, everybody\u2019s avorite part, the math. Sent it over or him to review. He calls me up and says, \u201cYou need to check paragraph two.\u201d I said, \u201cMarty, I taught math or twenty years. I know how to do paragraph two shit.\u201d And I had done the math wrong, But I was so complacent, and so arrogant about \" I know how to do the math. \" I did the math wrong and sent it o without even bothering to recheck it. When I get done writing an oer now, I start at the bottom o the contract and read it backward to check everything to make sure it\u2019s done right. Because as soon as you\u2019re clicking this reading it orward, your brain automatically ills in what it thinks should have been there.",
+      "source_line_start": 550,
+      "source_line_end": 561,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-077",
+      "text": "It creates a alse reality. I I read it backward, when you read it backwards, your brain can\u2019t do that because it\u2019s going in the wrong order. It has to pay attention to the details. Did I do this right? I I write an addendum, Go back and start at the bottom and read it rom the bottom up to make sure everything\u2019s there to get out o that complacency. And then ater a decision is made and ater an event is over",
+      "source_line_start": 563,
+      "source_line_end": 567,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-078",
+      "text": "Debrie and iterate. Learn rom the experience. An F-16 is designed to be in the air or about an hour, or 90 minutes to two hours at a time. My daughter has pointed out that the current situation in the world, The pilots and the aircrat have been under extreme stress because they\u2019ve been keeping them in the air or up to eight hours at a time. An aircrat and a pilot is designed to be up in the air or two hours.",
+      "source_line_start": 569,
+      "source_line_end": 573,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-079",
+      "text": "Um, they don\u2019t have time. Otentimes, They don\u2019t have the right amount o time to stand aterward and talk about it. Hazle talks about that ater a ninety minute training with pilots on the F thirty ive, they can spend two to three days reviewing everything that happened all the video, the video rom the pilot\u2019s cabin, the video rom the trainer\u2019s aircrat, the data that all the computer keeps, the notes that the pilot, As soon as the pilots on the ground write down everything they remember happened, because human memory is allible, And they\u2019ll spend days and days and two or three days reviewing what happened in ninety minutes to two hours. He says, \u201cNow does that sound excessive? Could be, but when your lie is on the line, maybe not.\u201d Because you start to notice things. And in part o that iteration process is to look or patterns. What are common things you see happening?",
+      "source_line_start": 575,
+      "source_line_end": 585,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-080",
+      "text": "I you\u2019ve got a client who\u2019s look or patterns in your client\u2019s behavior, And i they\u2019re always behaving the same way and it\u2019s making it diicult or them to make a decision, we need to help them learn another way to think, to unction. Look or patterns in the reps. Common mistakes that can be made. Look or patterns with your seller. What are they saying yes to? What are they saying no to? What do they keep repeating? Because that\u2019s an iterative process or them, and they may need to Greg describes it as. Predict the uture or them.",
+      "source_line_start": 587,
+      "source_line_end": 593,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-081",
+      "text": "Yeah, it\u2019s all about expectation management.",
+      "source_line_start": 595,
+      "source_line_end": 595,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-082",
+      "text": "Expectation management: i you do this, this is what my experience has shown us happen. Let me let me give you that iteration in advance, Greg. When, you\u2019ve got a client that wants to list way at the top o the price range, what are the iterations that you\u2019re going to be able to present to them?",
+      "source_line_start": 597,
+      "source_line_end": 600,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-083",
+      "text": "Yeah, well I let them know.",
+      "source_line_start": 602,
+      "source_line_end": 602,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-084",
+      "text": "I don\u2019t want them ever to say, \u201cCraig, you didn\u2019t set my expectations correctly.\u201d I don\u2019t want to say that. So then when they say that, I say, \u201cExpect that you will have no showings during the week. You may have a showing come to an open house and maybe two people, but you will have no one scheduling during the week. The",
+      "source_line_start": 604,
+      "source_line_end": 607,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-085",
+      "text": "people coming to the open house also won\u2019t be interested at, especially at price.\u201d That there are and I\u2019ll give them hard data. I\u2019ll say, \u201cLook,\u201d I\u2019ll go back and get you the number o properties competing with you that are not going to that people would see and buy irst. But I try to I try to manage this during the market analysis process anyway because I\u2019ll, I will I will try to give them properties. They can see are clearly better than theirs, that are that is clearly priced lower than theirs, So they can see that there\u2019s just no way i that other property is not selling and it\u2019s orty ive days on market, then even i you\u2019re priced equivalent to it.",
+      "source_line_start": 609,
+      "source_line_end": 616,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-086",
+      "text": "They\u2019re orty ive days out and still haven\u2019t got an oer. Why wouldn\u2019t you badge it to come in and grab one? So that idea, that that\u2019s sort o the process I go through with that.",
+      "source_line_start": 618,
+      "source_line_end": 620,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-087",
+      "text": "But that\u2019s an important part o that observe or assess, gain the knowledge, gain the most inormation you can so they\u2019re oriented toward reality, not emotion based. It\u2019s rational based. And then help them iterate ater the open house, ater the showing, ater the end o the irst week. Well, Here is what let\u2019s observe and see what\u2019s going on now so that we continue to work through that process. Now, like I said at the beginning, He hazardly makes a point out o pointing out that we just assume adults know how to do this ;. We just assume they\u2019ve learned how to make wise or make intelligent decisions.",
+      "source_line_start": 622,
+      "source_line_end": 629,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-088",
+      "text": "Make inormed decisions. We assume that\u2019s their background. They were bringing in pilots who these were in a room ull o thirty pilots, two would qualiy as ighter pilots, the remaining twenty eight would wash out and ly something else. But everybody walked in expecting to be a ighter pilot. These were already the top thirty in their class, And he said, the ones who washed out the astest are the ones who had never learned. How to go through a cognitive decision-making process. They could give you all the stats, all the data, Some o his top students in terms o what they could score on traditional measures on a written test. We all know the 120 hours or the written test in real estate doesn\u2019t teach you anything about how to actually do real estate. It\u2019s a skill that we have to learn and practice.",
+      "source_line_start": 631,
+      "source_line_end": 640,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-089",
+      "text": "Sometimes we have time to make a decision. The planning and run-up to the irst Gul War took over six months. Planning and preparing or the irst orty-eight hours o that conlict. We don\u2019t always have that much time. Yeah, sometimes we are lying along at a high rate o speed through a transaction, something comes up, we have to be responsible or our clients and or our connections That we\u2019re going to make this decision rationally. And that can be hard when the other side\u2019s responding emotionally. So that we can help our clients go through that process o observing the data, orienting toward the actual reality, making a decision and",
+      "source_line_start": 642,
+      "source_line_end": 649,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-090",
+      "text": "acting on it. And then accepting that what happens rom their choice, we\u2019re going to make the choice that makes the most sense, but there\u2019s always going to be a risk o ailure.",
+      "source_line_start": 651,
+      "source_line_end": 653,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-091",
+      "text": "One o the experiences Hazarded Lee shares in his book, one option had a 50% chance o ailure. One option had a 75% chance o ailure. He went with the 75 % chance o ailure because it was less chance o ailure, Knowing that he still had a one in our chance o the whole thing going wrong, but he had a three out o our chance or going right. Our clients always need to understand t here is always going to be some risk. We\u2019ll control or all the actors we can and make lies decisions that way, and then we move orward. Okay, I haven\u2019t done it yet. I am actually gonna i just inished this book. I am actually gonna make an OODA and ACE sign to put on my wall to remind mysel that I need to go through those decisions sometimes because yes, there have been times when there are times when yeah, I just want to just say you know.",
+      "source_line_start": 655,
+      "source_line_end": 665,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-092",
+      "text": "I want to go o an emotional choice and not a rational one, and that\u2019s not in anybody\u2019s best interest. So, I you haven\u2019t had a chance ind ind the book \" T, he Art o um The Art o Clear T hin king \" on Amazon. It is a real quick read. Your heart will race through some o the stories he tells o that he uses as illustrations or me. It was kind o personal, like I guess my daughter ixes puts F sixteen s into the air. But his whole point is, we have to make good decisions or those we represent. And he says, you know, in our daily lives as well. And i you write, i we go through this loop and make planned decisions, we\u2019ll be better o. Any questions?",
+      "source_line_start": 667,
+      "source_line_end": 674,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-093",
+      "text": "Thanks Aaron. Thanks or the ino. Okay.",
+      "source_line_start": 676,
+      "source_line_end": 676,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-094",
+      "text": "We will see you tomorrow same same time. Tomorrow, Craig, what are you doing?",
+      "source_line_start": 678,
+      "source_line_end": 678,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-095",
+      "text": "Eleven o\u2019clock business building.",
+      "source_line_start": 680,
+      "source_line_end": 680,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-096",
+      "text": "Business building. Okay.",
+      "source_line_start": 682,
+      "source_line_end": 682,
+      "section": "Auto-generated"
+    }
+  ],
+  "operator_interpretation": "Marty adapts military decision-making frameworks (OODA loop, FACADE model) from Hazard Lee's book 'The Art of Clear Thinking' to real estate contexts. The core insight is that agents often operate on autopilot until a crisis, then make rushed decisions based on assumptions. The training emphasizes slowing down to observe and orient before deciding, even under time pressure. The 95% reality example (F-35 stall) illustrates that partial information can be dangerous. This is particularly relevant for newer agents who may not yet recognize when they don't have complete information. The concepts apply broadly across all transaction types but are especially valuable in negotiations, deadline crises, and difficult client conversations.",
+  "confidence_notes": "This transcript is from July 2026 and references Hazard Lee's book 'The Art of Clear Thinking' which Marty recommends as a quick read (1.5 days). The OODA loop was developed by Colonel John Boyd in the 1970s for F-16 pilots. The FACADE model is also from Hazard Lee's work. The fighter pilot analogies are metaphors - real estate decisions are rarely life-or-death, but the stress response and decision-making principles translate. Marty notes that even experienced agents can fall into autopilot mode. The training does not provide specific real estate legal guidance but rather a meta-framework for approaching problems."
+}

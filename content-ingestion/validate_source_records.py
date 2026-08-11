@@ -72,7 +72,7 @@ def first_phrase_in_span(chunk_text: str, span: str) -> tuple[bool, str]:
                 return True, phrase
 
     phrase = " ".join(chunk_words[: min(10, len(chunk_words))])
-    return False, phrase
+    return phrase in span_norm, phrase
 
 
 def token_coverage(chunk_text: str, span: str) -> float:

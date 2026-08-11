@@ -1,0 +1,1404 @@
+{
+  "source_id": "short-sales-2025-04",
+  "title": "Short Sales - How to Buy & Sell",
+  "source_type": "transcript",
+  "drive_url": "https://drive.google.com/file/d/1y_DJvnNZYrTo-FUKbPny_jtu-ZpVotCK/view",
+  "date": "2025-04-09",
+  "speaker_or_author": "Marty (Primary Estate Experts)",
+  "audience": [
+    "buyer agents",
+    "listing agents",
+    "new agents"
+  ],
+  "summary": "Comprehensive training on short sales covering what they are, why sellers and buyers participate, the approval process, key departments (loan servicing vs loss mitigation), critical forms, and negotiation strategies. Marty shares real-world examples from the 2008 crash era and current market conditions.",
+  "topics": [
+    "short sales",
+    "foreclosure alternatives",
+    "REPC addenda",
+    "bank negotiations",
+    "seller distress",
+    "buyer strategies",
+    "commission haircuts",
+    "conversation logs"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Defining a short sale for clients",
+      "guidance": "A short sale is when the current fair market value of the property is less than the debt owing against it. The seller cannot sell unless creditors/third parties agree to accept less than what's owed. Third parties may include mortgage lenders, insurers, bankruptcy trustees, and taxing authorities.",
+      "client_language": "You owe more on the house than it's currently worth, and we need the bank's permission to sell it for less than you owe.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Seller asks why they should do a short sale instead of foreclosure",
+      "guidance": "Short sales are easier on credit than foreclosures. Credit recovers faster. The deficiency is typically much lower. Foreclosure can result in the bank coming after the seller for the deficiency plus legal expenses. Short sale sellers usually stay in the home and care for it, unlike foreclosure where sellers may damage or strip the property.",
+      "client_language": "A short sale will hurt your credit less than a foreclosure, and you'll likely owe less money afterward. It also keeps you in control of the process longer.",
+      "citation_refs": [
+        "chunk-002",
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Avoiding a short sale when possible",
+      "guidance": "Before pursuing a short sale, explore alternatives: negotiate commissions, have buyer pay closing costs (or lender pay via slightly higher rate), loan modification, deed in lieu of foreclosure, or bankruptcy consultation. Do not give legal or tax advice - refer to appropriate professionals.",
+      "client_language": "Before we go down the short sale path, let's see if there are other options that might work better for your situation.",
+      "citation_refs": [
+        "chunk-004",
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Navigating the loan servicing department",
+      "guidance": "The loan servicing department handles late payments, notices of default, and foreclosures. They are NOT your advocate. They incentivize reps based on calls per hour, not customer satisfaction. They often lose paperwork. Expect to submit authorization forms multiple times. Many require wet signatures, not digital. You will rarely talk to the same person twice.",
+      "client_language": "The bank's servicing department handles a huge volume of calls. We'll need to be patient but persistent, and I'll keep detailed records of every conversation.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Working with loss mitigation department",
+      "guidance": "Loss mitigation protects the lender against losses. They have formulas and stacks of files. They don't care about you or the seller - their job is to minimize losses. Keep a detailed conversation log: name, time, what was discussed, expectations set, promises made, what was requested and provided. This can accelerate the process from 6 months to 60 days. When calling, reference previous conversations to show persistence.",
+      "client_language": "The loss mitigation team has one job: minimize the bank's losses. I'll be professional but firm, and I'll document every single conversation to keep things moving.",
+      "citation_refs": [
+        "chunk-007",
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Setting buyer expectations on short sale timeline",
+      "guidance": "Short sales can take anywhere from 2 days to over a year. Most currently take 2-4 months. The only guarantee is that something unreasonable will happen. Buyers should continue looking at other properties while waiting. The seller or buyer can cancel up until third party approval or the approval deadline. A foreclosure can still happen even during the short sale process.",
+      "client_language": "I have to be honest with you - short sales are unpredictable. The bank can take months to respond, and there's always a curveball. We should keep looking at other homes while we wait.",
+      "citation_refs": [
+        "chunk-009",
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Why buyers get discounts on short sales",
+      "guidance": "Buyers typically get 4-6% off market price (sometimes 4-5%). The discount exists because fewer buyers are willing to deal with the uncertainty, timeline, and process. There's tons of regular inventory now, so buyers have options. The short sale addendum gives the seller a 'get out of jail free card' - they can cancel for any reason without waiting.",
+      "client_language": "Short sales often sell below market value because many buyers don't want to deal with the uncertainty. If you're patient and flexible, we might get a good deal.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "Artificially low list prices on short sales",
+      "guidance": "Some agents list short sales artificially low to generate multiple offers and get the process started with the bank. Once the bank approves a price, you can update the MLS to show 'bank-approved price' which reduces buyer uncertainty. The goal is to get an offer in to start the bank's approval process, not necessarily to sell at that price.",
+      "client_language": "That low list price might be a strategy to get offers in the door and start the bank's review process. The actual approved price could be higher.",
+      "citation_refs": [
+        "chunk-012"
+      ]
+    },
+    {
+      "scenario": "Commission haircuts on short sales",
+      "guidance": "Mortgage companies often dictate maximum commission amounts. What was 6% (3% each side) might get cut to 5% total. The approval letter will specify the approved commission split. Agents won't know the final commission until the approval comes through. Some agents used to charge other agents upfront fees to handle the short sale process for them.",
+      "client_language": "The bank may reduce the commission as part of their approval. We'll know the final amount when we get their approval letter.",
+      "citation_refs": [
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Required forms for short sales",
+      "guidance": "Key forms: 1) Short Sale Disclosure - educates buyer/seller about the process, 2) Addendum to Listing Agreement - warns seller about financial documentation requirements, 3) Short Sale Addendum to REPC - critical, do NOT accept a REPC without this, 4) Backup Addendum - allows multiple backup offers, 5) Acknowledgment of Third Party Approval - activates contract deadlines once approval is received. All forms are in the MLS and Brokermint.",
+      "client_language": "There are several specialized forms for short sales that protect everyone involved. I'll make sure we use every required form.",
+      "citation_refs": [
+        "chunk-014",
+        "chunk-015"
+      ]
+    },
+    {
+      "scenario": "Short sale addendum critical clauses",
+      "guidance": "The short sale addendum: sets a short sale approval deadline (contract lapses if not approved by this date), specifies when earnest money is deposited (seller wants it immediately for emotional tie, buyer wants to wait until bank approval), allows backup offers, and gives both parties right to cancel up to approval deadline. Contract deadlines should be SHORTER than normal because everyone should be prepared by the time approval comes.",
+      "client_language": "The short sale addendum protects you by setting a deadline for bank approval and giving you the right to walk away if things take too long.",
+      "citation_refs": [
+        "chunk-016"
+      ]
+    },
+    {
+      "scenario": "Tracking foreclosure during short sale",
+      "guidance": "If there's a notice of default or foreclosure pending, track it 100% of the time. You can often get the foreclosure forestalled with enough time to close the short sale. Call Marty for help navigating this - it can be done but requires persistence and timing.",
+      "client_language": "If there's a foreclosure pending, we need to stay on top of both processes. I have resources to help us manage that timeline.",
+      "citation_refs": [
+        "chunk-017"
+      ]
+    },
+    {
+      "scenario": "Repairs on short sales",
+      "guidance": "Sellers typically have no money or motivation to do repairs on a short sale. They're not getting proceeds from the sale. While repairs can occasionally happen, buyers should expect to handle repairs themselves or negotiate credits. This is different from a standard sale where seller has incentive to make repairs to close the deal.",
+      "client_language": "In a short sale, the seller usually can't afford to make repairs. We should plan on handling any needed repairs ourselves after closing.",
+      "citation_refs": [
+        "chunk-018"
+      ]
+    }
+  ],
+  "steps": [
+    "Determine if property qualifies as short sale (owe more than worth)",
+    "Explore alternatives first: loan modification, deed in lieu, bankruptcy consultation",
+    "Have seller contact loan servicing department to start process",
+    "Submit required authorization forms (often wet signature required)",
+    "Document EVERY conversation in a conversation log",
+    "Escalate to loss mitigation department",
+    "Seller provides financial docs: tax returns, bank statements, pay stubs",
+    "List property (may use artificially low price to generate offers)",
+    "Submit offer(s) to bank for approval",
+    "Use Short Sale Addendum with REPC - never accept without it",
+    "Set short approval deadline and shorter-than-normal contract deadlines",
+    "Track any pending foreclosure simultaneously",
+    "Once approved, activate contract deadlines and proceed to closing"
+  ],
+  "objections": [
+    {
+      "objection": "Why would I do a short sale instead of just walking away?",
+      "response": "A short sale is easier on your credit than foreclosure, you'll likely owe less in deficiency, and you stay in control longer. Foreclosure can result in the bank coming after you for the difference plus their legal fees. Your credit recovers faster from a short sale.",
+      "citation_refs": [
+        "chunk-002",
+        "chunk-003"
+      ]
+    },
+    {
+      "objection": "The bank won't approve a short sale",
+      "response": "Banks often prefer short sales because they minimize losses compared to foreclosure. The homeowner usually stays and maintains the property. The key is persistence and proper documentation. I've seen them approved in as little as 2 days and as long as a year.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-009"
+      ]
+    },
+    {
+      "objection": "This is taking too long, I found another house",
+      "response": "That's exactly why we use the short sale addendum - you CAN walk away and look for other properties while we wait. The contract has an approval deadline, and you can cancel anytime before the bank approves it.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "objection": "The seller won't do repairs",
+      "response": "That's normal in a short sale. The seller isn't getting proceeds, so they have no money or motivation for repairs. We can either handle repairs after closing, negotiate a credit, or factor repair costs into our offer price.",
+      "citation_refs": [
+        "chunk-018"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "Sell w Marty",
+      "source_line_start": 2,
+      "source_line_end": 2,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Okay. Paula, I dig your uh Zoom name, Golden Girl Paula. Dallin, yours is great too. I mean not everyone can call themselves Dallin Owens and get away with it. So that\u2019s awesome. Morning Heather. Happy Zoom day everybody. Okay.",
+      "source_line_start": 6,
+      "source_line_end": 8,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "All right, let\u2019s go with short sales. So, um, This is hopeully going to be a money making opportunity that, that nobody on this in this training will have to shy away rom because you\u2019ll know you\u2019ll be short sale experts. You\u2019ll be able to capture that. Um, uh Wendy, Did you do any short sales when they were all the rage ten years ago, iteen years ago? All right. So some o this will be old hat or you.",
+      "source_line_start": 10,
+      "source_line_end": 13,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "I'm excited to see what\u2019s changed.",
+      "source_line_start": 15,
+      "source_line_end": 15,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "Well, so ar not much has changed, And I say so ar because we\u2019re just barely starting to see short sales again. So let me let me set that stage or a second. So right ater the two thousand seven, two thousand eight crash is actually when I got licensed. Craig was licensed in oh, seven, and I was licensed in oh, eight. We just are gluttons or punishment that way It was really un stu anyway. Shortly ater that, ater the homes started losing so much value, People thought it was a good idea or o necessity. They were abandoning properties to oreclosure, and their credit was getting trashed. O course, Because they had a oreclosure and oten their taxes would be messed up. Because when you have a oreclosure you either.",
+      "source_line_start": 17,
+      "source_line_end": 25,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "Uh, i the bank actually orgives the debt, which is rare, you you realize that as taxable income. Okay. And so now you have a tax bill at the end o the year. Most oten the bank does not orgive that as debt. And uh they can actually come ater you in a deiciency even ater the oreclosure. So i you owed 100, 000 and your house was oreclosed on and it sold or 80, 000 then the bank is shy 20 grand right? Plus they\u2019ve got all those legal expenses or, Doing the oreclosure, They can come ater you or twenty grand, plus whatever their expenses were relative to the oreclosure. So sometimes.",
+      "source_line_start": 27,
+      "source_line_end": 34,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "They were orgiving that, but you were still being taxed on it, right?",
+      "source_line_start": 37,
+      "source_line_end": 37,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "Yes. Yeah, Sometimes they like I said, i they orget i they orgave part o the debt and they did not come ater you or the deiciency, that is normally a taxable event. That counts as income on your taxes. I they orgive the twenty grand yeah that that counts as income. That\u2019s how Uncle Sam sees it. Because you received the beneit o the twenty grand when you bought the house, but then you were not required to pay it back, so Uncle Sam sees that as income. So, so that was the way o the land, you know, ten to iteen years ago. And those oreclosures and short sales persisted even ater the market tanked and hit bottom and started to come back up. ;, you would still have people.",
+      "source_line_start": 39,
+      "source_line_end": 47,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "That were struggling because the value o their home was still a lot less than what they owed. Because even though the market trough hit a trough in, God, I can\u2019t remember what it was twenty eleven? Does that sound about right?",
+      "source_line_start": 49,
+      "source_line_end": 51,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "Yeah, I am thinking maybe twelve.",
+      "source_line_start": 53,
+      "source_line_end": 53,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "Maybe twelve. Okay, that\u2019s when it started to turn around. But it was still a ew years. It was a handul o years, until like two thousand, thirteen, twenty ourteen is about when we got back. Okay. So, so that was how many is that? That\u2019s like six or seven years o lots o oreclosures and lots o short sales. The majority o what was on the market was still not short sale, but a solid quarter, a third, And in some areas, close to hal o the listings were short sales or oreclosures. Today\u2019s class is not about oreclosures; it\u2019s about short sales. So let\u2019s let\u2019s dive into that.",
+      "source_line_start": 55,
+      "source_line_end": 61,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "First, what is a short sale? And I, you know, I am hoping that we can be we can all participate here. To who wants to to give me a quick deinition o a short sale?",
+      "source_line_start": 63,
+      "source_line_end": 64,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "You owe more than it\u2019s worth.",
+      "source_line_start": 66,
+      "source_line_end": 66,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "Yeah, you owe more thanum than the house will sell or. But or some reason you need or want to sell the house. Okay, um maybe let\u2019s say you owe, Uh, Let\u2019s say you owe ive hundred thousand and the house is probably worth and will sell or uh, let\u2019s say ive twenty ive. What do you think about that situation? Is that a short sale?",
+      "source_line_start": 68,
+      "source_line_end": 71,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "You said it was worth ive.",
+      "source_line_start": 73,
+      "source_line_end": 73,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-016",
+      "text": "Let\u2019s say it\u2019ll sell or ive twenty ive and you owe ive hundred. Okay, there we go Wendy. So Wendy says commissions and expenses. That could be a short sale and it might not be. Don\u2019t know. You know, depends on where all those numbers land. Um, What could the agent or agents and the seller and even the buyer do to avoid a short sale? In that case? We\u2019re getting a little ahead o ourselves, but I just I want to think about that or a second. Could they avoid it? Avoid a short sale? They could. Yeah, possibly right? Wendy you\u2019ve got I can tell you got one or two things on your mind. What could be done to avoid the short sale?",
+      "source_line_start": 76,
+      "source_line_end": 83,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-017",
+      "text": "I mean, you could negotiate. Obviously, both agents could negotiate commissions.",
+      "source_line_start": 85,
+      "source_line_end": 85,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-018",
+      "text": "Can you guys hear Wendy\u2019s comments? I\u2019m not sure i the microphone\u2019s picking that up. Sorry. It\u2019s okay. Anybody give me a thumbs up or a thumbs down? Are you able to hear Wendy? Yes, I can hear her. All right, perect. Okay, thanks, Wendy. Please continue So, you can negotiate commissions that could that could thin thin that margin down? Yeah.",
+      "source_line_start": 87,
+      "source_line_end": 91,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-019",
+      "text": "Dr aw a blank on what the buyer could do. I\u2019m sure. There\u2019s a lot the buyer pay the.",
+      "source_line_start": 93,
+      "source_line_end": 93,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-020",
+      "text": "Closing costs.",
+      "source_line_start": 95,
+      "source_line_end": 95,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-021",
+      "text": "Yeah, they wouldn\u2019t be asking or.",
+      "source_line_start": 97,
+      "source_line_end": 97,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-022",
+      "text": "What i the buyer doesn\u2019t have enough cash to pay their own closing costs? Is there another trick you could use sure there is you can. This isn\u2019t done very oten right now. But it still can work the the lender can actually pay the closing costs by i the buyer\u2019s willing to accept. A slightly higher interest rate. And the reason.",
+      "source_line_start": 99,
+      "source_line_end": 102,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-023",
+      "text": "And still not make it be a short sale? Correct. Oh, okay. Okay,",
+      "source_line_start": 104,
+      "source_line_end": 104,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-024",
+      "text": "And what I mean by that is the buyer\u2019s lender, not the seller\u2019s lender. The buyer\u2019s lender can do that.",
+      "source_line_start": 106,
+      "source_line_end": 107,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-025",
+      "text": "Okay, buyer\u2019s lender, that\u2019s where I\u2019m like. That makes sense.",
+      "source_line_start": 109,
+      "source_line_end": 109,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-026",
+      "text": "Okay, So but let\u2019s say none o that stu works out and you do your net sheet, and",
+      "source_line_start": 111,
+      "source_line_end": 111,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-027",
+      "text": "it\u2019s like ten grand short, no matter how hard you guys try and push and shove and everything you\u2019re probably going to be a short sale. Okay? So, um, And I you\u2019re going to need some orms, and there\u2019s a process, and we\u2019re we\u2019re going to cover that. But, um, let me stick to my notes here. What is a short sale? I I want to read. It\u2019s a short little paragraph in the Short Sale Disclosure, which is one o the orms that we\u2019ll get to in a little bit. Where is uh here it is okay uh let\u2019s see Jenna.",
+      "source_line_start": 113,
+      "source_line_end": 118,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-028",
+      "text": "Could I talk you into reading that? It\u2019s the yeah, it\u2019s right there. Which one? Short sale deined.",
+      "source_line_start": 120,
+      "source_line_end": 121,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-029",
+      "text": "Short sale, okay. The term short sale is used in the real estate business to describe a situation where the current air market value o the property is less than the debt owing against the property. In other words, the seller can\u2019t sell the property unless the creditors, Third, parties agree to accept a payment that is less than or short o the amount. Actually owed to those third parties. The third parties may include mortgage lenders, mortgage insurers, bankruptcy trustee, Trustees and ederal, state and local taxing authorities such as the IRS or state tax commission or other lien holders.",
+      "source_line_start": 123,
+      "source_line_end": 130,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-030",
+      "text": "Correct. There\u2019s one more situation I want to throw into that. That is not a short sale, but you might still need these orms. And that isum. Like a bankruptcy or other third party that would need to approve the transaction. You\u2019d still use the orms or a version o them, okay? And i that situation arises, let me know and I\u2019ll get the right orms into your hands. Um uh bankruptcy is one example and there\u2019s another one. What am I thinking o? Oh, a probate probate situation. Okay? Sometimes, the probate oicer or the probate, uh judge or attorney needs to approve a sale like that.",
+      "source_line_start": 132,
+      "source_line_end": 139,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-031",
+      "text": "So anytime, there\u2019s a third party that uh you know can approve or or needs to approve transaction. You would want to use this process and these orms. The process will be a little dierent. The orms will be the same or nearly the same. Okay questions so ar? Okay why would a seller want to do a short sale?",
+      "source_line_start": 141,
+      "source_line_end": 144,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-032",
+      "text": "They have to move.",
+      "source_line_start": 146,
+      "source_line_end": 146,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-033",
+      "text": "They got to move? Yep.",
+      "source_line_start": 148,
+      "source_line_end": 148,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-034",
+      "text": "And I\u2019m sure they ound it\u2019s better than oreclosure, but yeah.",
+      "source_line_start": 150,
+      "source_line_end": 150,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-035",
+      "text": "Okay, yeah, they they have to move or some reason and it\u2019s better than a oreclosure. Let\u2019s say, let\u2019s say they don\u2019t have to move, but they can\u2019t aord to keep making the payments. So I guess they do have to move. But, i they can\u2019t aord to keep making the payments, their only remedy is to sell the house, right? Or are there other remedies i they can\u2019t aord to make payments?",
+      "source_line_start": 153,
+      "source_line_end": 157,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-036",
+      "text": "There might be.",
+      "source_line_start": 159,
+      "source_line_end": 159,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-037",
+      "text": "They could rent it. They could they could rent it. That could be a potential remedy, right? What else? They could possibly reinance. Depends, i i the current situation is better than the than the situation they were in when they got that inancing in the irst place. I don\u2019t know how to make that green thing, disappear o my there we go. Okay, um.",
+      "source_line_start": 161,
+      "source_line_end": 165,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-038",
+      "text": "Uh, let\u2019s see. Oh, do you guys know what a loan modiication is?",
+      "source_line_start": 167,
+      "source_line_end": 167,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-039",
+      "text": "They\u2019re better than they used to be, right?",
+      "source_line_start": 169,
+      "source_line_end": 169,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-040",
+      "text": "I hope so. I haven\u2019t seen a lot o them lately. Never either. Okay, Jenna, you\u2019re nodding your head yes also. What what\u2019s a loan modiication?",
+      "source_line_start": 171,
+      "source_line_end": 172,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-041",
+      "text": "Like they can maybe modiy your terms.",
+      "source_line_start": 174,
+      "source_line_end": 174,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-042",
+      "text": "Modiy your terms? Yep like what kind o what are you thinking o? Well,",
+      "source_line_start": 176,
+      "source_line_end": 176,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-043",
+      "text": "Let\u2019s say i you missed a ew payments, sometimes, i you qualiy, they might be able to like take those payments and put them on the end o your mortgage.",
+      "source_line_start": 178,
+      "source_line_end": 179,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-044",
+      "text": "Right, So instead o a three hundred and sixty month mortgage, maybe now you have a three hundred and sixty our month mortgage. Something like that. Yeah. So they\u2019ll they\u2019ll kind o catch you back up artiicially, right? But you still have to make the payments going orward. Okay. How else might they modiy it? I\u2019ve I\u2019ve seen them do what you just said Jenna put the payments on the end. But, then they convert it rom a thirty year to like a orty year mortgage, which makes all the payments lower a little bit, right? Um, Another thing I\u2019ve seen them do is actually cut the interest rate to to one or two percent, even depending on the situation and",
+      "source_line_start": 181,
+      "source_line_end": 188,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-045",
+      "text": "maybe do all o the above. So so they can do modiications like that that can beneit the homeowner. None o that really works i they got to move though. Okay, They\u2019re not going to do that i you are going to rent the house out.",
+      "source_line_start": 190,
+      "source_line_end": 192,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-046",
+      "text": "And i they do that, and you\u2019re usually i they do a loan modiication, they will actually make any rents you receive assignable to them. Meaning that i you rent the house out in the uture, the tenant has to pay the rent directly to the mortgage company. I did see that once. Yeah, you\u2019ve seen that? Yeah. Okay, so those are all ways to avoid a short sale. One more way to avoid a short sale: Actually, I am going to name two more, and then we\u2019ll keep going on short sales. Two more ways to avoid short sale is to you can do what\u2019s called a deed in lieu o oreclosure. Anybody know what that is? Wendy\u2019s nodding her head.",
+      "source_line_start": 194,
+      "source_line_end": 201,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-047",
+      "text": "Give it back to the mortgage company or give it back to them,",
+      "source_line_start": 203,
+      "source_line_end": 203,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-048",
+      "text": "Yes, Yeah. You say look.",
+      "source_line_start": 205,
+      "source_line_end": 205,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-049",
+      "text": "Correct It\u2019s a little better on your credit, You usually suer much less o a deiciency than a oreclosure because the mortgage company doesn\u2019t have nearly as many legal expenses. There are still legal expenses, but they\u2019re much lower. You\u2019ll save yoursel like ten grand or more by doing a deed in lieu rather than letting the bank oreclose on you. And one more way to avoid a short sale or a oreclosure is to do a bankruptcy, okay? And I am not going to get into that ; I am not a bankruptcy attorney ; I don\u2019t know that stu, but.",
+      "source_line_start": 207,
+      "source_line_end": 213,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-050",
+      "text": "All o those could be alternatives to oreclosures or short sales. Okay, Now let\u2019s say, though, that short sale is the thing to do because it\u2019s easier on your credit than a oreclosure. And ultimately, it will cost you less than a oreclosure because the deiciency will be much lower, et cetera. And I think I just said it\u2019ll be easier on your credit. I did say that. Your credit does still take a hit, and we\u2019ll talk about that in a minute. Um, let\u2019s see. Any other reasons that someone would want to do a short sale as a seller? Those are the main ones. All right. Why would a mortgage company want to do a short sale?",
+      "source_line_start": 215,
+      "source_line_end": 222,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-051",
+      "text": "It keeps it on their books. I mean, it\u2019s not there\u2019s a lot less hassle. I don\u2019t know how to explain that.",
+      "source_line_start": 224,
+      "source_line_end": 225,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-052",
+      "text": "There is a lot less hassle, Um, because they they usually don\u2019t have to hire a oreclosure attorney. For example, Most mortgage companies that operate in Utah",
+      "source_line_start": 227,
+      "source_line_end": 228,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-053",
+      "text": "will hire one o two major oreclosure attorneys in the state. Okay, There\u2019s one Holiday and Watkins in Salt Lake. And there\u2019s Lunord I think is one o the other major ones. Yeah. And it costs them many many dollars to do that. And with a short sale they don\u2019t have to do that.",
+      "source_line_start": 230,
+      "source_line_end": 233,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-054",
+      "text": "So the bank likes it because it will head that o. The bank also likes to do a short sale because usually the homeowner will stay in the house and continue to care or the house until things wrap up. Unlike a oreclosure, oten the seller will be disgruntled or, the seller, The homeowner will be disgruntled and angry and yeah, trash the house, or oten steal things rom the house. For example, you\u2019ve seen this, right? They\u2019ll steal appliances. Yeah. Oh, doorknobs. Yeah, copper, right? Wiring. They\u2019ll steal stu rom their own house. So again, a bank usually likes it because o that. That\u2019s why a bank or mortgage company would want to do a short sale. But, they don\u2019t You can\u2019t just raise your hand and say, I\u2019d like to do a short sale, please. And the bank just says, okay, You know that\u2019s not how it works.",
+      "source_line_start": 235,
+      "source_line_end": 244,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-055",
+      "text": "That\u2019s right. So we\u2019ll we\u2019ll get to that process in a second. Um, actually let\u2019s let\u2019s kind o go there. What\u2019s the process like? So, i you\u2019re having trouble making your payments, and you\u2019re communicating with the mortgage company, who are you usually what department are you usually communicating with? Loss mitigation. Not quite close though we\u2019re going to get there.",
+      "source_line_start": 246,
+      "source_line_end": 250,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-056",
+      "text": "Who did you say? Loss mitigation. That\u2019s okay that\u2019s right, I was going to say to you, so yeah, there\u2019s something prior to that. Yes,",
+      "source_line_start": 252,
+      "source_line_end": 253,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-057",
+      "text": "We\u2019re going to talk about lost mitigation. So you\u2019reum but I in the meantime, I put the clue up on the screen. Oh.",
+      "source_line_start": 255,
+      "source_line_end": 256,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-058",
+      "text": "Loan servicing department.",
+      "source_line_start": 258,
+      "source_line_end": 258,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-059",
+      "text": "Loan servicing department that\u2019s excellent. Oh that\u2019s right. Well done.",
+      "source_line_start": 260,
+      "source_line_end": 260,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-060",
+      "text": "Okay, okay, it didn\u2019t used to apply, but everybody has that now.",
+      "source_line_start": 262,
+      "source_line_end": 262,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-061",
+      "text": "Yeah. So there\u2019s a loan servicing department. This is the same company that you call when when they post your payment late. And it wasn\u2019t late, and you could. Go to igured out or you didn\u2019t get your ten, ninety eight on time. And so you are calling them or whatever the issue is okay. These are the same olks that handle um late",
+      "source_line_start": 264,
+      "source_line_end": 267,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-062",
+      "text": "payments and late notices and notices o deault, uh and all that jazz. This all goes through the loan servicing department. The loan servicing department has an arm that handles oreclosures. They handle all that kind o stu. Okay.",
+      "source_line_start": 269,
+      "source_line_end": 271,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-063",
+      "text": "So, they are going to this is this is how the loan servicing department likes to work. Okay, they deal with all the oreclosure stu, uh, they document stu as long as that documentation serves them. Is that true?",
+      "source_line_start": 273,
+      "source_line_end": 275,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-064",
+      "text": "It\u2019s based on how long your phone call lasts.",
+      "source_line_start": 277,
+      "source_line_end": 277,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-065",
+      "text": "Oh yeah, yeah. I did not know that. Sure, that might makes total explains some things doesn\u2019t it? Yeah so theyum, They cost the loan servicing department costs the investor money. It doesn\u2019t make them money, it costs them money. So the the quicker they can get you o the phone and get to the next caller, the more money they save. So they actually incentivize most most companies do this. They incentivize the reps based on how many calls they can get in per hour, and they win prizes, even things like that. Okay, uh so they\u2019re not your advocate.",
+      "source_line_start": 279,
+      "source_line_end": 285,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-066",
+      "text": "That\u2019s the picture I am trying to paint. And, they\u2019re not going to release any inormation to you i you are not the borrower, unless you jump through whatever hoops they\u2019ve got. Most o them have a orm, some kind o authorization. Yeah, at the very beginning o the process, They used to do it by voice, and they would make notes in the system, But very quickly, they stopped doing that and they made the borrower sign a orm. And a lot, it\u2019s not always like this, but a lot o them have to be wet signed, meaning they won\u2019t accept a digital signature. Which is unny to me because you can you can buy a house now on a digital signature. You can get a mortgage on a digital signature, but you can\u2019t authorize it anyway. That\u2019s that\u2019s neither here nor there. Yeah, that\u2019s just what their rules are. It\u2019s usually a huge department with thousands o employees. It would.",
+      "source_line_start": 287,
+      "source_line_end": 297,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-067",
+      "text": "Be a miracle i you got the same person twice. Okay, we\u2019re not talking about um, you know Bingham Bank or or something like that. We\u2019re talking about you know i Bingham Bank originated your mortgage, Guess what they sold it, they sold the servicing to Wells Fargo, okay, or Bank o the West, or something like that. These um huge companies that do loan servicing. So you are not going to talk to the same person twice. Um now let\u2019s say you jump through their hoops You sign their authorization, or rather your borrower, your client signs the loan servicing department\u2019s authorization orm and you send it in. At, this point you should start talking to your seller about the act that the only thing you can guarantee with a short sale, is that something unreasonable will happen. Yeah.",
+      "source_line_start": 299,
+      "source_line_end": 308,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-068",
+      "text": "In this case, that looks like you sign the orm, you send it in, And three days later, because they told you it would take twenty our hours to process. So three days later, You call and check on it, and they have no idea what you are talking about. Okay. So, you do it again and you check on it. Two days later, ive days later, they have no idea You know You\u2019ll send it into them, three or our times beore it sticks. Okay, Um We used to ax these things in Do you remember And It would I I imagined in my head. Like a whole ream o paper sitting on top o their ax machine. Yeah, now it\u2019s usually emailed or sometimes even mailed in. They don\u2019t do axes anymore, thank heaven. So it\u2019s a little crazy that irst stage, which is kind o arguably the simplest stage, is sometimes the hardest one to get through. Okay, what you really want to do is get out o the loan servicing department.",
+      "source_line_start": 311,
+      "source_line_end": 321,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-069",
+      "text": "And talk to which department? The loss mitigation department. Okay, and I\u2019m mentioning these because o something that we\u2019ll talk about in a second. You might have a oreclosure and a short sale happening at the same time. And we\u2019ll talk more about that in a minute, but so you\u2019ll have these two departments that don\u2019t really talk to each other. And one o them\u2019s working on a oreclosure and the other one\u2019s loss mitigation handling your short sale. And let\u2019s say you\u2019ve got the short sale approved, Well, I\u2019m jumping the gun. I\u2019ll save that or a minute later. But let\u2019s see. Okay, so loss mitigation department, what they look like is they protect the lender against losses. They\u2019re not in charge o servicing the investment anymore. They\u2019re in charge o minimizing losses. And these guys are they suer rom what I call $ 10 an hour syndrome. Okay, they got a stack o iles 100 deep on their desk.",
+      "source_line_start": 323,
+      "source_line_end": 333,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-070",
+      "text": "They don\u2019t care about you. They don\u2019t care about the seller. Their job is to minimize losses, and they have ormulas that they ollow. And they\u2019re just they\u2019re order takers most o the time. And again, These are not i you got the loan rom, you know Bingham Bank around the corner, these are these don\u2019t work or Bingham Bank. You know um they work or the the loan servicer, just not in the servicing department in the loss mitigation department. The good news is, It\u2019s usually a much smaller department. So with this, it actually makes sense to keep a conversation log. You should do that really the irst time you talk to the loan servicing department. But, it will especially beneit you in the process. I you keep a simple conversation log on a Word document or just on a piece o paper, it doesn\u2019t matter. The name o the person you talked to, what time it was and what was discussed.",
+      "source_line_start": 335,
+      "source_line_end": 345,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-071",
+      "text": "What expectations were set, what promises were made, what was requested and what was provided. Okay? So just some brie details about the conversation. The reason or that is because you\u2019ll have the same problem that I talked about with the loan servicing department. You\u2019ll send in something that they requested. And a",
+      "source_line_start": 347,
+      "source_line_end": 350,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-072",
+      "text": "week later, they are still waiting or you to send that in. Say okay, I sent it to this email address on this date as requested by, you know, John Smith. When I talked to him on the phone at nine, orty two a m yesterday, okay. Um, you know I even got a response. I got an acknowledgement rom so and so. You know whatever you are gonna you are gonna lay all that stu out. I you do that, okay, I am telling you that stu not so much to protect you because, you are not really taking a lot o risk here as an agent. Um, But what it will do is it will make the short sale process actually accelerate by a huge actor. Okay.",
+      "source_line_start": 352,
+      "source_line_end": 359,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-073",
+      "text": "Instead o taking six months, you could cut that down to a third o that. It\u2019ll take sixty days maybe instead o six months i you ollow this. Every time you have a conversation with someone, the way I used to do it is you would start by saying, \u201cHi, how are you doing? I am Marty rom Primary Estate Experts. I am calling because I had a conversation yesterday with so and so at this time, who said, I should do this ater I had a conversation with so. And so the day beore that at this time.\u201d You basically Lay out how many reaking times you\u2019ve yeah, you\u2019ve talked to their department about the same issue. Usually when you do that, The person that you\u2019re talking to is much more incentivized to own whatever the situation is. And i they don\u2019t, they\u2019re extremely happy to pass you up to their lead. You ollow me? Once you get their lead, don\u2019t let go o their lead. Okay? Get that extension number and say, hey, okay. Thank you so much or helping me today.",
+      "source_line_start": 361,
+      "source_line_end": 372,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-074",
+      "text": "Um, I\u2019ll get that document that you requested to you, uh, you know, by tonight. I would like to ollow up with you tomorrow. Uh, what time can I call you back tomorrow? This kind o stu. Okay. Um and you just keep the same notes because even the leads have little teams o leads. They they\u2019re called leads. They\u2019re not really leads. They\u2019re just like next level up okay? And uh so then you\u2019ll say then you\u2019ll start the whole thing over again, I had a conversation here, had this conversation, then that one, that one. And now I\u2019m talking to you. And you\u2019re proessional and patient the whole time. But, you\u2019re clear on the act that uh uh, That you expect better help than this. And uh You know You You can push your weight around a little bit Okay? But, but keep in mind These guys are not getting customer service scores. They\u2019re the loss mitigation department. They don\u2019t care about you or the situation. So keep that in mind Be a little patient.",
+      "source_line_start": 374,
+      "source_line_end": 385,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-075",
+      "text": "But irm at the same time. Okay, does that make sense? Do you ollow that? Absolutely. Okay. So, this is how to navigate the process and I\u2019m just giving you the basics, but that\u2019s probably honestly, The conversation log was the most important tool that I learned to use doing short sales. That saved so much time. And as ar as timerames go, my shortest short sale that I ever did only took two days. And that\u2019s because the seller had a buyer that was in, and the buyer had just gotten approved.",
+      "source_line_start": 387,
+      "source_line_end": 392,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-076",
+      "text": "The listing agent told me exactly what the terms were o the approval. We quickly wrote it, and those terms were acceptable to my buyer. We quickly wrote an oer that matched exactly the terms that the short sale bank was approving, and that buyer had bailed. Okay, and so we just snuck right in.",
+      "source_line_start": 394,
+      "source_line_end": 397,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-077",
+      "text": "Yep, And they, the only dierence was a change o the name as ar as the lender was concerned. And I said okay, and they just continued with it. We got it approved in two days. It\u2019s crazy. My longest one took over a year to get approved. Okay, most o them were six to eight months. Um yes, This go around, there are ar ewer short sales, and so I anticipate that you have one. It\u2019ll probably be two to our months. Um another major dierence is that that Um, That downturn in prices lasted like were just talking about or six plus years. It took rom the dip to the recovery. And this last go around, We we started to dip in prices April o twenty two and were were already We\u2019re already above where were in April o twenty twenty two So I. Don\u2019t expect that there will be a huge volume o short sales like there was last time. However, anything can happen. You know that right?",
+      "source_line_start": 399,
+      "source_line_end": 409,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-078",
+      "text": "Um, okay, And I want to hit a dierent point why an agent would want to become an expert on short sales. But we\u2019ll get there; we\u2019re almost there. Okay, why would a buyer want to participate in a short sale? What do you got, Craig?",
+      "source_line_start": 411,
+      "source_line_end": 413,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-079",
+      "text": "Why buyer would yeah back in the day usually would get a discount.",
+      "source_line_start": 415,
+      "source_line_end": 415,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-080",
+      "text": "That\u2019s right. Okay,",
+      "source_line_start": 417,
+      "source_line_end": 417,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-081",
+      "text": "I don\u2019t know i that\u2019s holding true today because I haven\u2019t looked at done analyses on the. In the current short sale market.",
+      "source_line_start": 419,
+      "source_line_end": 420,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-082",
+      "text": "I predict that i it doesn\u2019t hold true right this second, it will within six months.",
+      "source_line_start": 422,
+      "source_line_end": 422,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-083",
+      "text": "So there should be some level o discount. Yes. Well, ewer buyers are going to go ater them.",
+      "source_line_start": 424,
+      "source_line_end": 425,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-084",
+      "text": "That\u2019s the key. Why is that Craig?",
+      "source_line_start": 427,
+      "source_line_end": 427,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-085",
+      "text": "They don\u2019t want to mess around with. But you don\u2019t know i the price is going to be approved, you don\u2019t know how long it\u2019s going to take or the approval.",
+      "source_line_start": 429,
+      "source_line_end": 430,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-086",
+      "text": "Right There\u2019s enough.",
+      "source_line_start": 433,
+      "source_line_end": 433,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-087",
+      "text": "Inventory that they can ind something else Yeah, There is tons o inventory out there. And. The other thing, too, is like that short sale addendum. You maybe have already gone over it.",
+      "source_line_start": 435,
+      "source_line_end": 437,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-088",
+      "text": "Not yet, but we okay.",
+      "source_line_start": 439,
+      "source_line_end": 439,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-089",
+      "text": "It gives the seller a get out o jail ree card.",
+      "source_line_start": 441,
+      "source_line_end": 441,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-090",
+      "text": "Yeah, the seller can actually cancel. Yeah,",
+      "source_line_start": 443,
+      "source_line_end": 443,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-091",
+      "text": "And you can\u2019t stop them. And or any reason, they don\u2019t even have to wait. They could just like, yeah, we\u2019re choosing a dierent path right? Which is the only time that a seller sort o has that get out o jail ree card That\u2019s right That\u2019s,",
+      "source_line_start": 445,
+      "source_line_end": 447,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-092",
+      "text": "Right So. There\u2019s a lot o question marks Thanks Craig A lot o question marks uh or a buyer with the short sale, and it\u2019s a pain in the butt. Um. And it could be a lengthy process, all o those things. So, uh, that\u2019s why usually you can get a short sale at a discounted price. Now the last go around the discount amounted to our to six percent, usually our to ive percent o o market price. But that doesn\u2019t sound like a lot unless you\u2019re talking about a ive hundred thousand dollar house. How much is ive percent o o ive hundred thousand dollar house?",
+      "source_line_start": 449,
+      "source_line_end": 455,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-093",
+      "text": "Twenty ive grand, okay. So, you could get a ive hundred thousand dollars house or our seventy ive ish. And like we were just talking, I don\u2019t know i that\u2019s going to hold true immediately since we\u2019re just getting back into short sales, but i it doesn\u2019t right this minute, I believe it will soon. Um, okay, great. So we just kind o talked about the why part o that as well and Craig hit. On this just now a little bit, what should a buyer be aware o when their oer to buy a short sale is accepted? What should a buyer be aware o when they\u2019re when they\u2019re oering a short sale is accepted by the seller?",
+      "source_line_start": 457,
+      "source_line_end": 464,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-094",
+      "text": "It\u2019s not accepted.",
+      "source_line_start": 466,
+      "source_line_end": 466,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-095",
+      "text": "It\u2019s not accepted.",
+      "source_line_start": 468,
+      "source_line_end": 468,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-096",
+      "text": "That\u2019s right.",
+      "source_line_start": 471,
+      "source_line_end": 471,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-097",
+      "text": "So do you have a contract?",
+      "source_line_start": 473,
+      "source_line_end": 473,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-098",
+      "text": "Somebody say yes because you have a contract. Yes, But it, but part o the contract says that the a third party has to weigh in on it. Okay, So there\u2019s some inluence that the bank can yield and will I said yield. I meant wield, sorry, There\u2019s inluence that the bank will have on that contract. The bank gets to weigh in on it and they will. Uh, okay. So that\u2019s one thing. Um let\u2019s talk about a couple others what the approval process is. Okay, you can lay it out or them briely, like I just did. Um, and I highly recommend that little phrase that I mentioned beore. You tell you know Mister Misses Buyer, the only thing I can guarantee you with this short sale process. Is that something unreasonable will happen. Okay?",
+      "source_line_start": 475,
+      "source_line_end": 483,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-099",
+      "text": "You might get oreclosed beore you get to buy it.",
+      "source_line_start": 485,
+      "source_line_end": 485,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-100",
+      "text": "Yeah, you could you could get everything approved. Um, you could have clear to close. You can even go to the signing table as the buyer and it\u2019ll get oreclosed on. The you know the the day you\u2019re supposed to close on it. Uh, I had that happen I think one time. And it\u2019s yucky, it doesn\u2019t make sense. The bank is going to lose a lot more money by oreclosing on it than they would have with your short sale.",
+      "source_line_start": 487,
+      "source_line_end": 491,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-101",
+      "text": "Do they do that because they think they can sell it or more?",
+      "source_line_start": 493,
+      "source_line_end": 493,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-102",
+      "text": "No. I think there\u2019s a lack o communication rom one department to another.",
+      "source_line_start": 495,
+      "source_line_end": 495,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-103",
+      "text": "Yes, it\u2019s mostly lack o communication and coordination. They\u2019re just not set up to do that. A oreclosure is a sure thing or them, And a short sale isn\u2019t with a short sale, A buyer can ail to close at the last minute or yeah, or a seller could have an issue, you know, whatever. And so they are once the oreclosure process starts, it\u2019s really hard. You can do it. In act, it\u2019s requent that you can stop a oreclosure i you\u2019re deep into a short sale process, but you have to really be on it and I.",
+      "source_line_start": 497,
+      "source_line_end": 502,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-104",
+      "text": "Can help i that comes up. I can help you wade through that. But that can be really rustrating to a buyer, right? Yeah, they\u2019ve already spent, you know, maybe they\u2019ve got the moving van loaded. You know, that kind o stu can happen. That\u2019s another reason buyers could potentially not want to do a short sale, which is again why",
+      "source_line_start": 504,
+      "source_line_end": 507,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-105",
+      "text": "short sales eventually allow allowing you allowing Excuse me, Allow you to get a discount on the price because ewer buyers are willing to do them. Um, let\u2019s see. So once once a buyer gets one under contract and accepted by the seller, now that Relpsi is hopeully going to be sent to the bank or approval. And now we\u2019re sitting or two days to a year or more, Or more likely two to our months, something like that. While we\u2019re waiting or the bank to approve it. What should the buyer do in the meantime?",
+      "source_line_start": 509,
+      "source_line_end": 515,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-106",
+      "text": "Yeah, Probably go look or other properties.",
+      "source_line_start": 517,
+      "source_line_end": 517,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-107",
+      "text": "Yeah, Because here\u2019s how it\u2019ll work: the mortgage company will approve the short sale, and then the buyer has a chance to say,\" Yeah, never mind. Okay. I ound something else.\" Maybe the buyer\u2019s even closed on a property since then. Okay, now there are we don\u2019t have time to get into them, but there are some strategies that you can use along the way to just like the situation where. Where I helped, and it was actually my buyer was actually one o our agents that\u2019s here. Um, Helped him because the um the buyer on that transaction had closed on something way beorehand, but did notiy the approving mortgage company. Rather, I should say the listing agent did notiy the approving mortgage company because they weren\u2019t required to, and they wanted that the mortgage company, what\u2019s that? They wanted the approval. Yes.",
+      "source_line_start": 519,
+      "source_line_end": 529,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-108",
+      "text": "That\u2019s exactly right. They wanted that rep seat to work its way all the way through the approval process so that all those pins were knocked down. And then they could just replace it with one. Okay, so okay, let\u2019s see. We\u2019ll talk about why an agent would want to list a short sale in a moment. One o the things to keep in mind. Oh, I orgot to mention this one here artiicially low list prices. So why would, in light o what you have learned in the last 35 minutes, why would a short sale listing be listed as artiicially low? I you\u2019ve got one that\u2019s worth 500, you could probably pick it up or 475 as a short sale. Why would somebody list it at 399?",
+      "source_line_start": 531,
+      "source_line_end": 538,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-109",
+      "text": "Multiple oers. I mean is that.",
+      "source_line_start": 540,
+      "source_line_end": 540,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-110",
+      "text": "Yep they could get multiple oers on it. Is that. Absolutely. Gets bid up. Any other reason?",
+      "source_line_start": 542,
+      "source_line_end": 543,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-111",
+      "text": "I'm sure you got one. I.",
+      "source_line_start": 545,
+      "source_line_end": 545,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-112",
+      "text": "Have. They would be, I don\u2019t know. Say it, say it. Um, paying less commission?",
+      "source_line_start": 547,
+      "source_line_end": 547,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-113",
+      "text": "Paying less commission?",
+      "source_line_start": 549,
+      "source_line_end": 549,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-114",
+      "text": "I hadn\u2019t thought o that. That could be a reason, but i i it\u2019s really worth 500 and they\u2019re listing it at 399, what\u2019s probably going to happen as ar as oers go? They\u2019ll get lots o oers, and where will the oers be?",
+      "source_line_start": 551,
+      "source_line_end": 553,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-115",
+      "text": "Higher than 399.",
+      "source_line_start": 555,
+      "source_line_end": 555,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-116",
+      "text": "Yeah, they\u2019ll probably be closer to somewhere between 475 and 500. So why would you bother doing that? Why not list it at ive ten and drop it to ive. Oh, ive, i you don\u2019t get oers, And then drop it to ive, oh two or ive hundred or our ninety nine? Why would you go crazy low?",
+      "source_line_start": 557,
+      "source_line_end": 560,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-117",
+      "text": "Just to get an oer in. As you get a lot o people in.",
+      "source_line_start": 562,
+      "source_line_end": 562,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-118",
+      "text": "Say that again, Wendy.",
+      "source_line_start": 564,
+      "source_line_end": 564,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-119",
+      "text": "Just to get the oer in, to submit it, to start the process. Yeah.",
+      "source_line_start": 566,
+      "source_line_end": 566,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-120",
+      "text": "Yeah. Get the oer in to submit it to start the process. Then once the bank goes through their process and gives you an approval amount, which may be quite dierent rom the oer you submitted, then you\u2019ve got an approval amount. You can actually say on the MLS, this list price has been approved by the bank, and that\u2019s a big deal. It suggests that there will be ewer question marks or the buyer about what price it\u2019s going to end up at, but also we\u2019re down the road with the process and probably not guaranteed, but probably the process will be much shorter. Okay, so watch out or those artiicially low list prices on a short sale. Okay, Why would an I got to do this kind o quick because we need some time to cover the exciting orms? But why would an agent.",
+      "source_line_start": 568,
+      "source_line_end": 577,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-121",
+      "text": "Want to list a short sale or become a short sale expert? Like there were there were agents who made this. No, I\u2019ll give it away i I say that. Yes, it was it was their niche. Yes, so that that\u2019s a main reason because it can be a solid niche. There was a couple in the brokerage that Craig and I grew up in that did this as their main thing. That\u2019s all they did was short sales and they were good at it. But it took them a lot longer to earn a commission. Okay, so instead o a thirty day or sixty day process, it was now a six to eighteen month process. Okay or earning a commission. Um and the commissions. One o the one thing we haven\u2019t talked about is one o the things that",
+      "source_line_start": 579,
+      "source_line_end": 586,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-122",
+      "text": "uh short that I excuse me, A mortgage company will do with the approval process is they will oten uh, they\u2019ll give you haircut on the commissions. Yes.",
+      "source_line_start": 588,
+      "source_line_end": 589,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-123",
+      "text": "So the short sale company can actually, or excuse me, the mortgage company can actually dictate a maximum amount o commissions. What was common back then, it was very common to do six percent back then all day long, three and three all day long. And the mortgage companies would just lat do ive percent total. And there\u2019s no negotiating that. It was take it or leave it. And, so you\u2019ll oten see in a short sale, it says that you know, inal commission amount will be split. Fity ity between buyer and seller\u2019s agents, or something like that. Ledy, that sounds amiliar to you, I am sure. Yes. And, so even the agents weren\u2019t sure until the end exactly what their commissions were. Yeah, I had one agent that signed a seller up at seven percent, anticipating that his commission would be that the total commission would be cut to six. It didn\u2019t happen that way; it was cut rom seven to ive, but he was hopeul. Um okay.",
+      "source_line_start": 591,
+      "source_line_end": 602,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-124",
+      "text": "So why would an agent want to do that? There\u2019s the niche, right? The niche.",
+      "source_line_start": 604,
+      "source_line_end": 604,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-125",
+      "text": "Weren\u2019t they other agents paying them upront to do the short sale?",
+      "source_line_start": 606,
+      "source_line_end": 606,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-126",
+      "text": "Oh, I orgot about that, Wendy. That\u2019s really true. There were agents who would take a short sale listing, but they were not and had no desire to be short sale experts. And. So they would actually pay a ee to another agent to go through the process o doing the conversation log and doing all that rigmarole on their behal or on their client\u2019s behal. So, yeah, there were short sale experts that were servicing other agents\u2019 short sales. Absolutely, I totally orgot about that. Yeah, that was a thing. Another reason that you would want to really master the technique o doing short sales is sometimes you\u2019ll have a client. Imagine this that you really want to help, okay. And you want to help them uh.",
+      "source_line_start": 608,
+      "source_line_end": 616,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-127",
+      "text": "Be able to save money, save on taxes, save on their credit, Et cetera, by doing a short sale rather than dealing with the oreclosure or deed in lieu. Or rather than sending them to an agent who says they know how to do short sales and really doesn\u2019t. I, you hire an agent who says, I\u2019ll do your short sale or you, and they don\u2019t know what they\u2019re doing. There\u2019s a much higher chance that that poor client will end up in a oreclosure than i they hire. You who does know what you\u2019re doing.",
+      "source_line_start": 618,
+      "source_line_end": 623,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-128",
+      "text": "Okay, we talked about the process a bunch. Let\u2019s uh let\u2019s let\u2019s go quick into the orms, the exciting part. Okay, because this this it\u2019s it\u2019s not exciting but it is",
+      "source_line_start": 625,
+      "source_line_end": 626,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-129",
+      "text": "important. So we\u2019re going to go to orms where are my orms? Here they are. Okay so the irst one we\u2019re going to do is the short sale disclosure. These are all in the MLS and I believe they are all in um.",
+      "source_line_start": 628,
+      "source_line_end": 630,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-130",
+      "text": "Brokermint as well, but at least they are all in the MLS. Okay, so the short sale disclosure this goes to buyer or seller; it doesn\u2019t matter. Okay, This is the irst I\u2019ve got them in order o how you would use them um in your packets, but and I\u2019ll cover them in that same order here. But I have one o these is out o order; don\u2019t worry about that. So anyway, the short sale disclosure it basically Covers some o the stu that we\u2019ve been covering just now. Um, it gives them a heads up. For example, section three right in the middle, it says or example, The third parties may not permit the seller to pay or any o the buyer\u2019s closing costs. You know each mortgage company makes up their own rules regarding short sales. This a common one. You may have a buyer that, that says, yeah, I\u2019ll pay you 500, but I want you to cover 10 closing costs. And the mortgage company is going to say this approved, except we\u2019re not.",
+      "source_line_start": 632,
+      "source_line_end": 643,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-131",
+      "text": "Letting the seller pay ten grand at closing costs. For some reason, that\u2019s a common one. Uh, let\u2019s see. And this one delays in response time. We already sort o talked about that. Write to the third parties to encourage additional oers. So it\u2019s possible that the uh the third parties, you know, the banks Here we go Where are we? Where are we Anyway, the banks may require the seller Oh here we go, The seller to keep the property on the market and to send all oers to the bank or approval. It\u2019s also possible that the mortgage company will require the seller to only send one oer to the bank at a time, okay? Just each one has their own rules. So this just discloses that there may be dierent ways that it\u2019ll be dealt with. This is a reminder o what Craig just said.",
+      "source_line_start": 645,
+      "source_line_end": 654,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-132",
+      "text": "The buyer or the seller can cancel at any time up to the third party approval or the third party approval deadline, okay, whichever happens irst. So that\u2019s something that\u2019s weird. As ar as tax and legal consequences o a short sale or taking steps to avoid a short sale, please ollow this, you know, encourage them to consult a tax or legal expert. You are neither o those. That\u2019s very, very important because people people are vulnerable in a short sale. And i it goes upside down and you didn\u2019t handle that correctly, when when somebody eels like they have to sue, they sue everybody. Their attorneys will encourage them to sue everybody: buyer\u2019s agent, seller\u2019s agent, buyer\u2019s brokerage, seller\u2019s brokerage and everybody else involved regardless o whatever you think.",
+      "source_line_start": 656,
+      "source_line_end": 665,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-133",
+      "text": "Whatever they think you did wrong or did not do wrong, the attorneys are going to ind something. So please don\u2019t give them legal or tax advice, okay? Okay, next one",
+      "source_line_start": 667,
+      "source_line_end": 668,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-134",
+      "text": "we got. And please break in and ask questions because I have to try to cover three or our more o these and not a lot o time. And I want to give you at least an introduction to them. So i there are questions, I\u2019m not going to probably stop and encourage questions, but I still want you to ask them. Fair. Okay. Okay, so we talked about the short sale disclosure. The next one that you\u2019re probably going to deal with i you\u2019re on the selling, the listing side is the addendum to the ERS, the addendum to the listing agreement. And, this rankly, says a lot o the same things as the short sale disclosure says at the top. But it also warns them.",
+      "source_line_start": 670,
+      "source_line_end": 677,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-135",
+      "text": "That the one thing we didn\u2019t talk about. Okay, with the loss mitigation department, When you submit a short sale to them or get the paperwork started with the mortgage company beore you put it on the market to get a short sale going. Um, Part o the approval process will be that usually, they collect inancial inormation rom the seller who is their borrower, and they make them qualiy or the short sale. Which I\u2019m kind o chuckling about because it\u2019s actually kind o similar to when they qualiied to get the mortgage in the irst place. The dierence is, in this case, they have to prove that they can\u2019t aord to keep the mortgage. Okay, So they\u2019re going to ask or tax returns and bank statements and pay stubs and all that kind o stu that you\u2019re used to when they\u2019re qualiying to get the mortgage, To prove that they can no longer aord it. Does that make sense?",
+      "source_line_start": 679,
+      "source_line_end": 689,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-136",
+      "text": "Well, it kind o doesn\u2019t, but it sort o does too, right? Okay. So, this warns your seller that the mortgage company is going to ask or all o that documentation. It gives us authorizations to collect and share inormation on their behal. That\u2019s what section three is. Section our is kind o the all the things, All the gooy stu that has to do with a short sale that they should know about. They\u2019re not going to receive any proceeds at closing, most likely. Sometimes they can receive a thousand, but it\u2019s usually zero. Let\u2019s see. In act, they may even be required depending on the approval. They may, let\u2019s say they submit bank statements and stu and tax returns and the mortgage company igures out. Okay, They really can\u2019t aord to keep this mortgage, but I see that they have eight thousand in the bank. We\u2019re going to make them bring ive thousand to closing.",
+      "source_line_start": 691,
+      "source_line_end": 701,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-137",
+      "text": "Okay, that happens, right? You\u2019ve seen that. Yeah,",
+      "source_line_start": 703,
+      "source_line_end": 703,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-138",
+      "text": "I should say okay you\u2019re getting this much back on your taxes. We want this much o it. That\u2019s right.",
+      "source_line_start": 705,
+      "source_line_end": 706,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-139",
+      "text": "That\u2019s right. Remember these guys are not interested in helping your client. These guys are interested in minimizing the loss or mitigating the loss to the mortgage",
+      "source_line_start": 708,
+      "source_line_end": 709,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-140",
+      "text": "company. Uh, okay. Let\u2019s see it warns them that there may beum collection eorts or. Or a deiciency judgment against them ater the short sale process because remember the mortgage company is let holding this bag without getting paid. So um uh, let\u2019s see it may go into oreclosure during the short sale process. That\u2019s that\u2019s in there too. 4b right? Uh, let\u2019s see 4C a short sale transaction may have a negative impact on seller\u2019s credit. So oreclosure is is bad on credit.",
+      "source_line_start": 711,
+      "source_line_end": 716,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-141",
+      "text": "Short sale is less bad on their credit. Okay, You can your credit will recover rom a short sale aster than it will recover rom a oreclosure. And, it doesn\u2019t what\u2019s tricky is it doesn\u2019t ever show on the credit report as a short sale. It typically shows as uh settled or paid in ull or less than original balance or something like that. Okay, and that\u2019s the part that will usually bang up your credit. Um Let\u2019s see. We already talked about that. We already talked about that. It reminds them, 4E, That there are other potential options that they have or avoiding a short sale or a oreclosure, okay? And it runs through those. Those are the things we already talked about. The company, meaning us, we don\u2019t have control over the decisions o the third parties. They\u2019re going to decide what they\u2019re going to decide. We\u2019re here to help acilitate the process but it is not up to us.",
+      "source_line_start": 718,
+      "source_line_end": 728,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-142",
+      "text": "And let\u2019s see. And we talked about the brokerage ees may change, you know, depending on what the third parties approve. Okay, again, we\u2019ve got another warning to consult with legal counsel and tax proessionals. And section ive says that again. You get the idea? This is a big deal, okay? People who are doing a short sale like I said are typically they\u2019re vulnerable. Because, it\u2019s a vulnerable situation, and they\u2019re not in. This is not probably what they planned when they bought the house. Okay, okay, we did that one and that one. Now let\u2019s talk about when you get an oer or you make an oer. Um, i the oer does not include this short sale addendum, you are going to counter that oer with this. Okay, just like you would i uh i you are selling a house.",
+      "source_line_start": 730,
+      "source_line_end": 739,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-143",
+      "text": "Or your kid, and they don\u2019t include the disclosure o interest, you\u2019re going to counter with the disclosure o interest. You\u2019re going to use the same technique to include a short sale addendum in the repre. Do not accept a repre on a short sale without a short sale addendum, whether you\u2019re on the buy side or the seller side. I\u2019ll say it again, : Don\u2019t let your buyer or seller accept a repre on a short sale without this short sale addendum. It\u2019s very important. Okay. So the irst parts, uh basically cover the same stu we\u2019ve been covering. It\u2019s a it\u2019s a little education about the short sale and the short sale process. Okay. So I\u2019m not going to go through that again. Um let\u2019s see section three basically set acknowledges that the mortgage company may or may not require that multiple oers be sent into them. In act, some o them require that they not be sent in. It just depends on the mortgage company.",
+      "source_line_start": 741,
+      "source_line_end": 751,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-144",
+      "text": "So that acknowledges that we\u2019ll be ollowing their instructions, And it doesn\u2019t matter what the buyer and seller want to do as ar as multiple oers. Let\u2019s see. Okay, section our is very important. So, we said that the short sale process can take many months or it could be really quick or really long, and this says that hey, this contract is good through this date. Okay? That\u2019s the short sale approval deadline. We can impose all the deadlines we want. It\u2019s not going to do anything to inluence how ast the mortgage company approves the short sale. But what this does is it says this contract is not an eternal contract. This contract will lapse i the short sale is not approved by X date. Does that make sense? Okay, okay, The next one is a short one but it\u2019s also important. This dictates when.",
+      "source_line_start": 754,
+      "source_line_end": 763,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-145",
+      "text": "Buyer and seller agree to have the earnest money deposited. I you\u2019re on the sell side, you want the irst box checked. I you\u2019re on the buy side, you want the second box checked. Why?",
+      "source_line_start": 765,
+      "source_line_end": 767,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-146",
+      "text": "So they don\u2019t have to do it until it\u2019s accepted. To approve it.",
+      "source_line_start": 769,
+      "source_line_end": 769,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-147",
+      "text": "Yeah, The buyer doesn\u2019t have to write a check or whatever until the mortgage company approves it. Why, would you want? Why would you care i you\u2019re on the sell side about getting a check early i the buyer has right to cancel? Anyway? So what dierence does it make?",
+      "source_line_start": 771,
+      "source_line_end": 774,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-148",
+      "text": "It just seems more. I mean, more secure. Yeah,",
+      "source_line_start": 776,
+      "source_line_end": 776,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-149",
+      "text": "That\u2019s exactly right. There\u2019s an emotional tie that comes along with that. You are more likely, even just a little bit, You are more likely to retain that buyer i there\u2019s an earnest money on or excuse me i there is earnest money on deposit. Okay? That being said, It\u2019s, you know, it doesn\u2019t have to be a deal breaker. But i you\u2019re the seller, you preer the irst box, i you\u2019re a buyer, you\u2019ll preer the second box or there\u2019s another box, you can make up something else too. But talk to me beore use that one, please. Okay, sellers, right to accept backup, backup oers this again may depend on the mortgage company stipulations, but usually, you\u2019re going to once you accept a.",
+      "source_line_start": 778,
+      "source_line_end": 786,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-150",
+      "text": "A contract on your short sale listing, Usually you are going to put it in backup status, and it\u2019s going to be like short sale backup status. Okay, and you\u2019ll continue to receive oers. Whether the bank wants to see them or not depends on the bank, depends on the mortgage company. Okay, And we talked about about already we",
+      "source_line_start": 788,
+      "source_line_end": 791,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-151",
+      "text": "we mentioned the act that the buyer or the seller cancel the receipt ;, they cancel it up to the. Short sale approval deadline or the actual short sale approval whichever comes irst. Okay. Um let\u2019s see I guess I am asking or questions. We don\u2019t have a lot o time let, but questions beore I move on, I got two more. Nope, okay. All right, all right. So uh, let\u2019s see, oh, I orgot the, the last part I wanted to mention is the contract deadlines. Okay, these.",
+      "source_line_start": 793,
+      "source_line_end": 798,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-152",
+      "text": "Are this is again an addendum to the Repsy. So it doesn\u2019t matter what\u2019s on page six, section twenty our o your Repsy. This will control. Okay? Some you can put dates in there. In act, I probably would page six, section twenty our o the Repsy, but it doesn\u2019t matter. What will control is what\u2019s here. Um You could also put back in the day we used to say C addendum, okay, or CSS addendum C short sale, addendum You can do it either way. And I just made these dates up. There\u2019s nothing special about these dates, except that with a in a short sale, these dates better be shorter than they would be on a normal sale. Why?",
+      "source_line_start": 800,
+      "source_line_end": 807,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-153",
+      "text": "These dates here should be shorter?",
+      "source_line_start": 809,
+      "source_line_end": 809,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-154",
+      "text": "Yeah. Yeah, I, you shouldn\u2019t you shouldn\u2019t have a thirty day settlement deadline most o the time or a two week inspection period or a ive day seller disclosure. Why? Why Wendy?",
+      "source_line_start": 811,
+      "source_line_end": 813,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-155",
+      "text": "Because hopeully, I mean, can\u2019t that already be?",
+      "source_line_start": 815,
+      "source_line_end": 815,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-156",
+      "text": "Yeah. You should have your stu together. Okay. By the time this gets approved, you should have your stu together. The seller and the buyer, okay? That doesn\u2019t mean you\u2019ve run an appraisal. It doesn\u2019t mean you\u2019ve already hired the inspector. You should still have time in there or that, but you should not be scrambling at that point. Yeah, yeah yeah yeah yeah okay. You you, buyer and seller can agree to whatever schedule and dates they want to. But in general, i you\u2019re on the buy side, I would keep these shorter because you\u2019ll have time. Okay, let\u2019s do the backup addendum. The backup addendum is actually very similar to our regular backup addendum, but it has a ew extras. So let\u2019s go to one point three additional backup contracts. Okay, because seller and the third parties desire to minimize their respective losses, we have the right to.",
+      "source_line_start": 817,
+      "source_line_end": 827,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-157",
+      "text": "Accept additional backup contracts. So there\u2019s not just one backup oer, you can be one o many backup oers on a short sale. That\u2019s one dierence, okay? Uh let\u2019s see submission o prior repsee. This. So this says that the the primary repsee has",
+      "source_line_start": 829,
+      "source_line_end": 831,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-158",
+      "text": "already been submitted to the third party or approval and that you will either be submitted or not. Section 1.5 spells that out. Your backup contract may or may not be submitted to the third party approver. Okay. Um, 1.6 just says what we\u2019ve already said, the the approving mortgage company may modiy the terms. Okay? And i the approving mortgage company modiies the terms and the buyer or the seller, either party don\u2019t agree to them, you can you can bail. It\u2019s you\u2019re not obligated to you\u2019re not just subject to the mortgage company um.",
+      "source_line_start": 833,
+      "source_line_end": 839,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-159",
+      "text": "I you don\u2019t agree to the mortgage company\u2019s terms, then there\u2019s going to be no sale. But you\u2019re not bound to their terms until, well, until the next orm. Okay? In act, let\u2019s go there next. Okay? The last orm I wanted to talk about - -. This is once you actually get the short sale approval - - You\u2019re going to get a letter rom the mortgage company. And it\u2019ll be like approval, third party approval letter or short sale approval. I don\u2019t know i they have dierent titles. There\u2019s no standard title, But you\u2019ll get a letter rom the mortgage company that says it\u2019s approved with these conditions. Okay? And you\u2019re going to attach it. In act, let me go through this little by little here. Okay? Acknowledgment o third party approval. So it reerences section two o the short sale, addendum about the third party approval.",
+      "source_line_start": 841,
+      "source_line_end": 850,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-160",
+      "text": "It says, according to that, We know there\u2019s a third party and there\u2019s an approval deadline and all that jazz. And this says that, hey, guess what? As o today we got a third party approval. It\u2019s oicial notiication to the buyer that there is a third party approval, which will activate a ew things in the contract. Not, the least o which is those deadlines that we talked about in the short sale. Addendum. Okay?",
+      "source_line_start": 852,
+      "source_line_end": 856,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-161",
+      "text": "Okay, Once that happens and again, right here in the addendum, it says that the short sale approver, the short sale approval letter is attached as exhibit A to this addendum. Okay. And, then you\u2019re going to clariy the new dates based on the short sale approval date. Okay. And it\u2019s possible that the short sale approval itsel will modiy those dates. That\u2019s pretty common too actually. We used to submit like sixty day closings on a short sale, and they would requently get put at orty ive days was a avorite timerame. Okay, but again, T here is no reason to go that long, usually because everybody\u2019s got their stu ready. So you clariy those dates, Buyer and seller sign that now you have a much more normal contract to deal with. Now you can take this thing to closing just like you normally would. You can you know project.",
+      "source_line_start": 858,
+      "source_line_end": 868,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-162",
+      "text": "The closing time much more accurately because now you are just dealing with the buyer\u2019s lender. The seller\u2019s lender has done their part as long as t here is no oreclosure pending. I t here is a oreclosure, yeah, that\u2019s something that you can track okay one hundred percent o the time. You can track a pending oreclosure so",
+      "source_line_start": 870,
+      "source_line_end": 873,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-163",
+      "text": "i you get a short sale, i you get a short sale transaction, call me I want to know anyway okay Um, But especially i you ind out that there\u2019s been a notice o deault issued or anything else indicating that there might be a oreclosure, I want to talk. Okay, because you can track it and you should track it. And many times it\u2019s hard, but we can usually do it. We can get the oreclosure orestalled with enough time to to close on the short sale. Whew! That\u2019s yeah. We just went through a lot o orms. Okay? But I think we got it so.",
+      "source_line_start": 875,
+      "source_line_end": 881,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-164",
+      "text": "What are we? We\u2019re 12:01. Not too bad, not too bad. Um, thank you. Okay, who\u2019s let? Oh, we still got Paula and Dallin. Well done you guys. Okayum what questions do you guys have? We just covered a ton o groundum and i you guys have time to stick around or a minute, I want to know what questions are on your minds about short sales.",
+      "source_line_start": 883,
+      "source_line_end": 887,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-165",
+      "text": "I probably don\u2019t have any. Until I\u2019m there, then I\u2019ll be calling you with all my questions.",
+      "source_line_start": 889,
+      "source_line_end": 890,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-166",
+      "text": "Well, good. I\u2019m hoping that\u2019s the case. When you get a short sale or even a potential short sale, I want you to call me. I want to talk about it. It\u2019s yeah, it\u2019s not a requirement. I\u2019m not saying you must go no, but but i yeah, i heavily invite you to call me. Um okay, anything today,",
+      "source_line_start": 892,
+      "source_line_end": 895,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-167",
+      "text": "I lost my i had a team member. She quit all the short sales. I mean, she got out o the business. Oh, an agent? Uh- huh.",
+      "source_line_start": 897,
+      "source_line_end": 898,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-168",
+      "text": "Oh boy, she was just ed up withultimatum members.",
+      "source_line_start": 900,
+      "source_line_end": 900,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-169",
+      "text": "Yeah, that hurt or a minute.",
+      "source_line_start": 902,
+      "source_line_end": 902,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-170",
+      "text": "Oh yeah, they\u2019reum. yeah, i you are not prepared or how unreasonable they can be, It can be really anguishing vexing They can be vexing, and so much respect to the ice I can see both o their aces right now in my head The Swensons. The this not yeah, Marianne. It\u2019s not not the same Swensons who are in our oice. There is also a husband and wie team that sort o work in our oice, the Swensons. But yeah, Marianne Swenson, they were. She was in our brokerage and I orgot her husband\u2019s name because she\u2019s the one who did most o the work with. Um oh, what was it called? It just went out my head North Star North Star Realty and then they rebranded to Integra Realty. But yeah, we were with North Star.",
+      "source_line_start": 904,
+      "source_line_end": 912,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-171",
+      "text": "Ron, it was Ron and Mary Ann Swenson. Yes. Yeah, they everything they had was red. They dressed in red, their logo was in red, everything was red. Anyway, Hats o to to agents who specialized in short sales back in the day because they were once you knew what you\u2019re doing, you could really make a career out o it, but they weren\u2019t easy to do. It was rewarding to do it. Your client was usually very, very happy. One one other thing, one other heads up with short sales is. I you have a savvy listing agent and you\u2019re on the buy side, you\u2019re not likely to get repairs done. Why do you think that is on a short sale?",
+      "source_line_start": 915,
+      "source_line_end": 922,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-172",
+      "text": "Because they\u2019re already at their limit.",
+      "source_line_start": 924,
+      "source_line_end": 924,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-173",
+      "text": "Yeah, Usually, the seller doesn\u2019t have any money or they realize they\u2019re not going to get any more money out o the property. Yeah, there\u2019s little point. They could save on tax consequences or something like that, or collections later, but that\u2019s usually not where their mind is. There\u2019s usually very little motivation or a seller to do repairs on a short sale. I\u2019m not saying it can\u2019t happen, but it usually doesn\u2019t. Okay. Good stu. Hopeully that was useul i not exciting. Yeah, it was good. Okay, excellent. Okay go get 'em! All right thanks you guys I\u2019ll see ya.",
+      "source_line_start": 926,
+      "source_line_end": 932,
+      "section": "Auto-generated"
+    },
+    {
+      "chunk_id": "chunk-174",
+      "text": "Go, Jenna. Go with the closing.",
+      "source_line_start": 934,
+      "source_line_end": 934,
+      "section": "Auto-generated"
+    }
+  ],
+  "operator_interpretation": "Marty emphasizes that short sales require extreme persistence and documentation. The conversation log technique is presented as the single most important tool for accelerating the process. He also notes that the current market (2025) has far fewer short sales than the 2008-2014 period, but they are starting to reappear. The training assumes Utah-specific practices (Brokermint, Utah Real Estate forms) but the core principles apply broadly. Marty explicitly states he is not a bankruptcy attorney and agents should not give legal or tax advice - this is a critical escalation point.",
+  "confidence_notes": "This transcript is from April 2025 and reflects current market conditions at that time. Short sale volume was low but increasing. Commission structures mentioned (6% standard, 5% short sale haircut) reflect Utah market norms. The specific forms mentioned (Short Sale Disclosure, Short Sale Addendum, Backup Addendum, Acknowledgment of Third Party Approval) are Utah-specific forms available in the MLS and Brokermint. Other states will have different forms. The timeline estimates (2 days to 1 year, currently 2-4 months) are based on Marty's personal experience and may vary by lender, state, and market conditions."
+}
