@@ -582,6 +582,25 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
 }));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
 document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
+
+function setupMobileNav(){
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.getElementById(toggle?.getAttribute('aria-controls') || 'dashboardNav');
+  if(!toggle || !nav) return;
+  const close = () => {
+    document.body.classList.remove('mobile-nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', () => {
+    const open = !document.body.classList.contains('mobile-nav-open');
+    document.body.classList.toggle('mobile-nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => { if(event.key === 'Escape') close(); });
+}
+
+setupMobileNav();
 renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();renderScriptPreview();renderSavedWorkspace();renderSocialStudio();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.

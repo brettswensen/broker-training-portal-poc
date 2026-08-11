@@ -11,8 +11,14 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span></a>
-    <nav>
+    <div class="mobile-nav-head">
+      <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span></a>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="dashboardNav">
+        <span></span><span></span><span></span>
+        Menu
+      </button>
+    </div>
+    <nav id="dashboardNav">
       <a class="active" href="#top">Dashboard</a>
       <a href="#search">Search</a>
       <a href="#social-studio">Social Studio</a>
