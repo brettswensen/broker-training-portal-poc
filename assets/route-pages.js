@@ -20,7 +20,7 @@ const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination"
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
+  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -67,7 +67,7 @@ function snippetFor(text, query){
   return `${start ? '…' : ''}${raw}${end < source.length ? '…' : ''}`;
 }
 function getQuery(){ return new URLSearchParams(location.search).get('q') || ''; }
-function goLibrary(q){ const value = String(q || document.getElementById('routeSearch')?.value || '').trim(); location.href = appPath(`/library/${value ? `?q=${encodeURIComponent(value)}` : ''}`); }
+function goLibrary(q){ const value = String(q || document.getElementById('routeSearch')?.value || '').trim(); location.href = appPath(`/all-content/${value ? `?q=${encodeURIComponent(value)}` : ''}`); }
 function handleSearchSubmit(e){ e?.preventDefault?.(); goLibrary(); }
 function setActiveNav(){
   const path = location.pathname.replace(/\/$/, '') || '/';
@@ -77,7 +77,7 @@ let transcriptIndex = {records:[], chunks:[]};
 let transcriptReady = false;
 async function loadIndex(){
   try{
-    const r = await fetch('/data/search-index.json');
+    const r = await fetch(appPath('/data/search-index.json'));
     if(!r.ok) throw new Error('index missing');
     transcriptIndex = await r.json();
     transcriptReady = true;
@@ -231,16 +231,37 @@ function renderPipelinePage(){
   flow.innerHTML = steps.map((step,i)=>`<article class="route-card"><span>${String(i+1).padStart(2,'0')}</span><h3>${step[0]}</h3><p>${step[1]}</p></article>`).join('');
 }
 
+function renderOnboardingPage(){
+  const grid = document.getElementById('onboardingPath');
+  if(!grid) return;
+  const steps = [['Day 1','Team operating system','Brokerage expectations, tech stack, who to contact, and how trainings work.'],['Week 1','Core conversations','Buyer consult, listing appointment, follow-up, and TC workflow.'],['First deal','Contract-to-close','Inspection, repair negotiations, deadlines, documents, and TC handoff.'],['Advanced agent','Specialty knowledge','1031 exchange basics, land/flip CMA, and new construction opportunities.']];
+  grid.innerHTML = steps.map(step=>`<article class="route-card"><span>${escapeHtml(step[0])}</span><h3>${escapeHtml(step[1])}</h3><p>${escapeHtml(step[2])}</p></article>`).join('');
+}
+function renderTrainingVideosPage(){
+  const grid = document.getElementById('trainingVideoGrid');
+  if(!grid) return;
+  grid.innerHTML = trainings.map(t=>`<article class="route-card"><span>${escapeHtml(t.category)} · ${escapeHtml(t.size)}</span><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${(t.topics||[]).slice(0,3).map(topic=>`<em>${escapeHtml(topic)}</em>`).join('')}</div><a class="route-button" href="${appPath('/all-content/')}?q=${encodeURIComponent(t.title)}">Search this training</a></article>`).join('');
+}
+function renderObjectionsPage(){
+  const grid = document.getElementById('objectionCards');
+  if(!grid) return;
+  const objections = [['Pricing','“Zillow says my home is worth more.”','Use the CMA/Pricing Playbook to explain market evidence, adjustments, and pricing strategy.','CMA / Pricing Playbook'],['Inspection','“The buyer is asking for too many repairs.”','Use the Repair Negotiation Playbook to prioritize safety, lender-required items, and deal positioning.','Repair Negotiation Playbook'],['Investor','“Can I sell and avoid taxes?”','Use 1031 Exchange Basics as a compliant starting point, then refer to a qualified intermediary/tax advisor.','Investor Client Playbook'],['Transaction','“Who is handling the next deadline?”','Use the Contract-to-Close Checklist to clarify agent, TC, lender, and title handoffs.','Contract-to-Close Checklist']];
+  grid.innerHTML = objections.map(item=>`<article class="route-card"><span>${escapeHtml(item[0])}</span><h3>${escapeHtml(item[1])}</h3><p>${escapeHtml(item[2])}</p><a class="route-button" href="${playbookUrl(item[3])}">Open related playbook</a></article>`).join('');
+}
+
 async function initRoutePage(){
   setActiveNav();
   document.querySelectorAll('[data-route-query]').forEach(b=>b.addEventListener('click',()=>goLibrary(b.dataset.routeQuery)));
   document.getElementById('routeSearchForm')?.addEventListener('submit', handleSearchSubmit);
   await loadIndex();
-  if(document.body.dataset.page === 'library') renderLibrary();
+  if(document.body.dataset.page === 'library' || document.body.dataset.page === 'all-content') renderLibrary();
   if(document.body.dataset.page === 'playbooks') renderPlaybooksPage();
   if(document.body.dataset.page === 'playbook-detail') renderPlaybookDetailPage();
   if(document.body.dataset.page === 'topics') renderTopicsPage();
   if(document.body.dataset.page === 'scripts') renderScriptsPage();
   if(document.body.dataset.page === 'pipeline') renderPipelinePage();
+  if(document.body.dataset.page === 'onboarding') renderOnboardingPage();
+  if(document.body.dataset.page === 'training-videos') renderTrainingVideosPage();
+  if(document.body.dataset.page === 'objections') renderObjectionsPage();
 }
 initRoutePage();

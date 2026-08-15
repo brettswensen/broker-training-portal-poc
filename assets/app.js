@@ -92,7 +92,7 @@ function appBasePath(){
     if(parts[1] === 'staging' && parts[2]) return '/' + parts.slice(0,3).join('/');
     return '/broker-training-portal-poc';
   }
-  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline','social-assets'];
+  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -540,11 +540,11 @@ function handleFollowup(label){
   const lower = label.toLowerCase();
   if (typeof isDesignerRouteDashboard !== 'undefined' && isDesignerRouteDashboard) {
     if (lower.includes('playbook')) {
-      window.location.href = `/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`;
+      window.location.href = appPath(`/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`);
       return;
     }
     if (lower.includes('topic') || lower.includes('browse')) {
-      window.location.href = '/topics/';
+      window.location.href = appPath('/topics/');
       return;
     }
     window.location.href = librarySearchUrl(label);
@@ -559,9 +559,10 @@ function handleFollowup(label){
 
 
 function openTraining(title){
+  if (isDesignerRouteDashboard || !document.getElementById('results')) { routeToLibrarySearch(title); return; }
   document.getElementById('globalSearch').value = title;
   renderResults(title);
-  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+  document.getElementById('results')?.scrollIntoView({behavior:'smooth'});
 }
 
 function prefillAskQuestion(question){
@@ -581,7 +582,7 @@ function askAbout(topic){
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
-const librarySearchUrl = query => appPath(`/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
+const librarySearchUrl = query => appPath(`/all-content/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
 const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
 
 const globalSearchEl = document.getElementById('globalSearch');
@@ -632,15 +633,15 @@ if(document.getElementById('latestTrainingRail')) renderLatestTraining();
 if(document.getElementById('playbookGrid')) renderPlaybooks();
 if(document.getElementById('topicGrid')) renderTopics();
 if(document.getElementById('trainingList')) renderTrainings();
-if(document.getElementById('scriptPreview')) renderScriptPreview();
-if(document.getElementById('savedWorkspace')) renderSavedWorkspace();
+if(document.getElementById('scriptPreviewGrid')) renderScriptPreview();
+if(document.getElementById('savedWorkspaceList')) renderSavedWorkspace();
 renderSocialStudio();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
 let transcriptReady = false;
 
-fetch('data/search-index.json')
+fetch(appPath('/data/search-index.json'))
   .then(r => r.ok ? r.json() : Promise.reject(new Error('index not found')))
   .then(idx => {
     transcriptIndex = idx;
