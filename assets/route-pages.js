@@ -18,6 +18,15 @@ const playbooks = [
 
 const topics = ["CMA & Pricing","Repair Negotiations","Transaction Coordination","1031 Exchange","New Construction","Investor Clients","Inspection Objections","Contract-to-Close","Land Valuation","Flip Properties","Nightly Rentals","New Agent Onboarding"];
 
+const socialAssets = [
+  {title:'Deal deadline stress', type:'Social Asset', category:'Agent Marketing', summary:'Caption, carousel, and vertical post idea about slowing down before contract deadlines.', topics:['contract deadlines','decision pressure','client education']},
+  {title:'Contract inclusion reminder', type:'Social Asset', category:'Buyer Education', summary:'Post and carousel reminding buyers to write down appliances, fixtures, and included items.', topics:['buyer offer details','contracts','client reminder']},
+  {title:'Repair negotiation client post', type:'Social Asset', category:'Inspection Education', summary:'Saveable post idea that explains how to keep inspection asks focused and constructive.', topics:['repair negotiations','inspection objection','client education']}
+];
+function itemText(item){ return [item.title,item.category,item.summary,item.excerpt,item.script,item.situation,...(item.topics||[]),...(item.tags||[]),...(item.playbooks||[])].join(' ').toLowerCase(); }
+function matchesQuery(item, query){ const q=String(query||'').toLowerCase().trim(); if(!q) return true; const words=tokenize(q); const text=itemText(item); return text.includes(q) || words.some(w=>text.includes(w)); }
+function kindIcon(kind){ return {video:'▶', playbook:'PB', transcript:'TXT', script:'SC', social:'SOC'}[kind] || '•'; }
+
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
   const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
@@ -71,7 +80,12 @@ function goLibrary(q){ const value = String(q || document.getElementById('routeS
 function handleSearchSubmit(e){ e?.preventDefault?.(); goLibrary(); }
 function setActiveNav(){
   const path = location.pathname.replace(/\/$/, '') || '/';
-  document.querySelectorAll('.route-nav a').forEach(a => a.classList.toggle('active', (a.getAttribute('href') || '').replace(/\/$/,'') === path));
+  document.querySelectorAll('.route-nav a').forEach(a => {
+    const href = a.getAttribute('href') || '';
+    let target = '';
+    try { target = new URL(href, location.href).pathname.replace(/\/$/, '') || '/'; } catch(e) { target = href.replace(/\/$/,''); }
+    a.classList.toggle('active', target === path);
+  });
 }
 let transcriptIndex = {records:[], chunks:[]};
 let transcriptReady = false;
@@ -112,33 +126,58 @@ function renderLibrary(){
   const input = document.getElementById('routeSearch'); if(input) input.value = q;
   const title = document.getElementById('libraryTitle');
   const subtitle = document.getElementById('librarySubtitle');
-  const transcriptMatches = transcriptSearch(q, 8);
-  const trainingMatches = matchingTrainings(q);
-  const rows = q ? [...transcriptMatches.slice(0,8), ...trainingMatches.slice(0,6)].slice(0,12) : trainings;
-  const related = relatedPlaybooksFor(q || 'agent training playbook');
+  const transcriptMatches = transcriptSearch(q, 10);
+  const videoMatches = trainings.filter(t => matchesQuery(t, q)).slice(0, q ? 6 : 6);
+  const playbookMatches = relatedPlaybooksFor(q || 'agent training playbook').slice(0, 4);
+  const scriptMatches = routeScripts.filter(s => matchesQuery(s, q)).slice(0, 3);
+  const assetMatches = socialAssets.filter(a => matchesQuery(a, q)).slice(0, 3);
+  const total = videoMatches.length + playbookMatches.length + transcriptMatches.length + scriptMatches.length + assetMatches.length;
   if(title) title.textContent = q ? `Results for “${q}”` : 'Training library';
-  if(subtitle) subtitle.textContent = q ? `${rows.length} relevant items across trainings, transcript sections, and playbooks.` : 'Search or browse videos, training notes, playbooks, scripts, and topic guidance.';
+  if(subtitle) subtitle.textContent = q ? `${total} matching items across videos, playbooks, transcript excerpts, scripts, and social assets.` : 'Browse the launch library by artifact type, not just transcript text.';
+
   const top = document.getElementById('libraryTop');
   if(top){
-    const topItems = q ? (transcriptMatches.length ? transcriptMatches.slice(0,3) : trainingMatches.slice(0,3)) : trainings.slice(0,3);
-    top.innerHTML = topItems.map((item)=>{
-      const isTranscript = !!item.text;
-      const category = item.category || 'Training';
-      const text = isTranscript ? snippetFor(item.text, q) : item.summary;
-      return `<article class="route-card feature"><span>${isTranscript ? 'Transcript match' : 'Training video'} · ${escapeHtml(category)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(text)}</p>${sourceProofMarkup(isTranscript ? 'Transcript excerpt validates this' : 'Original training validates this', 1)}<div class="mini-tags">${(item.topics||[]).slice(0,3).map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div></article>`;
-    }).join('');
+    const mixed = [
+      ...videoMatches.slice(0,2).map(item=>({kind:'video', item})),
+      ...playbookMatches.slice(0,2).map(item=>({kind:'playbook', item})),
+      ...assetMatches.slice(0,1).map(item=>({kind:'social', item})),
+      ...scriptMatches.slice(0,1).map(item=>({kind:'script', item}))
+    ].slice(0,6);
+    top.innerHTML = mixed.map(({kind,item})=>{
+      const href = kind === 'playbook' ? playbookUrl(item.name) : kind === 'social' ? appPath('/social-assets/') : kind === 'script' ? appPath('/scripts/') : appPath(`/all-content/?q=${encodeURIComponent(item.title)}`);
+      const heading = item.title || item.name;
+      const body = item.summary || item.question || item.situation || '';
+      const meta = kind === 'video' ? `${item.category} · ${item.size}` : kind === 'playbook' ? `${item.sources} sources · ${item.time}` : item.category;
+      return `<a class="mixed-result-card ${kind}" href="${href}"><b>${kindIcon(kind)}</b><span>${escapeHtml(kind)} · ${escapeHtml(meta)}</span><h3>${escapeHtml(heading)}</h3><p>${escapeHtml(body)}</p><div class="mini-tags">${(item.topics||item.tags||[]).slice(0,3).map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div></a>`;
+    }).join('') || '<p class="muted">No matching artifacts yet. Try repair negotiations, CMA land, 1031 exchange, or work with TC.</p>';
   }
+
+  const vids = document.getElementById('libraryVideos');
+  if(vids){
+    vids.innerHTML = videoMatches.map(t=>`<article class="video-result-card"><div class="route-thumb"><span>▶</span><strong>${escapeHtml(t.category)}</strong></div><div><small>${escapeHtml(t.size)} · ${escapeHtml(t.type)}</small><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${(t.topics||[]).slice(0,4).map(topic=>`<em>${escapeHtml(topic)}</em>`).join('')}</div><a class="route-button" href="${appPath('/training-videos/')}?q=${encodeURIComponent(t.title)}">Open video</a></div></article>`).join('') || '<p class="muted">No matching videos for this query.</p>';
+  }
+
   const list = document.getElementById('libraryRows');
   if(list){
+    const rows = transcriptMatches.length ? transcriptMatches : videoMatches.slice(0,4).map(t=>({title:t.title, category:t.category, timestamp:t.size, text:t.excerpt, topics:t.topics}));
     list.innerHTML = rows.map(item=>{
-      const isTranscript = !!item.text;
-      const text = isTranscript ? snippetFor(item.text, q).slice(0,190) : item.summary;
-      const meta = isTranscript ? `${item.timestamp} · transcript` : `${item.size} · video training`;
-      return `<article class="route-row"><b>${isTranscript ? 'TXT' : 'VID'}</b><div><small>${escapeHtml(item.category)}</small><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(text)}</p>${sourceProofMarkup(isTranscript ? 'Transcript proof' : 'Training source', 1)}</div><span>${escapeHtml(meta)}</span></article>`;
-    }).join('');
+      const text = snippetFor(item.text || item.summary || '', q).slice(0,220);
+      const meta = item.timestamp ? `${item.timestamp} · transcript` : 'training note';
+      return `<article class="route-row transcript-row"><b>TXT</b><div><small>${escapeHtml(item.category || 'Training')}</small><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(text)}</p></div><span>${escapeHtml(meta)}</span></article>`;
+    }).join('') || '<p class="muted">Transcript excerpts will appear here after a search.</p>';
   }
+
   const pb = document.getElementById('libraryPlaybooks');
-  if(pb) pb.innerHTML = related.map(p=>`<a class="route-row compact" href="${playbookUrl(p.name)}"><b>PB</b><div><small>${p.sources} sources</small><strong>${escapeHtml(p.name)}</strong><p>${escapeHtml(p.question)}</p></div><span>Open</span></a>`).join('');
+  if(pb) pb.innerHTML = playbookMatches.map(p=>`<a class="playbook-result-card" href="${playbookUrl(p.name)}"><span>${p.sources} sources · ${p.time}</span><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.question)}</p><div class="mini-tags">${(p.tags||[]).map(t=>`<em>${escapeHtml(t)}</em>`).join('')}</div><strong>Open full playbook →</strong></a>`).join('');
+
+  const assets = document.getElementById('libraryAssets');
+  if(assets){
+    const combined = [
+      ...scriptMatches.map(item=>({...item, kind:'Script', href: appPath('/scripts/')})),
+      ...assetMatches.map(item=>({...item, kind:'Social Asset', href: appPath('/social-assets/')}))
+    ];
+    assets.innerHTML = combined.map(item=>`<a class="asset-result-card" href="${item.href}"><span>${escapeHtml(item.kind)} · ${escapeHtml(item.category)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary || item.situation || item.script)}</p><small>Open ${escapeHtml(item.kind.toLowerCase())} workspace →</small></a>`).join('') || '<p class="muted">Related scripts and social assets will appear here when matched.</p>';
+  }
 }
 function expertNamesFor(p){
   const map = {

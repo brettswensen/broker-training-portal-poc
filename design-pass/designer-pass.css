@@ -722,3 +722,21 @@ body.designer-pass:before{content:"";position:fixed;inset:0;pointer-events:none;
 .designer-pass .script-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.designer-pass .script-card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(0,0,0,.17);padding:18px;display:grid;gap:10px}.designer-pass .script-card span,.designer-pass .impact-grid article span,.designer-pass .saved-list article span{font-family:"JetBrains Mono",monospace;color:#78dce8;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}.designer-pass .script-card h3{margin:0;font-size:20px;letter-spacing:-.035em}.designer-pass .script-card p{margin:0;color:#aeb8c4;line-height:1.5}.designer-pass .script-card blockquote{margin:0;border-left:3px solid rgba(120,220,232,.45);padding:10px 0 10px 13px;color:#eef7fb;line-height:1.55}.designer-pass .script-actions{display:flex;flex-wrap:wrap;gap:8px}.designer-pass .saved-list{display:grid;gap:10px}.designer-pass .saved-list article{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.035);padding:14px}.designer-pass .saved-list article strong{display:block;margin:5px 0;color:#fff}.designer-pass .saved-list article p{margin:0;color:#aeb8c4;line-height:1.45}.designer-pass .impact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.designer-pass .impact-grid article{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(255,255,255,.035);padding:18px}.designer-pass .impact-grid h3{margin:10px 0 8px;letter-spacing:-.035em}.designer-pass .impact-grid p{margin:0;color:#aeb8c4;line-height:1.55}
 @media(max-width:1000px){.designer-pass .script-grid,.designer-pass .impact-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.designer-pass .script-grid,.designer-pass .impact-grid{grid-template-columns:1fr}.designer-pass .source-stack.compact article{padding:13px}}
+
+
+/* GitHub/Vercel parity pass: correct hero copy has room and search sits below it */
+.designer-pass .hero{min-height:376px!important;padding:42px!important;grid-template-columns:minmax(0,1.35fr) 430px!important;align-items:center!important}
+.designer-pass .hero h1{font-size:clamp(44px,5.3vw,76px)!important;line-height:.94!important;max-width:880px!important;letter-spacing:-.072em!important}
+.designer-pass .lead{font-size:17px!important;max-width:760px!important;line-height:1.62!important}
+.designer-pass .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important;align-self:end!important}.designer-pass .hero-stats div{min-width:0!important}
+.designer-pass .search-panel{margin-top:18px!important;margin-inline:42px!important}
+@media(max-width:1100px){.designer-pass .hero{grid-template-columns:1fr!important}.designer-pass .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.designer-pass .search-panel{margin-inline:0!important}}
+@media(max-width:700px){.designer-pass .hero{padding:24px!important}.designer-pass .hero h1{font-size:clamp(38px,11vw,56px)!important}.designer-pass .hero-stats{grid-template-columns:1fr!important}}
+
+
+/* Wider hero text block so GitHub matches the Vercel composition */
+.designer-pass .hero{display:block!important;position:relative!important;min-height:430px!important;padding:44px 48px!important}
+.designer-pass .hero-copy{max-width:900px!important;padding-right:360px!important}
+.designer-pass .hero h1{font-size:clamp(50px,6vw,86px)!important;line-height:.92!important;max-width:860px!important;letter-spacing:-.078em!important}
+.designer-pass .hero-stats{position:absolute!important;right:42px!important;bottom:38px!important;width:min(390px,34%)!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media(max-width:1180px){.designer-pass .hero-copy{padding-right:0!important}.designer-pass .hero-stats{position:static!important;width:100%!important;margin-top:22px!important}.designer-pass .hero h1{font-size:clamp(44px,8vw,76px)!important}}
