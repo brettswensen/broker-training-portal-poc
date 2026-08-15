@@ -15,7 +15,7 @@
     <nav>
       <a class="active" href="#top">Dashboard</a>
       <a href="#search">Search</a>
-      <a href="#social-studio">Social Studio</a>
+      <a href="social-assets/">Social Assets</a>
       <a href="#all-content">All Content</a>
       <a href="#ask">Ask the Broker</a>
       <a href="#latest">Latest Training</a>
@@ -29,7 +29,7 @@
     <div class="sidebar-card">
       <p class="eyebrow">LIBRARY STATUS</p>
       <strong>Training library ready</strong>
-      <span>Searchable trainings, scripts, playbooks, and source excerpts.</span>
+      <span>Training sessions, scripts, playbooks, and practical agent guidance.</span>
     </div>
   </aside>
 
@@ -107,48 +107,29 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">LATEST FROM TRAINING</p>
-          <h2>New broker trainings, already processed.</h2>
+          <h2>New training sessions, ready for agents.</h2>
         </div>
-        <span class="status-pill green">Video + transcript + scripts</span>
+        <span class="status-pill green">Watch, search, and use</span>
       </div>
-      <p class="section-intro">Agents can browse recent sessions like a video library, then open the transcript-backed guidance, source clips, scripts, and related playbooks from the same place.</p>
+      <p class="section-intro">Agents can browse recent sessions like a video library, then open the practical guidance, useful moments, scripts, and related playbooks from the same place.</p>
       <div id="latestTrainingRail" class="video-rail" aria-label="Latest training videos"></div>
     </section>
 
 
-    <section id="social-studio" class="panel social-studio-panel">
-      <div class="section-head social-studio-head">
-        <div>
-          <p class="eyebrow">CLIENT-FACING SOCIAL CONTENT</p>
-          <h2>Social Content Studio</h2>
-          <p class="section-intro">Agents can start from a finished training in the Drive “Done” folder and turn the lesson into buyer- or seller-friendly Instagram/Facebook ideas. The goal is practical content that helps an agent educate potential clients, build trust, and stay visible online without starting from a blank page.</p>
-        </div>
-        <span class="status-pill green">Agent attraction demo</span>
+
+    <section id="social-studio" class="panel social-dashboard-preview">
+      <div class="social-dashboard-copy">
+        <p class="eyebrow">AGENT MARKETING</p>
+        <h2>Turn training moments into polished social assets.</h2>
+        <p class="section-intro">A focused workspace for agent-ready posts, captions, carousels, and newsletter blurbs based on the best client-safe lessons from the training library.</p>
+        <a class="primary" href="social-assets/">Open Social Assets</a>
       </div>
-      <div class="social-studio-shell">
-        <aside class="social-source-list" aria-label="Training sources for social content">
-          <div class="source-list-top">
-            <p class="eyebrow">STEP 1 · PICK TRAINING</p>
-            <strong>Choose a lesson from Done</strong>
-            <small>Broker Brain finds consumer-safe angles for buyers and sellers.</small>
-          </div>
-          <div id="socialSourceList"></div>
-        </aside>
-        <div class="social-preview-workbench">
-          <div class="social-preview-toolbar">
-            <div>
-              <p class="eyebrow">STEP 2 · GENERATE CLIENT CONTENT</p>
-              <h3 id="socialPreviewTitle">Instagram/Facebook content idea</h3>
-              <p id="socialPreviewMeta" class="muted">Select a training to preview posts an agent could use to attract buyers or sellers.</p>
-            </div>
-            <div class="social-format-tabs" aria-label="Social content formats">
-              <button type="button" class="active" data-social-format="caption">Instagram caption</button>
-              <button type="button" data-social-format="carousel">Carousel</button>
-              <button type="button" data-social-format="newsletter">Facebook post</button>
-            </div>
-          </div>
-          <div id="socialPreviewCard" class="social-preview-card"></div>
-          <div id="socialAssetGrid" class="social-asset-grid"></div>
+      <div class="social-dashboard-art" aria-label="Social asset preview">
+        <img src="content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png" alt="Example vertical social post about deal deadline stress" />
+        <div>
+          <span>8 draftable ideas</span>
+          <strong>Caption, carousel, and newsletter-ready</strong>
+          <small>Designed as a separate workspace so the dashboard stays focused.</small>
         </div>
       </div>
     </section>
@@ -163,11 +144,11 @@
       </div>
       <div class="pipeline-flow">
         <article><span>01</span><strong>Training recorded</strong><p>Drop in the Zoom, Drive, YouTube, or uploaded video.</p></article>
-        <article><span>02</span><strong>Transcript indexed</strong><p>Searchable sections are tagged by topic, speaker, and source.</p></article>
-        <article><span>03</span><strong>Scripts extracted</strong><p>Client, agent-to-agent, and broker coaching language gets pulled out.</p></article>
+        <article><span>02</span><strong>Training made searchable</strong><p>Agents can find the right moment by topic, question, or situation.</p></article>
+        <article><span>03</span><strong>Useful language captured</strong><p>Client, agent-to-agent, and broker coaching language is organized for reuse.</p></article>
         <article><span>04</span><strong>Playbooks updated</strong><p>The best parts roll into step-by-step operating playbooks.</p></article>
-        <article><span>05</span><strong>Assets created</strong><p>Summary, checklist, and infographic are ready for agents.</p></article>
-        <article><span>06</span><strong>Ask the Broker updated</strong><p>Agents can ask questions from the new material right away.</p></article>
+        <article><span>05</span><strong>Agent resources prepared</strong><p>Summaries, checklists, and visuals are ready for agents.</p></article>
+        <article><span>06</span><strong>Agent coach refreshed</strong><p>Agents can ask questions from the latest training right away.</p></article>
       </div>
     </section>
 
@@ -209,7 +190,7 @@
       </div>
     </section>
 
-    <section id="results" class="panel results-panel">
+    <section id="results" class="panel results-panel" hidden>
       <div class="section-head">
         <div>
           <p class="eyebrow">TRAINING SEARCH</p>
@@ -265,7 +246,7 @@
       </div>
       <div class="compare-grid">
         <article><h3>Generic ChatGPT</h3><ul><li>Broad internet-style answers</li><li>No memory of your trainings</li><li>No link back to Craig, Marty, or Darrin’s actual guidance</li><li>No private brokerage access layer</li></ul></article>
-        <article class="featured"><h3>Broker Brain</h3><ul><li>Answers from your indexed training library</li><li>Shows which video/source the answer came from</li><li>Turns guidance into scripts, checklists, and playbooks</li><li>Protects the knowledge as an agent/member benefit</li></ul></article>
+        <article class="featured"><h3>Broker Brain</h3><ul><li>Answers from your actual training library</li><li>Shows which video/source the answer came from</li><li>Turns guidance into scripts, checklists, and playbooks</li><li>Protects the knowledge as an agent/member benefit</li></ul></article>
       </div>
     </section>
 

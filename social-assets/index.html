@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Assets - Broker Brain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body class="social-assets-page">
+  <aside class="sidebar">
+    <div class="mobile-nav-head">
+      <a class="brand" href="../" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span></a>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="dashboardNav"><span></span><span></span><span></span>Menu</button>
+    </div>
+    <nav id="dashboardNav">
+      <a href="../">Dashboard</a>
+      <a href="../#search">Search</a>
+      <a class="active" href="./">Social Assets</a>
+      <a href="../#latest">Latest Training</a>
+      <a href="../#ask">Ask the Broker</a>
+      <a href="../#playbooks">Playbooks</a>
+      <a href="../#trainings">Trainings</a>
+    </nav>
+    <div class="sidebar-card"><p class="eyebrow">MARKETING WORKSPACE</p><strong>Client-safe assets</strong><span>Review post ideas, captions, carousels, and newsletter blurbs before agents use them.</span></div>
+  </aside>
+  <main id="top" class="app-shell social-assets-shell">
+    <section class="social-assets-hero">
+      <div>
+        <p class="eyebrow accent">SOCIAL ASSETS</p>
+        <h1>Agent-ready marketing ideas with room to review, refine, and choose.</h1>
+        <p class="lead">This page gives the social content its own workspace instead of crowding the dashboard. Browse client-friendly post concepts, preview the vertical creative, and review the caption, carousel, and newsletter angles side by side.</p>
+        <div class="hero-actions"><a class="primary" href="#social-workspace">Browse assets</a><a class="ghost-button" href="../">Back to dashboard</a></div>
+      </div>
+      <div class="social-hero-stack" aria-label="Featured social examples">
+        <img class="card-one" src="../content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png" alt="Vertical social post about contract deadline stress" />
+        <img class="card-two" src="../content-ingestion/social-assets/social-first-batch-002-images/inspection-wishlist-kills-deals-01.png" alt="Vertical social post about inspection negotiation" />
+      </div>
+    </section>
+    <section class="social-value-grid" aria-label="Social asset benefits">
+      <article><span>01</span><strong>Client-friendly topics</strong><p>Only lessons that make sense outside the brokerage training room.</p></article>
+      <article><span>02</span><strong>Multiple formats</strong><p>Caption drafts, carousel beats, newsletter blurbs, and vertical post creative.</p></article>
+      <article><span>03</span><strong>Built-in review notes</strong><p>Broker and compliance reminders stay visible before anything is published.</p></article>
+    </section>
+    <section id="social-workspace" class="panel social-studio-panel social-assets-workspace">
+      <div class="section-head social-studio-head"><div><p class="eyebrow">CONTENT LIBRARY</p><h2>Choose a social asset concept.</h2><p class="section-intro">Each concept starts from a practical training lesson and turns it into public-facing education an agent could adapt for their own audience.</p></div><span class="status-pill green">Ready for review</span></div>
+      <div class="social-studio-shell social-assets-layout">
+        <aside class="social-source-list" aria-label="Social asset concepts"><div class="source-list-top"><p class="eyebrow">POST IDEAS</p><strong>Pick a topic</strong><small>Buyer tips, seller education, investor reminders, and closing guidance.</small></div><div id="socialSourceList"></div></aside>
+        <div class="social-preview-workbench"><div class="social-preview-toolbar"><div><p class="eyebrow">ASSET PREVIEW</p><h3 id="socialPreviewTitle">Agent social content package</h3><p id="socialPreviewMeta" class="muted">Select a topic to preview the post package.</p></div><div class="social-format-tabs" aria-label="Social content formats"><button type="button" class="active" data-social-format="caption">Caption</button><button type="button" data-social-format="carousel">Carousel</button><button type="button" data-social-format="newsletter">Newsletter</button></div></div><div class="social-preview-grid social-assets-preview-grid"><div class="social-image-stage social-assets-image-stage"><img id="socialPreviewImage" src="" alt="Selected vertical social post preview" /></div><div id="socialPreviewCard" class="social-preview-card"></div></div><div id="socialAssetGrid" class="social-asset-grid"></div></div>
+      </div>
+    </section>
+    <footer class="powered-by-footer" aria-label="Powered by Makrly"><span>Powered by</span><a href="https://makrly.io" target="_blank" rel="noopener" aria-label="Visit Makrly"><img src="../assets/brand/makrly-horizontal-logo-dark-bg-tight.svg" alt="Makrly" /></a></footer>
+  </main>
+  <script src="../assets/app.js?v=social-page-1"></script>
+</body>
+</html>
