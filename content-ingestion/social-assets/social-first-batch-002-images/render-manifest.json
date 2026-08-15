@@ -1,0 +1,80 @@
+{
+  "batch_id": "social-first-curated-batch-002",
+  "source_json": "content-ingestion/social-assets/social-first-curated-batch-002.json",
+  "asset_size": "1080x1920",
+  "rendered_count": 8,
+  "assets": [
+    {
+      "asset_id": "deadline-friday-saveable-01",
+      "headline": "Before a deadline gets weird, ask these 3 questions.",
+      "source_id": "planned-decision-making-2026-07",
+      "template": "checklist",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "appliances-contract-saveable-01",
+      "headline": "If you want the fridge, write it down.",
+      "source_id": "repc-errors-2025-12",
+      "template": "icons",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/appliances-contract-saveable-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "settlement-not-keys-01",
+      "headline": "Signing day is not always key day.",
+      "source_id": "repc-errors-2025-12",
+      "template": "timeline",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/settlement-not-keys-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "inspection-wishlist-kills-deals-01",
+      "headline": "The inspection is not a shopping list.",
+      "source_id": "repair-negotiations-2026-07",
+      "template": "priority",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/inspection-wishlist-kills-deals-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "short-sale-not-discount-bin-01",
+      "headline": "A short sale is not the clearance rack.",
+      "source_id": "short-sales-2025-04",
+      "template": "myth_fact",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/short-sale-not-discount-bin-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "unique-home-zestimate-01",
+      "headline": "Your Zestimate has probably never walked through your ADU.",
+      "source_id": "cma-triplex-2026-02",
+      "template": "split",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/unique-home-zestimate-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "pid-monthly-payment-surprise-01",
+      "headline": "That new-build payment may have a surprise hiding in it.",
+      "source_id": "repc-errors-2025-12",
+      "template": "checklist",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/pid-monthly-payment-surprise-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "asset_id": "1031-not-tax-free-01",
+      "headline": "A 1031 is not a magic tax eraser.",
+      "source_id": "1031-exchange-2026-05",
+      "template": "timeline",
+      "path": "content-ingestion/social-assets/social-first-batch-002-images/1031-not-tax-free-01.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ]
+}

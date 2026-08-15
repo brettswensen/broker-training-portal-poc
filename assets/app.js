@@ -92,7 +92,7 @@ function appBasePath(){
     if(parts[1] === 'staging' && parts[2]) return '/' + parts.slice(0,3).join('/');
     return '/broker-training-portal-poc';
   }
-  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
+  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline','social-assets'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -215,16 +215,21 @@ function renderSavedWorkspace(){
 
 
 const socialContentExamples = [
-  {id:'planned-decision-making-2026-07', title:'Planned Decision Making', source:'2026 Jul 6 Planned Decision Making transcript', bucket:'Done folder - transcript PDF', audience:'Public-friendly agent education', recommendation:'Good outward-facing content', risk:'No client facts. Keep it educational and avoid implying crisis expertise beyond licensed real estate guidance.', hook:'A rushed decision can turn a hard real estate moment into a worse one.', caption:'Real estate decisions get harder when stress goes up. A useful rule from our training library: slow the moment down, identify what could make the situation worse, then choose the next step that protects the client. Whether it is inspection, financing, deadlines, or negotiations, the best agents do not just react. They observe, orient, decide, and act.', cta:'If you are navigating a high-pressure real estate decision, talk with an agent who has a process, not just an opinion.', hashtags:'#RealEstateAdvice #HomeBuyingTips #UtahRealEstate #AgentEducation', carousel:['Stress makes real estate decisions feel urgent.','Urgent does not always mean rushed.','Ask: what could make this worse?','Then ask: what next step protects the client?','Good agents use a decision process, not panic.'], newsletter:'This week’s agent insight: decision quality matters most when a transaction gets stressful. Before reacting, pause long enough to separate facts, risks, and next steps. That process helps clients make calmer decisions when deadlines, negotiations, or financing pressure show up.', assets:['LinkedIn caption','Instagram carousel','Email/newsletter blurb','Short video talking points']},
-  {id:'short-sales-2025-04', title:'Short Sales - How to Buy and Sell', source:'2025 Apr 9 Short Sales - How to Buy and Sell w Marty transcript', bucket:'Done folder - transcript PDF', audience:'Selective public education', recommendation:'Use with broker/compliance review', risk:'Sensitive financial hardship topic. Keep general, avoid tax/legal advice, and recommend professional guidance.', hook:'A short sale is not just selling for less. It is a process with lender, tax, timing, and negotiation layers.', caption:'Short sales are starting to come back into more conversations, and they are easy to misunderstand. At a high level, a short sale may apply when the sale proceeds will not cover what is owed plus selling costs. That does not mean every underwater situation works the same way. Lender approval, deficiency risk, timelines, and tax questions all matter. The right first move is getting the facts organized early and involving the right professionals.', cta:'If you think a short sale might be part of your situation, get advice before making assumptions about your options.', hashtags:'#ShortSale #RealEstateEducation #HomeSellerTips #UtahHomes', carousel:['What is a short sale?','When proceeds may not cover the debt and selling costs.','The lender usually has to approve the path.','Tax and deficiency questions need professional advice.','Do not wait until the last minute to ask for help.'], newsletter:'Short sales require more than a normal listing plan. Agents should help sellers understand the moving parts early: what is owed, likely value, selling costs, lender requirements, potential deficiency issues, and the need for tax/legal guidance.', assets:['Consumer explainer caption','Carousel outline','Seller email blurb','Compliance review flag']},
-  {id:'repc-errors-2025-12', title:'Common REPC Errors to Avoid', source:'2025 Dec 10 Common REPC Errors to Avoid transcript', bucket:'Done folder - transcript PDF', audience:'Agent/internal first, public snippets only', recommendation:'Mostly internal. Use outward snippets carefully.', risk:'Contract guidance can sound legal. Public content should stay high-level and invite licensed/professional review.', hook:'Small contract details can create big transaction headaches.', caption:'A simple transaction reminder: earnest money and included items need to be handled exactly as the contract requires. Timing, delivery method, documentation, and written expectations matter. Public takeaway for buyers and sellers: details that feel small at signing can become expensive later, so work with an agent who slows down enough to get the paperwork right.', cta:'Before you sign or change terms, ask your agent what the contract actually requires.', hashtags:'#RealEstateContracts #HomeBuyingTips #RealEstateAgent #TransactionTips', carousel:['Contract details matter.','Earnest money has timing and delivery rules.','Included items should be clear.','Changes belong in writing.','Ask before assuming.'], newsletter:'Training note: recent REPC errors show why agents need to be precise about earnest money, included items, deadlines, and written changes. This is strong internal coaching content, with only high-level consumer education suitable for public posting.', assets:['Internal agent reminder','Consumer-safe caption','Checklist idea','Broker review flag']}
+  {id:'deadline-friday-saveable-01', title:'Deal deadline stress', source:'Planned Decision Making', bucket:'Topic: contract deadlines + decision pressure', audience:'buyers and sellers under contract', recommendation:'Strong public post', risk:'General education only. No guarantee of contract outcome.', hook:'Before a deadline gets weird, ask these 3 questions.', caption:'Contract deadlines have a way of creating fake urgency. Before you react, slow it down: what do we know, what are we guessing, and what changes if we wait? That little pause can keep a stressful moment from turning into a messy one.', cta:'Save this for your next contract deadline.', hashtags:'#RealEstateAdvice #HomeBuyingTips #ContractDeadline #AgentTips', image:'content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png', carousel:['What do we know?','What are we guessing?','What happens if we wait?','A calm pause can protect the deal.','Save this before deadline week.'], newsletter:'Client-facing insight: deadline pressure is where agents earn trust. The best next step is often to separate facts from assumptions before reacting.', assets:['1080x1920 post image','Caption draft','Carousel outline','Review note']},
+  {id:'appliances-contract-saveable-01', title:'Contract inclusion reminder', source:'Common REPC Errors to Avoid', bucket:'Topic: buyer offer details', audience:'buyers writing offers', recommendation:'Strong public post', risk:'General real estate education only. Clients should review contracts with qualified professionals.', hook:'If you want the fridge, write it down.', caption:'One of the least glamorous parts of buying a house is also one of the most important: writing down exactly what stays. If you care about the fridge, washer, curtains, shelving, or a mounted item, do not assume. Put it in the contract and make it clear.', cta:'Send this to someone writing an offer soon.', hashtags:'#HomeBuyingTips #RealEstateContracts #BuyerTips #AgentAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/appliances-contract-saveable-01.png', carousel:['Verbal assumptions do not move with the house.','Appliances should be clear.','Fixtures should be clear.','Mounted items should be clear.','If it matters, write it down.'], newsletter:'Buyer reminder: inclusions and exclusions are easy to overlook until they become expensive. If the client cares about an item, make it clear in writing.', assets:['1080x1920 post image','Caption draft','Buyer reminder carousel','Compliance note']},
+  {id:'inspection-wishlist-kills-deals-01', title:'Inspection negotiation tip', source:'Repair Negotiations', bucket:'Topic: inspection objections', audience:'buyers after inspection', recommendation:'Strong public post', risk:'General education only. Does not guarantee seller agreement.', hook:'The inspection is not a shopping list.', caption:'After inspection, it is tempting to ask for every little thing. That can backfire. The strongest repair requests usually focus on safety, function, and major defects. You can still care about the small stuff. Just do not let the small stuff kill the deal.', cta:'Save this before your inspection period.', hashtags:'#InspectionTips #HomeBuying #RepairNegotiation #RealEstateAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/inspection-wishlist-kills-deals-01.png', carousel:['Do not turn the report into a wish list.','Start with safety.','Then function.','Then major defects.','Keep the deal strategy clear.'], newsletter:'Inspection periods are emotional. Strong agents help clients separate material issues from wish-list items so the repair request protects the client without unnecessarily blowing up the deal.', assets:['1080x1920 post image','Caption draft','Inspection carousel','Review note']},
+  {id:'unique-home-zestimate-01', title:'Unique property pricing', source:"CMA's - Triplex, Addition, Nightly Rental", bucket:'Topic: CMA + unusual properties', audience:'sellers with unique properties', recommendation:'Strong public post', risk:'General education only. No guarantee of valuation or sale price.', hook:'Your Zestimate has probably never walked through your ADU.', caption:'Automated estimates are convenient, but they are blunt tools. If your property has an ADU, rental income, unusual zoning, land value, or a nonstandard layout, the comps need context. That is where a real pricing review matters.', cta:'If your property is unusual, get a real pricing review.', hashtags:'#SellerTips #HomeValue #CMA #RealEstatePricing', image:'content-ingestion/social-assets/social-first-batch-002-images/unique-home-zestimate-01.png', carousel:['Automated estimates are blunt tools.','ADUs need context.','Triplexes need context.','Land and rental use need context.','Unique homes need human pricing work.'], newsletter:'Seller insight: unusual properties need more than a quick automated value. Agents can use the CMA conversation to explain where comps help and where human context matters.', assets:['1080x1920 post image','Caption draft','Seller carousel','Pricing topic link']},
+  {id:'1031-not-tax-free-01', title:'1031 exchange investor note', source:'1031 Exchange Basics', bucket:'Topic: investor clients + tax timing', audience:'real estate investors', recommendation:'Strong public post', risk:'Must not provide tax or legal advice. Encourage CPA, attorney, and qualified intermediary review.', hook:'A 1031 is not a magic tax eraser.', caption:'A 1031 exchange can be powerful, but it is not a casual last-minute decision. It defers taxes, it does not erase them, and the timing rules matter. If you are thinking about selling an investment property, talk with your CPA and a qualified intermediary before you get too far down the road.', cta:'Talk to your tax team before you list.', hashtags:'#1031Exchange #RealEstateInvesting #InvestorTips #TaxStrategy', image:'content-ingestion/social-assets/social-first-batch-002-images/1031-not-tax-free-01.png', carousel:['Deferral is not forgiveness.','Timing rules matter.','A QI matters.','Your CPA should be early.','Do not wait until closing week.'], newsletter:'Investor reminder: 1031 exchange conversations need early handoff to the right professionals. The agent can flag timing and process without giving tax advice.', assets:['1080x1920 post image','Caption draft','Investor carousel','CPA/QI review note']},
+  {id:'pid-monthly-payment-surprise-01', title:'New-build payment surprise', source:'Common REPC Errors to Avoid', bucket:'Topic: new construction + PID due diligence', audience:'new construction buyers', recommendation:'Strong public post', risk:'PID information should be verified with builder, title company, and municipal sources.', hook:'That new-build payment may have a surprise hiding in it.', caption:'Model homes are designed to make you fall in love. Before you do, ask about the boring stuff too. Public Improvement Districts can affect your monthly cost for years, so ask if there is a PID, how much it is, and how long it lasts.', cta:'Save this for your next builder tour.', hashtags:'#NewConstruction #HomeBuyingTips #BuilderHomes #RealEstateAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/pid-monthly-payment-surprise-01.png', carousel:['Ask before you fall in love.','Is there a PID?','How much is it?','How long does it last?','Monthly payment clarity matters.'], newsletter:'New-build buyer insight: the model home is the exciting part. The stronger agent move is helping buyers ask about monthly-cost items like PIDs before they make decisions.', assets:['1080x1920 post image','Caption draft','Builder-tour checklist','Review note']},
+  {id:'settlement-not-keys-01', title:'Settlement versus keys', source:'Common REPC Errors to Avoid', bucket:'Topic: closing expectations', audience:'buyers near closing', recommendation:'Strong public post', risk:'General education only. Exact possession and funding timing depends on the contract, lender, title, and local process.', hook:'Signing papers does not always mean keys today.', caption:'Settlement day and closing day can feel like the same thing, but the timing can be different. Signing, funding, recording, and possession all matter. Before you schedule movers, ask exactly when you should expect keys.', cta:'Save this before closing week.', hashtags:'#ClosingDay #HomeBuyingTips #RealEstateAdvice #BuyerTips', image:'content-ingestion/social-assets/social-first-batch-002-images/settlement-not-keys-01.png', carousel:['Signing is one step.','Funding is another.','Recording matters.','Possession depends on the agreement.','Ask before scheduling movers.'], newsletter:'Closing-week reminder: buyers need plain-English expectations around settlement, funding, recording, and possession so they do not assume keys arrive the moment documents are signed.', assets:['1080x1920 post image','Caption draft','Closing-week carousel','Review note']},
+  {id:'short-sale-not-discount-bin-01', title:'Short sale process explainer', source:'Short Sales - How to Buy and Sell', bucket:'Topic: short sale expectations', audience:'buyers and sellers asking about short sales', recommendation:'Strong public post', risk:'Sensitive financial topic. Keep educational, avoid promises, and recommend tax/legal/lender guidance where needed.', hook:'A short sale is a process, not a discount bin.', caption:'Short sales are easy to misunderstand. They are not just a “cheap house” label. They involve seller hardship, lender approval, timing, documentation, and sometimes tax or deficiency questions. If a short sale is on the table, get the facts early.', cta:'Ask questions before making assumptions.', hashtags:'#ShortSale #RealEstateEducation #SellerTips #BuyerTips', image:'content-ingestion/social-assets/social-first-batch-002-images/short-sale-not-discount-bin-01.png', carousel:['Not just a discount label.','Lender approval matters.','Timing matters.','Hardship documentation may matter.','Get guidance early.'], newsletter:'Consumer-safe short-sale messaging should set expectations without implying discounts or guaranteed outcomes. The agent can explain the process and encourage professional guidance.', assets:['1080x1920 post image','Caption draft','Consumer-safe carousel','Review note']}
 ];
 let activeSocialIndex = 0;
 let activeSocialFormat = 'caption';
 function renderSocialStudio(){
   const list = document.getElementById('socialSourceList');
   if(!list) return;
-  list.innerHTML = socialContentExamples.map((item,index)=>`<button type="button" class="social-source-button ${index===activeSocialIndex?'active':''}" onclick="selectSocialSource(${index})"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.bucket)}</small></button>`).join('');
+  list.innerHTML = socialContentExamples.map((item,index)=>`<button type="button" class="social-source-button ${index===activeSocialIndex?'active':''}" onclick="selectSocialSource(${index})"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.audience)}</small></button>`).join('');
   document.querySelectorAll('[data-social-format]').forEach(btn=>{
     btn.classList.toggle('active', btn.dataset.socialFormat === activeSocialFormat);
     btn.onclick = () => { activeSocialFormat = btn.dataset.socialFormat; renderSocialStudio(); };
@@ -244,11 +249,13 @@ function renderSocialPreview(){
   const meta = document.getElementById('socialPreviewMeta');
   const assets = document.getElementById('socialAssetGrid');
   if(!card || !item) return;
-  if(title) title.textContent = `${item.title} to ${activeSocialFormat} draft`;
-  if(meta) meta.textContent = `${item.source} - ${item.audience}`;
+  if(title) title.textContent = `${item.title} ${activeSocialFormat} draft`;
+  if(meta) meta.textContent = `${item.source} · ${item.audience}`;
   const draft = `${item.caption} ${item.cta}`;
-  card.innerHTML = `<div class="social-card-top"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.audience)}</strong></div><div class="phone-post"><div class="post-avatar">BB</div><div><strong>Your Brokerage Agent</strong><small>Educational post generated from approved training</small></div></div><div class="social-post-body">${socialFormatBody(item)}</div><div class="compliance-note"><strong>Review note:</strong> ${escapeHtml(item.risk)}</div><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(draft).replace(/'/g,'&#39;')}')">Copy draft</button><button type="button" onclick="saveBrokerItem('Social draft','${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.recommendation).replace(/'/g,'&#39;')}')">Save idea</button></div>`;
-  if(assets) assets.innerHTML = item.assets.map(asset=>`<article><span>✓</span><strong>${escapeHtml(asset)}</strong><small>Generated from transcript insight</small></article>`).join('');
+  card.innerHTML = `<div class="social-card-top"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.audience)}</strong></div><div class="phone-post"><div class="post-avatar">AG</div><div><strong>Your Local Agent</strong><small>Agent-ready educational post</small></div></div><div class="social-post-body">${socialFormatBody(item)}</div><div class="compliance-note"><strong>Broker review:</strong> ${escapeHtml(item.risk)}</div><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(draft).replace(/'/g,'&#39;')}')">Copy draft</button><button type="button" onclick="saveBrokerItem('Social draft','${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.recommendation).replace(/'/g,'&#39;')}')">Save draft</button></div>`;
+  const img = document.getElementById('socialPreviewImage');
+  if(img) img.src = appPath('/' + item.image);
+  if(assets) assets.innerHTML = item.assets.map(asset=>`<article><span>✓</span><strong>${escapeHtml(asset)}</strong><small>Included in the agent-ready content package</small></article>`).join('');
 }
 
 function renderResults(query=''){
@@ -563,25 +570,30 @@ const isDesignerRouteDashboard = document.body.classList.contains('designer-pass
 const librarySearchUrl = query => appPath(`/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
 const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
 
-document.getElementById('globalSearch').addEventListener('input', e => {
-  if (!isDesignerRouteDashboard) renderResults(e.target.value);
-});
-document.getElementById('globalSearch').addEventListener('keydown', e => {
-  if (isDesignerRouteDashboard && e.key === 'Enter') {
-    e.preventDefault();
-    routeToLibrarySearch(e.target.value);
-  }
-});
+const globalSearchEl = document.getElementById('globalSearch');
+if(globalSearchEl){
+  globalSearchEl.addEventListener('input', e => {
+    if (!isDesignerRouteDashboard) renderResults(e.target.value);
+  });
+  globalSearchEl.addEventListener('keydown', e => {
+    if (isDesignerRouteDashboard && e.key === 'Enter') {
+      e.preventDefault();
+      routeToLibrarySearch(e.target.value);
+    }
+  });
+}
 document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click', e=>{
   if (isDesignerRouteDashboard) {
     e.preventDefault();
     routeToLibrarySearch(b.dataset.query);
     return;
   }
-  document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
+  if(globalSearchEl) globalSearchEl.value=b.dataset.query;
+  renderResults(b.dataset.query);
+  document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
-document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
+document.getElementById('askButton')?.addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput')?.value||'general')});
 
 function setupMobileNav(){
   const toggle = document.querySelector('.mobile-menu-toggle');
@@ -601,7 +613,13 @@ function setupMobileNav(){
 }
 
 setupMobileNav();
-renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();renderScriptPreview();renderSavedWorkspace();renderSocialStudio();
+if(document.getElementById('latestTrainingRail')) renderLatestTraining();
+if(document.getElementById('playbookGrid')) renderPlaybooks();
+if(document.getElementById('topicGrid')) renderTopics();
+if(document.getElementById('trainingList')) renderTrainings();
+if(document.getElementById('scriptPreview')) renderScriptPreview();
+if(document.getElementById('savedWorkspace')) renderSavedWorkspace();
+renderSocialStudio();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
@@ -758,16 +776,29 @@ function sourceProofMarkup(label='Related material', count=1){
 
 function renderResults(query=''){
   renderAllContent(query);
-  const q = query.trim();
-  if (transcriptReady && q) {
-    const results = transcriptSearch(q, 9);
-    document.getElementById('resultCount').textContent = `${results.length} transcript match${results.length===1?'':'es'} for “${query}”`;
-    document.getElementById('resultsGrid').innerHTML = results.map(ch => transcriptCard(ch, q)).join('') || `<p class="muted">No transcript matches yet. Try repair, 1031, land, flip, CMA, nightly rental, or inspection.</p>`;
+  const q = String(query || '').trim();
+  const resultsPanel = document.getElementById('results');
+  const resultCount = document.getElementById('resultCount');
+  const resultsGrid = document.getElementById('resultsGrid');
+  if(!resultsPanel || !resultCount || !resultsGrid) return;
+
+  if(!q){
+    resultsPanel.hidden = true;
+    resultCount.textContent = 'Search to see matches';
+    resultsGrid.innerHTML = '';
     return;
   }
-  const results = trainings;
-  document.getElementById('resultCount').textContent = transcriptReady ? `Showing ${transcriptIndex.records.length} indexed transcripts` : `Showing all`;
-  document.getElementById('resultsGrid').innerHTML = results.map(card).join('');
+
+  resultsPanel.hidden = false;
+  if (transcriptReady) {
+    const results = transcriptSearch(q, 9);
+    resultCount.textContent = `${results.length} transcript match${results.length===1?'':'es'} for “${query}”`;
+    resultsGrid.innerHTML = results.map(ch => transcriptCard(ch, q)).join('') || `<p class="muted">No transcript matches yet. Try repair, 1031, land, flip, CMA, nightly rental, or inspection.</p>`;
+    return;
+  }
+  const results = matchingTrainings(q);
+  resultCount.textContent = `${results.length} training match${results.length===1?'':'es'} for “${query}”`;
+  resultsGrid.innerHTML = results.map(card).join('') || `<p class="muted">No matching trainings yet. Try a broader topic or open the Library.</p>`;
 }
 
 function transcriptSourcesFor(query, fallbackAnswer){

@@ -1,0 +1,162 @@
+{
+  "batch_id": "social-first-curated-batch-002",
+  "created_by": "Hermes + Billy workflow",
+  "created_date": "2026-08-11",
+  "purpose": "Agent-postable 9x16 social assets from only strong public-facing training nuggets",
+  "asset_size": "1080x1920",
+  "selection_rule": "Create a social asset only when the transcript contains a nugget that a buyer, seller, or investor would actually save, share, or DM about. Do not force every transcript into a post. Do not print Broker Brain, source ids, citations, or internal branding on the image.",
+  "assets": [
+    {
+      "asset_id": "deadline-friday-saveable-01",
+      "source_id": "planned-decision-making-2026-07",
+      "source_title": "Planned Decision Making",
+      "series_label": "Deal stress tip",
+      "audience": "buyers and sellers under contract",
+      "agent_goal": "Start DMs from clients worried about deadlines",
+      "format": "Instagram Story / saveable checklist",
+      "headline": "Before a deadline gets weird, ask these 3 questions.",
+      "subheadline": "Most deal panic is really missing information.",
+      "body_copy": "What do we know? What are we guessing? What happens if we wait?",
+      "cta": "Save this for your next contract deadline.",
+      "caption_draft": "Contract deadlines have a way of creating fake urgency. Before you react, slow it down: what do we know, what are we guessing, and what changes if we wait? That little pause can keep a stressful moment from turning into a messy one.",
+      "compliance_note": "General education only. No guarantee of contract outcome.",
+      "source_basis": [
+        "Training emphasizes separating facts from assumptions before acting under pressure.",
+        "Training discusses planning ahead for deadline stress."
+      ]
+    },
+    {
+      "asset_id": "appliances-contract-saveable-01",
+      "source_id": "repc-errors-2025-12",
+      "source_title": "Common REPC Errors to Avoid",
+      "series_label": "Buyer reminder",
+      "audience": "buyers writing or reviewing offers",
+      "agent_goal": "Show practical contract protection without sounding legalistic",
+      "format": "Instagram Story / saveable warning",
+      "headline": "If you want the fridge, write it down.",
+      "subheadline": "Verbal assumptions do not move with the house.",
+      "body_copy": "Appliances. Fixtures. Curtains. Shelving. Spell it out before everyone signs.",
+      "cta": "Send this to someone writing an offer soon.",
+      "caption_draft": "One of the least glamorous parts of buying a house is also one of the most important: writing down exactly what stays. If you care about the fridge, washer, curtains, shelving, or a mounted item, do not assume. Put it in the contract and make it clear.",
+      "compliance_note": "General real estate education only. Clients should review contracts with qualified professionals.",
+      "source_basis": [
+        "Training discusses disputes caused by missing inclusions and exclusions.",
+        "Training warns that mounted/included assumptions can create problems."
+      ]
+    },
+    {
+      "asset_id": "settlement-not-keys-01",
+      "source_id": "repc-errors-2025-12",
+      "source_title": "Common REPC Errors to Avoid",
+      "series_label": "Moving day reality check",
+      "audience": "buyers planning movers and utilities",
+      "agent_goal": "Prevent move-in frustration and show timeline expertise",
+      "format": "Instagram Story / timeline explainer",
+      "headline": "Signing day is not always key day.",
+      "subheadline": "Settlement and closing are different moments.",
+      "body_copy": "Settlement = signing. Closing = recording. Plan your movers after you confirm possession.",
+      "cta": "Ask about this before you book the truck.",
+      "caption_draft": "A lot of buyers assume signing means they can grab the keys. Sometimes yes, sometimes not yet. Settlement is when you sign. Closing usually means the deed records. Before you schedule movers, utilities, and time off work, make sure your possession date matches the real timeline.",
+      "compliance_note": "Recording and possession timelines vary by contract and county.",
+      "source_basis": [
+        "Training distinguishes settlement from closing/recording.",
+        "Training discusses possession-date mistakes."
+      ]
+    },
+    {
+      "asset_id": "inspection-wishlist-kills-deals-01",
+      "source_id": "repair-negotiations-2026-07",
+      "source_title": "Repair Negotiations",
+      "series_label": "Inspection tip",
+      "audience": "buyers after inspection",
+      "agent_goal": "Make repair negotiation strategy feel practical and shareable",
+      "format": "Instagram Story / priority card",
+      "headline": "The inspection is not a shopping list.",
+      "subheadline": "Ask for the things that actually protect you.",
+      "body_copy": "Safety. Function. Major defects. Start there.",
+      "cta": "Save this before your inspection period.",
+      "caption_draft": "After inspection, it is tempting to ask for every little thing. That can backfire. The strongest repair requests usually focus on safety, function, and major defects. You can still care about the small stuff. Just do not let the small stuff kill the deal.",
+      "compliance_note": "General education only. Does not guarantee seller agreement.",
+      "source_basis": [
+        "Training emphasizes prioritizing repair requests around safety, function, and major defects.",
+        "Training warns against wish-list repair requests."
+      ]
+    },
+    {
+      "asset_id": "short-sale-not-discount-bin-01",
+      "source_id": "short-sales-2025-04",
+      "source_title": "Short Sales - How to Buy and Sell",
+      "series_label": "Real estate myth",
+      "audience": "buyers interested in distressed listings",
+      "agent_goal": "Educate without attracting bargain-hunter misconceptions",
+      "format": "Instagram Story / myth-vs-fact",
+      "headline": "A short sale is not the clearance rack.",
+      "subheadline": "It is a lender approval process.",
+      "body_copy": "Myth: Short sales are quick discounts. Fact: The lender has to approve the deal.",
+      "cta": "Curious about one? Ask before you fall in love with it.",
+      "caption_draft": "Short sales can be worth looking at, but they are not simple bargain-bin deals. The lender has to approve the sale, timelines can stretch, and patience matters. If you are eyeing one, understand the process before you get emotionally attached.",
+      "compliance_note": "Short sales may involve legal, tax, credit, and timing issues. Encourage attorney, CPA, and lender/servicer consultation where appropriate.",
+      "source_basis": [
+        "Training defines short sale as a lender approval process.",
+        "Training emphasizes that timelines can be longer and more complex."
+      ]
+    },
+    {
+      "asset_id": "unique-home-zestimate-01",
+      "source_id": "cma-triplex-2026-02",
+      "source_title": "CMA's - Triplex, Addition, Nightly Rental",
+      "series_label": "Seller pricing tip",
+      "audience": "owners of unique properties",
+      "agent_goal": "Attract seller conversations around pricing nuance",
+      "format": "Instagram Story / split comparison",
+      "headline": "Your Zestimate has probably never walked through your ADU.",
+      "subheadline": "Unique properties need human pricing work.",
+      "body_copy": "ADUs. Triplexes. Nightly rentals. Land. The comps need context.",
+      "cta": "If your property is unusual, get a real pricing review.",
+      "caption_draft": "Automated estimates are convenient, but they are blunt tools. If your property has an ADU, rental income, unusual zoning, land value, or a nonstandard layout, the comps need context. That is where a real pricing review matters.",
+      "compliance_note": "General education only. No guarantee of valuation or sale price.",
+      "source_basis": [
+        "Training discusses unique property valuation issues with ADUs, triplexes, nightly rentals, and land.",
+        "Training notes automated estimates can miss property-specific context."
+      ]
+    },
+    {
+      "asset_id": "pid-monthly-payment-surprise-01",
+      "source_id": "repc-errors-2025-12",
+      "source_title": "Common REPC Errors to Avoid",
+      "series_label": "New build buyer tip",
+      "audience": "new construction buyers",
+      "agent_goal": "Create a shareable warning about hidden monthly cost considerations",
+      "format": "Instagram Story / checklist",
+      "headline": "That new-build payment may have a surprise hiding in it.",
+      "subheadline": "Ask about PIDs before you fall in love with the model home.",
+      "body_copy": "Is there a PID? How much is it? How long does it last?",
+      "cta": "Save this for your next builder tour.",
+      "caption_draft": "Model homes are designed to make you fall in love. Before you do, ask about the boring stuff too. Public Improvement Districts can affect your monthly cost for years, so ask if there is a PID, how much it is, and how long it lasts.",
+      "compliance_note": "PID information should be verified with builder, title company, and municipal sources.",
+      "source_basis": [
+        "Training flags Public Improvement District disclosure as a buyer due diligence issue.",
+        "Training emphasizes asking cost questions before signing."
+      ]
+    },
+    {
+      "asset_id": "1031-not-tax-free-01",
+      "source_id": "1031-exchange-2026-05",
+      "source_title": "1031 Exchange Basics",
+      "series_label": "Investor note",
+      "audience": "real estate investors",
+      "agent_goal": "Invite investor conversations while avoiding tax advice",
+      "format": "Instagram Story / timeline explainer",
+      "headline": "A 1031 is not a magic tax eraser.",
+      "subheadline": "It can defer taxes, but the rules are strict.",
+      "body_copy": "Deferral is not forgiveness. Get the CPA and qualified intermediary involved early.",
+      "cta": "Talk to your tax team before you list.",
+      "caption_draft": "A 1031 exchange can be powerful, but it is not a casual last-minute decision. It defers taxes, it does not erase them, and the timing rules matter. If you are thinking about selling an investment property, talk with your CPA and a qualified intermediary before you get too far down the road.",
+      "compliance_note": "Must not provide tax or legal advice. Encourage CPA, attorney, and qualified intermediary review.",
+      "source_basis": [
+        "Training defines 1031 exchange as tax deferral, not elimination.",
+        "Training emphasizes qualified intermediary and strict timeline requirements."
+      ]
+    }
+  ]
+}
