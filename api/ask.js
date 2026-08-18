@@ -63,7 +63,7 @@ function cleanBrokerText(value) {
     .replace(/\s+/g, ' ')
     .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
     .replace(/\bactionable\b/gi, 'clear')
-    .replace(/\bleverage\b/gi, 'use')
+    .replace(/\bleverage\b/gi, 'negotiating position')
     .replace(/\butilize\b/gi, 'use')
     .replace(/\bIt is important to note that\b/gi, '')
     .replace(/\bHere's what you need to know:?\s*/gi, '')
