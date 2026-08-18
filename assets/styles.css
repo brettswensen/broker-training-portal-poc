@@ -150,3 +150,8 @@
 #latestTrainingRail .video-thumb .play{position:absolute!important;right:18px!important;top:18px!important;z-index:4!important;display:grid!important;width:44px!important;height:44px!important}
 #latestTrainingRail .video-body{align-content:start!important}
 @media(max-width:760px){#latestTrainingRail.video-rail{grid-template-columns:1fr!important;margin-inline:0!important}#latestTrainingRail .video-card{grid-template-rows:175px auto!important}}
+
+/* Complete sidebar navigation: keep every page/section visible across routes */
+.sidebar{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(120,220,232,.32) transparent}
+.sidebar nav{gap:4px;flex:0 0 auto}.sidebar nav a{padding:9px 11px;font-size:13px;line-height:1.15}.sidebar-card{margin-top:12px;flex:0 0 auto}.sidebar::-webkit-scrollbar{width:8px}.sidebar::-webkit-scrollbar-thumb{background:rgba(120,220,232,.28);border-radius:999px}
+@media(max-height:820px) and (min-width:761px){.sidebar{gap:14px;padding-top:18px;padding-bottom:16px}.sidebar .brand{font-size:15px}.sidebar nav a{padding:7px 10px;font-size:12.5px}.sidebar-card{padding:12px;font-size:12px}}
