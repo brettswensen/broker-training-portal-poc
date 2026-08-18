@@ -51,3 +51,7 @@
 
 /* Complete route navigation: same full menu on every routed page */
 .route-nav{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(120,220,232,.32) transparent}.route-nav nav{gap:5px}.route-nav a{padding:9px 10px;font-size:13px;line-height:1.16}.route-nav::-webkit-scrollbar{width:8px}.route-nav::-webkit-scrollbar-thumb{background:rgba(120,220,232,.28);border-radius:999px}@media(max-height:820px) and (min-width:761px){.route-nav{padding-top:18px;padding-bottom:16px}.route-brand{margin-bottom:14px}.route-nav a{padding:7px 10px;font-size:12.5px}}
+
+
+/* Cross-page left padding + sidebar overlap fix */
+.route-page,.route-page *{box-sizing:border-box}.route-nav{width:280px}.route-shell{padding-left:clamp(46px,4vw,64px);padding-right:clamp(34px,3vw,52px);overflow-x:hidden}.all-content-route .route-section,.all-content-route .route-search,.all-content-route .result-filter-bar{scroll-margin-left:64px}.all-content-route .route-hero,.all-content-route .route-search,.all-content-route .route-section{max-width:100%}.all-content-route .operator-top-result-grid,.all-content-route .video-result-grid,.all-content-route .playbook-result-grid,.all-content-route .split-result-section{min-width:0}@media(max-width:920px){.route-shell{padding-left:28px;padding-right:28px}}@media(max-width:760px){.route-shell{padding:18px!important;overflow-x:hidden}.route-nav{width:auto}}

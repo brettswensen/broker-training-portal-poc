@@ -155,3 +155,7 @@
 .sidebar{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(120,220,232,.32) transparent}
 .sidebar nav{gap:4px;flex:0 0 auto}.sidebar nav a{padding:9px 11px;font-size:13px;line-height:1.15}.sidebar-card{margin-top:12px;flex:0 0 auto}.sidebar::-webkit-scrollbar{width:8px}.sidebar::-webkit-scrollbar-thumb{background:rgba(120,220,232,.28);border-radius:999px}
 @media(max-height:820px) and (min-width:761px){.sidebar{gap:14px;padding-top:18px;padding-bottom:16px}.sidebar .brand{font-size:15px}.sidebar nav a{padding:7px 10px;font-size:12.5px}.sidebar-card{padding:12px;font-size:12px}}
+
+
+/* Cross-page dashboard left padding fix */
+@media(min-width:761px){.app-shell{padding-left:34px;padding-right:34px;overflow-x:hidden}.hero,.search-panel,.panel,.all-content-shell{max-width:100%}}
