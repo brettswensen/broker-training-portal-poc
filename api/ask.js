@@ -250,7 +250,15 @@ async function callKimi(question, sources) {
   const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = What to Say, client-facing wording the agent can adapt; followups = optional related actions. Do not write as Marty, Craig, Darrin, or the AI. Avoid first-person identity language such as I am here, I can help, I would, or I think. Use direct guidance or team language instead. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
   const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
-  const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.5', 'kimi-coding'].filter(Boolean);
+  const modelCandidates = [
+    process.env.KIMI_MODEL,
+    'kimi-k2.7-code-highspeed',
+    'kimi-k2.7-code',
+    'kimi-k2.6',
+    'kimi-k2.5',
+    'moonshot-v1-32k',
+    'moonshot-v1-8k'
+  ].filter(Boolean);
   const models = [...new Set(modelCandidates)];
   let data;
   let lastError;
