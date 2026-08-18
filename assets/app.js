@@ -189,7 +189,7 @@ function thumbnailStyle(t){
   return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}?v=training-card-qa-20260818')"` : '';
 }
 function card(t){
-  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)" aria-label="Watch ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -299,7 +299,7 @@ function renderLatestTraining(){
         <p>${escapeHtml(t.summary)}</p>
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
-          <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
+          <button data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)">Watch video</button>
           <button data-topic="${escapeHtml(t.topics[0] || t.category)}" onclick="askAbout(this.dataset.topic)">Ask about this</button>
         </div>
       </div>
@@ -557,6 +557,16 @@ function handleFollowup(label){
   document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }
 
+
+function watchTraining(title){
+  const training = trainings.find(t => t.title === title || t.id === title);
+  const url = trainingWatchUrl(training);
+  if(url){
+    window.open(url, '_blank', 'noopener');
+    return;
+  }
+  openTraining(title);
+}
 
 function openTraining(title){
   if (isDesignerRouteDashboard || !document.getElementById('results')) { routeToLibrarySearch(title); return; }
