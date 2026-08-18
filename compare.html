@@ -14,7 +14,7 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="mark">◆</span><div><h1>Broker Brain Design Compare</h1><p>Current vs proposed designer-pass copy</p></div></div>
+    <div class="brand"><span class="mark">◆</span><div><h1>Broker Brain Comparison</h1><p>Current vs proposed portal copy</p></div></div>
     <div class="controls">
       <input id="query" value="1031 exchange" aria-label="Comparison search query" />
       <button class="primary" onclick="runCompare()">Compare Search Mode</button>
@@ -22,12 +22,12 @@
     </div>
     <div class="links">
       <a href="/" target="_blank">Open Current</a>
-      <a href="/design-pass/" target="_blank">Open Proposed</a>
+      <a href="/./" target="_blank">Open Proposed</a>
     </div>
   </header>
   <main class="framegrid">
     <section class="pane"><div class="pane-head"><strong>Current version</strong><span>baseline</span></div><iframe id="currentFrame" src="/?compare=current"></iframe></section>
-    <section class="pane"><div class="pane-head"><strong>Proposed designer pass</strong><span class="pro">polished copy</span></div><iframe id="proposedFrame" src="/design-pass/?compare=proposed"></iframe></section>
+    <section class="pane"><div class="pane-head"><strong>Proposed portal version</strong><span class="pro">polished copy</span></div><iframe id="proposedFrame" src="/./?compare=proposed"></iframe></section>
   </main>
   <div class="note">Tip: use “Compare Search Mode” to see how the proposed page collapses duplicate dashboard content.</div>
   <script>

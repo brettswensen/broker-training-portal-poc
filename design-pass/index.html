@@ -3,129 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Broker Brain - Designer Pass</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css?v=left-padding-20260818" />
-  <link rel="stylesheet" href="designer-pass.css?v=dashboard-results-pass-3" />
+  <title>Broker Brain</title>
+  <meta name="robots" content="noindex" />
+  <script>
+    const target = new URL('../', window.location.href);
+    target.hash = window.location.hash || '';
+    window.location.replace(target.toString());
+  </script>
 </head>
-<body class="designer-pass">
-  <aside class="sidebar">
-    <div class="mobile-nav-head"><a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span><small>Designer pass</small></a>
-      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="dashboardNav"><span></span><span></span><span></span>Menu</button>
-    </div>
-    <nav id="dashboardNav">
-      <a class="active" href="../design-pass/">Dashboard</a>
-      <a href="../design-pass/#search">Search</a>
-      <a href="../all-content/">All Content</a>
-      <a href="../design-pass/#latest">Latest Training</a>
-      <a href="../design-pass/#ask">Ask the Broker</a>
-      <a href="../social-assets/">Social Assets</a>
-      <a href="../onboarding/">Onboarding</a>
-      <a href="../playbooks/">Playbooks</a>
-      <a href="../topics/">Topics</a>
-      <a href="../scripts/">Scripts</a>
-      <a href="../training-videos/">Training Videos</a>
-      <a href="../objections/">Objection Library</a>
-      <a href="../pipeline/">Admin preview</a>
-      <a href="../admin/insights/">Owner Insights</a>
-    </nav>
-    <div class="sidebar-card">
-      <p class="eyebrow">LIBRARY STATUS</p>
-      <strong>Training library ready</strong>
-      <span>Searchable trainings, scripts, playbooks, and source excerpts.</span>
-    </div>
-  </aside>
-
-  <main id="top" class="app-shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
-        <h1>Turn your broker training library into an always-on agent coach.</h1>
-        <p class="lead">Search every training, script, playbook, transaction process, and transcript, then ask questions and get answers in the brokerage’s own training language.</p>
-      </div>
-      <div class="hero-stats">
-        <div><strong>6</strong><span>sample trainings</span></div>
-        <div><strong>8</strong><span>broker playbooks</span></div>
-        <div><strong>37</strong><span>topic tags</span></div>
-      </div>
-    </section>
-
-    <section id="search" class="search-panel">
-      <label for="globalSearch">Search trainings, scripts, playbooks, objections, contracts...</label>
-      <form action="../all-content/" method="get" class="dashboard-search-form">
-        <div class="search-row">
-          <span>⌕</span>
-          <input id="globalSearch" name="q" type="search" placeholder="Try: repair negotiations, CMA land, 1031 exchange, transaction coordinator..." autocomplete="off" />
-          <button class="sr-search-submit" type="submit">Search</button>
-        </div>
-      </form>
-      <div class="chips" id="searchChips">
-        <a href="../all-content/?q=repair%20negotiations" data-query="repair negotiations">repair negotiations</a>
-        <a href="../all-content/?q=CMA%20land" data-query="CMA land">CMA land</a>
-        <a href="../all-content/?q=1031%20exchange" data-query="1031 exchange">1031 exchange</a>
-        <a href="../all-content/?q=work%20with%20TC" data-query="work with TC">work with TC</a>
-        <a href="../all-content/?q=new%20construction" data-query="new construction">new construction</a>
-      </div>
-    </section>
-
-    <section id="latest" class="panel latest-panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">LATEST TRAINING</p>
-          <h2>Recent trainings agents can use now.</h2>
-        </div>
-        <a class="ghost-button" href="../training-videos/">Open video library</a>
-      </div>
-      <p class="section-intro">Keep the dashboard focused on the newest/highest-value trainings, then route the full video library to its own page.</p>
-      <div id="latestTrainingRail" class="video-rail" aria-label="Latest training videos"></div>
-    </section>
-
-    <section id="ask" class="ask-feature-panel panel">
-      <div class="ask-feature-copy">
-        <p class="eyebrow">MAIN FEATURE</p>
-        <h2>Ask the Broker</h2>
-        <p class="ask-intro">Ask a real client or transaction question and get practical next steps, client wording, escalation flags, and source material to check.</p>
-      </div>
-      <div class="ask-card ask-feature-card">
-        <textarea id="askInput" rows="4" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
-        <div class="chips compact">
-          <button type="button" data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
-          <button type="button" data-ask="How do I work with my transaction coordinator?">Work with TC</button>
-          <button type="button" data-ask="What should I know about a 1031 exchange?">1031 basics</button>
-          <button type="button" data-ask="How should I explain pricing when the seller wants more than the comps support?">Seller pricing</button>
-        </div>
-        <button type="button" id="askButton" class="primary">Ask the Broker</button>
-        <article id="answer" class="answer"><p class="muted">Ask a question and get a practical next step, plain-English client wording, and related places to keep learning.</p></article>
-      </div>
-    </section>
-
-    <section id="social-studio" class="panel social-dashboard-preview">
-      <div class="social-dashboard-copy">
-        <p class="eyebrow">AGENT MARKETING</p>
-        <h2>Social assets live in their own workspace.</h2>
-        <p class="section-intro">This stays as a lower dashboard module/CTA only. The full review surface lives on the Social Assets page.</p>
-        <a class="primary" href="../social-assets/">Open Social Assets</a>
-      </div>
-      <div class="social-dashboard-art" aria-label="Social asset preview">
-        <img src="../content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png" alt="Example vertical social post about deal deadline stress" />
-        <div><span>8 draftable ideas</span><strong>Caption, carousel, and newsletter-ready</strong><small>Dedicated workspace, not dashboard clutter.</small></div>
-      </div>
-    </section>
-
-    <section id="positioning" class="panel proof-panel broker-impact-panel">
-      <div class="section-head"><div><p class="eyebrow">WHY THIS IS DIFFERENT</p><h2>Training that compounds instead of disappearing after the meeting.</h2></div><span class="muted">Leaving this lower-page proof point for now</span></div>
-      <div class="impact-grid">
-        <article><span>01</span><h3>Faster onboarding</h3><p>Newer agents get first-pass guidance without waiting for the broker to answer the same question again.</p></article>
-        <article><span>02</span><h3>More consistent scripts</h3><p>Agents can start from language already aligned with the team’s standards and trainings.</p></article>
-        <article><span>03</span><h3>Fewer repeat questions</h3><p>Broker coaching turns into searchable answers, playbooks, and source trails.</p></article>
-        <article><span>04</span><h3>Reusable training assets</h3><p>Every recording can become transcripts, summaries, scripts, checklists, and Ask guidance.</p></article>
-      </div>
-    </section>
-
-    <footer class="powered-by-footer" aria-label="Powered by Makrly"><span>Powered by</span><a href="https://makrly.io" target="_blank" rel="noopener" aria-label="Visit Makrly"><img src="../assets/brand/makrly-horizontal-logo-dark-bg-tight.svg" alt="Makrly" /></a></footer>
-  </main>
-  <script src="../assets/app.js?v=nav-active-state-20260818"></script>
+<body>
+  <p>Redirecting to Broker Brain…</p>
+  <p><a href="../">Continue to Broker Brain</a></p>
 </body>
 </html>
