@@ -64,6 +64,7 @@ function cleanBrokerText(value) {
     .replace(/\bdisclosure leverage\b/gi, 'disclosure position')
     .replace(/\bactionable\b/gi, 'clear')
     .replace(/\bleverage\b/gi, 'negotiating position')
+    .replace(/\bas negotiating position for negotiation\b/gi, 'as a basis for negotiation')
     .replace(/\butilize\b/gi, 'use')
     .replace(/\bIt is important to note that\b/gi, '')
     .replace(/\bHere's what you need to know:?\s*/gi, '')
@@ -119,6 +120,27 @@ function cleanAndValidateModelAnswer(answer) {
   const cleaned = cleanBrokerAnswer(answer);
   if (hasModelMeta(cleaned)) throw new Error('Model returned meta commentary');
   return cleaned;
+}
+
+function enhanceAnswerForQuestion(question, answer, sources) {
+  const isMultipleOffer = /multiple\s+offer|highest\s+offer|strong(er)?\s+offer|escalation|beat.*offer|compete/i.test(question);
+  if (!isMultipleOffer) return answer;
+  const fallback = fallbackAnswer(question, sources);
+  const joined = [answer.title, answer.intent, ...(answer.steps || []), answer.script, ...(answer.followups || [])].join(' ');
+  const missingCoreTactics = !/earnest money|listing agent|seller priority|closing|possession/i.test(joined);
+  if (!missingCoreTactics) return answer;
+  const mergedSteps = [...(answer.steps || []), ...fallback.steps]
+    .filter(Boolean)
+    .filter((step, index, arr) => arr.findIndex(other => other.toLowerCase() === step.toLowerCase()) === index)
+    .slice(0, 5);
+  return cleanBrokerAnswer({
+    ...answer,
+    title: /broker guidance|live broker guidance/i.test(answer.title || '') ? fallback.title : answer.title,
+    intent: fallback.intent,
+    steps: mergedSteps,
+    script: /earnest money|listing agent|seller/i.test(answer.script || '') ? answer.script : fallback.script,
+    followups: [...(answer.followups || []), ...fallback.followups].filter(Boolean).slice(0, 4)
+  });
 }
 
 function searchTranscripts(question, limit = 6) {
@@ -355,7 +377,7 @@ module.exports = async function handler(req, res) {
     let answer;
     let live = true;
     try {
-      answer = await callKimi(question, sources);
+      answer = enhanceAnswerForQuestion(question, await callKimi(question, sources), sources);
     } catch (error) {
       live = false;
       console.warn('Ask live generation fallback:', error?.message || String(error));
