@@ -859,7 +859,7 @@ async function runAsk(query){
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2200);
+  const timeoutId = setTimeout(() => controller.abort(), 16000);
 
   try {
     const response = await fetch(ASK_API_URL, {

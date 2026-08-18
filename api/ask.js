@@ -140,6 +140,7 @@ function searchTranscripts(question, limit = 6) {
 
 function fallbackAnswer(question, sources) {
   const is1031 = /1031|exchange|qualified intermediary|tax/i.test(question);
+  const isMultipleOffer = /multiple\s+offer|highest\s+offer|strong(er)?\s+offer|escalation|beat.*offer|compete/i.test(question);
   if (is1031) {
     return {
       title: '1031 exchange guidance',
@@ -153,6 +154,22 @@ function fallbackAnswer(question, sources) {
       ],
       script: 'Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, we need to get a qualified intermediary involved immediately before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA.',
       followups: ['Call qualified intermediary', 'Confirm closing/fund status', 'Loop in CPA/tax advisor']
+    };
+  }
+  if (isMultipleOffer) {
+    return {
+      title: 'Competing when price is not the strongest term',
+      intent: 'If the buyer cannot simply be the highest price, make the offer cleaner, safer, and easier for the seller to choose.',
+      confidence: sources.length ? 'Broker guidance' : 'Exploratory',
+      steps: [
+        'Use an escalation clause only if the buyer is comfortable with the cap, and explain that the seller may counter at or near that cap.',
+        'Increase earnest money if the buyer can do it safely, because it shows commitment and gives the seller more confidence in performance.',
+        'Tighten the terms that matter to the seller: cleaner deadlines, stronger lender communication, fewer uncertain contingencies, and a closing or possession timeline that fits the seller.',
+        'Avoid adding extra pre-offer friction in a competitive situation. Get under contract first, then use inspection and documentation to handle issues that come up.',
+        'Call the listing agent and ask what matters besides price, then structure the offer around that seller priority.'
+      ],
+      script: 'We may not win by being the highest number, so we need to win by being the safest and easiest offer to accept. We can consider an escalation clause with a cap you are comfortable with, stronger earnest money, clean deadlines, and terms that match what the seller needs. Before we write it, I will call the listing agent and find out what matters most besides price.',
+      followups: ['Ask listing agent what matters besides price', 'Confirm buyer cap and escalation comfort', 'Review earnest money and deadline strength']
     };
   }
   return {
@@ -229,18 +246,18 @@ async function callKimi(question, sources) {
   const apiKey = process.env.KIMI_API_KEY;
   if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
 
-  const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 2200);
+  const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 3200);
   const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = What to Say, client-facing wording the agent can adapt; followups = optional related actions. Do not write as Marty, Craig, Darrin, or the AI. Avoid first-person identity language such as I am here, I can help, I would, or I think. Use direct guidance or team language instead. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON with string fields: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""]}.`;
   const user = `/no_think\nAgent question: ${question}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
-  const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.7-code', 'kimi-k2.6'].filter(Boolean);
+  const modelCandidates = [process.env.KIMI_MODEL, 'kimi-k2.5', 'kimi-coding'].filter(Boolean);
   const models = [...new Set(modelCandidates)];
   let data;
   let lastError;
 
   for (const model of models) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 55000);
+    const timeout = setTimeout(() => controller.abort(), 14000);
     try {
       const response = await fetch('https://api.moonshot.ai/v1/chat/completions', {
         method: 'POST',
@@ -251,8 +268,8 @@ async function callKimi(question, sources) {
         },
         body: JSON.stringify({
           model,
-          temperature: 1,
-          max_tokens: 1200,
+          temperature: 0.25,
+          max_tokens: 850,
           response_format: { type: 'json_object' },
           messages: [
             { role: 'system', content: system },
@@ -271,6 +288,7 @@ async function callKimi(question, sources) {
       break;
     } catch (error) {
       lastError = error;
+      if (error?.name === 'AbortError') throw error;
     } finally {
       clearTimeout(timeout);
     }
