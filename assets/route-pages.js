@@ -29,7 +29,7 @@ function kindIcon(kind){ return {video:'▶', playbook:'PB', transcript:'TXT', s
 
 function appBasePath(){
   const parts = location.pathname.split('/').filter(Boolean);
-  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
+  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','admin','social-assets','onboarding','training-videos','objections'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -321,6 +321,134 @@ function renderObjectionsPage(){
   grid.innerHTML = objections.map(item=>`<article class="route-card"><span>${escapeHtml(item[0])}</span><h3>${escapeHtml(item[1])}</h3><p>${escapeHtml(item[2])}</p><a class="route-button" href="${playbookUrl(item[3])}">Open related playbook</a></article>`).join('');
 }
 
+const ownerInsights = {
+  metrics: [
+    {label:'Total searches', value:'1,248', delta:'+18%', note:'Agents are using search before escalating questions.'},
+    {label:'Ask Broker questions', value:'412', delta:'+31%', note:'Repeat broker guidance is being captured and reused.'},
+    {label:'Video plays', value:'286', delta:'+22%', note:'Training recordings are being reopened after meetings.'},
+    {label:'Assets downloaded/copied', value:'174', delta:'+27%', note:'Scripts and checklists are becoming field tools.'},
+    {label:'Avg answer satisfaction', value:'87%', delta:'+9%', note:'Example post-answer helpfulness score.'},
+    {label:'Content gap alerts', value:'14', delta:'5 urgent', note:'Topics with demand but weak current coverage.'},
+    {label:'Recommended new assets', value:'23', delta:'Next 30 days', note:'Demo content roadmap generated from agent demand.'}
+  ],
+  searches: [
+    {term:'price reduction script', count:42, quality:'Strong', opportunity:'Create 3 shorter roleplay clips'},
+    {term:'repair negotiations', count:37, quality:'Strong', opportunity:'Promote inspection playbook'},
+    {term:'1031 exchange timing', count:29, quality:'Medium', opportunity:'Add QI handoff checklist'},
+    {term:'FSBO objection script', count:24, quality:'Weak', opportunity:'Record FSBO training'},
+    {term:'new agent first week', count:21, quality:'Medium', opportunity:'Expand onboarding path'}
+  ],
+  noResults: [
+    {term:'FSBO follow-up texts', count:24, action:'Create text/email script pack'},
+    {term:'buyer agency agreement objection', count:18, action:'Add compliant buyer consult module'},
+    {term:'probate listing checklist', count:13, action:'Record specialty-situation training'},
+    {term:'Instagram open house captions', count:12, action:'Generate approved social asset batch'}
+  ],
+  questions: [
+    {question:'How do I explain a price reduction without upsetting the seller?', count:38, category:'Listings', status:'Strong answer'},
+    {question:'What should I say after a buyer inspection report?', count:34, category:'Negotiation', status:'Strong answer'},
+    {question:'When do I bring in the transaction coordinator?', count:27, category:'Contract-to-close', status:'Strong answer'},
+    {question:'What should a new agent do in week one?', count:21, category:'Onboarding', status:'Needs path'},
+    {question:'What are the basics of a 1031 exchange?', count:19, category:'Investors', status:'Needs checklist'}
+  ],
+  content: [
+    {title:'Repair Negotiation Playbook', type:'Playbook', views:84, saves:19, downloads:11, engagement:92},
+    {title:'Listing Appointment Training', type:'Video', views:72, saves:14, downloads:6, engagement:88},
+    {title:'Price Reduction Scripts', type:'Script pack', views:69, saves:21, downloads:32, engagement:96},
+    {title:'Work With Your TC', type:'Video training', views:58, saves:11, downloads:9, engagement:81},
+    {title:'1031 Exchange Basics', type:'Training + Ask source', views:43, saves:8, downloads:5, engagement:74},
+    {title:'New Construction Deal Playbook', type:'Playbook', views:36, saves:7, downloads:4, engagement:68}
+  ],
+  videos: [
+    {title:'Repair Negotiations w Craig', plays:67, watch:'73%', sourceClicks:24, opportunity:'Turn top objections into 5 short clips'},
+    {title:'Listing Appointment Masterclass', plays:52, watch:'61%', sourceClicks:18, opportunity:'Add pre-appointment checklist'},
+    {title:'Work With Your TC w Marty & Marc', plays:48, watch:'58%', sourceClicks:16, opportunity:'Add contract-to-close timeline'},
+    {title:'1031 Exchange Basics w Darrin', plays:38, watch:'44%', sourceClicks:11, opportunity:'Add 1-page QI handoff guide'}
+  ],
+  assets: [
+    {title:'Price Reduction Script', downloads:43, copies:31, related:'price reduction'},
+    {title:'Buyer Consultation Checklist', downloads:26, copies:14, related:'buyer consult'},
+    {title:'Repair Request Script', downloads:21, copies:17, related:'inspection repairs'},
+    {title:'TC Introduction Message', downloads:18, copies:22, related:'work with TC'},
+    {title:'1031 Timing Disclaimer', downloads:14, copies:9, related:'1031 exchange'}
+  ],
+  recommendations: [
+    {gap:'FSBO objection + follow-up', evidence:'24 searches, weak current result quality', build:'Record 10-minute FSBO objection training and create 4 text follow-up templates.', priority:'High'},
+    {gap:'New agent first 30 days', evidence:'21 searches, scattered results across videos', build:'Create structured onboarding path with required trainings, scripts, and first-deal checklist.', priority:'High'},
+    {gap:'1031 exchange handoff', evidence:'29 asks/searches, medium confidence', build:'Add broker-approved checklist with QI/CPA escalation language.', priority:'Medium'},
+    {gap:'Open house follow-up', evidence:'Rising search trend, low asset downloads', build:'Create follow-up script pack and social posts for open house leads.', priority:'Medium'},
+    {gap:'Buyer agency agreement objections', evidence:'18 weak-result searches and 11 Ask questions', build:'Record buyer consult objection module with approved consumer-facing language.', priority:'High'},
+    {gap:'Short-form manager roleplays', evidence:'High usage on scripts but lower long-video completion', build:'Cut top pricing/inspection/TC topics into 2-minute coaching clips.', priority:'High'}
+  ],
+  segments: [
+    {name:'Newer agents', pct:48, behavior:'Search onboarding, scripts, TC workflow'},
+    {name:'Producing agents', pct:34, behavior:'Use pricing, inspection, and client wording assets'},
+    {name:'Team leads/admin', pct:18, behavior:'Review training gaps and source performance'}
+  ],
+  roadmap: [
+    {signal:'24 weak searches', title:'FSBO objection gap', takeaway:'Agents are looking for prospecting language that does not exist yet.', next:'Record FSBO objection training + create 4 follow-up texts', value:'Creates a sellable script pack from one owner training'},
+    {signal:'29 Ask/searches', title:'1031 exchange handoff', takeaway:'Investor questions need approved escalation language before agents improvise.', next:'Build QI/CPA checklist and disclaimer card', value:'Reduces risk while supporting investor conversations'},
+    {signal:'96% script engagement', title:'Price reduction roleplay', takeaway:'Agents use the script pack, but need practice clips for difficult sellers.', next:'Record 3 manager-agent roleplays', value:'Turns repeated coaching into reusable video assets'}
+  ],
+  reports: [
+    {title:'Training demand report', detail:'Weekly summary of top searches, weak results, repeated Ask topics, and new training opportunities.'},
+    {title:'Content ROI report', detail:'Which videos, playbooks, scripts, and social assets are getting used, saved, copied, or ignored.'},
+    {title:'Owner action plan', detail:'A prioritized list of what to record, what to turn into checklists, and what to promote to agents next.'}
+  ],
+  events: [
+    ['search_performed','Query, result count, clicked result, no-result flag'],
+    ['ask_question_submitted','Question, category, sources returned, helpfulness'],
+    ['content_opened','Content id, type, source route, time on page'],
+    ['video_progress','Video id, play, 25/50/75/100% milestones'],
+    ['asset_downloaded','Asset id, format, related source/training'],
+    ['script_copied','Script id, playbook, question context'],
+    ['source_card_clicked','Answer id, source title, video/transcript timestamp']
+  ]
+};
+function qualityClass(value){ return String(value || '').toLowerCase().replace(/[^a-z]+/g,'-'); }
+function barWidth(value, max){ return Math.max(4, Math.round((Number(value)||0) / max * 100)); }
+function renderMetricCards(){
+  const el = document.getElementById('insightMetricCards'); if(!el) return;
+  el.innerHTML = ownerInsights.metrics.map(m=>`<article><span>${escapeHtml(m.label)}</span><strong>${escapeHtml(m.value)}</strong><em>${escapeHtml(m.delta)}</em><p>${escapeHtml(m.note)}</p></article>`).join('');
+}
+function renderInsightRows(){
+  const top = document.getElementById('topSearches');
+  if(top){ top.innerHTML = ownerInsights.searches.map(s=>`<article><div><strong>${escapeHtml(s.term)}</strong><small>${s.count} searches</small></div><span class="quality ${qualityClass(s.quality)}">${escapeHtml(s.quality)}</span><p>${escapeHtml(s.opportunity)}</p><i><b style="width:${barWidth(s.count,42)}%"></b></i></article>`).join(''); }
+  const gaps = document.getElementById('noResultSearches');
+  if(gaps){ gaps.innerHTML = ownerInsights.noResults.map(s=>`<article><div><strong>${escapeHtml(s.term)}</strong><small>${s.count} weak/no-result searches</small></div><p>${escapeHtml(s.action)}</p><i><b style="width:${barWidth(s.count,24)}%"></b></i></article>`).join(''); }
+  const qs = document.getElementById('askQuestionAnalytics');
+  if(qs){ qs.innerHTML = ownerInsights.questions.map(q=>`<article><span>${escapeHtml(q.category)}</span><h3>${escapeHtml(q.question)}</h3><p>${q.count} asks · ${escapeHtml(q.status)}</p></article>`).join(''); }
+}
+function renderPerformance(){
+  const el = document.getElementById('contentPerformance'); if(!el) return;
+  el.innerHTML = ownerInsights.content.map(c=>`<article><span>${escapeHtml(c.type)}</span><h3>${escapeHtml(c.title)}</h3><div class="perf-stats"><b>${c.views}<small>views</small></b><b>${c.saves}<small>saves</small></b><b>${c.downloads}<small>downloads</small></b></div><div class="engagement-bar"><i style="width:${c.engagement}%"></i></div><p>${c.engagement}% engagement score</p></article>`).join('');
+}
+function renderVideoAndAssets(){
+  const v = document.getElementById('videoEngagement');
+  if(v){ v.innerHTML = ownerInsights.videos.map(item=>`<article><div class="video-mini-thumb"><span>▶</span><small>${escapeHtml(item.watch)} avg watch</small></div><div><h3>${escapeHtml(item.title)}</h3><p>${item.plays} plays · ${item.sourceClicks} clicks from Ask/source cards</p><strong>${escapeHtml(item.opportunity)}</strong></div></article>`).join(''); }
+  const a = document.getElementById('assetDownloads');
+  if(a){ a.innerHTML = ownerInsights.assets.map(item=>`<article><div><strong>${escapeHtml(item.title)}</strong><small>${item.downloads} downloads · ${item.copies} copies</small></div><p>Related search: ${escapeHtml(item.related)}</p><i><b style="width:${barWidth(item.downloads + item.copies,74)}%"></b></i></article>`).join(''); }
+}
+function renderRoadmapWow(){
+  const el = document.getElementById('roadmapWow'); if(!el) return;
+  el.innerHTML = ownerInsights.roadmap.map((r,i)=>`<article><div><span>${escapeHtml(r.signal)}</span><b>${String(i+1).padStart(2,'0')}</b></div><h3>${escapeHtml(r.title)}</h3><p>${escapeHtml(r.takeaway)}</p><strong>${escapeHtml(r.next)}</strong><small>${escapeHtml(r.value)}</small></article>`).join('');
+}
+function renderRecommendations(){
+  const el = document.getElementById('contentRecommendations'); if(!el) return;
+  el.innerHTML = ownerInsights.recommendations.map((r,i)=>`<article><span>${escapeHtml(r.priority)} priority · ${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(r.gap)}</h3><p><strong>Evidence:</strong> ${escapeHtml(r.evidence)}</p><p><strong>Build next:</strong> ${escapeHtml(r.build)}</p></article>`).join('');
+}
+function renderOwnerReports(){
+  const el = document.getElementById('ownerReportCards'); if(!el) return;
+  el.innerHTML = ownerInsights.reports.map((r,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(r.title)}</h3><p>${escapeHtml(r.detail)}</p></article>`).join('');
+}
+function renderSegmentsAndEvents(){
+  const s = document.getElementById('agentSegments');
+  if(s){ s.innerHTML = ownerInsights.segments.map(item=>`<article><strong>${item.pct}%</strong><span>${escapeHtml(item.name)}</span><p>${escapeHtml(item.behavior)}</p></article>`).join(''); }
+  const e = document.getElementById('eventPlan');
+  if(e){ e.innerHTML = ownerInsights.events.map(item=>`<article><code>${escapeHtml(item[0])}</code><p>${escapeHtml(item[1])}</p></article>`).join(''); }
+}
+function renderInsightsPage(){ renderMetricCards(); renderInsightRows(); renderRoadmapWow(); renderPerformance(); renderVideoAndAssets(); renderRecommendations(); renderOwnerReports(); renderSegmentsAndEvents(); }
+
 async function initRoutePage(){
   setActiveNav();
   document.querySelectorAll('[data-route-query]').forEach(b=>b.addEventListener('click',()=>goLibrary(b.dataset.routeQuery)));
@@ -335,5 +463,6 @@ async function initRoutePage(){
   if(document.body.dataset.page === 'onboarding') renderOnboardingPage();
   if(document.body.dataset.page === 'training-videos') renderTrainingVideosPage();
   if(document.body.dataset.page === 'objections') renderObjectionsPage();
+  if(document.body.dataset.page === 'insights') renderInsightsPage();
 }
 initRoutePage();
