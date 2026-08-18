@@ -638,7 +638,46 @@ function setupMobileNav(){
   document.addEventListener('keydown', event => { if(event.key === 'Escape') close(); });
 }
 
+function setupActiveDashboardNav(){
+  const nav = document.getElementById('dashboardNav');
+  if(!nav) return;
+  const links = Array.from(nav.querySelectorAll('a'));
+  if(!links.length) return;
+
+  const normalizePath = path => (path || '/').replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+  const currentPath = normalizePath(location.pathname);
+  const currentHash = location.hash || '';
+
+  const samePageLinks = links.filter(link => {
+    try { return normalizePath(new URL(link.getAttribute('href') || '', location.href).pathname) === currentPath; }
+    catch(e){ return false; }
+  });
+
+  let activeLink = null;
+  if(currentHash){
+    activeLink = samePageLinks.find(link => {
+      try { return new URL(link.getAttribute('href') || '', location.href).hash === currentHash; }
+      catch(e){ return false; }
+    });
+  }
+  if(!activeLink){
+    activeLink = samePageLinks.find(link => {
+      try { return !new URL(link.getAttribute('href') || '', location.href).hash; }
+      catch(e){ return false; }
+    }) || samePageLinks[0] || links.find(link => link.classList.contains('active')) || links[0];
+  }
+
+  links.forEach(link => {
+    const isActive = link === activeLink;
+    link.classList.toggle('active', isActive);
+    if(isActive) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+}
+
+setupActiveDashboardNav();
 setupMobileNav();
+window.addEventListener('hashchange', setupActiveDashboardNav);
 if(document.getElementById('latestTrainingRail')) renderLatestTraining();
 if(document.getElementById('playbookGrid')) renderPlaybooks();
 if(document.getElementById('topicGrid')) renderTopics();
