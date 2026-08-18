@@ -19,7 +19,7 @@
   </g>
   <path d="M186 592 C309 474 416 505 533 388 C655 266 740 302 828 225" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".17"/>
   <g filter="url(#shadow)">
-    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">INVESTORS & 1031</text>
+    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">INVESTORS &amp; 1031</text>
     <text x="62" y="616" font-size="52" font-weight="900" fill="#ffffff" font-family="Inter, Arial, sans-serif">1031 Exchange</text>
     <text x="62" y="662" font-size="24" font-weight="800" fill="#d9fff0" letter-spacing="2" font-family="Inter, Arial, sans-serif">multi-unit block</text>
   </g>

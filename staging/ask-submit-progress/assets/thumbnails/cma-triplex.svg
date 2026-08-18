@@ -18,7 +18,7 @@
   </g>
   <circle cx="1002" cy="214" r="142" fill="none" stroke="#fff" stroke-width="18" opacity=".26"/>
   <g filter="url(#shadow)">
-    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">CMA & PRICING</text>
+    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">CMA &amp; PRICING</text>
     <text x="62" y="616" font-size="52" font-weight="900" fill="#ffffff" font-family="Inter, Arial, sans-serif">CMA Triplex</text>
     <text x="62" y="662" font-size="24" font-weight="800" fill="#d9fff0" letter-spacing="2" font-family="Inter, Arial, sans-serif">comps + varied size</text>
   </g>

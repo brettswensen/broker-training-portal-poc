@@ -20,7 +20,7 @@
     <path d="M1059 438 L1144 523"/>
   </g>
   <g filter="url(#shadow)">
-    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">NEGOTIATION & INSPECTION</text>
+    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">NEGOTIATION &amp; INSPECTION</text>
     <text x="62" y="616" font-size="52" font-weight="900" fill="#ffffff" font-family="Inter, Arial, sans-serif">Repair Negotiations</text>
     <text x="62" y="662" font-size="24" font-weight="800" fill="#d9fff0" letter-spacing="2" font-family="Inter, Arial, sans-serif">inspect + respond</text>
   </g>

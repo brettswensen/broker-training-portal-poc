@@ -18,7 +18,7 @@
   </g>
   <circle cx="1044" cy="215" r="120" fill="#fff" opacity=".16"/>
   <g filter="url(#shadow)">
-    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">CMA & PRICING</text>
+    <text x="62" y="82" font-size="28" font-weight="900" fill="#eaffff" letter-spacing="5" font-family="Inter, Arial, sans-serif">CMA &amp; PRICING</text>
     <text x="62" y="616" font-size="52" font-weight="900" fill="#ffffff" font-family="Inter, Arial, sans-serif">Flip + Land CMA</text>
     <text x="62" y="662" font-size="24" font-weight="800" fill="#d9fff0" letter-spacing="2" font-family="Inter, Arial, sans-serif">land + upside</text>
   </g>

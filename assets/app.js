@@ -186,7 +186,7 @@ function detectFocus(q){
 }
 
 function thumbnailStyle(t){
-  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
+  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}?v=training-card-qa-20260818')"` : '';
 }
 function card(t){
   return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
