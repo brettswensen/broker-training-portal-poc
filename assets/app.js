@@ -30,7 +30,7 @@ const demoAnswers = {
     ],
     steps:["Start by separating health/safety issues from wish-list repairs.","Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.","Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.","Keep emotion out of it and document every agreement clearly."],
     script:"Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or the buyer’s confidence from the cosmetic items. Then we can decide whether the cleanest path is a repair, a credit, a concession, or a price adjustment.",
-    followups:["Build repair request checklist","Show related scripts","Open inspection objection playbook"]
+    followups:["What facts should I clarify before I respond?","What could make this repair ask backfire?","How should the guidance change if deadlines are tight?","Which training should I review to go deeper?"]
   },
   tc: {
     title:"Working with your transaction coordinator",
@@ -43,7 +43,7 @@ const demoAnswers = {
     ],
     steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
     script:"We are bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. You will still have a clear main point of contact, and the TC helps make sure every detail is tracked through closing.",
-    followups:["Open contract-to-close checklist","Create new-agent task list","Find deadline reminders"]
+    followups:["What should I clarify with the TC first?","Where do agents usually get confused here?","What should I watch before this becomes urgent?","Which training explains the handoff best?"]
   },
   "1031": {
     title:"1031 exchange basics for agents",
@@ -56,7 +56,7 @@ const demoAnswers = {
     ],
     steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
     script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, a qualified intermediary should be involved before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. They need to give the tax guidance.",
-    followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
+    followups:["What timing facts should I confirm first?","Where is the line between agent guidance and tax advice?","What changes if the client already closed?","Which specialist should be involved next?"]
   },
   cma: {
     title:"CMA and pricing guidance",
@@ -69,7 +69,7 @@ const demoAnswers = {
     ],
     steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
     script:"This is not a standard apples-to-apples CMA, so we should separate the value drivers: location, property condition, income potential, land value, and buyer or investor use case. Then we can use the comps as evidence instead of pretending there is one perfect number.",
-    followups:["Open CMA playbook","Show pricing objection script","Find land valuation examples"]
+    followups:["What makes this property hard to comp?","What evidence would make the pricing story stronger?","How should I handle seller pushback on the number?","Which training should I review before the appointment?"]
   },
   general: {
     title:"Broker Brain answer",
@@ -82,7 +82,7 @@ const demoAnswers = {
     ],
     steps:["Start by separating safety, lending, and material defects from cosmetic asks.","Coach the client toward the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around solving the problem and keeping the transaction together.","Document the agreement clearly and keep the TC aligned on deadlines."],
     script:"Focus the client on what actually matters from the inspection: safety issues, lending concerns, and material defects. Then recommend the cleanest remedy for the situation instead of treating the inspection response like a wish list. The goal is to protect the client, keep the deal together where appropriate, and document the agreement clearly.",
-    followups:["Open repair playbook","Draft client text","Review deadline checklist"]
+    followups:["What context would change the recommendation?","What risk should I watch for first?","Which part should I dig into next?","What would be the safest next question to ask?"]
   }
 };
 
@@ -400,16 +400,36 @@ function escalationList(answer){
   return ['The issue touches tax, legal, lending, inspection, or contract interpretation.', 'The agent is uncertain after reading the relevant training.', 'A client decision is urgent or could put the transaction at risk.'];
 }
 
+function conversationalPromptBank(answer){
+  const text = [answer.title, answer.intent, ...(answer.queryTerms || []), ...(answer.steps || [])].join(' ').toLowerCase();
+  if(text.includes('repair') || text.includes('inspection')) return ['What facts should I clarify before I respond?', 'What could make this repair ask backfire?', 'How should this change if deadlines are tight?', 'What should I ask the buyer before deciding?'];
+  if(text.includes('1031') || text.includes('tax') || text.includes('exchange')) return ['What timing facts should I confirm first?', 'Where is the line between agent guidance and tax advice?', 'What changes if the client already closed?', 'Which specialist should be involved next?'];
+  if(text.includes('cma') || text.includes('pricing') || text.includes('price') || text.includes('seller')) return ['What evidence would make the pricing story stronger?', 'What should I ask the seller before pushing back?', 'How should this change if the seller is emotional?', 'Which training should I review before the appointment?'];
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return ['What should I clarify with the TC first?', 'Where do agents usually get confused here?', 'What should I watch before this becomes urgent?', 'What should I ask before I update the client?'];
+  return ['What context would change the recommendation?', 'What risk should I watch for first?', 'Which part should I dig into next?', 'What would be the safest next question to ask?'];
+}
+
+function normalizeConversationPrompts(answer){
+  const actionLead = /^(suggest|recommend|advise|call|open|create|draft|copy|send|loop|review|confirm|find|build)\b/i;
+  const usable = (answer.followups || [])
+    .map(cleanDisplayText)
+    .filter(Boolean)
+    .filter(prompt => /\?/.test(prompt) && !actionLead.test(prompt));
+  const combined = [...usable, ...conversationalPromptBank(answer)];
+  return combined.filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index).slice(0, 4);
+}
+
 function answerMarkup(answer){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
   const steps = cleanAnswer.steps || [];
-  let nextActions = (cleanAnswer.followups || []).filter(Boolean);
-  if(!nextActions.length){
-    const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
-    nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
-  }
+  let deeperPrompts = normalizeConversationPrompts(cleanAnswer);
+  const currentUserText = [...askThread].reverse().find(item => item.role === 'user')?.text?.toLowerCase() || '';
+  const finalPrompts = [...deeperPrompts, 'What context would change this recommendation?', 'What should I ask before deciding?']
+    .filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index)
+    .filter(prompt => prompt.toLowerCase() !== currentUserText)
+    .slice(0, 5);
   const genericGuidance = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(cleanAnswer.intent || '');
   const guidanceText = cleanAnswer.intent && !genericGuidance
     ? cleanAnswer.intent
@@ -419,9 +439,10 @@ function answerMarkup(answer){
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
+      ${renderAskThread()}
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Recommended guidance for the agent to use or adapt.</p></div>
+        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Use this as the next turn in the conversation, then keep probing where the situation needs more context.</p></div>
       </div>
 
       <section class="answer-section broker-take-section">
@@ -430,13 +451,22 @@ function answerMarkup(answer){
       </section>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">WHAT TO DO NEXT</p>
+        <p class="eyebrow">HOW TO THINK ABOUT IT</p>
         ${whyList}
+      </section>
+
+      <section class="answer-section conversation-next-section">
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">KEEP THE CONVERSATION GOING</p><h4>Broker Brain can dig deeper from here</h4></div>
+        </div>
+        <div class="conversation-prompts">
+          ${finalPrompts.map(prompt=>`<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt.replace(' recommendation',''))}</button>`).join('')}
+        </div>
       </section>
 
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
-          <div><p class="eyebrow">WHAT TO SAY</p><h4>If you need to say it plainly</h4></div>
+          <div><p class="eyebrow">OPTIONAL OUTPUT</p><h4>If this needs to become client communication</h4></div>
         </div>
         <p class="script-box">“${escapeHtml(scriptText)}”</p>
         <div class="answer-actions">
@@ -880,6 +910,35 @@ function transcriptSourcesFor(query, fallbackAnswer){
 const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
 let askProgressTimers = [];
 let askRequestId = 0;
+let askThread = [];
+
+function askThreadContext(limit=6){
+  return askThread.slice(-limit).map(item => ({role:item.role, text:item.text}));
+}
+
+function renderAskThread(){
+  if(!askThread.length) return '';
+  return `<section class="ask-thread" aria-label="Broker Brain conversation thread">
+    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+    <div class="ask-thread-messages">
+      ${askThread.slice(-6).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}
+    </div>
+  </section>`;
+}
+
+function clearAskThread(){
+  askThread = [];
+  const answerEl = document.getElementById('answer');
+  if(answerEl) answerEl.innerHTML = '<p class="muted">New conversation started. Share the situation you want to think through.</p>';
+  const input = document.getElementById('askInput');
+  if(input) input.value = '';
+}
+
+function continueAsk(prompt){
+  const input = document.getElementById('askInput');
+  if(input) input.value = prompt;
+  runAsk(prompt);
+}
 
 function clearAskProgressTimers(){
   askProgressTimers.forEach(timer => clearTimeout(timer));
@@ -897,6 +956,7 @@ function scheduleAskProgress(answerEl, query, fallback, requestId){
 }
 
 async function runAsk(query){
+  query = String(query || '').trim() || 'general broker guidance';
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
   const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
@@ -904,6 +964,8 @@ async function runAsk(query){
   if(!answerEl) return;
   const requestId = ++askRequestId;
   const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
+  askThread.push({role:'user', text:query});
+  askThread = askThread.slice(-8);
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
@@ -915,22 +977,27 @@ async function runAsk(query){
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       signal: controller.signal,
-      body: JSON.stringify({question: query || 'general broker guidance'})
+      body: JSON.stringify({question: query, context: askThreadContext()})
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
     const liveAnswer = await response.json();
     await minimumProgress;
     if(requestId !== askRequestId) return;
-    answerEl.innerHTML = answerMarkup({
+    const mergedAnswer = {
       ...fallback,
       ...liveAnswer,
       confidence: liveAnswer.live ? 'Broker guidance' : (liveAnswer.confidence || fallback.confidence),
       sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
-    });
+    };
+    askThread.push({role:'broker', text: cleanDisplayText(mergedAnswer.intent || mergedAnswer.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
+    answerEl.innerHTML = answerMarkup(mergedAnswer);
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
     await minimumProgress;
     if(requestId !== askRequestId) return;
+    askThread.push({role:'broker', text: cleanDisplayText(fallback.intent || fallback.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
     answerEl.innerHTML = answerMarkup(fallback);
   } finally {
     if(requestId === askRequestId) clearAskProgressTimers();

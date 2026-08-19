@@ -159,3 +159,23 @@
 
 /* Cross-page dashboard left padding fix */
 @media(min-width:761px){.app-shell{padding-left:34px;padding-right:34px;overflow-x:hidden}.hero,.search-panel,.panel,.all-content-shell{max-width:100%}}
+
+
+/* Broker Brain conversational thread */
+.ask-thread{border:1px solid rgba(120,220,232,.2);border-radius:22px;background:linear-gradient(135deg,rgba(120,220,232,.08),rgba(255,255,255,.02));padding:14px;display:grid;gap:12px}
+.ask-thread-head{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#dff7fb;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.ask-thread-head button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#dbe4ed;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.ask-thread-messages{display:grid;gap:10px}
+.ask-bubble{max-width:92%;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:11px 13px;background:rgba(255,255,255,.045)}
+.ask-bubble.user{justify-self:end;background:linear-gradient(135deg,rgba(113,112,255,.22),rgba(113,112,255,.09));border-color:rgba(113,112,255,.28)}
+.ask-bubble.broker{justify-self:start;background:rgba(255,255,255,.04);border-color:rgba(120,220,232,.18)}
+.ask-bubble small{display:block;margin-bottom:5px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.ask-bubble p{margin:0;color:#eef2f7;line-height:1.55;font-size:14px}
+.conversation-next-section{border-color:rgba(113,112,255,.24);background:linear-gradient(135deg,rgba(113,112,255,.1),rgba(255,255,255,.018))}
+.conversation-prompts{display:flex;flex-wrap:wrap;gap:9px}
+.conversation-prompts button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);color:#edf2f7;border-radius:999px;padding:10px 13px;font-weight:800;cursor:pointer;text-align:left}
+.conversation-prompts button:hover{border-color:rgba(120,220,232,.38);background:rgba(120,220,232,.1);transform:translateY(-1px)}
+.client-wording-section{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.022)}
+@media(max-width:720px){.ask-bubble{max-width:100%}.conversation-prompts{display:grid}.conversation-prompts button{width:100%}}
+
+.answer-route-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}.answer-route-links a,.answer-route-links button{border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.055);color:#f7fafc;text-decoration:none;padding:9px 13px;font:inherit;font-size:14px;line-height:1;cursor:pointer}.answer-route-links a:hover,.answer-route-links button:hover{border-color:rgba(120,220,232,.4);background:rgba(120,220,232,.1)}

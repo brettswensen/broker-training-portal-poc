@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=left-padding-20260818" />
+  <link rel="stylesheet" href="assets/styles.css?v=conversation-thread-20260819" />
 </head>
 <body>
   <aside class="sidebar">
@@ -82,19 +82,19 @@
     <section id="ask" class="ask-feature-panel panel">
       <div class="ask-feature-copy">
         <p class="eyebrow">MAIN FEATURE</p>
-        <h2>Ask the Broker</h2>
-        <p class="ask-intro">Ask a real client or transaction question and get practical next steps, client wording, escalation flags, and source material to check.</p>
+        <h2>Talk it through with Broker Brain</h2>
+        <p class="ask-intro">Start with the situation, then keep going. Broker Brain keeps the thread visible, helps you probe deeper, and points back to the training library as the conversation develops.</p>
       </div>
       <div class="ask-card ask-feature-card">
-        <textarea id="askInput" rows="4" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
+        <textarea id="askInput" rows="4" placeholder="Start with the situation: My buyer wants every inspection item fixed. How should I think through this?"></textarea>
         <div class="chips compact">
-          <button type="button" data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
-          <button type="button" data-ask="How do I work with my transaction coordinator?">Work with TC</button>
-          <button type="button" data-ask="What should I know about a 1031 exchange?">1031 basics</button>
-          <button type="button" data-ask="How should I explain pricing when the seller wants more than the comps support?">Seller pricing</button>
+          <button type="button" data-ask="My buyer wants every inspection item fixed. How should I think through this?">Inspection concern</button>
+          <button type="button" data-ask="I am under contract and unsure what to own versus what the TC owns. Talk me through it.">Contract handoff</button>
+          <button type="button" data-ask="My client mentioned a 1031 exchange. What should I clarify before I say too much?">1031 situation</button>
+          <button type="button" data-ask="The seller wants to price higher than the comps support. Help me think through the conversation.">Pricing conversation</button>
         </div>
-        <button type="button" id="askButton" class="primary">Ask the Broker</button>
-        <article id="answer" class="answer"><p class="muted">Ask a question and get a practical next step, plain-English client wording, and related places to keep learning.</p></article>
+        <button type="button" id="askButton" class="primary">Continue the conversation</button>
+        <article id="answer" class="answer"><p class="muted">Start with a real situation. Broker Brain will answer, then suggest deeper follow-up questions so the agent can keep thinking through the thread.</p></article>
       </div>
     </section>
 
@@ -123,6 +123,6 @@
 
     <footer class="powered-by-footer" aria-label="Powered by Makrly"><span>Powered by</span><a href="https://makrly.io" target="_blank" rel="noopener" aria-label="Visit Makrly"><img src="assets/brand/makrly-horizontal-logo-dark-bg-tight.svg" alt="Makrly" /></a></footer>
   </main>
-  <script src="assets/app.js?v=nav-active-state-20260818"></script>
+  <script src="assets/app.js?v=conversation-thread-20260819"></script>
 </body>
 </html>
