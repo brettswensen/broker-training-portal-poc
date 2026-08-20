@@ -30,7 +30,8 @@ const demoAnswers = {
     ],
     steps:["Start by separating health/safety issues from wish-list repairs.","Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.","Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.","Keep emotion out of it and document every agreement clearly."],
     script:"Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or the buyer’s confidence from the cosmetic items. Then we can decide whether the cleanest path is a repair, a credit, a concession, or a price adjustment.",
-    followups:["Build repair request checklist","Show related scripts","Open inspection objection playbook"]
+    followups:["What facts should I clarify before I respond?","What could make this repair ask backfire?","How should the guidance change if deadlines are tight?","Which training should I review to go deeper?"],
+    missingContext:["What does the inspection report flag as safety or financing issues?","How much time is left in the due diligence period?","Is the buyer willing to accept a credit instead of repairs?"]
   },
   tc: {
     title:"Working with your transaction coordinator",
@@ -43,7 +44,8 @@ const demoAnswers = {
     ],
     steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
     script:"We are bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. You will still have a clear main point of contact, and the TC helps make sure every detail is tracked through closing.",
-    followups:["Open contract-to-close checklist","Create new-agent task list","Find deadline reminders"]
+    followups:["What should I clarify with the TC first?","Where do agents usually get confused here?","What should I watch before this becomes urgent?","Which training explains the handoff best?"],
+    missingContext:["Has a transaction coordinator already been assigned?","What deadlines are coming up in the next 48-72 hours?","Is the lender/title contact information already in the file?"]
   },
   "1031": {
     title:"1031 exchange basics for agents",
@@ -56,7 +58,8 @@ const demoAnswers = {
     ],
     steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
     script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, a qualified intermediary should be involved before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. They need to give the tax guidance.",
-    followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
+    followups:["What timing facts should I confirm first?","Where is the line between agent guidance and tax advice?","What changes if the client already closed?","Which specialist should be involved next?"],
+    missingContext:["Has the client already closed and received funds?","Is the property an investment or primary residence?","What is the closing/timing window?"]
   },
   cma: {
     title:"CMA and pricing guidance",
@@ -69,7 +72,8 @@ const demoAnswers = {
     ],
     steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
     script:"This is not a standard apples-to-apples CMA, so we should separate the value drivers: location, property condition, income potential, land value, and buyer or investor use case. Then we can use the comps as evidence instead of pretending there is one perfect number.",
-    followups:["Open CMA playbook","Show pricing objection script","Find land valuation examples"]
+    followups:["What makes this property hard to comp?","What evidence would make the pricing story stronger?","How should I handle seller pushback on the number?","Which training should I review before the appointment?"],
+    missingContext:["What is the property type and condition?","Is there rental income, land value, or flip/investor intent?","What is the seller’s pricing expectation or timeline?"]
   },
   general: {
     title:"Broker Brain answer",
@@ -82,7 +86,8 @@ const demoAnswers = {
     ],
     steps:["Start by separating safety, lending, and material defects from cosmetic asks.","Coach the client toward the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around solving the problem and keeping the transaction together.","Document the agreement clearly and keep the TC aligned on deadlines."],
     script:"Focus the client on what actually matters from the inspection: safety issues, lending concerns, and material defects. Then recommend the cleanest remedy for the situation instead of treating the inspection response like a wish list. The goal is to protect the client, keep the deal together where appropriate, and document the agreement clearly.",
-    followups:["Open repair playbook","Draft client text","Review deadline checklist"]
+    followups:["What context would change the recommendation?","What risk should I watch for first?","Which part should I dig into next?","What would be the safest next question to ask?"],
+    missingContext:["What is the client situation or decision in front of the agent?","Are there deadlines, contract terms, or specialists already involved?","Which topic area does this belong to?"]
   }
 };
 
@@ -92,10 +97,11 @@ function appBasePath(){
     if(parts[1] === 'staging' && parts[2]) return '/' + parts.slice(0,3).join('/');
     return '/broker-training-portal-poc';
   }
-  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline'];
+  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
+
 function appPath(path){
   return `${appBasePath()}${path}`;
 }
@@ -165,6 +171,7 @@ function cleanAnswerForDisplay(answer){
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
+    missingContext: (answer.missingContext || []).map(cleanDisplayText).filter(Boolean),
     sources: (answer.sources || []).map(s => ({
       ...s,
       name: cleanDisplayText(s.name),
@@ -188,7 +195,7 @@ function thumbnailStyle(t){
   return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}?v=training-card-qa-20260818')"` : '';
 }
 function card(t){
-  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)" aria-label="Watch ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -214,16 +221,23 @@ function renderSavedWorkspace(){
 
 
 const socialContentExamples = [
-  {id:'planned-decision-making-2026-07', title:'Planned Decision Making', source:'2026 Jul 6 Planned Decision Making transcript', bucket:'Done folder - transcript PDF', audience:'Potential buyers + sellers', recommendation:'Buyer/seller friendly', platform:'Instagram + Facebook', risk:'Educational only. Avoid promising outcomes; invite people to talk through their own situation with an agent.', hook:'Before you make a rushed real estate decision, pause for one simple question.', caption:'Real estate decisions can feel urgent: deadlines, inspections, offers, repairs, financing. But urgent does not always mean rushed. A simple decision rule I use with clients is: what could make this worse, and what next step protects us? That pause can help buyers and sellers make clearer moves instead of reacting from stress.', cta:'If you are buying or selling and the next step feels confusing, send me a message. I can help you slow it down and sort through the options.', hashtags:'#HomeBuyingTips #HomeSellingTips #RealEstateAdvice #UtahRealEstate', carousel:['Buying or selling can feel urgent.','Urgent does not always mean rushed.','Pause and ask: what could make this worse?','Then ask: what next step protects us?','A good agent helps you make decisions with a process.'], newsletter:'Buying or selling a home comes with high-pressure moments. Instead of reacting quickly, pause and identify the facts, the risk, and the next safest step. If you are facing a real estate decision and want help thinking it through, reach out and I can walk you through the options.', assets:['Instagram caption for buyers/sellers','Facebook educational post','5-slide carousel outline','Reel talking points']},
-  {id:'short-sales-2025-04', title:'Short Sales - How to Buy and Sell', source:'2025 Apr 9 Short Sales - How to Buy and Sell w Marty transcript', bucket:'Done folder - transcript PDF', audience:'Homeowners who may need options', recommendation:'Seller lead-gen with review', platform:'Facebook + Instagram', risk:'Sensitive financial hardship topic. Keep general, avoid tax/legal advice, and recommend professional guidance.', hook:'If selling your home feels impossible because of what is owed, you may still have options.', caption:'A short sale is not just “selling for less.” It is a process that may come up when the sale price will not cover what is owed plus selling costs. Lender approval, timing, documentation, and professional advice all matter. The important thing is not to wait until the last minute or assume there is only one path.', cta:'If you are worried about selling because of your loan balance, message me privately. I can help you understand what questions to ask and who should be involved before you make a decision.', hashtags:'#HomeSellerTips #ShortSale #RealEstateOptions #UtahHomes', carousel:['Worried your home will not sell for enough?','A short sale may be one possible path.','The lender usually has to approve it.','Tax/legal questions need qualified professionals.','Start early so you have more options.'], newsletter:'If a homeowner is worried they cannot sell because of the loan balance, the first step is getting clear information. A short sale can involve lender approval, timing, deficiency questions, and professional tax/legal guidance. If you or someone you know is in this situation, I can help you organize the right questions before next steps are taken.', assets:['Facebook seller education post','Instagram caption','Carousel for homeowners','Private-message CTA idea']},
-  {id:'repc-errors-2025-12', title:'Common REPC Errors to Avoid', source:'2025 Dec 10 Common REPC Errors to Avoid transcript', bucket:'Done folder - transcript PDF', audience:'Buyers + sellers under contract', recommendation:'Consumer-safe checklist angle', platform:'Instagram + Facebook', risk:'Contract content can sound legal. Keep it high-level and encourage clients to review terms with their agent or qualified advisor.', hook:'Small contract details can create big real estate headaches.', caption:'When you are buying or selling, the small details in the contract matter: deadlines, earnest money, included items, written changes, and who is responsible for what. A good transaction is not just about getting accepted. It is about making sure the details are clear after everyone signs.', cta:'Thinking about making an offer or reviewing one? Let’s make sure the important details are clear before they become problems.', hashtags:'#HomeBuyingTips #HomeSellingTips #RealEstateContracts #TransactionTips', carousel:['Contract details matter.','Deadlines should be clear.','Earnest money rules matter.','Included items should be written down.','Ask questions before you sign.'], newsletter:'Real estate contracts include details that can affect the whole transaction: earnest money, deadlines, included items, and written changes. Before signing or changing terms, slow down and ask your agent what the contract actually says.', assets:['Buyer/seller checklist post','Instagram caption','Facebook educational post','Offer-prep talking points']}
+
+  {id:'deadline-friday-saveable-01', title:'Deal deadline stress', source:'Planned Decision Making', bucket:'Topic: contract deadlines + decision pressure', audience:'buyers and sellers under contract', recommendation:'Strong public post', risk:'General education only. No guarantee of contract outcome.', hook:'Before a deadline gets weird, ask these 3 questions.', caption:'Contract deadlines have a way of creating fake urgency. Before you react, slow it down: what do we know, what are we guessing, and what changes if we wait? That little pause can keep a stressful moment from turning into a messy one.', cta:'Save this for your next contract deadline.', hashtags:'#RealEstateAdvice #HomeBuyingTips #ContractDeadline #AgentTips', image:'content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png', carousel:['What do we know?','What are we guessing?','What happens if we wait?','A calm pause can protect the deal.','Save this before deadline week.'], newsletter:'Client-facing insight: deadline pressure is where agents earn trust. The best next step is often to separate facts from assumptions before reacting.', assets:['1080x1920 post image','Caption draft','Carousel outline','Review note']},
+  {id:'appliances-contract-saveable-01', title:'Contract inclusion reminder', source:'Common REPC Errors to Avoid', bucket:'Topic: buyer offer details', audience:'buyers writing offers', recommendation:'Strong public post', risk:'General real estate education only. Clients should review contracts with qualified professionals.', hook:'If you want the fridge, write it down.', caption:'One of the least glamorous parts of buying a house is also one of the most important: writing down exactly what stays. If you care about the fridge, washer, curtains, shelving, or a mounted item, do not assume. Put it in the contract and make it clear.', cta:'Send this to someone writing an offer soon.', hashtags:'#HomeBuyingTips #RealEstateContracts #BuyerTips #AgentAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/appliances-contract-saveable-01.png', carousel:['Verbal assumptions do not move with the house.','Appliances should be clear.','Fixtures should be clear.','Mounted items should be clear.','If it matters, write it down.'], newsletter:'Buyer reminder: inclusions and exclusions are easy to overlook until they become expensive. If the client cares about an item, make it clear in writing.', assets:['1080x1920 post image','Caption draft','Buyer reminder carousel','Compliance note']},
+  {id:'inspection-wishlist-kills-deals-01', title:'Inspection negotiation tip', source:'Repair Negotiations', bucket:'Topic: inspection objections', audience:'buyers after inspection', recommendation:'Strong public post', risk:'General education only. Does not guarantee seller agreement.', hook:'The inspection is not a shopping list.', caption:'After inspection, it is tempting to ask for every little thing. That can backfire. The strongest repair requests usually focus on safety, function, and major defects. You can still care about the small stuff. Just do not let the small stuff kill the deal.', cta:'Save this before your inspection period.', hashtags:'#InspectionTips #HomeBuying #RepairNegotiation #RealEstateAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/inspection-wishlist-kills-deals-01.png', carousel:['Do not turn the report into a wish list.','Start with safety.','Then function.','Then major defects.','Keep the deal strategy clear.'], newsletter:'Inspection periods are emotional. Strong agents help clients separate material issues from wish-list items so the repair request protects the client without unnecessarily blowing up the deal.', assets:['1080x1920 post image','Caption draft','Inspection carousel','Review note']},
+  {id:'unique-home-zestimate-01', title:'Unique property pricing', source:"CMA's - Triplex, Addition, Nightly Rental", bucket:'Topic: CMA + unusual properties', audience:'sellers with unique properties', recommendation:'Strong public post', risk:'General education only. No guarantee of valuation or sale price.', hook:'Your Zestimate has probably never walked through your ADU.', caption:'Automated estimates are convenient, but they are blunt tools. If your property has an ADU, rental income, unusual zoning, land value, or a nonstandard layout, the comps need context. That is where a real pricing review matters.', cta:'If your property is unusual, get a real pricing review.', hashtags:'#SellerTips #HomeValue #CMA #RealEstatePricing', image:'content-ingestion/social-assets/social-first-batch-002-images/unique-home-zestimate-01.png', carousel:['Automated estimates are blunt tools.','ADUs need context.','Triplexes need context.','Land and rental use need context.','Unique homes need human pricing work.'], newsletter:'Seller insight: unusual properties need more than a quick automated value. Agents can use the CMA conversation to explain where comps help and where human context matters.', assets:['1080x1920 post image','Caption draft','Seller carousel','Pricing topic link']},
+  {id:'1031-not-tax-free-01', title:'1031 exchange investor note', source:'1031 Exchange Basics', bucket:'Topic: investor clients + tax timing', audience:'real estate investors', recommendation:'Strong public post', risk:'Must not provide tax or legal advice. Encourage CPA, attorney, and qualified intermediary review.', hook:'A 1031 is not a magic tax eraser.', caption:'A 1031 exchange can be powerful, but it is not a casual last-minute decision. It defers taxes, it does not erase them, and the timing rules matter. If you are thinking about selling an investment property, talk with your CPA and a qualified intermediary before you get too far down the road.', cta:'Talk to your tax team before you list.', hashtags:'#1031Exchange #RealEstateInvesting #InvestorTips #TaxStrategy', image:'content-ingestion/social-assets/social-first-batch-002-images/1031-not-tax-free-01.png', carousel:['Deferral is not forgiveness.','Timing rules matter.','A QI matters.','Your CPA should be early.','Do not wait until closing week.'], newsletter:'Investor reminder: 1031 exchange conversations need early handoff to the right professionals. The agent can flag timing and process without giving tax advice.', assets:['1080x1920 post image','Caption draft','Investor carousel','CPA/QI review note']},
+  {id:'pid-monthly-payment-surprise-01', title:'New-build payment surprise', source:'Common REPC Errors to Avoid', bucket:'Topic: new construction + PID due diligence', audience:'new construction buyers', recommendation:'Strong public post', risk:'PID information should be verified with builder, title company, and municipal sources.', hook:'That new-build payment may have a surprise hiding in it.', caption:'Model homes are designed to make you fall in love. Before you do, ask about the boring stuff too. Public Improvement Districts can affect your monthly cost for years, so ask if there is a PID, how much it is, and how long it lasts.', cta:'Save this for your next builder tour.', hashtags:'#NewConstruction #HomeBuyingTips #BuilderHomes #RealEstateAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/pid-monthly-payment-surprise-01.png', carousel:['Ask before you fall in love.','Is there a PID?','How much is it?','How long does it last?','Monthly payment clarity matters.'], newsletter:'New-build buyer insight: the model home is the exciting part. The stronger agent move is helping buyers ask about monthly-cost items like PIDs before they make decisions.', assets:['1080x1920 post image','Caption draft','Builder-tour checklist','Review note']},
+  {id:'settlement-not-keys-01', title:'Settlement versus keys', source:'Common REPC Errors to Avoid', bucket:'Topic: closing expectations', audience:'buyers near closing', recommendation:'Strong public post', risk:'General education only. Exact possession and funding timing depends on the contract, lender, title, and local process.', hook:'Signing papers does not always mean keys today.', caption:'Settlement day and closing day can feel like the same thing, but the timing can be different. Signing, funding, recording, and possession all matter. Before you schedule movers, ask exactly when you should expect keys.', cta:'Save this before closing week.', hashtags:'#ClosingDay #HomeBuyingTips #RealEstateAdvice #BuyerTips', image:'content-ingestion/social-assets/social-first-batch-002-images/settlement-not-keys-01.png', carousel:['Signing is one step.','Funding is another.','Recording matters.','Possession depends on the agreement.','Ask before scheduling movers.'], newsletter:'Closing-week reminder: buyers need plain-English expectations around settlement, funding, recording, and possession so they do not assume keys arrive the moment documents are signed.', assets:['1080x1920 post image','Caption draft','Closing-week carousel','Review note']},
+  {id:'short-sale-not-discount-bin-01', title:'Short sale process explainer', source:'Short Sales - How to Buy and Sell', bucket:'Topic: short sale expectations', audience:'buyers and sellers asking about short sales', recommendation:'Strong public post', risk:'Sensitive financial topic. Keep educational, avoid promises, and recommend tax/legal/lender guidance where needed.', hook:'A short sale is a process, not a discount bin.', caption:'Short sales are easy to misunderstand. They are not just a “cheap house” label. They involve seller hardship, lender approval, timing, documentation, and sometimes tax or deficiency questions. If a short sale is on the table, get the facts early.', cta:'Ask questions before making assumptions.', hashtags:'#ShortSale #RealEstateEducation #SellerTips #BuyerTips', image:'content-ingestion/social-assets/social-first-batch-002-images/short-sale-not-discount-bin-01.png', carousel:['Not just a discount label.','Lender approval matters.','Timing matters.','Hardship documentation may matter.','Get guidance early.'], newsletter:'Consumer-safe short-sale messaging should set expectations without implying discounts or guaranteed outcomes. The agent can explain the process and encourage professional guidance.', assets:['1080x1920 post image','Caption draft','Consumer-safe carousel','Review note']}
 ];
 let activeSocialIndex = 0;
 let activeSocialFormat = 'caption';
 function renderSocialStudio(){
   const list = document.getElementById('socialSourceList');
   if(!list) return;
-  list.innerHTML = socialContentExamples.map((item,index)=>`<button type="button" class="social-source-button ${index===activeSocialIndex?'active':''}" onclick="selectSocialSource(${index})"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.audience)} · ${escapeHtml(item.platform)}</small></button>`).join('');
+
+  list.innerHTML = socialContentExamples.map((item,index)=>`<button type="button" class="social-source-button ${index===activeSocialIndex?'active':''}" onclick="selectSocialSource(${index})"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.audience)}</small></button>`).join('');
   document.querySelectorAll('[data-social-format]').forEach(btn=>{
     btn.classList.toggle('active', btn.dataset.socialFormat === activeSocialFormat);
     btn.onclick = () => { activeSocialFormat = btn.dataset.socialFormat; renderSocialStudio(); };
@@ -243,18 +257,32 @@ function renderSocialPreview(){
   const meta = document.getElementById('socialPreviewMeta');
   const assets = document.getElementById('socialAssetGrid');
   if(!card || !item) return;
-  if(title) title.textContent = `${item.title} → ${activeSocialFormat === 'newsletter' ? 'Facebook post' : activeSocialFormat === 'caption' ? 'Instagram caption' : 'Instagram carousel'}`;
-  if(meta) meta.textContent = `${item.source} · Audience: ${item.audience}`;
+
+  if(title) title.textContent = `${item.title} ${activeSocialFormat} draft`;
+  if(meta) meta.textContent = `${item.source} · ${item.audience}`;
   const draft = `${item.caption} ${item.cta}`;
-  card.innerHTML = `<div class="social-card-top"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.audience)}</strong></div><div class="phone-post"><div class="post-avatar">AG</div><div><strong>Your Local Real Estate Agent</strong><small>Client-facing content idea from a team training</small></div></div><div class="social-post-body">${socialFormatBody(item)}</div><div class="compliance-note"><strong>Review note:</strong> ${escapeHtml(item.risk)}</div><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(draft).replace(/'/g,'&#39;')}')">Copy draft</button><button type="button" onclick="saveBrokerItem('Social draft','${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.recommendation).replace(/'/g,'&#39;')}')">Save idea</button></div>`;
-  if(assets) assets.innerHTML = item.assets.map(asset=>`<article><span>✓</span><strong>${escapeHtml(asset)}</strong><small>Ready for agent review/customization</small></article>`).join('');
+  card.innerHTML = `<div class="social-card-top"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.audience)}</strong></div><div class="phone-post"><div class="post-avatar">AG</div><div><strong>Your Local Agent</strong><small>Agent-ready educational post</small></div></div><div class="social-post-body">${socialFormatBody(item)}</div><div class="compliance-note"><strong>Broker review:</strong> ${escapeHtml(item.risk)}</div><div class="script-actions"><button type="button" onclick="copyText('${escapeHtml(draft).replace(/'/g,'&#39;')}')">Copy draft</button><button type="button" onclick="saveBrokerItem('Social draft','${escapeHtml(item.title).replace(/'/g,'&#39;')}','${escapeHtml(item.recommendation).replace(/'/g,'&#39;')}')">Save draft</button></div>`;
+  const img = document.getElementById('socialPreviewImage');
+  if(img) img.src = appPath('/' + item.image);
+  if(assets) assets.innerHTML = item.assets.map(asset=>`<article><span>✓</span><strong>${escapeHtml(asset)}</strong><small>Included in the agent-ready content package</small></article>`).join('');
 }
 
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
-  const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
-  document.getElementById('resultCount').textContent=q ? `${results.length} match${results.length===1?'':'es'} for “${query}”` : `Showing all`;
-  document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact matches yet. Try a broader topic or open the playbooks page.</p>`;
+  const panel=document.getElementById('results');
+  const count=document.getElementById('resultCount');
+  const grid=document.getElementById('resultsGrid');
+  if(!panel || !count || !grid) return;
+  if(!q){
+    panel.hidden = true;
+    count.textContent = 'Search to see matches';
+    grid.innerHTML = '';
+    return;
+  }
+  const results=trainings.filter(t=>[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
+  panel.hidden = false;
+  count.textContent=`${results.length} match${results.length===1?'':'es'} for “${query}”`;
+  grid.innerHTML=results.map(card).join('')||`<p class="muted">No exact matches yet. Try a broader topic or open the Library page.</p>`;
 }
 
 function renderLatestTraining(){
@@ -277,7 +305,7 @@ function renderLatestTraining(){
         <p>${escapeHtml(t.summary)}</p>
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
-          <button class="watch-video-action" data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)">Watch video</button>
+          <button data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)">Watch video</button>
           <button data-topic="${escapeHtml(t.topics[0] || t.category)}" onclick="askAbout(this.dataset.topic)">Ask about this</button>
         </div>
       </div>
@@ -378,16 +406,36 @@ function escalationList(answer){
   return ['The issue touches tax, legal, lending, inspection, or contract interpretation.', 'The agent is uncertain after reading the relevant training.', 'A client decision is urgent or could put the transaction at risk.'];
 }
 
+function conversationalPromptBank(answer){
+  const text = [answer.title, answer.intent, ...(answer.queryTerms || []), ...(answer.steps || [])].join(' ').toLowerCase();
+  if(text.includes('repair') || text.includes('inspection')) return ['What facts should I clarify before I respond?', 'What could make this repair ask backfire?', 'How should this change if deadlines are tight?', 'What should I ask the buyer before deciding?'];
+  if(text.includes('1031') || text.includes('tax') || text.includes('exchange')) return ['What timing facts should I confirm first?', 'Where is the line between agent guidance and tax advice?', 'What changes if the client already closed?', 'Which specialist should be involved next?'];
+  if(text.includes('cma') || text.includes('pricing') || text.includes('price') || text.includes('seller')) return ['What evidence would make the pricing story stronger?', 'What should I ask the seller before pushing back?', 'How should this change if the seller is emotional?', 'Which training should I review before the appointment?'];
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return ['What should I clarify with the TC first?', 'Where do agents usually get confused here?', 'What should I watch before this becomes urgent?', 'What should I ask before I update the client?'];
+  return ['What context would change the recommendation?', 'What risk should I watch for first?', 'Which part should I dig into next?', 'What would be the safest next question to ask?'];
+}
+
+function normalizeConversationPrompts(answer){
+  const actionLead = /^(suggest|recommend|advise|call|open|create|draft|copy|send|loop|review|confirm|find|build)\b/i;
+  const usable = (answer.followups || [])
+    .map(cleanDisplayText)
+    .filter(Boolean)
+    .filter(prompt => /\?/.test(prompt) && !actionLead.test(prompt));
+  const combined = [...usable, ...conversationalPromptBank(answer)];
+  return combined.filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index).slice(0, 4);
+}
+
 function answerMarkup(answer){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
   const steps = cleanAnswer.steps || [];
-  let nextActions = (cleanAnswer.followups || []).filter(Boolean);
-  if(!nextActions.length){
-    const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
-    nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
-  }
+  let deeperPrompts = normalizeConversationPrompts(cleanAnswer);
+  const currentUserText = [...askThread].reverse().find(item => item.role === 'user')?.text?.toLowerCase() || '';
+  const finalPrompts = [...deeperPrompts, 'What context would change this recommendation?', 'What should I ask before deciding?']
+    .filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index)
+    .filter(prompt => prompt.toLowerCase() !== currentUserText)
+    .slice(0, 5);
   const genericGuidance = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(cleanAnswer.intent || '');
   const guidanceText = cleanAnswer.intent && !genericGuidance
     ? cleanAnswer.intent
@@ -397,9 +445,10 @@ function answerMarkup(answer){
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
+      ${renderAskThread()}
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Recommended guidance for the agent to use or adapt.</p></div>
+        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Use this as the next turn in the conversation, then keep probing where the situation needs more context.</p></div>
       </div>
 
       <section class="answer-section broker-take-section">
@@ -408,13 +457,32 @@ function answerMarkup(answer){
       </section>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">WHAT TO DO NEXT</p>
+        <p class="eyebrow">HOW TO THINK ABOUT IT</p>
         ${whyList}
+      </section>
+
+      <section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">FILL GAPS TO SHARPEN THIS</p><h4>Broker Brain can tailor this better with a little more context</h4></div>
+        </div>
+        <p class="muted">Tap a gap to continue the conversation and refine the guidance.</p>
+        <div class="conversation-prompts gap-prompts">
+          ${cleanAnswer.missingContext.map(item=>`<button type="button" onclick="fillGap('${escapeHtml(item).replace(/'/g,'&#39;')}')">${escapeHtml(item)}</button>`).join('')}
+        </div>
+      </section>
+
+      <section class="answer-section conversation-next-section">
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">KEEP THE CONVERSATION GOING</p><h4>Broker Brain can dig deeper from here</h4></div>
+        </div>
+        <div class="conversation-prompts">
+          ${finalPrompts.map(prompt=>`<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt.replace(' recommendation',''))}</button>`).join('')}
+        </div>
       </section>
 
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
-          <div><p class="eyebrow">WHAT TO SAY</p><h4>If you need to say it plainly</h4></div>
+          <div><p class="eyebrow">OPTIONAL OUTPUT</p><h4>If this needs to become client communication</h4></div>
         </div>
         <p class="script-box">“${escapeHtml(scriptText)}”</p>
         <div class="answer-actions">
@@ -456,9 +524,10 @@ function relatedPlaybooksFor(text){
 
 function askProgressSteps(answer){
   const terms = (answer.queryTerms || []).map(t=>`<span class="tag">${t}</span>`).join('');
+  const sourceTags = (answer.sources || []).slice(0,4).map(s=>`<span class="tag">${escapeHtml(s.name || s.cite || 'training')}</span>`).join('') || 'Looking for the closest examples';
   return [
     {label:'Searching the training library', meta:'Scanning saved brokerage training'},
-    {label:'Finding matching transcript sections', meta:terms || 'Looking for the closest examples'},
+    {label:'Finding matching transcript sections', meta:sourceTags},
     {label:'Checking the broker notes', meta:`${(answer.sources || []).length} likely matches found`},
     {label:'Preparing the recommended next step', meta:'guidance + reasoning + client wording'}
   ];
@@ -518,11 +587,11 @@ function handleFollowup(label){
   const lower = label.toLowerCase();
   if (typeof isDesignerRouteDashboard !== 'undefined' && isDesignerRouteDashboard) {
     if (lower.includes('playbook')) {
-      window.location.href = `/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`;
+      window.location.href = appPath(`/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`);
       return;
     }
     if (lower.includes('topic') || lower.includes('browse')) {
-      window.location.href = '/topics/';
+      window.location.href = appPath('/topics/');
       return;
     }
     window.location.href = librarySearchUrl(label);
@@ -547,9 +616,10 @@ function watchTraining(title){
 }
 
 function openTraining(title){
+  if (isDesignerRouteDashboard || !document.getElementById('results')) { routeToLibrarySearch(title); return; }
   document.getElementById('globalSearch').value = title;
   renderResults(title);
-  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+  document.getElementById('results')?.scrollIntoView({behavior:'smooth'});
 }
 
 function prefillAskQuestion(question){
@@ -569,35 +639,105 @@ function askAbout(topic){
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
-const librarySearchUrl = query => appPath(`/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
+const librarySearchUrl = query => appPath(`/all-content/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
 const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
 
-document.getElementById('globalSearch').addEventListener('input', e => {
-  if (!isDesignerRouteDashboard) renderResults(e.target.value);
-});
-document.getElementById('globalSearch').addEventListener('keydown', e => {
-  if (isDesignerRouteDashboard && e.key === 'Enter') {
-    e.preventDefault();
-    routeToLibrarySearch(e.target.value);
-  }
-});
+const globalSearchEl = document.getElementById('globalSearch');
+if(globalSearchEl){
+  globalSearchEl.addEventListener('input', e => {
+    if (!isDesignerRouteDashboard) renderResults(e.target.value);
+  });
+  globalSearchEl.addEventListener('keydown', e => {
+    if (isDesignerRouteDashboard && e.key === 'Enter') {
+      e.preventDefault();
+      routeToLibrarySearch(e.target.value);
+    }
+  });
+}
 document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click', e=>{
   if (isDesignerRouteDashboard) {
     e.preventDefault();
     routeToLibrarySearch(b.dataset.query);
     return;
   }
-  document.getElementById('globalSearch').value=b.dataset.query;renderResults(b.dataset.query);document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
+  if(globalSearchEl) globalSearchEl.value=b.dataset.query;
+  renderResults(b.dataset.query);
+  document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
-document.getElementById('askButton').addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput').value||'general')});
-renderLatestTraining();renderPlaybooks();renderTopics();renderTrainings();renderScriptPreview();renderSavedWorkspace();renderSocialStudio();
+
+document.getElementById('askButton')?.addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput')?.value||'general')});
+
+function setupMobileNav(){
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.getElementById(toggle?.getAttribute('aria-controls') || 'dashboardNav');
+  if(!toggle || !nav) return;
+  const close = () => {
+    document.body.classList.remove('mobile-nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', () => {
+    const open = !document.body.classList.contains('mobile-nav-open');
+    document.body.classList.toggle('mobile-nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => { if(event.key === 'Escape') close(); });
+}
+
+function setupActiveDashboardNav(){
+  const nav = document.getElementById('dashboardNav');
+  if(!nav) return;
+  const links = Array.from(nav.querySelectorAll('a'));
+  if(!links.length) return;
+
+  const normalizePath = path => (path || '/').replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+  const currentPath = normalizePath(location.pathname);
+  const currentHash = location.hash || '';
+
+  const samePageLinks = links.filter(link => {
+    try { return normalizePath(new URL(link.getAttribute('href') || '', location.href).pathname) === currentPath; }
+    catch(e){ return false; }
+  });
+
+  let activeLink = null;
+  if(currentHash){
+    activeLink = samePageLinks.find(link => {
+      try { return new URL(link.getAttribute('href') || '', location.href).hash === currentHash; }
+      catch(e){ return false; }
+    });
+  }
+  if(!activeLink){
+    activeLink = samePageLinks.find(link => {
+      try { return !new URL(link.getAttribute('href') || '', location.href).hash; }
+      catch(e){ return false; }
+    }) || samePageLinks[0] || links.find(link => link.classList.contains('active')) || links[0];
+  }
+
+  links.forEach(link => {
+    const isActive = link === activeLink;
+    link.classList.toggle('active', isActive);
+    if(isActive) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+}
+
+setupActiveDashboardNav();
+setupMobileNav();
+window.addEventListener('hashchange', setupActiveDashboardNav);
+if(document.getElementById('latestTrainingRail')) renderLatestTraining();
+if(document.getElementById('playbookGrid')) renderPlaybooks();
+if(document.getElementById('topicGrid')) renderTopics();
+if(document.getElementById('trainingList')) renderTrainings();
+if(document.getElementById('scriptPreviewGrid')) renderScriptPreview();
+if(document.getElementById('savedWorkspaceList')) renderSavedWorkspace();
+renderSocialStudio();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
 let transcriptReady = false;
 
-fetch('data/search-index.json')
+fetch(appPath('/data/search-index.json'))
   .then(r => r.ok ? r.json() : Promise.reject(new Error('index not found')))
   .then(idx => {
     transcriptIndex = idx;
@@ -748,37 +888,85 @@ function sourceProofMarkup(label='Related material', count=1){
 
 function renderResults(query=''){
   renderAllContent(query);
-  const q = query.trim();
-  if (transcriptReady && q) {
-    const results = transcriptSearch(q, 9);
-    document.getElementById('resultCount').textContent = `${results.length} transcript match${results.length===1?'':'es'} for “${query}”`;
-    document.getElementById('resultsGrid').innerHTML = results.map(ch => transcriptCard(ch, q)).join('') || `<p class="muted">No transcript matches yet. Try repair, 1031, land, flip, CMA, nightly rental, or inspection.</p>`;
+  const q = String(query || '').trim();
+  const resultsPanel = document.getElementById('results');
+  const resultCount = document.getElementById('resultCount');
+  const resultsGrid = document.getElementById('resultsGrid');
+  if(!resultsPanel || !resultCount || !resultsGrid) return;
+
+  if(!q){
+    resultsPanel.hidden = true;
+    resultCount.textContent = 'Search to see matches';
+    resultsGrid.innerHTML = '';
     return;
   }
-  const results = trainings;
-  document.getElementById('resultCount').textContent = transcriptReady ? `Showing ${transcriptIndex.records.length} indexed transcripts` : `Showing all`;
-  document.getElementById('resultsGrid').innerHTML = results.map(card).join('');
+
+  resultsPanel.hidden = false;
+  if (transcriptReady) {
+    const results = transcriptSearch(q, 9);
+    resultCount.textContent = `${results.length} transcript match${results.length===1?'':'es'} for “${query}”`;
+    resultsGrid.innerHTML = results.map(ch => transcriptCard(ch, q)).join('') || `<p class="muted">No transcript matches yet. Try repair, 1031, land, flip, CMA, nightly rental, or inspection.</p>`;
+    return;
+  }
+  const results = matchingTrainings(q);
+  resultCount.textContent = `${results.length} training match${results.length===1?'':'es'} for “${query}”`;
+  resultsGrid.innerHTML = results.map(card).join('') || `<p class="muted">No matching trainings yet. Try a broader topic or open the Library.</p>`;
 }
 
 function transcriptSourcesFor(query, fallbackAnswer){
   const matches = transcriptSearch(query, 3);
   if (!matches.length) return fallbackAnswer.sources;
-  const transcriptSources = matches.map((ch, i) => ({
+  return matches.map((ch, i) => ({
     name: ch.title,
     cite: `Real transcript · ${ch.timestamp}`,
     match: `${Math.min(98, 90 - i*5)}%`,
     quote: snippetFor(ch.text, query).slice(0, 280)
   }));
-  return transcriptSources.some(source => trainingForSource(source)?.videoUrl) ? transcriptSources : fallbackAnswer.sources;
 }
 
-function sourcesHavePlayableVideo(sources=[]){
-  return sources.some(source => Boolean(trainingForSource(source)?.videoUrl));
+function askApiUrl(){
+  if(location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('vercel.app')){
+    return '/api/ask';
+  }
+  return 'https://real-estate-training-portal-poc.vercel.app/api/ask';
 }
-
-const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+const ASK_API_URL = askApiUrl();
 let askProgressTimers = [];
 let askRequestId = 0;
+let askThread = [];
+
+function askThreadContext(limit=6){
+  return askThread.slice(-limit).map(item => ({role:item.role, text:item.text}));
+}
+
+function renderAskThread(){
+  if(!askThread.length) return '';
+  return `<section class="ask-thread" aria-label="Broker Brain conversation thread">
+    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+    <div class="ask-thread-messages">
+      ${askThread.slice(-6).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}
+    </div>
+  </section>`;
+}
+
+function clearAskThread(){
+  askThread = [];
+  const answerEl = document.getElementById('answer');
+  if(answerEl) answerEl.innerHTML = '<p class="muted">New conversation started. Share the situation you want to think through.</p>';
+  const input = document.getElementById('askInput');
+  if(input) input.value = '';
+}
+
+function continueAsk(prompt){
+  const input = document.getElementById('askInput');
+  if(input) input.value = prompt;
+  runAsk(prompt);
+}
+
+function fillGap(item){
+  const q = `How should this guidance change if ${String(item).toLowerCase().replace(/[?.]$/,'')}?`;
+  continueAsk(q);
+}
 
 function clearAskProgressTimers(){
   askProgressTimers.forEach(timer => clearTimeout(timer));
@@ -796,6 +984,7 @@ function scheduleAskProgress(answerEl, query, fallback, requestId){
 }
 
 async function runAsk(query){
+  query = String(query || '').trim() || 'general broker guidance';
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
   const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
@@ -803,33 +992,40 @@ async function runAsk(query){
   if(!answerEl) return;
   const requestId = ++askRequestId;
   const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
+  askThread.push({role:'user', text:query});
+  askThread = askThread.slice(-8);
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2200);
+  const timeoutId = setTimeout(() => controller.abort(), 16000);
 
   try {
     const response = await fetch(ASK_API_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       signal: controller.signal,
-      body: JSON.stringify({question: query || 'general broker guidance'})
+      body: JSON.stringify({question: query, context: askThreadContext()})
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
     const liveAnswer = await response.json();
     await minimumProgress;
     if(requestId !== askRequestId) return;
-    answerEl.innerHTML = answerMarkup({
+    const mergedAnswer = {
       ...fallback,
       ...liveAnswer,
       confidence: liveAnswer.live ? 'Broker guidance' : (liveAnswer.confidence || fallback.confidence),
-      sources: sourcesHavePlayableVideo(liveAnswer.sources || []) ? liveAnswer.sources : fallback.sources
-    });
+      sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
+    };
+    askThread.push({role:'broker', text: cleanDisplayText(mergedAnswer.intent || mergedAnswer.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
+    answerEl.innerHTML = answerMarkup(mergedAnswer);
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
     await minimumProgress;
     if(requestId !== askRequestId) return;
+    askThread.push({role:'broker', text: cleanDisplayText(fallback.intent || fallback.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
     answerEl.innerHTML = answerMarkup(fallback);
   } finally {
     if(requestId === askRequestId) clearAskProgressTimers();
