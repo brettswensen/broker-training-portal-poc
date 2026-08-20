@@ -176,6 +176,11 @@
 .conversation-prompts button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);color:#edf2f7;border-radius:999px;padding:10px 13px;font-weight:800;cursor:pointer;text-align:left}
 .conversation-prompts button:hover{border-color:rgba(120,220,232,.38);background:rgba(120,220,232,.1);transform:translateY(-1px)}
 .client-wording-section{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.022)}
+.gaps-section{border-color:rgba(245,158,11,.24);background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(255,255,255,.018))}
+.gaps-section[hidden]{display:none!important}
+.gap-prompts button{border-color:rgba(245,158,11,.28);background:rgba(245,158,11,.08)}
+.gap-prompts button:hover{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.14)}
+.gap-prompts button::before{content:'+ ';opacity:.7}
 @media(max-width:720px){.ask-bubble{max-width:100%}.conversation-prompts{display:grid}.conversation-prompts button{width:100%}}
 
 .answer-route-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}.answer-route-links a,.answer-route-links button{border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.055);color:#f7fafc;text-decoration:none;padding:9px 13px;font:inherit;font-size:14px;line-height:1;cursor:pointer}.answer-route-links a:hover,.answer-route-links button:hover{border-color:rgba(120,220,232,.4);background:rgba(120,220,232,.1)}

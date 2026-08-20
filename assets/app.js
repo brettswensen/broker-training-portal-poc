@@ -30,7 +30,8 @@ const demoAnswers = {
     ],
     steps:["Start by separating health/safety issues from wish-list repairs.","Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.","Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.","Keep emotion out of it and document every agreement clearly."],
     script:"Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or the buyer’s confidence from the cosmetic items. Then we can decide whether the cleanest path is a repair, a credit, a concession, or a price adjustment.",
-    followups:["What facts should I clarify before I respond?","What could make this repair ask backfire?","How should the guidance change if deadlines are tight?","Which training should I review to go deeper?"]
+    followups:["What facts should I clarify before I respond?","What could make this repair ask backfire?","How should the guidance change if deadlines are tight?","Which training should I review to go deeper?"],
+    missingContext:["What does the inspection report flag as safety or financing issues?","How much time is left in the due diligence period?","Is the buyer willing to accept a credit instead of repairs?"]
   },
   tc: {
     title:"Working with your transaction coordinator",
@@ -43,7 +44,8 @@ const demoAnswers = {
     ],
     steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
     script:"We are bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. You will still have a clear main point of contact, and the TC helps make sure every detail is tracked through closing.",
-    followups:["What should I clarify with the TC first?","Where do agents usually get confused here?","What should I watch before this becomes urgent?","Which training explains the handoff best?"]
+    followups:["What should I clarify with the TC first?","Where do agents usually get confused here?","What should I watch before this becomes urgent?","Which training explains the handoff best?"],
+    missingContext:["Has a transaction coordinator already been assigned?","What deadlines are coming up in the next 48-72 hours?","Is the lender/title contact information already in the file?"]
   },
   "1031": {
     title:"1031 exchange basics for agents",
@@ -56,7 +58,8 @@ const demoAnswers = {
     ],
     steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
     script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, a qualified intermediary should be involved before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. They need to give the tax guidance.",
-    followups:["What timing facts should I confirm first?","Where is the line between agent guidance and tax advice?","What changes if the client already closed?","Which specialist should be involved next?"]
+    followups:["What timing facts should I confirm first?","Where is the line between agent guidance and tax advice?","What changes if the client already closed?","Which specialist should be involved next?"],
+    missingContext:["Has the client already closed and received funds?","Is the property an investment or primary residence?","What is the closing/timing window?"]
   },
   cma: {
     title:"CMA and pricing guidance",
@@ -69,7 +72,8 @@ const demoAnswers = {
     ],
     steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
     script:"This is not a standard apples-to-apples CMA, so we should separate the value drivers: location, property condition, income potential, land value, and buyer or investor use case. Then we can use the comps as evidence instead of pretending there is one perfect number.",
-    followups:["What makes this property hard to comp?","What evidence would make the pricing story stronger?","How should I handle seller pushback on the number?","Which training should I review before the appointment?"]
+    followups:["What makes this property hard to comp?","What evidence would make the pricing story stronger?","How should I handle seller pushback on the number?","Which training should I review before the appointment?"],
+    missingContext:["What is the property type and condition?","Is there rental income, land value, or flip/investor intent?","What is the seller’s pricing expectation or timeline?"]
   },
   general: {
     title:"Broker Brain answer",
@@ -82,7 +86,8 @@ const demoAnswers = {
     ],
     steps:["Start by separating safety, lending, and material defects from cosmetic asks.","Coach the client toward the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around solving the problem and keeping the transaction together.","Document the agreement clearly and keep the TC aligned on deadlines."],
     script:"Focus the client on what actually matters from the inspection: safety issues, lending concerns, and material defects. Then recommend the cleanest remedy for the situation instead of treating the inspection response like a wish list. The goal is to protect the client, keep the deal together where appropriate, and document the agreement clearly.",
-    followups:["What context would change the recommendation?","What risk should I watch for first?","Which part should I dig into next?","What would be the safest next question to ask?"]
+    followups:["What context would change the recommendation?","What risk should I watch for first?","Which part should I dig into next?","What would be the safest next question to ask?"],
+    missingContext:["What is the client situation or decision in front of the agent?","Are there deadlines, contract terms, or specialists already involved?","Which topic area does this belong to?"]
   }
 };
 
@@ -166,6 +171,7 @@ function cleanAnswerForDisplay(answer){
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
+    missingContext: (answer.missingContext || []).map(cleanDisplayText).filter(Boolean),
     sources: (answer.sources || []).map(s => ({
       ...s,
       name: cleanDisplayText(s.name),
@@ -455,6 +461,16 @@ function answerMarkup(answer){
         ${whyList}
       </section>
 
+      <section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">FILL GAPS TO SHARPEN THIS</p><h4>Broker Brain can tailor this better with a little more context</h4></div>
+        </div>
+        <p class="muted">Tap a gap to continue the conversation and refine the guidance.</p>
+        <div class="conversation-prompts gap-prompts">
+          ${cleanAnswer.missingContext.map(item=>`<button type="button" onclick="fillGap('${escapeHtml(item).replace(/'/g,'&#39;')}')">${escapeHtml(item)}</button>`).join('')}
+        </div>
+      </section>
+
       <section class="answer-section conversation-next-section">
         <div class="answer-section-head simple-head">
           <div><p class="eyebrow">KEEP THE CONVERSATION GOING</p><h4>Broker Brain can dig deeper from here</h4></div>
@@ -508,9 +524,10 @@ function relatedPlaybooksFor(text){
 
 function askProgressSteps(answer){
   const terms = (answer.queryTerms || []).map(t=>`<span class="tag">${t}</span>`).join('');
+  const sourceTags = (answer.sources || []).slice(0,4).map(s=>`<span class="tag">${escapeHtml(s.name || s.cite || 'training')}</span>`).join('') || 'Looking for the closest examples';
   return [
     {label:'Searching the training library', meta:'Scanning saved brokerage training'},
-    {label:'Finding matching transcript sections', meta:terms || 'Looking for the closest examples'},
+    {label:'Finding matching transcript sections', meta:sourceTags},
     {label:'Checking the broker notes', meta:`${(answer.sources || []).length} likely matches found`},
     {label:'Preparing the recommended next step', meta:'guidance + reasoning + client wording'}
   ];
@@ -938,6 +955,11 @@ function continueAsk(prompt){
   const input = document.getElementById('askInput');
   if(input) input.value = prompt;
   runAsk(prompt);
+}
+
+function fillGap(item){
+  const q = `How should this guidance change if ${String(item).toLowerCase().replace(/[?.]$/,'')}?`;
+  continueAsk(q);
 }
 
 function clearAskProgressTimers(){
