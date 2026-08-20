@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ask Broker Brain Flow Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="ask-flow-page">
+  <aside class="sidebar">
+    <a class="brand" href="#top" aria-label="Broker Brain home"><span class="brand-mark">◆</span><span>Broker Brain</span></a>
+    <nav>
+      <a class="active" href="#top">Dashboard</a>
+      <a href="#search">Search</a>
+      <a href="#social-studio">Social Studio</a>
+      <a href="#all-content">All Content</a>
+      <a href="#ask">Ask the Broker</a>
+      <a href="#latest">Latest Training</a>
+      <a href="#pipeline">Training Pipeline</a>
+      <a href="#onboarding">Onboarding</a>
+      <a href="#playbooks">Playbooks</a>
+      <a href="#topics">Topics</a>
+      <a href="#trainings">Trainings</a>
+      <a href="#objections">Objection Library</a>
+    </nav>
+    <div class="sidebar-card">
+      <p class="eyebrow">LIBRARY STATUS</p>
+      <strong>Training library ready</strong>
+      <span>Searchable trainings, scripts, playbooks, and source excerpts.</span>
+    </div>
+  </aside>
+
+  <main id="top" class="app-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow accent">REAL ESTATE TEAM KNOWLEDGE BASE</p>
+        <h1>Ask Broker Brain flow prototypes.</h1>
+        <p class="lead">Two clickable ways to make Ask the Broker feel more conversational: a classic chat thread and a split thread plus active guidance view.</p><div class="ask-flow-nav"><a href="ask-option-a.html">Option A: classic chat</a><a class="active" href="ask-option-b.html">Option B: split view</a><a href="index.html#ask">Current dashboard Ask card</a></div>
+      </div>
+      <div class="hero-stats">
+        <div><strong>6</strong><span>sample trainings</span></div>
+        <div><strong>8</strong><span>broker playbooks</span></div>
+        <div><strong>37</strong><span>topic tags</span></div>
+      </div>
+    </section>
+
+    <section id="search" class="search-panel">
+      <label for="globalSearch">Search trainings, scripts, playbooks, objections, contracts...</label>
+      <div class="search-row">
+        <span>⌕</span>
+        <input id="globalSearch" type="search" placeholder="Try: repair negotiations, CMA land, 1031 exchange, transaction coordinator..." autocomplete="off" />
+      </div>
+      <div class="chips" id="searchChips">
+        <button data-query="repair negotiations">repair negotiations</button>
+        <button data-query="CMA land">CMA land</button>
+        <button data-query="1031 exchange">1031 exchange</button>
+        <button data-query="work with TC">work with TC</button>
+        <button data-query="new construction">new construction</button>
+      </div>
+    </section>
+
+    <section id="all-content" class="all-content-view" hidden>
+      <div class="all-content-shell">
+        <div class="all-content-head">
+          <div>
+            <p class="eyebrow">ALL CONTENT</p>
+            <h2 id="allContentTitle">Results for your search</h2>
+            <p id="allContentSubtitle" class="muted">Search across trainings, transcript matches, playbooks, scripts, and newsletters.</p>
+          </div>
+          <button class="ghost-button" type="button" onclick="clearAllContentSearch()">Back to dashboard</button>
+        </div>
+
+        <div class="content-tabs" aria-label="Content filters">
+          <button class="active">All Types</button>
+          <button>Video Trainings</button>
+          <button>Transcript Matches</button>
+          <button>Playbooks</button>
+          <button>Scripts</button>
+        </div>
+
+        <section class="content-block">
+          <div class="block-head"><span>Top Results</span><small id="topResultsMeta"></small></div>
+          <div id="topContentResults" class="top-content-grid"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>All Results</span><small>training library matches</small></div>
+          <div id="allResultRows" class="all-result-list"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>Related Playbooks</span><small>operating guidance</small></div>
+          <div id="allPlaybookRows" class="all-result-list compact-list"></div>
+        </section>
+
+        <section class="content-block">
+          <div class="block-head"><span>Latest Video Content</span><small>browseable source material</small></div>
+          <div id="allVideoTiles" class="network-video-grid"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="latest" class="panel latest-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">LATEST FROM TRAINING</p>
+          <h2>New broker trainings, already processed.</h2>
+        </div>
+        <span class="status-pill green">Video + transcript + scripts</span>
+      </div>
+      <p class="section-intro">Agents can browse recent sessions like a video library, then open the transcript-backed guidance, source clips, scripts, and related playbooks from the same place.</p>
+      <div id="latestTrainingRail" class="video-rail" aria-label="Latest training videos"></div>
+    </section>
+
+
+    <section id="social-studio" class="panel social-studio-panel">
+      <div class="section-head social-studio-head">
+        <div>
+          <p class="eyebrow">CLIENT-FACING SOCIAL CONTENT</p>
+          <h2>Social Content Studio</h2>
+          <p class="section-intro">Agents can start from a finished training in the Drive “Done” folder and turn the lesson into buyer- or seller-friendly Instagram/Facebook ideas. The goal is practical content that helps an agent educate potential clients, build trust, and stay visible online without starting from a blank page.</p>
+        </div>
+        <span class="status-pill green">Agent attraction demo</span>
+      </div>
+      <div class="social-studio-shell">
+        <aside class="social-source-list" aria-label="Training sources for social content">
+          <div class="source-list-top">
+            <p class="eyebrow">STEP 1 · PICK TRAINING</p>
+            <strong>Choose a lesson from Done</strong>
+            <small>Broker Brain finds consumer-safe angles for buyers and sellers.</small>
+          </div>
+          <div id="socialSourceList"></div>
+        </aside>
+        <div class="social-preview-workbench">
+          <div class="social-preview-toolbar">
+            <div>
+              <p class="eyebrow">STEP 2 · GENERATE CLIENT CONTENT</p>
+              <h3 id="socialPreviewTitle">Instagram/Facebook content idea</h3>
+              <p id="socialPreviewMeta" class="muted">Select a training to preview posts an agent could use to attract buyers or sellers.</p>
+            </div>
+            <div class="social-format-tabs" aria-label="Social content formats">
+              <button type="button" class="active" data-social-format="caption">Instagram caption</button>
+              <button type="button" data-social-format="carousel">Carousel</button>
+              <button type="button" data-social-format="newsletter">Facebook post</button>
+            </div>
+          </div>
+          <div id="socialPreviewCard" class="social-preview-card"></div>
+          <div id="socialAssetGrid" class="social-asset-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline" class="panel pipeline-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AFTER EVERY LIVE TRAINING</p>
+          <h2>From recording to usable agent knowledge.</h2>
+        </div>
+        <span class="muted">Designed around the Thursday training workflow</span>
+      </div>
+      <div class="pipeline-flow">
+        <article><span>01</span><strong>Training recorded</strong><p>Drop in the Zoom, Drive, YouTube, or uploaded video.</p></article>
+        <article><span>02</span><strong>Transcript indexed</strong><p>Searchable sections are tagged by topic, speaker, and source.</p></article>
+        <article><span>03</span><strong>Scripts extracted</strong><p>Client, agent-to-agent, and broker coaching language gets pulled out.</p></article>
+        <article><span>04</span><strong>Playbooks updated</strong><p>The best parts roll into step-by-step operating playbooks.</p></article>
+        <article><span>05</span><strong>Assets created</strong><p>Summary, checklist, and infographic are ready for agents.</p></article>
+        <article><span>06</span><strong>Ask the Broker updated</strong><p>Agents can ask questions from the new material right away.</p></article>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <div id="ask" class="ask-card panel ask-prototype-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">OPTION B · THREAD + ACTIVE GUIDANCE</p>
+            <h2>Ask Broker Brain</h2>
+            <p class="section-intro">A compact thread keeps the back-and-forth visible while the latest Broker Brain answer stays readable as a full guidance card.</p>
+          </div>
+          <span class="status-pill green">Recommended prototype</span>
+        </div>
+        <div class="ask-option-b-layout">
+          <aside class="ask-thread-panel ask-conversation-shell">
+            <section id="askThread" class="ask-thread" aria-label="Broker Brain conversation thread"></section>
+          </aside>
+          <div class="active-answer-panel">
+            <article id="answer" class="answer" hidden></article>
+            <div class="ask-composer">
+              <textarea id="askInput" rows="3" placeholder="Ask: How should I handle repair negotiations after inspection?"></textarea>
+              <div class="chips compact">
+              <button type="button" data-ask="How should I handle repair negotiations after inspection?">Repair negotiations</button>
+              <button type="button" data-ask="How do I work with my transaction coordinator?">Work with TC</button>
+              <button type="button" data-ask="What should I know about a 1031 exchange?">1031 basics</button>
+            </div>
+            <div id="askQuickReplies" class="ask-quick-replies" hidden></div>
+            <div class="ask-composer-actions"><span class="muted">Send clears the box and adds the question to the thread.</span><button type="button" id="askButton" class="primary">Ask Broker Brain</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="onboarding" class="panel onboarding-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">RECRUITING VALUE</p>
+            <h2>New Agent Onboarding</h2>
+          </div>
+          <span class="status-pill green">Onboarding path</span>
+        </div>
+        <ol class="timeline">
+          <li><span></span><div><strong>Day 1: Team operating system</strong><p>Brokerage expectations, tech stack, who to contact, how trainings work.</p></div></li>
+          <li><span></span><div><strong>Week 1: Core conversations</strong><p>Buyer consult, listing appointment, follow-up, TC workflow.</p></div></li>
+          <li><span></span><div><strong>First deal: Contract-to-close</strong><p>Inspection, repair negotiations, deadlines, TC handoff.</p></div></li>
+          <li><span></span><div><strong>Advanced agent: Investor knowledge</strong><p>1031 exchange basics, land/flip CMA, new construction opportunities.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="results" class="panel results-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TRAINING SEARCH</p>
+          <h2>Matching Knowledge</h2>
+        </div>
+        <span id="resultCount" class="muted">Showing all</span>
+      </div>
+      <div id="resultsGrid" class="cards-grid"></div>
+    </section>
+
+    <section id="playbooks" class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BROKER OPERATING SYSTEM</p>
+          <h2>Playbooks</h2>
+        </div>
+        <span class="muted">Built from trainings + transcripts</span>
+      </div>
+      <p class="section-intro">Click a playbook to expand it into the kind of operator-style workflow agents can actually follow.</p>
+      <div id="playbookGrid" class="playbook-grid"></div>
+      <article id="playbookDetail" class="playbook-detail"></article>
+    </section>
+
+    <section id="topics" class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BROWSE BY TOPIC</p>
+          <h2>Topic Library</h2>
+        </div>
+        <span class="muted">Brokerage knowledge map</span>
+      </div>
+      <div id="topicGrid" class="topic-grid"></div>
+    </section>
+
+    <section id="trainings" class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SOURCE MATERIAL</p>
+          <h2>Training Videos</h2>
+        </div>
+        <span class="muted">Searchable training library</span>
+      </div>
+      <div id="trainingList" class="training-list"></div>
+    </section>
+
+    <section id="positioning" class="panel proof-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">WHY THIS IS DIFFERENT</p>
+          <h2>Not generic answers. Your brokerage knowledge.</h2>
+        </div>
+        <span class="muted">Secondary proof point for the buyer conversation</span>
+      </div>
+      <div class="compare-grid">
+        <article><h3>Generic ChatGPT</h3><ul><li>Broad internet-style answers</li><li>No memory of your trainings</li><li>No link back to Craig, Marty, or Darrin’s actual guidance</li><li>No private brokerage access layer</li></ul></article>
+        <article class="featured"><h3>Broker Brain</h3><ul><li>Answers from your indexed training library</li><li>Shows which video/source the answer came from</li><li>Turns guidance into scripts, checklists, and playbooks</li><li>Protects the knowledge as an agent/member benefit</li></ul></article>
+      </div>
+    </section>
+
+    <section id="objections" class="panel objection-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AGENT COACHING</p>
+          <h2>Objection Library</h2>
+        </div>
+      </div>
+      <div class="objection-grid">
+        <article><span>Pricing</span><h3>“Zillow says my home is worth more.”</h3><p>Use the CMA/Pricing Playbook to explain market evidence, adjustments, and pricing strategy.</p></article>
+        <article><span>Inspection</span><h3>“The buyer is asking for too many repairs.”</h3><p>Use the Repair Negotiation Playbook to prioritize safety, lender-required items, and deal positioning.</p></article>
+        <article><span>Investor</span><h3>“Can I sell and avoid taxes?”</h3><p>Use 1031 Exchange Basics as a compliant starting point, then refer to a qualified intermediary/tax advisor.</p></article>
+      </div>
+    </section>
+    <footer class="powered-by-footer" aria-label="Powered by Makrly">
+      <span>Powered by</span>
+      <a href="https://makrly.io" target="_blank" rel="noopener" aria-label="Visit Makrly">
+        <img src="assets/brand/makrly-horizontal-logo-dark-bg-tight.svg" alt="Makrly" />
+      </a>
+    </footer>
+  </main>
+  <script src="assets/app.js?v=ask-flow-options-20260820"></script>
+</body>
+</html>
