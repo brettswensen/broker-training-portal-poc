@@ -924,7 +924,13 @@ function transcriptSourcesFor(query, fallbackAnswer){
   }));
 }
 
-const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+function askApiUrl(){
+  if(location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('vercel.app')){
+    return '/api/ask';
+  }
+  return 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+}
+const ASK_API_URL = askApiUrl();
 let askProgressTimers = [];
 let askRequestId = 0;
 let askThread = [];
