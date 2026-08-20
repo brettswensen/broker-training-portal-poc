@@ -425,7 +425,7 @@ function normalizeConversationPrompts(answer){
   return combined.filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index).slice(0, 4);
 }
 
-function answerMarkup(answer){
+function answerMarkup(answer, {includeThread=true}={}){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
@@ -443,9 +443,10 @@ function answerMarkup(answer){
   const whyList = steps.length
     ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
+  const threadHtml = includeThread ? renderAskThread() : '';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
-      ${renderAskThread()}
+      ${threadHtml}
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
         <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Use this as the next turn in the conversation, then keep probing where the situation needs more context.</p></div>
@@ -629,7 +630,7 @@ function prefillAskQuestion(question){
   askInput.value = question;
   askInput.focus({preventScroll:true});
   document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'start'});
-  if(answerEl){
+  if(answerEl && !document.getElementById('askThread')){
     answerEl.innerHTML = '<p class="muted">Question loaded. Hit Ask the Broker when you’re ready for Broker Brain to search the training and write the answer.</p>';
   }
 }
@@ -934,6 +935,46 @@ const ASK_API_URL = askApiUrl();
 let askProgressTimers = [];
 let askRequestId = 0;
 let askThread = [];
+const ASK_BUTTON_LABEL = document.getElementById('askButton')?.textContent?.trim() || 'Ask the Broker';
+const ASK_INITIAL_PLACEHOLDER = 'Ask: How should I handle repair negotiations after inspection?';
+const ASK_FOLLOWUP_PLACEHOLDER = 'Ask a follow-up or share more context...';
+
+function updateAskPlaceholder(){
+  const input = document.getElementById('askInput');
+  if(!input) return;
+  input.placeholder = askThread.length ? ASK_FOLLOWUP_PLACEHOLDER : ASK_INITIAL_PLACEHOLDER;
+}
+
+function setAskLoading(loading){
+  const input = document.getElementById('askInput');
+  const button = document.getElementById('askButton');
+  if(input) input.disabled = loading;
+  if(button){
+    button.disabled = loading;
+    button.textContent = loading ? 'Broker Brain is thinking...' : ASK_BUTTON_LABEL;
+  }
+}
+
+function renderThread(){
+  const el = document.getElementById('askThread');
+  if(!el) return;
+  if(!askThread.length){
+    el.innerHTML = '<p class="muted thread-empty">Ask a question to start the conversation.</p>';
+    return;
+  }
+  el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+    <div class="ask-thread-messages">${askThread.slice(-10).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>`;
+}
+
+function renderQuickReplies(answer){
+  const el = document.getElementById('askQuickReplies');
+  if(!el) return;
+  const cleanAnswer = cleanAnswerForDisplay(answer || {});
+  const prompts = normalizeConversationPrompts(cleanAnswer).slice(0, 5);
+  if(!prompts.length){ el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = prompts.map(prompt => `<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt)}</button>`).join('');
+}
 
 function askThreadContext(limit=6){
   return askThread.slice(-limit).map(item => ({role:item.role, text:item.text}));
@@ -952,9 +993,16 @@ function renderAskThread(){
 function clearAskThread(){
   askThread = [];
   const answerEl = document.getElementById('answer');
-  if(answerEl) answerEl.innerHTML = '<p class="muted">New conversation started. Share the situation you want to think through.</p>';
+  if(answerEl){
+    answerEl.hidden = !!document.getElementById('askThread');
+    answerEl.innerHTML = '<p class="muted">Ask a question to see how agents get a practical answer with related trainings and playbooks.</p>';
+  }
   const input = document.getElementById('askInput');
   if(input) input.value = '';
+  updateAskPlaceholder();
+  renderThread();
+  const quick = document.getElementById('askQuickReplies');
+  if(quick){ quick.hidden = true; quick.innerHTML = ''; }
 }
 
 function continueAsk(prompt){
@@ -983,6 +1031,16 @@ function scheduleAskProgress(answerEl, query, fallback, requestId){
   });
 }
 
+function showAskAnswer(answerEl, answer){
+  if(document.getElementById('askThread')){
+    answerEl.innerHTML = answerMarkup(answer, {includeThread:false});
+    renderThread();
+    renderQuickReplies(answer);
+  } else {
+    answerEl.innerHTML = answerMarkup(answer);
+  }
+}
+
 async function runAsk(query){
   query = String(query || '').trim() || 'general broker guidance';
   const focus = detectFocus(query);
@@ -994,7 +1052,12 @@ async function runAsk(query){
   const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
   askThread.push({role:'user', text:query});
   askThread = askThread.slice(-8);
+  const askInput = document.getElementById('askInput');
+  if(askInput){ askInput.value = ''; updateAskPlaceholder(); }
+  setAskLoading(true);
+  answerEl.hidden = false;
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
+  renderThread();
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
@@ -1019,16 +1082,21 @@ async function runAsk(query){
     };
     askThread.push({role:'broker', text: cleanDisplayText(mergedAnswer.intent || mergedAnswer.title || 'Here is the next step to consider.')});
     askThread = askThread.slice(-8);
-    answerEl.innerHTML = answerMarkup(mergedAnswer);
+    showAskAnswer(answerEl, mergedAnswer);
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
     await minimumProgress;
     if(requestId !== askRequestId) return;
     askThread.push({role:'broker', text: cleanDisplayText(fallback.intent || fallback.title || 'Here is the next step to consider.')});
     askThread = askThread.slice(-8);
-    answerEl.innerHTML = answerMarkup(fallback);
+    showAskAnswer(answerEl, fallback);
   } finally {
+    setAskLoading(false);
+    updateAskPlaceholder();
     if(requestId === askRequestId) clearAskProgressTimers();
     clearTimeout(timeoutId);
   }
 }
+
+updateAskPlaceholder();
+renderThread();
