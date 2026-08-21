@@ -945,6 +945,42 @@ function updateAskPlaceholder(){
   input.placeholder = askThread.length ? ASK_FOLLOWUP_PLACEHOLDER : ASK_INITIAL_PLACEHOLDER;
 }
 
+function renderGuidanceProgression(answer, {loading=false}={}){
+  const el = document.getElementById('askProgression');
+  if(!el) return;
+  const userTurns = askThread.filter(item => item.role === 'user').length;
+  const brokerTurns = askThread.filter(item => item.role === 'broker').length;
+  const latestUser = [...askThread].reverse().find(item => item.role === 'user')?.text || '';
+  const cleanAnswer = answer ? cleanAnswerForDisplay(answer) : null;
+  const missingCount = cleanAnswer?.missingContext?.length || 0;
+  const stage = !userTurns ? 'Ready to build guidance' : loading ? 'Updating broker guidance' : userTurns === 1 ? 'Initial recommendation' : 'Refined recommendation';
+  const detail = !userTurns
+    ? 'The right side will show the current best broker answer once the agent asks a question.'
+    : loading
+      ? 'Broker Brain is using the thread on the left to regenerate the current recommendation.'
+      : userTurns === 1
+        ? 'This answer is the first pass. Follow-ups sharpen it with deadlines, contract facts, client risk, and missing context.'
+        : 'This answer has been updated from the full thread, so the latest guidance should be more specific than the first response.';
+  const contextLabel = latestUser ? escapeHtml(latestUser.length > 120 ? latestUser.slice(0,117) + '...' : latestUser) : 'No question yet';
+  el.innerHTML = `
+    <div class="ask-progression-top">
+      <p class="eyebrow">GUIDANCE PROGRESSION</p>
+      <strong>${escapeHtml(stage)}</strong>
+      <span>${escapeHtml(detail)}</span>
+    </div>
+    <div class="progression-steps" aria-label="How guidance changes">
+      <div class="progression-step ${userTurns ? 'done' : 'active'}"><small>1</small><span>Initial ask frames the issue</span></div>
+      <div class="progression-step ${userTurns > 1 ? 'done' : userTurns ? 'active' : ''}"><small>2</small><span>Follow-ups add facts and constraints</span></div>
+      <div class="progression-step ${brokerTurns > 1 ? 'active' : ''}"><small>3</small><span>Current answer updates, prior context stays in thread</span></div>
+    </div>
+    <div class="progression-meta">
+      <span>${userTurns} user turn${userTurns === 1 ? '' : 's'}</span>
+      <span>${brokerTurns} broker answer${brokerTurns === 1 ? '' : 's'}</span>
+      ${missingCount ? `<span>${missingCount} gaps to sharpen</span>` : '<span>Ready for more context</span>'}
+    </div>
+    <p class="progression-current"><b>Current focus:</b> ${contextLabel}</p>`;
+}
+
 function setAskLoading(loading){
   const input = document.getElementById('askInput');
   const button = document.getElementById('askButton');
@@ -960,10 +996,12 @@ function renderThread(){
   if(!el) return;
   if(!askThread.length){
     el.innerHTML = '<p class="muted thread-empty">Ask a question to start the conversation.</p>';
+    renderGuidanceProgression();
     return;
   }
   el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
     <div class="ask-thread-messages">${askThread.slice(-10).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>`;
+  renderGuidanceProgression();
 }
 
 function renderQuickReplies(answer){
@@ -1038,6 +1076,7 @@ function showAskAnswer(answerEl, answer){
   if(document.getElementById('askThread')){
     answerEl.innerHTML = answerMarkup(answer, {includeThread:false});
     renderThread();
+    renderGuidanceProgression(answer);
     renderQuickReplies(answer);
   } else {
     answerEl.innerHTML = answerMarkup(answer);
@@ -1061,6 +1100,7 @@ async function runAsk(query){
   answerEl.hidden = false;
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
   renderThread();
+  renderGuidanceProgression(fallback, {loading:true});
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
