@@ -462,7 +462,7 @@ function answerMarkup(answer, {includeThread=true}={}){
         ${whyList}
       </section>
 
-      <section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
+      ${includeThread ? `<section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
         <div class="answer-section-head simple-head">
           <div><p class="eyebrow">FILL GAPS TO SHARPEN THIS</p><h4>Broker Brain can tailor this better with a little more context</h4></div>
         </div>
@@ -479,7 +479,7 @@ function answerMarkup(answer, {includeThread=true}={}){
         <div class="conversation-prompts">
           ${finalPrompts.map(prompt=>`<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt.replace(' recommendation',''))}</button>`).join('')}
         </div>
-      </section>
+      </section>` : ''}
 
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
