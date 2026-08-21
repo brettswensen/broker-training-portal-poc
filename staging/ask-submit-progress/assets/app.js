@@ -1007,8 +1007,11 @@ function clearAskThread(){
 
 function continueAsk(prompt){
   const input = document.getElementById('askInput');
-  if(input) input.value = prompt;
-  runAsk(prompt);
+  if(!input) return;
+  input.value = prompt;
+  input.focus({preventScroll:true});
+  input.setSelectionRange?.(input.value.length, input.value.length);
+  document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 function fillGap(item){
