@@ -30,8 +30,7 @@ const demoAnswers = {
     ],
     steps:["Start by separating health/safety issues from wish-list repairs.","Use the inspection report to prioritize items that affect financing, habitability, or deal confidence.","Anchor the conversation in solutions: repair, credit, price adjustment, or seller concession.","Keep emotion out of it and document every agreement clearly."],
     script:"Based on the inspection, there are a few items worth addressing. Let’s separate the items that affect safety, financing, or the buyer’s confidence from the cosmetic items. Then we can decide whether the cleanest path is a repair, a credit, a concession, or a price adjustment.",
-    followups:["What facts should I clarify before I respond?","What could make this repair ask backfire?","How should the guidance change if deadlines are tight?","Which training should I review to go deeper?"],
-    missingContext:["What does the inspection report flag as safety or financing issues?","How much time is left in the due diligence period?","Is the buyer willing to accept a credit instead of repairs?"]
+    followups:["Build repair request checklist","Show related scripts","Open inspection objection playbook"]
   },
   tc: {
     title:"Working with your transaction coordinator",
@@ -44,8 +43,7 @@ const demoAnswers = {
     ],
     steps:["Loop in the transaction coordinator immediately after going under contract.","Confirm deadlines, documents, contacts, lender info, and title contacts are complete.","Let the TC manage process visibility while the agent continues leading client communication.","Use a shared checklist so nothing falls through between acceptance and closing."],
     script:"We are bringing in our transaction coordinator now so deadlines, paperwork, title, lender details, and next steps stay organized. You will still have a clear main point of contact, and the TC helps make sure every detail is tracked through closing.",
-    followups:["What should I clarify with the TC first?","Where do agents usually get confused here?","What should I watch before this becomes urgent?","Which training explains the handoff best?"],
-    missingContext:["Has a transaction coordinator already been assigned?","What deadlines are coming up in the next 48-72 hours?","Is the lender/title contact information already in the file?"]
+    followups:["Open contract-to-close checklist","Create new-agent task list","Find deadline reminders"]
   },
   "1031": {
     title:"1031 exchange basics for agents",
@@ -58,8 +56,7 @@ const demoAnswers = {
     ],
     steps:["First clarify the timing: accepted offer is not the same as closed.","If the client has not closed yet, pause and get a qualified intermediary involved immediately before funds are received.","If the client already closed and received the money, the exchange may be blown or severely limited. Tell them to contact a QI or CPA right away.","Do not give tax or legal advice; explain the risk, document the recommendation, and make the expert handoff urgent."],
     script:"Because this is a potential 1031 exchange, timing matters a lot. If you have not closed yet, a qualified intermediary should be involved before you receive any funds. If you already closed and took the money, the exchange may be at risk, so the next call should be to a QI or CPA. They need to give the tax guidance.",
-    followups:["What timing facts should I confirm first?","Where is the line between agent guidance and tax advice?","What changes if the client already closed?","Which specialist should be involved next?"],
-    missingContext:["Has the client already closed and received funds?","Is the property an investment or primary residence?","What is the closing/timing window?"]
+    followups:["Call qualified intermediary","Confirm closing/fund status","Loop in CPA/tax advisor"]
   },
   cma: {
     title:"CMA and pricing guidance",
@@ -72,8 +69,7 @@ const demoAnswers = {
     ],
     steps:["Start with the closest comparable properties, then adjust for property type, condition, location, and income potential.","Flag unusual valuation factors like additions, nightly rental use, land value, or flip condition.","Use the CMA as a pricing conversation tool, not just a number.","Explain uncertainty clearly when the property does not fit the normal comp set."],
     script:"This is not a standard apples-to-apples CMA, so we should separate the value drivers: location, property condition, income potential, land value, and buyer or investor use case. Then we can use the comps as evidence instead of pretending there is one perfect number.",
-    followups:["What makes this property hard to comp?","What evidence would make the pricing story stronger?","How should I handle seller pushback on the number?","Which training should I review before the appointment?"],
-    missingContext:["What is the property type and condition?","Is there rental income, land value, or flip/investor intent?","What is the seller’s pricing expectation or timeline?"]
+    followups:["Open CMA playbook","Show pricing objection script","Find land valuation examples"]
   },
   general: {
     title:"Broker Brain answer",
@@ -86,8 +82,7 @@ const demoAnswers = {
     ],
     steps:["Start by separating safety, lending, and material defects from cosmetic asks.","Coach the client toward the cleanest remedy: repair, credit, concession, or price adjustment.","Frame the request around solving the problem and keeping the transaction together.","Document the agreement clearly and keep the TC aligned on deadlines."],
     script:"Focus the client on what actually matters from the inspection: safety issues, lending concerns, and material defects. Then recommend the cleanest remedy for the situation instead of treating the inspection response like a wish list. The goal is to protect the client, keep the deal together where appropriate, and document the agreement clearly.",
-    followups:["What context would change the recommendation?","What risk should I watch for first?","Which part should I dig into next?","What would be the safest next question to ask?"],
-    missingContext:["What is the client situation or decision in front of the agent?","Are there deadlines, contract terms, or specialists already involved?","Which topic area does this belong to?"]
+    followups:["Open repair playbook","Draft client text","Review deadline checklist"]
   }
 };
 
@@ -97,7 +92,7 @@ function appBasePath(){
     if(parts[1] === 'staging' && parts[2]) return '/' + parts.slice(0,3).join('/');
     return '/broker-training-portal-poc';
   }
-  const appMarkers = ['design-pass','library','all-content','playbooks','topics','scripts','pipeline','social-assets','onboarding','training-videos','objections'];
+  const appMarkers = ['design-pass','library','playbooks','topics','scripts','pipeline','social-assets'];
   const markerIndex = parts.findIndex(part => appMarkers.includes(part));
   return markerIndex > 0 ? '/' + parts.slice(0, markerIndex).join('/') : '';
 }
@@ -192,10 +187,10 @@ function detectFocus(q){
 }
 
 function thumbnailStyle(t){
-  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}?v=training-card-qa-20260818')"` : '';
+  return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
 }
 function card(t){
-  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)" aria-label="Watch ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -221,7 +216,6 @@ function renderSavedWorkspace(){
 
 
 const socialContentExamples = [
-
   {id:'deadline-friday-saveable-01', title:'Deal deadline stress', source:'Planned Decision Making', bucket:'Topic: contract deadlines + decision pressure', audience:'buyers and sellers under contract', recommendation:'Strong public post', risk:'General education only. No guarantee of contract outcome.', hook:'Before a deadline gets weird, ask these 3 questions.', caption:'Contract deadlines have a way of creating fake urgency. Before you react, slow it down: what do we know, what are we guessing, and what changes if we wait? That little pause can keep a stressful moment from turning into a messy one.', cta:'Save this for your next contract deadline.', hashtags:'#RealEstateAdvice #HomeBuyingTips #ContractDeadline #AgentTips', image:'content-ingestion/social-assets/social-first-batch-002-images/deadline-friday-saveable-01.png', carousel:['What do we know?','What are we guessing?','What happens if we wait?','A calm pause can protect the deal.','Save this before deadline week.'], newsletter:'Client-facing insight: deadline pressure is where agents earn trust. The best next step is often to separate facts from assumptions before reacting.', assets:['1080x1920 post image','Caption draft','Carousel outline','Review note']},
   {id:'appliances-contract-saveable-01', title:'Contract inclusion reminder', source:'Common REPC Errors to Avoid', bucket:'Topic: buyer offer details', audience:'buyers writing offers', recommendation:'Strong public post', risk:'General real estate education only. Clients should review contracts with qualified professionals.', hook:'If you want the fridge, write it down.', caption:'One of the least glamorous parts of buying a house is also one of the most important: writing down exactly what stays. If you care about the fridge, washer, curtains, shelving, or a mounted item, do not assume. Put it in the contract and make it clear.', cta:'Send this to someone writing an offer soon.', hashtags:'#HomeBuyingTips #RealEstateContracts #BuyerTips #AgentAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/appliances-contract-saveable-01.png', carousel:['Verbal assumptions do not move with the house.','Appliances should be clear.','Fixtures should be clear.','Mounted items should be clear.','If it matters, write it down.'], newsletter:'Buyer reminder: inclusions and exclusions are easy to overlook until they become expensive. If the client cares about an item, make it clear in writing.', assets:['1080x1920 post image','Caption draft','Buyer reminder carousel','Compliance note']},
   {id:'inspection-wishlist-kills-deals-01', title:'Inspection negotiation tip', source:'Repair Negotiations', bucket:'Topic: inspection objections', audience:'buyers after inspection', recommendation:'Strong public post', risk:'General education only. Does not guarantee seller agreement.', hook:'The inspection is not a shopping list.', caption:'After inspection, it is tempting to ask for every little thing. That can backfire. The strongest repair requests usually focus on safety, function, and major defects. You can still care about the small stuff. Just do not let the small stuff kill the deal.', cta:'Save this before your inspection period.', hashtags:'#InspectionTips #HomeBuying #RepairNegotiation #RealEstateAdvice', image:'content-ingestion/social-assets/social-first-batch-002-images/inspection-wishlist-kills-deals-01.png', carousel:['Do not turn the report into a wish list.','Start with safety.','Then function.','Then major defects.','Keep the deal strategy clear.'], newsletter:'Inspection periods are emotional. Strong agents help clients separate material issues from wish-list items so the repair request protects the client without unnecessarily blowing up the deal.', assets:['1080x1920 post image','Caption draft','Inspection carousel','Review note']},
@@ -236,7 +230,6 @@ let activeSocialFormat = 'caption';
 function renderSocialStudio(){
   const list = document.getElementById('socialSourceList');
   if(!list) return;
-
   list.innerHTML = socialContentExamples.map((item,index)=>`<button type="button" class="social-source-button ${index===activeSocialIndex?'active':''}" onclick="selectSocialSource(${index})"><span>${escapeHtml(item.recommendation)}</span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.audience)}</small></button>`).join('');
   document.querySelectorAll('[data-social-format]').forEach(btn=>{
     btn.classList.toggle('active', btn.dataset.socialFormat === activeSocialFormat);
@@ -247,7 +240,7 @@ function renderSocialStudio(){
 function selectSocialSource(index){ activeSocialIndex = index; renderSocialStudio(); }
 function socialFormatBody(item){
   if(activeSocialFormat === 'carousel') return `<ol class="carousel-preview">${item.carousel.map(slide=>`<li>${escapeHtml(slide)}</li>`).join('')}</ol>`;
-  if(activeSocialFormat === 'newsletter') return `<p class="social-hook">Facebook post idea</p><p>${escapeHtml(item.newsletter)}</p><p class="social-cta">${escapeHtml(item.cta)}</p>`;
+  if(activeSocialFormat === 'newsletter') return `<p>${escapeHtml(item.newsletter)}</p>`;
   return `<p class="social-hook">${escapeHtml(item.hook)}</p><p>${escapeHtml(item.caption)}</p><p class="social-cta">${escapeHtml(item.cta)}</p><small>${escapeHtml(item.hashtags)}</small>`;
 }
 function renderSocialPreview(){
@@ -257,7 +250,6 @@ function renderSocialPreview(){
   const meta = document.getElementById('socialPreviewMeta');
   const assets = document.getElementById('socialAssetGrid');
   if(!card || !item) return;
-
   if(title) title.textContent = `${item.title} ${activeSocialFormat} draft`;
   if(meta) meta.textContent = `${item.source} · ${item.audience}`;
   const draft = `${item.caption} ${item.cta}`;
@@ -269,20 +261,9 @@ function renderSocialPreview(){
 
 function renderResults(query=''){
   const q=query.toLowerCase().trim();
-  const panel=document.getElementById('results');
-  const count=document.getElementById('resultCount');
-  const grid=document.getElementById('resultsGrid');
-  if(!panel || !count || !grid) return;
-  if(!q){
-    panel.hidden = true;
-    count.textContent = 'Search to see matches';
-    grid.innerHTML = '';
-    return;
-  }
-  const results=trainings.filter(t=>[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
-  panel.hidden = false;
-  count.textContent=`${results.length} match${results.length===1?'':'es'} for “${query}”`;
-  grid.innerHTML=results.map(card).join('')||`<p class="muted">No exact matches yet. Try a broader topic or open the Library page.</p>`;
+  const results=trainings.filter(t=>!q||[t.title,t.category,t.summary,t.excerpt,...t.topics,...t.playbooks].join(' ').toLowerCase().includes(q));
+  document.getElementById('resultCount').textContent=q ? `${results.length} match${results.length===1?'':'es'} for “${query}”` : `Showing all`;
+  document.getElementById('resultsGrid').innerHTML=results.map(card).join('')||`<p class="muted">No exact matches yet. Try a broader topic or open the playbooks page.</p>`;
 }
 
 function renderLatestTraining(){
@@ -295,7 +276,7 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)" aria-label="Watch ${escapeHtml(t.title)}">
+      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
         <span class="play">▶</span>
         <strong>${escapeHtml(t.category)}</strong>
       </button>
@@ -305,7 +286,7 @@ function renderLatestTraining(){
         <p>${escapeHtml(t.summary)}</p>
         <div class="asset-row">${t.deliverables.slice(0,4).map(d=>`<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="video-actions">
-          <button data-title="${escapeHtml(t.title)}" onclick="watchTraining(this.dataset.title)">Watch video</button>
+          <button data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)">Watch / search</button>
           <button data-topic="${escapeHtml(t.topics[0] || t.category)}" onclick="askAbout(this.dataset.topic)">Ask about this</button>
         </div>
       </div>
@@ -425,7 +406,7 @@ function normalizeConversationPrompts(answer){
   return combined.filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index).slice(0, 4);
 }
 
-function answerMarkup(answer){
+function answerMarkup(answer, {includeThread=true}={}){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
@@ -443,9 +424,10 @@ function answerMarkup(answer){
   const whyList = steps.length
     ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
+  const threadHtml = includeThread ? renderAskThread() : '';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
-      ${renderAskThread()}
+      ${threadHtml}
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
         <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Use this as the next turn in the conversation, then keep probing where the situation needs more context.</p></div>
@@ -461,7 +443,7 @@ function answerMarkup(answer){
         ${whyList}
       </section>
 
-      <section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
+      ${includeThread ? `<section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
         <div class="answer-section-head simple-head">
           <div><p class="eyebrow">FILL GAPS TO SHARPEN THIS</p><h4>Broker Brain can tailor this better with a little more context</h4></div>
         </div>
@@ -478,7 +460,7 @@ function answerMarkup(answer){
         <div class="conversation-prompts">
           ${finalPrompts.map(prompt=>`<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt.replace(' recommendation',''))}</button>`).join('')}
         </div>
-      </section>
+      </section>` : ''}
 
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
@@ -524,10 +506,9 @@ function relatedPlaybooksFor(text){
 
 function askProgressSteps(answer){
   const terms = (answer.queryTerms || []).map(t=>`<span class="tag">${t}</span>`).join('');
-  const sourceTags = (answer.sources || []).slice(0,4).map(s=>`<span class="tag">${escapeHtml(s.name || s.cite || 'training')}</span>`).join('') || 'Looking for the closest examples';
   return [
     {label:'Searching the training library', meta:'Scanning saved brokerage training'},
-    {label:'Finding matching transcript sections', meta:sourceTags},
+    {label:'Finding matching transcript sections', meta:terms || 'Looking for the closest examples'},
     {label:'Checking the broker notes', meta:`${(answer.sources || []).length} likely matches found`},
     {label:'Preparing the recommended next step', meta:'guidance + reasoning + client wording'}
   ];
@@ -587,11 +568,11 @@ function handleFollowup(label){
   const lower = label.toLowerCase();
   if (typeof isDesignerRouteDashboard !== 'undefined' && isDesignerRouteDashboard) {
     if (lower.includes('playbook')) {
-      window.location.href = appPath(`/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`);
+      window.location.href = `/playbooks/${label ? `?q=${encodeURIComponent(label)}` : ''}`;
       return;
     }
     if (lower.includes('topic') || lower.includes('browse')) {
-      window.location.href = appPath('/topics/');
+      window.location.href = '/topics/';
       return;
     }
     window.location.href = librarySearchUrl(label);
@@ -605,21 +586,10 @@ function handleFollowup(label){
 }
 
 
-function watchTraining(title){
-  const training = trainings.find(t => t.title === title || t.id === title);
-  const url = trainingWatchUrl(training);
-  if(url){
-    window.open(url, '_blank', 'noopener');
-    return;
-  }
-  openTraining(title);
-}
-
 function openTraining(title){
-  if (isDesignerRouteDashboard || !document.getElementById('results')) { routeToLibrarySearch(title); return; }
   document.getElementById('globalSearch').value = title;
   renderResults(title);
-  document.getElementById('results')?.scrollIntoView({behavior:'smooth'});
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
 
 function prefillAskQuestion(question){
@@ -639,7 +609,7 @@ function askAbout(topic){
 }
 
 const isDesignerRouteDashboard = document.body.classList.contains('designer-pass') && !new URLSearchParams(location.search).has('compare');
-const librarySearchUrl = query => appPath(`/all-content/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
+const librarySearchUrl = query => appPath(`/library/${String(query || '').trim() ? `?q=${encodeURIComponent(String(query).trim())}` : ''}`);
 const routeToLibrarySearch = query => { window.location.href = librarySearchUrl(query); };
 
 const globalSearchEl = document.getElementById('globalSearch');
@@ -665,7 +635,6 @@ document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',
   document.getElementById('all-content')?.scrollIntoView({behavior:'smooth'});
 }));
 document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();prefillAskQuestion(b.dataset.ask);}));
-
 document.getElementById('askButton')?.addEventListener('click',e=>{e.preventDefault();runAsk(document.getElementById('askInput')?.value||'general')});
 
 function setupMobileNav(){
@@ -685,59 +654,20 @@ function setupMobileNav(){
   document.addEventListener('keydown', event => { if(event.key === 'Escape') close(); });
 }
 
-function setupActiveDashboardNav(){
-  const nav = document.getElementById('dashboardNav');
-  if(!nav) return;
-  const links = Array.from(nav.querySelectorAll('a'));
-  if(!links.length) return;
-
-  const normalizePath = path => (path || '/').replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
-  const currentPath = normalizePath(location.pathname);
-  const currentHash = location.hash || '';
-
-  const samePageLinks = links.filter(link => {
-    try { return normalizePath(new URL(link.getAttribute('href') || '', location.href).pathname) === currentPath; }
-    catch(e){ return false; }
-  });
-
-  let activeLink = null;
-  if(currentHash){
-    activeLink = samePageLinks.find(link => {
-      try { return new URL(link.getAttribute('href') || '', location.href).hash === currentHash; }
-      catch(e){ return false; }
-    });
-  }
-  if(!activeLink){
-    activeLink = samePageLinks.find(link => {
-      try { return !new URL(link.getAttribute('href') || '', location.href).hash; }
-      catch(e){ return false; }
-    }) || samePageLinks[0] || links.find(link => link.classList.contains('active')) || links[0];
-  }
-
-  links.forEach(link => {
-    const isActive = link === activeLink;
-    link.classList.toggle('active', isActive);
-    if(isActive) link.setAttribute('aria-current', 'page');
-    else link.removeAttribute('aria-current');
-  });
-}
-
-setupActiveDashboardNav();
 setupMobileNav();
-window.addEventListener('hashchange', setupActiveDashboardNav);
 if(document.getElementById('latestTrainingRail')) renderLatestTraining();
 if(document.getElementById('playbookGrid')) renderPlaybooks();
 if(document.getElementById('topicGrid')) renderTopics();
 if(document.getElementById('trainingList')) renderTrainings();
-if(document.getElementById('scriptPreviewGrid')) renderScriptPreview();
-if(document.getElementById('savedWorkspaceList')) renderSavedWorkspace();
+if(document.getElementById('scriptPreview')) renderScriptPreview();
+if(document.getElementById('savedWorkspace')) renderSavedWorkspace();
 renderSocialStudio();
 
 // Real transcript index: GitHub Pages-safe client-side search over PDF transcript text.
 let transcriptIndex = { records: [], chunks: [] };
 let transcriptReady = false;
 
-fetch(appPath('/data/search-index.json'))
+fetch('data/search-index.json')
   .then(r => r.ok ? r.json() : Promise.reject(new Error('index not found')))
   .then(idx => {
     transcriptIndex = idx;
@@ -934,6 +864,89 @@ const ASK_API_URL = askApiUrl();
 let askProgressTimers = [];
 let askRequestId = 0;
 let askThread = [];
+const ASK_BUTTON_LABEL = document.getElementById('askButton')?.textContent?.trim() || 'Ask the Broker';
+const ASK_INITIAL_PLACEHOLDER = 'Ask: How should I handle repair negotiations after inspection?';
+const ASK_FOLLOWUP_PLACEHOLDER = 'Ask a follow-up or share more context...';
+
+function updateAskPlaceholder(){
+  const input = document.getElementById('askInput');
+  if(!input) return;
+  input.placeholder = askThread.length ? ASK_FOLLOWUP_PLACEHOLDER : ASK_INITIAL_PLACEHOLDER;
+}
+
+function renderGuidanceProgression(answer, {loading=false}={}){
+  const el = document.getElementById('askProgression');
+  if(!el) return;
+  const userTurns = askThread.filter(item => item.role === 'user').length;
+  const brokerTurns = askThread.filter(item => item.role === 'broker').length;
+  const latestUser = [...askThread].reverse().find(item => item.role === 'user')?.text || '';
+  const cleanAnswer = answer ? cleanAnswerForDisplay(answer) : null;
+  const missingCount = cleanAnswer?.missingContext?.length || 0;
+  const stage = !userTurns ? 'Ready when you are' : loading ? 'Working through your latest detail' : userTurns === 1 ? 'First broker read' : 'Advice is getting more specific';
+  const detail = !userTurns
+    ? 'Ask Broker Brain like you would ask the broker in Slack: give the situation, then add details as they come up.'
+    : loading
+      ? 'Broker Brain is rereading the thread and tightening the recommendation around what you just added.'
+      : userTurns === 1
+        ? 'This is the first pass. Add deadlines, client priorities, contract facts, or risk details and the recommendation will tighten up.'
+        : 'The answer below is now using the earlier context plus your latest follow-up, so it should feel closer to what you would actually say or do next.';
+  const contextLabel = latestUser ? escapeHtml(latestUser.length > 120 ? latestUser.slice(0,117) + '...' : latestUser) : 'Waiting on your first question';
+  const detailsLabel = !userTurns ? 'Ready for the situation' : missingCount ? `${missingCount} detail${missingCount === 1 ? '' : 's'} would help` : 'Enough context for a next step';
+  const brokerReadLabel = brokerTurns ? `${brokerTurns} broker read${brokerTurns === 1 ? '' : 's'}` : 'No broker read yet';
+  const sharedLabel = userTurns ? `${userTurns} thing${userTurns === 1 ? '' : 's'} shared` : 'Nothing shared yet';
+  el.innerHTML = `
+    <div class="ask-progression-top">
+      <p class="eyebrow">WHERE THIS ANSWER STANDS</p>
+      <strong>${escapeHtml(stage)}</strong>
+      <span>${escapeHtml(detail)}</span>
+    </div>
+    <div class="progression-steps" aria-label="How this answer is shaping up">
+      <div class="progression-step ${userTurns ? 'done' : 'active'}"><small>1</small><span>Start with the agent’s real question</span></div>
+      <div class="progression-step ${userTurns > 1 ? 'done' : userTurns ? 'active' : ''}"><small>2</small><span>Add the facts that change the advice</span></div>
+      <div class="progression-step ${brokerTurns > 1 ? 'active' : ''}"><small>3</small><span>Use the latest guidance below</span></div>
+    </div>
+    <div class="progression-meta">
+      <span>${escapeHtml(sharedLabel)}</span>
+      <span>${escapeHtml(brokerReadLabel)}</span>
+      <span>${escapeHtml(detailsLabel)}</span>
+    </div>
+    <p class="progression-current"><b>Working from:</b> ${contextLabel}</p>`;
+}
+
+function setAskLoading(loading){
+  const input = document.getElementById('askInput');
+  const button = document.getElementById('askButton');
+  const newThreadButton = document.getElementById('newAskThreadButton');
+  if(input) input.disabled = loading;
+  if(newThreadButton) newThreadButton.disabled = loading;
+  if(button){
+    button.disabled = loading;
+    button.textContent = loading ? 'Broker Brain is thinking...' : ASK_BUTTON_LABEL;
+  }
+}
+
+function renderThread(){
+  const el = document.getElementById('askThread');
+  if(!el) return;
+  if(!askThread.length){
+    el.innerHTML = '<p class="muted thread-empty">Ask a question to start the conversation.</p>';
+    renderGuidanceProgression();
+    return;
+  }
+  el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
+    <div class="ask-thread-messages">${askThread.slice(-10).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>`;
+  renderGuidanceProgression();
+}
+
+function renderQuickReplies(answer){
+  const el = document.getElementById('askQuickReplies');
+  if(!el) return;
+  const cleanAnswer = cleanAnswerForDisplay(answer || {});
+  const prompts = normalizeConversationPrompts(cleanAnswer).slice(0, 5);
+  if(!prompts.length){ el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = prompts.map(prompt => `<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt)}</button>`).join('');
+}
 
 function askThreadContext(limit=6){
   return askThread.slice(-limit).map(item => ({role:item.role, text:item.text}));
@@ -942,25 +955,44 @@ function askThreadContext(limit=6){
 function renderAskThread(){
   if(!askThread.length) return '';
   return `<section class="ask-thread" aria-label="Broker Brain conversation thread">
-    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
     <div class="ask-thread-messages">
       ${askThread.slice(-6).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}
     </div>
   </section>`;
 }
 
+function startNewAskThread(){
+  const input = document.getElementById('askInput');
+  const hasDraft = !!(input && input.value.trim());
+  const hasHistory = askThread.length > 0;
+  if((hasHistory || hasDraft) && !window.confirm('Start a new Ask Broker Brain conversation? This clears the current thread and draft so the next answer starts fresh.')) return;
+  clearAskThread();
+  if(input) input.focus();
+}
+
 function clearAskThread(){
   askThread = [];
   const answerEl = document.getElementById('answer');
-  if(answerEl) answerEl.innerHTML = '<p class="muted">New conversation started. Share the situation you want to think through.</p>';
+  if(answerEl){
+    answerEl.hidden = !!document.getElementById('askThread');
+    answerEl.innerHTML = '<p class="muted">Ask a question to see how agents get a practical answer with related trainings and playbooks.</p>';
+  }
   const input = document.getElementById('askInput');
   if(input) input.value = '';
+  updateAskPlaceholder();
+  renderThread();
+  const quick = document.getElementById('askQuickReplies');
+  if(quick){ quick.hidden = true; quick.innerHTML = ''; }
 }
 
 function continueAsk(prompt){
   const input = document.getElementById('askInput');
-  if(input) input.value = prompt;
-  runAsk(prompt);
+  if(!input) return;
+  input.value = prompt;
+  input.focus({preventScroll:true});
+  input.setSelectionRange?.(input.value.length, input.value.length);
+  document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 function fillGap(item){
@@ -983,6 +1015,17 @@ function scheduleAskProgress(answerEl, query, fallback, requestId){
   });
 }
 
+function showAskAnswer(answerEl, answer){
+  if(document.getElementById('askThread')){
+    answerEl.innerHTML = answerMarkup(answer, {includeThread:false});
+    renderThread();
+    renderGuidanceProgression(answer);
+    renderQuickReplies(answer);
+  } else {
+    answerEl.innerHTML = answerMarkup(answer);
+  }
+}
+
 async function runAsk(query){
   query = String(query || '').trim() || 'general broker guidance';
   const focus = detectFocus(query);
@@ -994,7 +1037,13 @@ async function runAsk(query){
   const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
   askThread.push({role:'user', text:query});
   askThread = askThread.slice(-8);
+  const askInput = document.getElementById('askInput');
+  if(askInput){ askInput.value = ''; updateAskPlaceholder(); }
+  setAskLoading(true);
+  answerEl.hidden = false;
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
+  renderThread();
+  renderGuidanceProgression(fallback, {loading:true});
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
@@ -1019,16 +1068,21 @@ async function runAsk(query){
     };
     askThread.push({role:'broker', text: cleanDisplayText(mergedAnswer.intent || mergedAnswer.title || 'Here is the next step to consider.')});
     askThread = askThread.slice(-8);
-    answerEl.innerHTML = answerMarkup(mergedAnswer);
+    showAskAnswer(answerEl, mergedAnswer);
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
     await minimumProgress;
     if(requestId !== askRequestId) return;
     askThread.push({role:'broker', text: cleanDisplayText(fallback.intent || fallback.title || 'Here is the next step to consider.')});
     askThread = askThread.slice(-8);
-    answerEl.innerHTML = answerMarkup(fallback);
+    showAskAnswer(answerEl, fallback);
   } finally {
+    setAskLoading(false);
+    updateAskPlaceholder();
     if(requestId === askRequestId) clearAskProgressTimers();
     clearTimeout(timeoutId);
   }
 }
+
+updateAskPlaceholder();
+renderThread();
