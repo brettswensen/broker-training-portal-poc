@@ -953,32 +953,35 @@ function renderGuidanceProgression(answer, {loading=false}={}){
   const latestUser = [...askThread].reverse().find(item => item.role === 'user')?.text || '';
   const cleanAnswer = answer ? cleanAnswerForDisplay(answer) : null;
   const missingCount = cleanAnswer?.missingContext?.length || 0;
-  const stage = !userTurns ? 'Ready to build guidance' : loading ? 'Updating broker guidance' : userTurns === 1 ? 'Initial recommendation' : 'Refined recommendation';
+  const stage = !userTurns ? 'Ready when you are' : loading ? 'Working through your latest detail' : userTurns === 1 ? 'First broker read' : 'Advice is getting more specific';
   const detail = !userTurns
-    ? 'The right side will show the current best broker answer once the agent asks a question.'
+    ? 'Ask Broker Brain like you would ask the broker in Slack: give the situation, then add details as they come up.'
     : loading
-      ? 'Broker Brain is using the thread on the left to regenerate the current recommendation.'
+      ? 'Broker Brain is rereading the thread and tightening the recommendation around what you just added.'
       : userTurns === 1
-        ? 'This answer is the first pass. Follow-ups sharpen it with deadlines, contract facts, client risk, and missing context.'
-        : 'This answer has been updated from the full thread, so the latest guidance should be more specific than the first response.';
-  const contextLabel = latestUser ? escapeHtml(latestUser.length > 120 ? latestUser.slice(0,117) + '...' : latestUser) : 'No question yet';
+        ? 'This is the first pass. Add deadlines, client priorities, contract facts, or risk details and the recommendation will tighten up.'
+        : 'The answer below is now using the earlier context plus your latest follow-up, so it should feel closer to what you would actually say or do next.';
+  const contextLabel = latestUser ? escapeHtml(latestUser.length > 120 ? latestUser.slice(0,117) + '...' : latestUser) : 'Waiting on your first question';
+  const detailsLabel = !userTurns ? 'Ready for the situation' : missingCount ? `${missingCount} detail${missingCount === 1 ? '' : 's'} would help` : 'Enough context for a next step';
+  const brokerReadLabel = brokerTurns ? `${brokerTurns} broker read${brokerTurns === 1 ? '' : 's'}` : 'No broker read yet';
+  const sharedLabel = userTurns ? `${userTurns} thing${userTurns === 1 ? '' : 's'} shared` : 'Nothing shared yet';
   el.innerHTML = `
     <div class="ask-progression-top">
-      <p class="eyebrow">GUIDANCE PROGRESSION</p>
+      <p class="eyebrow">WHERE THIS ANSWER STANDS</p>
       <strong>${escapeHtml(stage)}</strong>
       <span>${escapeHtml(detail)}</span>
     </div>
-    <div class="progression-steps" aria-label="How guidance changes">
-      <div class="progression-step ${userTurns ? 'done' : 'active'}"><small>1</small><span>Initial ask frames the issue</span></div>
-      <div class="progression-step ${userTurns > 1 ? 'done' : userTurns ? 'active' : ''}"><small>2</small><span>Follow-ups add facts and constraints</span></div>
-      <div class="progression-step ${brokerTurns > 1 ? 'active' : ''}"><small>3</small><span>Current answer updates, prior context stays in thread</span></div>
+    <div class="progression-steps" aria-label="How this answer is shaping up">
+      <div class="progression-step ${userTurns ? 'done' : 'active'}"><small>1</small><span>Start with the agent’s real question</span></div>
+      <div class="progression-step ${userTurns > 1 ? 'done' : userTurns ? 'active' : ''}"><small>2</small><span>Add the facts that change the advice</span></div>
+      <div class="progression-step ${brokerTurns > 1 ? 'active' : ''}"><small>3</small><span>Use the latest guidance below</span></div>
     </div>
     <div class="progression-meta">
-      <span>${userTurns} user turn${userTurns === 1 ? '' : 's'}</span>
-      <span>${brokerTurns} broker answer${brokerTurns === 1 ? '' : 's'}</span>
-      ${missingCount ? `<span>${missingCount} gaps to sharpen</span>` : '<span>Ready for more context</span>'}
+      <span>${escapeHtml(sharedLabel)}</span>
+      <span>${escapeHtml(brokerReadLabel)}</span>
+      <span>${escapeHtml(detailsLabel)}</span>
     </div>
-    <p class="progression-current"><b>Current focus:</b> ${contextLabel}</p>`;
+    <p class="progression-current"><b>Working from:</b> ${contextLabel}</p>`;
 }
 
 function setAskLoading(loading){
