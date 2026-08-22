@@ -166,6 +166,7 @@ function cleanAnswerForDisplay(answer){
     steps: (answer.steps || []).map(cleanDisplayText).filter(Boolean),
     script: cleanDisplayText(answer.script),
     followups: (answer.followups || []).map(cleanDisplayText).filter(Boolean),
+    missingContext: (answer.missingContext || []).map(cleanDisplayText).filter(Boolean),
     sources: (answer.sources || []).map(s => ({
       ...s,
       name: cleanDisplayText(s.name),
@@ -386,16 +387,36 @@ function escalationList(answer){
   return ['The issue touches tax, legal, lending, inspection, or contract interpretation.', 'The agent is uncertain after reading the relevant training.', 'A client decision is urgent or could put the transaction at risk.'];
 }
 
-function answerMarkup(answer){
+function conversationalPromptBank(answer){
+  const text = [answer.title, answer.intent, ...(answer.queryTerms || []), ...(answer.steps || [])].join(' ').toLowerCase();
+  if(text.includes('repair') || text.includes('inspection')) return ['What facts should I clarify before I respond?', 'What could make this repair ask backfire?', 'How should this change if deadlines are tight?', 'What should I ask the buyer before deciding?'];
+  if(text.includes('1031') || text.includes('tax') || text.includes('exchange')) return ['What timing facts should I confirm first?', 'Where is the line between agent guidance and tax advice?', 'What changes if the client already closed?', 'Which specialist should be involved next?'];
+  if(text.includes('cma') || text.includes('pricing') || text.includes('price') || text.includes('seller')) return ['What evidence would make the pricing story stronger?', 'What should I ask the seller before pushing back?', 'How should this change if the seller is emotional?', 'Which training should I review before the appointment?'];
+  if(text.includes('transaction') || text.includes('tc') || text.includes('contract')) return ['What should I clarify with the TC first?', 'Where do agents usually get confused here?', 'What should I watch before this becomes urgent?', 'What should I ask before I update the client?'];
+  return ['What context would change the recommendation?', 'What risk should I watch for first?', 'Which part should I dig into next?', 'What would be the safest next question to ask?'];
+}
+
+function normalizeConversationPrompts(answer){
+  const actionLead = /^(suggest|recommend|advise|call|open|create|draft|copy|send|loop|review|confirm|find|build)\b/i;
+  const usable = (answer.followups || [])
+    .map(cleanDisplayText)
+    .filter(Boolean)
+    .filter(prompt => /\?/.test(prompt) && !actionLead.test(prompt));
+  const combined = [...usable, ...conversationalPromptBank(answer)];
+  return combined.filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index).slice(0, 4);
+}
+
+function answerMarkup(answer, {includeThread=true}={}){
   const cleanAnswer = cleanAnswerForDisplay(answer);
   const scriptText = String(cleanAnswer.script || '').trim().replace(/^[\'\"“”]+|[\'\"“”]+$/g, '');
   const sources = cleanAnswer.sources || [];
   const steps = cleanAnswer.steps || [];
-  let nextActions = (cleanAnswer.followups || []).filter(Boolean);
-  if(!nextActions.length){
-    const titleText = [cleanAnswer.title, ...steps, ...sources.map(s=>s.name)].join(' ').toLowerCase();
-    nextActions = relatedPlaybooksFor(titleText).map(p => `Open ${p.name}`);
-  }
+  let deeperPrompts = normalizeConversationPrompts(cleanAnswer);
+  const currentUserText = [...askThread].reverse().find(item => item.role === 'user')?.text?.toLowerCase() || '';
+  const finalPrompts = [...deeperPrompts, 'What context would change this recommendation?', 'What should I ask before deciding?']
+    .filter((prompt, index, arr) => arr.findIndex(other => other.toLowerCase() === prompt.toLowerCase()) === index)
+    .filter(prompt => prompt.toLowerCase() !== currentUserText)
+    .slice(0, 5);
   const genericGuidance = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(cleanAnswer.intent || '');
   const guidanceText = cleanAnswer.intent && !genericGuidance
     ? cleanAnswer.intent
@@ -403,11 +424,13 @@ function answerMarkup(answer){
   const whyList = steps.length
     ? `<ul class="broker-take-list">${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`
     : '<p class="muted">Related team guidance will appear here as more transcripts are connected.</p>';
+  const threadHtml = includeThread ? renderAskThread() : '';
   return `
     <div class="ai-answer ready sourced-answer practical-answer">
+      ${threadHtml}
       <div class="answer-topline answer-first">
         <span class="spark">✦</span>
-        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Recommended guidance for the agent to use or adapt.</p></div>
+        <div><h3>${escapeHtml(cleanAnswer.title || 'Broker answer')}</h3><p>Use this as the next turn in the conversation, then keep probing where the situation needs more context.</p></div>
       </div>
 
       <section class="answer-section broker-take-section">
@@ -416,13 +439,32 @@ function answerMarkup(answer){
       </section>
 
       <section class="answer-section broker-take-section">
-        <p class="eyebrow">WHAT TO DO NEXT</p>
+        <p class="eyebrow">HOW TO THINK ABOUT IT</p>
         ${whyList}
       </section>
 
+      ${includeThread ? `<section class="answer-section gaps-section" ${cleanAnswer.missingContext.length ? '' : 'hidden'}>
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">FILL GAPS TO SHARPEN THIS</p><h4>Broker Brain can tailor this better with a little more context</h4></div>
+        </div>
+        <p class="muted">Tap a gap to continue the conversation and refine the guidance.</p>
+        <div class="conversation-prompts gap-prompts">
+          ${cleanAnswer.missingContext.map(item=>`<button type="button" onclick="fillGap('${escapeHtml(item).replace(/'/g,'&#39;')}')">${escapeHtml(item)}</button>`).join('')}
+        </div>
+      </section>
+
+      <section class="answer-section conversation-next-section">
+        <div class="answer-section-head simple-head">
+          <div><p class="eyebrow">KEEP THE CONVERSATION GOING</p><h4>Broker Brain can dig deeper from here</h4></div>
+        </div>
+        <div class="conversation-prompts">
+          ${finalPrompts.map(prompt=>`<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt.replace(' recommendation',''))}</button>`).join('')}
+        </div>
+      </section>` : ''}
+
       <section class="answer-section client-wording-section">
         <div class="answer-section-head simple-head">
-          <div><p class="eyebrow">WHAT TO SAY</p><h4>If you need to say it plainly</h4></div>
+          <div><p class="eyebrow">OPTIONAL OUTPUT</p><h4>If this needs to become client communication</h4></div>
         </div>
         <p class="script-box">“${escapeHtml(scriptText)}”</p>
         <div class="answer-actions">
@@ -812,9 +854,151 @@ function transcriptSourcesFor(query, fallbackAnswer){
   }));
 }
 
-const ASK_API_URL = 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+function askApiUrl(){
+  if(location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('vercel.app')){
+    return '/api/ask';
+  }
+  return 'https://real-estate-training-portal-poc.vercel.app/api/ask';
+}
+const ASK_API_URL = askApiUrl();
 let askProgressTimers = [];
 let askRequestId = 0;
+let askThread = [];
+const ASK_BUTTON_LABEL = document.getElementById('askButton')?.textContent?.trim() || 'Ask the Broker';
+const ASK_INITIAL_PLACEHOLDER = 'Ask: How should I handle repair negotiations after inspection?';
+const ASK_FOLLOWUP_PLACEHOLDER = 'Ask a follow-up or share more context...';
+
+function updateAskPlaceholder(){
+  const input = document.getElementById('askInput');
+  if(!input) return;
+  input.placeholder = askThread.length ? ASK_FOLLOWUP_PLACEHOLDER : ASK_INITIAL_PLACEHOLDER;
+}
+
+function renderGuidanceProgression(answer, {loading=false}={}){
+  const el = document.getElementById('askProgression');
+  if(!el) return;
+  const userTurns = askThread.filter(item => item.role === 'user').length;
+  const brokerTurns = askThread.filter(item => item.role === 'broker').length;
+  const latestUser = [...askThread].reverse().find(item => item.role === 'user')?.text || '';
+  const cleanAnswer = answer ? cleanAnswerForDisplay(answer) : null;
+  const missingCount = cleanAnswer?.missingContext?.length || 0;
+  const stage = !userTurns ? 'Ready when you are' : loading ? 'Working through your latest detail' : userTurns === 1 ? 'First broker read' : 'Advice is getting more specific';
+  const detail = !userTurns
+    ? 'Ask Broker Brain like you would ask the broker in Slack: give the situation, then add details as they come up.'
+    : loading
+      ? 'Broker Brain is rereading the thread and tightening the recommendation around what you just added.'
+      : userTurns === 1
+        ? 'This is the first pass. Add deadlines, client priorities, contract facts, or risk details and the recommendation will tighten up.'
+        : 'The answer below is now using the earlier context plus your latest follow-up, so it should feel closer to what you would actually say or do next.';
+  const contextLabel = latestUser ? escapeHtml(latestUser.length > 120 ? latestUser.slice(0,117) + '...' : latestUser) : 'Waiting on your first question';
+  const detailsLabel = !userTurns ? 'Ready for the situation' : missingCount ? `${missingCount} detail${missingCount === 1 ? '' : 's'} would help` : 'Enough context for a next step';
+  const brokerReadLabel = brokerTurns ? `${brokerTurns} broker read${brokerTurns === 1 ? '' : 's'}` : 'No broker read yet';
+  const sharedLabel = userTurns ? `${userTurns} thing${userTurns === 1 ? '' : 's'} shared` : 'Nothing shared yet';
+  el.innerHTML = `
+    <div class="ask-progression-top">
+      <p class="eyebrow">WHERE THIS ANSWER STANDS</p>
+      <strong>${escapeHtml(stage)}</strong>
+      <span>${escapeHtml(detail)}</span>
+    </div>
+    <div class="progression-steps" aria-label="How this answer is shaping up">
+      <div class="progression-step ${userTurns ? 'done' : 'active'}"><small>1</small><span>Start with the agent’s real question</span></div>
+      <div class="progression-step ${userTurns > 1 ? 'done' : userTurns ? 'active' : ''}"><small>2</small><span>Add the facts that change the advice</span></div>
+      <div class="progression-step ${brokerTurns > 1 ? 'active' : ''}"><small>3</small><span>Use the latest guidance below</span></div>
+    </div>
+    <div class="progression-meta">
+      <span>${escapeHtml(sharedLabel)}</span>
+      <span>${escapeHtml(brokerReadLabel)}</span>
+      <span>${escapeHtml(detailsLabel)}</span>
+    </div>
+    <p class="progression-current"><b>Working from:</b> ${contextLabel}</p>`;
+}
+
+function setAskLoading(loading){
+  const input = document.getElementById('askInput');
+  const button = document.getElementById('askButton');
+  const newThreadButton = document.getElementById('newAskThreadButton');
+  if(input) input.disabled = loading;
+  if(newThreadButton) newThreadButton.disabled = loading;
+  if(button){
+    button.disabled = loading;
+    button.textContent = loading ? 'Broker Brain is thinking...' : ASK_BUTTON_LABEL;
+  }
+}
+
+function renderThread(){
+  const el = document.getElementById('askThread');
+  if(!el) return;
+  if(!askThread.length){
+    el.innerHTML = '<p class="muted thread-empty">Ask a question to start the conversation.</p>';
+    renderGuidanceProgression();
+    return;
+  }
+  el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
+    <div class="ask-thread-messages">${askThread.slice(-10).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>`;
+  renderGuidanceProgression();
+}
+
+function renderQuickReplies(answer){
+  const el = document.getElementById('askQuickReplies');
+  if(!el) return;
+  const cleanAnswer = cleanAnswerForDisplay(answer || {});
+  const prompts = normalizeConversationPrompts(cleanAnswer).slice(0, 5);
+  if(!prompts.length){ el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = prompts.map(prompt => `<button type="button" onclick="continueAsk('${escapeHtml(prompt).replace(/'/g,'&#39;')}')">${escapeHtml(prompt)}</button>`).join('');
+}
+
+function askThreadContext(limit=6){
+  return askThread.slice(-limit).map(item => ({role:item.role, text:item.text}));
+}
+
+function renderAskThread(){
+  if(!askThread.length) return '';
+  return `<section class="ask-thread" aria-label="Broker Brain conversation thread">
+    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
+    <div class="ask-thread-messages">
+      ${askThread.slice(-6).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}
+    </div>
+  </section>`;
+}
+
+function startNewAskThread(){
+  const input = document.getElementById('askInput');
+  const hasDraft = !!(input && input.value.trim());
+  const hasHistory = askThread.length > 0;
+  if((hasHistory || hasDraft) && !window.confirm('Start a new Ask Broker Brain conversation? This clears the current thread and draft so the next answer starts fresh.')) return;
+  clearAskThread();
+  if(input) input.focus();
+}
+
+function clearAskThread(){
+  askThread = [];
+  const answerEl = document.getElementById('answer');
+  if(answerEl){
+    answerEl.hidden = !!document.getElementById('askThread');
+    answerEl.innerHTML = '<p class="muted">Ask a question to see how agents get a practical answer with related trainings and playbooks.</p>';
+  }
+  const input = document.getElementById('askInput');
+  if(input) input.value = '';
+  updateAskPlaceholder();
+  renderThread();
+  const quick = document.getElementById('askQuickReplies');
+  if(quick){ quick.hidden = true; quick.innerHTML = ''; }
+}
+
+function continueAsk(prompt){
+  const input = document.getElementById('askInput');
+  if(!input) return;
+  input.value = prompt;
+  input.focus({preventScroll:true});
+  input.setSelectionRange?.(input.value.length, input.value.length);
+  document.getElementById('ask')?.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function fillGap(item){
+  const q = `How should this guidance change if ${String(item).toLowerCase().replace(/[?.]$/,'')}?`;
+  continueAsk(q);
+}
 
 function clearAskProgressTimers(){
   askProgressTimers.forEach(timer => clearTimeout(timer));
@@ -831,7 +1015,19 @@ function scheduleAskProgress(answerEl, query, fallback, requestId){
   });
 }
 
+function showAskAnswer(answerEl, answer){
+  if(document.getElementById('askThread')){
+    answerEl.innerHTML = answerMarkup(answer, {includeThread:false});
+    renderThread();
+    renderGuidanceProgression(answer);
+    renderQuickReplies(answer);
+  } else {
+    answerEl.innerHTML = answerMarkup(answer);
+  }
+}
+
 async function runAsk(query){
+  query = String(query || '').trim() || 'general broker guidance';
   const focus = detectFocus(query);
   const base = demoAnswers[focus];
   const fallback = {...base, sources: transcriptSourcesFor(query || base.queryTerms.join(' '), base)};
@@ -839,36 +1035,54 @@ async function runAsk(query){
   if(!answerEl) return;
   const requestId = ++askRequestId;
   const minimumProgress = new Promise(resolve => setTimeout(resolve, 1650));
+  askThread.push({role:'user', text:query});
+  askThread = askThread.slice(-8);
+  const askInput = document.getElementById('askInput');
+  if(askInput){ askInput.value = ''; updateAskPlaceholder(); }
+  setAskLoading(true);
+  answerEl.hidden = false;
   answerEl.innerHTML = loadingMarkup(query, fallback, 0);
+  renderThread();
+  renderGuidanceProgression(fallback, {loading:true});
   scheduleAskProgress(answerEl, query, fallback, requestId);
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2200);
+  const timeoutId = setTimeout(() => controller.abort(), 16000);
 
   try {
     const response = await fetch(ASK_API_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       signal: controller.signal,
-      body: JSON.stringify({question: query || 'general broker guidance'})
+      body: JSON.stringify({question: query, context: askThreadContext()})
     });
     if (!response.ok) throw new Error(`Ask backend returned ${response.status}`);
     const liveAnswer = await response.json();
     await minimumProgress;
     if(requestId !== askRequestId) return;
-    answerEl.innerHTML = answerMarkup({
+    const mergedAnswer = {
       ...fallback,
       ...liveAnswer,
       confidence: liveAnswer.live ? 'Broker guidance' : (liveAnswer.confidence || fallback.confidence),
       sources: liveAnswer.sources?.length ? liveAnswer.sources : fallback.sources
-    });
+    };
+    askThread.push({role:'broker', text: cleanDisplayText(mergedAnswer.intent || mergedAnswer.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
+    showAskAnswer(answerEl, mergedAnswer);
   } catch (error) {
     console.warn('Ask service unavailable; using saved training answer', error);
     await minimumProgress;
     if(requestId !== askRequestId) return;
-    answerEl.innerHTML = answerMarkup(fallback);
+    askThread.push({role:'broker', text: cleanDisplayText(fallback.intent || fallback.title || 'Here is the next step to consider.')});
+    askThread = askThread.slice(-8);
+    showAskAnswer(answerEl, fallback);
   } finally {
+    setAskLoading(false);
+    updateAskPlaceholder();
     if(requestId === askRequestId) clearAskProgressTimers();
     clearTimeout(timeoutId);
   }
 }
+
+updateAskPlaceholder();
+renderThread();
