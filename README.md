@@ -1,5 +1,9 @@
 # Real Estate Broker Training Portal POC
 
+## Production Demo Rule
+
+The canonical demo is [https://real-estate-training-portal-poc.vercel.app/](https://real-estate-training-portal-poc.vercel.app/). Production/demo work must reconcile back to `main` and verify that Vercel URL before handoff. See [PRODUCTION.md](./PRODUCTION.md).
+
 ## Goal
 Build a proof-of-concept dashboard for a real estate broker/team that houses trainings, scripts, SOPs, webinars, transcripts, newsletters, and documents — then indexes everything so agents can search, browse topics/playbooks, and ask AI questions with source citations.
 
