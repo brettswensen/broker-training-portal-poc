@@ -987,7 +987,9 @@ function renderGuidanceProgression(answer, {loading=false}={}){
 function setAskLoading(loading){
   const input = document.getElementById('askInput');
   const button = document.getElementById('askButton');
+  const newThreadButton = document.getElementById('newAskThreadButton');
   if(input) input.disabled = loading;
+  if(newThreadButton) newThreadButton.disabled = loading;
   if(button){
     button.disabled = loading;
     button.textContent = loading ? 'Broker Brain is thinking...' : ASK_BUTTON_LABEL;
@@ -1002,7 +1004,7 @@ function renderThread(){
     renderGuidanceProgression();
     return;
   }
-  el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+  el.innerHTML = `<div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
     <div class="ask-thread-messages">${askThread.slice(-10).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>`;
   renderGuidanceProgression();
 }
@@ -1024,11 +1026,20 @@ function askThreadContext(limit=6){
 function renderAskThread(){
   if(!askThread.length) return '';
   return `<section class="ask-thread" aria-label="Broker Brain conversation thread">
-    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="clearAskThread()">New conversation</button></div>
+    <div class="ask-thread-head"><span>Conversation thread</span><button type="button" onclick="startNewAskThread()">Start new question</button></div>
     <div class="ask-thread-messages">
       ${askThread.slice(-6).map(item => `<article class="ask-bubble ${item.role === 'user' ? 'user' : 'broker'}"><small>${item.role === 'user' ? 'You' : 'Broker Brain'}</small><p>${escapeHtml(item.text)}</p></article>`).join('')}
     </div>
   </section>`;
+}
+
+function startNewAskThread(){
+  const input = document.getElementById('askInput');
+  const hasDraft = !!(input && input.value.trim());
+  const hasHistory = askThread.length > 0;
+  if((hasHistory || hasDraft) && !window.confirm('Start a new Ask Broker Brain conversation? This clears the current thread and draft so the next answer starts fresh.')) return;
+  clearAskThread();
+  if(input) input.focus();
 }
 
 function clearAskThread(){
