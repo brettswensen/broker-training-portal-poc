@@ -309,7 +309,7 @@ async function callOpenRouter(question, sources, context=[]) {
   const threadContext = conversationContextText(context);
   const user = `Agent question: ${question}\n\nCurrent conversation thread:\n${threadContext || 'This is the first turn of the conversation.'}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
-  const model = process.env.OPENROUTER_MODEL || 'anthropic/claude-sonnet-4';
+  const model = process.env.OPENROUTER_MODEL || 'moonshotai/kimi-k2.7-code';
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 18000);
   let data;
