@@ -1,0 +1,545 @@
+{
+  "source_id": "cma-tips-flip-jul-22-2026",
+  "title": "CMA Tips and a Flip with Craig - July 22, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/1d7N_k7AUlK7XL9jdKUaw-BPYDUR4Segl/view",
+  "date": "2026-07-22",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Live CMA training session where Craig walks through a flip property analysis in St. George, Utah. Covers CMA creation workflow, comp selection strategy, adjustment factors for ADUs and roofs, qualitative vs quantitative analysis, and detailed walkthrough of every adjustment category (bedrooms, bathrooms, square footage, basement, year built, garage, lot size). Also includes best practices for comp bracketing, handling data errors, and determining after-repair value for investment properties.",
+  "topics": [
+    "CMA",
+    "flip",
+    "pricing",
+    "comparables",
+    "investment",
+    "ADU",
+    "adjustments",
+    "comp selection",
+    "after-repair value",
+    "St. George market",
+    "square footage",
+    "basement valuation",
+    "garage valuation",
+    "lot size",
+    "qualitative analysis",
+    "quantitative analysis",
+    "bracketing",
+    "functional obsolescence"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Creating a CMA from scratch",
+      "guidance": "Start by verifying MLS data against tax records. Copy the MLS number, create new CMA, populate form, and verify square footage, year built, lot size, and bedroom/bathroom counts before pulling comps.",
+      "client_language": "Let me verify the property details against tax records to make sure we're working with accurate data.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Selecting comparable properties",
+      "guidance": "Location is #1 priority. Then land size, then GLA (gross living area). Use polygon tool to carve out appropriate geographic boundaries. Exclude neighborhoods that are architecturally or demographically different. For older homes, expand year-built range (e.g., 1960-1990 for a 1977 home).",
+      "client_language": "I've selected comps from the immediate neighborhood with similar lot sizes and architectural styles.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004",
+        "chunk-018"
+      ]
+    },
+    {
+      "scenario": "Verifying comp data accuracy",
+      "guidance": "Always spot-check comp details. Agents sometimes enter garage counts as zero when they converted to ADU, or miss square footage entirely. Click into photos to confirm basement vs above-grade. Edit comp mode to fix errors before running adjustments.",
+      "client_language": "I noticed this comp shows zero garage spaces, but photos confirm a two-car garage. I've corrected that in the analysis.",
+      "citation_refs": [
+        "chunk-005",
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Valuing an ADU in a CMA",
+      "guidance": "A well-functioning ADU with outside entrance and off-street parking typically adds 5% of home value. Without outside entrance or shared laundry, reduce to 3-4% (e.g., $20-25K on a $500K home instead of $25-30K). In markets where basement ADUs are rare due to soil conditions, value may be higher.",
+      "client_language": "This property has a basement ADU. I'm valuing it at approximately $25,000, which is slightly conservative since it lacks a separate entrance.",
+      "citation_refs": [
+        "chunk-007",
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Analyzing a flip property",
+      "guidance": "For flips, focus on the best-of-the-best comps (top 8 out of 30 if available). Don't waste time adjusting for current condition\u2014just look at what fully remodeled homes sold for. If few comps exist, do full qualitative adjustments for kitchen, roof, flooring, and upgrades. Create custom adjustment factors for unique features.",
+      "client_language": "Based on the top remodeled comps in the neighborhood, your after-repair value should land around $550,000, with potential to push to $575K depending on finish quality.",
+      "citation_refs": [
+        "chunk-009",
+        "chunk-010",
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "Setting bedroom adjustment values",
+      "guidance": "Bedroom differences are often picked up in square footage. A 4-bedroom vs 5-bedroom at identical square footage may actually favor the 4-bedroom if it means a larger family room. In condos/townhomes, bedroom count matters more\u20143-bed vs 2-bed can show distinct price differences. Default $1,000 per bedroom is a token adjustment.",
+      "client_language": "The bedroom count difference is minimal here because the square footage captures the value. In townhomes, I'd weight it more heavily.",
+      "citation_refs": [
+        "chunk-012",
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Setting bathroom adjustment values",
+      "guidance": "Buyers don't care much about 3/4 vs full bath difference. The master bathroom quality matters more\u2014capture that in upgrades, not bathroom count. Half baths valued at ~$3,500. If a home has only one shower vs two, that could be a $15-20K deal killer regardless of bathroom count.",
+      "client_language": "The bathroom count is similar, but the master bathroom quality difference is significant\u2014that's where I'll make the upgrade adjustment.",
+      "citation_refs": [
+        "chunk-014",
+        "chunk-015"
+      ]
+    },
+    {
+      "scenario": "Setting square footage adjustment values",
+      "guidance": "Above-grade GLA at $75/sq ft is a baseline from appraisers. In luxury neighborhoods, go to $125-150+/sq ft. Basement square footage gets $30 for the space + $35 if finished = $65 total. Above-grade values more because of better light, higher ceilings, and perceived quality.",
+      "client_language": "I'm using $75 per square foot for above-grade living space, which is standard for this price range. Basements get $65 per finished square foot.",
+      "citation_refs": [
+        "chunk-016",
+        "chunk-017"
+      ]
+    },
+    {
+      "scenario": "Setting year built adjustment values",
+      "guidance": "$500/year is appropriate for newer homes (2023 vs 2022). For older homes (1970s-1980s), reduce to $100/year or even $0\u2014buyers care about updates, not year. The difference between 1940 and 1950 is irrelevant; what matters is whether systems have been updated.",
+      "client_language": "For homes of this age, the year built adjustment is minimal. What matters more is whether the kitchen, roof, and systems have been updated.",
+      "citation_refs": [
+        "chunk-019"
+      ]
+    },
+    {
+      "scenario": "Setting garage adjustment values",
+      "guidance": "Garage bays used to be $5,000 each. Now in newer neighborhoods, $20-30K per bay is common when including lot premiums. In older neighborhoods, $10-15K per bay may work. Carports at ~$3,000 but adjust for size and quality. Always verify garage count in photos\u2014agents sometimes misreport converted garages.",
+      "client_language": "I'm valuing the garage at $15,000 per bay based on this neighborhood's typical values.",
+      "citation_refs": [
+        "chunk-020"
+      ]
+    },
+    {
+      "scenario": "Setting lot size adjustment values",
+      "guidance": "Default is $2/sq ft for land, but Craig prefers $3-4/sq ft. Small differences (0.24 vs 0.25 acre) are nominal. What matters more is lot quality\u2014backing open space, views, usability. Location within neighborhood often trumps raw lot size.",
+      "client_language": "The lot sizes are similar enough that the raw square footage difference is nominal. What matters more is the location and usability of the lot.",
+      "citation_refs": [
+        "chunk-021"
+      ]
+    },
+    {
+      "scenario": "Identifying functional obsolescence",
+      "guidance": "Watch for dysfunctional floor plans, 7-foot ceilings in 8-foot neighborhoods, busy roads, oversized power lines, super steep driveways, and excessive stairs. These don't show in standard CMA adjustments but can be massive deal killers. Create custom qualitative adjustments for these factors.",
+      "client_language": "I'm noting the steep driveway as a functional issue that could affect value. In this neighborhood, that's an unusual feature that buyers may discount.",
+      "citation_refs": [
+        "chunk-022",
+        "chunk-023"
+      ]
+    }
+  ],
+  "steps": [
+    "Verify MLS data against tax records before pulling comps",
+    "Use polygon tool to carve appropriate geographic boundaries for comp selection",
+    "Expand year-built range for older homes (e.g., 1960-1990 for 1977 home)",
+    "Delete bedroom/bathroom/garage filters initially to cast wider net",
+    "Spot-check comp data in photos\u2014fix garage counts and square footage errors",
+    "Create custom adjustment factors for unique features (ADU, roof condition)",
+    "For flip analysis, focus on best-of-best remodeled comps",
+    "Set bedroom adjustments low ($1K) since value is captured in square footage",
+    "Capture bathroom quality differences in upgrades, not bathroom count",
+    "Use $75/sq ft for above-grade GLA, $65/sq ft for finished basement",
+    "Reduce year-built adjustments to $0-100 for older homes",
+    "Value garage at $15-20K/bay in older neighborhoods, $20-30K in newer",
+    "Use $3-4/sq ft for lot size differences rather than default $2",
+    "Watch for functional obsolescence and create custom qualitative adjustments",
+    "Save adjustment templates for future CMAs"
+  ],
+  "objections": [
+    {
+      "objection": "There aren't enough comps in the immediate neighborhood",
+      "response": "Expand the geographic boundary carefully using the polygon tool, but exclude architecturally different areas. For older homes, you can go back 12 months. If still insufficient, look at total square footage rather than just GLA and consider whether the property is truly comparable.",
+      "citation_refs": [
+        "chunk-004",
+        "chunk-018"
+      ]
+    },
+    {
+      "objection": "The comp has a basement but others don't (or vice versa)",
+      "response": "Basement square footage gets $65/sq ft total ($30 for space + $35 if finished). Above-grade GLA values more because of better light and quality. If the subject is the only one with a basement, you'll need more comps or accept that appraisers may discount basement value.",
+      "citation_refs": [
+        "chunk-016",
+        "chunk-017"
+      ]
+    },
+    {
+      "objection": "How do I value an ADU without a separate entrance?",
+      "response": "Full ADU with outside entrance and parking = 5% of home value. Without separate entrance or with shared laundry, reduce to 3-4%. In markets where basement ADUs are rare, you might go higher. Always adjust based on functionality.",
+      "citation_refs": [
+        "chunk-007",
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "The seller thinks their home is worth more because it's newer",
+      "response": "For homes built in the 1970s-1980s, year built is almost irrelevant. What matters is updates. A 1977 home with a new kitchen and roof beats a 1985 home with original everything. Reduce year-built adjustments to $0-100 for older homes.",
+      "citation_refs": [
+        "chunk-019"
+      ]
+    },
+    {
+      "objection": "My CMA shows no adjusted values\u2014what did I do wrong?",
+      "response": "You need to manually input adjustment values or load a saved template. The default CMA screen shows blank adjusted values. Create and save a template with your standard adjustments (bedrooms, bathrooms, sq ft, basement, year built, garage, lot size) so they auto-populate.",
+      "citation_refs": [
+        "chunk-024"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "00:00:04 Speaker 1\nKenzie, Welcome. Okay, so we are going to analyze the flip. So the few things that\nare going to make this one interesting: first, it\u2019s a flip; second, it has an ADU; third,\nit\u2019s in St. George. So, there are some different elements in this that make it unique\nthat hopefully you\u2019ll gather some really good. Like information from on how to on\nhow to do some analysis, some good analysis skills here. So I\u2019ve got my screen\nshared. If you don\u2019t can\u2019t see it, just let me know. So he I all I have is the property\naddress, nothing else. So you\u2019re seeing me do this from square one. Um so 3027\nProvost Road. So I like to come to search, I like to go down to tax data search and\nthen, I mean you could search on underbrided things. I\u2019m going, i\u2019m going to search\nunder the name Provost because that seems pretty unique.\n\n00:00:53 Speaker 1",
+      "timestamp_start": "00:00:04",
+      "timestamp_end": "00:00:53",
+      "source_line_start": 4,
+      "source_line_end": 16,
+      "section": "Introduction to flip analysis"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "00:00:53 Speaker 1\nAnd we know it\u2019s in Washington County. So I am going to search that and thirty\ntwenty seven. So you can see how fast that came up. So here, it looks like Keaton\nhas joined the party. Welcome, Keaton, and Zane welcome as well doing a flip\nanalysis of St George. So I looked it up on tax records. So I went to tax records did a\nsearch on Provo Street name, Washington County came up with this. Clicked this,\nthat brings up this. And then here, From here, I can see that this has been on the\nMLS before, and it looks like it\u2019s actually on the MLS right now. And I knew that\nbased on the the MLS number two one six is sort of the new stuff that\u2019s recent. So\nhere it\u2019s on the MLS needs a flip, needs rehab and we\u2019re going to do an analysis on\nit. So let\u2019s just take a look at photos real quick uh.\n\n00:01:52 Speaker 1",
+      "timestamp_start": "00:00:53",
+      "timestamp_end": "00:01:52",
+      "source_line_start": 16,
+      "source_line_end": 28,
+      "section": "Tax record verification"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "00:01:52 Speaker 1\nIt looks like that roof.\n\n00:01:54 Speaker 2\nIt does need a new roof. Yeah, the mechanicals have been confirmed, redone or re\nupdated in the last like four to five years, but everything else is original.\n\n00:02:09 Speaker 1\nOkay, and this is down to its subfloor currently. And I would say what\u2019s nice is the\nmechanicals all being done recently is, Is super helpful because that\u2019s expensive.\nYeah, and so this kitchen, I mean you can tell we didn\u2019t look at the year built. This is\nprobably seventies. I was going to say seventies man, looked like my kitchen\ngrowing up. I was born in seventy eight guys. Keep in mind. I was born in the\n\nseventies. So yeah, I experienced a kitchen like this for a little while in my life. So\nokay, um okay. So that\u2019s that\u2019s it.\n\n00:02:48 Speaker 1",
+      "timestamp_start": "00:01:52",
+      "timestamp_end": "00:02:48",
+      "source_line_start": 28,
+      "source_line_end": 45,
+      "section": "Property condition assessment"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "00:02:48 Speaker 1\nYeah, this is there\u2019s the basement ADU. Um, and we don\u2019t it doesn\u2019t look like it has a\nseparate walkout.\n\n00:02:55 Speaker 2\nThere\u2019s not a separate entry. It\u2019s like you could probably just block it off. Mhm, but\nit\u2019s not there.'s not a separate door no.\n\n00:03:07 Speaker 1\nOkay, Okay, so that that\u2019s that\u2019s that\u2019s a definite flip right there. Um So, yeah, this is\nan interesting property. So we\u2019ll we\u2019ll pull up data and see. See what we can do. So,\nall right, let\u2019s dive into this. So here is what I like to do. So you just copy, I am going\nto copy the MLS number. I am going to open up a new tab and from which I am\ngoing to operate CMA create, sorry, not saved, save ones. You see all my save ones,\ngot hundreds of them, guys create new CMA, and you can ignore that screen.\n\n00:03:44 Speaker 1",
+      "timestamp_start": "00:02:48",
+      "timestamp_end": "00:03:44",
+      "source_line_start": 45,
+      "source_line_end": 61,
+      "section": "ADU assessment and CMA setup"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "00:03:44 Speaker 1\nSo populate form, that\u2019s where I drop the MLS number down into it. And actually,\nsorry, I skipped over a step. I always like if I use the MLS number, I like to verify the\ndata is correct. So 1977, 2251 square feet, quarter acre lot. And so you\u2019re going to\ncheck in here. Quarter acre lot, 1977, 2251 square feet. And that jives with the 2251.\nSo this all looks correct. One story with a basement. Sometimes the tax records\nbuilding area means just main level. So you want to, you know, those are things you\ncould check on. Here, sometimes you get other links you can go to to help. I don\u2019t\nknow if this is going to give, I\u2019m not going to spend much time here, but you could\ndive into the tax records, but it looks like the square footage is correct. So we\u2019re\ngoing to go forward with this understanding.\n\n00:04:40 Speaker 1",
+      "timestamp_start": "00:03:44",
+      "timestamp_end": "00:04:40",
+      "source_line_start": 61,
+      "source_line_end": 73,
+      "section": "Data verification process"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "00:04:40 Speaker 1\nSo populating it according to MLS is great. Now, There are some things we\u2019re going\nto do and you\u2019re going to pick up on some nuance here as I go through this. First of\nall, so those are the statuses I choose right now, those six. So it\u2019s built in '77. We can\ngo back a ways on that. You know, it\u2019ll automatically populate five years either side,\nbut what if we go back to 19 like '60?\n\n00:05:10 Speaker 2\nI agree. I think nineteen sixty to like nineteen ninety, probably would be my range\nwhen I do when I would run these comps myself.\n\n00:05:19 Speaker 1\nYeah, and the nineties and even so, the seventies had its own architectural style,\nand so did the eighties. But, there was some blending between those two.\nSometimes nineties, it started to get different. Yeah,\n\n00:05:30 Speaker 2\nNot a significant enough difference for me anyways from the seventies to the\neighties.\n\n00:05:35 Speaker 1",
+      "timestamp_start": "00:04:40",
+      "timestamp_end": "00:05:35",
+      "source_line_start": 73,
+      "source_line_end": 93,
+      "section": "Year built range selection"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "00:05:35 Speaker 1\nYeah, stylistically. I\u2019m going to stretch the square footage on this just because I want\nto cast a wide net. I\u2019ll probably go down to 1600, that might be too small, and up to\n2900. And I\u2019m not, I don\u2019t, I always delete the bedrooms, bathrooms, garage,\ncarport. I delete all that. I\u2019m not worried about that for the time being. I\u2019m going to\ngo back a year now when you get to this age property, sometimes i\u2019m okay ignoring\nstyle. Uh, let\u2019s just see.\n\n00:06:07 Speaker 1\nAnd now I know this is going to open up some more. So now we have 25, but that\u2019s\nbefore we even do the map. I\u2019m going to click that. It\u2019s going to have this MLS\nnumber already in it. It\u2019ll help us jump straight to it. So, okay, one thing that we\nnotice here, this is in Bloomington Country Club. Um. So it looks like the home is\npart of the country club Is that correct?\n\n00:06:28 Speaker 2",
+      "timestamp_start": "00:05:35",
+      "timestamp_end": "00:06:28",
+      "source_line_start": 93,
+      "source_line_end": 108,
+      "section": "Comp search parameters"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "00:06:28 Speaker 2\nYeah yeah.\n\n00:06:29 Speaker 1\nOkay and are there and we could we could come over and look at this no HOA\nThere\u2019s an HOA,\n\n00:06:34 Speaker 2\nBut there\u2019s no fees Okay. Which is I thought was interesting,\n\n00:06:39 Speaker 1\nBut okay. So so I assume these homes are not. So I mean you can sort of look in\nhere, country Bloomington Country Clubum neighborhood. Uh so that\u2019s the\nquestion I\u2019ve got on this. I mean it. It\u2019s not. It sounds like these homes don\u2019t have\nautomatic inclusion into the country club, correct? Or or they don\u2019t.\n\n00:07:00 Speaker 2\nThey have to apply or be added to it yes okay.\n\n00:07:05 Speaker 1\nSo, in other words,\n\n00:07:06 Speaker 2\nIt\u2019s in a very old part of Bloomington area. Like obviously it was built in the\nseventies. Um,\n\n00:07:13 Speaker 1\nYeah and and I\u2019ll scroll.\n\n00:07:14 Speaker 2\nI think it might be grandfathered in. I don\u2019t I don\u2019t even know to be honest as part\nof the country club, but It\u2019s an older part of that area for sure.\n\n00:07:23 Speaker 1",
+      "timestamp_start": "00:06:28",
+      "timestamp_end": "00:07:23",
+      "source_line_start": 108,
+      "source_line_end": 141,
+      "section": "HOA and neighborhood details"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "00:07:23 Speaker 1\nSo ideally. And my guess is we might not get the comps we want, but ideally the\ncomps would be right here Oh Okay. Well, we have some.\n\n00:07:34 Speaker 1\nThis is going to be curious to look at these two. So this green one\u2019s the active. These\nare the not, you know, those are sold. But my assumption is that people can sort of\nbuy into the country club. So I\u2019m probably going to open this up to this little wider\nsearch right in here.\n\n00:07:53 Speaker 2\nI probably wouldn\u2019t go across the river, to be honest.\n\n00:07:56 Speaker 1\nSo you would not right here?\n\n00:07:58 Speaker 2\nYeah, I wouldn\u2019t because that\u2019s a different part of. So on the right side of the river,\nthere\u2019s all newer remodeled homes and stuff. Like it wouldn\u2019t even be really a comp,\nI don\u2019t think.\n\n00:08:11 Speaker 1\nSo here\u2019s what you could do. You could come like this and then you see how I\ncarved that out? And sometimes that tool doesn\u2019t work great. That\u2019s the poly, They\ncall it the polygon tool like this, where you can just sort of carve whatever shape you\nwant to write your initials because you\u2019re bored or whatever.\n\n00:08:32 Speaker 1\nOkay, so that\u2019s prob that might be too far away.\n\n00:08:35 Speaker 2\nThat\u2019s a different golf course.\n\n00:08:37 Speaker 1",
+      "timestamp_start": "00:07:23",
+      "timestamp_end": "00:08:37",
+      "source_line_start": 141,
+      "source_line_end": 174,
+      "section": "Geographic comp boundaries"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "00:08:37 Speaker 1\nYeah, I was going to say it\u2019s on a different golf course. Whereas here we we\u2019ve got\nplenty of comps in this one little small space, so I\u2019m going to exclude that. I\u2019m\nfeeling all right here about this grouping. Um, you know there\u2019s another community\ndown in here, but this looks different as well.\n\n00:08:54 Speaker 2\nYeah Sunriver is all new It\u2019s all new in the last 10 years.\n\n00:08:58 Speaker 1\nYeah, which is why it\u2019s not picking.\n\n00:08:59 Speaker 2\nUp any comps or so.\n\n00:09:01 Speaker 1\nOkay, so we have nine listings we\u2019re going to take a look at. And we\u2019ll drop these in.\nAnd so I\u2019m going to highlight all these. I\u2019ll put them into the CMA report just like\nthat. And this would be good, you know, for you guys practice on your own homes,\npractice on any home, practice on your neighbor\u2019s home. If, you don\u2019t have a CMA\nto start with, and you can go back and see these recorded videos. And see the exact\nsteps I do because they\u2019re pretty similar every single time. And so, you\u2019ll notice that\nthis is all populated in here. If it\u2019s not, you can click here and populate according to\nthe MLS number. And then that\u2019ll put these things in here. You need to add your\nadjusted values on this side and save them. You can create a template up here and\nthen save it. And you can sort of just monitor what I\u2019ve got here, and you\u2019ll notice\nfrom time to time we change these, okay? So now, first thing first order of business.\n\n00:10:00 Speaker 1",
+      "timestamp_start": "00:08:37",
+      "timestamp_end": "00:10:00",
+      "source_line_start": 174,
+      "source_line_end": 202,
+      "section": "Comp selection and template setup"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "00:10:00 Speaker 1\nNotice, I went back 12 months. We got eight comps. I\u2019m good with that, recognizing\nthat the more recent comps will be more valuable. But let\u2019s take a look at this and\nsee where we\u2019re at with things, okay?\n\n00:10:12 Speaker 2\nI actually offered on that first comp like back in May. Something.\n\n00:10:18 Speaker 1\nThat\u2019s interesting I\u2019m noticing right now, okay? There\u2019s an error right? There is most\nof these do not have a basement, whereas this one does, but. Let\u2019s let\u2019s let\u2019s take a\nlook at this. So first I\u2019m going to start with acreage, quarter acre lot. And I\u2019m going\nto look scan through these. These are all super similar in size, so I\u2019m not worried\nabout that. You\u2019re going to notice we have an adjustment going for those those lot\nsizes, but that that\u2019s you know they\u2019re super similar. Now we\u2019re going to look at the\ngarages. So this says it doesn\u2019t have one. These are two car, two car, two car. I\u2019m just\nscanning right along that line two car and then zero car Now. I\u2019m i\u2019m gonna\nquestion sometimes.\n\n00:10:57 Speaker 1\nAgents don\u2019t input things correctly. So I am out of curiosity,\n\n00:11:00 Speaker 2",
+      "timestamp_start": "00:10:00",
+      "timestamp_end": "00:11:00",
+      "source_line_start": 202,
+      "source_line_end": 224,
+      "section": "Initial comp review and error spotting"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "00:11:00 Speaker 2\nGeronimo, that one you are looking at, they converted the garage into an ADU.\n\n00:11:04 Speaker 1\nOkay, so that\u2019s why there is no comps. So we\u2019ll look at the pictures on that later, But\n\nI want to look at this one over here to make sure that, that zero garage was was not\naccidental. See this one? Look! This one has a garage and it\u2019s sort of annoying\nunless they converted it. But my guess is they did not. I don\u2019t know. Maybe they did,\nand maybe that\u2019s why there\u2019s no I don\u2019t know, but I\u2019m just scanning through. This\none\u2019s been beautifully remodeled and becomes a really good comp for us when it\ncomes to like, yeah, when it comes to things. See? Oh wait a minute, wait a minute,\nwait a minute. So is that That\u2019s not the garage? So it looks like it does have a two car\ngarage Am I missing that? I\u2019m thinking I\u2019m thinking it has a garage.\n\n00:11:58 Speaker 1\nHuh, my guess is that this zero car garage thing may have been atypo. I don\u2019t know.\nIt\u2019s two windows. It\u2019s it\u2019s sort of hard to know, But I don\u2019t I don\u2019t see those garage\ndoors in any of these photos from like the inside, so I\u2019m inclined to believe that it\nactually does have a two car garage.\n\n00:12:22 Speaker 2\nI would agree with you.\n\n00:12:26 Speaker 1",
+      "timestamp_start": "00:11:00",
+      "timestamp_end": "00:12:26",
+      "source_line_start": 224,
+      "source_line_end": 248,
+      "section": "Verifying garage data in photos"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "00:12:26 Speaker 1\nLet me scan through, Now, this one has some architecture that I think is superior.\nLike this entryway is pretty epic. And so it\u2019s yeah, so I\u2019m going to come in here and\nmake a modification. So to modify this, all I have to do is come in and click edit\ncomp mode. I come over here to garage, they said zero, I\u2019m going to put two and I\nclick off edit comp mode. Okay since all of these have garages except this one.\n\n00:12:56 Speaker 1\nThis This measurement becomes irrelevant, because everything you could have this\nbe one hundred thousand, it could be fifty thousand, doesn\u2019t matter because\neverything is a two car garage except this guy. Um, but you know I\u2019d say down to St.\nGeorge maybe make this fifteen thousand a bay or something in this\nneighborhood, but it\u2019s only going to affect this comp and nothing else. Okay, So\nnow let\u2019s look at year built ;. We\u2019re in seventy seven, All of these should be pretty\ngood : seventy six or yeah, eighty two, eighty six ninety seventy one, seventy eight,\neighty six, ninety. So, this you know, Remember how we capped this at nineteen\nninety. We could could we could perhaps expand that newer and possibly pick up\nsome additional comps. But I you know, this this comp is for some reason, this one\none of these is not like the others. This one\u2019s comping out much higher. So we\u2019ll take\na look at that later. Um, Well, I know what the reason why ha, ha, oh, I will find that\nout. I\u2019ll show you in just a second. Okay, now, gross living area, we typically like to\nbracket this, meaning you have some.\n\n00:13:54 Speaker 1",
+      "timestamp_start": "00:12:26",
+      "timestamp_end": "00:13:54",
+      "source_line_start": 248,
+      "source_line_end": 271,
+      "section": "Editing comp data and garage adjustment"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "00:13:54 Speaker 1\nYou find that a little lower and a little higher, bracketing. So we\u2019ve bracketed the\nyear built, we\u2019ve bracketed the square footage or sorry, the acreage. Now, we want\nto bracket square footage, and that gives you a more reliable analysis. In this case,\n\nThis is an anomaly because it has a main level and a basement, whereas these\nothers are all like main floor basically. So, we\u2019re not going to be able to sort. So all\nthese are quite a bit larger on GLA. And there\u2019s just nothing we can do about it. This\none says zero, and that\u2019s why I\u2019m going to show you here. This one was. Done an\nerror. Um, so then the next thing I\u2019m going to look at is total square footage, twenty\ntwo twenty two hundred ish. And and I\u2019m looking at some of these are smaller, and\nsome are a little larger. So that\u2019s good. This one might be too much larger, but let\u2019s\ngo fix our error. So here this one is showing zero square feet. And so that was\nentered incorrectly. So, we\u2019re going to take a look at this one, and it looks like to me\nthat this is probably all on one level.\n\n00:14:51 Speaker 1",
+      "timestamp_start": "00:13:54",
+      "timestamp_end": "00:14:51",
+      "source_line_start": 271,
+      "source_line_end": 287,
+      "section": "Bracketing and square footage review"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "00:14:51 Speaker 1\nBut let\u2019s scan real quick to confirm. Scanning through this, we\u2019ll try to detect if any\nof these are basement type photos. Thus far, none. And uh scanning, scanning,\nscanning. Yeah, none of these look like basement. These all look like above grade.\nAlmost there. Okay, almost there. And it looks like yes, these are all above grade. So\nhaving that confirmed, I now can take the twenty three seventy three that it states it\nhas, and I am going to edit right here. I am going to go to level one. I am going to\nsay twenty three seventy three. And I am going to now exit comp. Now that brings\nthat adjustment back down into the realm of what it should otherwise be, okay? So\nnow we\u2019ve done our adjustments.\n\n00:15:51 Speaker 1\nUm, notice we are relying. I don\u2019t go into like all of the comps. I\u2019m not going into\nlike, um, I\u2019m not going into the uh like the square footage. Like I\u2019m not going to\ncounty records of each of those to confirm the square footages were correct. And\nso you could do that additional step if you wanted to. I generally don\u2019t, um,\nalthough sometimes maybe I do if I feel like something\u2019s really far off. Okay so Now\nthat we\u2019ve got these eight sold comps, we\u2019ve made uh we\u2019ve sort of got the details,\nthe data, The quantitative what I call a quantitative data, objective data is all in here\ncorrectly. And this similar neighborhood and so everything\u2019s pretty controlled now.\nWhat, we now now what we need to do is we need to do what I call a qualitative\nanalysis. And typically so typically when I\u2019m coming to a flip all I\u2019m doing.\n\n00:16:46 Speaker 1",
+      "timestamp_start": "00:14:51",
+      "timestamp_end": "00:16:46",
+      "source_line_start": 287,
+      "source_line_end": 310,
+      "section": "Fixing square footage errors"
+    },
+    {
+      "chunk_id": "chunk-016",
+      "text": "00:16:46 Speaker 1\nIs I\u2019m, just going to look at the best of the best of the best comps and say, okay,\nthat\u2019s what your remodeled value would be. You\u2019re just looking at the best comps.\nAnd I don\u2019t take time going through and adjusting it according to the current, the\ncondition of the current home. Now, in this case since we only have eight comps, I\nwill do that. But, let\u2019s say you were doing a flip in Taylorsville or Kearns. Generally,\nyou\u2019ll have so many comps to look at. It\u2019s unbelievable. So all I do is I just go in and\npull the 30 comps or whatever. And and and then I just take the top, the cream of\nthe crop, like maybe the top eight out of the thirty. And those will generally all have\nall been remodeled. And I don\u2019t need to look through all thirty. I just know that\n\nwhatever sold at the highest would have been the best, and that\u2019s what your\nremodel would be like. Um, so that\u2019s how I normally do the flip. Now in this\nparticular circumstance, as mentioned, we only have eight comps total going back a\nyear. We have time to look at each comp and then adjust it according to the subject\nproperty, which we will now do. Um so just to give a reminder.\n\n00:17:43 Speaker 1",
+      "timestamp_start": "00:16:46",
+      "timestamp_end": "00:17:43",
+      "source_line_start": 310,
+      "source_line_end": 327,
+      "section": "Quantitative vs qualitative analysis"
+    },
+    {
+      "chunk_id": "chunk-017",
+      "text": "00:17:43 Speaker 1\nOh, this is the subject property. It has, you know, it has it\u2019s missing flooring which is\nnot hard to put in. Sort of has some out that might feel outdated some of that style.\nThe kitchen is that\u2019s for sure in need of a redo. But otherwise looks clean like it looks\nlike this would be a pretty clean flip, plus you\u2019ve got an ADU in the basement and\nroof is hammered. And so that\u2019s. Anyway, so now let\u2019s.\n\n00:18:11 Speaker 2\nThat\u2019s going to be the bulk of the rehab, I think. The roof and the kitchen.\n\n00:18:15 Speaker 1\nYeah, agreed. So what I\u2019m going to do here, since we have a kitchen, I\u2019m going to\nadd an adjustment factor and I\u2019m going to call create custom factor. I\u2019m going to call\nit ADU accessory dwelling unit. I\u2019m going to add that oops, don\u2019t think that added\ncorrectly for some reason. Oh, did it? No. I don\u2019t think it added. Let\u2019s try that again,\nadu add there we go. Done. So now ADUs in here. Now, how much value to give you\nan ADU? Typically, a well functioning ADU outside entrance and all that kind of stuff,\noff street parking spot, whatever. Just a well set up ADU five percent is a typical\nadjustment. So if you are on a five hundred thousand dollar home, A five percent\nadjustment would be twenty five thousand, and that might be low in that\ncircumstance. A lot of people are going to look like if it\u2019s a well set up ADU. Maybe\nyou can go, you know, on a five hundred thousand dollar home, maybe you go\nthirty thirty five thousand, maybe four.\n\n00:19:10 Speaker 1\nForty would be really pressing it, but you know, are somewhere between. I\u2019d say\ntwenty five thousand.\n\n00:19:14 Speaker 2\nIt\u2019s pretty valuable here specifically because t here is not a whole lot of basement\nADUs here because of the blue clay. So, a lot of it\u2019s like above grade casitas and\nstuff. But if you know if t here is a basement, I feel like it yeah, thirty thirty five\nprobably would be where I would put it.\n\n00:19:32 Speaker 1",
+      "timestamp_start": "00:17:43",
+      "timestamp_end": "00:19:32",
+      "source_line_start": 327,
+      "source_line_end": 361,
+      "section": "ADU valuation methodology"
+    },
+    {
+      "chunk_id": "chunk-018",
+      "text": "00:19:32 Speaker 1\nYeah now, so one of the nuances on this one is you you don\u2019t have an outside\nentranceum. You can come look to see it, even it doesn\u2019t look like there\u2019s even a\nlaundry room downstairs. So so you\u2019re going to have a shared laundry. Yeah,\n\n00:19:45 Speaker 2\nIt\u2019s shared, it\u2019s shared laundry.\n\n00:19:47 Speaker 1\nSo I. So given that I I hesitate to give a full five percent value, it looks like, you know,\nwe\u2019re coming up with an average of, you know, if let\u2019s look at sort of the top comps,\nit looks like it\u2019s you know, five hundredum in the five mid mid fives, lower fives,\nmaybe six. And so five percent value is going to be twenty five thirty thousand\ndollars. Um, on this one, I\u2019m probably I think you\u2019re going to price it at $25,000 just\nbecause you don\u2019t have an outside entrance. You don\u2019t have your own laundry\nroom. So so maybe you give it a 20,000. But you could easily 20, 18 is probably\nconservative. And. So what I\u2019m going to do is I\u2019m going to make that change here\nsaying, look, this one has an ADU that in my mind is worth 28 Maybe. We can go\ntwenty five Maybe. We can go thirty thousand We\u2019re stretching it a little.\n\n00:20:35 Speaker 1",
+      "timestamp_start": "00:19:32",
+      "timestamp_end": "00:20:35",
+      "source_line_start": 361,
+      "source_line_end": 381,
+      "section": "ADU adjustment with limitations"
+    },
+    {
+      "chunk_id": "chunk-019",
+      "text": "00:20:35 Speaker 1\nSome of these others, if they have an ADU that\u2019s full awesome everything, maybe I\ncome in and say, \"Hey, this one has an ADU but it\u2019s a little nicer. \" So I am going to\ninstead of giving a twenty thousand maybe be a one point, you know, five, and it\u2019s\ngoing to give it now basically thirty thousand dollars of value because it\u2019s like a full\non like setup better. But we haven\u2019t looked through that yet. So. Now let\u2019s go look at\nthe comps and let\u2019s see what we can find. Um you could even here is some other\nthings we may take into account. Add adjustment factor. Let\u2019s create a custom\nfactor called roof. Okay? So done. In this case, this roof\u2019s hammered and I\u2019m going\nto call it $25, 000. And maybe it\u2019s less expensive, but I\u2019ve seen roofs going for\naround there. So this is actually going to be a negative $ 25, 000 because it is a\ndetriment, not a benefit. And so I\u2019m going to come in here and say, this has a roof\nthat is horrible.\n\n00:21:33 Speaker 1",
+      "timestamp_start": "00:20:35",
+      "timestamp_end": "00:21:33",
+      "source_line_start": 381,
+      "source_line_end": 395,
+      "section": "Custom adjustment factors"
+    },
+    {
+      "chunk_id": "chunk-020",
+      "text": "00:21:33 Speaker 1\nTaking twenty five thousand right off the top, okay? So, but we are going to give a\nvalue for the ADU. Now we obviously know it needs probably thirty thousand of\nother stuff, but we\u2019ll count for that here. So going back to this guy, this one has not\nmuch, but it\u2019s probably thirty thousand dollars better. You know, it\u2019s got some stuff\nthat\u2019s you know Probably in better shape by 30,000 so I\u2019ll come in and say that\u2019s\nabout 30, 000 better. So the subject, and as is conditions about 361, maybe um so it\nlooks like this might this might be overpriced. Let\u2019s go. Take a look at this one here.\nThis one, this one, hmm, this one looks similar condition to me that looks like\nsimilar condition I\u2019m not going to probably adjust anything.\n\n00:22:28 Speaker 1\nThe roof on that one might also need updating. It\u2019s hard to know. Um, that adjusts\nthat one supports more of a four hundred thousand dollar value. Take a look at this\none. Um, and I am going to do a couple of things on this house. This roof looks\ngreat, home looks decent from the outside. My guess is the inside looks to be in. It\u2019s\n\nnot like it\u2019s in nice shape, It\u2019s not like crazy off the top, but it\u2019s thirty thousand\ndollars better. Probably you know. Maybe more, but you know it\u2019s not like it\u2019s top of\nthe line remodel, which is insane. And so, you know, so maybe give that one a thirty\nthousand dollars adjustment for upgrades. And then these here I anticipate these\nare going to look a little nicer on the inside. Like that architecture already looks\ncooler; just the architecture alone, the inside looks much better.\n\n00:23:27 Speaker 1",
+      "timestamp_start": "00:21:33",
+      "timestamp_end": "00:23:27",
+      "source_line_start": 395,
+      "source_line_end": 419,
+      "section": "Qualitative comp adjustments"
+    },
+    {
+      "chunk_id": "chunk-021",
+      "text": "00:23:27 Speaker 1\nSo you are probably looking at, you know, I am going to probably fifty to one\nhundred grand is pretty easy on this one. And part of is yeah, and my outdoor\nspace and a hot tub. Like I am just going to call it a hundred grand, just really, just\nyou know to just to make it some easy math. You know so that\u2019s maybe upgrades of\na hundred. Anticipate this one being something similar and kudos the seventies\nthat you get some cool exterior architecture by the way. Which we just don\u2019t get\nanymore. And this is going to be similar type of quality. Get some better\narchitecture, bedrooms, bathrooms, everything is is nicer. Maybe I\u2019ll give that one,\nyou know, didn\u2019t have quite as awesome outdoor space, but you could still maybe\ngive it a hundred, you know, hundred thousand bucks. And then we got three more\nand then I\u2019m going to go show you how to do how to do this a little differently. Um\nso yeah, we did, and we didn\u2019t.\n\n00:24:24 Speaker 1\nUm, adjust for like if they were backing immediately to the golf course, but this one\nyou this one is a little surprising, right? But I but I think what\u2019s going on with this\nbecause you you are not going to give as much adjustment for this one, maybe\nthirty thousand dollars. Um uh okay let let me. Yeah, but let\u2019s just see real quick.\nThat seller sold at a good price and they\u2019re not backing anything special. So I, you\nknow, why why they were why they were able to get what they got, I don\u2019t know.\nYou know that\u2019s maybe thirty thirty thousand forty thousand dollars. Oh no, yeah,\nfor some reason that feels like they sold it too high much higher. But look, this one\nsold back now. Here\u2019s what\u2019s interesting. This sold in January, which this was when\nthe actually the peak of the market. Um these were August of last year.\n\n00:25:21 Speaker 1",
+      "timestamp_start": "00:23:27",
+      "timestamp_end": "00:25:21",
+      "source_line_start": 419,
+      "source_line_end": 445,
+      "section": "Upgrade adjustments and market timing"
+    },
+    {
+      "chunk_id": "chunk-022",
+      "text": "00:25:21 Speaker 1\nJune now, September of last year. This was actually June, also the peak. Anyway they\nthey just they just did well on the sales, what it seems like. Okay we have two more\nto adjust and then we will have an idea. Roof\u2019s great. Scroll through this. This one.\n\n00:25:52 Speaker 1\nYou know, it\u2019s not a crazy, spectacular difference. Thirty forty thousand bucks\nmaybe. But it may have just been, you know, location within the community. No,\ndoesn\u2019t even see that. But let\u2019s yeah, it\u2019s thirty or forty thousand bucks. Um this last\none is the one that we already saw a little bit of. And this one was just super nice.\nThis like so. This, this, I\u2019d probably say, plus the the architecture on this superb. You\nare easily a hundred grand on this one if not more. So you could easily put a\n\nhundred grand in there. So seeing that you know I we\u2019re sort of seeing a range from\nthree sixty. I mean, the average is coming into four, forty one, low four hundreds,\nmaybe four hundreds. A couple of anomalies. The thing is this listed for um.\n\n00:26:49 Speaker 1\n550, which seems way too high. Now, here\u2019s another way to look at this. We we and\nhere\u2019s my preferred method. Um, here\u2019s my preferred method. I\u2019m not I\u2019m going to\ndelete all these adjustments. At this point, All I\u2019m gonna is I\u2019m just going to assume.\nSo i\u2019m gonna. I\u2019m gonna delete all the adjustments and show you the other way to\ndo this, Which actually maybe is my preferred way. But okay, i mean, and i\u2019m going\nto get rid of. I didn\u2019t notice any of the others having a. I am just going to get rid of\nthis roof thing entirely. Yep, okay. What we know, Just sort of looking at. So if we just\nlook at the best of the best of the best, Which is usually what I do when I know, it\u2019s\njust going to be a flip, and say okay, well what\u2019s the best adjusting to? So, this is\ngoing to assume you are going to put in a brand new kitchen carpet, like you are\ngoing to make it look like like you are going to make it look like this property\nbasically. You are going to put in a kitchen that nice.\n\n00:27:47 Speaker 1",
+      "timestamp_start": "00:25:21",
+      "timestamp_end": "00:27:47",
+      "source_line_start": 445,
+      "source_line_end": 476,
+      "section": "Flip analysis - best comp method"
+    },
+    {
+      "chunk_id": "chunk-023",
+      "text": "00:27:47 Speaker 1\nAppliances that nice flooring that nice paint that nice um, etc, which by the way, I do\nlike the white and the gold I\u2019ve I did a I did a yes, built a spec home. And I did a\nsimilar style and I sold it, like people loved it. I\u2019ve i\u2019ve done that goal. I\u2019ve done that.\nActually, i think twice now at specs um That\u2019s particular style, but I, but I\u2019m leaning\nright now toward the island being. Uh color other than white. To give it a little bit of\noffset and color and warmth in the room, because warm tones are coming back in.\nBut if you can remodel it like this, then then you\u2019re looking to maybe get up close to\nthat high. Now this one\u2019s four hundred square feet more, five hundred square feet,\nso I hesitate to give too much credibility toward this one.\n\n00:28:30 Speaker 2",
+      "timestamp_start": "00:27:47",
+      "timestamp_end": "00:28:30",
+      "source_line_start": 476,
+      "source_line_end": 487,
+      "section": "Remodel quality and design trends"
+    },
+    {
+      "chunk_id": "chunk-024",
+      "text": "00:28:30 Speaker 2\nYou know when I did my comps, it was like five I think five fifty was where it would\nlist for. Yeah fixed up. So it\u2019s listed what it\u2019s worth fixed up right now so.\n\n00:28:42 Speaker 1\nI would agree with that and, Here\u2019s where you have, you know, this comp here is\ngiving you some hope around around the six hundred range. Um, But you only\nhave one of those and I hate to rely only on one. This one actually doesn\u2019t have like\ncrazy good stuff inside. Your your remodel, You might say, hey, look I\u2019m going to put\nin stuff that\u2019s make thirty or forty thousand better than this. And so you could come\nin and say, I\u2019m going to take this, and it\u2019s going to be not as nice. So I\u2019m going to do\na negative three. And this six, this five ninety bumps up higher. Um, same with this\none. You could take a look inside and you say, \u201cWell, okay.\u201d Mine\u2019s going to look\nbetter. Like my kitchen\u2019s going to look nicer than this. And I\u2019m going to have better\npaint. I\u2019m going to have better cohesion. So I\u2019m going to, you know, call it twenty\nthirty thousand better than what this one is. And so you can, again, maybe do a\n\nnegative three and then your and then and so you could you could just now now\nyou\u2019re just doing an adjustment according to what um you feel like yours will look\nlike yours will probably look.\n\n00:29:41 Speaker 1",
+      "timestamp_start": "00:28:30",
+      "timestamp_end": "00:29:41",
+      "source_line_start": 487,
+      "source_line_end": 508,
+      "section": "ARV determination with limited comps"
+    },
+    {
+      "chunk_id": "chunk-025",
+      "text": "00:29:41 Speaker 1\nMore like this. So I\u2019m not going to make any adjustments on that one. So I\u2019m not\ngoing to make any adjustments on that one, and then I\u2019m going to commit to this\none, and probably call it good with this one. So these top few comps, yours is\nprobably going to look a lot like that actually, very similar. I think it has better\narchitecture. So now we\u2019re looking at just the top four comps, okay? We can ignore\nthose others. Mid, you know, five forty six, five forty five sixty. So, you are right ;\nthese three here land, you right around the five fifty mark. You are talking about um\nand then you\u2019ve got a couple anomalies that may pull you higher. So sort of taking\nlike this top grouping of maybe these top five, if you are going to average these out,\nyou might land in, you know, five seventy-five range. You know that\u2019s just sort of\nballparking into my brain. But I would agree with you Keaton that this is way\noverpriced.\n\n00:30:40 Speaker 1\nUm, And I think you\u2019re, if on a remodel, that\u2019s a nice remodel, new roof and\neverything, new roof, the flooring, the the paint your kitchen, and you sort of make\nit look really nice. I think you are. 550 is probably a conservative enough number,\ndepending on the market, you may be able to press it to 57 5. And depending on\nhow expensive your remodel, you could push into low 60 0s if you\u2019re just doing a\nreally nice, expensive remodel. Yeah. So I agree any any questions on that.\n\n00:31:12 Speaker 2",
+      "timestamp_start": "00:29:41",
+      "timestamp_end": "00:31:12",
+      "source_line_start": 508,
+      "source_line_end": 530,
+      "section": "Final ARV conclusion"
+    },
+    {
+      "chunk_id": "chunk-026",
+      "text": "00:31:12 Speaker 2\nNo, I just confirmed my number. So that\u2019s that\u2019s why I wanted to do this one. Make\nsure I wasn\u2019t too off.\n\n00:31:21 Speaker 1\nSo the other thing I would note on this is, you know, this is St George. You you you I\nfelt comfortable that we had a lot of comps in the immediate neighborhood just\nusing Utahrealestate dot com. You can obviously pull up Flex, The Flex MLS down in\nWashington County and see if you can find any additional comps, but i i feel like we\nhad a pretty good grouping that we found.\n\n00:31:43 Speaker 1\nOkay, um, and any other anyone else have an analysis they want me to do? If not, I\nam going to just go over some basic CMA principles. Okay, so let me go over some\nbasic CMA principles. Let me, let me pull this back up, and this will be helpful for\nsome of you who have not have not dove into many of these CMAs yet. So, when\nyou when you populate, let let me go back to the well I\u2019ll just do it from right here.\nSo when a create you know you you um, Yeah, so you come in here to do like CMA,\ncreate new. You click on that and then you populate subject data, and you pull your\n\ncomps in. This screen is what I want to focus on. You need to save, You need to\nwhatever you want to call these, but yours might look more like this at the\nbeginning. This is what yours is going to look like and you are like Craig. T here is\nnothing that\u2019s being analyzed here. You are exactly right. And so I see people that\npull these in and send me over the CMA like look I did it Like no, no, you didn\u2019t do it.\n\n00:32:42 Speaker 1",
+      "timestamp_start": "00:31:12",
+      "timestamp_end": "00:32:42",
+      "source_line_start": 530,
+      "source_line_end": 556,
+      "section": "CMA template setup basics"
+    },
+    {
+      "chunk_id": "chunk-027",
+      "text": "00:32:42 Speaker 1\nSo what you need to do is you you need to like, here\u2019s a sample template. This\nmight be what it\u2019s what yours looks like initially, where your adjusted values are all\nblank right here. And so you actually need to give value to these to these adjusted\nvalues. And and so the way you do that, you just type them in, You know whatever\nthe number is. So um, You know thousand dollars whatever. You see, you need to\nstart typing these in all across the board all the way down here. Now, let me come\nto this is my default. And because then you can edit the name of these, and you can\nedit the factors in here. And then you can save it right here. Save as or save. Okay,\nSo you want to create something that\u2019s saved and that will auto populate in the\nfuture. So let me go back to my default. I should call it something cooler than my\ndefault. That\u2019s just a lame name, but is what is. It\u2019s what I\u2019ve got on there.\n\n00:33:38 Speaker 1\nSo, these are the categories that I am valuing: L one, L two, L three, L four. That\u2019s\nlevel one, two, three, four. These are above grade. This is basement one, two, three.\nThat\u2019s below grade. And then the adjustments and Let me just talk about these\nbriefly. You may say Craig you\u2019re giving a thousand dollar adjustment for bedrooms\nSo. Yeah, because honestly four bedroom versus five bedroom. It\u2019s not a big deal\nbecause what\u2019s happening is I\u2019m picking it up in square footage. So you got to\nremember. That let\u2019s say you have two homes that are identical size, both twenty\ntwo hundred square feet. One\u2019s four bedroom, one\u2019s five bedroom. Okay, well if that\nadditional square footage is not being used as a bedroom, what\u2019s it being used as?\nPossibly a much larger family room. So so how much you know how many\nbedrooms do you really need these days? And and would a buyer actually prefer\nfour bedrooms with a larger family room, rather than five bedrooms in a smaller\nfamily room? So in other words that fifth.\n\n00:34:34 Speaker 1",
+      "timestamp_start": "00:32:42",
+      "timestamp_end": "00:34:34",
+      "source_line_start": 556,
+      "source_line_end": 584,
+      "section": "Bedroom adjustment rationale"
+    },
+    {
+      "chunk_id": "chunk-028",
+      "text": "00:34:34 Speaker 1\nBedroom may actually decrease your value and not give you any value, depending\non the floor plan. So that\u2019s where you have to start just thinking analytically with\nyour mind and not let, but not be robotic in these analyses. So let me let me come\nback to this one. So here I I, the thousand dollars is more of just like a a pat on the\nback like good job, you know, here\u2019s a little gold sticker, you have an additional\nbedroom than someone else. There\u2019s not much value there because we\u2019re going to\npick up the value through the square footage predominantly.\n\n00:35:04 Speaker 1\nNow, Where that becomes a little bit where the bedroom thing becomes more of a\n\nthing is in condos and townhomes. Because I some neighborhoods, you will notice\na distinct difference between a four bed condo or like a four bed condo or\ntownhome versus a three bed, and it becomes much more pronounced on three\nversus two and two versus one. And so, you you and so when I am pulling out\ncomps, let\u2019s say I\u2019ve got ten comps and I\u2019ve got a four bed townhome. And I\nimmediately notice that the three bed townhomes are selling for quite a bit less.\nSometimes I\u2019ll just toss those and I\u2019ll just compare against other four bed\ntownhomes. Same holds true with condos. If I\u2019m seeing that the three bed condo is,\nI\u2019ve got enough three bed condo comps, I can just toss the two bed condo comps.\nAnd, especially if I notice that the three beds selling for much more than the two.\nSometimes you\u2019ll see no difference like the three and two bedrooms are selling very\nsimilarly. Then what value does that extra bedroom have? It doesn\u2019t has basically no\nvalue and you\u2019re just picking up the value in square footage differences.\n\n00:36:01 Speaker 1",
+      "timestamp_start": "00:34:34",
+      "timestamp_end": "00:36:01",
+      "source_line_start": 584,
+      "source_line_end": 610,
+      "section": "Bedroom value in different property types"
+    },
+    {
+      "chunk_id": "chunk-029",
+      "text": "00:36:01 Speaker 1\nNow, so that\u2019s why that\u2019s at a thousand bathrooms. You\u2019ll notice like full and three\nquarters. Guess what? I am at a stage right now where I\u2019ve just shown enough\nhomes to realize that buyers really don\u2019t care whether it\u2019s a three quarter bath or\nfull bath. The difference might be in the master bathroom, But i would rather I\nwould rather just like let\u2019s say, you\u2019ve got a standalone tub. And you have this large\nluxurious shower with euro glass. I am not going to pick up that adjustment here.\nInstead, I am going to make that adjustment down here in upgrades. I am going to\nsay, \"Man, that bathroom in the master bathroom was so much better. \" And I do\nthese in ten thousand dollars increments ;. That\u2019s why it\u2019s ten thousand and You can\ndo those in increments of that So. Let\u2019s just say, let\u2019s say this home here, let\u2019s say the\nsubject property right here has super fancy shower, just like I described. This one\nhas.\n\n00:36:59 Speaker 1\nMaybe it\u2019s got a separate type of shower, but it\u2019s not as nice of a shower or tub.\nMaybe I\u2019m going to give this a one, which means that this 386 now goes down to\n376. It decreased by $10,000. Actually, sorry. Rewind. I got to do this. This is lacking\nthe feature, so it\u2019s a negative one. So that 386 becomes 39 6 because it\u2019s lacking the\nfeature that this one over here has. Okay, So that\u2019s where I am going to pick up that\ndifference when it comes to the fancy tub and shower. I am not going to pick it up\nup here, So that\u2019s why I pretty much value a three quarter bath and a full bath\npretty much the same right now. Half bath: thirty five hundred. I got these numbers\nfrom an appraiser as of a few months ago, so this is fresh now. The seventy five\nmeans you are accounting for square footage differences at seventy five dollars, a\nsquare foot. So in this particular case.\n\n00:37:57 Speaker 1",
+      "timestamp_start": "00:36:01",
+      "timestamp_end": "00:37:57",
+      "source_line_start": 610,
+      "source_line_end": 637,
+      "section": "Bathroom and square footage adjustments"
+    },
+    {
+      "chunk_id": "chunk-030",
+      "text": "00:37:57 Speaker 1\nYou have eleven forty four square feet on the main. This one has twenty two forty\neight. It\u2019s taking the difference between these two numbers, times it by this\n\nnumber, seventy five. Again, I got that from an appraiser. When you are in a more\nluxurious neighborhood, that seventy five is way too low by the way. So if you are in\na luxury neighborhood, The square footage differences you may need to be\nupwards of one hundred, twenty five, one hundred fifty a square foot or even more\nlike. So so you can play around with that number. Um, seventy five is sort of a\nstarting spot. Um, and if you are in a really sort of lower end neighborhood, maybe\nseventy five is too high. But I haven\u2019t really found that I am pretty comfortable with\nthe seventy five. Now same goes for the basement. If you are in a more luxurious\nneighborhood, that basement should be more than thirty as well as this basement\nfinishing. So so here you are like Craig, You are only giving thirty dollars a square\nfoot for the basement just for the square footage. Now if that is finished square\nfootage, I am giving it another thirty five.\n\n00:38:54 Speaker 1\nSo in total, It\u2019s thirty plus thirty five is sixty five square foot is what\u2019s being attributed\nto the basement square footage instead of seventy five. Why above grade square\nfootage values more? We know this because of how many sales have gone on in\nhistory of ever, And and we realize that the above square foot grade square footage\ntends to be nicer. For instance, In a rambler has vaulted ceilings that above grade\nsquare footage feels a lot nicer than in the basement, especially if you have eight\nfoot basement ceilings instead of like. Something other than that. And you may\nhave nine foot square foot basements and things like that. You may have a ten foot\nbasement in this, you know, ceiling in the basement and so it becomes much more\nluxurious. You need to then account for that accordingly. And you say Craig, is there\nscience to this? Not necessarily. It\u2019s a little bit of an art. And so it\u2019s a little bit of feel,\nbut you need to. But like if are, if you\u2019ve got a luxury home and all the homes that\nyou are comparing against are luxury, they probably all have similar enough\nfeatures in that regard. Uh. But but you just.\n\n00:39:53 Speaker 1",
+      "timestamp_start": "00:37:57",
+      "timestamp_end": "00:39:53",
+      "source_line_start": 637,
+      "source_line_end": 670,
+      "section": "Basement and GLA valuation"
+    },
+    {
+      "chunk_id": "chunk-031",
+      "text": "00:39:53 Speaker 1\nBe pay attention to the nuance. Okay, so there might be times you need to adjust\nthis, but this is generally what an appraiser\u2019s do what appraisers are doing right\nnow. And you\u2019ll you\u2019ll notice that there\u2019s some there is some departure from this,\nbut gives you at least something to start with. Um, obviously percentage of\nbasement finished, you\u2019re going to input that right there. Um, Some appraisers are\nnotorious for not including the H VAC room, and they never give that finished.\nSpace, even though there\u2019s nothing else you could do with that space. And so, Some\nappraisers will never give you one hundred for the basement, and they only give\nyou like ninety or something. That\u2019s totally fine; it doesn\u2019t change the numbers that\nmuch. Like if I change this to ninety, you are going to notice this five hundred six\ndrop four thousand bucks. It\u2019s not material, okay? Now year built :. This is\nsomething I probably could have adjusted in our analysis as well. So when you get.\n\n00:40:46 Speaker 1\nReally old, and I shouldn\u2019t say really old. '77 was a good year. It\u2019s the year before I\nwas born. But, you know, we\u2019re making it here a $500 per year difference. So this\nwas built in '76, so now we\u2019re giving a bump of 500 to this one. It was built in '82, so\nit\u2019s a negative 2500. When homes are of this era and age, you can honestly bounce\nthis down to 100. In other words, it\u2019s just a pat on the forehead again. There\u2019s not\nmuch going on with it, and you can even go down to zero. Most appraisers at that\nage, they\u2019re just not making any age adjustments at all. What\u2019s the difference\nbetween a nineteen forty and a nineteen fifty? There is not much at that point. It\ngoes down to has stuff been updated or not, and then they\u2019re just going to give you\nvalue according to the updates, not according to the year. Now where the five\nhundred per year makes more sense, and a lot more sense is on newer stuff. So\nwhat\u2019s the difference between a twenty three and a twenty two?\n\n00:41:44 Speaker 1",
+      "timestamp_start": "00:39:53",
+      "timestamp_end": "00:41:44",
+      "source_line_start": 670,
+      "source_line_end": 698,
+      "section": "Year built adjustments by age"
+    },
+    {
+      "chunk_id": "chunk-032",
+      "text": "00:41:44 Speaker 1\nYeah, someone might be willing the five hundred makes a a difference right there.\nAnd maybe that should be a thousand, Maybe two thousand because someone\nwould be willing to pay you know thousand bucks for the extra year that\u2019s brand\nnew on the property. Um and so so same thing goes with yeah, So when you are\nsort of in that age and you are comparing say, a twenty twenty two to a twenty\nseventeen, it makes sense to have a few thousand dollar adjustment. Just for the\ndifferences in that, now you are probably going to make an upgrade change as well,\nan upgrade adjustment. But that\u2019s where it begins to make sense. Otherwise, just\ntake that year built and you could take it down to zero. In this case, it\u2019s just\nirrelevant garage back in the day. And, this will date me a little bit when I first got in\nthe business. Five thousand dollars is what we were using for garage differences. If\nyou had a two car, let\u2019s say.\n\n00:42:38 Speaker 1\nGot a three car set of two car, you were getting a five thousand dollars bonus. That\nwas it, but that\u2019s what it was back in the day. That\u2019s what it was. I remember going\nto builders and I remember the day when they were, you know, we\u2019re adding an\nupgrade for one of my clients and the builder quoted ten thousand dollars for the\nadditional bay, and my client said, \"Wow, that\u2019s a lot of money. \" And then that ten\nthousand went to thirteen thousand. And you know, and it\u2019s like wow, it\u2019s a lot of\nmoney to add this third car. But, that was back in the day guys when homes were\nselling in the two hundreds, you know three hundreds. And so now we\u2019re You know,\nif you want that extra bay, Or twenty thousand bucks plus you probably had to get a\nlot premium, and you\u2019re, you know, you\u2019re paying thirty thousand dollars to get that\nextra bay. And and people are some people are paying it. And so some of the newer\nneighborhoods, if it\u2019s a newer neighborhood ten thousand is for sure insufficient.\nYou\u2019re probably going to have to be at twenty and maybe even thirty at that\nnumber. Um Some of the old neighborhoods that the you know ten thousand may a\nbay may work or maybe have to be at fifteen thousand a bay.\n\n00:43:35 Speaker 1",
+      "timestamp_start": "00:41:44",
+      "timestamp_end": "00:43:35",
+      "source_line_start": 698,
+      "source_line_end": 729,
+      "section": "Garage valuation history and current values"
+    },
+    {
+      "chunk_id": "chunk-033",
+      "text": "00:43:35 Speaker 1\nMaybe again, maybe twenty thousand. So you need to play around with that\nnumber a little bit. And again, This is where it becomes a little bit of an art instead\nof a science. Um, garage carport. I am just running with three thousand, but again,\nwhat\u2019s the quality of the carport? What\u2019s the size of the carport? Maybe it\u2019s a huge\ncarport. You know, Even if it\u2019s only even if it\u2019s only one car carport, but maybe it\u2019s\njust oversized, maybe it\u2019s just high quality whatever, maybe that three thousand\nshould be five thousand and maybe even seven thousand, you know something up\nin that range. Um, right here, eighty seven one twenty. That is forty three thousand\nfive hundred sixty, which is square footage in an acre times two. So in other words,\nit\u2019s giving two dollars a square foot adjustment for the land. I wish that they would\ndo this measurement differently. I wish they just would do a per square foot\nnumber. Um, but they don\u2019t They\u2019re. So if you put in eight, eight, forty, three, five\nsixty, you are now adjusting it at a dollar, a square foot difference for the land size,\neighty seven one.\n\n00:44:32 Speaker 1\nOne twenty is two dollars square foot, and so on and so forth. Now, what I what I\u2019ve\ntypically done because in other words, between a quarter acre and a point two four\nacre, they\u2019re giving eight hundred seventy one difference. It\u2019s essentially t here is\ngoing to be no difference in that. That that\u2019s such a small difference; it\u2019s not gonna\nmake a difference. What would more make more of a difference is what\u2019s your\nback? Like, you know, are you backing it open space like views for your particular?\nLike sort of the lot in the neighborhood is going to make more of a difference.\nWhich you can do an adjustment for. And just for that. So this is really nominal\ndifferences in here. In other words, there\u2019s not much happening. There was, you\nknow, 0.29, okay? That\u2019s going to be a little bit larger, and it\u2019s going to give a $ 3500\nadjustment. That might be too low. And so sometimes I\u2019ll come in here and I\u2019ll just\ndo a straight up 175, which gives you roughly four dollars per square foot.\n\n00:45:28 Speaker 1",
+      "timestamp_start": "00:43:35",
+      "timestamp_end": "00:45:28",
+      "source_line_start": 729,
+      "source_line_end": 759,
+      "section": "Carport and lot size adjustments"
+    },
+    {
+      "chunk_id": "chunk-034",
+      "text": "00:45:28 Speaker 1\nAnd now you are getting a seven thousand dollars difference. That\u2019s probably\nbetter, and so I would, I would you know two hundred square foots what an\nappraiser what appraisers use. I think it\u2019s too low, but I have to have it in there as\nmy default. You may want to have have your default be three or four dollars, a\nsquare foot difference. But at the end of the day, If the lot sizes, this so when when\nthis this why the reason why I do this analysis, where i will. Plug everything in, and\nthen I scroll. The first thing I do is scroll to the bottom of this. I compare acreage\nbefore I go further up and compare. And you can say, \u201cWhy?\u201d Well, that\u2019s what\nappraisers do. Land is the first thing that they judge things by, because because\nwho cares if the square footage of the properties are the same, if one is a point one\nfive acre and the other one\u2019s a half acre? You can\u2019t even compare that; those are so.\n\n00:46:21 Speaker 1\nThat that that disparity is so large. You can\u2019t even come up with a number that\nreliably compares those two. There\u2019s nothing you can do about that. It\u2019s they\u2019re too\ndifferent, and so those get tossed. Um, if you have a half acre, You really need to be\nlooking at like point four up to like point six, you know point You know something\nlike that. And again, there\u2019s that\u2019s not a hard fast rule either. You need to find some\nstuff that has some little bit larger lot capacity. And and and just so it\u2019s a little more\nsimilar, you need to start with that. The next thing I am going to on this is I am, you\nknow, obviously, your built has got to be a thing. You know you got to be somewhat\nsimilar. What\u2019s most important is architectural style, In neighborhood because if you\nhave everything like if you have a home in this, it\u2019s built in the seventies, You are not\ngoing to pull a bunch of comps from homes built in the nineties and try to make\nadjustments that, that neighborhood is just too different, and so home built in the\nseventies.\n\n00:47:19 Speaker 1",
+      "timestamp_start": "00:45:28",
+      "timestamp_end": "00:47:19",
+      "source_line_start": 759,
+      "source_line_end": 787,
+      "section": "Land size priority and comp selection"
+    },
+    {
+      "chunk_id": "chunk-035",
+      "text": "00:47:19 Speaker 1\nSixties, eighties. Yeah, that sounds good. Home built in the nineteen forties? Who\ncares at that point? You can go down to eighteen forty seven I just don\u2019t care. And,\nyou go upwards of nineteen forties, maybe you go upwards of nineteen sixties and\nyou are just trying to pull stuff, right? Um so but but that\u2019s not the net. That\u2019s not\nthe next most critical thing. Land is the most critical thing The. Next most critical\nthing is where you are now dealing with sort of like square footage. And and I\nwould say location overall. Is probably number one. Like you got to pull from like a\nsimilar competitive geography, And then you start dialing in and you are tossing\nstuff that is dissimilar on land, and then you are looking at square footage.\nAppraisers really value GLA, that gross living area, that\u2019s everything above grade.\nThey\u2019re really valuing that. And. So in this case, we just couldn\u2019t find GLA that was\nsimilar to this because.\n\n00:48:14 Speaker 1\nThis was the only one with a basement, And so we had no choice, but to compare it\nto these others that are all above grade. The ones that are all above grade, they\nhave an advantage because it\u2019s all above grade. ; you\u2019ve got better windows and\nmore light, and typically built a little higher quality than what people do for\nbasements. But yeah, some appraisers focus so much on GLA that they. and\nbracketing that, Finding stuff a little bit smaller or a little bit larger just on the GLA.\nBut the total square footage, they don\u2019t care if t here is big differences on total\nsquare footage. Some appraisers have different feelings in that, but anyway, so\nlocation, land size, and then GLA or total square footage. For me, I am going a little\nbit more. I\u2019ve been trending a little less away. I\u2019ve been trending a little away from\nGLA.\n\n00:49:08 Speaker 1",
+      "timestamp_start": "00:47:19",
+      "timestamp_end": "00:49:08",
+      "source_line_start": 787,
+      "source_line_end": 814,
+      "section": "Comp selection hierarchy"
+    },
+    {
+      "chunk_id": "chunk-036",
+      "text": "00:49:08 Speaker 1\nIt\u2019s still critical, but and focusing a little bit more obviously on the location, the land\n\nsize, and total square footage. I am leaning a little bit toward that, But still GLA still\ntrumps versus total square footage, like making sure that that is bracketed. But I do\nforesee a sort of a change coming. I\u2019ve heard of whispers in the appraisal industry,\nwhere they\u2019re going to focus a little bit more on total square footage than on GLA.\nBut, That\u2019s a debate back and forth. That\u2019s, you know, just to be aware of but not\nsuper critical. Um, and then you\u2019re going to realize, wait a minute Craig. So in all of\nthat bedrooms and bathrooms sort of like are an afterthought. Yes they\u2019re totally an\nafterthought. Now could be could be critical and where that is, for instance, here\u2019s\nwhere you know you get into some properties and realize um like what\u2019s the\ndifference?\n\n00:50:06 Speaker 1\nLet\u2019s say everything else is the same between two properties, But one of them has\nonly one bathroom, and and the other one has two. And when I say bathrooms in\nthis circumstance, let\u2019s just say that like shower like showers in the house. If you\nhave only one shower versus two, that that could be a deal killer for you depending\non the circumstance. Buyers who came in coming like, \u201cI can\u2019t roll with this one\nshower. I need like I\u2019ve got three kids and whatever it is, I need two showers.\u201d And\nmaybe they\u2019re looking at it saying, \u201cOh, maybe a shower could be put in here.\u201d Well,\nI am going to deduct the price because I am going to have to put in this other\nshower. Maybe some look at it say that\u2019s going to be way too hard to put in a\nshower. Maybe, you have one and a half bathrooms, and that half bathroom is so\nsmall, you can\u2019t put a shower. You got to pay attention to that because that\ndifference.\n\n00:51:02 Speaker 1",
+      "timestamp_start": "00:49:08",
+      "timestamp_end": "00:51:02",
+      "source_line_start": 814,
+      "source_line_end": 842,
+      "section": "GLA vs total square footage debate"
+    },
+    {
+      "chunk_id": "chunk-037",
+      "text": "00:51:02 Speaker 1\nLet\u2019s say it\u2019s a one and a half. Let\u2019s let\u2019s say you have two bathrooms, Like let\u2019s say, a\nfull and a third versus another one that has a full and a half. That could be a deal\nkiller, especially if that half can\u2019t be converted to another shower. So you that\ninstead of give making it um a difference of like four thousand dollars between\nthose two, it could be fifteen to twenty thousand dollars. Just so so you just just be\nmindful of that, like be looking for that kind of stuff. And similar, like when you are\nwalking through a home. So this is what I call these, I call these qualitative\nadjustments where the floor plan is a thing. And and this analysis isn\u2019t picking up\ndysfunctional floor plans. It\u2019s picking up square footage and things like that. But\nhopefully as you review pictures, you are going to realize man that\u2019s floor plan is\ndysfunctional. It just doesn\u2019t make any sense. And, so we the appraisal industry\nactually has a word for that phrase for that called functional obsolescence.\n\n00:52:00 Speaker 1\nAnd and so you are getting some homes that are functionally obsolete, like a seven\nfoot ceiling. Unless everything else in that neighborhood and area is seven foot\nceilings, or or t here is a lot of seven foot ceilings, and that would not be as big of a\ndeal. But, let\u2019s say you are the only seven foot ceiling in an area where t here is a\n\nwhole bunch that are eight foot ceilings. That could be a massive deal killer for you.\nIf you are the only one that\u2019s like that, and an appraiser would say, \u201cWell, that\u2019s\u201d\nSquare footage is there, but it\u2019s functionally obsolete, and that\u2019s going to hurt you\non the appraisal. Busy roads, like obnoxious overly large power lines, super steep\ndriveways, Tons of steps. These are things that don\u2019t come into an analysis like this,\nunless you bring it in through your observation. And then right here under\nupgrades, you make your qualitative adjustment saying well that one.\n\n00:52:55 Speaker 1",
+      "timestamp_start": "00:51:02",
+      "timestamp_end": "00:52:55",
+      "source_line_start": 842,
+      "source_line_end": 870,
+      "section": "Functional obsolescence and qualitative adjustments"
+    },
+    {
+      "chunk_id": "chunk-038",
+      "text": "dysfunctional floor plans. It\u2019s picking up square footage and things like that. But\nhopefully as you review pictures, you are going to realize man that\u2019s floor plan is\ndysfunctional. It just doesn\u2019t make any sense. And, so we the appraisal industry\nactually has a word for that phrase for that called functional obsolescence.\n\n00:52:00 Speaker 1\nAnd and so you are getting some homes that are functionally obsolete, like a seven\nfoot ceiling. Unless everything else in that neighborhood and area is seven foot\nceilings, or or t here is a lot of seven foot ceilings, and that would not be as big of a\ndeal. But, let\u2019s say you are the only seven foot ceiling in an area where t here is a\n\nwhole bunch that are eight foot ceilings. That could be a massive deal killer for you.\nIf you are the only one that\u2019s like that, and an appraiser would say, \u201cWell, that\u2019s\u201d\nSquare footage is there, but it\u2019s functionally obsolete, and that\u2019s going to hurt you\non the appraisal. Busy roads, like obnoxious overly large power lines, super steep\ndriveways, Tons of steps. These are things that don\u2019t come into an analysis like this,\nunless you bring it in through your observation. And then right here under\nupgrades, you make your qualitative adjustment saying well that one.\n\n00:52:55 Speaker 1\nIt has a super steep driveway. No one else has that. Then you could make an\nadjustment there to move that number, saying, \u201cWell, I am going to even though\nthis cop sold for, you know X amount. Or let\u2019s say like if the if the subject property,\nmy wife\u2019s calling and I\u2019ll call her back in a second. If the subject property is the only\none with super steep driveway, You could even make a specific adjustment in here\nand just call it. You know, driveway add done.\u201d And then you say, \u201cI mean, I am just i",
+      "timestamp_start": "00:52:55",
+      "timestamp_end": "00:54:10",
+      "source_line_start": 851,
+      "source_line_end": 876,
+      "section": "Custom qualitative adjustments and closing"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct transcript excerpts with exact line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). Speakers 2 and 3 are agent participants (Keaton and Zane). Craig demonstrates live CMA creation on UtahRealEstate.com. The property analyzed is 3027 Provost Road, St. George, UT - a 1977 flip with basement ADU. Craig's adjustment values ($75/sq ft GLA, $65/sq ft basement, $1K bedroom, $3.5K half bath, $500/year built for newer homes) are current as of July 2026 based on appraiser input. Some broker_guidance items synthesize multiple transcript passages - these are labeled with multiple citation_refs.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. Craig explicitly states he gets adjustment values from appraisers and updates them periodically. The ADU valuation guidance (5% for full, 3-4% for limited) is Craig's own methodology demonstrated live."
+}

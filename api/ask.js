@@ -29,13 +29,26 @@ function tokenize(value) {
 
 function scoreChunk(question, chunk) {
   const words = tokenize(question);
-  const blob = [chunk.title, chunk.category, ...(chunk.topics || []), chunk.text].join(' ').toLowerCase();
+  const fields = [
+    { value: [chunk.title, chunk.category, ...(chunk.topics || [])].join(' '), weight: 4 },
+    { value: chunk.section || '', weight: 3 },
+    // Billy-owned retrieval hints let content QA guide ranking without Hermes
+    // reading/rejudging transcript substance. They are optional and backward-compatible.
+    { value: (chunk.sourceRetrievalTerms || []).join(' '), weight: 8 },
+    { value: (chunk.chunkRetrievalTerms || []).join(' '), weight: 28 },
+    { value: (chunk.retrievalTerms || []).join(' '), weight: 10 },
+    { value: chunk.text || '', weight: 1 }
+  ];
   let score = 0;
   for (const word of words) {
-    const hits = blob.split(word).length - 1;
-    score += hits ? 2 + Math.min(hits, 6) : 0;
+    for (const field of fields) {
+      const blob = String(field.value || '').toLowerCase();
+      const hits = blob.split(word).length - 1;
+      score += hits ? field.weight * (2 + Math.min(hits, 6)) : 0;
+    }
   }
-  if (blob.includes(String(question || '').toLowerCase())) score += 15;
+  const exactQuestion = String(question || '').toLowerCase();
+  if (exactQuestion && fields.some(field => String(field.value || '').toLowerCase().includes(exactQuestion))) score += 30;
   return score;
 }
 
@@ -231,7 +244,7 @@ function safeJsonParse(text) {
   return null;
 }
 
-function normalizeKimiAnswer(parsed) {
+function normalizeModelAnswer(parsed) {
   if (!parsed || typeof parsed !== 'object') return null;
   const steps = Array.isArray(parsed.steps) ? parsed.steps.map(s => String(s || '').trim()).filter(Boolean) : [];
   if (!steps.length) return null;
@@ -287,71 +300,55 @@ function conversationContextText(context) {
     .join('\n');
 }
 
-async function callKimi(question, sources, context=[]) {
-  const apiKey = process.env.KIMI_API_KEY;
-  if (!apiKey) throw new Error('KIMI_API_KEY is not configured');
+async function callOpenRouter(question, sources, context=[]) {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) throw new Error('OPENROUTER_API_KEY is not configured');
 
   const sourceContext = sources.map((s, i) => `Training note ${i + 1}: ${s.title} (${s.timestamp})\n${s.text}`).join('\n\n').slice(0, 3200);
   const system = `You are an experienced real estate broker coaching an agent. Answer the agent directly in a calm, authoritative, professional voice. Use the training notes for substance. Do not mention prompts, JSON, source numbers, internal excerpts, the user, or what you need to do. Do not sound like an AI assistant, legal memo, software product, or corporate training deck. Do not use em dashes. Avoid jargon such as training-matched, proof point, leverage, actionable, optimize, framework, and key insight. Avoid casual phrases like good news, great question, let's break this down, awesome, super helpful, no-brainer, and game changer. Do not give tax or legal advice. Tell agents when to involve the CPA, QI, attorney, lender, TC, or broker. Use this content mapping exactly: intent = Broker Guidance, a direct recommendation to the agent with no first-person identity; steps = Why This Works, short reasoning bullets; script = Optional client-facing wording the agent can adapt; followups = deeper conversation prompts that help the agent probe context, risks, tradeoffs, next questions, or training to review; missingContext = up to 3 facts that would make the guidance stronger if the agent fills them in. Do not write as Marty, Craig, Darrin, or the AI. Avoid first-person identity language such as I am here, I can help, I would, or I think. Use direct guidance or team language instead. You may reference named experts only as source context, for example Craig's repair negotiation guidance. Return only JSON: {"title":"","intent":"","confidence":"","steps":[""],"script":"","followups":[""],"missingContext":[""]}. JSON fields title, intent, confidence, script are strings; steps, followups, missingContext are string arrays.`;
   const threadContext = conversationContextText(context);
-  const user = `/no_think\nAgent question: ${question}\n\nCurrent conversation thread:\n${threadContext || 'This is the first turn of the conversation.'}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
+  const user = `Agent question: ${question}\n\nCurrent conversation thread:\n${threadContext || 'This is the first turn of the conversation.'}\n\nRelevant training notes:\n${sourceContext || 'No direct training matches were found.'}`;
 
-  const modelCandidates = [
-    process.env.KIMI_MODEL,
-    'kimi-k2.7-code-highspeed',
-    'kimi-k2.7-code',
-    'kimi-k2.6',
-    'kimi-k2.5',
-    'moonshot-v1-32k',
-    'moonshot-v1-8k'
-  ].filter(Boolean);
-  const models = [...new Set(modelCandidates)];
+  const model = process.env.OPENROUTER_MODEL || 'anthropic/claude-sonnet-4';
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 18000);
   let data;
-  let lastError;
 
-  for (const model of models) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 14000);
-    try {
-      const response = await fetch('https://api.moonshot.ai/v1/chat/completions', {
-        method: 'POST',
-        signal: controller.signal,
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          model,
-          temperature: 0.25,
-          max_tokens: 850,
-          response_format: { type: 'json_object' },
-          messages: [
-            { role: 'system', content: system },
-            { role: 'user', content: user }
-          ]
-        })
-      });
+  try {
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      signal: controller.signal,
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': process.env.OPENROUTER_SITE_URL || 'https://real-estate-training-portal-poc.vercel.app',
+        'X-Title': process.env.OPENROUTER_APP_TITLE || 'Broker Brain'
+      },
+      body: JSON.stringify({
+        model,
+        temperature: 0.25,
+        max_tokens: 850,
+        response_format: { type: 'json_object' },
+        messages: [
+          { role: 'system', content: system },
+          { role: 'user', content: user }
+        ]
+      })
+    });
 
-      if (!response.ok) {
-        const err = await response.text();
-        lastError = new Error(`Kimi error ${response.status} for ${model}: ${err.slice(0, 300)}`);
-        continue;
-      }
-
-      data = await response.json();
-      break;
-    } catch (error) {
-      lastError = error;
-      if (error?.name === 'AbortError') throw error;
-    } finally {
-      clearTimeout(timeout);
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`OpenRouter error ${response.status} for ${model}: ${err.slice(0, 300)}`);
     }
+
+    data = await response.json();
+  } finally {
+    clearTimeout(timeout);
   }
 
-  if (!data) throw lastError || new Error('Kimi request failed');
-  const message = data.choices?.[0]?.message || {};
+  const message = data?.choices?.[0]?.message || {};
   const content = message.content || message.reasoning_content || '';
-  const parsed = normalizeKimiAnswer(safeJsonParse(content));
+  const parsed = normalizeModelAnswer(safeJsonParse(content));
   if (parsed) return cleanAndValidateModelAnswer(parsed);
 
   const salvaged = salvageJsonLikeAnswer(content);
@@ -405,7 +402,7 @@ module.exports = async function handler(req, res) {
     let answer;
     let live = true;
     try {
-      answer = enhanceAnswerForQuestion(question, await callKimi(question, sources, context), sources);
+      answer = enhanceAnswerForQuestion(question, await callOpenRouter(question, sources, context), sources);
     } catch (error) {
       live = false;
       console.warn('Ask live generation fallback:', error?.message || String(error));

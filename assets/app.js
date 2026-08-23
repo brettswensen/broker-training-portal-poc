@@ -686,13 +686,24 @@ function tokenize(q){
 
 function scoreChunk(query, chunk){
   const words = tokenize(query);
-  const blob = [chunk.title, chunk.category, ...(chunk.topics || []), chunk.text].join(' ').toLowerCase();
+  const fields = [
+    { value: [chunk.title, chunk.category, ...(chunk.topics || [])].join(' '), weight: 4 },
+    { value: chunk.section || '', weight: 3 },
+    { value: (chunk.sourceRetrievalTerms || []).join(' '), weight: 8 },
+    { value: (chunk.chunkRetrievalTerms || []).join(' '), weight: 28 },
+    { value: (chunk.retrievalTerms || []).join(' '), weight: 10 },
+    { value: chunk.text || '', weight: 1 }
+  ];
   let score = 0;
   for (const w of words) {
-    const hits = blob.split(w).length - 1;
-    score += hits ? 2 + Math.min(hits, 5) : 0;
+    for (const field of fields) {
+      const blob = String(field.value || '').toLowerCase();
+      const hits = blob.split(w).length - 1;
+      score += hits ? field.weight * (2 + Math.min(hits, 5)) : 0;
+    }
   }
-  if (blob.includes((query || '').toLowerCase())) score += 12;
+  const exactQuery = String(query || '').toLowerCase();
+  if (exactQuery && fields.some(field => String(field.value || '').toLowerCase().includes(exactQuery))) score += 30;
   return score;
 }
 

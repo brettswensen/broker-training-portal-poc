@@ -187,7 +187,13 @@
       "text": "I don\u2019t know. I\u2019ve got to think about it. I mean, Most o the errors I end up seeing is like like putting in the buyer wrong or the seller wrong. I don\u2019t, I mean, i don\u2019t it\u2019s the i think The iterations have gotten better. I think you may have more ino, i mean have more insight than i would on that.",
       "source_line_start": 13,
       "source_line_end": 16,
-      "section": "Auto-generated"
+      "section": "Auto-generated",
+      "retrieval_terms": [
+        "common errors",
+        "frequent mistakes",
+        "repc errors",
+        "typical mistakes"
+      ]
     },
     {
       "chunk_id": "chunk-004",
@@ -229,21 +235,40 @@
       "text": "They need to plan ahead or that. And it\u2019s not considered received until we have the receipt on our end. So, i they go in the day, it\u2019s due and try to do a wire transer, you know, They need to understand that we don\u2019t actually have it until we have the receipt on our end. And that sometimes could be the next business day. So plan ahead, especially i it\u2019s a weekend. Um, I holidays or weekends are going to get in the way o those our calendar days, Go ahead and put an addendum in there initially that extends that so that they\u2019ve got time to take care o it. We had another question come up yesterday, and this is one I\u2019d love to hear your take on. Keaton sent a text message asking, they\u2019re stating that the title company had inormed the buyer that.",
       "source_line_start": 49,
       "source_line_end": 58,
-      "section": "Auto-generated"
+      "section": "Auto-generated",
+      "retrieval_terms": [
+        "missed REPC deadline",
+        "REPC deadline extension",
+        "REPC deadline weekend",
+        "wire transfer deadline time",
+        "advance planning deadline"
+      ]
     },
     {
       "chunk_id": "chunk-010",
       "text": "They could hold the ive thousand dollars earnest money, one deposit o ive thousand dollars or ive contracts. And o course he wants to know, well you know can we do that? What I didn\u2019t ind out is what was that ive one thousand dollar deposits or was he expecting. He\u2019d written $5,000 earnest money on ive dierent contracts and just wanted to put $5,000 in once. And the title company told him, sure. My response was, uh no. Not unless it\u2019s in writing that that $5,000 covers all ive. Otherwise it violated the contract because those are ive separate contracts, ive separate commitments or $5,000.",
       "source_line_start": 60,
       "source_line_end": 67,
-      "section": "Auto-generated"
+      "section": "Auto-generated",
+      "retrieval_terms": [
+        "missed REPC deadline",
+        "deadline missed contract",
+        "REPC deadline missed",
+        "deadline extension negotiation"
+      ]
     },
     {
       "chunk_id": "chunk-011",
       "text": "And Marty had responded something similar as well. Unless you\u2019ve got an addendum that states that ive thousand is or all ive, no, we\u2019re not doing it. And my other concern was i he deaults on more than one contract and it\u2019s ive thousand or each. And the title company\u2019s only holding ive thousand, Then the sellers are going to be suing pretty quick to get their ive grand.",
       "source_line_start": 69,
       "source_line_end": 73,
-      "section": "Auto-generated"
+      "section": "Auto-generated",
+      "retrieval_terms": [
+        "missed REPC deadline",
+        "REPC deadline consequence",
+        "contract deadline missed",
+        "deadline lapse"
+      ]
     },
     {
       "chunk_id": "chunk-012",
@@ -702,5 +727,12 @@
     }
   ],
   "operator_interpretation": "Darren emphasizes practical contract administration details that agents often overlook. The wire transfer timing issue is particularly relevant in today's market where buyers may not understand banking delays. The PID disclosure requirement is a newer issue that many agents are unaware of - this is critical for new construction transactions. The compensation structure warning about zeros vs 'does not apply' reflects a specific litigation risk that agents should take seriously. The early possession horror story illustrates why indemnity agreements and supervision are essential. Note that some guidance (HOA fee limits, PID rules) reflects Utah-specific regulations and may differ in other states.",
-  "confidence_notes": "This transcript is from December 2025 and reflects Utah-specific REPC forms and practices. The compensation structure litigation mentioned is Utah case law. HOA fee limits (3-year rule) is Utah state law. PID disclosure requirements are Utah-specific. VA buyer compensation rule changes reference federal changes post-Sitzer/Burnett. Water rights/shares distinction may vary by state. County recorder hours example (Juab County) is Utah-specific. Agents in other states should verify local equivalents."
+  "confidence_notes": "This transcript is from December 2025 and reflects Utah-specific REPC forms and practices. The compensation structure litigation mentioned is Utah case law. HOA fee limits (3-year rule) is Utah state law. PID disclosure requirements are Utah-specific. VA buyer compensation rule changes reference federal changes post-Sitzer/Burnett. Water rights/shares distinction may vary by state. County recorder hours example (Juab County) is Utah-specific. Agents in other states should verify local equivalents.",
+  "retrieval_terms": [
+    "common repc errors",
+    "frequent mistakes",
+    "repc mistakes",
+    "real estate contract errors",
+    "common contract problems"
+  ]
 }

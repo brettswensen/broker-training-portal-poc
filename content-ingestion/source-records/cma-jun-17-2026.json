@@ -1,0 +1,295 @@
+{
+  "source_id": "cma-jun-17-2026",
+  "title": "CMAs with Craig - June 17, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/1n9NFpYBxZ3YtKXOwd3BSsMn4WzVKnWnd/view",
+  "date": "2026-06-17",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Craig walks through two live CMA analyses: a 1950s off-market bungalow in Rose Park (Salt Lake City) needing TLC, and a 1925 outdated home on 4.74 acres in Highland with subdivision potential. Covers comp selection, condition adjustments, acreage valuation, investor flip math, seller financing exclusions, and highest-and-best-use analysis for land subdivision.",
+  "topics": [
+    "CMA",
+    "comparables",
+    "pricing",
+    "condition adjustments",
+    "acreage valuation",
+    "subdivision",
+    "off-market properties",
+    "investor flip analysis",
+    "highest and best use",
+    "Rose Park",
+    "Highland",
+    "seller financing",
+    "zoning density"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Off-market property never on MLS",
+      "guidance": "Start with tax records and a map view to get an outside visual. Check county parcel detail for square footage, finished basement percentage, and acreage. Never assume basement finish from total sqft alone—verify above-grade vs below-grade separately.",
+      "client_language": "Let me pull the tax records and county parcel details first to verify square footage, finished area, and lot size before we run comps.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Choosing comparable properties",
+      "guidance": "Narrow geography first—stay within natural boundaries (rivers, highways) and avoid crossing major dividers like I-15. Then filter by property type (bungalow/rambler), year built range, and square footage bracket. If too many comps, tighten criteria; if too few, expand days back or relax filters. Software typically sorts higher sales to the right—focus on the lower side for fixer properties.",
+      "client_language": "We’re keeping comps within Rose Park, same era, similar size. The higher-priced sales on the right are remodeled—those don’t apply to your property.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004",
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Property needs significant TLC / not updated",
+      "guidance": "When no hammered comps exist in recent sales, expand days back (e.g., 180 or 270 days) and exclude price points you know are too high. Walk each comp’s photos and estimate a dollar discount versus the subject. If the best available comp is still $30–50K nicer, apply that discount mentally and document it.",
+      "client_language": "Even the roughest recent comp is still $30–40K nicer than what we’re walking into, so we need to discount further. I’m expanding the search to 270 days to find more realistic comparables.",
+      "citation_refs": [
+        "chunk-006",
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Seller is looking at Zillow or public sites for pricing",
+      "guidance": "Explain that Zillow shows after-repair values, not as-is condition. Neighbor’s house sold for $450K after it got fixed up—not before. Investors will calculate 70% of ARV minus repairs, which is typically far below owner-occupant market value.",
+      "client_language": "Your neighbor’s house sold for $450K after it was renovated. Investors will offer around 70% of that minus repair costs. Listing to an owner-occupant buyer will net you more.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Investor flip offer vs listing to owner-occupant",
+      "guidance": "If the home is habitable, an owner-occupant buyer will almost always pay more than an investor flipper who needs profit margin. For flip math: find remodeled comps, estimate remodel cost, add flipper profit, and work backward. But if habitable, list to retail buyers first.",
+      "client_language": "If the home is livable, we should list it retail. An owner-occupant will outbid an investor who needs to build in profit and renovation costs.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Large acreage property with subdivision potential",
+      "guidance": "Verify zoning with the city—some areas use density (number of homes) rather than minimum lot size. Calculate value two ways: (1) keep the home on a smaller retained lot and sell off subdivided parcels, or (2) knock down and sell as bare lots. Engage an architect or engineer to map out possible lot configuration. Compare total subdivided value against as-is single-sale value.",
+      "client_language": "Before we price this, we need to know how many lots the city will allow. If it’s five lots by density, five smaller lots may be worth more than one big parcel—even though each individual lot drops in value.",
+      "citation_refs": [
+        "chunk-010",
+        "chunk-011",
+        "chunk-012"
+      ]
+    },
+    {
+      "scenario": "Adjusting for acreage in comps",
+      "guidance": "When acreage is a determining factor, filter comps by lot size first. If comps have varying lot sizes, assign a per-square-foot or per-acre value and adjust accordingly. Be cautious with outliers—comps with far more acreage can skew the analysis and may need to be discounted or removed.",
+      "client_language": "Acreage is critical here, so I’m filtering comps by lot size and will adjust for any differences. That outlier with excessive acreage is going to be discounted because it’s not comparable.",
+      "citation_refs": [
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Seller wants to sell to a flipper instead of listing",
+      "guidance": "Set expectations early: flippers need profit margin. They’ll take 70% of after-repair value and subtract repairs. If the seller’s expectation is based on fixed-up neighbor sales, they need to understand the difference between as-is and ARV pricing.",
+      "client_language": "If you sell to a flipper, expect an offer around 70% of the fixed-up value minus renovation costs. If you want top dollar, we list it as-is to a retail buyer.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    }
+  ],
+  "steps": [
+    "Pull tax records and county parcel details for verified square footage, finished basement, and acreage",
+    "View the property on a map to understand boundaries and neighborhood context",
+    "Set initial comp filters: geography, property type, year built, square footage",
+    "If too many comps, tighten criteria; if too few, expand days back or relax filters",
+    "Review comp photos and condition to estimate dollar adjustments for the subject property",
+    "Exclude remodeled/high-end comps for fixer properties; focus on the lower end of the price spectrum",
+    "For properties needing TLC, expand search to 180–270 days if needed and exclude price points that don’t apply",
+    "Explain to sellers that Zillow and public sites show after-repair values, not as-is pricing",
+    "For acreage properties, verify zoning rules (density vs lot size) before pricing",
+    "Calculate subdivision potential by comparing total value of split lots vs single as-is sale",
+    "If habitable, recommend listing to owner-occupant buyers rather than selling to investors",
+    "Create a CMA packet with selected comps and email PDF to the agent"
+  ],
+  "objections": [
+    {
+      "objection": "Seller says their neighbor sold for much more",
+      "response": "That neighbor sale was after renovation. Your home is as-is. Investors will offer 70% of ARV minus repairs. Listing retail to an owner-occupant gets you closer to market value.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "Seller wants to sell to a flipper to avoid hassle",
+      "response": "Flippers need margin. They’ll start at 70% of fixed-up value and deduct repairs. You’ll net significantly less than listing as-is to a buyer who will live in it.",
+      "citation_refs": [
+        "chunk-008",
+        "chunk-009"
+      ]
+    },
+    {
+      "objection": "Seller thinks Zillow estimate is accurate",
+      "response": "Zillow reflects after-repair values of updated homes nearby, not the as-is condition of your property. Our CMA uses actual comparable sales matched to your home’s current condition.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "Large acreage—seller wants one price for the whole parcel",
+      "response": "We need to check zoning first. If density allows five lots, five smaller lots may total more than one big parcel. Let’s get an engineer to map it before we set a price.",
+      "citation_refs": [
+        "chunk-010",
+        "chunk-011",
+        "chunk-012"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "So as always, I go through the tax records. Uh and this is in uh Salt Lake City. So I’m just going to say Sterling and then I’m going to say Salt Lake County search and then 107 6 is right here. So you can see how easy it was to put it up.",
+      "timestamp_start": "00:00:03",
+      "timestamp_end": "00:00:58",
+      "source_line_start": 9,
+      "source_line_end": 12,
+      "section": "Starting with tax records"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Basically, 80 % finished in the basement, according to county records, again, if in Salt Lake County, you can go to the parcel detail right here and um it will. It makes it pretty clear as well down here at the bottom. Um the the square footage, 10, 30 and 10 30 in the finished area there. Um and we are dealing with a an acreage of. 14 acre.",
+      "timestamp_start": "00:02:49",
+      "timestamp_end": "00:03:46",
+      "source_line_start": 37,
+      "source_line_end": 42,
+      "section": "County parcel detail verification"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "You can see, you know, if we were to delineate, well what are good boundaries for this property? It’s naturally bounded by this area here. The river might be a break, maybe not. But, you know, ideally, we’re going to just find stuff right in this area and not go across I - 15. And so you could try to sort of come in like this.",
+      "timestamp_start": "00:04:45",
+      "timestamp_end": "00:05:11",
+      "source_line_start": 62,
+      "source_line_end": 67,
+      "section": "Geographic boundaries for comps"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "And my guess is we’re going to find what we want just within that. So yeah, that was that was my anticipation. There’s typically plenty and obviously way too many. And so at this point, we can come in here and say, okay, we just want bungalow. Um, we just want rambler. That might get rid of some not many. Okay got rid of a few, and then we have the great luxury of going back. So we can go back. Let’s go 90 days.",
+      "timestamp_start": "00:05:11",
+      "timestamp_end": "00:06:09",
+      "source_line_start": 68,
+      "source_line_end": 73,
+      "section": "Filtering by property type and timeframe"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "Still 26 comps going back 90 days. And if you look at the map, there are still plenty of them right around there. Um, twenty six comps is still is going to be too many. Um and so we have the luxury of of dialing it in even further. And. So we could go down to like um uh, our square footage and say, okay, we we want something, you know, a little bit closer in size. Um, to the subject property. Um, maybe we go closer in year built. And here we are, twenty two comps still.",
+      "timestamp_start": "00:06:09",
+      "timestamp_end": "00:07:04",
+      "source_line_start": 73,
+      "source_line_end": 78,
+      "section": "Tightening comp criteria"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "These comps over on this right side are going to be ones that are updated remodeled. So like for instance, like we’ll just take a look at this real quick, just as an example. Like, you’re not going to walk into this kind of a condition where it’s updated kitchen, updated flooring. And, that’s something that our it’s nice that our analysis software does is it will typically put the higher sales on the right side of the analysis and the lower sales over here. Yeah. So, we’re we’re going to focus on the lower sales side of it and go from there.",
+      "timestamp_start": "00:09:41",
+      "timestamp_end": "00:10:25",
+      "source_line_start": 153,
+      "source_line_end": 160,
+      "section": "Focusing on lower comps for fixer properties"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "I am sure this thirty to forty thousand better than what we’re walking into. So, we’re not finding a hammered one yet. So, you know, that one’s not red brick. I have a preference for the red brick, but you know it’s like thirty or forty thousand on better on that one. This one here um this a short sale. This one, yeah, this one’s updated also on the inside, but I am I am, you know again? Let’s call it fifty. It’s called fifty thousand or so. We’re just not finding.",
+      "timestamp_start": "00:13:16",
+      "timestamp_end": "00:14:00",
+      "source_line_start": 206,
+      "source_line_end": 213,
+      "section": "Condition adjustments when no perfect comps exist"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "Because if if they’re coming in to flip, and we’re looking at at, you know, post flip, they’re selling in the four fifty s. Uh and his needs a hundred thousand while they’re going to take that and start at three fifty. They’re going to take seventy percent of that, and that’s what they’re going to offer him for it. Yeah, Zillow is just going to have the after. What they’re, I don’t know what they’re looking at on Zillow or whatever public site they’re looking at is what’s the after repair value. That’s what it’ll sell like after the work. Yeah, but investors got to figure is going to be figuring into what they offer, what that value is.",
+      "timestamp_start": "00:15:12",
+      "timestamp_end": "00:16:36",
+      "source_line_start": 235,
+      "source_line_end": 271,
+      "section": "Investor flip math and Zillow ARV explanation"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "You know, let’s let’s look at the remodeled comps that are similar square footage, um year built that are remodeled. What would this sell for if it were remodeled and go through and pick out the top of the top of the cop top comps. And then you’ll be able to do some backwards math. Say okay, if it if you know, and if let’s say it’s five hundred for sake of discussion, Um you know, then you say, okay, how much is going to cost to remodel that? And, then you’d have to have someone go and get quotes. Add some developer prop, uh like flipper profit, etcetera to come up with. The sales price, so you can do it that way, but I think based on what we just did, if the home is habitable, Especially you’ll find some buyer that doesn’t that’s an owner occupant, not going to be an investor. And that’s that’s going to be the buyer that’s going to give you the most money for the home.",
+      "timestamp_start": "00:20:25",
+      "timestamp_end": "00:21:19",
+      "source_line_start": 337,
+      "source_line_end": 345,
+      "section": "Backwards math for flip analysis vs retail listing"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "Now what she did this, this one’s got acreage four point seven four. So at this point, and we we realize it’s like one acre lots um that it could be subdivided down to. And it would make more sense probably to keep the home. That’s at least our guess, and we’re going to verify that right now. We can take a look at the square footage on county, go here to county records, go to appraisal info.",
+      "timestamp_start": "00:23:50",
+      "timestamp_end": "00:24:45",
+      "source_line_start": 404,
+      "source_line_end": 412,
+      "section": "Acreage and subdivision potential introduction"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "So what would happen is that would be great. So, so the the highest best best, the highest best value for this is to subdivide into as many lots as possible. Each lot is going to go down a little bit in value because we were estimating them being around. Uh like an acre. So you back and look up properties in that area that are, you know, point six point seven um something like that. Point eight and and we’re we’re go in line with what those are, um. And then, And these and assume, okay, if we had five of these lots, what’s the total value.",
+      "timestamp_start": "00:40:23",
+      "timestamp_end": "00:41:21",
+      "source_line_start": 630,
+      "source_line_end": 642,
+      "section": "Highest and best use: subdivision value calculation"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "We’re, we’re you know, we’re probably only going to have a a point seven acre lot, something like that. So that’s going to go. It’s going to drop it down to. It’s going to drop it by fifty k, something like that. So now you are dealing with seven, fifty to seven fifty, sort of is the norm, and maybe eight hundred and fifty pressing it. Um uh but you are gonna, you are gonna be picking up a lot more value, though, by bringing in five of those, you know, uh you know, even though even though you are dropping the value on each of those a little bit, um you are gonna be. Better at five than four.",
+      "timestamp_start": "00:41:21",
+      "timestamp_end": "00:41:58",
+      "source_line_start": 635,
+      "source_line_end": 654,
+      "section": "Five smaller lots vs one large parcel value"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "The acreage aspect of this so critical that it becomes a determining factor. So I’m going to go down to acreage. I might be willing to look at a half acre, but I hesitate on that. I’m now going to view the map, see where these are at. Okay, this right nearby. These ones that I thought are going to clip out, we’re actually going to keep. And then that one over there. So that’s good. Let me actually expand this a little more.",
+      "timestamp_start": "00:30:04",
+      "timestamp_end": "00:30:57",
+      "source_line_start": 480,
+      "source_line_end": 488,
+      "section": "Acreage as determining factor in comp selection"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "I am going to give it about four dollars a square foot, which is roughly one hundred seventy five thousand. Because some of these lots here are smaller and some of these are larger, and then bedrooms bathrooms I am not exactly sure, and I am not too worried about it. That that part’s not going to be significant. I am just going to roll with the traditional. I don’t know. I am just going to roll with four bedrooms and I am going to roll with two and a half bathrooms. And I obviously could be wrong, it’s going to put us in the ballpark.",
+      "timestamp_start": "00:31:52",
+      "timestamp_end": "00:32:44",
+      "source_line_start": 502,
+      "source_line_end": 510,
+      "section": "Ballpark adjustments for unknown details"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "Someone got a deal on this home, but that that’s that acreage is too much to to really quant quantify. So so really we’re we’re coming in around eight hundred. There’s an outlier down lower and then there’s um, an outlier that’s higher. So so eight hundred is sort of the middle ground on that one, um, For this one Jana. And and so I and I don’t remember what I don’t remember what we had determined was the lot value. We did that one last week. Um so so it You know, If you can save some of the so this is where you need an architect or like an engineer to go in there, sort of map out the subdivision. And see what lots can be created out of it, and if you can retain some of the outbuildings, You basically will take that eight hundred and increase it according to the value of the outbuildings.",
+      "timestamp_start": "00:36:33",
+      "timestamp_end": "00:37:31",
+      "source_line_start": 567,
+      "source_line_end": 575,
+      "section": "Engineer/architect for subdivision mapping"
+    },
+    {
+      "chunk_id": "chunk-016",
+      "text": "I just saved the analysis here. And I’ll actually create a CMA packet for you. I’ll probably just send over these like these right here. And I’ll email that PDF to you. But yeah, that’s a pretty solid like Salt Lake. Those were all built in the nineteen fifties, similar square footage, similar enough lot sizes, similar location. And and then we adjusted like that’s a pretty solid one.",
+      "timestamp_start": "00:21:28",
+      "timestamp_end": "00:22:17",
+      "source_line_start": 356,
+      "source_line_end": 362,
+      "section": "Creating and delivering the CMA packet"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). Speakers 2–5 are agent participants. Craig references specific dollar amounts ($30–40K, $50K, $350–390K range, $800K, etc.) as live analysis estimates. The transcript includes two complete CMA walkthroughs with real addresses and actual comp-filtering decisions.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. Craig’s methodology for comp selection, condition adjustments, and subdivision analysis is preserved verbatim."
+}

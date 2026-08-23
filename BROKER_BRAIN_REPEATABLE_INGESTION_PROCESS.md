@@ -104,6 +104,27 @@ client_language
 
 The first 8-12 words of every `chunks.text` must appear inside that chunk's claimed source line range.
 
+### Optional Retrieval Hints
+
+When no-content smoke tests show the right source/chunks exist but rank too low, Billy may add Billy-owned retrieval hints:
+
+```json
+{
+  "retrieval_terms": ["short query phrase", "alternate user wording"]
+}
+```
+
+Supported locations:
+
+- Top-level source record: applies to all chunks from that source.
+- Individual chunk object: applies only to that chunk.
+
+Rules:
+
+- Retrieval hints are ranking metadata only.
+- They must point users toward already-approved source/chunks; they do not replace `chunks.text`, `broker_guidance`, or citations.
+- Hermes/platform automation should preserve and test these terms mechanically, not invent them from source content.
+
 ## Billy's Required Validation Command
 
 Run from repo root:
@@ -151,7 +172,18 @@ data/search-index.json
 
 plus the current static/staging mirror index files.
 
-### 3. Confirm counts only
+### 3. Run no-content retrieval smoke tests when a manifest exists
+
+```bash
+node scripts/retrieval-smoke-test.js \
+  --manifest content-ingestion/retrieval-tests/2026-08-22-batch.json \
+  --index data/search-index.json \
+  --out content-ingestion/retrieval-tests/results/2026-08-22-batch-runtime-keyword-smoke.json
+```
+
+This reports IDs, ranks, and pass/fail counts only. It does not print chunk text or source guidance.
+
+### 4. Confirm counts only
 
 ```bash
 python3 - <<'PY'

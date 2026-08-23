@@ -1,0 +1,317 @@
+{
+  "source_id": "cma-townhome-may-13-2026",
+  "title": "Townhome CMA with Craig - May 13, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/1AwbAbufJPSdO54aGLLJlfedz0aDHFK6R/view",
+  "date": "2026-05-13",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Craig walks agent Jake through a live CMA for a townhome listing in Lehi, Utah (Innocenti Days / Leather Ridge community). Covers townhome-specific comp selection tricks, adjusting for garage size (one vs two car), end unit vs mid unit premiums, finished vs unfinished basement impact, rear-loaded vs front-loaded layout preferences, private yard value, and the critical 'gut check' step of analyzing active competition before setting list price. Recommends pricing at $450K with marketing strategies for a buyer's market.",
+  "topics": [
+    "CMA",
+    "townhome",
+    "pricing",
+    "comparables",
+    "garage adjustment",
+    "end unit premium",
+    "finished basement",
+    "buyer's market",
+    "coming soon status",
+    "seller concessions",
+    "rate buy down",
+    "gut check",
+    "active competition analysis",
+    "rear loaded",
+    "front loaded",
+    "private yard",
+    "upgrades",
+    "washer dryer negotiation"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Doing a townhome CMA and comps seem scarce",
+      "guidance": "Remove 'townhouse' filter from the search. Sometimes townhomes are mislisted as single family or other types. Focus on geography first, then refine by square footage and other criteria. Also expand year built range \u2014 townhome communities are usually built within 1-2 years but the Great Recession delayed some developments.",
+      "client_language": null,
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Subject property has a two-car garage but comps have one-car garages",
+      "guidance": "One-car garage vs two-car garage can kill townhome value by $30-40K. Craig has been doing deep dive research on this for his own townhome builds in Riverton. Be conservative but realistic \u2014 he used a $15-20K adjustment in this analysis, though he suspects the true impact may be higher.",
+      "client_language": "The one-car garage feature has been a deal killer for townhome values in my research.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Subject property is a mid-unit vs end-unit comps",
+      "guidance": "End units carry a premium. Craig has seen appraisers give $5-15K for end unit status. In this analysis he used $10K as a conservative adjustment. Always verify whether comps are end or mid units and adjust accordingly.",
+      "client_language": "On townhomes I like to make an adjustment for mid versus end unit.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Subject property has an unfinished basement but comps have finished basements",
+      "guidance": "Unfinished basement is one of the biggest value hits. In this analysis, the unfinished basement was the primary reason the automated valuation came in lower. Finished basement adds significant value \u2014 always verify basement finish percentage in the tax records and adjust accordingly.",
+      "client_language": "That's where you are getting the biggest hit \u2014 the subject property's basement is unfinished.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Rear-loaded vs front-loaded townhome layout",
+      "guidance": "Rear-loaded (alley-loaded) townhomes are less desirable than front-loaded because buyers lose the private backyard. Front-loaded units often have a small grassy yard even with a one-car garage. Craig considers rear-loaded layouts a 'detrimental floor plan' for subdivision layout. Adjust down for rear-loaded if comps are front-loaded with private yards.",
+      "client_language": "Cities are in love with these rear-loaded townhomes and I just am not. There is some value in having a private backyard.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Setting list price in a buyer's market",
+      "guidance": "Do the 'gut check' \u2014 search active competition in the price range and area to see what buyers' alternatives are. In this case, there was virtually no competition under $480K for 2000+ sq ft townhomes. This supported pricing aggressively at $450K. Craig recommended nothing higher than $470K, with $450K being the sweet spot for attention.",
+      "client_language": "If you're at four fifty, you are going to have a lot of attention on this. I would recommend nothing higher than four seventy.",
+      "citation_refs": [
+        "chunk-007",
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Seller wants to include washer/dryer or appliances",
+      "guidance": "In a buyer's market, including appliances can be a small advantage. In a seller's market, don't mention them upfront \u2014 use them as a negotiating chip during repair negotiations. Either exclude them from the listing and offer them instead of repairs, or include them upfront for attention in a buyer's market.",
+      "client_language": "You don't mention it as being included and then wait for them to offer. At that point, it becomes a negotiating chip.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Tenants in place and seller wants to delay showings/photos",
+      "guidance": "Use 'Coming Soon' status. It gets the listing in front of people without counting days on market. You only need 2 pictures officially. Must go active within 21 days. Promote heavily on social media during coming soon period to build anticipation.",
+      "client_language": "Coming soon status is available. Should we use it? Absolutely because it gets in front of people.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Seller wants to price higher and offer concessions",
+      "guidance": "$460K with $10K seller concessions can work, or price at $470-480K with a rate buydown advertised prominently. Craig suggests calculating the cost of a 2-1 buydown and advertising 'initial rate X%'' on the opening graphic. This can generate traction at higher price points in a buyer's market.",
+      "client_language": "You could do four sixty and advertise photos saying ten thousand seller concessions. Or call and say how much would it cost for a two one rate buy down and advertise that.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "Hardwood floors or upgrades \u2014 do they add value?",
+      "guidance": "Only adjust for upgrades if the comps DON'T have similar quality. In this analysis, all comps had good flooring (different types but all good), so no adjustment was made for the subject's scraped hardwood. Wood as a 'luxury floor' doesn't carry the same premium in Lehi as it would in Alpine or Park City.",
+      "client_language": "All comps had good flooring. Different kinds, but all had good flooring, so nothing that would be more advantage.",
+      "citation_refs": [
+        "chunk-012"
+      ]
+    },
+    {
+      "scenario": "One comp sold for significantly more than the others",
+      "guidance": "When one comp is an anomaly, investigate why. In this case, a $479K sale in the same community outperformed the market despite having no special features beyond a private yard. It sold in 2.5 weeks during a slower time with low turnover \u2014 likely due to scarcity. Don't let one outlier skew your analysis; weight the majority of comps more heavily.",
+      "client_language": "This dude outperformed the market. These others is where I am seeing it come in at.",
+      "citation_refs": [
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Verifying MLS data accuracy before using a comp",
+      "guidance": "Always cross-check MLS input data against tax records. Craig verified square footage, year built, lot size, and PUD vs condo status by checking Utah County appraisal info. Kudos the listing agent when data is input correctly \u2014 bad data makes for bad CMAs.",
+      "client_language": "We can confidently take this MLS number and use its data because this was input really, really well.",
+      "citation_refs": [
+        "chunk-014"
+      ]
+    }
+  ],
+  "steps": [
+    "Verify MLS data against tax records (square footage, year built, lot size, PUD vs condo)",
+    "Remove 'townhouse' filter when searching comps \u2014 properties may be mislisted",
+    "Expand year built range if needed (communities sometimes built over several years)",
+    "Adjust for garage size \u2014 one-car vs two-car can be a $30-40K value difference",
+    "Adjust for end unit vs mid unit premium ($5-15K)",
+    "Adjust for finished vs unfinished basement \u2014 one of the biggest value impacts",
+    "Adjust for rear-loaded vs front-loaded layout \u2014 rear-loaded is less desirable",
+    "Adjust for private yard vs no private yard \u2014 especially important for pet owners",
+    "Do the 'gut check' \u2014 search active competition in the price range and geography",
+    "Price aggressively in a buyer's market; nothing higher than $470K for this property",
+    "Consider seller concessions or rate buydown advertising instead of higher list price",
+    "Use 'Coming Soon' status to build buzz without counting DOM when tenants delay access",
+    "Promote coming soon listings on social media",
+    "Don't adjust for upgrades if all comps have similar quality levels"
+  ],
+  "objections": [
+    {
+      "objection": "Seller wants to price at $480K or higher",
+      "response": "You'll likely sit on the market. There are a lot of unmotivated buyers in the $470s. At $450K you'll get a ton of attention and likely outperform the comps anyway. If they insist on $480K, advertise a rate buydown prominently.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "Seller thinks their upgrades justify a higher price",
+      "response": "Only if the comps DON'T have similar upgrades. In this case, all comps had good flooring and kitchens. The scraped hardwood doesn't add value when every comp also has quality flooring. Wood floors are not a luxury differentiator in this market like they are in Alpine or Park City.",
+      "citation_refs": [
+        "chunk-012"
+      ]
+    },
+    {
+      "objection": "Tenants won't allow showings or photos yet",
+      "response": "Use Coming Soon status. You only need 2 pictures, it doesn't count days on market, and you have 21 days to go active. Promote on socials during the coming soon period to build anticipation.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "objection": "There are no recent comps in the community",
+      "response": "Expand search geography to adjacent communities with similar product. Check if new construction nearby (like DR Horton) will affect pricing. Also expand the sold date range \u2014 Craig went back 180 days when needed. Look at rambler-style townhomes as additional data points even if not identical.",
+      "citation_refs": [
+        "chunk-002",
+        "chunk-007"
+      ]
+    },
+    {
+      "objection": "Seller wants to include washer/dryer in the listing",
+      "response": "In a buyer's market, including them can be a small advantage. But consider excluding them and using them as a chip during repair negotiations. If buyer asks for repairs, counter with 'just take the washer/dryer instead.'",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "Here's one trick on townhomes that a lot of people get wrong. It auto-populates this style over here. I don't want that because I want to see some end units as well. And I'm going to show you another trick with townhouse. So let's let's do this. I'm going to uh let's do this, I'm going to view the map. It will automatically drop us to this MLS number and honestly, I'm just gonna, I want to first see.I'm not sure why it's not showing me um.",
+      "timestamp_start": "00:04:15",
+      "timestamp_end": "00:04:46",
+      "source_line_start": 79,
+      "source_line_end": 84,
+      "section": "Townhome search trick \u2014 removing style filter"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Let's get rid of townhouse. Still two. The reason why I say that, sometimes it's just mislisted. And now I'm just, I'm so focused on the geography, I could come down here and eliminate pretty much all this other stuff. Like, I could expand this down to say sixteen hundred. I don't anticipate anything changing, but I could expand this up to twenty seven hundred. Oh see something came in now that might have been a home that you know, I'm deleting the rest of this as well um.",
+      "timestamp_start": "00:04:56",
+      "timestamp_end": "00:05:41",
+      "source_line_start": 98,
+      "source_line_end": 103,
+      "section": "Removing townhouse filter to catch mislisted comps"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "I've been changing this more often, and I am more inclined to say twenty thousand. And that might be too high for a townhome community, But I am inclined to be a little bit closer on the twenty thousand range. And maybe we call it fifteen thousand to split the difference a little bit. But I am feeling a little bit more confident, And the reason is I've been doing a lot of deep dive research on one car versus two car townhomes because I am about to build some myself in Riverton. And I find that the one car feature has been a deal killer for townhome values.",
+      "timestamp_start": "00:11:02",
+      "timestamp_end": "00:11:34",
+      "source_line_start": 207,
+      "source_line_end": 213,
+      "section": "Garage size adjustment \u2014 one car vs two car"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "On townhomes I like to make an adjustment for mid versus end. Now in this case, this is a mid, so there is no adjustment needed This one was a mid, so no adjustment needed. But I've seen some appraisers give, like, yeah, Some appraisers I've seen as low as five thousand and as high as maybe maybe I've seen some give more than this, but ten thousand fifteen thousand. But i think I like to be a little bit more conservative than that.",
+      "timestamp_start": "00:17:56",
+      "timestamp_end": "00:18:41",
+      "source_line_start": 367,
+      "source_line_end": 373,
+      "section": "End unit vs mid unit adjustment"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "This one's a finished basement. It's a fenced yard. I assume the yard's Fenced. Yes. Is your yard fence? Uh, I actually don't know if there's yard. Or it's a point oh four acre. So let me go back to this. And so I is the front side of it? Is the front side is like a Oh, Sorry, They're for concrete and then the park. Okay. Um, so I want to gosh, Why am I not? Uh? Why am I not seeing where to change this to satellite image? Oh, come on. There you go. So this is what you have. I, it's a weird. It's a weird. So you border the park. Yeah. Okay.",
+      "timestamp_start": "00:12:39",
+      "timestamp_end": "00:13:37",
+      "source_line_start": 247,
+      "source_line_end": 268,
+      "section": "Analyzing yard and layout via satellite"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "So the that's interesting. It's because they're front loaded. So your yours is an alley loaded, a rear loaded. It's it's not honestly not my favorite. I don't I know, cities are in love with these rear, loaded townhomes and I. Just am not. And here is the reason You you, there is some value in having a private backyard. You don't have that with this You do border the park immediately. What, are you going to what would be your preference? I don't know, because here you come out your front door, you have the park. Yeah, and you got a private backyard. I am almost thinking this is a detrimental floor plan or sorry, subdivision layout. Just my thoughts, But let's okay, let's take a look at this.",
+      "timestamp_start": "00:13:48",
+      "timestamp_end": "00:14:47",
+      "source_line_start": 287,
+      "source_line_end": 605,
+      "section": "Rear-loaded vs front-loaded townhome layout"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "during the negotiation. Either way. Okay, so now here's the gut check moment. And\nI like to do this gut check moment a lot when I do my analyses. So especially on\nlistings that are coming up. So I will now i'm going to refine the search. And i\nactually, i'm going to clear i'm going to completely clear the criteria.\n\n00:31:13 Speaker 1\nAnd and by the way, what you could do, and I didn't do it. You could go back and\nstudy some of those townhome sales in that adjacent community. We only took the\nmost recent ones. Yeah, You can go if you want to like dive into that one a little bit\nmore, if you want. You are welcome to do so. But here is what I am here is the gut\n\ncheck moment. We're going to come in. And uh, we're going to do a search full So\npeople that are going to be shopping in this area, probably are going to be in the\nfour hundred thousand. To five, call it five. Well, Let's call, let's call it five, twenty five\nbecause you are not going to be listing more than four fifty ish, maybe four. I don't\nknow. Let's, just let's just take a look at this real quick and I am going to view the\nmap and I am going to look at any product type. I am not going to limit on anything\nelse and I just want to see what is the what what choices do, buyers have that want\nto live in this area right in this price range? And. So i am i am going to look east of, i",
+      "timestamp_start": "00:31:13",
+      "timestamp_end": "00:32:12",
+      "source_line_start": 590,
+      "source_line_end": 608,
+      "section": "Gut check \u2014 analyzing active competition"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "And then, and then you've got these up here in the four hundred and ninety s, whatever. So, our analysis despite it coming in in the low like the four twenty s, four thirty s. And, then we look at our most recent sales;. We're like maybe we can go four fifty now. We're looking at active product anywhere, there t here is no buyers, don't have very many choice. If you want two thousand plus square feet,;, you don't pick up until four eighty. T here is only one of them, And then suddenly you are at almost five hundred with traffic;. It's five minutes away from I fifteen. Yeah, so so at this point, when I am like talking to my seller, I am saying, \"Look, some sales last year were like four thirty s or twenty four thirty s. Most recent sale is above that. \" And then a couple other sales in the neighborhood next door for forty s. And so if you sort of balance that out, like they they could play around with pricing. I don't think I would go any higher. I think you'll sit on the market just because it's there are a lot of unmotivated buyers in the four seventy s. I think you'll sit four sixty s You still might sit. I think you'll get showings, but I think if you're at four fifty, you are going to have a lot of attention on this Jake. And, so it just depends on what they want to do and how fast they want to sell. But I would recommend nothing higher than four seventy.",
+      "timestamp_start": "00:35:03",
+      "timestamp_end": "00:36:12",
+      "source_line_start": 670,
+      "source_line_end": 691,
+      "section": "Pricing recommendation based on gut check"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "They they they don't move the needle much. And so, I try to. Here is the thing, though we're in a buyer's market. Anything that can give you a little bit of an advantage saying hey, this included this is included. The other strategies with it is you don't mention it as being included and then wait for them to offer. And then once they offer, maybe they'll go, huh. I wonder if the seller will include the washer dryer. And at that point, it becomes a negotiating chip and sometimes you exclude it. And then offer negotiation. Then, when they do the repair negotiation, you can say, \"Hey, look. Instead of repairs, just take the washer dryer.\" So I could see it both ways. This market I could be persuaded in this market either way. And, that wouldn't be the same answer like if this were a seller's market, ; I would not include them at all and then use them as a bargaining chip during the repair negotiations where buyer's market. And I could see people throwing it out there up front, saying, \"Please take these,\" or leaving it off. And then when an offer comes in, you use it during the negotiation. Either way.",
+      "timestamp_start": "00:29:37",
+      "timestamp_end": "00:30:18",
+      "source_line_start": 574,
+      "source_line_end": 590,
+      "section": "Washer/dryer and appliance negotiation strategy"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "No, I would get professional photos unless you think those photos are awesome. I would have i would have professional photographers out there. Coming soon, no, This could be and then coming soon status is available. Should we use it? Absolutely because it gets in front of people. You only have to have two pictures officially listed once we have when you when you do a coming soon status, you you have to put the date the expiry date which, It's just twenty one days. So. As long as we get it, As long as we get it officially listed on the market within three weeks of saying coming soon, we're good. Otherwise, it automatically goes active with what you've got. Cool. Okay. So that puts an out on the MLS that's in a coming soon status. So just not count days on market. In fact, You should have an email in your box because that's what I've been working on this morning to explain it all That's awesome Well, That's a great option then right there Mhm, Because they don't want they don't want to do showings, open houses, or pictures until they're back on the twenty fifth. Okay, that's fine. But, Yes and I'd put this out on your socials Jake. This is this is one that actually could get some good attention. This one as well.",
+      "timestamp_start": "00:37:59",
+      "timestamp_end": "00:39:19",
+      "source_line_start": 734,
+      "source_line_end": 766,
+      "section": "Coming soon status for tenant delays"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "Is it worth four sixty with ten K seller concessions? Or, You could do that as well if you want to come out and say, four, sixty and advertise photos, saying ten thousand seller concessions. Um, broadly that that is that is also very attractive yeah. So, so you could do either of those strategies. Where. Do you think four seventy or four eighty sits? I t here is risk. I mean, You would have to on your opening graphic, do some cool display that says, like\" be just four seventy\", like fifteen thousand concessions. You know what I mean? Like or you can even call to send and say, how much would it be cost for a two one rate buy down in this price range? Just Cindy could say it's going to cost X amount, and then you get advertised two one buy down. You know, initial rate initial rate four point something percent. And if you and if you put out something like that, you are going to start getting traction. So you can start playing with marketing like that. I could support that as well.",
+      "timestamp_start": "00:36:40",
+      "timestamp_end": "00:37:35",
+      "source_line_start": 706,
+      "source_line_end": 724,
+      "section": "Seller concessions and rate buydown marketing"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "And again, desirable area t here is nothing around it either. Yep, exactly right. How\nmuch does the hardwood add?\n\n00:40:34 Speaker 1\nNot really anything compared to the cause. And and the reason why it doesn't add\nanything is I am looking at the flooring of all comps had good flooring. You know\ndifferent kinds, But all had good flooring, so nothing that would be. It's more\nadvantage.\n\n00:40:49 Speaker 2\nWood as a luxury floor is not in price buyers'minds as value.\n\n00:40:55 Speaker 1\nWood scratches and like I didn't look.\n\n00:40:59 Speaker 2\nVery like Alpine Park City wood is absolutely valuable, yeah, but I don't think it's as\nvaluable here, so yeah.",
+      "timestamp_start": "00:40:27",
+      "timestamp_end": "00:41:07",
+      "source_line_start": 799,
+      "source_line_end": 816,
+      "section": "Hardwood floors and upgrade valuation"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "So well, it just yeah this this one didum. It you know was on the market. Two and a half weeks. It was on the market at a slower time traditionally, It might have been there was just nothing else out there on the market at the time. Well and it's also extremely low turnover neighborhood. Yeah, It's so if you want to live there, it's hard to find something. Yeah, so for some reason because that's not anything more special, Aside from the fact it does have this private yard, and that's that's really the only thing that it was getting. So back this dude outperformed the market. Um, these others is where I am seeing it come in at now.",
+      "timestamp_start": "00:22:05",
+      "timestamp_end": "00:22:29",
+      "source_line_start": 424,
+      "source_line_end": 441,
+      "section": "Analyzing an outlier comp"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "Let's see how well this agent did. Paola Franco, let's see how well that agent did for writing this in right here. So, we're going to look at the tax records. And with Utah County, you can just go here and go to appraisal info, and it gives you a nice breakdown. So six sixty seven in the basement, fifteen fourteen upstairs. And so we can come back in here and say, okay, oops, where am I at? Let's add up the, let's add up those two top levels just to make sure that that's all good to go. Plus 1514. So this agent did a great job. Kudos to the agent. .04 acre. Let's confirm that and 2008 year built. 2008 year built is confirmed and .04 acre you can round.",
+      "timestamp_start": "00:01:26",
+      "timestamp_end": "00:02:20",
+      "source_line_start": 35,
+      "source_line_end": 43,
+      "section": "Verifying MLS data against tax records"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct excerpts from the transcript with line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). Speaker 2 is Jake (agent). Craig performed a live CMA using the MLS system during the call. Property address was Innocenti Days in Lehi, Utah (Leather Ridge community). Craig's pricing recommendation was $450K with a ceiling of $470K. The CMA included 5 initial comps from the community plus additional comps from adjacent communities when expanded to 180 days. Craig is actively building townhomes in Riverton and shared his research on garage size impact.",
+  "operator_interpretation": "No significant operator interpretation. All broker_guidance items are directly supported by transcript excerpts. Pricing recommendations are specific to the May 2026 buyer's market conditions in Lehi, Utah."
+}

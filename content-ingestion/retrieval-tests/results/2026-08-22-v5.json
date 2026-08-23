@@ -1,0 +1,472 @@
+{
+  "summary": {
+    "manifest": "content-ingestion/retrieval-tests/2026-08-22-batch.json",
+    "index": "data/search-index.json",
+    "tests": 22,
+    "expected_sources_exist": 22,
+    "expected_refs_exist": 22,
+    "source_top_pass": 22,
+    "chunk_any_top_pass": 21,
+    "chunk_all_top_pass": 19,
+    "citation_capable_pass": 22,
+    "thresholds": {
+      "topSources": 4,
+      "topChunks": 10,
+      "allChunksTop": 20
+    }
+  },
+  "failed_tests": [
+    {
+      "test_id": "common-repc-errors-001",
+      "expected_source_ids": [
+        "repc-errors-2025-12"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": false,
+      "chunk_all_top_pass": false,
+      "expected_ranks": {
+        "repc-errors-2025-12-chunk-003": 21
+      },
+      "top_sources": [
+        "repc-errors-2025-12",
+        "nerdy-nuances-negotiation-2025-02"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "test_id": "cma-jul-8-context-001",
+      "expected_source_ids": [
+        "cma-jul-8-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-jul-8-2026-chunk-008": 1,
+        "cma-jul-8-2026-chunk-009": 4
+      },
+      "top_sources": [
+        "cma-jul-8-2026",
+        "cma-jun-17-2026"
+      ]
+    },
+    {
+      "test_id": "cma-aug-5-context-001",
+      "expected_source_ids": [
+        "cma-aug-5-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-aug-5-2026-chunk-001": 1,
+        "cma-aug-5-2026-chunk-002": 2
+      },
+      "top_sources": [
+        "cma-aug-5-2026",
+        "1031-exchange-2026-05",
+        "cma-flip-property-2026-05",
+        "cma-apr-1-2026"
+      ]
+    },
+    {
+      "test_id": "short-sales-credit-001",
+      "expected_source_ids": [
+        "short-sales-2025-04"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "short-sales-2025-04-chunk-002": 2,
+        "short-sales-2025-04-chunk-003": 1
+      },
+      "top_sources": [
+        "short-sales-2025-04"
+      ]
+    },
+    {
+      "test_id": "repc-deadline-001",
+      "expected_source_ids": [
+        "repc-errors-2025-12"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "repc-errors-2025-12-chunk-009": 1,
+        "repc-errors-2025-12-chunk-010": 2
+      },
+      "top_sources": [
+        "repc-errors-2025-12"
+      ]
+    },
+    {
+      "test_id": "1031-identification-001",
+      "expected_source_ids": [
+        "1031-exchange-2026-05"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "1031-exchange-2026-05-chunk-006": 5
+      },
+      "top_sources": [
+        "1031-exchange-2026-05",
+        "cma-aug-5-2026",
+        "cma-flip-property-2026-05",
+        "short-sales-2025-04"
+      ]
+    },
+    {
+      "test_id": "repair-seller-refuses-001",
+      "expected_source_ids": [
+        "repair-negotiations-2026-07"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "repair-negotiations-2026-07-chunk-015": 4
+      },
+      "top_sources": [
+        "repair-negotiations-2026-07",
+        "cma-tips-flip-jul-22-2026"
+      ]
+    },
+    {
+      "test_id": "cma-boundaries-001",
+      "expected_source_ids": [
+        "cma-aug-5-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-aug-5-2026-chunk-005": 1,
+        "cma-aug-5-2026-chunk-006": 3
+      },
+      "top_sources": [
+        "cma-aug-5-2026"
+      ]
+    },
+    {
+      "test_id": "tax-record-verify-001",
+      "expected_source_ids": [
+        "cma-jul-8-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-jul-8-2026-chunk-001": 2,
+        "cma-jul-8-2026-chunk-002": 6
+      },
+      "top_sources": [
+        "cma-aug-5-2026",
+        "cma-jul-8-2026",
+        "cma-tips-flip-jul-22-2026"
+      ]
+    },
+    {
+      "test_id": "cma-outliers-001",
+      "expected_source_ids": [
+        "cma-jul-8-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-jul-8-2026-chunk-005": 8,
+        "cma-jul-8-2026-chunk-007": 2
+      },
+      "top_sources": [
+        "cma-jul-8-2026",
+        "cma-tips-flip-jul-22-2026",
+        "cma-aug-5-2026",
+        "cma-jun-17-2026"
+      ]
+    },
+    {
+      "test_id": "photography-impact-001",
+      "expected_source_ids": [
+        "cma-jul-8-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-jul-8-2026-chunk-006": 4
+      },
+      "top_sources": [
+        "cma-jul-8-2026",
+        "repair-negotiations-2026-07",
+        "cma-aug-5-2026",
+        "short-sales-2025-04"
+      ]
+    },
+    {
+      "test_id": "storytelling-001",
+      "expected_source_ids": [
+        "making-connections-storytelling-2025-01"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "making-connections-storytelling-2025-01-chunk-001": 20,
+        "making-connections-storytelling-2025-01-chunk-004": 10
+      },
+      "top_sources": [
+        "nerdy-nuances-negotiation-2025-02",
+        "repair-negotiations-2026-07",
+        "making-connections-storytelling-2025-01",
+        "cma-jul-8-2026"
+      ]
+    },
+    {
+      "test_id": "negotiation-escalation-001",
+      "expected_source_ids": [
+        "nerdy-nuances-negotiation-2025-02"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "nerdy-nuances-negotiation-2025-02-chunk-006": 1,
+        "nerdy-nuances-negotiation-2025-02-chunk-007": 2
+      },
+      "top_sources": [
+        "nerdy-nuances-negotiation-2025-02",
+        "repair-negotiations-2026-07",
+        "repc-errors-2025-12",
+        "cma-townhome-may-13-2026"
+      ]
+    },
+    {
+      "test_id": "short-sale-deficiency-001",
+      "expected_source_ids": [
+        "short-sales-2025-04"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "short-sales-2025-04-chunk-005": 2,
+        "short-sales-2025-04-chunk-006": 1
+      },
+      "top_sources": [
+        "short-sales-2025-04"
+      ]
+    },
+    {
+      "test_id": "planned-decision-001",
+      "expected_source_ids": [
+        "planned-decision-making-2026-07"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "planned-decision-making-2026-07-chunk-001": 2,
+        "planned-decision-making-2026-07-chunk-002": 1
+      },
+      "top_sources": [
+        "planned-decision-making-2026-07"
+      ]
+    },
+    {
+      "test_id": "flip-analysis-001",
+      "expected_source_ids": [
+        "cma-flip-property-2026-05"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-flip-property-2026-05-chunk-003": 2,
+        "cma-flip-property-2026-05-chunk-004": 3
+      },
+      "top_sources": [
+        "cma-aug-5-2026",
+        "cma-flip-property-2026-05",
+        "1031-exchange-2026-05",
+        "short-sales-2025-04"
+      ]
+    },
+    {
+      "test_id": "planned-decision-examples-001",
+      "expected_source_ids": [
+        "planned-decision-making-2026-07"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": false,
+      "expected_ranks": {
+        "planned-decision-making-2026-07-chunk-005": 46,
+        "planned-decision-making-2026-07-chunk-006": 3
+      },
+      "top_sources": [
+        "planned-decision-making-2026-07"
+      ]
+    },
+    {
+      "test_id": "townhome-valuation-001",
+      "expected_source_ids": [
+        "cma-townhome-may-13-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-townhome-may-13-2026-chunk-001": 3,
+        "cma-townhome-may-13-2026-chunk-003": 11
+      },
+      "top_sources": [
+        "cma-jun-17-2026",
+        "cma-tips-flip-jul-22-2026",
+        "cma-townhome-may-13-2026",
+        "cma-aug-5-2026"
+      ]
+    },
+    {
+      "test_id": "1031-qualified-001",
+      "expected_source_ids": [
+        "1031-exchange-2026-05"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "1031-exchange-2026-05-chunk-005": 1
+      },
+      "top_sources": [
+        "1031-exchange-2026-05",
+        "cma-aug-5-2026",
+        "cma-flip-property-2026-05",
+        "nerdy-nuances-negotiation-2025-02"
+      ]
+    },
+    {
+      "test_id": "market-softening-001",
+      "expected_source_ids": [
+        "cma-jul-8-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-jul-8-2026-chunk-005": 3,
+        "cma-jul-8-2026-chunk-006": 2
+      },
+      "top_sources": [
+        "cma-jul-8-2026",
+        "cma-tips-flip-jul-22-2026",
+        "short-sales-2025-04",
+        "cma-aug-5-2026"
+      ]
+    },
+    {
+      "test_id": "triplex-CMA-004",
+      "expected_source_ids": [
+        "cma-triplex-2026-02"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": false,
+      "expected_ranks": {
+        "cma-triplex-2026-02-chunk-001": 7,
+        "cma-triplex-2026-02-chunk-003": 49
+      },
+      "top_sources": [
+        "cma-apr-1-2026",
+        "cma-jun-17-2026",
+        "cma-triplex-2026-02",
+        "cma-tips-flip-jul-22-2026"
+      ]
+    },
+    {
+      "test_id": "common-repc-errors-001",
+      "expected_source_ids": [
+        "repc-errors-2025-12"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": false,
+      "chunk_all_top_pass": false,
+      "expected_ranks": {
+        "repc-errors-2025-12-chunk-003": 21
+      },
+      "top_sources": [
+        "repc-errors-2025-12",
+        "nerdy-nuances-negotiation-2025-02"
+      ]
+    },
+    {
+      "test_id": "jun-17-apr-adjustments-001",
+      "expected_source_ids": [
+        "cma-tips-flip-jul-22-2026"
+      ],
+      "expected_source_exists": true,
+      "expected_refs_exist": true,
+      "source_top_pass": true,
+      "chunk_any_top_pass": true,
+      "chunk_all_top_pass": true,
+      "expected_ranks": {
+        "cma-tips-flip-jul-22-2026-chunk-017": 1,
+        "cma-tips-flip-jul-22-2026-chunk-032": 7
+      },
+      "top_sources": [
+        "cma-tips-flip-jul-22-2026",
+        "cma-aug-5-2026",
+        "cma-flip-property-2026-05",
+        "1031-exchange-2026-05"
+      ]
+    }
+  ]
+}

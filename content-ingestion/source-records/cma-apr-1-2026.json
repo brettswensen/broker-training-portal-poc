@@ -1,0 +1,297 @@
+{
+  "source_id": "cma-apr-1-2026",
+  "title": "CMAs with Craig - April 1, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/1FQIbq3uX1GTUKxqBOQ-405u-GnliRq9F/view",
+  "date": "2026-04-01",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Hands-on CMA training session where Craig walks agents through real-world property pricing scenarios. Covers duplex valuation using sales comparables vs gross rent multiplier, COVID-era purchase pricing traps, builder MLS manipulation tactics, floor plan and location defects that affect value, commission negotiation scripts, and how to handle unrealistic seller expectations.",
+  "topics": [
+    "CMA",
+    "comparative market analysis",
+    "pricing",
+    "comparables",
+    "Salt Lake County",
+    "duplex valuation",
+    "multi-unit properties",
+    "COVID purchases",
+    "seller financing",
+    "floor plan defects",
+    "busy road discount",
+    "builder manipulation",
+    "MLS data integrity",
+    "commission negotiation",
+    "gross rent multiplier",
+    "cap rates",
+    "tax records",
+    "parcel maps",
+    "zoning verification"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Pricing a duplex or multi-unit property",
+      "guidance": "When comps are plentiful and similar, use sales comparable method instead of gross rent multiplier. Verify zoning with the city. Check tax records for actual square footage and building count. For side-by-side duplexes, they typically command slightly more than up-and-down units. Adjust for garages, carports, and condition.",
+      "client_language": "Based on the comparable sales in your immediate neighborhood, similar side-by-side duplexes are trading in the upper five hundreds to low six hundreds.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Seller wants to price based on COVID-era purchase",
+      "guidance": "COVID peak purchases (Oct 2021) are a trap. The market dropped after those peaks before recovering. Show sellers that their purchase price may have been at the absolute top, and current comps likely don't support gains. Be direct about potential losses.",
+      "client_language": "You bought at the absolute peak of the market. The data shows homes in your neighborhood are trading in the 1.0 to 1.2 range. Your home has additional floor plan and location issues that push you toward the lower end.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Floor plan or location defects affecting value",
+      "guidance": "Floor plan problems (steep driveway, garage on lower level, hiking groceries up stairs) and location defects (busy roads, intersections) are real value killers. Craig discounts busy roads 5% or more. Don't let sellers compare to homes without these issues.",
+      "client_language": "Every buyer who sees this home will note the driveway and floor plan issue. People are willing to spend more for a smaller home that doesn't have this problem.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Builders manipulating MLS data",
+      "guidance": "Some builders are listing sold transactions as 'canceled' to hide price drops from appraisers and future buyers. They negotiate off-MLS deals with buyer agents. This creates artificial scarcity and inflated appraisal support. Be aware when pulling comps in new construction areas.",
+      "client_language": "The builder is trying to protect their inventory by not reporting the actual sale price. This is why we need to look at real closed data, not just MLS status.",
+      "citation_refs": [
+        "chunk-006",
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Seller has unrealistic price expectations",
+      "guidance": "When sellers use AI tools or their own analysis with no comps, suggest a desktop or full appraisal as a reality check. If they still won't listen, consider cancellation penalties or walking away. Don't waste time and marketing dollars on guaranteed failures.",
+      "client_language": "If the data doesn't support the price, no amount of marketing will sell it. An independent appraisal might help set realistic expectations.",
+      "citation_refs": [
+        "chunk-004",
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Commission negotiation with seller",
+      "guidance": "Never defend your commission upfront. Ask: 'What's been your experience with selling homes and commissions?' Let them talk themselves into valuing quality. Ask what other agents quoted. If they're between 2-3%, you're in range. Offer performance-based tiers: full commission if you hit the target, reduced if you have to drop price significantly.",
+      "client_language": "What was your experience with that one percent agent? ... So if I'm between two and three percent, then I would be someone you'd consider, correct?",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Verifying square footage and property details",
+      "guidance": "Always cross-check MLS square footage against county tax records. If a listing says 'from county records' but the numbers don't match, that's a red flag. For multi-unit properties, verify each building's square footage and whether it's legally a duplex through parcel maps and zoning.",
+      "client_language": "The tax records show 5,000 square feet, not 5,400. And the remark says it was taken from county records, but it wasn't. That's a problem we need to address.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Handling seller financing in comps",
+      "guidance": "Seller financing deals often sell above market value because unsophisticated investors overpay for easy terms. Look for clues: short days on market, quick close, terms mentioned in remarks. These comps may need to be excluded or heavily adjusted.",
+      "client_language": "This one sold at $700K when everything else is in the low sixes. The remarks mention seller financing at 5% with 10% down. That's likely an inflated price due to financing terms, not true market value.",
+      "citation_refs": [
+        "chunk-002"
+      ]
+    }
+  ],
+  "steps": [
+    "Verify property details against county tax records before starting CMA",
+    "Check parcel maps and zoning for multi-unit properties",
+    "Use sales comparable method when similar comps exist nearby",
+    "Use gross rent multiplier or cap rate only when comps are scarce",
+    "Adjust for floor plan defects, location issues, and condition differences",
+    "Discount busy roads and intersections by 5% or more",
+    "Exclude or adjust seller financing comps that inflate prices",
+    "Watch for builder manipulation of MLS status and sold data",
+    "Handle commission discussions by asking about past experiences first",
+    "Suggest appraisals for unrealistic sellers who won't accept data",
+    "Set cancellation penalties for unmotivated sellers testing the market"
+  ],
+  "objections": [
+    {
+      "objection": "Seller says their home is worth more because of upgrades",
+      "response": "Upgrades don't always equal value. Compare to similarly upgraded homes in the same neighborhood. If their 'upgrades' are standard for the area, there's no premium. AI tools often overvalue upgrades.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "objection": "Seller wants to use COVID-era purchase as baseline",
+      "response": "COVID peak prices dropped before recovering. Show them the actual trajectory: peak, drop, partial recovery. Their purchase may have been at the top, and current values may be lower than they paid.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004"
+      ]
+    },
+    {
+      "objection": "Seller compares to homes in better locations",
+      "response": "You can't compare to homes on flat lots with no busy roads. Location defects are real value killers. Show them the actual comps in their immediate area with similar issues.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-005"
+      ]
+    },
+    {
+      "objection": "Builder claims homes are selling at list price",
+      "response": "Builders may be hiding actual sale prices by marking them canceled or negotiating concessions off-MLS. Ask for the real net price, not the advertised number.",
+      "citation_refs": [
+        "chunk-006",
+        "chunk-007"
+      ]
+    },
+    {
+      "objection": "Seller wants a discount commission without discounting price",
+      "response": "Commission directly affects marketing budget and effort. If they want full service, they need to pay for it. Offer performance-based pricing instead of flat discounts.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "can\u2019t do you can\u2019t use the CMA feature when evaluating something like this. So, we\u2019re just going to do search multi unit. And then this one I\u2019m going to look at these four statuses. And then I would in this case, I\u2019m going to choose a because this is a small duplex, I wouldn\u2019t compare this to triplexes. There\u2019s no need. And I know we\u2019ll find plenty of comps, So I am just going to go with the duplex and then I am going to view map. And then we could just jump to twenty twenty seven South nine hundred East. And then from here, let\u2019s draw you know reasonable boundary. And in this area, Like seven hundred East is to me is sort of the dividing line for this area. And you got to get you got to be a little careful going Too far east because it gets obviously better. So hopefully right within this little box, we can find what we\u2019re looking for.",
+      "timestamp_start": "00:07:11",
+      "timestamp_end": "00:08:58",
+      "source_line_start": 149,
+      "source_line_end": 157,
+      "section": "Duplex CMA search boundaries"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "up into the low six hundreds based on these. Um and then this one similar like low six hundreds, and then this one\u2019s a little smaller now. This one sold for seven hundred thousand. So there is got to be something different with this um square footage Seventeen seventy eight. So why would this sell so well? Well, it\u2019s seller financing. Let me see if that sold. It says sold terms exchange, but you never know. It might have sold with seller financing. And if you wanted to get really geeky, like you could call uh Robert McDonald. I wonder why they didn\u2019t name their first kid Ronald instead of Robert, but anyway, You could have called Robert. And then uh and just say, hey, did this sell with seller financing? And, the reason why it feels like it might have is that price is not supported by any other comps in the market.",
+      "timestamp_start": "00:15:11",
+      "timestamp_end": "00:16:10",
+      "source_line_start": 260,
+      "source_line_end": 266,
+      "section": "Seller financing comp anomaly"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "This home was nice. It was purchased for 1.2 million at October 2021. The appraisal came in at like when they the time of purchase, 1.25 something like that. And so they felt like, man, you know, since that time, you know, They were trying to do their own uh analysis as to what the market\u2019s done since then. And so they\u2019re trying to think that their home might be worth, you know, 1.5 one point six It\u2019s not and I\u2019m going to tell you why, So when you look at this home, like nice waterfall on the front, you know, and okay they didn\u2019t even show a picture of it. Let me go see. It\u2019s got the pool. It\u2019s got the, you know, really custom vaulted ceilings like everywhere, all the bedrooms vaulted ceilings, beautiful windows. The yard is immaculately landscaped has a really amazing. This a family room that\u2019s right off. The main area has basically two family rooms on the main level.",
+      "timestamp_start": "00:20:27",
+      "timestamp_end": "00:21:24",
+      "source_line_start": 339,
+      "source_line_end": 346,
+      "section": "COVID purchase pricing trap"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "I have a client right now that wants to list in the next couple of weeks for just a ridiculous price. Like, there are zero comps to support their own analysis that they did, and they used some AI tool. And they\u2019re like, we have this report that explains all of the upgrades. Now granted, it hasn\u2019t even been a year since they bought this house, so they put a shed in the backyard. You know, it was a new build, so they put in like. The sod and everything, They want to sell their house for like one hundred and fifty thousand more than what they paid for it. Um, and like I am just about ready to say, I like I am willing to not have the listing because I am going to work like a dog. The house is not going to sell. Like if they\u2019re not willing to get in a reasonable price range, Like I am going to put out all this time and money, and it\u2019s not it\u2019s not gonna sell. It\u2019s just not.",
+      "timestamp_start": "00:34:34",
+      "timestamp_end": "00:35:29",
+      "source_line_start": 556,
+      "source_line_end": 562,
+      "section": "Unrealistic seller expectations"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "The other CMA I\u2019m working on right now, um, is right here. And this was unfortunately another COVID purchase. So I\u2019m concerned. Um, these guys bought in yeah same time October 2021. Ironically the same month, and we got this under price like the price has been coming down on the market for 60 days. No offers That\u2019s that would that that\u2019s not a good sign. And I\u2019ll tell you exactly why this happened look at this. This is an intersection of two busy roads, not just one busy road. There are there it\u2019s got lights. They\u2019re where they\u2019re like literally here, and I did not want them to buy this home, but it was all they it was within their price range. You know what I mean? It\u2019s just it\u2019s what they could afford. It was they bought it for three seventy five. They\u2019ve now remodeled the kitchen and now they want to sell, and it\u2019s going to be hard. It\u2019s just going to be hard. I have no clue. You know, comps are coming in mid four hundred s, but but that\u2019s before you discount the discount the busy road. So I am going to discount the busy road five percent. Yeah, I see comps coming in mid five hundred s. Sold is actually four thirty four. So if I am five percent off of that, I\u2019ve got to sell this for four hundred. So we\u2019ll see. We\u2019ll see what happens on this one, But that\u2019s another one that\u2019s going to be a COVID situation that could get interesting. Just make sure like when t here is something like that, you got to you got to discount it. And be the lowest best price in town.",
+      "timestamp_start": "00:44:48",
+      "timestamp_end": "00:45:48",
+      "source_line_start": 742,
+      "source_line_end": 751,
+      "section": "Busy intersection location defect"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "Like no It doesn\u2019t and, Okay, I will tell you. So, active under contract canceled. You are exactly right. They did not want to show the sales price. Okay, so let me give you an example. I wish this view here would work, but it\u2019s having issues. So I\u2019ve just got this. This happened to me last week with Lennar. Here is what happened Eagle Mountain. My buyer, you know, saw a home in Eagle, Mountain, and it was listed for four fifty basically and my buyer\u2019s cash and doesn\u2019t need any of the financing incentives at all. And and I am like, you know what, Lennar, we are. What is the absolute lowest. You can go on this And. We start going back and forth and back and forth. And I told them like, I pulled up comps. We want four twenty seven five hundred. And they\u2019re like, Craig, we can\u2019t do that. Like I know but I see this comp on the MLS They\u2019re like, I know we can\u2019t do that Went back to the boss and the boss said, okay, We\u2019ll sell it to you for four thirty. Let\u2019s list it at 450. Under one condition, we can pull it off the MLS and you don\u2019t report it. So that\u2019s exactly what you\u2019re saying, Asha. It\u2019s exactly what builders are doing right at this very moment to try to protect their inventory.",
+      "timestamp_start": "00:40:01",
+      "timestamp_end": "00:41:17",
+      "source_line_start": 653,
+      "source_line_end": 663,
+      "section": "Builder MLS manipulation"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "Yeah, Because because there and here is where here is the nuance on the appraisal thing. Because let\u2019s say in my Lennar case, let\u2019s say we went under contract at four fifty with twenty thousand in concessions. That four fifty number they can be telling like other buyers. Hey, you know this one\u2019s under contract for four fifty. Oh, yeah, t here is someone sent it\u2019s under contract for four fifty, and there are many appraisers who are willing. And. And this is where there\u2019s a lack of clarity in the appraisal industry because some appraisers will remove concessions and net those out and say, Hey, you appraise at four thirty. Some don\u2019t. Many don\u2019t. And, so they\u2019re coming in with appraisals at four fifty, even though you got twenty k in concessions.",
+      "timestamp_start": "00:42:05",
+      "timestamp_end": "00:42:45",
+      "source_line_start": 692,
+      "source_line_end": 696,
+      "section": "Appraisal concession nuance"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "You are one hundred percent right on absolutely everything you said. Like, To the T, everything you just said, and I love your advice. Hey, go get an appraisal because you are right. And are they what city is that in? So they\u2019re in Layton in like a high end DR Horton neighborhood, and they have a very unique floor plan that the builder isn\u2019t doing anymore. Um, unless you pay like a super crazy high lot fee, right? Because you basically have to buy two lots, but they have an interior unit. Um, and the homes around the perimeter have like just stunning views, right? Like, they\u2019re like three um a third to half acre lots that overlook a sod farm. So it\u2019s like beautiful green grass. Like nobody behind you. So the only other rambler. In this floor plan is a lot view that sold for one point two, and they just don\u2019t want to accept. Like that lot, that view alone could be worth seventy five hundred to a thousand bucks. Plus they have a bigger lot, plus they have this massive deck off the back. Like t here is just no way to compare an interior unit, even if it\u2019s the same floor plan to that.",
+      "timestamp_start": "00:35:52",
+      "timestamp_end": "00:36:47",
+      "source_line_start": 576,
+      "source_line_end": 587,
+      "section": "Interior vs view lot comparison"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "teach all of you to ask this question. Because they asked the question, Craig, what\u2019s your. tell me about your commission. You know how I responded? Exactly as I taught all of you to respond : What\u2019s been your experience with selling homes and commissions with real estate agents? This is what they they it led them right into a I can\u2019t say a trap, but they let I let them write down the psychological pathway. I wanted to. They said, Well, we sold the last home at one percent. And I just and and instead of myself saying, Well, you know, I didn\u2019t start fighting that. I said all my next question was how was your experience with that agent? And they said we got the experience of a one percent agent. Oh tell me more about that, Well, Craig, Because again, it was during twenty one, it should have not been hard to sell a home. Because they sold during twenty one bought in twenty one, they had one offer come in after significant price reductions. And. And they said, just, you know, the quality of the agent wasn\u2019t good, quality of marketing probably wasn\u2019t good. And I said, tell me about the home he was trying to sell. Well, it bordered backed onto Pioneer Crossing. So it was really loud. And and they said our agent kept telling us. No, your price right. And then but it ended up selling quite a bit less than what he had said. So I said so you weren\u2019t priced right? And I can tell you why you weren\u2019t priced right. The agent didn\u2019t take into account the busy road. I said that\u2019s an automatic five percent off and sometimes more in some circumstances.",
+      "timestamp_start": "00:27:04",
+      "timestamp_end": "00:28:50",
+      "source_line_start": 442,
+      "source_line_end": 456,
+      "section": "Commission negotiation script"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "This property is fifty four hundred square feet when I look on tax records, it\u2019s five thousand flat, so it\u2019s four hundred square feet too high. And t here is no remarks saying, Oh, It said, square footage provided as a courtesy estimate only and were obtained from county records. Except that they weren\u2019t. Guys, they were not taken from county records. And so that\u2019s a problem. That\u2019s just a complete factual misstatement that the person either lied or is or is ignorant or is like one of the two. Neither neither is good, but here so here is the issue with this.",
+      "timestamp_start": "00:21:24",
+      "timestamp_end": "00:22:20",
+      "source_line_start": 355,
+      "source_line_end": 361,
+      "section": "Square footage verification"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "So, Not only are you dealing with, uh, you know your home being on a hill, which people don\u2019t prefer. Then this driveway being, You know sort of it\u2019s not steep, but it\u2019s it is. It is it\u2019s steep here. Driveway is all broken up as well. Everything else in the home is immaculate. This driveway is a problem. But, then you\u2019re going to have to go in there and hike the groceries up. So, you have to park down there and hike groceries up here. The question is Will is someone willing to spend one point five million dollars to have this significant inconvenience? And so, the home has a lot of other cool stuff like it\u2019s got a waterfall, it\u2019s got a pool, it\u2019s got an ADU, It\u2019s got architectural stuff that\u2019s awesome, and it\u2019s got trees, and it\u2019s got views of the mountains. And so, it\u2019s got a lot of things that are so beautiful. But every single person that buys like that goes and sees this home I know because I\u2019ve shown so many homes in my career, they will all say, I really don\u2019t prefer this.",
+      "timestamp_start": "00:23:14",
+      "timestamp_end": "00:24:11",
+      "source_line_start": 375,
+      "source_line_end": 382,
+      "section": "Floor plan defect impact"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "Um, A G R M analysis would have been unnecessary for this one, just because of how everything pulled from the immediate neighborhood, similar sizes. Like it was that was an easy one to do.",
+      "timestamp_start": "00:18:08",
+      "timestamp_end": "00:18:20",
+      "source_line_start": 298,
+      "source_line_end": 299,
+      "section": "When to skip GRM"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "In a worst case scenario, and I don\u2019t know why that screen is doing that. Uh, anyway, I will not do that screen. That\u2019s weird. I\u2019ll just do this. I am confident in worst case scenario, this is worth upper five hundreds to lower six hundreds. That\u2019s a really good like a really, really solid value for this um and and I am leaning more toward. And again, it\u2019s going to depend on the the finish work. So if the finish works more like this one. Then, then it\u2019s worth. Then I would say absolutely worth low six hundred s no question. And and then if it\u2019s a little bit more, you know, Like this where it\u2019s like not quite like it\u2019s in good like I always call it good condition um not upgraded quite as nicely, then you are upper five hundreds. And then if it\u2019s obviously hammered, then you are going to go down from there, but that we have a really, really, tight range on this, like it\u2019s really, really reliable.",
+      "timestamp_start": "00:17:10",
+      "timestamp_end": "00:18:08",
+      "source_line_start": 285,
+      "source_line_end": 290,
+      "section": "Duplex value range conclusion"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "You know, comps are coming in mid four hundred s, but but that\u2019s before you discount the discount the busy road. So I am going to discount the busy road five percent. Yeah, I see comps coming in mid five hundred s. Sold is actually four thirty four. So if I am five percent off of that, I\u2019ve got to sell this for four hundred. So we\u2019ll see. We\u2019ll see what happens on this one, But that\u2019s another one that\u2019s going to be a COVID situation that could get interesting. Just make sure like when t here is something like that, you got to you got to discount it. And be the lowest best price in town.",
+      "timestamp_start": "00:45:48",
+      "timestamp_end": "00:46:30",
+      "source_line_start": 755,
+      "source_line_end": 759,
+      "section": "Busy road discount application"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "I would agree in a market like this that like consumes it, just consumes resource time energy. You would need cancellation penalties that are high enough to pay your marketing plus your time and like open houses. Like I yeah, I totally agree. You know what you you could doum a desktop appraisal through Marty Bodel for like 150 bucks. Um, if they, you know, you may suggest that to them if they\u2019re not willing to have a full appraisal, but I think it\u2019s worth it for them to have a full appraisal, and that will it\u2019ll be a wake up call for them.",
+      "timestamp_start": "00:37:27",
+      "timestamp_end": "00:37:59",
+      "source_line_start": 600,
+      "source_line_end": 604,
+      "section": "Desktop appraisal suggestion"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Speaker 2 is Craig (broker/trainer). Speakers 1, 3, and 4 are agent participants. Craig references specific addresses, MLS numbers, and dollar amounts as real examples. The duplex at 2727 S 900 E and the Highland home at 6208 W Skyline Drive are actual properties discussed.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. Craig's commission negotiation script is a key teaching moment in this session."
+}

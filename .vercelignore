@@ -1,0 +1,14 @@
+# Keep staging/prod deploys user-facing.
+# Source records, raw transcripts, and retrieval QA artifacts are build-time/internal only.
+content-ingestion/
+.hermes/
+*.md
+LOCAL_MODEL_BROKER_BRAIN_PDF_CANARY_TEST.md
+BILLY_HERMES_HANDOFF_2026-08-22.md
+BILLY_HERMES_FINAL_HANDOFF_2026-08-22.md
+
+# Preserve runtime artifacts despite broad ignores above.
+!data/search-index.json
+!design-pass/data/search-index.json
+!staging/ask-submit-progress/data/search-index.json
+!staging/ask-submit-progress/design-pass/data/search-index.json

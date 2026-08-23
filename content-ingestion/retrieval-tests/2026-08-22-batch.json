@@ -1,0 +1,261 @@
+[
+  {
+    "test_id": "cma-jul-8-context-001",
+    "query": "How should an agent handle a condo CMA with condition differences?",
+    "expected_source_ids": [
+      "cma-jul-8-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-008",
+      "chunk-009"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "cma-aug-5-context-001",
+    "query": "What do you do when a property has never been on the MLS?",
+    "expected_source_ids": [
+      "cma-aug-5-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-002"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "short-sales-credit-001",
+    "query": "How does a short sale affect credit compared to foreclosure?",
+    "expected_source_ids": [
+      "short-sales-2025-04"
+    ],
+    "expected_chunk_ids": [
+      "chunk-002",
+      "chunk-003"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "repc-deadline-001",
+    "query": "What happens if a REPC deadline is missed?",
+    "expected_source_ids": [
+      "repc-errors-2025-12"
+    ],
+    "expected_chunk_ids": [
+      "chunk-009",
+      "chunk-010"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "1031-identification-001",
+    "query": "How long do you have to identify replacement property in a 1031 exchange?",
+    "expected_source_ids": [
+      "1031-exchange-2026-05"
+    ],
+    "expected_chunk_ids": [
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "repair-seller-refuses-001",
+    "query": "How does Craig recommend phrasing repair requests to pressure sellers?",
+    "expected_source_ids": [
+      "repair-negotiations-2026-07"
+    ],
+    "expected_chunk_ids": [
+      "chunk-015"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "cma-boundaries-001",
+    "query": "When is it okay to stretch geographic boundaries for comparables?",
+    "expected_source_ids": [
+      "cma-aug-5-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005",
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "tax-record-verify-001",
+    "query": "How do you verify square footage and year built before building a CMA?",
+    "expected_source_ids": [
+      "cma-jul-8-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-002"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "cma-outliers-001",
+    "query": "How do you handle outlier comps in a CMA?",
+    "expected_source_ids": [
+      "cma-jul-8-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005",
+      "chunk-007"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "photography-impact-001",
+    "query": "How much does professional photography affect listing price?",
+    "expected_source_ids": [
+      "cma-jul-8-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "storytelling-001",
+    "query": "How can an agent use storytelling to connect with clients?",
+    "expected_source_ids": [
+      "making-connections-storytelling-2025-01"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-004"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "negotiation-escalation-001",
+    "query": "When should an agent escalate a negotiation to the broker?",
+    "expected_source_ids": [
+      "nerdy-nuances-negotiation-2025-02"
+    ],
+    "expected_chunk_ids": [
+      "chunk-006",
+      "chunk-007"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "short-sale-deficiency-001",
+    "query": "Can the bank come after the seller for the deficiency in a short sale?",
+    "expected_source_ids": [
+      "short-sales-2025-04"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005",
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "planned-decision-001",
+    "query": "What is the planned decision making framework for agents?",
+    "expected_source_ids": [
+      "planned-decision-making-2026-07"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-002"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "flip-analysis-001",
+    "query": "How do you analyze a property for flipping potential?",
+    "expected_source_ids": [
+      "cma-flip-property-2026-05"
+    ],
+    "expected_chunk_ids": [
+      "chunk-003",
+      "chunk-004"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "planned-decision-examples-001",
+    "query": "What are examples of deliberate decisions an agent should make in a planned decision making framework?",
+    "expected_source_ids": [
+      "planned-decision-making-2026-07"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005",
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "townhome-valuation-001",
+    "query": "How is a townhome CMA different from a single family CMA?",
+    "expected_source_ids": [
+      "cma-townhome-may-13-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-003"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "1031-qualified-001",
+    "query": "What makes a property qualify as like-kind for a 1031 exchange?",
+    "expected_source_ids": [
+      "1031-exchange-2026-05"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "market-softening-001",
+    "query": "How do you read market direction from comp statuses?",
+    "expected_source_ids": [
+      "cma-jul-8-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-005",
+      "chunk-006"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "triplex-CMA-004",
+    "query": "How do you find comparable properties for a triplex CMA?",
+    "expected_source_ids": [
+      "cma-triplex-2026-02"
+    ],
+    "expected_chunk_ids": [
+      "chunk-001",
+      "chunk-003"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "common-repc-errors-001",
+    "query": "What are the most common REPC errors agents make?",
+    "expected_source_ids": [
+      "repc-errors-2025-12"
+    ],
+    "expected_chunk_ids": [
+      "chunk-003"
+    ],
+    "must_return_citations": true
+  },
+  {
+    "test_id": "jun-17-apr-adjustments-001",
+    "query": "How do you value a property with an ADU?",
+    "expected_source_ids": [
+      "cma-tips-flip-jul-22-2026"
+    ],
+    "expected_chunk_ids": [
+      "chunk-017",
+      "chunk-032"
+    ],
+    "must_return_citations": true
+  }
+]

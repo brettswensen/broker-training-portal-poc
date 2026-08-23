@@ -66,6 +66,18 @@ def text_len(value: Any) -> int:
     return 0
 
 
+def string_list(value: Any) -> list[str]:
+    """Return a clean list of strings for optional metadata fields.
+
+    Retrieval metadata is Billy-owned content. The builder only preserves the
+    strings mechanically so runtime retrieval can rank approved source/chunk
+    mappings without Hermes re-reading or reinterpreting transcript text.
+    """
+    if not isinstance(value, list):
+        return []
+    return [str(item).strip() for item in value if str(item).strip()]
+
+
 def category_for(record: dict[str, Any]) -> str:
     explicit = record.get("category")
     if isinstance(explicit, str) and explicit.strip():
@@ -131,6 +143,8 @@ def normalize_record(path: Path, record: dict[str, Any]) -> tuple[dict[str, Any]
         "chunkCount": len(chunks),
         "charCount": text_len(record),
         "summary": record.get("summary") or f"Broker Brain source record for {title}.",
+        "retrievalTerms": string_list(record.get("retrieval_terms")),
+        "sourceRetrievalTerms": string_list(record.get("retrieval_terms")),
         "hasOperatorInterpretation": bool(record.get("operator_interpretation")),
         "hasConfidenceNotes": bool(record.get("confidence_notes")),
     }
@@ -148,6 +162,9 @@ def normalize_record(path: Path, record: dict[str, Any]) -> tuple[dict[str, Any]
             "title": title,
             "category": category,
             "topics": topics,
+            "sourceRetrievalTerms": string_list(record.get("retrieval_terms")),
+            "chunkRetrievalTerms": string_list(chunk.get("retrieval_terms")),
+            "retrievalTerms": string_list(record.get("retrieval_terms")) + string_list(chunk.get("retrieval_terms")),
             "timestamp": timestamp_for(chunk),
             "section": chunk.get("section") or "Source section",
             "sourceLineStart": chunk.get("source_line_start"),

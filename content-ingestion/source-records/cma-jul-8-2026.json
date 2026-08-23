@@ -1,0 +1,275 @@
+{
+  "source_id": "cma-jul-8-2026",
+  "title": "CMAs with Craig - July 8, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/136XYCb1-Yji9C8GELUQin7H5BtKzuVP_/view",
+  "date": "2026-07-08",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Craig walks through a condo CMA in Cottonwood Heights (The Orchard/Country Woods) using the MLS CMA tool. He demonstrates how to verify listing details against tax records, set search parameters for condos within the immediate subdivision, adjust comparables by square footage, garage, year built, and condition/upgrades. He explains market timing effects, how to identify outliers, the importance of professional photography, and how to price based on three tiers of condition (outdated, partially updated, fully updated).",
+  "topics": [
+    "CMA",
+    "pricing",
+    "comparables",
+    "condo valuation",
+    "MLS CMA tool",
+    "tax record verification",
+    "market timing",
+    "condition adjustments",
+    "upgrade adjustments",
+    "professional photography",
+    "subdivision comps",
+    "outlier analysis",
+    "square footage adjustments",
+    "garage adjustments",
+    "year built adjustments"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Verifying listing details before building a CMA",
+      "guidance": "Always verify square footage, year built, lot size, and bedroom/bathroom count against tax records before running comparables. The listing could be wrong.",
+      "client_language": "I verified the square footage and year built against county tax records before pulling comps.",
+      "citation_refs": [
+        "chunk-001"
+      ]
+    },
+    {
+      "scenario": "Running a condo CMA with limited inventory",
+      "guidance": "For condos, search the immediate subdivision first. Remove property type and style filters once you've geographically isolated the complex—listing agents sometimes mislist condos as single family. Two or three recent comps within the subdivision are enough if they're reliable.",
+      "client_language": "I focused on the immediate subdivision and removed property type filters so we don't miss any mislisted units.",
+      "citation_refs": [
+        "chunk-002",
+        "chunk-003"
+      ]
+    },
+    {
+      "scenario": "Setting CMA adjustment values",
+      "guidance": "Set adjustment values in your MLS CMA template for garage bays, square footage (above/below grade), finished basement, and year built. These are starting points, not set in stone—finesse up or down by neighborhood. For older properties, year built adjustments matter less than whether they've been updated.",
+      "client_language": "I used $75/sq ft for above-grade adjustments and $10K per garage bay as a starting point, then fine-tuned for this neighborhood.",
+      "citation_refs": [
+        "chunk-004"
+      ]
+    },
+    {
+      "scenario": "Reading market direction from comp statuses",
+      "guidance": "Compare active, under-contract, and sold averages. If sold > under-contract > active, the market is softening. Don't tell a seller to list at the sold average if the market is declining.",
+      "client_language": "The sold average is $278K, but under-contract is $270K and active is $267K—that tells us the market is softening, so we need to price more aggressively.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Identifying and explaining low-priced outliers",
+      "guidance": "When a comp is priced far below others, look at photos and marketing quality. Bad photography, outdated finishes, or poor marketing can explain a low sale price. Don't let one bad outlier drag down your pricing recommendation if the subject property is better.",
+      "client_language": "That $235K comp had dark photos, outdated carpet, and no professional marketing—our unit is in much better condition, so that outlier doesn't apply.",
+      "citation_refs": [
+        "chunk-006"
+      ]
+    },
+    {
+      "scenario": "Identifying and explaining high-priced outliers",
+      "guidance": "When a comp sold far above others, check the contract date. Sales from peak season (January-February) may not reflect current market conditions. Also check if the buyer simply overpaid.",
+      "client_language": "That $296K sale went under contract in February when inventory was lowest and rates had settled—it's not representative of today's market.",
+      "citation_refs": [
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Adjusting for condition and upgrades",
+      "guidance": "Create a custom 'upgrades' adjustment factor in the MLS CMA tool. Estimate what it would cost to bring a comp up to the subject's condition, then be conservative—adjust for slightly less than full cost. For a full kitchen, flooring, paint, and countertop update, a $30-40K adjustment is typical.",
+      "client_language": "I estimated $40K to bring that comp up to our condition, but I only applied a $30K adjustment to stay conservative.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "scenario": "Pricing a property with unknown interior condition",
+      "guidance": "When you don't have photos of the subject property, establish a range based on condition tiers. Identify the low end (outdated), mid-range (partially updated), and high end (fully updated) from your comps. Have the agent walk through and place the property in the appropriate tier.",
+      "client_language": "Based on the comps, we're looking at $260K if it's outdated, up to $300K if it's fully updated. Once you walk through, we can pinpoint where it falls.",
+      "citation_refs": [
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Distinguishing floor plans within the same complex",
+      "guidance": "In condo complexes, different square footage often means different floor plans (e.g., 1-bed vs 2-bed). Verify the actual bedroom/bathroom count during walkthrough. If the subject has a different floor plan than the comps, adjust or exclude those comps.",
+      "client_language": "The 702 sq ft units are one-bedroom plans, while the 784 sq ft units are two-bedroom—we need to make sure we're comparing the right floor plan.",
+      "citation_refs": [
+        "chunk-010"
+      ]
+    },
+    {
+      "scenario": "Evaluating active listings as comps",
+      "guidance": "Active listings show what sellers are asking, not what buyers are paying. Use them for context but give more weight to sold and under-contract comps. If an active listing is priced high and sitting, it may indicate the seller is unrealistic.",
+      "client_language": "That active listing at $299K has been sitting for 19 days—it's aspirational pricing, not market-supported pricing.",
+      "citation_refs": [
+        "chunk-011"
+      ]
+    }
+  ],
+  "steps": [
+    "Verify listing details (sq ft, beds, baths, year built) against county tax records",
+    "Search the MLS CMA tool using the MLS number of the subject property",
+    "Modify search parameters: set status filters, expand year built range, set square footage range",
+    "Remove bedroom, bathroom, and garage capacity filters for condos",
+    "Geographically isolate to the immediate subdivision using the map view",
+    "Remove property type and style filters to catch mislisted units",
+    "Select all comps within the subdivision and drop them into the CMA report",
+    "Populate the subject property column with verified listing details",
+    "Set adjustment values for garage, square footage, year built, and finished basement",
+    "Add a custom 'upgrades' adjustment factor for condition differences",
+    "Review active, under-contract, and sold averages to determine market direction",
+    "Examine photos of each comp to assess condition, marketing quality, and outliers",
+    "Adjust or exclude comps that don't match the subject's floor plan or condition",
+    "Account for market timing—sales from peak season may not reflect current values",
+    "Establish a pricing range based on condition tiers and have the agent verify during walkthrough"
+  ],
+  "objections": [
+    {
+      "objection": "Seller wants to price at the sold average even though market is declining",
+      "response": "Show them the active and under-contract averages are lower than sold. The market has softened since those sales closed. Price at current market levels or the listing will sit.",
+      "citation_refs": [
+        "chunk-005"
+      ]
+    },
+    {
+      "objection": "Seller points to the one high sale as justification for a high list price",
+      "response": "That sale went under contract in February at the market peak with low inventory. Current conditions are different. Also examine whether that buyer simply overpaid for the condition.",
+      "citation_refs": [
+        "chunk-007"
+      ]
+    },
+    {
+      "objection": "Seller thinks their outdated unit should sell for the same as a fully updated one",
+      "response": "Use the upgrades adjustment factor. Estimate the cost to bring the outdated comp up to the updated comp's condition, then apply a conservative adjustment. Show the seller the actual cost of updates.",
+      "citation_refs": [
+        "chunk-008"
+      ]
+    },
+    {
+      "objection": "There aren't enough recent comps in the subdivision",
+      "response": "For condos, two or three reliable recent comps within the immediate subdivision are sufficient if they're truly comparable. Expand the search radius only if necessary, and adjust for location differences.",
+      "citation_refs": [
+        "chunk-003"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "All right, let’s take a look at this. I don’t and I’m not exactly sure the reason for uh why Carter wants us to do this CMA. Uh sounds like this is a listing he’ll have coming on life online sooner than later. Uh but let’s go ahead and dive into this. So as always, I like to verify, you know, Let’s look at the listing. It’s saying it has 78 4 square feet with two beds, two baths built in 79. And so we can just easily verify um in here 784 square feet, Built in seventy nine and uh bedroom bathroom, I’m. Pretty sure it’s going to be accurate, accurate. It says number of bathrooms one. But you know, we obviously could verify that by walking through. It’s probably one. It’s probably what it’s on the listing. So seven hundred eighty four square feet. And uh again, the listing seven hundred, eight, seven hundred eighty four square feet. So this looks good. So I’m good with how this how this listed. Let’s take a look here.",
+      "timestamp_start": "00:00:57",
+      "timestamp_end": "00:01:55",
+      "source_line_start": 17,
+      "source_line_end": 27,
+      "section": "Verifying listing details against tax records"
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "You first find it by going search, go to the tax status search. I even searched through the house number. It’s in Salt Lake County, so I have that checked. And then you can find it among, You can hit Control, F and type in here the address or just find it here. In this case, It was eleven, forty four East Country Woods Circle Apartment thirteen H So I clicked on the tax record. Link brings it here. We verify You can then see if it’s been on the MLS before. I clicked on that which brings up this, Here and then I confirmed on the tax records, um, These square footage because we always want to verify that these tax records are, you know that the listing is accurately displaying year built lot size square footage, etc. Um, in this case, you can also find the legal description that this is a condominium uh. And so that’s important uh for the details for a few different reasons, because condos have slightly different qualifying financing than um.",
+      "timestamp_start": "00:02:53",
+      "timestamp_end": "00:03:50",
+      "source_line_start": 43,
+      "source_line_end": 54,
+      "section": "Tax record verification process"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "And we know part of that because, well, the orchards of Country Woods. Okay, so we know that the immediate subdivision is is this Country Woods Circle. I, you know, there’s a condo comp. No, that looks like a bunch of homes over here. But this is what I’m interested in. My guess is we’re going to find enough comps right within this immediate little area because it’s it’s big enough. Let’s hope we find some stuff. Okay, I have plenty of comps now let me show you a secret I’m going to now hide the map. Because we’ve drawn an outline around the immediate subdivision, I am now going to remove property type condo. Let’s see if ten changes. It didn’t change. And you may ask, well why did you do that Craig? Well sometimes listing agents mislist it. What if the listing agent put like single family home? Then we’re not going to find it and it might be an exceptional comp. So in this case. Because my geography is so is limiting to the exact subdivision, I don’t need property type and I don’t need style to to help differentiate things. So now I am feeling really good. We have ten now. Now that we’re right around the very complex, I am wondering if i if I press this is just out of curiosity, if I go to two thousand square feet, it doesn’t move anything because everything that’s in here is probably really similar. And even if I go down to zero square feet, that’s you know And you know, it’s the same. And in fact, I could probably remove year built on either side and it’s the same. And so I’m removing square footage and so everything’s the same. And you wouldn’t normally do this, but because we are in the immediate subdivision and they’re all probably pretty similar, we’re just pulling stuff that shows you how similar these are. There’s no need to venture outside, even though they’re like Craig. There were 40 comps you could have chosen from. No,",
+      "timestamp_start": "00:05:45",
+      "timestamp_end": "00:07:41",
+      "source_line_start": 83,
+      "source_line_end": 108,
+      "section": "Removing filters within immediate subdivision"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "And that populates this column on the far left, okay? So now we have populated this far left column with the listing details, which we have verified: the bedrooms, the bathrooms, square footage, year built, acreage, garage capacity. I am assuming that’s correct because I am looking at these as one. All of these are saying one except this. Which is a zero, which may mean that this agent just forgot to put in the garage. Um, now all and also all of these are saying point zero one acre. I’m looking along this bottom line and it’s all looking good. So, and something Mackenzie, I’ll let you know. So, you’re going to want to save You’re going to want to save these um I get a phone call from my wife and I’ll call her back right after this is done. So you’ll want to save these adjusted values on this. Side and save your own template right here. Um, when you’re setting up your MLS uh analysis abilities. So, you can just sort of even screenshot this or go back and watch the replay of this and make sure that your field on the right side adjusts. These are that you’re adjusting measurements. So, for instance, we’re adjusting at $10, 000 a bay for garage space. Well, some neighborhoods we may these aren’t set in stone. These are just a good starting spot. Sometimes we need to finesse these up and down Sometimes a garage, an extra garage bay will be, you know, twenty five thousand dollars per garage bay. Sometimes it’ll be ten thousand dollars. You know, sort of sort of depends on the neighborhood. In this case, it’s irrelevant because because all of them do have a garage. It doesn’t matter what value we put here because it’s not going to change anything. Um This is a price per square foot.",
+      "timestamp_start": "00:08:34",
+      "timestamp_end": "00:10:27",
+      "source_line_start": 124,
+      "source_line_end": 147,
+      "section": "Setting CMA adjustment values"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "Cottonwood Heights. That is cool to see. So let’s take a look at this. So along the bottom. Yeah, let’s sort of see what the ranges are. Two thirty five, two fifty eight. This is before making adjustments. Two sixty nine, two sixty two, two seventy two, two sixty one, two ninety. Two ninety nine, two ninety eight three hundred and two. Okay. So we’re ranging from somewhere around twenty thirty five upwards to three hundred thousand over here. On the left side, it shows you what the averages are. So there’s there are two active properties. They average to sixty seven. One under contract property averaging about two seventy. There’s only one up there and then seven sold. The seven sold coming in around two seventy eight. This shows us a",
+      "timestamp_start": "00:12:19",
+      "timestamp_end": "00:13:13",
+      "source_line_start": 177,
+      "source_line_end": 188,
+      "section": "Reading market direction from comp statuses"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "less than that at two sixty nine, almost two seventy, and the active is less than that. So the market is clearly softening in this subdivision. Um, and I wouldn’t go tell a seller, “Yeah, well the average is two seventy eight. You should be fine to list it two seventy eight.” It’s not going to work. And how would we know that? Well, let’s take a look at these. This one’s listed at two twenty. Now it adjusts to two thirty five and why? Because it is seven hundred two square feet; it’s a little smaller. And. So the and now and it’s also lacking a bedroom bathroom as such. You are getting a seven thousand five hundred dollar bump for the bathroom, six thousand one hundred dollar bump for the square footage difference and uh. In total, coming which then raises this two twenty price up to about two thirty five. Let’s take a look at this because this seems to be an outlier, like way less than everything else. Why would this one be priced so low? Top floor condo, but it’s priced low for some reason. Um I don’t know why this is the case, but we can only assume the inside must be inferior. Um. Well, let’s see here. I’m just gonna okay, we’ll just scan it this way. Inside, okay, that carpet looks old. I’m assuming the kitchen will look old. It’s looking okay. It looks like it’s been updated at some point. The pictures are horrible. They did not use our photographer. We have a great photography team. You should have lights on those that angle is really bad. You shouldn’t be taking it from that level. You should be taking it like you are taking the picture at a downward angle. That’s just bad photography, so the marketing is bad. Um, the photos are bad. Here is the garage,",
+      "timestamp_start": "00:13:13",
+      "timestamp_end": "00:15:05",
+      "source_line_start": 190,
+      "source_line_end": 214,
+      "section": "Identifying low-priced outliers",
+      "retrieval_terms": [
+        "market softening",
+        "comp status market direction",
+        "active under contract sold",
+        "market direction comps"
+      ]
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "Mendy’s picks they put first. Um, these are dark photos poorly taken marketing. Yeah, These these photos were taken with weird angles. I bet someone took with their phone. They didn’t use a professional photographer. So the marketing is not good despite that, and the kitchen is not great They somehow scored on this one. Um, let’s take a look at this real quick. So it sold two sixty one. I think they outperformed based on the marketing for sure and based on the interior, maybe not being quite as nice as the others. Now, we have these last four, and they’re in the three hundreds now or right close to three hundred. One of them is active, three of them are sold. We would anticipate these being really, really, really nice.",
+      "timestamp_start": "00:21:21",
+      "timestamp_end": "00:22:16",
+      "source_line_start": 304,
+      "source_line_end": 315,
+      "section": "Identifying high-priced outliers and market timing",
+      "retrieval_terms": [
+        "market softening",
+        "reading comp statuses",
+        "active listing market analysis",
+        "comp status trends"
+      ]
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "Is the range and it’s going to depend on value. Or sorry, it’s going to be dependent on upgrades and condition. I’m probably like I said, I’m gonna, I’m gonna, I would toss. There’s no need. We don’t need these one bed comps. So I’m not worried about this outlier down here. Um It, just it, just it’s one bedroom and I think people are going to spring the extra cash to get the two bedroom. I’m just not worried about it Okay Any questions about that analysis? And I am going to check our Phoenix chat to see if t here is been any update yet. No update, so I didn’t have any other ones come in. So I’ll probably, i might just leave it at that for our analyses analysis today. But i i think that anyway, hopefully some of the skills that I showed in here were helpful. And again, and Mackenzie, unfortunately, Was not able to show the, you know typically have pictures of the subject property. And then when we’re doing this. We’re at the stage where we’re going to be down here in the upgrades section, which by the way, you’re going to have to add an adjustment factor right here. And, you create a custom factor and you can call it upgrades and you add it. And then it pops in down here. Appreciation is not a factor we really need. I haven’t really used that that much recently. That was more necessary during 202 1 and 202 2, and the late part of 202 0 when values were moving fast. Um, but you could anyway. So that that feels not as necessary, but the upgrade feature. So here, um if we could say oh this one was decked out to the nines, Then we would make no adjustments on any of these that were decked out to the nines. But. Then the one down here was like man, this one that’s 260 and was not decked out to the nines. I’m going to make a negative $30, 000. So a negative three, which",
+      "timestamp_start": "00:29:27",
+      "timestamp_end": "00:31:23",
+      "source_line_start": 423,
+      "source_line_end": 450,
+      "section": "Adjusting for condition and upgrades"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "don’t know. Carter has to be the one that walks through it. So Carter will be able to watch the replay of this, and he’ll be able to determine in his walkthrough. There’s sort of three tiers. You have this one down at two thirty five which is, to me, this a deal. This why investors should be out on the market right now. In fact, This actually only a one bed um and I am just noticing. Now these this seven hundred square foot plan is only one bed. So, I would put a lot less credibility on these one bad bed plans, and I would skip to these two bed plans. We have enough of these seven hundred eighty four square foot ones that you can almost skip the seven, the one bed and say, okay, from here on over, You have two seventy two, which again, um you know I I yeah, then two sixty one, two ninety. I am going to toss out this active one because it’s not really as good. You know, the two ninety um You have two that are around three hundred, but they’re really decked out. So if Carter walks in there, it’s like, “Man, this thing has been updated to the nines.” Three hundred is probably close to the value. If it’s lacking in the kitchen’s outdated, Um if the flooring’s outdated, then you are not, then the sort of low end of this on these on these two bed plan starts over here. The two bed plan starts right here, and the lower side of this is two sixty. So you’re ranging between two hundred and sixty to three hundred, But even that two hundred and sixty right here is just to remind us ourselves of what it looked like. It had bad photography, sort of dark, sort of outdated. Kitchen is outdated. So here’s a perfect example. That’s a perfect example. So two hundred and sixty if it’s",
+      "timestamp_start": "00:27:04",
+      "timestamp_end": "00:28:58",
+      "source_line_start": 387,
+      "source_line_end": 412,
+      "section": "Pricing range based on condition tiers"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "I’m going to, you know, say this one. Um, sorry. That’s not what I want to do there. This this one here needs to be adjusted downward because what appreciation has happened? You know something like that. Now, we usually will make these adjustments according to what the subject property looks like. We don’t know what the subject property looks like, because um we don’t have any photos for it now. Let’s look at this last one here. I I don’t think this one would have to be as top of the line as the one we just looked at because it sold at a better time in the market. Even though last October was a little quiet, it’s better than now. Um, let’s see. Let’s just scan down it. So, this looks great. And that is, yeah. That’s probably the second best kitchen or maybe you know so that one’s really, really nice as well. So so now and that was October so less less",
+      "timestamp_start": "00:26:08",
+      "timestamp_end": "00:27:04",
+      "source_line_start": 373,
+      "source_line_end": 385,
+      "section": "Distinguishing floor plans within the same complex"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "photoshopped and edited. Now, okay, wait a minute. This is sort of telling a story that’s strange. Why would this one. this kitchen. kitchen’s old, everything else is new. This person appeared to overpay. Um, this was. oh and okay and I will tell you why. Here’s the reason why this happened: The market this year peaked in February. There was actually a lot of transaction. The inventory was at its lowest levels sort of around January and February, and that was when rates had settled down into the upper fives. And someone, you know, Inventory was moving briskly enough that this person offered like this, like let’s just take a look at this. This was on the market for only twelve days. And I don’t think it doesn’t mention here about multiple offers.",
+      "timestamp_start": "00:22:16",
+      "timestamp_end": "00:23:15",
+      "source_line_start": 317,
+      "source_line_end": 328,
+      "section": "Evaluating active listings as comps"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct transcript excerpts with exact line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). The property analyzed is a condo at 1144 East Country Woods Circle Apt 13H in The Orchard/Country Woods subdivision, Cottonwood Heights, Utah. Craig demonstrates specific MLS CMA tool mechanics that are platform-specific. Market timing references (February 2026 peak, upper 5% rates) are specific to the local market at that time. Pricing range of $260K-$300K is specific to this property and market conditions on July 8, 2026.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. The adjustment values Craig mentions ($10K/bay garage, $75/sq ft above grade, $500/year built) are his personal starting points, not universal rules."
+}

@@ -1,0 +1,409 @@
+{
+  "source_id": "cma-aug-5-2026",
+  "title": "CMAs with Craig - August 5, 2026",
+  "source_type": "training_transcript",
+  "drive_url": "https://drive.google.com/file/d/1076R6HYYCmzD3ReMwYw-1IRziMk1dBQ7/view",
+  "date": "2026-08-05",
+  "speaker_or_author": "Craig",
+  "audience": [
+    "agents",
+    "buyers"
+  ],
+  "summary": "Hands-on CMA training session where Craig walks through two live property analyses: a two-story home in Murray (5646 South Crown Point Drive) and a rambler in Eagle Mountain (3827 East Pawnee Road). Covers the complete CMA workflow from tax record lookup through comp selection, adjustment methodology, and pricing recommendations. Key topics include how to handle properties with limited comps, when to stretch geographic boundaries, how to screen comps by lot size/year built/square footage, making upgrade adjustments, and communicating conservative ranges to sellers when interior condition is unknown.",
+  "topics": [
+    "CMA",
+    "pricing",
+    "comparables",
+    "comp selection",
+    "adjustments",
+    "tax records",
+    "MLS",
+    "upgrades",
+    "seller expectations",
+    "conservative pricing",
+    "geographic boundaries",
+    "lot size",
+    "square footage",
+    "year built",
+    "basement finish",
+    "concessions",
+    "days on market"
+  ],
+  "broker_guidance": [
+    {
+      "scenario": "Property has never been on the MLS",
+      "guidance": "Start with tax records search to get basic stats (square footage, year built, lot size, bedroom/bath count). Then pull up Google Maps to assess location, streetscape, and neighboring properties before beginning comp selection.",
+      "client_language": "Let me pull the tax records first to get the baseline stats, then we'll see what comparable sales look like.",
+      "citation_refs": [
+        "chunk-001",
+        "chunk-002"
+      ]
+    },
+    {
+      "scenario": "Limited comps within tight geographic boundaries",
+      "guidance": "Be nuanced about stretching boundaries. In Murray, going too far east gets into much more expensive real estate near Wheeler Historic Farm. Going too far west or across the freeway changes the area character. North-south is often safer than east-west. Exclude condos, townhomes, and twins to narrow results. If still limited, stretch year built range or square footage tolerance cautiously.",
+      "client_language": "The comp selection is challenging here — the neighborhood is small and we may need to stretch boundaries carefully. East of 700 East gets into a different price tier entirely.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004",
+        "chunk-005"
+      ]
+    },
+    {
+      "scenario": "Screening and eliminating poor comps",
+      "guidance": "Start at the bottom of the comp list and screen by lot size first — massive discrepancies get kicked out immediately. Land is the first discriminator. Then check garages (a third bay is at least a $20K difference), year built, and gross living area. Be willing to remove comps with multiple strikes against them (location, square footage, year built all off).",
+      "client_language": "I'm going to remove this one — the lot size is way off, and that's the first thing we screen for. Land value drives everything else.",
+      "citation_refs": [
+        "chunk-006",
+        "chunk-007"
+      ]
+    },
+    {
+      "scenario": "Active listings as comps",
+      "guidance": "Active listings cannot be relied upon as sold comps. If a property has been sitting for 132+ days, it's evidently overpriced. Use active listings only to understand the ceiling or what NOT to do. Note days on market carefully — properties that sat through peak selling seasons (January-February) and still didn't sell are especially concerning.",
+      "client_language": "This active listing has been on the market 132 days — that tells us it's overpriced, not what the market actually supports.",
+      "citation_refs": [
+        "chunk-008",
+        "chunk-009"
+      ]
+    },
+    {
+      "scenario": "Making upgrade adjustments when interior is unknown",
+      "guidance": "When you haven't been inside the subject property, you can only take the analysis so far. Look at the exterior photos and Google Maps to estimate condition. If interior is unknown, give a conservative range (e.g., $700K-$800K) and tell the agent/seller it depends on upgrades. Go inside, take photos, then come back to finish adjustments. You don't have to give a final price on the first visit.",
+      "client_language": "Generally speaking, the analysis shows between $700K and $800K, but it really depends on upgrades and we need to see the inside. Let me come back and finish the analysis after I've toured the home.",
+      "citation_refs": [
+        "chunk-010",
+        "chunk-011"
+      ]
+    },
+    {
+      "scenario": "High-quality comps in same neighborhood",
+      "guidance": "When comps are on the same road, same style (ramblers), similar lot sizes (0.14-0.20 acre), similar year built (2011-2018), and similar square footage (2300-2600), the analysis is extremely solid. You can confidently tell sellers: 'This analysis is crazy accurate.' Use this to push back against unrealistic seller expectations.",
+      "client_language": "This analysis is crazy accurate — the comps are on the same road, same style, same era, same size. There's no way around this number.",
+      "citation_refs": [
+        "chunk-012",
+        "chunk-013"
+      ]
+    },
+    {
+      "scenario": "Seller wants to list above what comps support",
+      "guidance": "Show them the analysis. The absolute highest the comps support is the top of the adjusted range. In the Eagle Mountain example, $505K was the absolute ceiling, with $495K being more realistic. If they insist on $549K, explain that the first 10 days on market have more energy than any other time, and overpricing means missing that window. Once energy is lost, even price drops may not bring it back.",
+      "client_language": "You could start there, but our analysis is crazy accurate. Five hundred would be fortunate. Five-oh-five is the absolute highest this analysis supports. The first 10 days on market has more energy than any other time — if you price too high, you lose that window and may never get it back.",
+      "citation_refs": [
+        "chunk-014",
+        "chunk-015"
+      ]
+    },
+    {
+      "scenario": "Adjusting for basement finish",
+      "guidance": "When a comp has an unfinished basement and the subject is 90% finished, give a bump for finishing. Craig suggests $35-40 per square foot for basement finish. In the Eagle Mountain example, a 5% finished basement got a $35K bump, and he considered raising it to $40/sq ft. Be consistent with your adjustment methodology across all comps.",
+      "client_language": "The comp has an unfinished basement — we're giving a $35-40K bump because our subject is 90% finished. That's a real value difference.",
+      "citation_refs": [
+        "chunk-016"
+      ]
+    },
+    {
+      "scenario": "Adjusting for interior upgrades",
+      "guidance": "When comparing kitchens, flooring, and bathrooms, estimate dollar values for the difference. A significantly updated kitchen might be a $30-40K advantage. Nicer bathrooms add value too. Backyards that back to open space might get a $10-15K bump. Solar panels that are paid off might get $10-20K depending on age and system cost. Make adjustments net — if interior is $40K better but exterior is $10K worse, net it to $30K.",
+      "client_language": "The kitchen and flooring on this comp are probably a $30-40K advantage. The yard is maybe $10K worse. So I'm netting that to about a $30K adjustment.",
+      "citation_refs": [
+        "chunk-017",
+        "chunk-018"
+      ]
+    },
+    {
+      "scenario": "Handling seller financing or unusual sales",
+      "guidance": "If a comp sold with seller financing, it's hard to keep in the analysis because the buyer probably overpaid. If it sold above list price with no concessions and used seller financing, it makes no sense as a comp and suggests a ceiling rather than support for value. Use caution with these and consider removing them.",
+      "client_language": "This one sold with seller financing above list price — that buyer probably overpaid. I'm not going to put much weight on this comp.",
+      "citation_refs": [
+        "chunk-019"
+      ]
+    }
+  ],
+  "steps": [
+    "Start with tax records search for baseline property stats",
+    "Pull up Google Maps to assess location, streetscape, and neighbors",
+    "Create new CMA and use the six status measurements (auto-sets 365 days back)",
+    "Set square footage range (typically +/- 500 sq ft from subject)",
+    "Set year built range (stretch cautiously if needed)",
+    "View map and assess geographic boundaries — be nuanced about which directions are safe to stretch",
+    "Exclude condos, townhomes, and twins if analyzing a single-family home",
+    "Screen comps starting with lot size — massive discrepancies get removed first",
+    "Check garages, year built, and gross living area for remaining comps",
+    "Remove comps with multiple strikes (location + size + year all off)",
+    "Make adjustments for upgrades, basement finish, lot size, and garage differences",
+    "If interior condition is unknown, give a conservative range and schedule a follow-up visit",
+    "For active listings, note days on market — long DOM suggests overpricing, not market value",
+    "Communicate the final range confidently, especially when comps are high-quality and local"
+  ],
+  "objections": [
+    {
+      "objection": "Seller wants to list higher than comps support",
+      "response": "Show them the analysis with photos of the comps. Explain that the first 10 days on market has the most energy, and overpricing means missing that window permanently. Use specific comp addresses and adjusted values to make it concrete.",
+      "citation_refs": [
+        "chunk-014",
+        "chunk-015"
+      ]
+    },
+    {
+      "objection": "There aren't enough comps in the neighborhood",
+      "response": "Stretch boundaries carefully — north-south is often safer than east-west. Exclude non-similar property types. Consider going back further in time or slightly wider on square footage. Be transparent that the analysis is conservative when comp quality is lower.",
+      "citation_refs": [
+        "chunk-003",
+        "chunk-004",
+        "chunk-005"
+      ]
+    },
+    {
+      "objection": "The active listing down the street is priced higher",
+      "response": "Active listings don't determine value — only sold comps do. If an active listing has been sitting for 100+ days, it's overpriced, not evidence of market value. Use it as a cautionary example.",
+      "citation_refs": [
+        "chunk-008",
+        "chunk-009"
+      ]
+    },
+    {
+      "objection": "We haven't seen the inside yet",
+      "response": "That's fine — give a conservative range based on exterior and location, then schedule an interior visit. Take photos inside and come back to dial in the final number. You don't need to commit to a price on day one.",
+      "citation_refs": [
+        "chunk-010",
+        "chunk-011"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-001",
+      "text": "do so I I do the same process every time to find the property I go into search, like come down to tax status, search That’s where I always look for the properties. Okay, and in this case it was 5646 South Crown Point Drive in Murray. So I’m gonna just go to the house number. I’ll show you how easy this is. 5646, and then I’m just gonna",
+      "timestamp_start": "00:00:35",
+      "timestamp_end": "00:01:21",
+      "source_line_start": 28,
+      "source_line_end": 31,
+      "section": "Tax records search process",
+      "retrieval_terms": [
+        "property never on MLS",
+        "not on MLS",
+        "MLS listing check",
+        "first time listing"
+      ]
+    },
+    {
+      "chunk_id": "chunk-002",
+      "text": "Now this this screen will show me if this has ever been on the M L S. If it has been, there’s a blue button that will show up right here. It’s not here, so this has never been on the M L S. Um, We can scroll down and see some details about this was built in nineteen, ninety two, and it was on a point, one nine acre lot. And. So what I’m going to do again when I’ve not when it’s not on the M L S then I like to pull it up on I just like to see it on Google Maps because I’m curious to know. Where you",
+      "timestamp_start": "00:01:21",
+      "timestamp_end": "00:02:02",
+      "source_line_start": 36,
+      "source_line_end": 41,
+      "section": "MLS check and Google Maps review"
+    },
+    {
+      "chunk_id": "chunk-003",
+      "text": "much easier to see. So, in this case, there is three thousand seventy-two square feet and it breaks it down main floor, upper level, basement. It makes it really nice how much is finished. So now we now know about three thousand square feet. It appears to be a two-story type of variety. So I am going to come in here. I am now going to just do I am going to come up here. I am going to go CMA. Create new, and ignore that first screen. And you begin to populate it. And here’s what I populate it with. I’ll use these six measurements right here, these top six statuses. When you do that, it automatically puts everything back 365 days. Next",
+      "timestamp_start": "00:02:48",
+      "timestamp_end": "00:03:45",
+      "source_line_start": 63,
+      "source_line_end": 72,
+      "section": "CMA setup and criteria"
+    },
+    {
+      "chunk_id": "chunk-004",
+      "text": "statuses. When you do that, it automatically puts everything back 365 days. Next thing I’m going to do is Control F, I’m going to hit total. That brings me to square footage. We know we’re dealing with 2,000 square feet, 3,000. So I’m going to probably go down to 25 hundred, not 25 thousand, twenty five hundred. Maybe bounce up to thirty five or thirty six hundred something like that. Um. And and so because again, you’re just trying to get a like sort of a range, this is built in the nineties. So you know, and I come back here to remind myself ninety two, yeah, ninety two. So maybe I’ll go back to nineteen eighty for the time being. In two thousand two, something like that. And uh and we might be able to go a",
+      "timestamp_start": "00:03:45",
+      "timestamp_end": "00:04:38",
+      "source_line_start": 72,
+      "source_line_end": 82,
+      "section": "Setting square footage and year built ranges"
+    },
+    {
+      "chunk_id": "chunk-005",
+      "text": "address, and it should go straight there. And it does. And so ideally I mean, unfortunately, this a small enough subdivision. We’re probably not going to find all our comps from right within that window. But let’s just see what we can find. Let’s see if anything pops up. Nothing. That would have been really ideal because what we’re going to deal with in Murray is a year built issue. Um, Let’s now we’re going to start expanding this and see what we come up with again, this not ideal. Um, I don’t I don’t like what we’re coming up with right now. But we are coming up with what we’re coming up with. So you have to sort of be nuanced in understanding, okay, how far do we stretch these boundaries before we get into unsafe territory? In this case, you know, You have 700 East and the further east you",
+      "timestamp_start": "00:04:38",
+      "timestamp_end": "00:05:35",
+      "source_line_start": 85,
+      "source_line_end": 97,
+      "section": "Limited comps and boundary stretching"
+    },
+    {
+      "chunk_id": "chunk-006",
+      "text": "unsafe territory? In this case, you know, You have 700 East and the further east you get right in this area. It starts to get become much, much more expensive real estate over on this side. Similarly stretch it too far west, and it’s not going to be the same either. And so, you’re a little safer in this area. And this is just based on experience. You might have a better chance going north-south. And that even hopping across the freeway takes us into even a different part. That’s not comparable. So I don’t like that idea. So I’m not liking our comp selection. And the thing is, it’s interesting, is we never even– you know, we– yeah, so we’re going to stretch up into here.",
+      "timestamp_start": "00:05:35",
+      "timestamp_end": "00:06:31",
+      "source_line_start": 97,
+      "source_line_end": 105,
+      "section": "Geographic nuance in comp selection"
+    },
+    {
+      "chunk_id": "chunk-007",
+      "text": "Let’s let’s just see. So at this point, I’m I’m feeling like we may need to stretch a little west, go across State Street. Um, This will probably make our analysis conservative because I doubt that these comps in here. I’d have to drive that street, maybe to see how comfortable I feel with those comps. Um, I’m going to hide this map for a second. Like what else could we do to stretch here? Well, we could stretch the year built back maybe a little more um Didn’t give us anything. Maybe you go a little newer, but at that point we’re coming, we’re now getting quite newer. Like we’re ninety two. Like are we going to compare something that’s that much newer? That’s the concern. Maybe I drop a little bit in our my square footage. I really don’t want to",
+      "timestamp_start": "00:06:31",
+      "timestamp_end": "00:07:29",
+      "source_line_start": 108,
+      "source_line_end": 116,
+      "section": "Stretching year built and location"
+    },
+    {
+      "chunk_id": "chunk-008",
+      "text": "Um, we haven’t even done that yet. It would be nice if we could go back only six months instead of three, like uh 12 months. So so this selection of comps is not great. Um, but what this does suggest to me is there’s opportunity. Um, You know, and let’s let’s go a little further north, even I’m I’m feeling all right to stretch it a little further north. Okay, let’s uh that’s probably as much as I’m feeling comfortable doing um This 900 East. I hesitate. Like, let’s see, let’s just do an example here. Let’s just take a look. You can see how these popped in: 925, 874, 875. And these are 675, 572. And, then you have seven hundreds. You do have an eight fifty here. But, you can see how I’m a little hesitant to bounce over here, especially near Wheeler Historic Farm This a really nice area back in here.",
+      "timestamp_start": "00:07:29",
+      "timestamp_end": "00:08:28",
+      "source_line_start": 122,
+      "source_line_end": 131,
+      "section": "Hesitation on eastward comps"
+    },
+    {
+      "chunk_id": "chunk-009",
+      "text": "specifically because we’re not dealing with the townhomes. So, we could at least come in here and say, well, what are we not? You know, exclude condos and townhomes twins. That drops us down to 15. All that stuff dropped out. So what we might do here. I’m going to feel much better about these comps that are up in here. And even these. Over here. I mean, this could get interesting. Let’s just let’s just see what this what we got here with these 15. So we’re going to view the results. I’m going to drop these in and I come in like so I highlight them all, Drop them into a CMA report, and then you need to make sure that you are um that your adjusted values here are filled out, and you can go back and watch the recording, see how I’ve numbered",
+      "timestamp_start": "00:08:28",
+      "timestamp_end": "00:09:22",
+      "source_line_start": 138,
+      "source_line_end": 149,
+      "section": "Excluding non-similar property types"
+    },
+    {
+      "chunk_id": "chunk-010",
+      "text": "Bedrooms, so we don’t precisely know, but but I’m not I mean, there’s going to be a guess over here. They’ll they’ll probably give us some information enough. So like four bedrooms, three full baths, one three quarter one half. So quite a few bathrooms um and and you actually get more value out of bathrooms than bedrooms by the way. So three full one, three quarter one half. And now we’re going to come back to square footage, which we have that dialed in. On this page as well, uh, 898 upper, 468 main. So 898, 468. 898, 468. 1468. Sorry. 1468 basement.",
+      "timestamp_start": "00:10:22",
+      "timestamp_end": "00:11:20",
+      "source_line_start": 157,
+      "source_line_end": 163,
+      "section": "Filling out property details"
+    },
+    {
+      "chunk_id": "chunk-011",
+      "text": "we’ve filled it out. And now we can start making some comparisons. There’s a huge discrepancy. 600 upwards of $1. 4 million But. You’ll see in a minute how we’re going to pare this down First of all the first thing I do is I start at the bottom and I look at our lot size and I look at the lot sizes here. If there’s a massive discrepancy, it gets kicked out. Land is the first thing by which to like discriminate on properties. So I’m going to remove this one. And then I’m going to sort of skim along. So 0.13, 0.21, 1827, 1819, 1719, 1 92 1 and 185, and then four eight This obviously is too much too large That one’s gone.",
+      "timestamp_start": "00:11:20",
+      "timestamp_end": "00:12:14",
+      "source_line_start": 170,
+      "source_line_end": 178,
+      "section": "Screening comps by lot size"
+    },
+    {
+      "chunk_id": "chunk-012",
+      "text": "Um, now let’s bounce back here. Um, garages. I don’t usually screen out too much on that. I’m just skimming quickly. These are all two. There’s a three car garage. I am going to make an adjustment though, Um in this area, third third bay is at least a twenty thousand dollar difference. Maybe a little more. Um now let’s look at year built. I don’t want to be too far off um ninety eight. So this is nineties that one’s two thousand three three six. Nineties, nineties, two thousand seven, nineties, two thousand six. Not bad. I’m good with those. And now let’s take a look at square footage. So thirty seventy two, we have twenty five. Um actually first, let me go to gross living area. This is everything that’s above grade. It’s nice to be able to bracket",
+      "timestamp_start": "00:12:14",
+      "timestamp_end": "00:13:10",
+      "source_line_start": 181,
+      "source_line_end": 189,
+      "section": "Garage and year built screening"
+    },
+    {
+      "chunk_id": "chunk-013",
+      "text": "Gross living area: 1242, seven, 12, 12. Like this is all 1147, thirteen eighteen, thirteen something, fourteen something. Fourteen fourteen. These are all really similar overall square footage in the twenty four, twenty four, twenty almost twenty three, twenty five, twenty six s This one might be too big at twenty nine, Another twenty nine and another twenty nine, almost So. So those we’re going to be a little more cautious about We’re going to be a little more favorable toward the ones that are on on the lower end of that. Um, and then we’re there to go. So we we’re good to do this analysis at this point. So, we have seven of these to look through. Karen",
+      "timestamp_start": "00:30:55",
+      "timestamp_end": "00:31:51",
+      "source_line_start": 447,
+      "source_line_end": 455,
+      "section": "High-quality comp comparison - Eagle Mountain"
+    },
+    {
+      "chunk_id": "chunk-014",
+      "text": "dollars upgrade or something, but it’s that one is just overpriced. Okay, so here we are. Here is what the story : four, ninety five for like four, nine, low, mid four nineties or so for three of them, Four ninety, it’s four ninety to five hundred, like couple of them, maybe five, oh, five. So, you are sort of like four ninety five. I would call it four ninety five to five to five, oh, five. But there’s more on the four hundred and ninety. In like, there is more energy toward the five hundred thousand dollars, especially since this one is July. And that’s your most recent comp. This one over here, that’s your highest comp. One of your highest comps was November, one of your oldest comps. We could we could even probably even toss that one. And so it’s it’s really uh mid four nineties Karen Ann, and it’s so solidly documented that it’s not even funny. Like that one is so solidly documented. No way around it.",
+      "timestamp_start": "00:40:59",
+      "timestamp_end": "00:41:34",
+      "source_line_start": 606,
+      "source_line_end": 620,
+      "section": "Final pricing recommendation - Eagle Mountain"
+    },
+    {
+      "chunk_id": "chunk-015",
+      "text": "Well, you can show them, You can show them uh show them the You. You can show them the the analysis, say guys, You could start there our our our analysis is crazy crazy accurate on this, Okay. And, you will not be able to sell it for more like five hundred would be fortunate. Five o five would, five o five is the absolute highest that this analysis supports, the absolute highest. And the only thing I could do maybe get away from that is say, well, I’m going to give so much more value for the basement, you know, And that maybe bumps us up a little bit, but not even like it just it’s just a little bit. Yeah. I’m I’m struggling on this one. Um, I mean, I’m not struggling. I know exactly what’s. The seller is going to be struggling. I’m not struggling on this one at all. I know exactly what needs to happen with this one. You can sometimes include, you can",
+      "timestamp_start": "00:41:34",
+      "timestamp_end": "00:42:25",
+      "source_line_start": 625,
+      "source_line_end": 637,
+      "section": "Pushing back on seller expectations"
+    },
+    {
+      "chunk_id": "chunk-016",
+      "text": "to note. Um this home seems similar enough, aside from the fact that it’s not finished in the basement. Now we’re making an adjustment for the fact. That it’s not finished in the basement. You can see it’s five percent finished down there, and that’s generous. It looked like it was zero. We’re getting ourselves a thirty-five thousand dollar bump because of that, and maybe that’s a little low. We could move this upwards, maybe to forty a square foot for finishing in the basement, and that will move this number a little higher. This one is possibly",
+      "timestamp_start": "00:32:49",
+      "timestamp_end": "00:33:20",
+      "source_line_start": 481,
+      "source_line_end": 489,
+      "section": "Basement finish adjustment"
+    },
+    {
+      "chunk_id": "chunk-017",
+      "text": "so we can give us a decrease on that. But this is what I do. That kitchen and flooring is probably a forty, I’m just going to call it thirty forty thousand dollar bump. And I and I might tone it down a little bit from the yard, But I’m going to call, i’m going to call it like forty thousand for the interior. And then i’m going to drop it by, say, ten thousand for the exterior just because of the fencing and stuff. So i’m going to maybe give this a net thirty thousand dollars. Change. So so I would take this one and I’ll do that. I would say this one is thirty thousand better, so a three, which knocks us down thirty, Which took us from five twenty something down to five four, ninety three as a as a comparable. As, you can",
+      "timestamp_start": "00:34:19",
+      "timestamp_end": "00:35:18",
+      "source_line_start": 521,
+      "source_line_end": 531,
+      "section": "Net adjustment for interior vs exterior"
+    },
+    {
+      "chunk_id": "chunk-018",
+      "text": "It’s got maybe a little bit of a benefit backyard. It backs to open space. That’s, that’s a situational that that one I might give a bump for because they back up to it’s I would call that you know would would where would someone reasonably pay for that additional backyard? I uh, that backyard is private. I’m probably thinking 10, 20, 000, 10, 15, 000 and ironically look how it matches up. So cause I was, you know I’m going to give it a fifteen thousand bump and look how this is now matching up. Because and I hadn’t looked at that number before. I just knew, am like, man, it’s a better backyard. Okay, so we’re starting to tell a similar story. And it’s easier to tell a",
+      "timestamp_start": "00:35:48",
+      "timestamp_end": "00:36:47",
+      "source_line_start": 547,
+      "source_line_end": 556,
+      "section": "Backyard/open space adjustment"
+    },
+    {
+      "chunk_id": "chunk-019",
+      "text": "of get um That’s all that we have with the pictures on that one. Um, I’ve sold on Atwood Boulevard. Nice little spot. That one actually sold seller financing. Um, so that also like if it’s sold seller financing, it’s hard to keep it around because someone probably overpaid for it. In fact, it sold for above list price no concessions. Well, that makes no sense. Um, and this one’s an older sale going back to December um has a conforming ADU. I'm starting to get a little. I’m not gonna. I’m not. I can’t put much weight in this comp right here. It’s just even though size wise, there’s a lot of things to like about it, but it’s hard to put a lot of weight in that. So I might keep it in the report for the time being because it’s so similar otherwise, But this suggests to me a ceiling, and it",
+      "timestamp_start": "00:18:56",
+      "timestamp_end": "00:19:55",
+      "source_line_start": 278,
+      "source_line_end": 289,
+      "section": "Seller financing comp caution"
+    },
+    {
+      "chunk_id": "chunk-020",
+      "text": "then maybe we’re we’re up in that range. Um let’s look at this one. This comp is also a little bit older, but we we had to go back. We had to go back this distance in order to in order to uh find enough comps. It looks like a more traditional. There’s been some updates. I’m just going to scan quickly. Okay, there’s been some updates that gives us, let’s see here, 844 sold. It’s right on the golf course. Right on the golf course. So you can see why that one is going to sell at a premium. And and explain why so these two are really high, but they’re active. This one’s on the golf course. Um, this one here. It’s a three car garage. Let’s see, and that one’s",
+      "timestamp_start": "00:20:52",
+      "timestamp_end": "00:21:44",
+      "source_line_start": 302,
+      "source_line_end": 311,
+      "section": "Golf course premium and active listings"
+    },
+    {
+      "chunk_id": "chunk-021",
+      "text": "the golf course. Um, this one here. It’s a three car garage. Let’s see, and that one’s decorated really I mean that’s updated really nicely on the inside. Updated really nicely. Um it’s a July twenty twenty six. So we can rely on that, but it’s further east. And so, so that and so that one is right here. Okay, and which went eight thirty, but it’s decorated really nice. Let’s updated really nicely. So far it’s just not as nice, and it’s further east. That tends to put us in the mid to upper seven hundreds, if you were sort of more average. Um, and sorry anyway. So I am coming to a pretty solid",
+      "timestamp_start": "00:21:44",
+      "timestamp_end": "00:22:44",
+      "source_line_start": 311,
+      "source_line_end": 318,
+      "section": "Location and upgrade adjustments"
+    },
+    {
+      "chunk_id": "chunk-022",
+      "text": "Um, and here you get into the mid sort of the mid lower set, mid hunt. You know, you are getting closer to mid seven hundred s maybe a little more. Um, and it’s going to depend on upgrades. And so Jani, this is probably as far as we can take it right now. Um and what you’ll need to do is just go inside. But you know, there is if you want to be really conservative in the range, you are going to say, well, generally speaking, it’s showing between seven hundred to eight hundred, but it really depends on upgrades, and we need to look on the inside. You might it might be seven fifty to eight fifty, but it depends on how crazy decorated and updated it is in the interior. My guess is it’s not, so they might be pressing toward the to the upper seven hundreds, The low seven hundreds is the closest I can come up with this one right now. Okay great. And, then you’ll just have to dial it in once you go in, and you",
+      "timestamp_start": "00:22:44",
+      "timestamp_end": "00:23:37",
+      "source_line_start": 323,
+      "source_line_end": 333,
+      "section": "Conservative range when interior unknown"
+    },
+    {
+      "chunk_id": "chunk-023",
+      "text": "So yeah. So so here’s so we’ve so not you’ve not been on the inside, correct? Correct. Okay and and we don’t have any pictures from the inside. So here is where here is the extent sort of the distance to which we can take the analysis. And then let me do some just thoughts about this. Um because we don’t usually at this point, we now go to this upgrade section and start making. Adjustments here on the upgrades. Well, we don’t know exactly what the upgrades are, so all I can do is look inside just like I did. Say okay, This is sort of, you know, it’s got an older kitchen um and it’s in good condition, but not upgraded colors, and you know, styles a little outdated. Okay well that came that averaged out to like a seven thirty nine. Okay",
+      "timestamp_start": "00:16:13",
+      "timestamp_end": "00:17:02",
+      "source_line_start": 237,
+      "source_line_end": 245,
+      "section": "Limitations without interior photos"
+    },
+    {
+      "chunk_id": "chunk-024",
+      "text": "then maybe we’re we’re up in that range. Um let’s look at this one. This comp is also a little bit older, but we we had to go back. We had to go back this distance in order to in order to uh find enough comps. It looks like a more traditional. There’s been some updates. I’m just going to scan quickly. Okay, there’s been some updates that gives us, let’s see here, 844 sold. It’s right on the golf course. Right on the golf course. So you can see why that one is going to sell at a premium. And and explain why so these two are really high, but they’re active. This one’s on the golf course. Um, this one here. It’s a three car garage. Let’s see, and that one’s decorated really I mean that’s updated really nicely on the inside. Updated really nicely. Um it’s a July twenty twenty six. So we can rely on that, but it’s further east.",
+      "timestamp_start": "00:20:52",
+      "timestamp_end": "00:21:44",
+      "source_line_start": 302,
+      "source_line_end": 314,
+      "section": "Premium features affecting comp value"
+    },
+    {
+      "chunk_id": "chunk-025",
+      "text": "Okay, um, all right everybody thanks for thanks for jumping in the, In the training today, Hopefully, you picked up some good tidbits about analyses, andum anyway,",
+      "timestamp_start": "00:44:41",
+      "timestamp_end": "00:45:14",
+      "source_line_start": 677,
+      "source_line_end": 678,
+      "section": "Closing - value of CMA skills"
+    }
+  ],
+  "confidence_notes": "All chunk texts are direct excerpts from the transcript with exact line numbers verified against the raw transcript file. Speaker 1 is Craig (broker/trainer). Speakers 2 and 3 are agent participants (Jana and Karen Ann). Craig demonstrates live CMA analysis on two real properties with specific addresses, dollar amounts, and adjustment methodologies. The chunk texts preserve Craig's exact phrasing and numerical examples.",
+  "operator_interpretation": "No significant operator interpretation in this record. All broker_guidance items are directly supported by transcript excerpts. Craig's adjustment values ($20K for third garage bay, $35-40K for basement finish, $30-40K for kitchen upgrades, $10-15K for open space backyard) are his own stated methodologies from the transcript."
+}
