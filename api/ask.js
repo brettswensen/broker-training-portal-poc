@@ -128,7 +128,7 @@ function hasModelMeta(answer) {
     answer.script,
     ...(answer.followups || [])
   ].join('\n');
-  return /\b(the user wants|i need to|json response|the prompt|system prompt|return only json|let me analyze)\b/i.test(text);
+  return /\b(i need to|json response|the prompt|system prompt|return only json|let me analyze)\b/i.test(text);
 }
 
 function cleanAndValidateModelAnswer(answer) {
