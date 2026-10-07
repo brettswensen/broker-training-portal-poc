@@ -126,7 +126,7 @@ function ensureVideoModal(){
   modal.setAttribute('hidden','');
   modal.innerHTML = `<div class="video-modal-backdrop" data-close-video></div><section class="video-modal-shell" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle"><button class="video-modal-close" type="button" data-close-video aria-label="Close video and return to Broker Brain"><span>×</span><em>Back to Broker Brain</em></button><div class="video-modal-head"><span>Broker Brain source video</span><h2 id="videoModalTitle">Training video</h2></div><div class="video-modal-frame"><iframe id="videoModalFrame" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen></iframe></div></section>`;
   document.body.appendChild(modal);
-  modal.addEventListener('click', event => { if(event.target.matches('[data-close-video]')) closeVideoModal(); });
+  modal.addEventListener('click', event => { if(event.target.closest('[data-close-video]')) closeVideoModal(); });
   document.addEventListener('keydown', event => { if(event.key === 'Escape') closeVideoModal(); });
   return modal;
 }
