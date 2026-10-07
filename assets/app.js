@@ -669,7 +669,7 @@ renderSocialStudio();
 let transcriptIndex = { records: [], chunks: [] };
 let transcriptReady = false;
 
-fetch('data/search-index.json')
+fetch('/data/search-index.json')
   .then(r => r.ok ? r.json() : Promise.reject(new Error('index not found')))
   .then(idx => {
     transcriptIndex = idx;
