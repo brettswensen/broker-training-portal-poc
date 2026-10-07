@@ -329,6 +329,12 @@ async function callOpenRouter(question, sources, context=[]) {
         temperature: 0.25,
         max_tokens: 850,
         response_format: { type: 'json_object' },
+        provider: {
+          allow_fallbacks: false,
+          data_collection: 'deny',
+          require_parameters: true,
+          zdr: true
+        },
         messages: [
           { role: 'system', content: system },
           { role: 'user', content: user }
@@ -342,6 +348,33 @@ async function callOpenRouter(question, sources, context=[]) {
     }
 
     data = await response.json();
+
+    const firstMessage = data?.choices?.[0]?.message || {};
+    if (!String(firstMessage.content || firstMessage.reasoning_content || '').trim()) {
+      const retryResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        signal: controller.signal,
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': process.env.OPENROUTER_SITE_URL || 'https://real-estate-training-portal-poc.vercel.app',
+          'X-Title': process.env.OPENROUTER_APP_TITLE || 'Broker Brain'
+        },
+        body: JSON.stringify({
+          model,
+          temperature: 0.25,
+          max_tokens: 850,
+          messages: [
+            { role: 'system', content: `${system}\n\nReturn a plain JSON object only. Do not use markdown fences.` },
+            { role: 'user', content: user }
+          ]
+        })
+      });
+
+      if (retryResponse.ok) {
+        data = await retryResponse.json();
+      }
+    }
   } finally {
     clearTimeout(timeout);
   }
