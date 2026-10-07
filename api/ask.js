@@ -107,13 +107,18 @@ function cleanBrokerAnswer(answer) {
   const intent = /^(broker guidance\.?|broker guidance based on team training\.?|based on team training\.?)$/i.test(rawIntent)
     ? 'Start with the client decision in front of the agent, then use the closest team guidance to choose the safest next step.'
     : rawIntent;
+  const steps = (answer.steps || []).map(cleanBrokerText).filter(Boolean);
+  const rawScript = cleanBrokerText(answer.script || '');
+  const script = /\b(the user wants|i need to|json response|the prompt|system prompt|return only json|let me analyze)\b/i.test(rawScript)
+    ? steps.join(' ')
+    : rawScript;
   return {
     ...answer,
     title: cleanBrokerText(answer.title || 'Broker guidance'),
     intent,
     confidence: cleanBrokerText(answer.confidence || 'Broker guidance'),
-    steps: (answer.steps || []).map(cleanBrokerText).filter(Boolean),
-    script: cleanBrokerText(answer.script || ''),
+    steps,
+    script,
     followups: (answer.followups || []).map(cleanBrokerText).filter(Boolean),
     missingContext: (answer.missingContext || []).map(cleanBrokerText).filter(Boolean)
   };
