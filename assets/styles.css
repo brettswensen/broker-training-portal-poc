@@ -210,3 +210,92 @@
 
 /* In-app Mux source video modal */
 .video-modal[hidden]{display:none!important}.video-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px}.video-modal-backdrop{position:absolute;inset:0;z-index:0;background:rgba(0,0,0,.46);backdrop-filter:blur(5px)}.video-modal-shell{position:relative;z-index:1;width:min(1120px,96vw);border:1px solid rgba(120,220,232,.32);border-radius:28px;background:linear-gradient(180deg,rgba(13,17,25,.94),rgba(6,8,12,.94));box-shadow:0 34px 120px rgba(0,0,0,.55);padding:18px}.video-modal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:0 190px 14px 2px;min-height:34px}.video-modal-head span{color:#78dce8;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.video-modal-head h2{margin:2px 0 0;color:#fff;font-size:20px;letter-spacing:-.02em}.video-modal-close{position:absolute;z-index:5;top:14px;right:14px;display:inline-flex;align-items:center;gap:8px;min-height:38px;border-radius:999px;border:1px solid rgba(120,220,232,.34);background:#07101a;color:#fff;padding:6px 12px 6px 10px;font-weight:900;box-shadow:0 12px 34px rgba(0,0,0,.55);cursor:pointer}.video-modal-close span{font-size:24px;line-height:1}.video-modal-close em{font-style:normal;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#dffbff}.video-modal-close:hover{background:#0b2430;border-color:rgba(120,220,232,.85)}.video-modal-frame{position:relative;overflow:hidden;border-radius:20px;background:#000;aspect-ratio:16/9}.video-modal-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.video-modal-open{overflow:hidden}@media(max-width:700px){.video-modal{padding:10px}.video-modal-shell{padding:12px;border-radius:20px}.video-modal-head{display:block;margin-right:42px}.video-modal-head h2{font-size:16px}.video-modal-close em{display:none}.video-modal-close{width:38px;min-height:38px;justify-content:center;padding:0;border-radius:50%}}
+
+/* Button polish pass: consistent product-style CTAs across dashboard */
+button,
+a.primary,
+.primary,
+.ghost-button,
+.action-tags button,
+.video-actions button,
+.answer-actions button,
+.answer-route-links a,
+.answer-route-links button,
+.script-actions a,
+.script-actions button,
+.social-format-tabs button,
+.ask-thread-head button,
+.conversation-prompts button,
+.chips button{
+  -webkit-appearance:none;
+  appearance:none;
+  font-family:inherit;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-radius:999px;
+  font-weight:850;
+  letter-spacing:-.01em;
+  line-height:1;
+  transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease,color .16s ease;
+}
+.primary,
+a.primary,
+.search-row button,
+.dashboard-search-form .sr-search-submit{
+  min-height:48px;
+  border:1px solid rgba(120,220,232,.42)!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#7170ff 0%,#38bdf8 52%,#2dd4bf 100%)!important;
+  color:#fff!important;
+  box-shadow:0 16px 40px rgba(45,212,191,.18),inset 0 1px 0 rgba(255,255,255,.22)!important;
+  text-shadow:0 1px 1px rgba(0,0,0,.18);
+}
+.primary:hover,
+a.primary:hover,
+.search-row button:hover,
+.dashboard-search-form .sr-search-submit:hover{
+  transform:translateY(-1px);
+  box-shadow:0 20px 54px rgba(45,212,191,.24),0 0 0 4px rgba(120,220,232,.08),inset 0 1px 0 rgba(255,255,255,.28)!important;
+}
+.ghost-button,
+.action-tags button,
+.video-actions button,
+.answer-actions button,
+.answer-route-links a,
+.answer-route-links button,
+.script-actions a,
+.script-actions button,
+.social-format-tabs button,
+.ask-thread-head button,
+.conversation-prompts button,
+.chips button{
+  min-height:40px;
+  border:1px solid rgba(255,255,255,.14)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.072),rgba(255,255,255,.032))!important;
+  color:#edf7fb!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.ghost-button:hover,
+.action-tags button:hover,
+.video-actions button:hover,
+.answer-actions button:hover,
+.answer-route-links a:hover,
+.answer-route-links button:hover,
+.script-actions a:hover,
+.script-actions button:hover,
+.social-format-tabs button:hover,
+.social-format-tabs button.active,
+.ask-thread-head button:hover,
+.conversation-prompts button:hover,
+.chips button:hover{
+  transform:translateY(-1px);
+  border-color:rgba(120,220,232,.42)!important;
+  background:linear-gradient(180deg,rgba(120,220,232,.16),rgba(113,112,255,.09))!important;
+  color:#fff!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12);
+}
+.video-actions,.answer-actions,.script-actions,.answer-route-links,.hero-actions{align-items:center}
+.video-actions button,.answer-actions button,.script-actions a,.script-actions button{padding:10px 14px}
