@@ -126,3 +126,26 @@ button,
   color:#fff!important;
   box-shadow:0 12px 28px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12);
 }
+
+/* Preserve route button hierarchy after polish pass */
+.route-button.ghost-button,
+.route-back-button,
+a.route-button.ghost-button,
+button.route-button.ghost-button{
+  min-height:40px;
+  border:1px solid rgba(255,255,255,.14)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.072),rgba(255,255,255,.032))!important;
+  color:#edf7fb!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08)!important;
+  text-shadow:none!important;
+}
+.route-button.ghost-button:hover,
+.route-back-button:hover,
+a.route-button.ghost-button:hover,
+button.route-button.ghost-button:hover{
+  transform:translateY(-1px);
+  border-color:rgba(120,220,232,.42)!important;
+  background:linear-gradient(180deg,rgba(120,220,232,.16),rgba(113,112,255,.09))!important;
+  color:#fff!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12)!important;
+}
