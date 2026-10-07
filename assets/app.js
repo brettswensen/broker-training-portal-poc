@@ -117,7 +117,8 @@ function trainingForSource(sourceOrTitle){
 function trainingWatchUrl(training, timestamp=''){
   if(!training || !training.videoUrl || training.videoUrl === '#demo-video-upload-needed') return appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
   const time = String(timestamp || training.watchTime || '').trim();
-  return training.videoUrl + (time && training.videoUrl.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
+  const url = training.videoUrl.replace('/preview', '/view');
+  return url + (time && url.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
 }
 function openVideo(title){
   const training = trainings.find(t => t.title === title) || trainingForSource({name:title});

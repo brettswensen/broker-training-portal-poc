@@ -107,7 +107,7 @@ function matchingTrainings(query){
   return trainings.filter(t => [t.title,t.category,t.summary,t.excerpt,...(t.topics||[]),...(t.playbooks||[])].join(' ').toLowerCase().includes(q));
 }
 function trainingWatchUrl(training){
-  return training?.videoUrl || appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
+  return training?.videoUrl?.replace('/preview', '/view') || appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
 }
 function videoTargetAttrs(training){
   return `href="${escapeHtml(trainingWatchUrl(training))}" target="_blank" rel="noopener"`;
