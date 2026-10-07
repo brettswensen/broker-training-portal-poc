@@ -119,6 +119,10 @@ function trainingWatchUrl(training, timestamp=''){
   const time = String(timestamp || training.watchTime || '').trim();
   return training.videoUrl + (time && training.videoUrl.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
 }
+function openVideo(title){
+  const training = trainings.find(t => t.title === title) || trainingForSource({name:title});
+  window.open(trainingWatchUrl(training), '_blank', 'noopener');
+}
 
 function escapeHtml(value){
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -190,7 +194,7 @@ function thumbnailStyle(t){
   return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
 }
 function card(t){
-  return `<article class="card training-card"><button class="video-thumb small-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openVideo(this.dataset.title)" aria-label="Play ${escapeHtml(t.title)}"><span class="play">▶</span></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -276,7 +280,7 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+      <button class="video-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openVideo(this.dataset.title)" aria-label="Play ${escapeHtml(t.title)}">
         <span class="play">▶</span>
       </button>
       <div class="video-body">
@@ -795,7 +799,7 @@ function playbookRow(p, index){
 
 function videoTile(t, index){
   return `<article class="network-video-card">
-    <button class="network-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
+    <button class="network-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openVideo(this.dataset.title)"><span>▶</span><strong>${escapeHtml(t.category)}</strong></button>
     <small>${index === 0 ? 'New this week' : index < 3 ? 'Indexed training' : 'Library video'}</small>
     <h3>${escapeHtml(t.title)}</h3>
     ${sourceProofMarkup('Original training source', 1)}
