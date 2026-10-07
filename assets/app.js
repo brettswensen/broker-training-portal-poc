@@ -125,9 +125,49 @@ function trainingWatchUrl(training, timestamp=''){
   const url = training.videoUrl.replace('/preview', '/view');
   return url + (time && url.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
 }
+function isMuxPlayerUrl(url){
+  return String(url || '').includes('player.mux.com/');
+}
+function ensureVideoModal(){
+  let modal = document.getElementById('videoModal');
+  if(modal) return modal;
+  modal = document.createElement('div');
+  modal.id = 'videoModal';
+  modal.className = 'video-modal';
+  modal.setAttribute('hidden','');
+  modal.innerHTML = `<div class="video-modal-backdrop" data-close-video></div><section class="video-modal-shell" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle"><button class="video-modal-close" type="button" data-close-video aria-label="Close video">×</button><div class="video-modal-head"><span>Broker Brain source video</span><h2 id="videoModalTitle">Training video</h2></div><div class="video-modal-frame"><iframe id="videoModalFrame" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen></iframe></div></section>`;
+  document.body.appendChild(modal);
+  modal.addEventListener('click', event => { if(event.target.matches('[data-close-video]')) closeVideoModal(); });
+  document.addEventListener('keydown', event => { if(event.key === 'Escape') closeVideoModal(); });
+  return modal;
+}
+function closeVideoModal(){
+  const modal = document.getElementById('videoModal');
+  if(!modal) return;
+  const frame = document.getElementById('videoModalFrame');
+  if(frame) frame.src = 'about:blank';
+  modal.setAttribute('hidden','');
+  document.body.classList.remove('video-modal-open');
+}
+function openVideoUrl(url, title='Training video'){
+  if(!isMuxPlayerUrl(url)){
+    window.open(url, '_blank', 'noopener');
+    return false;
+  }
+  const modal = ensureVideoModal();
+  document.getElementById('videoModalTitle').textContent = title;
+  document.getElementById('videoModalFrame').src = url;
+  modal.removeAttribute('hidden');
+  document.body.classList.add('video-modal-open');
+  return false;
+}
 function openVideo(title){
   const training = trainings.find(t => t.title === title) || trainingForSource({name:title});
-  window.open(trainingWatchUrl(training), '_blank', 'noopener');
+  return openVideoUrl(trainingWatchUrl(training), training?.title || title);
+}
+function openVideoLink(event, el){
+  if(event) event.preventDefault();
+  return openVideoUrl(el?.dataset?.videoUrl || el?.href, el?.dataset?.videoTitle || el?.textContent?.trim() || 'Training video');
 }
 
 function escapeHtml(value){
@@ -322,7 +362,8 @@ function sourcePill(source, index){
   const label = source.name || 'Broker training source';
   const training = trainingForSource(source);
   const detail = [source.cite, source.quote].filter(Boolean).join(' · ');
-  return `<a class="source-pill" href="${trainingWatchUrl(training, source.timestamp || source.cite)}" target="_blank" rel="noopener" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source video: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
+  const url = trainingWatchUrl(training, source.timestamp || source.cite);
+  return `<a class="source-pill" href="${escapeHtml(url)}" data-video-url="${escapeHtml(url)}" data-video-title="${escapeHtml(label)}" onclick="return openVideoLink(event, this)" data-tooltip="${escapeHtml(detail || label)}" aria-label="Open source video: ${escapeHtml(label)}"><span>${String(index + 1).padStart(2,'0')}</span>${escapeHtml(label)}</a>`;
 }
 
 function sourceCard(source, index){
@@ -332,7 +373,7 @@ function sourceCard(source, index){
   const watchUrl = trainingWatchUrl(training, source.timestamp || source.cite);
   const time = source.timestamp || source.cite?.match(/\d{1,2}:\d{2}(?::\d{2})?/)?.[0] || training?.watchTime || 'source moment';
   return `<article class="watchable-source-card">
-    <button class="source-video-thumb clean-source-thumb" onclick="window.open('${escapeHtml(watchUrl)}','_blank','noopener')" aria-label="Watch source video: ${escapeHtml(label)}"><span class="play">▶</span><em>${escapeHtml(time)}</em></button>
+    <button class="source-video-thumb clean-source-thumb" data-video-url="${escapeHtml(watchUrl)}" data-video-title="${escapeHtml(label)}" onclick="return openVideoLink(event, this)" aria-label="Watch source video: ${escapeHtml(label)}"><span class="play">▶</span><em>${escapeHtml(time)}</em></button>
     <div class="source-video-body">
       <span>${escapeHtml(source.match || 'Source')} match · ${escapeHtml(training?.access || 'Authorized members')}</span>
       <strong>${escapeHtml(label)}</strong>
@@ -340,7 +381,7 @@ function sourceCard(source, index){
       <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
       <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
       <div class="source-card-actions">
-        <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener">Open video</a>
+        <a href="${escapeHtml(watchUrl)}" data-video-url="${escapeHtml(watchUrl)}" data-video-title="${escapeHtml(label)}" onclick="return openVideoLink(event, this)">Open video</a>
         <a href="${librarySearchUrl(label)}">View transcript/search</a>
         <a href="${appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md')}">Upload notes</a>
       </div>

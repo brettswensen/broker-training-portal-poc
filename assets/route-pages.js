@@ -114,8 +114,50 @@ function trainingWatchUrl(training){
   if(id) return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
   return training?.videoUrl?.replace('/preview', '/view') || appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
 }
+function isMuxPlayerUrl(url){
+  return String(url || '').includes('player.mux.com/');
+}
+function ensureVideoModal(){
+  let modal = document.getElementById('videoModal');
+  if(modal) return modal;
+  modal = document.createElement('div');
+  modal.id = 'videoModal';
+  modal.className = 'video-modal';
+  modal.setAttribute('hidden','');
+  modal.innerHTML = `<div class="video-modal-backdrop" data-close-video></div><section class="video-modal-shell" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle"><button class="video-modal-close" type="button" data-close-video aria-label="Close video">×</button><div class="video-modal-head"><span>Broker Brain source video</span><h2 id="videoModalTitle">Training video</h2></div><div class="video-modal-frame"><iframe id="videoModalFrame" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen></iframe></div></section>`;
+  document.body.appendChild(modal);
+  modal.addEventListener('click', event => { if(event.target.matches('[data-close-video]')) closeVideoModal(); });
+  document.addEventListener('keydown', event => { if(event.key === 'Escape') closeVideoModal(); });
+  return modal;
+}
+function closeVideoModal(){
+  const modal = document.getElementById('videoModal');
+  if(!modal) return;
+  const frame = document.getElementById('videoModalFrame');
+  if(frame) frame.src = 'about:blank';
+  modal.setAttribute('hidden','');
+  document.body.classList.remove('video-modal-open');
+}
+function openVideoUrl(url, title='Training video'){
+  if(!isMuxPlayerUrl(url)){
+    window.open(url, '_blank', 'noopener');
+    return false;
+  }
+  const modal = ensureVideoModal();
+  document.getElementById('videoModalTitle').textContent = title;
+  document.getElementById('videoModalFrame').src = url;
+  modal.removeAttribute('hidden');
+  document.body.classList.add('video-modal-open');
+  return false;
+}
+function openVideoLink(event, el){
+  if(event) event.preventDefault();
+  return openVideoUrl(el?.dataset?.videoUrl || el?.href, el?.dataset?.videoTitle || el?.textContent?.trim() || 'Training video');
+}
 function videoTargetAttrs(training){
-  return `href="${escapeHtml(trainingWatchUrl(training))}" target="_blank" rel="noopener"`;
+  const url = trainingWatchUrl(training);
+  const title = training?.title || 'Training video';
+  return `href="${escapeHtml(url)}" data-video-url="${escapeHtml(url)}" data-video-title="${escapeHtml(title)}" onclick="return openVideoLink(event, this)"`;
 }
 function relatedPlaybooksFor(text){
   const source = String(text || '').toLowerCase();
