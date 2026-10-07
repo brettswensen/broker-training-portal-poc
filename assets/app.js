@@ -190,7 +190,7 @@ function thumbnailStyle(t){
   return t.thumbnail ? ` style="background-image:linear-gradient(135deg,rgba(8,10,15,.08),rgba(8,10,15,.32)),url('${appPath('/' + t.thumbnail)}')"` : '';
 }
 function card(t){
-  return `<article class="card training-card"><button class="video-thumb small-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span><strong>${escapeHtml(t.category)}</strong></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
+  return `<article class="card training-card"><button class="video-thumb small-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}"><span class="play">▶</span></button><span class="type">${t.type} · ${t.category}</span><h3>${t.title}</h3><p class="muted">${t.summary}</p><blockquote>${t.excerpt}</blockquote><div class="tag-row">${t.topics.slice(0,4).map(x=>`<span class="tag">${x}</span>`).join('')}</div></article>`;
 }
 
 
@@ -276,9 +276,8 @@ function renderLatestTraining(){
   if(!rail) return;
   rail.innerHTML = latest.map((t,i)=>`
     <article class="video-card">
-      <button class="video-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
+      <button class="video-thumb clean-training-thumb"${thumbnailStyle(t)} data-title="${escapeHtml(t.title)}" onclick="openTraining(this.dataset.title)" aria-label="Open ${escapeHtml(t.title)}">
         <span class="play">▶</span>
-        <strong>${escapeHtml(t.category)}</strong>
       </button>
       <div class="video-body">
         <span class="type">${escapeHtml(t.status)}</span>
@@ -462,13 +461,17 @@ function answerMarkup(answer, {includeThread=true}={}){
         </div>
       </section>` : ''}
 
-      <section class="answer-section client-wording-section">
+      <section class="answer-section client-wording-section compact-client-wording">
         <div class="answer-section-head simple-head">
-          <div><p class="eyebrow">OPTIONAL OUTPUT</p><h4>If this needs to become client communication</h4></div>
+          <div><p class="eyebrow">OPTIONAL OUTPUT</p><h4>Turn this into a client-ready message</h4></div>
         </div>
-        <p class="script-box">“${escapeHtml(scriptText)}”</p>
+        <p class="muted client-wording-purpose">Use this only when the agent needs the broker guidance converted into buyer/seller language.</p>
+        <details class="client-script-details">
+          <summary>Show draft wording</summary>
+          <p class="script-box">“${escapeHtml(scriptText)}”</p>
+        </details>
         <div class="answer-actions">
-          <button onclick="copyCurrentScript(this)">Copy</button>
+          <button onclick="copyCurrentScript(this)">Copy draft</button>
           <button onclick="rewriteScript('text')">Text version</button>
           <button onclick="rewriteScript('email')">Email version</button>
         </div>

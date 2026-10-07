@@ -174,3 +174,17 @@
 /* Dashboard chips can be links when they route into All Content */
 .chips a{border:1px solid var(--border);background:rgba(255,255,255,.045);color:var(--soft);border-radius:999px;padding:8px 11px;font-size:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}.chips a:hover{border-color:rgba(120,220,232,.42);background:rgba(120,220,232,.10);color:#fff}
 @media(max-width:760px){.chips a{min-height:44px!important;padding:10px 13px!important}}
+
+
+/* Demo polish: keep live labels off text-heavy thumbnails and collapse repeated client wording */
+.clean-training-thumb{justify-content:flex-start!important;align-items:flex-end!important;padding:14px!important}
+.clean-training-thumb strong{display:none!important}
+.clean-training-thumb .play{align-self:flex-end!important;background:rgba(0,0,0,.54)!important;backdrop-filter:blur(8px)!important}
+.compact-client-wording{gap:10px!important}
+.client-wording-purpose{margin:0!important;line-height:1.5!important}
+.client-script-details{border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(0,0,0,.16);overflow:hidden}
+.client-script-details summary{cursor:pointer;padding:12px 14px;color:#dffbff;font-weight:800;font-size:13px;list-style:none}
+.client-script-details summary::-webkit-details-marker{display:none}
+.client-script-details summary:after{content:'+';float:right;color:#78dce8}
+.client-script-details[open] summary:after{content:'–'}
+.client-script-details .script-box{margin:0!important;border-top:1px solid rgba(255,255,255,.08);border-radius:0!important}
