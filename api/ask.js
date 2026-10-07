@@ -343,7 +343,7 @@ async function callOpenRouter(question, sources, context=[]) {
     data = await response.json();
 
     const firstMessage = data?.choices?.[0]?.message || {};
-    if (!String(firstMessage.content || firstMessage.reasoning_content || '').trim()) {
+    if (!String(firstMessage.content || firstMessage.reasoning_content || firstMessage.reasoning || '').trim()) {
       const retryResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
         signal: controller.signal,
@@ -373,7 +373,7 @@ async function callOpenRouter(question, sources, context=[]) {
   }
 
   const message = data?.choices?.[0]?.message || {};
-  const content = message.content || message.reasoning_content || '';
+  const content = message.content || message.reasoning_content || message.reasoning || '';
   const parsed = normalizeModelAnswer(safeJsonParse(content));
   if (parsed) return cleanAndValidateModelAnswer(parsed);
 
@@ -410,7 +410,7 @@ async function callOpenRouter(question, sources, context=[]) {
       missingContext: []
     });
   }
-  throw new Error('Model returned an empty answer');
+  throw new Error(`Model returned an empty answer (finish=${data?.choices?.[0]?.finish_reason || 'unknown'}, messageKeys=${Object.keys(message).join('|') || 'none'})`);
 }
 
 module.exports = async function handler(req, res) {
