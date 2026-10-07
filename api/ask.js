@@ -311,7 +311,7 @@ async function callOpenRouter(question, sources, context=[]) {
 
   const model = process.env.OPENROUTER_MODEL || 'moonshotai/kimi-k2.7-code';
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 18000);
+  const timeout = setTimeout(() => controller.abort(), 45000);
   let data;
 
   try {
@@ -328,13 +328,6 @@ async function callOpenRouter(question, sources, context=[]) {
         model,
         temperature: 0.25,
         max_tokens: 850,
-        response_format: { type: 'json_object' },
-        provider: {
-          allow_fallbacks: false,
-          data_collection: 'deny',
-          require_parameters: true,
-          zdr: true
-        },
         messages: [
           { role: 'system', content: system },
           { role: 'user', content: user }
