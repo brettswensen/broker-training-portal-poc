@@ -188,3 +188,13 @@
 .client-script-details summary:after{content:'+';float:right;color:#78dce8}
 .client-script-details[open] summary:after{content:'–'}
 .client-script-details .script-box{margin:0!important;border-top:1px solid rgba(255,255,255,.08);border-radius:0!important}
+
+
+/* Demo polish: source cards should not crop text-heavy thumbnails */
+.clean-source-thumb{background:radial-gradient(circle at 28% 18%,rgba(120,220,232,.24),transparent 6rem),linear-gradient(135deg,rgba(113,112,255,.28),rgba(8,10,15,.92))!important;background-image:radial-gradient(circle at 28% 18%,rgba(120,220,232,.24),transparent 6rem),linear-gradient(135deg,rgba(113,112,255,.28),rgba(8,10,15,.92))!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;padding:12px!important}
+.clean-source-thumb:before{content:'SOURCE';align-self:flex-start;border:1px solid rgba(120,220,232,.26);border-radius:999px;background:rgba(0,0,0,.28);color:#dffbff;font-size:10px;font-weight:900;letter-spacing:.12em;padding:5px 7px}
+.clean-source-thumb .play{align-self:center!important;margin:auto!important}
+.clean-source-thumb em{align-self:flex-start!important}
+.watchable-source-card{grid-template-columns:minmax(132px,170px) minmax(0,1fr)!important}
+.source-video-body blockquote{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:680px){.watchable-source-card{grid-template-columns:1fr!important}.clean-source-thumb{min-height:150px!important}}
