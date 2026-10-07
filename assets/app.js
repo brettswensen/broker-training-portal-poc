@@ -114,9 +114,14 @@ function trainingForSource(sourceOrTitle){
     || trainings.find(t => normalized.includes(normalizeSourceTitle(t.title).slice(0,18)) || normalizeSourceTitle(t.title).includes(normalized.slice(0,18)))
     || trainings.find(t => (t.topics || []).some(topic => normalized.includes(normalizeSourceTitle(topic))));
 }
+function googleDriveFileId(url){
+  return String(url || '').match(/drive\.google\.com\/file\/d\/([^/]+)/)?.[1] || '';
+}
 function trainingWatchUrl(training, timestamp=''){
   if(!training || !training.videoUrl || training.videoUrl === '#demo-video-upload-needed') return appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
   const time = String(timestamp || training.watchTime || '').trim();
+  const id = googleDriveFileId(training.videoUrl);
+  if(id) return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
   const url = training.videoUrl.replace('/preview', '/view');
   return url + (time && url.includes('cloudflarestream.com') ? `?start=${encodeURIComponent(time)}` : '');
 }
@@ -335,7 +340,7 @@ function sourceCard(source, index){
       <p class="source-why"><b>Why this helps:</b> ${escapeHtml(why)}</p>
       <blockquote>“${escapeHtml(source.quote || 'Source excerpt will appear here as transcript depth increases.')}”</blockquote>
       <div class="source-card-actions">
-        <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener">Watch source</a>
+        <a href="${escapeHtml(watchUrl)}" target="_blank" rel="noopener">Open video file</a>
         <a href="${librarySearchUrl(label)}">View transcript/search</a>
         <a href="${appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md')}">Upload notes</a>
       </div>

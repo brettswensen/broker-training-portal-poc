@@ -106,7 +106,12 @@ function matchingTrainings(query){
   if(!q) return trainings;
   return trainings.filter(t => [t.title,t.category,t.summary,t.excerpt,...(t.topics||[]),...(t.playbooks||[])].join(' ').toLowerCase().includes(q));
 }
+function googleDriveFileId(url){
+  return String(url || '').match(/drive\.google\.com\/file\/d\/([^/]+)/)?.[1] || '';
+}
 function trainingWatchUrl(training){
+  const id = googleDriveFileId(training?.videoUrl);
+  if(id) return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
   return training?.videoUrl?.replace('/preview', '/view') || appPath('/VIDEO_UPLOAD_INSTRUCTIONS.md');
 }
 function videoTargetAttrs(training){
@@ -193,7 +198,7 @@ function renderLibrary(){
 
   const vids = document.getElementById('libraryVideos');
   if(vids){
-    vids.innerHTML = videoMatches.map(t=>`<article class="video-result-card operator-video-card"><a class="route-thumb" ${videoTargetAttrs(t)} aria-label="Play ${escapeHtml(t.title)}"><span>▶</span><strong>${escapeHtml(t.category)}</strong></a><div><small>${escapeHtml(t.size)} · ${escapeHtml(t.type)}</small><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${resultTags(t)}</div><a class="route-button" ${videoTargetAttrs(t)}>Open video</a><a class="route-button ghost-button" href="${appPath('/all-content/')}?q=${encodeURIComponent(t.title)}">Search this training</a></div></article>`).join('') || '<p class="muted">No matching videos for this query.</p>';
+    vids.innerHTML = videoMatches.map(t=>`<article class="video-result-card operator-video-card"><a class="route-thumb" ${videoTargetAttrs(t)} aria-label="Play ${escapeHtml(t.title)}"><span>▶</span><strong>${escapeHtml(t.category)}</strong></a><div><small>${escapeHtml(t.size)} · ${escapeHtml(t.type)}</small><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${resultTags(t)}</div><a class="route-button" ${videoTargetAttrs(t)}>Open video file</a><a class="route-button ghost-button" href="${appPath('/all-content/')}?q=${encodeURIComponent(t.title)}">Search this training</a></div></article>`).join('') || '<p class="muted">No matching videos for this query.</p>';
   }
 
   const pb = document.getElementById('libraryPlaybooks');
@@ -319,7 +324,7 @@ function renderOnboardingPage(){
 function renderTrainingVideosPage(){
   const grid = document.getElementById('trainingVideoGrid');
   if(!grid) return;
-  grid.innerHTML = trainings.map(t=>`<article class="route-card"><a class="route-thumb" ${videoTargetAttrs(t)} aria-label="Play ${escapeHtml(t.title)}"><span>▶</span><strong>${escapeHtml(t.category)}</strong></a><span>${escapeHtml(t.category)} · ${escapeHtml(t.size)}</span><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${(t.topics||[]).slice(0,3).map(topic=>`<em>${escapeHtml(topic)}</em>`).join('')}</div><a class="route-button" ${videoTargetAttrs(t)}>Open video</a><a class="route-button ghost-button" href="${appPath('/all-content/')}?q=${encodeURIComponent(t.title)}">Search this training</a></article>`).join('');
+  grid.innerHTML = trainings.map(t=>`<article class="route-card"><a class="route-thumb" ${videoTargetAttrs(t)} aria-label="Play ${escapeHtml(t.title)}"><span>▶</span><strong>${escapeHtml(t.category)}</strong></a><span>${escapeHtml(t.category)} · ${escapeHtml(t.size)}</span><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.summary)}</p><div class="mini-tags">${(t.topics||[]).slice(0,3).map(topic=>`<em>${escapeHtml(topic)}</em>`).join('')}</div><a class="route-button" ${videoTargetAttrs(t)}>Open video file</a><a class="route-button ghost-button" href="${appPath('/all-content/')}?q=${encodeURIComponent(t.title)}">Search this training</a></article>`).join('');
 }
 function renderObjectionsPage(){
   const grid = document.getElementById('objectionCards');
