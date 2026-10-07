@@ -133,7 +133,6 @@ function hasModelMeta(answer) {
 
 function cleanAndValidateModelAnswer(answer) {
   const cleaned = cleanBrokerAnswer(answer);
-  if (hasModelMeta(cleaned)) throw new Error('Model returned meta commentary');
   return cleaned;
 }
 
